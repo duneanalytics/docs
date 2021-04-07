@@ -2,8 +2,6 @@
 
 ![](https://i.imgur.com/RURn3Pa.png)
 
-## 📑 Documentation <a id="&#x1F4D1;-Documentation"></a>
-
 > ### Dune v2 is now live! 🎉 <a id="Dune-v2-is-now-live-&#x1F389;"></a>
 >
 > See the [blog post](https://duneanalytics.com/blog/dune-v2) and learn more about the upgrade in our [changelog](https://hackmd.io/YOP3YIgaRAejTPE190sOjw?view#March-2021---Dune-v2).
