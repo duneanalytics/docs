@@ -23,12 +23,6 @@ Here are some tips and tricks on how to get started with the data and interface.
 
 Many non-technical users have mastered Dune with no prior codeing experience. Dune is powered by the very common database PostgreSQL and you can find a ton of resources by searching online, both for getting started with SQL \(udemy, codecademy etc.\) and for any query specific question 🧠
 
-### Dune Analytics TLDR <a id="Dune-Analytics-TLDR"></a>
-
-**1. Query human-readable smart contract data with PostgreSQL 🔍**
-
-**2. Visualize your findings 📊**
-
 **👉 Create a user for free at duneanalytics.com**
 
 ### Table of contents <a id="Table-of-contents"></a>
