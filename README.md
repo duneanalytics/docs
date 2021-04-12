@@ -12,7 +12,7 @@ Here are some tips and tricks on how to get started with the data and interface.
 
 * Create a user for free at [duneanalytics.com](https://www.duneanalytics.com/) 👍
 * Submit contracts for decoding at [duneanalytics.com/decode](https://www.duneanalytics.com/decode) 📥
-* Browse curated dashboards, queries and data tables for top projects [duneanalytics.com/projects]() or [add a project](https://github.com/duneanalytics/projects) via a simple markdown file 🗂
+* Browse curated dashboards, queries and data tables for top projects [duneanalytics.com/projects](./) or [add a project](https://github.com/duneanalytics/projects) via a simple markdown file 🗂
 * Find and create data abstractions via our public [Github](http://github.com/duneanalytics/) 💻
 * Can’t find what you’re looking for? Ask our community on our [Discord server](https://discord.gg/ErrzwBz) or email us at [support@duneanalytics.com](mailto:support@duneanalytics.com) 👩‍🔧
 
@@ -27,53 +27,53 @@ Many non-technical users have mastered Dune with no prior codeing experience. Du
 
 ### Table of contents <a id="Table-of-contents"></a>
 
-* [📑 Documentation]()
-  * [Dune Analytics TLDR]()
-  * [Table of contents]()
-* [🗂 Data tables]()
-  * * [Decoded smart contract data]()
-    * [Abstractions/table views]()
-    * [Centralised exchanges trading data]()
-* [👨‍🏫 Tips for querying the data]()
-  * * [Use view abstractions and tables]()
-    * [Using Inline Ethereum addresses]()
-    * [Quote camel case column and table names]()
-    * [Remove decimals]()
-    * [Use date\_trunc to get time]()
-    * [How to get USD price]()
-    * [Token symbols]()
-    * [Filter queries and dashboards with parameters]()
-* [🏷 Address Labels]()
-  * * [🪧 What is a label?]()
-    * [🖼 What labels looks like]()
-    * [📥 Adding labels]()
-    * [🗄 The labels table]()
-    * [🧑‍🔧 Using labels]()
-    * [📜 Usecase: I want to display labels for a list of addresses]()
-    * [🧼 Usecase: I want to filter my query by labels that exist.]()
-* [🧐 Understanding data decoding in Dune Analytics]()
-  * [What contracts have decoded data?]()
-    * [Decoded data]()
-    * [Abstractions and views]()
-    * [A few handy queries to explore decoded tables]()
-  * [Scalable decoding across contracts]()
-    * [Contracts with the same bytecode]()
-    * [Interfaces]()
-  * [How Dune handles Proxy contracts]()
-* [📬 Get any smart contract decoded]()
-* [👩‍🏭 Change log]()
-* [👉 Some sample queries]()
-  * [Growth rate]()
-  * [Users and amount over a trailing period]()
-  * [Filter query by an address in the interface]()
-  * [Circulating supply over time of a token with mint/burn functions]()
-  * [Circulating supply over time with mint/burn from 0x000... address]()
-  * [USD value of token utilised for an event]()
-  * [USD trading volume per token over time]()
-  * [USD price for a token from Uniswap]()
-  * [Token \(and USD value\) per token over time for an address]()
-* [🤕 Known issues]()
-  * * [Function overloading]()
+* [📑 Documentation](./)
+  * [Dune Analytics TLDR](./)
+  * [Table of contents](./)
+* [🗂 Data tables](./)
+  * * [Decoded smart contract data](./)
+    * [Abstractions/table views](./)
+    * [Centralised exchanges trading data](./)
+* [👨‍🏫 Tips for querying the data](./)
+  * * [Use view abstractions and tables](./)
+    * [Using Inline Ethereum addresses](./)
+    * [Quote camel case column and table names](./)
+    * [Remove decimals](./)
+    * [Use date\_trunc to get time](./)
+    * [How to get USD price](./)
+    * [Token symbols](./)
+    * [Filter queries and dashboards with parameters](./)
+* [🏷 Address Labels](./)
+  * * [🪧 What is a label?](./)
+    * [🖼 What labels looks like](./)
+    * [📥 Adding labels](./)
+    * [🗄 The labels table](./)
+    * [🧑‍🔧 Using labels](./)
+    * [📜 Usecase: I want to display labels for a list of addresses](./)
+    * [🧼 Usecase: I want to filter my query by labels that exist.](./)
+* [🧐 Understanding data decoding in Dune Analytics](./)
+  * [What contracts have decoded data?](./)
+    * [Decoded data](./)
+    * [Abstractions and views](./)
+    * [A few handy queries to explore decoded tables](./)
+  * [Scalable decoding across contracts](./)
+    * [Contracts with the same bytecode](./)
+    * [Interfaces](./)
+  * [How Dune handles Proxy contracts](./)
+* [📬 Get any smart contract decoded](./)
+* [👩‍🏭 Change log](./)
+* [👉 Some sample queries](./)
+  * [Growth rate](./)
+  * [Users and amount over a trailing period](./)
+  * [Filter query by an address in the interface](./)
+  * [Circulating supply over time of a token with mint/burn functions](./)
+  * [Circulating supply over time with mint/burn from 0x000... address](./)
+  * [USD value of token utilised for an event](./)
+  * [USD trading volume per token over time](./)
+  * [USD price for a token from Uniswap](./)
+  * [Token \(and USD value\) per token over time for an address](./)
+* [🤕 Known issues](./)
+  * * [Function overloading](./)
 
 ## 🗂 Data tables <a id="&#x1F5C2;-Data-tables"></a>
 
@@ -81,10 +81,10 @@ You can currently query data from **Ethereum mainnet** and **xdai**.
 
 To query xDai data change the data source in the dropdown list above the data table list on the query page.
 
-* [Decoded smart contract data]()
-* [Abstractions/table views]()
-* [Centralised exchanges trading data]()
-* [Raw Ethereum data]()
+* [Decoded smart contract data](./)
+* [Abstractions/table views](./)
+* [Centralised exchanges trading data](./)
+* [Raw Ethereum data](./)
 
 The most commonly used tables are
 
@@ -100,9 +100,9 @@ The most commonly used tables are
 
 #### Decoded smart contract data <a id="Decoded-smart-contract-data"></a>
 
-Instead of working with the traces, logs, and receipts, Dune decodes smart contract activity into nice human-readable tables. See the [this section for more info]().
+Instead of working with the traces, logs, and receipts, Dune decodes smart contract activity into nice human-readable tables. See the [this section for more info](./).
 
-Submit contracts for decoding at [duneanalytics.com/decode]().
+Submit contracts for decoding at [duneanalytics.com/decode](./).
 
 #### Abstractions/table views <a id="Abstractionstable-views"></a>
 
@@ -122,7 +122,7 @@ You can always see the underlying tables derived directly from the blockchain if
 * Receipts
 * Traces
 
-You probably won’t use this too much when doing analysis with Dune \(see [decoded data]()\), but it’s always nice to have just in case.
+You probably won’t use this too much when doing analysis with Dune \(see [decoded data](./)\), but it’s always nice to have just in case.
 
 You can [click here](https://ethereum.stackexchange.com/questions/268/ethereum-block-architecture) to learn more about Ethereum’s data structure, but again it’s not really needed for using Dune.
 
@@ -151,7 +151,7 @@ The data is fetched from the [Coinpaprika API](https://coinpaprika.com/api/).
 
 ## 👨‍🏫 Tips for querying the data <a id="&#x1F468;&#x200D;&#x1F3EB;-Tips-for-querying-the-data"></a>
 
-You can interact with the [data tables]() through our interface at [duneanalytics.com](https://www.duneanalytics.com/).
+You can interact with the [data tables](./) through our interface at [duneanalytics.com](https://www.duneanalytics.com/).
 
 To create a new query you simply click `New Query` in the top right corner
 
@@ -208,7 +208,7 @@ Ether transfers and most ERC-20 tokens have 18 decimal places. To get a more hum
 
 We’ve added `evt_block_time` to decoded event tables for your convenience. A neat way to use it is with the `date_trunc` function like this
 
-```text
+```sql
 SELECT date_trunc('week', evt_block_time) AS time
 ```
 
@@ -218,7 +218,7 @@ Here you can use minute, day, week, month.
 
 To get the USD volume of onchain activity you typically want to join the smart contract event you are looking at with the usd price and join on minute. Also make sure that asset matches asset.
 
-```text
+```sql
 LEFT JOIN prices.usd p 
 ON p.minute = date_trunc('minute', evt_block_time)
 AND event."asset" = p.contract_address
@@ -309,21 +309,21 @@ Labels are stored in the new `labels.labels` table which has the following schem
 
 ```text
 CREATE TABLE IF NOT EXISTS labels.labels (
-    
+
     id integer PRIMARY KEY,               
-    
+
     address bytea NOT NULL,            
-    
+
     name text NOT NULL, 
-    
+
     type text NOT NULL,
-    
+
     author text NOT NULL,                 
-    
+
     source text NOT NULL,                 
-    
+
     updated_at timestamptz NOT NULL       
-);                                        
+);
 ```
 
 #### 🧑‍🔧 Using labels <a id="&#x1F9D1;&#x200D;&#x1F527;-Using-labels"></a>
@@ -361,7 +361,6 @@ If you want to have labels for these addresses simply alter the `trader_a` colum
 > Note: In the examples below `---` represents lines removed, and `+++` lines added.
 
 ```text
-
 +++ SELECT labels.get(trader_a), SUM(token_a_amount)
     FROM dex.trades
     WHERE token_a_symbol = 'DAI'
@@ -374,7 +373,6 @@ If you want to have labels for these addresses simply alter the `trader_a` colum
 Now you’ve replaced the addresses with lists of all labels for trader\_a. Sometimes you’re only interested in a subset of labels: `labels.get` accepts an optional list of type names which filter the type of labels you get. Say you’re only interested in ‘activity’ labels:
 
 ```text
-
 +++ SELECT labels.get(trader_a, 'activity'), SUM(token_a_amount)
     FROM dex.trades
     WHERE token_a_symbol = 'DAI'
@@ -387,7 +385,6 @@ Now you’ve replaced the addresses with lists of all labels for trader\_a. Some
 Of course you can also show the address, and filter for multiple label types
 
 ```text
-
 +++ SELECT trader_a, labels.get(trader_a, 'activity', 'project', 'contract_name') as labels, SUM(token_a_amount)
     FROM dex.trades
     WHERE token_a_symbol = 'DAI'
@@ -401,7 +398,6 @@ Of course you can also show the address, and filter for multiple label types
 You can also use `labels.url` to make the addresses clickable:
 
 ```text
-
 +++ SELECT labels.url(trader_a), labels.get(trader_a, 'activity') as labels, SUM(token_a_amount)
     FROM dex.trades
     WHERE token_a_symbol = 'DAI'
@@ -438,7 +434,6 @@ The above query will give you 10 address that has swapped on Uniswap and traded 
 Of course, you can use the two patterns in conjunction! If you _are_ interested for labels on those addresses, go ahead and use `labels.get` in addition to the `WHERE EXISTS` pattern:
 
 ```text
-
 +++ SELECT "to", labels.get("to")
     FROM uniswap_v2."Pair_evt_Swap" 
     WHERE EXISTS(SELECT * FROM labels.labels WHERE address="to" AND type='dapp usage' AND name='1inch user')
@@ -477,7 +472,7 @@ name
 ABI 
 address 
 dynamic 
-bytecode 
+bytecode
 ```
 
 #### Abstractions and views <a id="Abstractions-and-views"></a>
@@ -491,7 +486,7 @@ Views are named `namespace.view_event` for instance. In general you can search f
 **See all projects we have decoded data for**
 
 ```text
-SELECT DISTINCT namespace FROM ethereum."contracts"; 
+SELECT DISTINCT namespace FROM ethereum."contracts";
 ```
 
 **Do we have decoded data for a specific contract?**
@@ -510,7 +505,7 @@ SELECT * FROM ethereum."contracts" WHERE address IS NULL;
 If you are working with a an event or call table directly you can see if there are several instances of that contract with
 
 ```text
-SELECT DISTINCT contract_address FROM projectname."contractName_evt_eventName"; 
+SELECT DISTINCT contract_address FROM projectname."contractName_evt_eventName";
 ```
 
 ### Scalable decoding across contracts <a id="Scalable-decoding-across-contracts"></a>
@@ -620,7 +615,6 @@ UNION
 ### Circulating supply over time with mint/burn from `0x000...` address <a id="Circulating-supply-over-time-with-mintburn-from-0x000-address"></a>
 
 ```text
-
 SELECT
 week,
 SUM(transfer) over (order by week)
@@ -642,8 +636,6 @@ UNION
     AND "to" = '\x0000000000000000000000000000000000000000'
     GROUP BY 1
 ) as net;
-
-
 ```
 
 ### USD value of token utilised for an event <a id="USD-value-of-token-utilised-for-an-event"></a>
@@ -689,7 +681,7 @@ WITH weth_pairs AS (
     FROM uniswap_v2."Factory_evt_PairCreated" cr
     WHERE token0 = '\xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2' OR  token1 = '\xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2'
     )
-    
+
 , swap AS ( 
     SELECT
         CASE WHEN eth_token = '0' then sw."amount0In" + sw."amount0Out" ELSE sw."amount1In" + sw."amount1Out"
@@ -703,11 +695,11 @@ WITH weth_pairs AS (
     JOIN weth_pairs ON sw."contract_address" = weth_pairs."contract"
     JOIN erc20."tokens" tok ON weth_pairs."other_token" = tok."contract_address"
     WHERE other_token = '\xeb4c2781e4eba804ce9a9803c67d0893436bb27d' 
-    
-    
+
+
     AND sw.evt_block_time >= now() - interval '14 days'
     )
-    
+
 , eth_prcs AS (
     SELECT avg(price) eth_prc, date_trunc('hour', minute) AS hour
     FROM prices.layer1_usd_eth
@@ -731,13 +723,13 @@ Note that this query can get very heavy when there are many tokens and transfers
 
 ```text
 WITH transfers AS (
-    
+
     SELECT  day,
             address, 
             token_address, 
             sum(amount) AS amount 
     FROM
-    
+
     (
         SELECT  date_trunc('day', evt_block_time) AS day,
                 "to" AS address,
@@ -745,17 +737,17 @@ WITH transfers AS (
                 value AS amount
         FROM erc20."ERC20_evt_Transfer" tr
         WHERE "to" = '\x70c730465dff5447a12bae37090446745c9edccc' 
-        
-        
+
+
         UNION ALL
-        
+
         SELECT  date_trunc('day', evt_block_time) AS day,
                 "from" AS address,
                 tr.contract_address AS token_address,
                 -value AS amount
         FROM erc20."ERC20_evt_Transfer" tr
         WHERE "from" = '\x70c730465dff5447a12bae37090446745c9edccc' 
-        
+
     ) t
    GROUP BY 1, 2, 3
    )
@@ -768,11 +760,11 @@ WITH transfers AS (
             lead(day, 1, now()) OVER (PARTITION BY token_address, address ORDER BY t.day) AS next_day 
     FROM transfers t
     )
-    
+
  , days AS (
     SELECT generate_series('2020-07-01'::timestamp, date_trunc('day', NOW()), '1 day') AS day 
     )
-    
+
 , balance_all_days AS (
     SELECT  d.day,
             address,
@@ -804,7 +796,6 @@ LEFT JOIN  (
 GROUP BY 1,2,3
 ORDER BY 1,2,3
 ;
-
 ```
 
 ## 🤕 Known issues <a id="&#x1F915;-Known-issues"></a>
