@@ -6,7 +6,7 @@ Dune is a collaborative endeavor that is shared by it's users. The compounded kn
 
 **Find great query creators and fork their queries for maximum efficiency.**
 
-
+<iframe src="https://duneanalytics.com/embeds/20836/42857/9ikucIvbRprjyWfCz8ISqI29yDJiDR3llCIour2q" title="Embed tst"></iframe> 
 
 Nevertheless we have collected some queries here for a simple introduction
 
