@@ -2,7 +2,7 @@
 description: Data Tables are what makes Dune work.
 ---
 
-# Data
+# Data tables
 
 You can currently query data from **Ethereum mainnet** and **xDai**. We are working on expanding our offer to  other chains in the future.
 

@@ -4,6 +4,8 @@ description: 'https://duneanalytics.com/blog/dune-v2'
 
 # Dune V2
 
+![](../../../.gitbook/assets/image%20%282%29.png)
+
 Today we are beyond excited to open a whole new chapter for on-chain data broadly and Dune Analytics specifically! Our team of four \([we’re hiring](http://careers.duneanalytics.com/)!\) started on a hugely ambitious project at the beginning of this year: to rebuild the Dune Analytics experience from the ground up. And today, less than a quarter later, you can enjoy a whole new Dune as v2 is now live!
 
 **The long story short is:**

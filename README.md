@@ -11,7 +11,7 @@ description: >-
 **Aggregating Data from Blockchains is hard.**
 
 In public blockchains such as Ethereum, all the information is inherently public. But all the data in the world does not help you make meaningful decisions without useful tooling and aggregation of the data.  
-Data on the Ethereum Blockchain especially has become increasingly difficult to work with. Most of the time you are no longer dealing with simple tx that involve on contract, but rather moving pieces of a giant interconnected system. Dealing with the complexity of this data requires a toolkit that is made for this purpose specifically and can lead to great results with a bit of time.
+Data on the Ethereum Blockchain especially has become increasingly difficult to work with. Most of the time you are no longer dealing with simple tx that involve one contract, but rather moving pieces of a giant interconnected system. Dealing with the complexity of this data requires a toolkit that is made for this purpose specifically.
 
 ### **The solution**
 
@@ -19,6 +19,8 @@ Data on the Ethereum Blockchain especially has become increasingly difficult to 
 
 Dune Analytics is a tool that greatly simplifies the process of querying lots of data on public blockchains. We built a web-based platform for querying Ethereum data by using simple SQL queries, from pre-populated databases.   
 Instead of having to write specialized scripts, one can simply query the database to extract almost any information that resides on the blockchain. If that wasn't enough already to convince you to build on Dune, we are also working hard to make the data as accessible as possible by using custom data structures we employ on our database to make it as easy as possible for you to work with the data.
+
+
 
 ## How Dune works
 
@@ -30,13 +32,13 @@ Dune consists of 3 main parts that you can use: Queries, Visualizations and Dash
 
 **Dashboards** are used to aggregate different Visualizations in one place in order to be able to display the relevant data all in one Place.
 
-![This probably needs some style work](.gitbook/assets/image%20%282%29.png)
 
-![](.gitbook/assets/image%20%2813%29.png)
+
+![](.gitbook/assets/image%20%2820%29.png)
 
 ### Queries
 
-At its core, Dune Analytics aggregates the raw data from blockchains into SQL databases that can be queried easily. For example, there is a table to query all Ethereum transactions. Columns cover the sender, the receiver, gas limit, gas price , etc. . To learn more about datatables please read this section\(link\).
+At its core, Dune Analytics aggregates the raw data from blockchains into SQL databases that can be queried easily. For example, there is a table to query all Ethereum transactions. Columns cover the sender, the receiver, gas limit, gas price , etc. . To learn more about data tables please read [this section](data/data-tables/).
 
 ![Example query of Ethereum transactions](.gitbook/assets/image%20%287%29.png)
 
@@ -60,15 +62,13 @@ Visualizations are the end product of your work. Those are the graphs and charts
 
 ### Dashboards
 
-Dashboards are the beating heart of Dune Analytics. This is the place where people collect data on their project, data on a whole sector or just aggregate some things they may find interesting. The limits to creating cool dashboards is literally your imagination. 
+Dashboards are the beating heart of Dune Analytics. This is the place where people collect data on their project, data on a whole sector or just aggregate some things they may find interesting. The limits to creating cool dashboards is your imagination, but if it is on chain it can almost 100% be replicated in Dune. 
 
 You can add Text Boxes, Visualizations and links to your dashboards in a few clicks, allowing you to create the data hub for your project in just a few simple clicks.
 
 ![](https://lh6.googleusercontent.com/hgrD15AXbk0ofuqkxUzBPf2b9XlqDgivaAZU3XzDGLt-8ZhftrQ_5FajFeKgrjhRhVocOKsQXqyG58pscKc6-ti0Mj0GG_80cv3sjsQDBQOric-uhGE7Lxgqzfcg3Rot9K1tbCS0XGs)
 
-![Schematic View of Dune](.gitbook/assets/image%20%281%29.png)
-
-
+![](.gitbook/assets/image%20%2818%29.png)
 
 ## Getting started
 

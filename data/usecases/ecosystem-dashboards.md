@@ -1,6 +1,12 @@
 # Ecosystem Dashboards
 
 Since Dune has all the data of one chain in one place you can also check more general metrics:  
+
+
+### Gas Prices
+
+
+
   
 [https://duneanalytics.com/kroeger0x/gas-prices](https://duneanalytics.com/kroeger0x/gas-prices)  
   

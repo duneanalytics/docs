@@ -8,7 +8,7 @@
   * [Sector Dashboards](data/usecases/sector-dashboards.md)
   * [Project Dashboards](data/usecases/project-dashboards.md)
   * [Ecosystem Dashboards](data/usecases/ecosystem-dashboards.md)
-* [Data](data/data-tables/README.md)
+* [Data tables](data/data-tables/README.md)
   * [Raw Data](data/data-tables/raw-data.md)
   * [Decoded Data](data/data-tables/decoded-data/README.md)
     * [Decoding Smart Contracts](data/data-tables/decoded-data/smart-contracts.md)
@@ -17,9 +17,9 @@
   * [3rd Party Data Feeds](data/data-tables/other-data.md)
 * [News & Information](data/news/README.md)
   * [Blog](data/news/blog/README.md)
+    * [Untitled](data/news/blog/untitled.md)
     * [The Revolution will not be reported quarterly](data/news/blog/revolution-quarterly.md)
     * [Dune V2](data/news/blog/dune-v2.md)
-  * [Into the Dune](data/news/into-the-dune.md)
 
 ## For Query Creators <a id="tips-for-querying"></a>
 
@@ -44,4 +44,13 @@
 
 * [Does Dune have an API?](faq/does-dune-have-an-api.md)
 * [Does Dune have a Token?](faq/does-dune-have-a-token.md)
+
+## Changelog
+
+* [Changes to Dune](changelog/dune-changes/README.md)
+  * [March 2021](changelog/dune-changes/march-2021.md)
+  * [August 2020](changelog/dune-changes/august-2020.md)
+  * [March 2020](changelog/dune-changes/march-2020.md)
+  * [January 2020](changelog/dune-changes/january-2020.md)
+  * [October 2019](changelog/dune-changes/october-2019.md)
 
