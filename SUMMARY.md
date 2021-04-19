@@ -44,6 +44,7 @@
 
 * [Does Dune have an API?](faq/does-dune-have-an-api.md)
 * [Does Dune have a Token?](faq/does-dune-have-a-token.md)
+* [How are results refreshing?](faq/how-are-results-refreshing.md)
 
 ## Changelog
 
