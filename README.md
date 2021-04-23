@@ -10,7 +10,7 @@
 [How are important Stablecoins behaving today?](https://duneanalytics.com/hagaetc/stablecoins)
 
 
-Welcome to Dune. If you are new to the platform, go ahead and continue to the next page. If you are already familiar with Dune, feel free to [skip to this section](#dune-analytics-basics) or go directly to Dune's [Github repo](https://github.com/duneanalytics/docs). To join the discussion, check out [Dune Analytics Discord](https://discord.gg/BJBHFR6sdy). Follow along the **Try It** sections to get some hands-on experience using Dune Analytics. 
+Welcome to Dune. If you are new to the platform, go ahead and continue here. If you are already familiar with Dune, feel free to [skip to this section](#dune-analytics-basics) or go directly to Dune's [Github repo](https://github.com/duneanalytics/docs). To join the discussion, check out [Dune Analytics Discord](https://discord.gg/BJBHFR6sdy). Follow along the **Try It** sections to get some hands-on experience using Dune Analytics. 
 
 ### Try It
 - [ ] Create a user for free at [duneanalytics.com]() and set up a basic profile
