@@ -1,100 +1,87 @@
----
-description: >-
-  Dune Analytics is a powerful tool for blockchain research. It can be used to
-  query, extract, and visualize vast amounts of data on public blockchains.
----
+# Dune Analytics Documentation
 
-# Introduction to Dune Analytics
+## Introduction
+**Dune Analytics is a powerful tool for blockchain research. Dune gives you all the tools to query, extract, and visualize vast amounts of data from the blockchain. Dune is unlocking the power of decentralized data by making it accessible to everyone. This documentation will help you answer questions like:**
 
-### **The Problem**
+[How much volume flows through Uniswap each day?](https://duneanalytics.com/queries/3)
 
-**Aggregating Data from Blockchains is hard.**
+[Which Dex has the highest volume?](https://duneanalytics.com/queries/1847)
 
-In public blockchains such as Ethereum, all the information is inherently public. But all the data in the world does not help you make meaningful decisions without useful tooling and aggregation of the data.  
-Data on the Ethereum Blockchain especially has become increasingly difficult to work with. Most of the time you are no longer dealing with simple tx that involve one contract, but rather moving pieces of a giant interconnected system. Dealing with the complexity of this data requires a toolkit that is made for this purpose specifically.
-
-### **The solution**
-
-**Querying for Data on Dune is easy.**
-
-Dune Analytics is a tool that greatly simplifies the process of querying lots of data on public blockchains. We built a web-based platform for querying Ethereum data by using simple SQL queries, from pre-populated databases.   
-Instead of having to write specialized scripts, one can simply query the database to extract almost any information that resides on the blockchain. If that wasn't enough already to convince you to build on Dune, we are also working hard to make the data as accessible as possible by using custom data structures we employ on our database to make it as easy as possible for you to work with the data.
+[How are important Stablecoins behaving today?](https://duneanalytics.com/hagaetc/stablecoins)
 
 
+Welcome to Dune. If you are new to the platform, go ahead and continue to the next page. If you are already familiar with Dune, feel free to [skip to this section](#dune-analytics-basics) or go directly to Dune's [Github repo](https://github.com/duneanalytics/docs). To join the discussion, check out [Dune Analytics Discord](https://discord.gg/BJBHFR6sdy). Follow along the **Try It** sections to get some hands-on experience using Dune Analytics. 
 
-## How Dune works
-
-Dune consists of 3 main parts that you can use: Queries, Visualizations and Dashboards. 
-
-**Queries** are used to find data from the Blockchain. You can find out more about this in this section \(LINK\)
-
-**Visualizations** are visual representations of the datasets\(?\) you create with your queries.
-
-**Dashboards** are used to aggregate different Visualizations in one place in order to be able to display the relevant data all in one Place.
+### Try It
+- [ ] Create a user for free at [duneanalytics.com]() and set up a basic profile
 
 
+## Dune Analytics Basics
+While navigating Dune Analytics, it helps to have a good understanding of [queries](#queries), [visualizations](#visualizations), and [dashboards](#dashboards). These are the basic building blocks that act as your portal to the world's blockchain information. As a blockchain analyst, you can create custom queries to fetch data, visualize the results of these queries, and then tell stories with your data using dashboards.
 
-![](.gitbook/assets/image%20%2820%29.png)
+Behind the scenes, Dune transforms difficult-to-access data into human-readable tables. These abstractions make it possible to write SQL queries that retrieve information from the blockchain. Dune also gives you access to [other users' public queries](https://duneanalytics.com/browse/queries) so you can pick up where they left off. 
+### Try it
+- [ ] Browse the [Queries](https://duneanalytics.com/browse/queries) and [Dashboards](https://duneanalytics.com/browse/dashboards) pages, see what information you can find!
+
 
 ### Queries
+Dune aggregates blockchain data into SQL databases that can be easily queried. Queries are used to specify what data from the blockchain should be returned. 
 
-At its core, Dune Analytics aggregates the raw data from blockchains into SQL databases that can be queried easily. For example, there is a table to query all Ethereum transactions. Columns cover the sender, the receiver, gas limit, gas price , etc. . To learn more about data tables please read [this section](data/data-tables/).
+Maybe you want to know *all the Dex trades that happened today*, or the *total value of stablecoins minted this year*. Whatever the question, the answer likely starts with a Dune query. 
 
-![Example query of Ethereum transactions](.gitbook/assets/image%20%287%29.png)
+Queries return rows and columns of data (same as traditional SQL queries) that can later be visualized and presented. 
 
-### Visualization
+![Screen Shot 2021-04-22 at 9 56 34 AM](https://user-images.githubusercontent.com/76178256/115726979-357d1380-a351-11eb-83ee-16f0d57c6ecb.png)
 
-Visualizations are the end product of your work. Those are the graphs and charts you want your audience to see. As always when presenting data, simpler is often times better.
+There are a few ways that a blockchain analyst (ie. you!) can get started running queries:
+
+1. Use Dune Analytics *abstractions* to query commonly used data tables. This is the simplest and most common way to use Dune Analytics. Some popular abstractions include `dex.trades`, `lending.borrow`, and `stablecoin.transfer` (you can find a complete list of abstractions [here](https://github.com/duneanalytics/abstractions))
+2. Query the raw ethereum data including blocks, logs, and transactions. For more information on these methods see [Dune's Github Documentation](https://github.com/duneanalytics/docs)
+3. It is also possible to query centralized exchange data. Use `prices.usd` to quickly return the price of almost any cryptoasset
+### Try It 
+- [ ] Run a query using one of the abstractions listed above to return some results
+- [ ] Analyze the results and answer the question: what am I looking at? 
+
+Tip: what data populates each row and what populates each column? 
+
+If you are having trouble returning results try running this code in the query editor:
+
+```
+SELECT
+    date_trunc('day', block_time) AS day,
+    SUM(usd_amount) AS usd_volume
+FROM dex.trades
+WHERE block_time > now() - interval '7 days'
+AND project = 'Uniswap'
+GROUP BY 1
+ORDER BY 1;
+```
+
+Once that is running, edit the query and try to understand how different edits change the results. 
 
 
+### Visualizations
+Data presented in table form (rows and columns) can be difficult to read. Visualizations take the results of a query and present the information in a clear & precise way.
 
-![Area Charts](.gitbook/assets/image%20%2814%29.png)
+You can use visualizations to begin to tell a story with your data. With Dune visualizations it is easy to transform this:
 
+![Screen Shot 2021-04-22 at 10 59 48 AM](https://user-images.githubusercontent.com/76178256/115737269-fa331280-a359-11eb-9a31-c0dfe4b038e6.png)
 
+Into this:
 
-![Bar Charts](https://lh6.googleusercontent.com/VZ50-DbGApwhomsuqJeue5yLPrsrsLH6V1VWPMo54KUQjYS_Mfoj4WHgLiR5xkr-jmnd-b_5hXOhHEV-r0LjZs0PztxA-uafoOK9d8VPXKTgO7AclQn5goEBqabyDTHv5WGYl1ZrqPc)
+![Screen Shot 2021-04-22 at 11 01 02 AM](https://user-images.githubusercontent.com/76178256/115737692-5b5ae600-a35a-11eb-8145-bdcf9396cd03.png)
 
+The bar chart visualization makes it clear that April 19th had the highest transfer volume, and helps the audience see the trend over time.
 
-
-![Line charts](https://lh4.googleusercontent.com/Qic66xaoueT31o40v4iHt_7LU6l1k2mR62ezxMGAuLxIwsCHi3XWIs82gXMxcH9lHVzlH8r0CRoEpWcTVl2-U-ojaHXu9eMbFXdJXlome9KRRgFS6re1tI7RVWmUWyoIN8RUblJ-07c)
-
-
-
+Dune offers a variety of visualizations that you can use to visually present data including bar charts, area charts, line charts, pie charts, and more. 
+### Try It 
+- [ ] Using the results of your query from the previous section, add a visualization to the query results
 ### Dashboards
+Now that there is a clear visualization of some query results, it's time to group visualizations together in a dashboard. Dune dashboards are where blockchain data comes to life:
 
-Dashboards are the beating heart of Dune Analytics. This is the place where people collect data on their project, data on a whole sector or just aggregate some things they may find interesting. The limits to creating cool dashboards is your imagination, but if it is on chain it can almost 100% be replicated in Dune. 
+![Screen Shot 2021-04-23 at 10 51 25 AM](https://user-images.githubusercontent.com/76178256/115889404-e7841080-a421-11eb-9e30-8d43e58e28f4.png)
 
-You can add Text Boxes, Visualizations and links to your dashboards in a few clicks, allowing you to create the data hub for your project in just a few simple clicks.
+Using carefully planned visuals, a clever blockchain analyst can tell a story about a particular group of data. For example, in the [above dashboard](https://duneanalytics.com/hagaetc/dex-metrics) it is clear at the top that 'Dex' as a category is growing. Below, the audience sees which dex's are the most popular by volume, and finally can view a stacked bar chart that shows changes over time. By just looking at this single dashboard, the audience sees a clear picture of the entire Dex market. 
 
-![](https://lh6.googleusercontent.com/hgrD15AXbk0ofuqkxUzBPf2b9XlqDgivaAZU3XzDGLt-8ZhftrQ_5FajFeKgrjhRhVocOKsQXqyG58pscKc6-ti0Mj0GG_80cv3sjsQDBQOric-uhGE7Lxgqzfcg3Rot9K1tbCS0XGs)
-
-![](.gitbook/assets/image%20%2818%29.png)
-
-## Getting started
-
- Create a user for free at [duneanalytics.com](https://www.duneanalytics.com/)
-
-Check out the rest of the docs to find more in depth technical Documentation and sample queries**.**
-
-Go and build some cool stuff.
-
-## DUNE IS FREE, NOW AND FOREVER.
-
-The free tier \(requires opening an account\) covers:
-
-* Searching queries
-* Writing new queries
-* Creating visualizations and dashboards
-
-All free tier queries are available for everyone to see and search. Making queries private requires a pro tier account. The pro tier offers some additional benefits, such as exporting data and hiding the watermark from graphs.
-
-## Join the Community
-
-Stuck on a query, no idea where to start or just looking for like minded people?
-
-Join our Discord to get world class support and hang out with our Wizards.
-
-[https://discord.gg/BJBHFR6sdy](https://discord.gg/BJBHFR6sdy)
-
-
-
+### Try It
+- [ ] Group some visualizations into a dashboard to tell a story about a set of blockchain data
