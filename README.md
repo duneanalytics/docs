@@ -1,7 +1,7 @@
 # Dune Analytics Documentation
 
 ## Introduction
-**Dune Analytics is a powerful tool for blockchain research. Dune gives you all the tools to query, extract, and visualize vast amounts of data from the blockchain. Dune is unlocking the power of decentralized data by making it accessible to everyone. This documentation will help you answer questions like:**
+**Dune Analytics is a powerful tool for blockchain research. Dune gives you all the tools to query, extract, and visualize vast amounts of data from the blockchain. Dune is unlocking the power of public blockchain data by making it accessible to everyone. This documentation will help you answer questions like:**
 
 [How much volume flows through Uniswap each day?](https://duneanalytics.com/queries/3)
 
@@ -10,9 +10,8 @@
 [How are important Stablecoins behaving today?](https://duneanalytics.com/hagaetc/stablecoins)
 
 
-Welcome to Dune. If you are new to the platform, go ahead and continue here. If you are already familiar with Dune, feel free to [skip to this section](#dune-analytics-basics) or go directly to Dune's [Github repo](https://github.com/duneanalytics/docs). To join the discussion, check out [Dune Analytics Discord](https://discord.gg/BJBHFR6sdy). Follow along the **Try It** sections to get some hands-on experience using Dune Analytics. 
-
 ### Try It
+Follow along the **Try it** blocks to get a grasp on Dune.
 - [ ] Create a user for free at [duneanalytics.com]() and set up a basic profile
 
 
@@ -36,8 +35,9 @@ Queries return rows and columns of data (same as traditional SQL queries) that c
 There are a few ways that a blockchain analyst (ie. you!) can get started running queries:
 
 1. Use Dune Analytics *abstractions* to query commonly used data tables. This is the simplest and most common way to use Dune Analytics. Some popular abstractions include `dex.trades`, `lending.borrow`, and `stablecoin.transfer` (you can find a complete list of abstractions [here](https://github.com/duneanalytics/abstractions))
-2. Query the raw ethereum data including blocks, logs, and transactions. For more information on these methods see [Dune's Github Documentation](https://github.com/duneanalytics/docs)
+2. Query the raw ethereum data including blocks, logs, and transactions.
 3. It is also possible to query centralized exchange data. Use `prices.usd` to quickly return the price of almost any cryptoasset
+
 ### Try It 
 - [ ] Run a query using one of the abstractions listed above to return some results
 - [ ] Analyze the results and answer the question: what am I looking at? 
@@ -81,7 +81,19 @@ Now that there is a clear visualization of some query results, it's time to grou
 
 ![Screen Shot 2021-04-23 at 10 51 25 AM](https://user-images.githubusercontent.com/76178256/115889404-e7841080-a421-11eb-9e30-8d43e58e28f4.png)
 
-Using carefully planned visuals, a clever blockchain analyst can tell a story about a particular group of data. For example, in the [above dashboard](https://duneanalytics.com/hagaetc/dex-metrics) it is clear at the top that 'Dex' as a category is growing. Below, the audience sees which dex's are the most popular by volume, and finally can view a stacked bar chart that shows changes over time. By just looking at this single dashboard, the audience sees a clear picture of the entire Dex market. 
+Using carefully planned visuals, a clever blockchain analyst can tell a story about a particular group of data. For example, in the [above dashboard](https://duneanalytics.com/hagaetc/dex-metrics) it is clear at the top that 'Dex' as a category is growing. Below, the audience sees which dex's are the most popular by volume, and finally can view a stacked bar chart that shows changes over time. By just looking at this single dashboard, the audience sees a clear picture of the entire Dex market.
 
 ### Try It
 - [ ] Group some visualizations into a dashboard to tell a story about a set of blockchain data
+
+
+##Dune is a collaborative effort
+
+On Dune, all queries and datasets are public by default.
+
+This introduces a interesting dynamic in which you, the user, can fork and remix the queries of other creators with ease and build on top of their knowledge. On the other side, every time you write a new query, you contribute to the collection of queries that help people query for data on dune. 
+That way, the Dune Community succeeds together through an ever improving range of queries that allow you to easily query for just the stats you need.
+
+It also makes it really easy and enjoyable for people to cooperate and
+
+If you do need Privacy for your Queries, the Pro Plan has got you covered.
