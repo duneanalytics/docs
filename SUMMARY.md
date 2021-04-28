@@ -2,30 +2,26 @@
 
 * [Introduction to Dune Analytics](README.md)
 
-## About Dune Analytics <a id="data"></a>
+## About Dune Analytics <a id="about"></a>
 
-* [Use Cases](data/usecases/README.md)
-  * [Sector Dashboards](data/usecases/sector-dashboards.md)
-  * [Project Dashboards](data/usecases/project-dashboards.md)
-  * [Ecosystem Dashboards](data/usecases/ecosystem-dashboards.md)
-* [Data tables](data/data-tables/README.md)
-  * [Raw Data](data/data-tables/raw-data.md)
-  * [Decoded Data](data/data-tables/decoded-data/README.md)
-    * [Decoding Smart Contracts](data/data-tables/decoded-data/smart-contracts.md)
-    * [Get any smart contract decoded](data/data-tables/decoded-data/get-any-smart-contract-decoded.md)
-  * [Abstractions](data/data-tables/abstractions.md)
-  * [3rd Party Data Feeds](data/data-tables/other-data.md)
-* [News & Information](data/news/README.md)
-  * [Blog](data/news/blog/README.md)
-    * [Untitled](data/news/blog/untitled.md)
-    * [The Revolution will not be reported quarterly](data/news/blog/revolution-quarterly.md)
-    * [Dune V2](data/news/blog/dune-v2.md)
+* [Use Cases](about/usecases/README.md)
+  * [Sector Dashboards](about/usecases/sector-dashboards.md)
+  * [Project Dashboards](about/usecases/project-dashboards.md)
+  * [Ecosystem Dashboards](about/usecases/ecosystem-dashboards.md)
+* [Tutorials](about/tutorials/README.md)
+  * [Tips](about/tutorials/tips.md)
 
-## For Query Creators <a id="tips-for-querying"></a>
+## Data Tables
 
-* [Tips](tips-for-querying/tips.md)
+* [Ethereum Data](data-tables/data-tables/README.md)
+  * [Raw Data](data-tables/data-tables/raw-data.md)
+  * [Decoded Data](data-tables/data-tables/decoded-data.md)
+  * [Abstractions](data-tables/data-tables/abstractions.md)
+  * [Prices](data-tables/data-tables/prices.md)
+  * [Labels](data-tables/data-tables/labels.md)
+* [xDai Data](data-tables/xdai-data.md)
 
-## Sample Queries
+## Query Handbook <a id="sample-queries"></a>
 
 * [Queries](sample-queries/queries/README.md)
   * [Growth Rate](sample-queries/queries/growth-rate.md)
@@ -35,10 +31,6 @@
   * [USD value of token utilised for an event](sample-queries/queries/untitled-3.md)
   * [USD price for a token from Uniswap](sample-queries/queries/untitled-2.md)
   * [Token \(and USD value\) per token over time for an address](sample-queries/queries/untitled-1.md)
-
-## Labels
-
-* [Labels](labels/labels.md)
 
 ## FAQ
 
