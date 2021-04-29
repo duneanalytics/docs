@@ -102,9 +102,11 @@ On Dune, all queries and datasets are public by default.
 
 This introduces a interesting dynamic in which you, the user, can fork and remix the queries of other creators with ease and build on top of their knowledge. On the other side, every time you write a new query, you contribute to the collection of queries that help people query for data on dune. That way, the Dune Community succeeds together through an ever improving range of queries that allow you to easily query for just the stats you need.
 
+If you do need Privacy for your Queries, the Pro Plan has got you covered.
+
 Join our [Community Discord](https://discord.gg/BJBHFR6sdy) to get world class support from our team and the community.
 
-If you do need Privacy for your Queries, the Pro Plan has got you covered.
+
 
 
 
