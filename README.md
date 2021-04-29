@@ -106,3 +106,13 @@ Join our [Community Discord](https://discord.gg/BJBHFR6sdy) to get world class s
 
 If you do need Privacy for your Queries, the Pro Plan has got you covered.
 
+
+
+
+
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+This Intro was mostly written by [zkwaffles](https://twitter.com/zkwaffles), huge thank you for that.
+
+
+

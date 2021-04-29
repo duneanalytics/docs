@@ -2,23 +2,28 @@
 description: Data Tables are what makes Dune work.
 ---
 
-# Ethereum Data
+# Data tables
 
-You can currently query data from **Ethereum mainnet** and **xDai**. We are working on expanding our offer to  other chains in the future.
+### What data can I find on Dune?
+
+You can currently query data from **Ethereum** and **xDai**. We are already working on expanding our offer to other chains in the future. Furthermore we inject some 3rd party price feeds into our database.
+
+### How do I find the data I need?
+
+This section aims to guide you in the process of finding the right data tables to work on your project.  
+Different Use Cases of Dune require different data tables to pull data from, study these carefully and you'll recognize what significance each of the data table types has for your Queries and Dashboards.
+
+{% page-ref page="raw-data/" %}
+
+{% page-ref page="decoded-data.md" %}
+
+{% page-ref page="abstractions.md" %}
+
+{% page-ref page="prices.md" %}
+
+{% page-ref page="labels.md" %}
 
 
-
-The most commonly used tables are:
-
-* \*\*\*\*[**Event and call data**](decoded-data.md) for each project where you typically get the action that occurred in the smart contract. Simply search for project name to find the relevant tables.
-* \*\*\*\*[**Abstractions/view tables**](abstractions.md) containing abstractions that makes various data very straight forward to query. Examples
-  * `dex.trades`
-  * `lending.borrow`, `lending.collateral_change`, `lending.repay`
-  * `stablecoin.transfer`, `stablecoin.mint`, `stablecoin.burn`
-  * See the full list and add your own via our [Github](https://github.com/duneanalytics/abstractions)
-* \*\*\*\*[**prices.usd**](prices.md) which gives you USD price of various assets per minute. Typically joined on minute with the event data and multiplied by the on-chain value \(trade, transfer etc\).
-* \*\*\*\*[**erc20.tokens**](abstractions.md) gives you contract address, symbol and number of decimals for popular tokens. Token value transfers are then divided by `10` to the power of `decimals` from this table.
-* \*\*\*\*[**Ethereum transactions**](raw-data.md) to get ETH transfers. Typically join with event on `ethereum.transactions.hash = evt_tx_hash`.
 
 ####  <a id="Decoded-smart-contract-data"></a>
 

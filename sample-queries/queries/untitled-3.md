@@ -2,7 +2,7 @@
 
 ###  <a id="USD-value-of-token-utilised-for-an-event"></a>
 
-```text
+```sql
 SELECT
 date_trunc('week', evt_block_time),
 SUM(amount/1e18 * p.price) AS staked

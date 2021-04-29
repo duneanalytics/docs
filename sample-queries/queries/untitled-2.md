@@ -6,7 +6,7 @@ This query uses WETH pairs, which is used to map to USD price. The query can be 
 
 You can find this query on Dune [here](https://explore.duneanalytics.com/queries/11050/source?p_Token%20address=0xeb4c2781e4eba804ce9a9803c67d0893436bb27d).
 
-```text
+```sql
 WITH weth_pairs AS ( -- Get exchange contract address and "other token" for WETH
     SELECT cr."pair" AS contract, 
         CASE WHEN cr."token0" = '\xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2' then '0' ELSE '1' END  AS eth_token,

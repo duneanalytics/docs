@@ -1,3 +1,9 @@
+---
+description: >-
+  We decode the data emitted by smart contracts and store them in easy-to-use
+  tables.
+---
+
 # Decoded Data
 
 ## Decoded smart contract data
@@ -18,11 +24,25 @@ Using the event tables is usually sufficient, but in some cases you will want to
 
 ## What contracts have decoded data?
 
-You can check if contracts are already decoded by querying ethereum.contracts through our database or [this dashboard](https://duneanalytics.com/0xBoxer/Is-my-Contract-decoded-yet).
+You can check if contracts are already decoded by querying "blockchain".contracts through our database or [this dashboard](https://duneanalytics.com/0xBoxer/Is-my-Contract-decoded-yet).
 
 If the contract is not in our database yet, you can submit them here: [www.duneanalytics.com/decoding](https://duneanalytics.retool.com/embedded/public/892af55f-a6ff-41df-b203-f8acb6f0a38b).
 
 We usually take about 24-48 hours to decode smart contracts.
+
+## How to understand decoded data?
+
+Decoded data sometimes is a bit tricky to work with since it requires you to understand what the events/calls mean in the context of the smart contract. Additionally you need to understand what kind of data the smart contract emits and understand the intricacies of the different smart contracts of the project interacting with each other. Often times the data you are looking for is scattered across multiple smart contracts and tables in Dune.
+
+If you are not able to make sense of the data by just searching at the tables, it usually helps to look at single tx's using the transaction hash and etherscan.
+
+If that also doesn't lead to satisfactory results, scouring the relevant docs and github of the project can lead you to the desired answers. Furthermore, talking to the developers and core community of a project can also get you to a good understanding of the contract. 
+
+Some good showcasing of how to deal with decoded data can be found all throughout Dune, but especially our [abstraction repository](https://github.com/duneanalytics/abstractions) is full of great examples.   
+
+
+**In Summary**:   
+Dealing with decoded data allows you deep access to information stored on the blockchain and is very information rich, but understanding that data sometimes takes a bit of effort on your side since you are literally interacting with the data of the contract in a direct way.
 
 ## Scalable decoding across contracts
 

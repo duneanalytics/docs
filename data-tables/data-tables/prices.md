@@ -59,6 +59,8 @@ This table also support other layer 1 assets that you sometimes need.
 
 We created a decentralized price feed that calculates prices based on decentralized exchange trading data. This table sometimes is a few hours delayed since it's very resource intensive and has some potential for error, please be careful while using this.
 
+This table currently only exists for Ethereum data.
+
 | column name | description |
 | :--- | :--- |
 | contract\_address | the contract address of the erc20 token |

@@ -1,6 +1,6 @@
 # Users and amount over a trailing period
 
-```text
+```sql
 SELECT  date_trunc('day', evt_block_time),
         COUNT (DISTINCT buyer),
         SUM(eth_bought / 1e18)

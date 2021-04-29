@@ -10,7 +10,7 @@ When you query in Dune you use `\x...` while people commonly use `0x...` \(see m
 
 Using the below snippet will allow users to past addresses in the regular `0x...` format and then convert it to `\x...` that will work in a query.
 
-```text
+```sql
 WHERE contract_address = CONCAT('\x', substring('{{Address}}' from 3))::bytea
 ```
 

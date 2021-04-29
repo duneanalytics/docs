@@ -2,7 +2,7 @@
 
 Note that this query can get very heavy when there are many tokens and transfers over a long period of time.
 
-```text
+```sql
 WITH transfers AS (
     
     SELECT  day,

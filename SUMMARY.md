@@ -5,21 +5,22 @@
 ## About Dune Analytics <a id="about"></a>
 
 * [Use Cases](about/usecases/README.md)
-  * [Sector Dashboards](about/usecases/sector-dashboards.md)
   * [Project Dashboards](about/usecases/project-dashboards.md)
+  * [Sector Dashboards](about/usecases/sector-dashboards.md)
   * [Ecosystem Dashboards](about/usecases/ecosystem-dashboards.md)
 * [Tutorials](about/tutorials/README.md)
   * [Tips](about/tutorials/tips.md)
 
 ## Data Tables
 
-* [Ethereum Data](data-tables/data-tables/README.md)
-  * [Raw Data](data-tables/data-tables/raw-data.md)
+* [Data tables](data-tables/data-tables/README.md)
+  * [Raw Data](data-tables/data-tables/raw-data/README.md)
+    * [Ethereum data](data-tables/data-tables/raw-data/ethereum-data.md)
+    * [xDai Data](data-tables/data-tables/raw-data/xdai-data.md)
   * [Decoded Data](data-tables/data-tables/decoded-data.md)
   * [Abstractions](data-tables/data-tables/abstractions.md)
   * [Prices](data-tables/data-tables/prices.md)
   * [Labels](data-tables/data-tables/labels.md)
-* [xDai Data](data-tables/xdai-data.md)
 
 ## Query Handbook <a id="sample-queries"></a>
 

@@ -16,13 +16,13 @@ The easiest way to do great analysis with Dune Analytics is to use prepared view
 
 In Dune Ethereum addresses are stored as postgres bytearrays which are encoded with the `\x` prefix. This differs from the customary `0x` prefix. If you’d like to use an inline address, say to filter for a given token, you would do
 
-```text
+```sql
 WHERE token = '\x6b175474e89094c44da98b954eedeac495271d0f'
 ```
 
 which is simply short for
 
-```text
+```sql
 WHERE token = '\x6b175474e89094c44da98b954eedeac495271d0f'::bytea
 ```
 
@@ -30,7 +30,7 @@ WHERE token = '\x6b175474e89094c44da98b954eedeac495271d0f'::bytea
 
 Column and table names are mostly taken directly from smart contract ABIs, with no modification. Since most smart contracts are written in Solidity, and written with a camelCased naming convention, so is many of Dune’s table and column names. Postgres requires you to quote columns and tablenames that are case sensitive:
 
-```text
+```sql
 SELECT “columnName”
 FROM projectname.”contractName_evt_EventName”
 LIMIT 10
@@ -38,7 +38,7 @@ LIMIT 10
 
 In Postgres, double quotes are reserved for tables and columns, whereas single quotes are reserved for values:
 
-```text
+```sql
 SELECT “columnName”
 FROM projectname.”contratName_evt_eventName”
 WHERE contract_address = '\x6B175474E89094C44Da98b954EedeAC495271d0F'
@@ -57,7 +57,7 @@ Ether transfers and most ERC-20 tokens have 18 decimal places. To get a more hum
 
 We’ve added `evt_block_time` to decoded event tables for your convenience. A neat way to use it is with the `date_trunc` function like this
 
-```text
+```sql
 SELECT date_trunc('week', evt_block_time) AS time
 ```
 
@@ -67,7 +67,7 @@ Here you can use minute, day, week, month.
 
 To get the USD volume of onchain activity you typically want to join the smart contract event you are looking at with the usd price and join on minute. Also make sure that asset matches asset.
 
-```text
+```sql
 LEFT JOIN prices.usd p 
 ON p.minute = date_trunc('minute', evt_block_time)
 AND event."asset" = p.contract_address
@@ -97,7 +97,7 @@ Note that you need to put single quotes if you want to use the parameter in your
 
 To save the user from having to put in `\x` for the address a useful formatting of addresses is this one:
 
-```text
+```sql
 WHERE contract_address = CONCAT('\x', substring('{{token address}}' from 3))::bytea
 ```
 

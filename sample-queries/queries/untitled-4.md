@@ -4,7 +4,7 @@
 
 ###  <a id="Circulating-supply-over-time-of-a-token-with-mintburn-functions"></a>
 
-```text
+```sql
 SELECT
 week,
 SUM(transfer) over (order by week)
