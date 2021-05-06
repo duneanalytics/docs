@@ -59,7 +59,7 @@ This table also supports layer 1 assets on other blockchains.
 
 **dex.view\_token\_prices**
 
-We created a decentralized price feed that calculates prices based on decentralized exchange trading data. **This table covers much more assets than prices.usd.** This table sometimes is a few hours delayed since it's very resource intensive and has some potential for error, please be careful while using this.
+We created a decentralized price feed that calculates prices based on decentralized exchange trading data. **This table covers much more assets than prices.usd.** This table is very resource intensive and can therefore only be updated every few hours, please keep that in mind when utilizing it.
 
 This table currently only exists for Ethereum data.
 
@@ -69,4 +69,8 @@ This table currently only exists for Ethereum data.
 | sample\_size | the number of trades that occurred for this asset on all decentralized exchanges \(If the number is very small you might want to exclude the data, it can lead to inaccuracies\). |
 | median\_price | the median price of the asset in any given hour |
 | hour | the resolution for this table is hourly |
+
+
+
+
 
