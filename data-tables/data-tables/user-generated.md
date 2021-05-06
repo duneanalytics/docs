@@ -4,7 +4,8 @@
 
 ## Usecases
 
-There is several ways in which you can utilize your own views and tables inside of Dune to make working with your data on Dune even easier. The most common one is constructing a view, next to that you can also create functions or your own tables. Your own tables, views and function all have an important
+There is several ways in which you can utilize your own views and tables inside of Dune to make working with your data on Dune even easier. The most common one is constructing a view. Next to that you can also create functions or your own tables.   
+Your own tables, views and function all have an important part to play in creating content on Dune and make maintenance of your dashboards and queries easier if used correctly.
 
 If you are unfamiliar with tables, views, materialized views and functions please consult the [pgSQL documentation](https://www.postgresqltutorial.com/postgresql-views/) or check out our [Tutorials](../../about/tutorials/).
 
