@@ -82,15 +82,21 @@ Dune offers a variety of visualizations that you can use to visually present dat
 
 #### Try It
 
-* [ ] Using the results of your query from the previous section, add a visualization to the query results
+* [ ] Using the results of your query from the previous section, add a visualization to the query results.
 
-  **Dashboards**
+  \*\*\*\*
 
-  Now that there is a clear visualization of some query results, it's time to group visualizations together in a dashboard. Dune dashboards are where blockchain data comes to life:
+## Dashboards
+
+Using carefully planned visuals, a clever blockchain analyst can tell a story about a particular group of data. For example, in the below[ dashboard](https://duneanalytics.com/hagaetc/dex-metrics) it is clear at the top that 'Dex' as a category is growing. Below, the audience sees which dex's are the most popular by volume, and finally can view a stacked bar chart that shows changes over time. By just looking at this single dashboard, the audience sees a clear picture of the entire Dex market.
+
+
+
+#### 
 
 ![Screen Shot 2021-04-23 at 10 51 25 AM](https://user-images.githubusercontent.com/76178256/115889404-e7841080-a421-11eb-9e30-8d43e58e28f4.png)
 
-Using carefully planned visuals, a clever blockchain analyst can tell a story about a particular group of data. For example, in the [above dashboard](https://duneanalytics.com/hagaetc/dex-metrics) it is clear at the top that 'Dex' as a category is growing. Below, the audience sees which dex's are the most popular by volume, and finally can view a stacked bar chart that shows changes over time. By just looking at this single dashboard, the audience sees a clear picture of the entire Dex market.
+
 
 #### Try It
 
@@ -100,7 +106,7 @@ Using carefully planned visuals, a clever blockchain analyst can tell a story ab
 
 On Dune, all queries and datasets are public by default.
 
-This introduces a interesting dynamic in which you, the user, can fork and remix the queries of other creators with ease and build on top of their knowledge. On the other side, every time you write a new query, you contribute to the collection of queries that help people query for data on dune. That way, the Dune Community succeeds together through an ever improving range of queries that allow you to easily query for just the stats you need.
+This introduces an interesting dynamic in which you, the user, can fork and remix the queries of other creators with ease and build on top of their knowledge. On the other side, every time you write a new query, you contribute to the collection of queries that help people query for data on dune. That way, the Dune Community succeeds together through an ever improving range of queries that allow you to easily query for just the stats you need.
 
 If you do need Privacy for your Queries, the Pro Plan has got you covered.
 

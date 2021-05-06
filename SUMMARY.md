@@ -19,6 +19,7 @@
     * [xDai Data](data-tables/data-tables/raw-data/xdai-data.md)
   * [Decoded Data](data-tables/data-tables/decoded-data.md)
   * [Abstractions](data-tables/data-tables/abstractions.md)
+  * [User Generated](data-tables/data-tables/user-generated.md)
   * [Prices](data-tables/data-tables/prices.md)
   * [Labels](data-tables/data-tables/labels.md)
 

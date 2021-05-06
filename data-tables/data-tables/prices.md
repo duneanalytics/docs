@@ -46,7 +46,7 @@ Note that `WETH` can be used for ETH price.
 
 **prices.layer\_1usd**
 
-This table also support other layer 1 assets that you sometimes need.
+This table also supports layer 1 assets on other blockchains.
 
 | column name | description |
 | :--- | :--- |
@@ -55,9 +55,11 @@ This table also support other layer 1 assets that you sometimes need.
 | price | the price of the asset in any given minute |
 | minute | the resolution for this table is by minute |
 
+\*\*\*\*
+
 **dex.view\_token\_prices**
 
-We created a decentralized price feed that calculates prices based on decentralized exchange trading data. This table sometimes is a few hours delayed since it's very resource intensive and has some potential for error, please be careful while using this.
+We created a decentralized price feed that calculates prices based on decentralized exchange trading data. **This table covers much more assets than prices.usd.** This table sometimes is a few hours delayed since it's very resource intensive and has some potential for error, please be careful while using this.
 
 This table currently only exists for Ethereum data.
 
