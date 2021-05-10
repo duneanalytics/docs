@@ -11,7 +11,7 @@ description: >-
 
 Abstractions are custom tables that are maintained by Team Dune and our community. They allow you to gain access to more complex SQL operators like creating your own tables, looping through values or other operations that are more catered towards database administrators. This sometimes is necessary to aggregate the on-chain data or simplify the process of querying for data.
 
-The [github repository](https://github.com/duneanalytics/abstractions) hosts the logic to construct the tables and views
+This public [github repository](https://github.com/duneanalytics/abstractions) hosts the logic to construct the tables and views.
 
 ##  Which abstractions are there?
 
@@ -27,13 +27,21 @@ These abstractions take in data from multiple contracts and projects, standardiz
 
 Most of the [sector](../../about/usecases/sector-dashboards.md) Dashboards depend on sector abstractions. This introduces an interesting dynamic in which projects can easily get their data into these dashboards by making a pull request to our public [github repo](https://github.com/duneanalytics/abstractions).  
   
-Team Dune and the community are always improving on these sector abstractions and pull requests or ideas for new abstractions are always welcome. You can probably even find a few fellow data nerds to team up with in our discord to tackle big problems.
+Team Dune and the community are always improving on these sector abstractions, all new additions to existing ones are always welcome.
 
 
 
 ### Project Abstractions
 
 Sometimes it can be useful for projects to assemble their data into one neat table that has all the data they need in one place. To do this, you can construct views or tables in our abstractions.
+
+
+
+## Contributing to abstractions
+
+Our abstractions are open to all teams and projects in general, but we do reserve the right to reject pull requests. 
+
+If you do choose to contribute to abstractions
 
 
 

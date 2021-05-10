@@ -1,3 +1,7 @@
+---
+description: Dune Analytics is a powerful tool for blockchain research.
+---
+
 # Introduction to Dune Analytics
 
 ## Introduction

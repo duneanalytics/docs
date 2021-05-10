@@ -41,8 +41,6 @@ For more on this topic read [this article](https://medium.com/mycrypto/understan
 | tx\_hash | bytea | the transaction hash of the event |
 | tx\_index | numeric | the index of the transaction |
 
-[**Take a look for yourself**](https://duneanalytics.com/queries/38957)
-
 ### xDai.Transactions
 
 | **Column Name** | **datatype** | **Description** |
@@ -61,8 +59,6 @@ For more on this topic read [this article](https://medium.com/mycrypto/understan
 | gas\_used | numeric | the gas consumed by the transaction in wei |
 | data | bytea | event data |
 | hash | bytea | the hash of the transaction |
-
-\*\*\*\*[**Take a look for yourself**](https://duneanalytics.com/queries/38964)\*\*\*\*
 
 ### xDai.Traces
 
@@ -93,8 +89,6 @@ Read more [here](https://medium.com/chainalysis/ethereum-traces-not-transactions
 | input | bytea |  |
 | output | bytea |  |
 | refund\_address | bytea |  |
-
-\*\*\*\*[**Take a look for yourself**](https://duneanalytics.com/queries/38730)\*\*\*\*
 
 **You probably won’t use these too much when doing analysis with Dune \(see** [**decoded data**](../decoded-data.md)**\), but it’s always nice to have just in case.**
 

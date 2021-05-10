@@ -21,7 +21,7 @@ We can see that the creator is showing us a few "on a glance" counters which tel
 
 He follows this up with some interesting historical data points which show the growth in users and volume. The Dashboard continues, but you can clearly already see how much value these stats and charts can produce for your project.
 
-Having these stats all in one Place and ready to be accessed and live 24/7 is immensely helpful to manage your project.
+Having all these stats in one place greatly helps to manage your project and help it succeed.
 
 You can find many other great dashboard on our [Projects Page](https://duneanalytics.com/projects).
 

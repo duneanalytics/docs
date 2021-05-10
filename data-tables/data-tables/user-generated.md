@@ -1,10 +1,14 @@
-# User Generated
+---
+description: >-
+  The Schema dune_user_generated is an easy way to construct your own view,
+  function or table inside of our database.
+---
 
-**The Schema dune\_user\_generated is an easy way to construct your own view, function or table inside of our database.** 
+# User Generated
 
 ## Usecases
 
-There is several ways in which you can utilize your own views and tables inside of Dune to make working with your data on Dune even easier. The most common one is constructing a view. Next to that you can also create functions or your own tables.   
+There is several ways in which you can utilize your own views and tables inside of Dune to make working with your data on Dune even easier.  
 Your own tables, views and function all have an important part to play in creating content on Dune and make maintenance of your dashboards and queries easier if used correctly.
 
 If you are unfamiliar with tables, views, materialized views and functions please consult the [pgSQL documentation](https://www.postgresqltutorial.com/postgresql-views/) or check out our [Tutorials](../../about/tutorials/).
@@ -37,9 +41,11 @@ Views can also be used to aggregate the actions of multiple smart contracts into
 This is especially useful if you are working with the same dataset over and over and only change the way you display or aggregate the data. That way, instead of having to query for your dataset again and again, you just put it into a view once and then can start referencing that view.   
 This will allow you to change the base query that constructs your dataset without having to go through multiple different instances of your query. Think about it like splitting your data collection and the actual work/display you do with that data into two different parts that function independently of each other. 
 
-Utilizing this will make the maintenance of your dashboards much easier since you can just change the dune\_user\_generated view instead of having to go through all queries individually.
+Utilizing this will make the maintenance of your dashboards much easier since you can just change the **dune\_user\_generated** view instead of having to go through all queries individually.
 
 A great example of this in action is almost all queries on [this dashboard](https://duneanalytics.com/keeganead/cryptoart_1). The Creator made one base dataset in the **dune\_user\_generated** schema and uses that to base all of his queries on.
+
+
 
 Please do note that while this approach works for most cases, views can get very computationally expensive and you might be better off constructing a materialized view or table in our [abstractions](abstractions.md).
 
