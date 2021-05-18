@@ -10,7 +10,7 @@ On your left you can select which database you want to use in the dropdown list 
 
 ### Use view abstractions and tables
 
-The easiest way to do great analysis with Dune Analytics is to use prepared views named `namespace.view_` or abstraction tables like `dex.trades`. All the view tables are cleaned and contains data and metadata \(like human readable token symbols\) that make them very straight forward to query.
+The easiest way to do great analysis with Dune Analytics is to use prepared  [abstractions](../../data-tables/data-tables/abstractions.md) tables like `dex.trades`. All tables are cleaned and contains data and metadata \(like human readable token symbols\) that make them very straight forward to query.
 
 ### Using Inline Ethereum addresses
 

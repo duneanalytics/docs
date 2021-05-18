@@ -1,5 +1,5 @@
 ---
-description: Dune Analytics is a powerful tool for blockchain research.
+description: 'Welcome to Dune Analytics,'
 ---
 
 # Introduction to Dune Analytics
@@ -24,7 +24,7 @@ Follow along the **Try it** blocks to get a grasp on Dune.
 
 While navigating Dune Analytics, it helps to have a good understanding of [queries](./#queries), [visualizations](./#visualizations), and [dashboards](./#dashboards). These are the basic building blocks that act as your portal to the world's blockchain information. As a blockchain analyst, you can create custom queries to fetch data, visualize the results of these queries, and then tell stories with your data using dashboards.
 
-Behind the scenes, Dune transforms difficult-to-access data into human-readable tables. These abstractions make it possible to write SQL queries that retrieve information from the blockchain. Dune also gives you access to [other users' public queries](https://duneanalytics.com/browse/queries) so you can pick up where they left off.
+Behind the scenes, Dune transforms difficult-to-access data into human-readable tables. These tables make it possible to write SQL queries that retrieve information from the blockchain. Dune also gives you access to [other users' public queries](https://duneanalytics.com/browse/queries) so you can pick up where they left off.
 
 #### Try it
 
