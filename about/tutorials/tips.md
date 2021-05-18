@@ -8,7 +8,7 @@ To create a new query you simply click `New Query` in the top right corner
 
 On your left you can select which database you want to use in the dropdown list and then see the data tables in the window. Just search for the project you are interested in working with.
 
-### Use view abstractions and tables
+### Use abstractions
 
 The easiest way to do great analysis with Dune Analytics is to use prepared  [abstractions](../../data-tables/data-tables/abstractions.md) tables like `dex.trades`. All tables are cleaned and contains data and metadata \(like human readable token symbols\) that make them very straight forward to query.
 
