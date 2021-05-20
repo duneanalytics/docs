@@ -29,7 +29,7 @@
   * [Growth Rate](sample-queries/queries/growth-rate.md)
   * [Users and amount over a trailing period](sample-queries/queries/untitled-6.md)
   * [Filter query by an address in the interface](sample-queries/queries/untitled-5.md)
-  * [Circulating supply over time of a token with mint/burn functions](sample-queries/queries/untitled-4.md)
+  * [Circulating supply over time of a token](sample-queries/queries/circ-supply.md)
   * [USD value of token utilised for an event](sample-queries/queries/untitled-3.md)
   * [USD price for a token from Uniswap](sample-queries/queries/untitled-2.md)
   * [Token \(and USD value\) per token over time for an address](sample-queries/queries/untitled-1.md)
