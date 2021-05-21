@@ -92,17 +92,9 @@ Dune offers a variety of visualizations that you can use to visually present dat
 
 ## Dashboards
 
-
 Using carefully planned visuals, a clever blockchain analyst can tell a story about a particular group of data. For example, in the below[ dashboard](https://duneanalytics.com/hagaetc/dex-metrics) it is clear at the top that 'Dex' as a category is growing. Below, the audience sees which dex's are the most popular by volume, and finally can view a stacked bar chart that shows changes over time. By just looking at this single dashboard, the audience sees a clear picture of the entire Dex market.
 
-
-
-
-#### 
-
 ![Screen Shot 2021-04-23 at 10 51 25 AM](https://user-images.githubusercontent.com/76178256/115889404-e7841080-a421-11eb-9e30-8d43e58e28f4.png)
-
-
 
 **Try It**
 
@@ -118,15 +110,7 @@ If you do need Privacy for your Queries, the Pro Plan has got you covered.
 
 Join our [Community Discord](https://discord.gg/BJBHFR6sdy) to get world class support from our team and the community.
 
-
-
-
-
-
-
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 This Intro was mostly written by [zkwaffles](https://twitter.com/zkwaffles), huge thank you for that.
-
-
 
