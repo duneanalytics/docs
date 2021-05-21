@@ -41,8 +41,9 @@ If that also doesn't lead to satisfactory results, scouring the relevant docs an
 Some good showcasing of how to deal with decoded data can be found all throughout Dune, but especially our [abstraction repository](https://github.com/duneanalytics/abstractions) is full of great examples.   
 
 
-**In Summary**:   
-Dealing with decoded data allows you deep access to information stored on the blockchain and is very information rich, but understanding that data sometimes takes a bit of effort on your side since you are literally interacting with the data of the contract in a direct way.
+**In Summary**:  
+  
+Dealing with decoded data allows you deep access to information stored on the blockchain and is very information rich, but understanding that data sometimes takes a bit of effort on your side since you are interacting with the data of the contract in a direct way.
 
 ## Scalable decoding across contracts
 
@@ -112,7 +113,7 @@ SELECT DISTINCT namespace FROM ethereum."contracts";
 SELECT * FROM ethereum."contracts" WHERE address IS NULL;
 ```
 
-If you are working with a an event or call table directly you can see if there are several instances of that contract with
+If you are working with a an event or call table directly you can see if there are several instances of that contract with this query.
 
 ```sql
 SELECT DISTINCT contract_address FROM projectname."contractName_evt_eventName"; 
