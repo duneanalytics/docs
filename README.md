@@ -14,7 +14,7 @@ description: 'Welcome to Dune Analytics,'
 
 [How are important Stablecoins behaving today?](https://duneanalytics.com/hagaetc/stablecoins)
 
-#### Try It
+**Try It**
 
 Follow along the **Try it** blocks to get a grasp on Dune.
 
@@ -26,7 +26,7 @@ While navigating Dune Analytics, it helps to have a good understanding of [queri
 
 Behind the scenes, Dune transforms difficult-to-access data into human-readable tables. These tables make it possible to write SQL queries that retrieve information from the blockchain. Dune also gives you access to [other users' public queries](https://duneanalytics.com/browse/queries) so you can pick up where they left off.
 
-#### Try it
+**Try it**
 
 * [ ] Browse the [Queries](https://duneanalytics.com/browse/queries) and [Dashboards](https://duneanalytics.com/browse/dashboards) pages, see what information you can find!
 
@@ -46,7 +46,7 @@ There are a few ways that a blockchain analyst \(ie. you!\) can get started runn
 2. Query the raw ethereum data including blocks, logs, and transactions.
 3. It is also possible to query centralized exchange data. Use `prices.usd` to quickly return the price of almost any cryptoasset
 
-#### Try It
+**Try It**
 
 * [ ] Run a query using one of the abstractions listed above to return some results
 * [ ] Analyze the results and answer the question: what am I looking at? 
@@ -84,7 +84,7 @@ The bar chart visualization makes it clear that April 19th had the highest trans
 
 Dune offers a variety of visualizations that you can use to visually present data including bar charts, area charts, line charts, pie charts, and more.
 
-#### Try It
+**Try It**
 
 * [ ] Using the results of your query from the previous section, add a visualization to the query results.
 
@@ -92,7 +92,9 @@ Dune offers a variety of visualizations that you can use to visually present dat
 
 ## Dashboards
 
+
 Using carefully planned visuals, a clever blockchain analyst can tell a story about a particular group of data. For example, in the below[ dashboard](https://duneanalytics.com/hagaetc/dex-metrics) it is clear at the top that 'Dex' as a category is growing. Below, the audience sees which dex's are the most popular by volume, and finally can view a stacked bar chart that shows changes over time. By just looking at this single dashboard, the audience sees a clear picture of the entire Dex market.
+
 
 
 
@@ -102,7 +104,7 @@ Using carefully planned visuals, a clever blockchain analyst can tell a story ab
 
 
 
-#### Try It
+**Try It**
 
 * [ ] Group some visualizations into a dashboard to tell a story about a set of blockchain data
 
