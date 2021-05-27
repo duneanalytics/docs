@@ -6,6 +6,8 @@ description: >-
 
 # User Generated
 
+#### Note that these tables are not guaranteed to contain correct data, please use these with caution if you haven't created them yourself.
+
 ## Usecases
 
 There is several ways in which you can utilize your own views and tables inside of Dune to make working with your data on Dune even easier.  
