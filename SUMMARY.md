@@ -36,6 +36,7 @@
 
 ## FAQ
 
+* [How does Dune get it's data ?](faq/how-does-dune-get-its-data.md)
 * [Does Dune have an API?](faq/does-dune-have-an-api.md)
 * [Does Dune have a Token?](faq/does-dune-have-a-token.md)
 * [How are results refreshing?](faq/how-are-results-refreshing.md)
