@@ -47,11 +47,15 @@ Dealing with decoded data allows you deep access to information stored on the bl
 
 ## Scalable decoding across contracts
 
-Many dApps have numerous smart contracts that are more or less similar, we have two main ways of handling this in a scalable way:
+Many dApps have numerous smart contracts that are deployed with the same bytecode. This can be: yield aggregator pools,distinctive options, liquidity pools etc.  
+  
+We can automatically pull these similar contracts into the same tables and thereby make it way easier for you to work with that data. Instead of having to query for all distinctive smart contracts you can then just query one table which will have the `contract_address` of that specific smart contract as an identifier.
 
-### Contracts with the same bytecode
+To be able to use this function you have to submit the contract as one of the two bottom options while submitting it to decoding.
 
-Dune can dynamically add contracts to track by comparing the bytecode of deployed contracts to known bytecodes. If a known contract is “dynamic”, events and calls to a newly deployed contract with matching bytecode will find it’s way into the same tables as were defined by the base contract. Essentially this covers all factory-pattern contract architectures. As a result, `SELECT`-ing from a single table might yield data from multiple contracts. In decoded tables, the column `contract_address` tells you which smart contract the event or call is on. If you want to look at only a single contract you can filter by its address.
+![](../../.gitbook/assets/image%20%2825%29.png)
+
+As a result, `SELECT`-ing from a single table might yield data from multiple contracts. In decoded tables, the column `contract_address` tells you which smart contract the event or call is on. If you want to look at only a single contract you can filter by its address.
 
 For example:
 
@@ -63,54 +67,12 @@ will give you all the unique Uniswap Pairs with a Token Purchase event.
 
 [Query in action](https://duneanalytics.com/queries/39006)
 
-### Interfaces
-
-When we’re interested in a subset of events fired regardless of the origin contract, Dune uses interface-decoding. Notable examples include erc20, erc721 and erc1155 transfer events. This method is reserved for special cases. These tables make it easy to keep track of ERC20 tokens and NFT's flowing in and out of contracts and wallets and are widely used across dune.
-
-**erc20."ERC20\_evt\_Transfer"**
-
-| column name | **data type** | **description** |
-| :--- | :--- | :--- |
-| from | bytea | the transactions sender |
-| to | bytea | the transaction receiver |
-| value | numeric | the amount of erc20 tokens sent. Notice that you have divide this by the relevant decimals of the erc20 token. |
-| contract\_address | bytea | the contract\_address of the erc20 token |
-| evt\_tx\_hash | bytea | the transaction hash |
-| evt\_index | numeric | the transaction index |
-| evt\_block\_time | timestamptz | the time at which the transaction occurred |
-| evt\_block\_number | int8 | the length of the blockchain |
-
-[See this table in action](https://duneanalytics.com/queries/39012)
-
-**erc721."ERC721\_evt\_Transfer"**
-
-| **c**olumn name | **data type** | **description** |
-| :--- | :--- | :--- |
-| from | bytea | the transactions sender |
-| to | bytea | the transaction receiver |
-| tokenID | numeric | The Token ID which uniquely identifies this NFT |
-| contract\_address | bytea | the contract\_address of the erc20 token |
-| evt\_tx\_hash | bytea | the transaction hash |
-| evt\_index | numeric | the transaction index |
-| evt\_block\_time | timestamptz | the time at which the transaction occurred |
-| evt\_block\_number | int8 | the length of the blockchain |
-
-[See this table in action](https://duneanalytics.com/queries/38974)
-
-
-
 ## **Queries to explore decoded Contracts**
 
 **See all projects we have decoded data for**
 
 ```sql
 SELECT DISTINCT namespace FROM ethereum."contracts"; 
-```
-
-**Contracts that are “interface”-decoded**
-
-```sql
-SELECT * FROM ethereum."contracts" WHERE address IS NULL;
 ```
 
 If you are working with a an event or call table directly you can see if there are several instances of that contract with this query.

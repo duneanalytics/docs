@@ -35,13 +35,19 @@ Team Dune and the community are always improving on these sector abstractions, a
 
 Sometimes it can be useful for projects to assemble their data into one neat table that has all the data they need in one place. To do this, you can construct views or tables in our abstractions.
 
+The main advantage here over just constructing a view is that you are able to deal with bigger amounts of data in our abstractions since we can run them automatically in the background every few hours.
 
+### Lookup abstractions
 
-## Contributing to abstractions
+The most noticeable mentions for this abstraction is the `erc20.tokens` abstraction in which we map tokens to their decimals and symbols. There also is `erc20.stablecoins` or `compound.view_c_tokens.`
 
-Our abstractions are open to all teams and projects in general, but we do reserve the right to reject pull requests. 
+##  Contributing to abstractions
 
-If you do choose to contribute to abstractions
+Our abstractions are open to all teams and projects in general, but we do reserve the right to reject pull requests.
+
+If you do choose to contribute to abstractions please make sure your addition actually works and produces the intended results. Furthermore please give us a short summary about what you are trying to achieve and what your project does.
+
+If applicable please construct a view in which you show us that your addition produces the intended results.
 
 
 

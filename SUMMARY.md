@@ -18,6 +18,7 @@
     * [Ethereum data](data-tables/data-tables/raw-data/ethereum-data.md)
     * [xDai Data](data-tables/data-tables/raw-data/xdai-data.md)
   * [Decoded Data](data-tables/data-tables/decoded-data.md)
+  * [Special Tables](data-tables/data-tables/special-tables.md)
   * [Abstractions](data-tables/data-tables/abstractions.md)
   * [User Generated](data-tables/data-tables/user-generated.md)
   * [Prices](data-tables/data-tables/prices.md)
