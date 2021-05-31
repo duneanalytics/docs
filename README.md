@@ -16,9 +16,9 @@ description: 'Welcome to Dune Analytics,'
 
 **Try It**
 
-Follow along the **Try it** blocks to get a grasp on Dune.
+Follow along the **Try it** sections to get a grasp on Dune.
 
-* [ ] Create a user for free at [duneanalytics.com](./) and set up a basic profile
+Create a user for free at [duneanalytics.com](./) and set up a basic profile
 
 ## Dune Analytics Basics
 
@@ -28,7 +28,7 @@ Behind the scenes, Dune transforms difficult-to-access data into human-readable 
 
 **Try it**
 
-* [ ] Browse the [Queries](https://duneanalytics.com/browse/queries) and [Dashboards](https://duneanalytics.com/browse/dashboards) pages, see what information you can find!
+Browse the [Queries](https://duneanalytics.com/browse/queries) and [Dashboards](https://duneanalytics.com/browse/dashboards) pages, see what information you can find!
 
 ## Queries
 
@@ -48,8 +48,9 @@ There are a few ways that a blockchain analyst \(ie. you!\) can get started runn
 
 **Try It**
 
-* [ ] Run a query using one of the abstractions listed above to return some results
-* [ ] Analyze the results and answer the question: what am I looking at? 
+Run a query using one of the abstractions listed above to return some results
+
+Analyze the results and answer the question: what am I looking at? 
 
 Tip: what data populates each row and what populates each column?
 
@@ -87,8 +88,6 @@ Dune offers a variety of visualizations that you can use to visually present dat
 **Try It**
 
 * [ ] Using the results of your query from the previous section, add a visualization to the query results.
-
-  \*\*\*\*
 
 ## Dashboards
 
