@@ -1,3 +1,7 @@
+---
+description: Dune Analytics version 2.0
+---
+
 # March 2021
 
 #### Overview of changes <a id="Overview-of-changes"></a>
