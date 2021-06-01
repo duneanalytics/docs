@@ -10,6 +10,7 @@
   * [Ecosystem Dashboards](about/usecases/ecosystem-dashboards.md)
 * [Tutorials](about/tutorials/README.md)
   * [Tips](about/tutorials/tips.md)
+  * [Video Series](about/tutorials/video-series.md)
 
 ## Data Tables
 

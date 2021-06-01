@@ -1,8 +1,8 @@
----
-description: L
----
-
 # Tutorials
+
+## Check out our Video Series
+
+## 
 
 ## What do you need to know?
 
