@@ -1,7 +1,6 @@
 # Video Series
 
-We have produced a video tutorial series on our [Youtube Channel](https://www.youtube.com/channel/UCPrm9d2hLd_YxSExH7oRyAg).   
-
+We have produced a video tutorial series on our [Youtube Channel](https://www.youtube.com/channel/UCPrm9d2hLd_YxSExH7oRyAg). 
 
 ## Dune Analytics 5 Minute Intro
 
