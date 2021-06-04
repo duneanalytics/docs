@@ -27,7 +27,10 @@ Since pretty much everything is possible on Dune, there really isn't any limitat
 
 {% page-ref page="ecosystem-dashboards.md" %}
 
-To get more insights into how people use Dune, you can follow our Twitter account where we retweet most interesting things that happen on Dune.   
+##  What type of content do people appreciate?
+
+To get more insights into how people use Dune, you can follow our Twitter account where we retweet the most interesting things that happen on Dune.  
+   
 Just click through the last few tweets and see what people are up to on Dune currently!
 
 {% embed url="https://twitter.com/DuneAnalytics" %}

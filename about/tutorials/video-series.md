@@ -3,7 +3,9 @@
 We have produced a video tutorial series on our [Youtube Channel](https://www.youtube.com/channel/UCPrm9d2hLd_YxSExH7oRyAg).   
 
 
-## Dune Analytics 5 minute Intro
+## Dune Analytics 5 Minute Intro
+
+This Video is the quickest and best way to get an introduction to Dune, be sure to check it out.
 
 {% embed url="https://www.youtube.com/watch?v=S-cctFmR828" %}
 

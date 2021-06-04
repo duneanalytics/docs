@@ -1,9 +1,5 @@
 # Tutorials
 
-## Check out our Video Series
-
-## 
-
 ## What do you need to know?
 
 #### PostgreSQL
@@ -39,6 +35,10 @@ We have compiled a few resources that we think are helpful in your journey to be
 
 ###  Dune specific Tutorials
 
+Dune has a Youtube channel on which we try to educate people on our platform, this is probably the best resource available at the moment. You can find the relevant Videos in the section ["Video Series"](video-series.md)
+
+
+
 Some of our Community Members have produced great tutorials for Dune:
 
 [Andrew Hong](https://twitter.com/andrewhong5297)
@@ -49,8 +49,6 @@ Some of our Community Members have produced great tutorials for Dune:
 [Alex Manuskin](https://twitter.com/amanusk_)
 
 * [How to get started with querying on Dune Analytics](https://duneanalytics.com/blog/get-started-guide)
-
-
 
 
 
