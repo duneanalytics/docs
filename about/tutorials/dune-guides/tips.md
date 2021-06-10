@@ -1,4 +1,4 @@
-# Tips
+# Tips for querying
 
 You can interact with the data tables through our interface at [duneanalytics.com](https://www.duneanalytics.com/).
 

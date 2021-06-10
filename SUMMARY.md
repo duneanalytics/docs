@@ -10,7 +10,7 @@
   * [Ecosystem Dashboards](about/usecases/ecosystem-dashboards.md)
 * [Tutorials](about/tutorials/README.md)
   * [Dune Guides](about/tutorials/dune-guides/README.md)
-    * [Tips](about/tutorials/dune-guides/tips.md)
+    * [Tips for querying](about/tutorials/dune-guides/tips.md)
   * [SQL guides](about/tutorials/sql-guides.md)
   * [Video Series](about/tutorials/video-series.md)
 

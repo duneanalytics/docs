@@ -112,53 +112,50 @@ If you want to have labels for these addresses simply alter the `trader_a` colum
 > Note: In the examples below `---` represents lines removed, and `+++` lines added.
 
 ```sql
---- SELECT trader_a, SUM(token_a_amount)
-+++ SELECT labels.get(trader_a), SUM(token_a_amount)
+SELECT trader_a, labels.get(trader_a) as label, SUM(token_a_amount)
     FROM dex.trades
     WHERE token_a_symbol = 'DAI'
     AND block_time > now() - interval '24 hours'
+    and not labels.get(trader_a) isnull
     GROUP BY 1
-    ORDER BY 3 DESC
-    LIMIT 10;
+    ORDER BY 2 DESC
+    LIMIT 100;
 ```
 
 Now you’ve replaced the addresses with lists of all labels for trader\_a. Sometimes you’re only interested in a subset of labels: `labels.get` accepts an optional list of type names which filter the type of labels you get. Say you’re only interested in ‘activity’ labels:
 
 ```sql
---- SELECT labels.get(trader_a), SUM(token_a_amount)
-+++ SELECT labels.get(trader_a, 'activity'), SUM(token_a_amount)
+ SELECT trader_a, labels.get(trader_a, 'activity') as label, SUM(token_a_amount)
     FROM dex.trades
     WHERE token_a_symbol = 'DAI'
     AND block_time > now() - interval '24 hours'
+    and not labels.get(trader_a) isnull
     GROUP BY 1
-    ORDER BY 3 DESC
-    LIMIT 10;
+    ORDER BY 2 DESC
+    LIMIT 100;
 ```
 
 Of course you can also show the address, and filter for multiple label types
 
 ```sql
---- SELECT labels.get(trader_a, 'activity'), SUM(token_a_amount)
-+++ SELECT trader_a, labels.get(trader_a, 'activity', 'project', 'contract_name') as labels, SUM(token_a_amount)
+    SELECT trader_a, labels.get(trader_a, 'activity', 'project', 'contract_name') as label, SUM(token_a_amount)
     FROM dex.trades
     WHERE token_a_symbol = 'DAI'
     AND block_time > now() - interval '24 hours'
---- GROUP BY 1
-+++ GROUP BY 1, 2
-    ORDER BY 3 DESC
-    LIMIT 10;
+    and not labels.get(trader_a) isnull
+    GROUP BY 1
+    ORDER BY 2 DESC
+    LIMIT 100;
 ```
 
 You can also use `labels.url` to make the addresses clickable:
 
 ```sql
---- SELECT trader_a, labels.get(trader_a, 'activity') as labels, SUM(token_a_amount)
-+++ SELECT labels.url(trader_a), labels.get(trader_a, 'activity') as labels, SUM(token_a_amount)
+SELECT labels.url(trader_a), labels.get(trader_a, 'activity') as labels, SUM(token_a_amount)
     FROM dex.trades
     WHERE token_a_symbol = 'DAI'
     AND block_time > now() - interval '24 hours'
---- GROUP BY 1
-+++ GROUP BY 1, 2
+GROUP BY 1, 2
     ORDER BY 3 DESC
     LIMIT 10;
 ```
