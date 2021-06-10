@@ -41,7 +41,7 @@ The main advantage here over just constructing a view is that you are able to de
 
 The most noticeable mentions for this abstraction is the `erc20.tokens` abstraction in which we map tokens to their decimals and symbols. There also is `erc20.stablecoins` or `compound.view_c_tokens.`
 
-##  Contributing to abstractions
+## Contributing to abstractions
 
 Our abstractions are open to all teams and projects in general, but we do reserve the right to reject pull requests.
 

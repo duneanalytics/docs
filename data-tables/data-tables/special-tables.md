@@ -1,4 +1,4 @@
-# Special Tables
+# Token standards
 
 ## Interfaces
 

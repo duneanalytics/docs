@@ -9,7 +9,9 @@
   * [Sector Dashboards](about/usecases/sector-dashboards.md)
   * [Ecosystem Dashboards](about/usecases/ecosystem-dashboards.md)
 * [Tutorials](about/tutorials/README.md)
-  * [Tips](about/tutorials/tips.md)
+  * [Dune Guides](about/tutorials/dune-guides/README.md)
+    * [Tips](about/tutorials/dune-guides/tips.md)
+  * [SQL guides](about/tutorials/sql-guides.md)
   * [Video Series](about/tutorials/video-series.md)
 
 ## Data Tables
@@ -19,7 +21,7 @@
     * [Ethereum data](data-tables/data-tables/raw-data/ethereum-data.md)
     * [xDai Data](data-tables/data-tables/raw-data/xdai-data.md)
   * [Decoded Data](data-tables/data-tables/decoded-data.md)
-  * [Special Tables](data-tables/data-tables/special-tables.md)
+  * [Token standards](data-tables/data-tables/special-tables.md)
   * [Abstractions](data-tables/data-tables/abstractions.md)
   * [User Generated](data-tables/data-tables/user-generated.md)
   * [Prices](data-tables/data-tables/prices.md)
