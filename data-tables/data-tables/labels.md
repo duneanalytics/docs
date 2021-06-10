@@ -34,7 +34,7 @@ The address [0xe65040f61701940b62e18da7a53126a58525588b](https://duneanalytics.c
 
 The address in the past interacted with Uniswap.
 
-You are free to come up with both new types and label names, as labels on Dune are open ended and **crowdsourced.**
+You are free to come up with both new types and label names, as labels on Dune are open ended and **crowd sourced.**
 
 ### Adding labels
 
