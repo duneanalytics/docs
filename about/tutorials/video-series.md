@@ -26,5 +26,11 @@ This Video goes over the Data tables in Dune and how the database works.
 
 {% embed url="https://youtu.be/UDu23Eyvo\_Y" %}
 
+## Episode 3.1: Simple Queries and recreating Fees.wtf in Dune
+
+This Video is a great introduction to querying inside of Dune. Our Community Manager Boxer recreates Fees.wtf inside of Dune, so the Video mostly focuses on gas transactions.
+
+{% embed url="https://youtu.be/ez3VfcfNwvc" %}
+
 
 
