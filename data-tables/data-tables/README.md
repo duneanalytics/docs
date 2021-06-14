@@ -4,7 +4,11 @@ description: Data Tables are what makes Dune work.
 
 # Data tables
 
-This section is helpful for analysts who are familiar with SQL and are hoping to leverage some of Dune's advanced features.
+
+
+{% embed url="https://www.youtube.com/watch?v=UDu23Eyvo\_Y" %}
+
+This video covers all important topics around data tables.
 
 ## Dune's Table Structure
 
