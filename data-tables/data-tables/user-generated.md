@@ -51,6 +51,75 @@ A great example of this in action is almost all queries on [this dashboard](http
 
 Please do note that while this approach works for most cases, views can get very computationally expensive and you might be better off constructing a materialized view or table in our [abstractions](abstractions.md).
 
+This example takes the data from uniswap\_v3 and standardises the data for the dex.trades table.
+
+```sql
+CREATE OR REPLACE view dune_user_generated.uniswap_v3 as 
+
+    SELECT
+        dexs.block_time,
+        erc20a.symbol AS token_a_symbol,
+        erc20b.symbol AS token_b_symbol,
+        token_a_amount_raw / 10 ^ erc20a.decimals AS token_a_amount,
+        token_b_amount_raw / 10 ^ erc20b.decimals AS token_b_amount,
+        project,
+        version,
+        category,
+        coalesce(trader_a, tx."from") as trader_a, -- subqueries rely on this COALESCE to avoid redundant joins with the transactions table
+        trader_b,
+        token_a_amount_raw,
+        token_b_amount_raw,
+        coalesce(
+            usd_amount,
+            token_a_amount_raw / 10 ^ erc20a.decimals * pa.price,
+            token_b_amount_raw / 10 ^ erc20b.decimals * pb.price
+        ) as usd_amount,
+        token_a_address,
+        token_b_address,
+        exchange_contract_address,
+        tx_hash,
+        tx."from" as tx_from,
+        tx."to" as tx_to,
+        trace_address,
+        evt_index,
+        row_number() OVER (PARTITION BY tx_hash, evt_index, trace_address) AS trade_id
+    FROM (
+  
+        --Uniswap v3
+        SELECT
+            t.evt_block_time AS block_time,
+            'Uniswap' AS project,
+            '3' AS version,
+            'DEX' AS category,
+            t."recipient" AS trader_a,
+            NULL::bytea AS trader_b,
+            abs(amount0) AS token_a_amount_raw,
+            abs(amount1) AS token_b_amount_raw,
+            NULL::numeric AS usd_amount,
+            f.token0 AS token_a_address,
+            f.token1 AS token_b_address,
+            t.contract_address as exchange_contract_address,
+            t.evt_tx_hash AS tx_hash,
+            NULL::integer[] AS trace_address,
+            t.evt_index
+        FROM
+            uniswap_v3."Pair_evt_Swap" t
+        INNER JOIN uniswap_v3."Factory_evt_PoolCreated" f ON f.pool = t.contract_address
+
+        ) dexs
+    INNER JOIN ethereum.transactions tx
+        ON dexs.tx_hash = tx.hash
+    LEFT JOIN erc20.tokens erc20a ON erc20a.contract_address = dexs.token_a_address
+    LEFT JOIN erc20.tokens erc20b ON erc20b.contract_address = dexs.token_b_address
+    LEFT JOIN prices.usd pa ON pa.minute = date_trunc('minute', dexs.block_time)
+        AND pa.contract_address = dexs.token_a_address
+    LEFT JOIN prices.usd pb ON pb.minute = date_trunc('minute', dexs.block_time)
+        AND pb.contract_address = dexs.token_b_address
+
+```
+
+[https://duneanalytics.com/queries/42779](https://duneanalytics.com/queries/42779)
+
 ### Testing Abstractions
 
 Another great usecase of utilizing the "create" function is to test out if the Pull Request you are making to our abstractions github actually produce the intended results. Simply try running the query with the schema **dune\_user\_generated** instead of the actual schema that you want in Github.
