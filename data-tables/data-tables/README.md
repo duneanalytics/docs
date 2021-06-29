@@ -37,5 +37,5 @@ Most of the tables on Dune are populated by Dune and are just a translation of t
 
 {% page-ref page="prices.md" %}
 
-{% page-ref page="labels.md" %}
+{% page-ref page="../../working-on-dune/labels.md" %}
 

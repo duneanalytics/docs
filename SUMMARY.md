@@ -25,10 +25,10 @@
   * [Abstractions](data-tables/data-tables/abstractions.md)
   * [User Generated](data-tables/data-tables/user-generated.md)
   * [Prices](data-tables/data-tables/prices.md)
-  * [Labels](data-tables/data-tables/labels.md)
 
 ## Working on Dune
 
+* [Labels](working-on-dune/labels.md)
 * [Parameters](working-on-dune/parameters.md)
 * [Query templates](working-on-dune/queries/README.md)
   * [Growth Rate](working-on-dune/queries/growth-rate.md)
