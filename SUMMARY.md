@@ -30,7 +30,7 @@
 ## Working on Dune
 
 * [Parameters](working-on-dune/parameters.md)
-* [Query Handbook](working-on-dune/queries/README.md)
+* [Query templates](working-on-dune/queries/README.md)
   * [Growth Rate](working-on-dune/queries/growth-rate.md)
   * [Users and amount over a trailing period](working-on-dune/queries/untitled-6.md)
   * [Filter query by an address in the interface](working-on-dune/queries/untitled-5.md)

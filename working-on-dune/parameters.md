@@ -1,14 +1,15 @@
 ---
 description: >-
-  Parameters are an easy way to make an interactive dashboard or query in which
-  multiple parameters/variables can change.
+  Parameters are an easy and powerful way to add filters to your
+  query/dashboard. Allowing you and others to interact with the query in the
+  user interface without changing the SQL.
 ---
 
 # Parameters
 
 ### What are Parameters?
 
-Parameters allow you to make changes to certain defined parameters of your code with a few simple clicks. Instead of hard coding `contract_address` , `symbol` or `date ranges` you can just use the parameter function to change these aspects of your code using a parameter. This allows you to build an interactive dashboard that the viewer can use to query for exactly the data he needs.
+Parameters allow you to make changes to certain defined parameters of your code with a few simple clicks. For instance instead of hard coding `contract_address` , `symbol` or `date ranges` you can just use the parameter function to change these aspects of your code using a parameter. This allows you to build an interactive dashboard that the viewer can use to query for exactly the data he needs.
 
 You can pass on input to the parameter below the query or at the top of your dashboard. Simply run the query  or click `apply` in your dashboard to rerun the queries/dashboard with the newly put in parameters.
 
