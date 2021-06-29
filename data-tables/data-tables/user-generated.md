@@ -153,5 +153,7 @@ WHERE tgtdep.deptype = 'i'::"char" AND tgtobj.relkind = 'v'::"char"
 -- WHERE src_objectname LIKE '%filter_word%'
 ```
 
-You need to temporarily break the dependencies in order to be able to change `view1`.
+You need to temporarily break the dependencies in order to be able to change `view1`.  
+  
+Find the query [here](https://duneanalytics.com/queries/70916). Big thanks to gosuto for uncovering this.
 
