@@ -27,16 +27,17 @@
   * [Prices](data-tables/data-tables/prices.md)
   * [Labels](data-tables/data-tables/labels.md)
 
-## Query Handbook <a id="sample-queries"></a>
+## Working on Dune
 
-* [Queries](sample-queries/queries/README.md)
-  * [Growth Rate](sample-queries/queries/growth-rate.md)
-  * [Users and amount over a trailing period](sample-queries/queries/untitled-6.md)
-  * [Filter query by an address in the interface](sample-queries/queries/untitled-5.md)
-  * [Circulating supply over time of a token](sample-queries/queries/circ-supply.md)
-  * [USD value of token utilised for an event](sample-queries/queries/untitled-3.md)
-  * [USD price for a token from Uniswap](sample-queries/queries/untitled-2.md)
-  * [Token \(and USD value\) per token over time for an address](sample-queries/queries/untitled-1.md)
+* [Parameters](working-on-dune/parameters.md)
+* [Query Handbook](working-on-dune/queries/README.md)
+  * [Growth Rate](working-on-dune/queries/growth-rate.md)
+  * [Users and amount over a trailing period](working-on-dune/queries/untitled-6.md)
+  * [Filter query by an address in the interface](working-on-dune/queries/untitled-5.md)
+  * [Circulating supply over time of a token](working-on-dune/queries/circ-supply.md)
+  * [USD value of token utilised for an event](working-on-dune/queries/untitled-3.md)
+  * [USD price for a token from Uniswap](working-on-dune/queries/untitled-2.md)
+  * [Token \(and USD value\) per token over time for an address](working-on-dune/queries/untitled-1.md)
 
 ## FAQ
 
