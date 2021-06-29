@@ -31,6 +31,7 @@
 * [Labels](working-on-dune/labels.md)
 * [Parameters](working-on-dune/parameters.md)
 * [Query templates](working-on-dune/queries/README.md)
+  * [Transactions](working-on-dune/queries/transactions.md)
   * [Growth Rate](working-on-dune/queries/growth-rate.md)
   * [Users and amount over a trailing period](working-on-dune/queries/untitled-6.md)
   * [Filter query by an address in the interface](working-on-dune/queries/untitled-5.md)

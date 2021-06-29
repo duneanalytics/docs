@@ -126,3 +126,32 @@ Another great usecase of utilizing the "create" function is to test out if the P
 
 If the test succeeds, you can proceed in making the Pull Request. If you can please attach the "Test Table/View" into the Pull Request.
 
+### View dependencies
+
+If you build multiple views that are dependent on each other it might sometimes happen that you can't change `view1` because `view2` depends on `view1` . This can be remedied by running the query below to fix any dependency issues.
+
+```sql
+-- source: https://stackoverflow.com/a/48770535/1838257
+
+--CREATE OR REPLACE VIEW dune_user_generated.gosuto_view_dependencies AS
+SELECT DISTINCT srcobj.oid AS src_oid,
+    srcnsp.nspname AS src_schemaname,
+    srcobj.relname AS src_objectname,
+    tgtobj.oid AS dependent_viewoid,
+    tgtnsp.nspname AS dependant_schemaname,
+    tgtobj.relname AS dependant_objectname
+FROM pg_class srcobj
+  JOIN pg_depend srcdep ON srcobj.oid = srcdep.refobjid
+  JOIN pg_depend tgtdep ON srcdep.objid = tgtdep.objid
+  JOIN pg_class tgtobj ON tgtdep.refobjid = tgtobj.oid AND srcobj.oid <> tgtobj.oid
+  LEFT JOIN pg_namespace srcnsp ON srcobj.relnamespace = srcnsp.oid
+  LEFT JOIN pg_namespace tgtnsp ON tgtobj.relnamespace = tgtnsp.oid
+WHERE tgtdep.deptype = 'i'::"char" AND tgtobj.relkind = 'v'::"char"
+
+-- filter like so:
+-- SELECT * FROM dune_user_generated.gosuto_view_dependencies
+-- WHERE src_objectname LIKE '%filter_word%'
+```
+
+You need to temporarily break the dependencies in order to be able to change `view1`.
+
