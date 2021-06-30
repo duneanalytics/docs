@@ -19,11 +19,7 @@ Seeing the queries live and in action does allow you to more intuitively engage 
 
 **Nevertheless we have collected some queries here for a simple introduction:**
 
-{% page-ref page="growth-rate.md" %}
-
 {% page-ref page="untitled-6.md" %}
-
-{% page-ref page="untitled-5.md" %}
 
 {% page-ref page="circ-supply.md" %}
 

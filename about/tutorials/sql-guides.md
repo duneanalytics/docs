@@ -12,3 +12,7 @@ We have compiled a few resources that we think are helpful in your journey to be
 
 [UDEMY Course SQL & PostgreSQL for Beginners](https://www.udemy.com/course/sql-and-postgresql-for-beginners/?ranMID=39197&ranEAID=JVFxdTr9V80&ranSiteID=JVFxdTr9V80-nnMsdWXzWeu9lqxtbEa72g&utm_source=aff-campaign&LSNPUBID=JVFxdTr9V80&utm_medium=udemyads) \($10\)
 
+[Mode SQL Tutorial](https://mode.com/sql-tutorial/) \(FREE\)
+
+
+

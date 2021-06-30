@@ -1,8 +1,8 @@
-# Circulating supply over time of a token
+# circulating supply over time of a token
 
 
 
-You can either use that tokens specific tables as long as they are [decoded](../../data-tables/data-tables/decoded-data.md):
+You can either use that token's specific tables as long as they are [decoded](../../data-tables/data-tables/decoded-data.md):
 
 ```sql
 SELECT
@@ -54,10 +54,12 @@ Or you can use a more general purpose query like this one:
                 CASE WHEN "to"   = '\x0000000000000000000000000000000000000000' THEN (value/10^decimals) ELSE 0 END AS burned
                 FROM erc20."ERC20_evt_Transfer" e
                 left join erc20.tokens t on t.contract_address = e.contract_address
-                WHERE e.contract_address = '\x429881672B9AE42b8EbA0E26cD9C73711b891Ca5'
+                WHERE e.symbol = '{{token_symbol}}'
                 ) as raw on t.hour = raw.hour
         group by 1
         order by 1
         ) as agg
 ```
+
+
 
