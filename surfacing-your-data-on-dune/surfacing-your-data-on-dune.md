@@ -25,7 +25,7 @@ Our platform is free and anyone can use the platform as they see fit. All you ne
 
 ### How to find a freelancer
 
-There is quite a few people in the crypto scene which either specialized in building on dune or have the skillset in their repertoire. To reach out to this pool of freelancers, you can **fill in this** [**google form**](https://forms.gle/YmkNp5YMQWas7gjy7) ****and hopefully freelancers will get back to you in little to no time. If that yields no results, 
+There is quite a few people in the crypto scene which either specialized in building on dune or have the skillset in their repertoire. To reach out to this pool of freelancers, you can **fill in this** [**google form**](https://forms.gle/YmkNp5YMQWas7gjy7) ****and hopefully freelancers will get back to you in little to no time. If that yields no results, posting the bounty on relevant social channels and spreading it in your networks may help.
 
 **What works best:**
 
