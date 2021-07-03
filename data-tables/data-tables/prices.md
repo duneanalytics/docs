@@ -9,7 +9,7 @@ The Price is the volume-weighted price based on real-time market data, translate
 
 **prices.usd**
 
-This table support a range of erc20.tokens.   
+This table supports a range of erc20.tokens.   
 If the token you desire is not listed in here, please make a pull request to our [github repository](https://github.com/duneanalytics/abstractions/blob/master/prices/prices.ini) ****or use the decentralized price feed **dex.view\_token\_prices.**
 
 <table>
