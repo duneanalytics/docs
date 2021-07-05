@@ -49,7 +49,7 @@ from erc20."view_token_balances_latest"
 where token_address = '\x429881672B9AE42b8EbA0E26cD9C73711b891Ca5'
 and wallet_address != '\x0000000000000000000000000000000000000000'
 and wallet_address != '\x000000000000000000000000000000000000dead'
-and amount > 0.1
+and amount > 0.1 --filter out dust amounts, adjust this for different tokens based on economic value
 group by 1,3
 
 ```
