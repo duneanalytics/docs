@@ -21,7 +21,7 @@ Seeing the queries live and in action does allow you to more intuitively engage 
 
 {% page-ref page="untitled-6.md" %}
 
-{% page-ref page="circ-supply.md" %}
+{% page-ref page="supply.md" %}
 
 {% page-ref page="untitled-3.md" %}
 
