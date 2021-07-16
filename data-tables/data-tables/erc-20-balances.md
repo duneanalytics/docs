@@ -15,7 +15,7 @@ On a raw data level it's pretty hard to work with erc20 tokens since you need to
 These tables can be used for all kinds of interesting analysis, but you still need to watch out for a few things while working with them:  
 
 
-* the **mint/burn address** is not standardized, so you need to find out those addresses and manually apply a fix in your queries. In most cases it will be `x0000000000000000000000000000000000000000`for minting and burning, but always make sure that that is indeed the case. In the example given that's exactly not the case.
+* the **mint/burn address** is not standardized, so you need to find out those addresses and manually apply a fix in your queries. In most cases it will be `x0000000000000000000000000000000000000000`for minting and burning, but always make sure that it is indeed the case. In the example given that's exactly not the case.
 
 
 
