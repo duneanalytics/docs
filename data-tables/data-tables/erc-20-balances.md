@@ -8,7 +8,7 @@ description: >-
 
 ### Easily track wallets and token balances over time.
 
-The following tables allow for easy tracking or wallet-balances, token allocations or supply of a token over time or in a snapshot format.
+The following tables allow for easy tracking of wallet-balances, token allocations or supply of a token over time or in a snapshot format.
 
 On a raw data level it's pretty hard to work with erc20 tokens since you need to sum all transfers for all addresses over time. This unnecessarily bloats queries and quickly leads to human errors. To prevent that from happening we have constructed several views and tables that will help you query for erc20 data with ease.
 
