@@ -6,7 +6,7 @@ To be a successful Dune Wizard you need to have a good understanding of PostgreS
 
 We have compiled a few resources that we think are helpful in your journey to becoming a Dune Wizard.
 
-[FreecodeCamp.org](https://www.youtube.com/playlist?list=PLwvrYc43l1MxAEOI_KwGe8l42uJxMoKeS) Video Playlist \(FREE\)
+[FreecodeCamp.org](https://www.youtube.com/watch?v=qw--VYLpxG4) Video Playlist \(FREE\)
 
 [Amigoscode](https://www.youtube.com/watch?v=5hzZtqCNQKk) Youtube Video \(FREE\)
 
