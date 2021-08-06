@@ -22,8 +22,7 @@ description: >-
 | total\_difficulty | numeric | total difficulty of the chain until this block |
 | nonce | bytea | the block nonce is used to demonstrate the proof of work during mining |
 | size | numeric | this block's size in bytes \(limited by gas limit\) |
-
-### 
+| base\_fee\_per\_gas | numeric | this block's base fee \(introduced by [EIP1559](https://eips.ethereum.org/EIPS/eip-1559)\) |
 
 ### Ethereum.Logs
 
@@ -68,6 +67,11 @@ For more on this topic read [this article](https://medium.com/mycrypto/understan
 | gas\_used | numeric | the gas consumed by the transaction in wei |
 | data | bytea | event data |
 | hash | bytea | the hash of the transaction |
+| type | text | the type of the transaction: `Legacy, AccessList,` or`DynamicFee` |
+| access\_list | jsonb | a list of EVM memory adresses the transactions intends to access. See [EIP2930](https://eips.ethereum.org/EIPS/eip-2930). Applicable if the transaction is of type `AccessList` or `DynamicFee` |
+| max\_fee\_per\_gas | numeric | the maximum fee per gas the transaction sender is willing to pay total \(introduced by [EIP1559](https://eips.ethereum.org/EIPS/eip-1559)\) |
+| max\_priority\_fee\_per\_gas | numeric | maximum fee per gas the transaction sender is willing to give to miners to incentivize them to include their transaction \(introduced by [EIP1559](https://eips.ethereum.org/EIPS/eip-1559)\) |
+| priority\_fee\_per\_gas | numeric | the priority fee paid out to the miner for this transaction \(introduced by [EIP1559](https://eips.ethereum.org/EIPS/eip-1559)\) |
 
 \*\*\*\*[**Take a look for yourself**](https://duneanalytics.com/queries/38964)\*\*\*\*
 
