@@ -4,7 +4,7 @@ description: Dune Analytics version 2.0
 
 # March 2021
 
-#### Overview of changes <a id="Overview-of-changes"></a>
+## Overview of changes <a id="Overview-of-changes"></a>
 
 * Queries
   * Saving
@@ -14,7 +14,7 @@ description: Dune Analytics version 2.0
 
 While all the core functionality you expect from Dune is available in Dune v2 the new version of Dune brings changes to how queries and refreshing work, both on the surface and under the hood.
 
-#### Queries <a id="Queries"></a>
+## Queries <a id="Queries"></a>
 
 **Saving**
 
@@ -36,7 +36,7 @@ If you mark parts of your query, the button changes to **Run selection**, and ex
 
 > _**Useful tip:**_ if you want to execute the whole query without saving it, select all of the query \(CMD / CTRL + A\) and then hit **Run selection**.
 
-#### Refreshing <a id="Refreshing"></a>
+## Refreshing <a id="Refreshing"></a>
 
 There’s also changes to how results are refreshed. Over the last months we’ve been redesigning our entire query execution backend to bring large improvements to how Dune works.
 
@@ -46,13 +46,13 @@ This means that your dashboards will always be kept up to date when they are bei
 
 Query creators does not need to set a refresh scheduele and the scheduling feature has been deprecated as it is no longer needed to keep results fresh.
 
-#### Queues <a id="Queues"></a>
+## Queues <a id="Queues"></a>
 
 We’re also bringing changes to how queueing works in Dune. When you manually click **Run** on a query an execution is queued. Every user on Dune can queue 3 queries at the same time \(pro users have more, see our [pricing](https://hackmd.io/YOP3YIgaRAejTPE190sOjw?view) page for more info\).
 
 Automatically refreshed results \(as we talked about above\) does not use the query creators queuing credits nor the viewing user’s.
 
-#### Other updates <a id="Other-updates"></a>
+## Other updates <a id="Other-updates"></a>
 
 **A faster and better looking Dune** - the whole Dune app including all the charts have gotten a big facelift. The app is now also many times faster.
 

@@ -1,12 +1,10 @@
 # January 2020
 
-
-
-#### Postgres 12.1 <a id="Postgres-121"></a>
+## Postgres 12.1 <a id="Postgres-121"></a>
 
 We’ve upgraded the database from postgres 11 to postgres 12.1. This should result in performance improvements across the board.
 
-#### ERC20 Transfer and Approval tables <a id="ERC20-Transfer-and-Approval-tables"></a>
+## ERC20 Transfer and Approval tables <a id="ERC20-Transfer-and-Approval-tables"></a>
 
 You can now query the `erc20."ERC20_evt_Transfer"` and `erc20."ERC20_evt_Approval"` tables to get decoded token transfers and approvals. These tables should include all events that could be decoded using the ABI of the ERC20 standard. This means that all transfers from all tokens can be queried through this table. The table is large \(240M rows at time of writing\), so please let us know your experience of the query performance.
 
@@ -106,11 +104,11 @@ GROUP BY 1
 ORDER BY 2 desc;
 ```
 
-#### Fallback decoding <a id="Fallback-decoding"></a>
+## Fallback decoding <a id="Fallback-decoding"></a>
 
 The above tables are generated with a new feature we call “fallback decoding”. Essentially it breaks down to being able to decode logs regardless of the events contract address or contract bytecode. If you know other cases where this decoding can be useful feel free to let us know at [hello@dune.xyz](mailto:hello@dune.xyz)
 
-#### Misc <a id="Misc1"></a>
+## Misc <a id="Misc1"></a>
 
 * Data for Gnosis sight, safe and dfusion can now be found in `gnosis_sight`, `gnosis_safe` and `gnosis_dfusion` schemas respectively.
 * Synthetix token-contracts now have the correct name `Synthetix` and are found in the `synthetix` schema

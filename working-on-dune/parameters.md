@@ -7,11 +7,11 @@ description: >-
 
 # Parameters
 
-### What are Parameters?
+## What are Parameters?
 
 Parameters allow you to make changes to certain defined parameters of your code with a few simple clicks. For instance instead of hard coding `contract_address` , `symbol` or `date ranges` you can just use the parameter function to change these aspects of your code using a parameter. This allows you to build an interactive dashboard that the viewer can use to query for exactly the data he needs.
 
-You can pass on input to the parameter below the query or at the top of your dashboard. Simply run the query  or click `apply` in your dashboard to rerun the queries/dashboard with the newly put in parameters.
+You can pass on input to the parameter below the query or at the top of your dashboard. Simply run the query or click `apply` in your dashboard to rerun the queries/dashboard with the newly put in parameters.
 
 Parameters in a Dashboard can be shared between different queries, just make sure to use the same name between all of them.
 
@@ -21,15 +21,13 @@ Parameters in a Dashboard can be shared between different queries, just make sur
 
 ![](../.gitbook/assets/image%20%2829%29.png)
 
-### How to use Parameters?
+## How to use Parameters?
 
-You can simply add a parameter to your queries by writing `{{parametername}}` or using the button below the query. You can order them by prefacing them with the corresponding position you want the Parameter to appear in the User Interface : `{{1.  parametername}}`.   
-  
-You can edit the properties of single parameters by clicking on the litte gear wheel next to the parameter in the query editor. This allows you to set a default value, define a list of possible parameters and change the type of the parameter.
+You can simply add a parameter to your queries by writing `{{parametername}}` or using the button below the query. You can order them by prefacing them with the corresponding position you want the Parameter to appear in the User Interface : `{{1. parametername}}`.
 
+You can edit the properties of single parameters by clicking on the litte gear wheel next to the parameter in the query editor. This allows you to set a default value, define a list of possible parameters or change the type of the parameter.
 
-
-### Example Query
+## Example Query
 
 This query returns the running total of Gas Paid in USD.
 
@@ -68,23 +66,23 @@ ORDER BY block_time DESC
 
 Find this query [here](https://dune.xyz/queries/64430/128463)
 
-### **Example Dashboards**
+## **Example Dashboards**
 
 **Find interesting stats on Ethereum Wallets with this dashboard:**  
-[https://dune.xyz/kevdnlol/Transaction-Breakdown](https://dune.xyz/kevdnlol/Transaction-Breakdown)  
-  
-_The author has included the parameters `wallet address`, `start date` and `end date` in this Dashboard._ 
+[https://dune.xyz/kevdnlol/Transaction-Breakdown](https://dune.xyz/kevdnlol/Transaction-Breakdown)
+
+_The author has included the parameters `wallet address`, `start date` and `end date` in this Dashboard._
 
 **Drill down into the single pools of Barnbridge's Smart Yield Product:**  
-[https://dune.xyz/0xBoxer/Barnbridge-or-Smart-Yield](https://dune.xyz/0xBoxer/Barnbridge-or-Smart-Yield)   
-  
+[https://dune.xyz/0xBoxer/Barnbridge-or-Smart-Yield](https://dune.xyz/0xBoxer/Barnbridge-or-Smart-Yield)
+
 _The Author has chosen to make the parameter `poolsymbol` into a drop down list here. This allows for easy access to all the relevant pools and detailed statistics on those._
 
 **Find out how many people are participating in Yearn Vaults:**  
 [https://dune.xyz/msilb7/Yearn-How-Many-Addresses-are-Participating](https://dune.xyz/msilb7/Yearn-How-Many-Addresses-are-Participating)
 
-### Summary
+## Summary
 
-Parameters allow you to make a certain part of your SQL query dynamic and thereby offer you to make  queries and dashboards interactive. That way you can easily display detailed data on your dashboard since it allows the viewer to customize the dashboard for his needs.  
+Parameters allow you to make a certain part of your SQL query dynamic and thereby offer you to make queries and dashboards interactive. That way you can easily display detailed data on your dashboard since it allows the viewer to customize the dashboard for his needs.  
 You could think of parameters like filters, but the possibilities of using this feature go beyond that.
 

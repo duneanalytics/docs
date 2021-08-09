@@ -50,7 +50,7 @@ There are a few ways that a blockchain analyst \(ie. you!\) can get started runn
 
 Run a query using one of the abstractions listed above to return some results
 
-Analyze the results and answer the question: what am I looking at? 
+Analyze the results and answer the question: what am I looking at?
 
 Tip: what data populates each row and what populates each column?
 

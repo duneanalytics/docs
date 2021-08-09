@@ -14,7 +14,7 @@ We create tables for each event and function defined in the smart contract ABI. 
 
 The tables are named accordingly
 
-**events:**             `projectname."contractName_evt_eventName"`
+**events:** `projectname."contractName_evt_eventName"`
 
 **function calls:** `projectname."contractName_call_eventName"`
 
@@ -36,19 +36,18 @@ Decoded data sometimes is a bit tricky to work with since it requires you to und
 
 If you are not able to make sense of the data by just searching at the tables, it usually helps to look at single tx's using the transaction hash and etherscan.
 
-If that also doesn't lead to satisfactory results, scouring the relevant docs and github of the project can lead you to the desired answers. Furthermore, talking to the developers and core community of a project can also get you to a good understanding of the contract. 
+If that also doesn't lead to satisfactory results, scouring the relevant docs and github of the project can lead you to the desired answers. Furthermore, talking to the developers and core community of a project can also get you to a good understanding of the contract.
 
-Some good showcasing of how to deal with decoded data can be found all throughout Dune, but especially our [abstraction repository](https://github.com/duneanalytics/abstractions) is full of great examples.   
+Some good showcasing of how to deal with decoded data can be found all throughout Dune, but especially our [abstraction repository](https://github.com/duneanalytics/abstractions) is full of great examples.
 
+**In Summary**:
 
-**In Summary**:  
-  
 Dealing with decoded data allows you deep access to information stored on the blockchain and is very information rich, but understanding that data sometimes takes a bit of effort on your side since you are interacting with the data of the contract in a direct way.
 
 ## Scalable decoding across contracts
 
-Many dApps have numerous smart contracts that are deployed with the same bytecode. This can be: yield aggregator pools,distinctive options, liquidity pools etc.  
-  
+Many dApps have numerous smart contracts that are deployed with the same bytecode. This can be: yield aggregator pools,distinctive options, liquidity pools etc.
+
 We can automatically pull these similar contracts into the same tables and thereby make it way easier for you to work with that data. Instead of having to query for all distinctive smart contracts you can then just query one table which will have the `contract_address` of that specific smart contract as an identifier.
 
 To be able to use this function you have to submit the contract as one of the two bottom options while submitting it to decoding.
@@ -72,14 +71,12 @@ will give you all the unique Uniswap Pairs with a Token Purchase event.
 **See all projects we have decoded data for**
 
 ```sql
-SELECT DISTINCT namespace FROM ethereum."contracts"; 
+SELECT DISTINCT namespace FROM ethereum."contracts";
 ```
 
 If you are working with a an event or call table directly you can see if there are several instances of that contract with this query.
 
 ```sql
-SELECT DISTINCT contract_address FROM projectname."contractName_evt_eventName"; 
+SELECT DISTINCT contract_address FROM projectname."contractName_evt_eventName";
 ```
-
-
 

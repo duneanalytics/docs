@@ -4,13 +4,13 @@ Have you ever made a query on Dune where you get a list of addresses, only to st
 
 **Address labels** is a feature on Dune where you as a user can _add_, _update_ and _query_ labels for any address.
 
-### What is a label?
+## What is a label?
 
 A label is **a piece of metadata about an address**, a tag or metadata if you will. It comes in the form of a key-value pair. The key is the label _type_, and the value the label _name_.
 
 Browse addresses and and labels at the [**labels page**](https://dune.xyz/labels).
 
-### What labels looks like
+## What labels looks like
 
 Check out [this dashboard](https://dune.xyz/hagaetc/labels) for examples on what can be created with labels.
 
@@ -36,7 +36,7 @@ The address in the past interacted with Uniswap.
 
 You are free to come up with both new types and label names, as labels on Dune are open ended and **crowd sourced.**
 
-### Adding labels
+## Adding labels
 
 There are two ways to add labels:
 
@@ -61,7 +61,7 @@ You could also do more novel and involved things around user patterns like who d
 
 Note that there might be a few minutes delay from adding the label on [dune.xyz](http://dune.xyz/) until you can query it in SQL.
 
-### The labels table
+## The labels table
 
 Labels are stored in the new `labels.labels` table which has the following schema:
 
@@ -75,9 +75,7 @@ Labels are stored in the new `labels.labels` table which has the following schem
 | source | text | the source of this label, autopopulated by dune |
 | updated\_at | timestamptz | the last time this label was changed |
 
-### 
-
-### Using labels
+## Using labels
 
 Note that this table holds multiple rows per address, and therefore joins against it can be tricky to get right. For that reason we’ve made the convenient function:
 
@@ -91,7 +89,7 @@ We’ve also added the function `labels.url(address bytea)`. Pass that function 
 
 [https://dune.xyz/ethereum/address/0xD551234Ae421e3BCBA99A0Da6d736074f22192FF](https://dune.xyz/ethereum/address/0xD551234Ae421e3BCBA99A0Da6d736074f22192FF)
 
-#### Usecase: I want to display labels for a list of addresses <a id="&#x1F4DC;-Usecase-I-want-to-display-labels-for-a-list-of-addresses"></a>
+### Usecase: I want to display labels for a list of addresses <a id="&#x1F4DC;-Usecase-I-want-to-display-labels-for-a-list-of-addresses"></a>
 
 > We encourage you to run these queries in Dune while you read this
 
@@ -162,7 +160,7 @@ GROUP BY 1, 2
 
 This way people who look at your dashboard can easily contribute even better labels to it!
 
-#### Usecase: I want to filter my query by labels that exist. <a id="&#x1F9FC;-Usecase-I-want-to-filter-my-query-by-labels-that-exist"></a>
+### Usecase: I want to filter my query by labels that exist. <a id="&#x1F9FC;-Usecase-I-want-to-filter-my-query-by-labels-that-exist"></a>
 
 In this usecase you wouldn’t want to use `labels.get`, because it can be slow to operate with. Instead you’ll use the fantastic `EXISTS` function in SQL.
 

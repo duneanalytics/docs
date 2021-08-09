@@ -4,7 +4,7 @@
 
 Let's explore this with some examples:
 
-### Dex Metrics
+## Dex Metrics
 
 [**https://dune.xyz/hagaetc/dex-metrics**](https://dune.xyz/hagaetc/dex-metrics)
 
@@ -14,17 +14,13 @@ You can see Dex Volume, Market share, Total Volume across all exchanges and many
 
 All of this updates in real time and is maintained by the community, if a new dex wants to be on this dashboard, all they have to do is submit their code to our public github. More on this in [abstractions](../../data-tables/data-tables/abstractions.md).
 
-
-
 ![](../../.gitbook/assets/image%20%2816%29.png)
 
 ![](../../.gitbook/assets/image%20%284%29.png)
 
 ![](../../.gitbook/assets/image%20%288%29.png)
 
-
-
-### Indices
+## Indices
 
 [**https://dune.xyz/0xBoxer/indices-products**](https://dune.xyz/0xBoxer/indices-products)
 
@@ -38,9 +34,7 @@ Here again, you can evaluate the entire state of a sector in one glance, being a
 
 ![](../../.gitbook/assets/image%20%2811%29.png)
 
-### Lending
-
-
+## Lending
 
 The same applies for lending protocols, it allows you to easily check the state of lending protocols and compare them to each other with ease.
 
@@ -48,12 +42,9 @@ The same applies for lending protocols, it allows you to easily check the state 
 
 ![](../../.gitbook/assets/image%20%2812%29.png)
 
-### Summary
+## Summary
 
 Sector Dashboards allow your audience to make assumptions on a whole sector of this nascent Industry. This is very useful for comparing different products with each other and trying to spot trends.
 
 Most Sector Dashboards are relying on one or many [abstraction](../../data-tables/data-tables/abstractions.md) tables which make it easy to query for vast amounts of data and standardizing between the different protocols.
-
-  
-
 

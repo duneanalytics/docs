@@ -42,14 +42,12 @@ This table generates a view that you can use to join on your query.
 
 Views can also be used to aggregate the actions of multiple smart contracts into one view that contains all the necessary data.
 
-This is especially useful if you are working with the same dataset over and over and only change the way you display or aggregate the data. That way, instead of having to query for your dataset again and again, you just put it into a view once and then can start referencing that view.   
-This will allow you to change the base query that constructs your dataset without having to go through multiple different instances of your query. Think about it like splitting your data collection and the actual work/display you do with that data into two different parts that function independently of each other. 
+This is especially useful if you are working with the same dataset over and over and only change the way you display or aggregate the data. That way, instead of having to query for your dataset again and again, you just put it into a view once and then can start referencing that view.  
+This will allow you to change the base query that constructs your dataset without having to go through multiple different instances of your query. Think about it like splitting your data collection and the actual work/display you do with that data into two different parts that function independently of each other.
 
 Utilizing this will make the maintenance of your dashboards much easier since you can just change the **dune\_user\_generated** view instead of having to go through all queries individually.
 
 A great example of this in action is almost all queries on [this dashboard](https://dune.xyz/keeganead/cryptoart_1). The Creator made one base dataset in the **dune\_user\_generated** schema and uses that to base all of his queries on.
-
-
 
 Please do note that while this approach works for most cases, views can get very computationally expensive and you might be better off constructing a materialized view or table in our [abstractions](abstractions.md).
 
@@ -86,7 +84,7 @@ CREATE OR REPLACE view dune_user_generated.uniswap_v3 as
         evt_index,
         row_number() OVER (PARTITION BY tx_hash, evt_index, trace_address) AS trade_id
     FROM (
-  
+
         --Uniswap v3
         SELECT
             t.evt_block_time AS block_time,
@@ -117,7 +115,6 @@ CREATE OR REPLACE view dune_user_generated.uniswap_v3 as
         AND pa.contract_address = dexs.token_a_address
     LEFT JOIN prices.usd pb ON pb.minute = date_trunc('minute', dexs.block_time)
         AND pb.contract_address = dexs.token_b_address
-
 ```
 
 [https://dune.xyz/queries/42779](https://dune.xyz/queries/42779)
@@ -155,7 +152,7 @@ WHERE tgtdep.deptype = 'i'::"char" AND tgtobj.relkind = 'v'::"char"
 -- WHERE src_objectname LIKE '%filter_word%'
 ```
 
-You need to temporarily break the dependencies in order to be able to change `view1`.  
-  
+You need to temporarily break the dependencies in order to be able to change `view1`.
+
 Find the query [here](https://dune.xyz/queries/70916). Big thanks to gosuto for uncovering this.
 

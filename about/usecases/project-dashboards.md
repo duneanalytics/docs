@@ -25,5 +25,3 @@ Having all these stats in one place greatly helps to manage your project and hel
 
 You can find many other great dashboard on our [Projects Page](https://dune.xyz/projects).
 
-
-

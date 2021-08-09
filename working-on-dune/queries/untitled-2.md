@@ -14,7 +14,7 @@ WITH weth_pairs AS ( -- Get exchange contract address and "other token" for WETH
     FROM uniswap_v2."Factory_evt_PairCreated" cr
     WHERE token0 = '\xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2' OR  token1 = '\xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2'
     )
-    
+
 , swap AS ( -- Get all trades on the pair last 14 days
     SELECT
         CASE WHEN eth_token = '0' then sw."amount0In" + sw."amount0Out" ELSE sw."amount1In" + sw."amount1Out"
@@ -32,7 +32,7 @@ WITH weth_pairs AS ( -- Get exchange contract address and "other token" for WETH
     -- WHERE other_token = CONCAT('\x', substring('{{Token address}}' from 3))::bytea -- Allow user to input 0x... format and convert to \x... format
     AND sw.evt_block_time >= now() - interval '14 days'
     )
-    
+
 , eth_prcs AS (
     SELECT avg(price) eth_prc, date_trunc('hour', minute) AS hour
     FROM prices.layer1_usd_eth

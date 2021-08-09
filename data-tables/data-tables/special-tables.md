@@ -42,5 +42,3 @@ You can query for special tables using this query:
 SELECT * FROM ethereum."contracts" WHERE address IS NULL;
 ```
 
-
-
