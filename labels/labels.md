@@ -8,15 +8,15 @@ Have you ever made a query on Dune where you get a list of addresses, only to st
 
 A label is **a piece of metadata about an address**, a tag or metadata if you will. It comes in the form of a key-value pair. The key is the label _type_, and the value the label _name_.
 
-Browse addresses and and labels at the [**labels page**](https://duneanalytics.com/labels).
+Browse addresses and and labels at the [**labels page**](https://dune.xyz/labels).
 
 #### 🖼 What labels looks like <a id="&#x1F5BC;-What-labels-looks-like"></a>
 
-Check out [this dashboard](https://duneanalytics.com/hagaetc/labels) for examples on what can be created with labels.
+Check out [this dashboard](https://dune.xyz/hagaetc/labels) for examples on what can be created with labels.
 
 **Address label examples**
 
-The address [0xD551234Ae421e3BCBA99A0Da6d736074f22192FF](https://duneanalytics.com/ethereum/address/0xD551234Ae421e3BCBA99A0Da6d736074f22192FF) can be labeled
+The address [0xD551234Ae421e3BCBA99A0Da6d736074f22192FF](https://dune.xyz/ethereum/address/0xD551234Ae421e3BCBA99A0Da6d736074f22192FF) can be labeled
 
 | type | name |
 | :--- | :--- |
@@ -25,7 +25,7 @@ The address [0xD551234Ae421e3BCBA99A0Da6d736074f22192FF](https://duneanalytics.c
 
 Because the address is controlled by the exchange Binance.
 
-The address [0xe65040f61701940b62e18da7a53126a58525588b](https://duneanalytics.com/ethereum/address/0xe65040f61701940b62e18da7a53126a58525588b) can be labeled
+The address [0xe65040f61701940b62e18da7a53126a58525588b](https://dune.xyz/ethereum/address/0xe65040f61701940b62e18da7a53126a58525588b) can be labeled
 
 | type | name |
 | :--- | :--- |
@@ -59,7 +59,7 @@ Examples of what you can do:
 
 You could also do more novel and involved things around user patterns like who did arbitrage trades or profited from flash loans and so much more.
 
-Note that there might be a few minutes delay from adding the label on [duneanalytics.com](http://duneanalytics.com/) until you can query it in SQL.
+Note that there might be a few minutes delay from adding the label on [dune.xyz](http://dune.xyz/) until you can query it in SQL.
 
 #### 🗄 The labels table <a id="&#x1F5C4;-The-labels-table"></a>
 
@@ -96,7 +96,7 @@ Typically if you do a query that returns `address` you can use `labels.get(addre
 
 We’ve also added the function `labels.url(address bytea)`. Pass that function an address from your query and your results table will contain a clickable link to for instance:
 
-[https://duneanalytics.com/ethereum/address/0xD551234Ae421e3BCBA99A0Da6d736074f22192FF](https://duneanalytics.com/ethereum/address/0xD551234Ae421e3BCBA99A0Da6d736074f22192FF)
+[https://dune.xyz/ethereum/address/0xD551234Ae421e3BCBA99A0Da6d736074f22192FF](https://dune.xyz/ethereum/address/0xD551234Ae421e3BCBA99A0Da6d736074f22192FF)
 
 #### 📜 Usecase: I want to display labels for a list of addresses <a id="&#x1F4DC;-Usecase-I-want-to-display-labels-for-a-list-of-addresses"></a>
 

@@ -8,27 +8,27 @@ description: 'Welcome to Dune Analytics,'
 
 **Dune Analytics is a powerful tool for blockchain research. Dune gives you all the tools to query, extract, and visualize vast amounts of data from the blockchain. Dune is unlocking the power of public blockchain data by making it accessible to everyone. This documentation will help you answer questions like:**
 
-[How much volume flows through Uniswap each day?](https://duneanalytics.com/queries/3)
+[How much volume flows through Uniswap each day?](https://dune.xyz/queries/3)
 
-[Which Dex has the highest volume?](https://duneanalytics.com/queries/1847)
+[Which Dex has the highest volume?](https://dune.xyz/queries/1847)
 
-[How are important Stablecoins behaving today?](https://duneanalytics.com/hagaetc/stablecoins)
+[How are important Stablecoins behaving today?](https://dune.xyz/hagaetc/stablecoins)
 
 **Try It**
 
 Follow along the **Try it** sections to get a grasp on Dune.
 
-Create a user for free at [duneanalytics.com](./) and set up a basic profile
+Create a user for free at [dune.xyz](./) and set up a basic profile
 
 ## Dune Analytics Basics
 
 While navigating Dune Analytics, it helps to have a good understanding of [queries](./#queries), [visualizations](./#visualizations), and [dashboards](./#dashboards). These are the basic building blocks that act as your portal to the world's blockchain information. As a blockchain analyst, you can create custom queries to fetch data, visualize the results of these queries, and then tell stories with your data using dashboards.
 
-Behind the scenes, Dune transforms difficult-to-access data into human-readable tables. These tables make it possible to write SQL queries that retrieve information from the blockchain. Dune also gives you access to [other users' public queries](https://duneanalytics.com/browse/queries) so you can pick up where they left off.
+Behind the scenes, Dune transforms difficult-to-access data into human-readable tables. These tables make it possible to write SQL queries that retrieve information from the blockchain. Dune also gives you access to [other users' public queries](https://dune.xyz/browse/queries) so you can pick up where they left off.
 
 **Try it**
 
-Browse the [Queries](https://duneanalytics.com/browse/queries) and [Dashboards](https://duneanalytics.com/browse/dashboards) pages, see what information you can find!
+Browse the [Queries](https://dune.xyz/browse/queries) and [Dashboards](https://dune.xyz/browse/dashboards) pages, see what information you can find!
 
 ## Queries
 
@@ -91,7 +91,7 @@ Dune offers a variety of visualizations that you can use to visually present dat
 
 ## Dashboards
 
-Using carefully planned visuals, a clever blockchain analyst can tell a story about a particular group of data. For example, in the below[ dashboard](https://duneanalytics.com/hagaetc/dex-metrics) it is clear at the top that 'Dex' as a category is growing. Below, the audience sees which dex's are the most popular by volume, and finally can view a stacked bar chart that shows changes over time. By just looking at this single dashboard, the audience sees a clear picture of the entire Dex market.
+Using carefully planned visuals, a clever blockchain analyst can tell a story about a particular group of data. For example, in the below[ dashboard](https://dune.xyz/hagaetc/dex-metrics) it is clear at the top that 'Dex' as a category is growing. Below, the audience sees which dex's are the most popular by volume, and finally can view a stacked bar chart that shows changes over time. By just looking at this single dashboard, the audience sees a clear picture of the entire Dex market.
 
 ![Screen Shot 2021-04-23 at 10 51 25 AM](https://user-images.githubusercontent.com/76178256/115889404-e7841080-a421-11eb-9e30-8d43e58e28f4.png)
 

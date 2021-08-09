@@ -18,15 +18,15 @@ The tables are named accordingly
 
 **function calls:** `projectname."contractName_call_eventName"`
 
-As an example, decoded data for the `swap`-event of the uniswap V2 exchange contract is found in the table [uniswap\_v2."pair\_swap"](https://duneanalytics.com/queries/38968).
+As an example, decoded data for the `swap`-event of the uniswap V2 exchange contract is found in the table [uniswap\_v2."pair\_swap"](https://dune.xyz/queries/38968).
 
-Using the event tables is usually sufficient, but in some cases you will want to use the `call` tables. For instance Maker DAO which don’t give you too many events you can use tables like [maker."SaiTub\_call\_draw](https://duneanalytics.com/queries/38974)".
+Using the event tables is usually sufficient, but in some cases you will want to use the `call` tables. For instance Maker DAO which don’t give you too many events you can use tables like [maker."SaiTub\_call\_draw](https://dune.xyz/queries/38974)".
 
 ## What contracts have decoded data?
 
-You can check if contracts are already decoded by querying "blockchain".contracts through our database or [this dashboard](https://duneanalytics.com/0xBoxer/Is-my-Contract-decoded-yet).
+You can check if contracts are already decoded by querying "blockchain".contracts through our database or [this dashboard](https://dune.xyz/0xBoxer/Is-my-Contract-decoded-yet).
 
-If the contract is not in our database yet, you can submit them here: [www.duneanalytics.com/decoding](https://duneanalytics.retool.com/embedded/public/892af55f-a6ff-41df-b203-f8acb6f0a38b).
+If the contract is not in our database yet, you can submit them here: [www.dune.xyz/decoding](https://duneanalytics.retool.com/embedded/public/892af55f-a6ff-41df-b203-f8acb6f0a38b).
 
 We usually take about 24-48 hours to decode smart contracts.
 
@@ -65,7 +65,7 @@ SELECT DISTINCT contract_address FROM uniswap_v2."Pair_evt_swap";
 
 will give you all the unique Uniswap Pairs with a Token Purchase event.
 
-[Query in action](https://duneanalytics.com/queries/39006)
+[Query in action](https://dune.xyz/queries/39006)
 
 ## **Queries to explore decoded Contracts**
 

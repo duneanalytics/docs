@@ -9,13 +9,13 @@ Seeing the queries live and in action does allow you to more intuitively engage 
 
 **Some of our best creators are these:**
 
-* [https://duneanalytics.com/hagaetc](https://duneanalytics.com/hagaetc)
-* [https://duneanalytics.com/rchen8](https://duneanalytics.com/rchen8)
-* [https://duneanalytics.com/kroeger0x](https://duneanalytics.com/kroeger0x) 
-* \*\*\*\*[https://duneanalytics.com/eliasimos](https://duneanalytics.com/eliasimos)
-* [https://duneanalytics.com/0xBoxer](https://duneanalytics.com/0xBoxer)
-* \*\*\*\*[https://duneanalytics.com/Siang513](https://duneanalytics.com/Siang513)
-* [https://duneanalytics.com/keeganead](https://duneanalytics.com/keeganead)
+* [https://dune.xyz/hagaetc](https://dune.xyz/hagaetc)
+* [https://dune.xyz/rchen8](https://dune.xyz/rchen8)
+* [https://dune.xyz/kroeger0x](https://dune.xyz/kroeger0x) 
+* \*\*\*\*[https://dune.xyz/eliasimos](https://dune.xyz/eliasimos)
+* [https://dune.xyz/0xBoxer](https://dune.xyz/0xBoxer)
+* \*\*\*\*[https://dune.xyz/Siang513](https://dune.xyz/Siang513)
+* [https://dune.xyz/keeganead](https://dune.xyz/keeganead)
 
 **Nevertheless we have collected some queries here for a simple introduction:**
 

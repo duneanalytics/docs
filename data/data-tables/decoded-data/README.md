@@ -19,7 +19,7 @@ As an example, decoded data for the `AddLiquidity`-event and `addLiquidity`-func
 
 Using the event tables is usually sufficient, but in some cases you will want to use the `call` tables. For instance Maker DAO which don’t give you too many events you can use tables like `maker.SaiTub_call_draw`.
 
-Submit contracts for decoding at [duneanalytics.com/decode](https://hackmd.io/k71ZUSTxQVKGqOcvR6OXnw).
+Submit contracts for decoding at [dune.xyz/decode](https://hackmd.io/k71ZUSTxQVKGqOcvR6OXnw).
 
 
 

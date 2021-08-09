@@ -9,7 +9,7 @@ Without having to maintain infrastructure or overhead, you can simply query for 
 
 **Let's explore this with an example:**
 
-\*\*\*\*[**https://duneanalytics.com/poma/tornado-cash\_1**](https://duneanalytics.com/poma/tornado-cash_1)\*\*\*\*
+\*\*\*\*[**https://dune.xyz/poma/tornado-cash\_1**](https://dune.xyz/poma/tornado-cash_1)\*\*\*\*
 
 This is the dashboard from Tornado Cash on which someone assembled all the important metrics in one place.
 
@@ -23,7 +23,7 @@ He follows this up with some interesting historical data points which show the g
 
 Having all these stats in one place greatly helps to manage your project and help it succeed.
 
-You can find many other great dashboard on our [Projects Page](https://duneanalytics.com/projects).
+You can find many other great dashboard on our [Projects Page](https://dune.xyz/projects).
 
 
 

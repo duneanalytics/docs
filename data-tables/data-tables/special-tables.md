@@ -17,7 +17,7 @@ When we’re interested in a subset of events fired regardless of the origin con
 | evt\_block\_time | timestamptz | the time at which the transaction occurred |
 | evt\_block\_number | int8 | the length of the blockchain |
 
-[See this table in action](https://duneanalytics.com/queries/39012)
+[See this table in action](https://dune.xyz/queries/39012)
 
 **erc721."ERC721\_evt\_Transfer"**
 
@@ -32,7 +32,7 @@ When we’re interested in a subset of events fired regardless of the origin con
 | evt\_block\_time | timestamptz | the time at which the transaction occurred |
 | evt\_block\_number | int8 | the length of the blockchain |
 
-[See this table in action](https://duneanalytics.com/queries/38974)
+[See this table in action](https://dune.xyz/queries/38974)
 
 You can query for special tables using this query:
 

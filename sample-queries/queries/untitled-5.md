@@ -14,5 +14,5 @@ Using the below snippet will allow users to past addresses in the regular `0x...
 WHERE contract_address = CONCAT('\x', substring('{{Address}}' from 3))::bytea
 ```
 
-[Here’s](https://explore.duneanalytics.com/queries/10505/source?p_Address=0x37236cd05b34cc79d3715af2383e96dd7443dcf1#20880) an example of this being applied in a query.
+[Here’s](https://explore.dune.xyz/queries/10505/source?p_Address=0x37236cd05b34cc79d3715af2383e96dd7443dcf1#20880) an example of this being applied in a query.
 

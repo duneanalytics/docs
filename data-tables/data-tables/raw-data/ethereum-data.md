@@ -47,7 +47,7 @@ For more on this topic read [this article](https://medium.com/mycrypto/understan
 | tx\_hash | bytea | the transaction hash of the event |
 | tx\_index | numeric | the index of the transaction |
 
-[**Take a look for yourself**](https://duneanalytics.com/queries/38957)
+[**Take a look for yourself**](https://dune.xyz/queries/38957)
 
 ### Ethereum.Transactions
 
@@ -73,7 +73,7 @@ For more on this topic read [this article](https://medium.com/mycrypto/understan
 | max\_priority\_fee\_per\_gas | numeric | maximum fee per gas the transaction sender is willing to give to miners to incentivize them to include their transaction \(introduced by [EIP1559](https://eips.ethereum.org/EIPS/eip-1559)\) |
 | priority\_fee\_per\_gas | numeric | the priority fee paid out to the miner for this transaction \(introduced by [EIP1559](https://eips.ethereum.org/EIPS/eip-1559)\) |
 
-\*\*\*\*[**Take a look for yourself**](https://duneanalytics.com/queries/38964)\*\*\*\*
+\*\*\*\*[**Take a look for yourself**](https://dune.xyz/queries/38964)\*\*\*\*
 
 ### Ethereum.Traces
 
@@ -105,7 +105,7 @@ Read more [here](https://medium.com/chainalysis/ethereum-traces-not-transactions
 | output | bytea |  |
 | refund\_address | bytea |  |
 
-\*\*\*\*[**Take a look for yourself**](https://duneanalytics.com/queries/38730)\*\*\*\*
+\*\*\*\*[**Take a look for yourself**](https://dune.xyz/queries/38730)\*\*\*\*
 
 **You probably won’t use these too much when doing analysis with Dune \(see** [**decoded data**](../decoded-data.md)**\), but it’s always nice to have just in case.**
 

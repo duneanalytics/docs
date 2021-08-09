@@ -4,7 +4,7 @@ The most common and easiest way to get token USD prices on Dune Analytics is wit
 
 This query uses WETH pairs, which is used to map to USD price. The query can be modified to work with any token that has a price in `prices.usd`
 
-You can find this query on Dune [here](https://explore.duneanalytics.com/queries/11050/source?p_Token%20address=0xeb4c2781e4eba804ce9a9803c67d0893436bb27d).
+You can find this query on Dune [here](https://explore.dune.xyz/queries/11050/source?p_Token%20address=0xeb4c2781e4eba804ce9a9803c67d0893436bb27d).
 
 ```sql
 WITH weth_pairs AS ( -- Get exchange contract address and "other token" for WETH

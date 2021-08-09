@@ -5,7 +5,7 @@
 
 ### Gas Prices
 
-[https://duneanalytics.com/kroeger0x/gas-prices](https://duneanalytics.com/kroeger0x/gas-prices)
+[https://dune.xyz/kroeger0x/gas-prices](https://dune.xyz/kroeger0x/gas-prices)
 
 You can easily assemble the data on average gas spent per tx, gas limit, gas spent in total in a block etc. using Dune. 
 
@@ -21,5 +21,5 @@ Data on gas spent and similar metrics can also be relevant to certain protocols,
 
 ![](../../.gitbook/assets/image%20%2821%29.png)
 
-[https://duneanalytics.com/rchen8/defi-users-over-time](https://duneanalytics.com/rchen8/defi-users-over-time)
+[https://dune.xyz/rchen8/defi-users-over-time](https://dune.xyz/rchen8/defi-users-over-time)
 

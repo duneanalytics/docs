@@ -36,7 +36,7 @@ CREATE OR REPLACE VIEW dune_user_generated.view_test (symbol, contract_address, 
 
 This table generates a view that you can use to join on your query.
 
-[Look at the table](https://duneanalytics.com/queries/41577).
+[Look at the table](https://dune.xyz/queries/41577).
 
 ### Aggregating Data
 
@@ -47,7 +47,7 @@ This will allow you to change the base query that constructs your dataset withou
 
 Utilizing this will make the maintenance of your dashboards much easier since you can just change the **dune\_user\_generated** view instead of having to go through all queries individually.
 
-A great example of this in action is almost all queries on [this dashboard](https://duneanalytics.com/keeganead/cryptoart_1). The Creator made one base dataset in the **dune\_user\_generated** schema and uses that to base all of his queries on.
+A great example of this in action is almost all queries on [this dashboard](https://dune.xyz/keeganead/cryptoart_1). The Creator made one base dataset in the **dune\_user\_generated** schema and uses that to base all of his queries on.
 
 
 
@@ -120,7 +120,7 @@ CREATE OR REPLACE view dune_user_generated.uniswap_v3 as
 
 ```
 
-[https://duneanalytics.com/queries/42779](https://duneanalytics.com/queries/42779)
+[https://dune.xyz/queries/42779](https://dune.xyz/queries/42779)
 
 ### Testing Abstractions
 
@@ -157,5 +157,5 @@ WHERE tgtdep.deptype = 'i'::"char" AND tgtobj.relkind = 'v'::"char"
 
 You need to temporarily break the dependencies in order to be able to change `view1`.  
   
-Find the query [here](https://duneanalytics.com/queries/70916). Big thanks to gosuto for uncovering this.
+Find the query [here](https://dune.xyz/queries/70916). Big thanks to gosuto for uncovering this.
 

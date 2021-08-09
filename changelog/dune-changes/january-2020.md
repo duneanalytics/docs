@@ -108,7 +108,7 @@ ORDER BY 2 desc;
 
 #### Fallback decoding <a id="Fallback-decoding"></a>
 
-The above tables are generated with a new feature we call “fallback decoding”. Essentially it breaks down to being able to decode logs regardless of the events contract address or contract bytecode. If you know other cases where this decoding can be useful feel free to let us know at [hello@duneanalytics.com](mailto:hello@duneanalytics.com)
+The above tables are generated with a new feature we call “fallback decoding”. Essentially it breaks down to being able to decode logs regardless of the events contract address or contract bytecode. If you know other cases where this decoding can be useful feel free to let us know at [hello@dune.xyz](mailto:hello@dune.xyz)
 
 #### Misc <a id="Misc1"></a>
 

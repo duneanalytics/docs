@@ -1,5 +1,5 @@
 ---
-description: 'https://duneanalytics.com/blog/revolution-not-quarterly'
+description: 'https://dune.xyz/blog/revolution-not-quarterly'
 ---
 
 # The Revolution will not be reported quarterly
@@ -48,17 +48,17 @@ Take a look at JPMorgan Chase’s [Q4 report](https://www.jpmorganchase.com/cont
 
 Meanwhile, you can look real-time into the financials of the Maker DAO lending system on Ethereum:![maker dao financials](https://cdn.sanity.io/images/fox336rh/production/8f6102cfe2b4d5edf8ef4ff5beee497e636d7fbe-2518x952.png?w=780&fm=jpg)
 
-[MakerDAO financials](https://explore.duneanalytics.com/public/dashboards/DpFphwlksHG2tV7xPXQRahQNBZXNVjiuiSpKQbui)
+[MakerDAO financials](https://explore.dune.xyz/public/dashboards/DpFphwlksHG2tV7xPXQRahQNBZXNVjiuiSpKQbui)
 
 You can also drill down as deep as you want as all queries for creating these stats are open. For instance here are the total deposits in the MakerDAO lending system and the price of the asset, MKR, that has claim on MakerDAO’s revenues:
 
 ![Maker value locked](https://cdn.sanity.io/images/fox336rh/production/684b9bf845192f9e1c3b98feae130c0e6adecb7e-1560x1151.png?w=780&fm=jpg)
 
-[MakerDAO dashboard](https://www.duneanalytics.com/hagaetc/maker-dao---mcd)
+[MakerDAO dashboard](https://www.dune.xyz/hagaetc/maker-dao---mcd)
 
 Furthermore, you can get a full real-time overview of the whole Ethereum lending sector:![lending sector](https://cdn.sanity.io/images/fox336rh/production/2e2930b5b3e5f7d66ef212c02687d05baac17846-2172x1700.png?w=780&fm=jpg)
 
-[Lending sector dashboard](https://duneanalytics.com/hagaetc/lending)
+[Lending sector dashboard](https://dune.xyz/hagaetc/lending)
 
 **The living breathing quarterly report**
 
@@ -70,7 +70,7 @@ Open data is yet another piece of the open finance ecosystem that facilitates ex
 
 ---
 
-_At Dune Analytics we’re currently a four person team and are hiring software engineers remotely in ~CET timezone. If this post gets you excited you should check out our_ [_careers_](https://careers.duneanalytics.com/) _page._
+_At Dune Analytics we’re currently a four person team and are hiring software engineers remotely in ~CET timezone. If this post gets you excited you should check out our_ [_careers_](https://careers.dune.xyz/) _page._
 
 Big thanks to [Tom Schmidt](https://twitter.com/tomhschmidt), [Teo Leibowitz](https://twitter.com/teo_leibowitz), [Kyle Samani](https://twitter.com/KyleSamani) and [Mats Olsen](https://twitter.com/mewwts) for providing feedback on drafts of this post.  
 

@@ -8,7 +8,7 @@ Since Dune has all the data of one chain in one place you can also check more ge
 
 
   
-[https://duneanalytics.com/kroeger0x/gas-prices](https://duneanalytics.com/kroeger0x/gas-prices)  
+[https://dune.xyz/kroeger0x/gas-prices](https://dune.xyz/kroeger0x/gas-prices)  
   
-[https://duneanalytics.com/rchen8/defi-users-over-time](https://duneanalytics.com/rchen8/defi-users-over-time)
+[https://dune.xyz/rchen8/defi-users-over-time](https://dune.xyz/rchen8/defi-users-over-time)
 

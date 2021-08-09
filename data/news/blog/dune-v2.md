@@ -1,12 +1,12 @@
 ---
-description: 'https://duneanalytics.com/blog/dune-v2'
+description: 'https://dune.xyz/blog/dune-v2'
 ---
 
 # Dune V2
 
 ![](../../../.gitbook/assets/image%20%282%29.png)
 
-Today we are beyond excited to open a whole new chapter for on-chain data broadly and Dune Analytics specifically! Our team of four \([we’re hiring](http://careers.duneanalytics.com/)!\) started on a hugely ambitious project at the beginning of this year: to rebuild the Dune Analytics experience from the ground up. And today, less than a quarter later, you can enjoy a whole new Dune as v2 is now live!
+Today we are beyond excited to open a whole new chapter for on-chain data broadly and Dune Analytics specifically! Our team of four \([we’re hiring](http://careers.dune.xyz/)!\) started on a hugely ambitious project at the beginning of this year: to rebuild the Dune Analytics experience from the ground up. And today, less than a quarter later, you can enjoy a whole new Dune as v2 is now live!
 
 **The long story short is:**
 
@@ -34,7 +34,7 @@ Dune will now automatically refresh queries when they are viewed. Query creators
 Finding the right data tables, creating queries and visualising your results has never been easier! We’ve redesigned the entire query and dashboard editor experience. Improvements include:  
 
 
-* The whole Dune experience now lives on the duneanalytics.com domain and there’s no “go to app”
+* The whole Dune experience now lives on the dune.xyz domain and there’s no “go to app”
 * All charts have gotten a complete makeover
 * Cleaner query editor overall
 * Simply scroll down to see, add and edit visualisations of your query results
@@ -53,7 +53,7 @@ That’s it, that’s the paragraph.
 
 **Query parameters** - what is probably Dune’s most underrated feature has gotten a major upgrade. It’s now super easy to filter any query or dashboard for a token, address or anything, really. Meaning you can turn your queries and dashboards into interactive apps for on-chain data.
 
-**See content without having to log in** - simply copy and share your query or dashboard link!  The exception is for paid users that make their content private, more details on our [pricing page](https://duneanalytics.com/pricing).
+**See content without having to log in** - simply copy and share your query or dashboard link!  The exception is for paid users that make their content private, more details on our [pricing page](https://dune.xyz/pricing).
 
 See all the updates and details in [our changelog](https://hackmd.io/YOP3YIgaRAejTPE190sOjw?view#March-2021---Dune-v2).
 
@@ -71,8 +71,8 @@ We sincerely hope you'll enjoy Dune v2, happy querying!
 
 ---
 
-The revolution will not be reported quarterly and if you want to make that future a reality [you should join us](http://careers.duneanalytics.com/)!
+The revolution will not be reported quarterly and if you want to make that future a reality [you should join us](http://careers.dune.xyz/)!
 
   
-PS. There are a few visualisation types that are currently not supported in Dune v2: pivot, cohort, funnel, heatmap and bubble. We’ve emailed the users that are affected. If you have not been emailed all your queries and visualisations should work seamlessly in v2. Do join our Discord or email us at [support@duneanalytics.com](mailto:support@duneanalytics.com) if you encounter any problems.
+PS. There are a few visualisation types that are currently not supported in Dune v2: pivot, cohort, funnel, heatmap and bubble. We’ve emailed the users that are affected. If you have not been emailed all your queries and visualisations should work seamlessly in v2. Do join our Discord or email us at [support@dune.xyz](mailto:support@dune.xyz) if you encounter any problems.
 
