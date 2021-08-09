@@ -10,7 +10,11 @@ Some of our Community Members have produced great written tutorials for Dune:
 
 [Alex Manuskin](https://twitter.com/amanusk_)
 
-* [How to get started with querying on Dune Analytics](https://duneanalytics.com/blog/get-started-guide) 
+* [How to get started with querying on Dune Analytics](https://duneanalytics.com/blog/get-started-guide)
+
+[Paul Pivat](https://twitter.com/paulapivat)
+
+* [Lean foundational Ethereum topics with SQL](https://ethereum.org/en/developers/tutorials/learn-foundational-ethereum-topics-with-sql/) 
 
 These guides are great for taking a very guided approach to getting started on Dune.
 
