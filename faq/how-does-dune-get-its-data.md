@@ -1,4 +1,4 @@
-# How does Dune get it's data ?
+# How does Dune get its data ?
 
 We are working together with node providers across the Industry to ingest data into our database. This includes all raw historical data from these blockchains. It does not include state data.  
 
