@@ -12,7 +12,7 @@ Here are some tips and tricks on how to get started with the data and interface.
 
 * Create a user for free at [duneanalytics.com](https://www.duneanalytics.com/) 👍
 * Submit contracts for decoding at [duneanalytics.com/decode](https://www.duneanalytics.com/decode) 📥
-* Browse curated dashboards, queries and data tables for top projects [duneanalytics.com/projects](./) or [add a project](https://github.com/duneanalytics/projects) via a simple markdown file 🗂
+* Browse curated dashboards, queries and data tables for top projects [duneanalytics.com/projects](https://github.com/duneanalytics/projects) or [add a project](https://github.com/duneanalytics/projects) via a simple markdown file 🗂
 * Find and create data abstractions via our public [Github](http://github.com/duneanalytics/) 💻
 * Can’t find what you’re looking for? Ask our community on our [Discord server](https://discord.gg/ErrzwBz) or email us at [support@duneanalytics.com](mailto:support@duneanalytics.com) 👩‍🔧
 
@@ -27,57 +27,56 @@ Many non-technical users have mastered Dune with no prior codeing experience. Du
 
 ### Table of contents <a id="Table-of-contents"></a>
 
-* [📑 Documentation](./)
-  * [Dune Analytics TLDR](./)
-  * [Table of contents](./)
-* [🗂 Data tables](./)
-  * * [Decoded smart contract data](./)
-    * [Abstractions/table views](./)
-    * [Centralised exchanges trading data](./)
-* [👨‍🏫 Tips for querying the data](./)
-  * * [Use view abstractions and tables](./)
-    * [Using Inline Ethereum addresses](./)
-    * [Quote camel case column and table names](./)
-    * [Remove decimals](./)
-    * [Use date\_trunc to get time](./)
-    * [How to get USD price](./)
-    * [Token symbols](./)
-    * [Filter queries and dashboards with parameters](./)
-* [🏷 Address Labels](./)
-  * * [🪧 What is a label?](./)
-    * [🖼 What labels looks like](./)
-    * [📥 Adding labels](./)
-    * [🗄 The labels table](./)
-    * [🧑‍🔧 Using labels](./)
-    * [📜 Usecase: I want to display labels for a list of addresses](./)
-    * [🧼 Usecase: I want to filter my query by labels that exist.](./)
-* [🧐 Understanding data decoding in Dune Analytics](./)
-  * [What contracts have decoded data?](./)
-    * [Decoded data](./)
-    * [Abstractions and views](./)
-    * [A few handy queries to explore decoded tables](./)
-  * [Scalable decoding across contracts](./)
-    * [Contracts with the same bytecode](./)
-    * [Interfaces](./)
-  * [How Dune handles Proxy contracts](./)
-* [📬 Get any smart contract decoded](./)
-* [👩‍🏭 Change log](./)
-* [👉 Some sample queries](./)
-  * [Growth rate](./)
-  * [Users and amount over a trailing period](./)
-  * [Filter query by an address in the interface](./)
-  * [Circulating supply over time of a token with mint/burn functions](./)
-  * [Circulating supply over time with mint/burn from 0x000... address](./)
-  * [USD value of token utilised for an event](./)
-  * [USD trading volume per token over time](./)
-  * [USD price for a token from Uniswap](./)
-  * [Token \(and USD value\) per token over time for an address](./)
-* [🤕 Known issues](./)
-  * * [Function overloading](./)
+* [📑 Documentation](#-documentation)
+  * [Table of contents](#table-of-contents-)
+* [🗂 Data tables](#-data-tables-)
+  * * [Decoded smart contract data]()
+    * [Abstractions/table views](#abstractionstable-views-)
+    * [Centralised exchanges trading data](#centralised-exchanges-trading-data-)
+* [👨‍🏫 Tips for querying the data](#-tips-for-querying-the-data-)
+  * * [Use view abstractions and tables](#use-view-abstractions-and-tables-)
+    * [Using Inline Ethereum addresses](#using-inline-ethereum-addresses-)
+    * [Quote camel case column and table names](#quote-camel-case-column-and-table-names-)
+    * [Remove decimals](#remove-decimals-)
+    * [Use date\_trunc to get time](#use-date_trunc-to-get-time-)
+    * [How to get USD price](#how-to-get-usd-price-)
+    * [Token symbols](#token-symbols-)
+    * [Filter queries and dashboards with parameters](#filter-queries-and-dashboards-with-parameters-)
+* [🏷 Address Labels](#-address-labels-)
+  * * [🪧 What is a label?](#-what-is-a-label-)
+    * [🖼 What labels looks like](#-what-labels-looks-like-)
+    * [📥 Adding labels](#-adding-labels-)
+    * [🗄 The labels table](#-the-labels-table-)
+    * [🧑‍🔧 Using labels](#-using-labels-)
+    * [📜 Usecase: I want to display labels for a list of addresses](#-usecase-i-want-to-display-labels-for-a-list-of-addresses-)
+    * [🧼 Usecase: I want to filter my query by labels that exist.](#-usecase-i-want-to-filter-my-query-by-labels-that-exist-)
+* [🧐 Understanding data decoding in Dune Analytics](#-understanding-data-decoding-in-dune-analytics-)
+  * [What contracts have decoded data?](#what-contracts-have-decoded-data-)
+    * [Decoded data](#decoded-data-)
+    * [Abstractions and views](#abstractions-and-views-)
+    * [A few handy queries to explore decoded tables](#a-few-handy-queries-to-explore-decoded-tables-)
+  * [Scalable decoding across contracts](#scalable-decoding-across-contracts-)
+    * [Contracts with the same bytecode](#contracts-with-the-same-bytecode-)
+    * [Interfaces](#interfaces-)
+  * [How Dune handles Proxy contracts](#how-dune-handles-proxy-contracts-)
+* [📬 Get any smart contract decoded](#-get-any-smart-contract-decoded-)
+* [👩‍🏭 Change log](#-change-log-)
+* [👉 Some sample queries](#-some-sample-queries-)
+  * [Growth rate](#growth-rate-)
+  * [Users and amount over a trailing period](#users-and-amount-over-a-trailing-period-)
+  * [Filter query by an address in the interface](#filter-query-by-an-address-in-the-interface-)
+  * [Circulating supply over time of a token with mint/burn functions](#circulating-supply-over-time-of-a-token-with-mintburn-functions-)
+  * [Circulating supply over time with mint/burn from 0x000... address](#circulating-supply-over-time-with-mintburn-from-0x000-address-)
+  * [USD value of token utilised for an event](#usd-value-of-token-utilised-for-an-event-)
+  * [USD trading volume per token over time](#usd-trading-volume-per-token-over-time-)
+  * [USD price for a token from Uniswap](#usd-price-for-a-token-from-uniswap-)
+  * [Token \(and USD value\) per token over time for an address](#token-and-usd-value-per-token-over-time-for-an-address-)
+* [🤕 Known issues](#-known-issues-)
+  * * [Function overloading](#function-overloading-)
 
 ## 🗂 Data tables <a id="&#x1F5C2;-Data-tables"></a>
 
-You can currently query data from **Ethereum mainnet** and **xdai**.
+You can currently query data from **Ethereum mainnet**, **xdai**, **Polygon**, **Optimism** and **BSC**.
 
 To query xDai data change the data source in the dropdown list above the data table list on the query page.
 
@@ -102,7 +101,7 @@ The most commonly used tables are
 
 Instead of working with the traces, logs, and receipts, Dune decodes smart contract activity into nice human-readable tables. See the [this section for more info](./).
 
-Submit contracts for decoding at [duneanalytics.com/decode](./).
+Submit contracts for decoding at [duneanalytics.com/decode](https://duneanalytics.retool.com/embedded/public/892af55f-a6ff-41df-b203-f8acb6f0a38b).
 
 #### Abstractions/table views <a id="Abstractionstable-views"></a>
 
