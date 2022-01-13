@@ -8,6 +8,10 @@ description: >-
 
 The Dune App contains an extensive catalog of decoded contracts in the form of [call and event tables](../data-tables/data-tables/decoded-data.md#decoded-smart-contract-data). These contracts are brought into Dune by wizards through a process commonly referred to as [Decoding](../data-tables/data-tables/decoded-data.md).
 
+## Quick tour
+
+{% embed url="https://www.youtube.com/watch?v=4v9zEYZvv34" %}
+
 ## Submitting a new contract
 
 Contracts can be submitted for decoding through the New contract form, which can be accessed via [My Creations > Contracts](https://dune.xyz/browse/contracts/authored) or within the dataset explorer in the query editor's sidebar:
