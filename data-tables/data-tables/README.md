@@ -16,11 +16,13 @@ Dune aggregates blockchain data into an accessilbe PostgreSQL database. The sche
 
 1\) Low-level data (raw transaction data) provides detailed records of all activities on the blockchain&#x20;
 
-2\) Project-level data tables are created tables that return pre-processed, clean data on specific projects.
+2\) Decoded Data tables use the Application binary interface of the respective smart contract to turn the encoded data into decoded data. \
+You can signal to us that you need decoded data for a smart contract via this part of our [website](https://dune.xyz/contracts/new). Read more about contract submission in "[Adding new contracts](../../duneapp/adding-new-contracts.md)"
 
-3\) Abstractions are higher-level created tables that return aggregated data on sectors/topics. [See a list of all abstractions here](https://github.com/duneanalytics/abstractions)
+3\) Abstractions are higher-level created tables that return aggregated/standarized data on sectors/topics. The scripts to generate these tables are available in this [github repository](https://github.com/duneanalytics/abstractions).
 
-You can currently query data from **Ethereum, Polygon** and **xDai**.
+\
+You can currently query data from **Ethereum, Polygon, Binance Smart Chain, Optimism** and **Gnosis Chain**.
 
 ## How do I find the data I need?
 
