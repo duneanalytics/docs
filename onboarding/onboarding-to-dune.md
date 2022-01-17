@@ -20,7 +20,7 @@ All you need is either a skilled freelancer or one of your developers to take ca
 
 ### How to find a freelancer
 
-There is quite a few people in the crypto scene which either specialized in building on dune or have the skillset in their repertoire. To reach out to this pool of freelancers, you can **fill in this** [**google form**](https://forms.gle/YmkNp5YMQWas7gjy7) **** and hopefully freelancers will get back to you in little to no time. If that yields no results, posting the bounty on relevant social channels and spreading it in your networks may help.
+There is quite a few people in the crypto scene which either specialized in building on dune or have the skillset in their repertoire. To reach out to this pool of freelancers, you can **fill in this** [**form**](http://bounties.dune.xyz) **** and hopefully freelancers will get back to you in little to no time. If that yields no results, posting the bounty on relevant social channels and spreading it in your networks may help.
 
 **What works best:**
 
