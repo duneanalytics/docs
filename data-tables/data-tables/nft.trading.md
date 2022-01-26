@@ -93,6 +93,11 @@ FROM nft.trades
 WHERE tx_hash = '\x0142b4beb7bd025a3e2d4e94368098e7589527fee4a6f5cb7f14e1bedbd79f1b'
 ```
 
+**Platform and Royalty Fees**
+
+When an NFT trade occurs on a secondary marketplace, the platform usually charges a fixed fee relative to the total amount of the sale. To reflect this, we provide the platform fees (in %) `platform\_fees\_percent`, in the currency used in a given trade `original\_platform\_fees` and in USD `usd\_platform\_fees`. Furthermore, collection creators often have the option to set a royalty fee (usually between 0 and 20%) that is collected everytime a token of their collection is traded on secondary markets. This information is provided by the  `royalty\_fees\_percent`, `original\_royalty\_fees` and `usd\_royalty\_fees` columns. 
+
+
 ### **Sample dashboards**
 
 **Dashboard that utilize parameters**
