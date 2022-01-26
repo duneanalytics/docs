@@ -128,12 +128,20 @@ Table contents\
 | trade\_type                     | text                     | "Single Item Sale" or "Bundle Sale"?                                               |
 | number\_of\_items               | integer                  | How many NFTs were traded in this trade?                                           |
 | category                        | text                     | Was this an auction or a direct sale?                                              |
+| aggregator                      | text                     | Was this trade made using an aggregator (Yes : Name of aggregator, No : Null)      |
 | evt\_type                       | text                     | currently not in use                                                               |
 | usd\_amount                     | numeric                  | USD value of the trade at time of execution                                        |
 | seller                          | bytea                    | Seller of NFTs                                                                     |
 | buyer                           | bytea                    | Buyer of NFTs                                                                      |
 | original\_amount                | numeric                  | The amount in the right format                                                     |
 | original\_amount\_raw           | numeric                  | raw amount of the currency                                                         |
+| eth\_amount                     | numeric                  | ETH value of the trade at time of execution                                        |
+| royalty\_fees\_percent          | numeric                  | Royalty fees going to the creator (in %)                                           |
+| original\_royalty\_fees         | numeric                  | Royalty fees in the currency used for this trade                                   |
+| usd\_royalty\_fees              | numeric                  | USD value of royalty fees at time of execution                                     |
+| platform\_fees\_percent         | numeric                  | Platform fees (in %)                                                               |
+| original\_platform\_fees        | numeric                  | Platform fees in the currency used for this trade                                  |
+| usd\_platform\_fees             | numeric                  | USD value of platform fees at time of execution                                    |
 | original\_currency              | text                     | The Currency used for this trade                                                   |
 | original\_currency\_contract    | bytea                    | The erc20 address of the currency used in this trade (does not work with raw ETH)  |
 | currency\_contract              | bytea                    | the corrected currency contract                                                    |
