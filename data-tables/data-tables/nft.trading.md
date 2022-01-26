@@ -113,7 +113,7 @@ The SQL code that processes the data for every market place is open source and a
 
 Also read the section "[abstractions](abstractions.md)" about this topic.
 
-Table contents\
+Table contents
 
 
 
