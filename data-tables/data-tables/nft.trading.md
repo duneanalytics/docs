@@ -63,7 +63,7 @@ group by 2,3
 
 A trade occurs between a `buyer`and a `seller`. \
 They exchange an item which is uniquely identified by the combination of `nft_contract_address` and `token_id`. The Buyer will pay the Seller a given `original_amount`of tokens in any given `original_currency`. To make it easier, we have calculated the `usd_amount` that this was worth at the time of the trade for you. Most trades will be done in ETH or WETH, but especially non OpenSea trades often contain other currencies.\
-The trade is committed on any of the indexed `platforms`and will be facilitated through a smart contract of those platform's `exchange_contract_address`.  Each trade will have metadata like `block_time`, `tx_hash`_,_ `block_number`, `platform version`, `evt_index` etc.\
+The trade is committed on any of the indexed `platforms`and will be facilitated through a smart contract of those platform's `exchange_contract_address`.  Each trade will have metadata like `block_time`, `tx_hash`_,_ `block_number`, `platform version`, `evt_index` etc. When a trade is made using an NFT market aggregator, we also provide the name of the aggregator in `aggregator`. \
 \
 Additionally, we also provide metadata about the traded NFT. `nft_project_name` and `erc_standard` will help you in analysing your dataset more easily. `nft_project_name` data gets pulled from the `nft.tokens` [table](https://github.com/duneanalytics/abstractions/blob/master/ethereum/nft/tokens.sql), if your NFT is missing in that table, you are welcome to make a PR to add it.
 
