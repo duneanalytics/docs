@@ -32,6 +32,7 @@
   * [Raw Data](data-tables/data-tables/raw-data/README.md)
     * [Ethereum data](data-tables/data-tables/raw-data/ethereum-data.md)
     * [xDai Data](data-tables/data-tables/raw-data/xdai-data.md)
+    * [Solana Data](data-tables/data-tables/raw-data/solana-data.md)
   * [Decoded Data](data-tables/data-tables/decoded-data.md)
   * [Token standards](data-tables/data-tables/special-tables.md)
   * [ERC-20 balances](data-tables/data-tables/erc-20-balances.md)
