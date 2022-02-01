@@ -15,7 +15,7 @@ A reference document to use as you start to query the Solana tables is available
 
 ## Solana.blocks
 
-This table contains the block data within Solana’s blockchain. A query example can be found here: [**Solana blocks over time**](https://dev.dune.xyz/queries/56711)****
+This table contains the block data within Solana’s blockchain. A query example can be found here: [**Solana blocks over time**](https://dune.xyz/queries/389979)****
 
 | Column Name             | Column Type | Description                                      |
 | ----------------------- | ----------- | ------------------------------------------------ |
@@ -29,7 +29,7 @@ This table contains the block data within Solana’s blockchain. A query example
 
 ## Solana.transactions
 
-This table contains the transaction data within Solana’s blockchain. A query example can be found here: [**Solana transactions by day**](https://dev.dune.xyz/queries/56715)****
+This table contains the transaction data within Solana’s blockchain. A query example can be found here: [Transactions per day (2022)](https://dune.xyz/queries/390045)
 
 | Column Name                    | Column Type    | Description                                                                                                                                                                                                                           |
 | ------------------------------ | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
