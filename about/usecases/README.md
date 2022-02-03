@@ -14,7 +14,7 @@ Dune is a data analytics platform that surfaces blockchain data turns on chain d
 
 ## **What is Dune used for?**
 
-Since pretty much everything is possible on Dune, there really isn't any limitations as to what you can query in regards to on-chain data. There still is some distinct Use Cases we can establish:&#x20;
+Since pretty much everything is possible on Dune, there really aren't any limitations as to what you can query in regards to on-chain data. There still is some distinct Use Cases we can establish:&#x20;
 
 {% content-ref url="sector-dashboards.md" %}
 [sector-dashboards.md](sector-dashboards.md)
