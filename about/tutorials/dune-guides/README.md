@@ -25,6 +25,12 @@ Some of our Community Members have produced great written tutorials for Dune:
 
 * [Select \* from web3](https://www.chuxinhuang.com/blog/select-from-web3/)
 
+[Gracelily](https://twitter.com/\_grace\_lily)
+
+* [PostgreSQL Query Optimization Tricks - How to Make Queries Faster in Dune Analytics](https://gracelily.medium.com/postgresql-query-optimization-tricks-6d5b7358d7fa)
+
+
+
 These guides are all great and we recommend reading all of them.\
 \
 Big **thank you** to the authors of these guides, you are amazing!
