@@ -8,8 +8,8 @@
 [xdai-data.md](xdai-data.md)
 {% endcontent-ref %}
 
-{% content-ref url="solana-data.md" %}
-[solana-data.md](solana-data.md)
+{% content-ref url="solana-data/" %}
+[solana-data](solana-data/)
 {% endcontent-ref %}
 
 
