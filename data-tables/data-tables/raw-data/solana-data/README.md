@@ -71,17 +71,17 @@ An example of how these can be used to extract data: [# of Solana instructions b
 
 **token\_balance**
 
-| Field   |         |                                                                                                                                                                              |
-| ------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| account | string  | The account key of the account that the token balance is provided for.                                                                                                       |
-| mint    | string  | Public key of the token’s mint. This is an account that stores metadata about the token: The supply, number of decimals, and various authorities with control over the mint. |
-| amount  | Decimal | Derived from the token balance's raw amount (ui\_token\_amount.amount) and the number of decimals (ui\_token\_amount.decimals)                                               |
+| Field   | Data type | Description                                                                                                                                                                  |
+| ------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| account | string    | The account key of the account that the token balance is provided for.                                                                                                       |
+| mint    | string    | Public key of the token’s mint. This is an account that stores metadata about the token: The supply, number of decimals, and various authorities with control over the mint. |
+| amount  | Decimal   | Derived from the token balance's raw amount (ui\_token\_amount.amount) and the number of decimals (ui\_token\_amount.decimals)                                               |
 
 ****
 
 **instructions**
 
-| Field               |                                    |                                                                |
+| Field               | Data type                          | Description                                                    |
 | ------------------- | ---------------------------------- | -------------------------------------------------------------- |
 | account\_arguments  | array\<string>                     | Ordered list of accounts to pass to the program                |
 | data                | string                             | Program input data in a base-58 string                         |
@@ -92,7 +92,7 @@ An example of how these can be used to extract data: [# of Solana instructions b
 
 **inner\_instructions**
 
-| Field              |                |                                                                |
+| Field              | Data type      | Description                                                    |
 | ------------------ | -------------- | -------------------------------------------------------------- |
 | account\_arguments | array\<string> | Ordered list of accounts to pass to the program                |
 | data               | string         | Program input data in a base-58 string                         |
@@ -102,10 +102,10 @@ An example of how these can be used to extract data: [# of Solana instructions b
 
 **error**
 
-| Field                  |        |                                    |
-| ---------------------- | ------ | ---------------------------------- |
-| **instruction\_index** | int    | The instruction number that failed |
-| message                | string | The error message                  |
+| Field                  | Data type | Description                        |
+| ---------------------- | --------- | ---------------------------------- |
+| **instruction\_index** | int       | The instruction number that failed |
+| message                | string    | The error message                  |
 
 ## Solana.vote\_transactions
 
