@@ -67,31 +67,19 @@ The trade is committed on any of the indexed `platforms`and will be facilitated 
 \
 Additionally, we also provide metadata about the traded NFT. `nft_project_name` and `erc_standard` will help you in analysing your dataset more easily. `nft_project_name` data gets pulled from the `nft.tokens` [table](https://github.com/duneanalytics/abstractions/blob/master/ethereum/nft/tokens.sql), if your NFT is missing in that table, you are welcome to make a PR to add it.
 
-**Multi Item Trade**
+**Bundle Trade**
 
-There can also be trades in which a single trade transaction contains multiple Items. Each of these Items is uniquely identified through a combination of `nft_contract_address` and `token_id`. Unfortunately, in these trades there is not a clear way to determine a corresponding `usd_amount` for each of the items. A possible workaround is to divide the number of items by the payment made for the bundle, but this logic very quickly falls apart when Items that are not one in kind/value get sold in a bundle. We recommend removing bundle transfers from the dataset that you are working with since it can heavily influence the results in either direction. &#x20;
+There can also be trades in which a single trade transaction contains multiple Items. Each of these Items is uniquely identified through a combination of `nft_contract_address` and `token_id`. Unfortunately, in these trades there is not a clear way to determine a corresponding `usd_amount` for each of the items. A possible workaround is to divide the number of items by the payment made for the bundle, but this logic very quickly falls apart when Items that are not one in kind/value get sold in a bundle. We recommend removing bundle transfers from the dataset that you are working with since it can heavily influence the results in either direction. Note that `token_id` and '`erc_standard` will be null if tokens with different tokens IDs or erc type are transfered within the same transaction.
 
-Because a single trade transaction can consist of the transfer of multiple NFTs, we use Postgres [arrays](https://www.postgresql.org/docs/current/functions-array.html) to include ERC721 and ERC1155 `transfer` data:
+**Aggregator Trade**
 
-* `nft_token_ids_array`
-* `senders_array`
-* `recipients_array`
-* `erc_types_array`
-* `nft_contract_addresses_array`
-* `erc_values_array`
+There can also be trades in which a single trade transaction contains multiple items, especially when using NFT aggregator platforms. Our approach is to unravel aggregator trades so that each row correspond to a unique item that was traded, with its associated ID, price, collection, etc. Importantly, the `trade_type` will be indicated as `Aggregator Trade`, and platform names and address can be found in the `nft.aggregators` [table](https://github.com/duneanalytics/abstractions/blob/master/ethereum/nft/aggregators.sql). If your aggregator platform is missing in that table, you are welcome to make a PR to add it.
 
-Expanding the values within the arrays into a set of arrays can be done with:
+**Platform and Royalty Fees**
 
-```sql
-SELECT
-    platform,
-    tx_hash,
-    UNNEST(erc_types_array) AS erc_type,
-    UNNEST(nft_token_ids_array) AS token_id,
-    UNNEST(nft_contract_addresses_array) AS nft_contract_address
-FROM nft.trades
-WHERE tx_hash = '\x0142b4beb7bd025a3e2d4e94368098e7589527fee4a6f5cb7f14e1bedbd79f1b'
-```
+In the most recent version of `nft.trades`, information about the amount and percent of royalty fees in the original amount and in USD is available when this information was able to be retrieved. Royalty fees are going to the creator, and Platform fees are collected by the NFT platform. Note that royalty fees cannot always be retrieved, and are set to null by default.
+&#x20;
+
 
 ### **Sample dashboards**
 
@@ -128,8 +116,8 @@ Also read the section "[abstractions](abstractions.md)" about this topic.
 | trade\_type                     | text                     | "Single Item Sale" or "Bundle Sale"?                                               |
 | number\_of\_items               | integer                  | How many NFTs were traded in this trade?                                           |
 | category                        | text                     | Was this an auction or a direct sale?                                              |
+| evt\_type                       | text                     | currently not in use, default 'Trade'                                              |
 | aggregator                      | text                     | Was this trade made using an aggregator (Yes : Name of aggregator, No : Null)      |
-| evt\_type                       | text                     | currently not in use                                                               |
 | usd\_amount                     | numeric                  | USD value of the trade at time of execution                                        |
 | seller                          | bytea                    | Seller of NFTs                                                                     |
 | buyer                           | bytea                    | Buyer of NFTs                                                                      |
@@ -149,12 +137,6 @@ Also read the section "[abstractions](abstractions.md)" about this topic.
 | exchange\_contract\_address     | bytea                    | The platform contract that facilitated this trade                                  |
 | tx\_hash                        | bytea                    | the hash of this transaction                                                       |
 | block\_number                   | integer                  | the block\_number that this trade was done in                                      |
-| nft\_token\_ids\_array          | ARRAY                    | An array of token\_ids (only applicable if this trade was a bundle trade)          |
-| senders\_array                  | ARRAY                    | array of sellers (only applicable if this trade was a bundle trade)                |
-| recipients\_array               | ARRAY                    | array of recipients (only applicable if this trade was a bundle trade)             |
-| erc\_types\_array               | ARRAY                    | array of token standard types (only applicable if this trade was a bundle trade)   |
-| nft\_contract\_addresses\_array | ARRAY                    | array of nft contract addresses (only applicable if this trade was a bundle trade) |
-| erc\_values\_array              | ARRAY                    | n/a                                                                                |
 | tx\_from                        | bytea                    | Initiated this transaction                                                         |
 | tx\_to                          | bytea                    | Received this transaction                                                          |
 | trace\_address                  | ARRAY                    | n/a                                                                                |
