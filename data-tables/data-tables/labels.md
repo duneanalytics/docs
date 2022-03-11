@@ -18,7 +18,7 @@ Check out [this dashboard](https://dune.xyz/hagaetc/labels) for examples on what
 
 The address [0xD551234Ae421e3BCBA99A0Da6d736074f22192FF](https://dune.xyz/ethereum/address/0xD551234Ae421e3BCBA99A0Da6d736074f22192FF) can be labeled like this:
 
-| type        | name     |
+| **type**    | **name** |
 | ----------- | -------- |
 | owner       | binance  |
 | wallet type | exchange |
@@ -27,7 +27,7 @@ The address is controlled by the exchange Binance.
 
 The address [0xe65040f61701940b62e18da7a53126a58525588b](https://dune.xyz/ethereum/address/0xe65040f61701940b62e18da7a53126a58525588b) can be labeled like this:
 
-| type       | name         |
+| **type**   | **name**     |
 | ---------- | ------------ |
 | dapp usage | uniswap user |
 | activity   | dex trader   |
@@ -69,7 +69,7 @@ Labels are stored in the new `labels.labels` table which has the following schem
 | ----------- | ----------- | -------------------------------------------------------- |
 | id          | int         | incrementing integer                                     |
 | address     | bytea       | the address of a contract or wallet this label describes |
-| label       | text        | the label                                                |
+| name        | text        | label name                                               |
 | type        | text        | label type                                               |
 | author      | text        | the username of the user who created this label          |
 | source      | text        | the source of this label, autopopulated by dune          |
