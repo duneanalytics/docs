@@ -6,6 +6,23 @@ description: >-
 
 # Changelog
 
+### 2022-03-25
+
+the `solana.account_activity` table has been updated to a new version. The new version of the table contains additional information around token activity. The following columns were added to the table:
+
+* `pre_token_balances`
+  * The token balance before the transaction was processed
+* `post_token_balances`
+  * The token balance after the transaction was processed
+* `token_balance_changes`
+  * The balance change that occurred as part of the transaction
+
+### 2022-03-18
+
+Released the `solana.account_activity` table that contains all of the information about an account’s usage in a transaction.
+
+The table is optimized to run with ‘WHERE address = …’ queries
+
 ### 2022-03-01
 
 The `solana.transactions` table has now been upgraded to a new version. The new version of the table uses cleaner array structs to make it easier to extract useful information.&#x20;
