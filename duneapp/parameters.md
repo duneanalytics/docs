@@ -1,37 +1,39 @@
 ---
 description: >-
-  Parameters are an easy and powerful way to add filters to your
-  query/dashboard. Allowing you and others to interact with the query in the
-  user interface without changing the SQL.
+  Parameters are an easy and powerful way to add variables to your
+  query/dashboard. This allows you and others to customize queries and
+  dashboards without having to touch the code.
 ---
 
 # Parameters
 
 ## What are Parameters?
 
-**Parameters are a specialized feature of dune that allow you to implement variables in certain parts of your query code. This variable can be changed from dashboards and therefore allows you to make a interactive dashboard.**
+**Parameters are a specialized feature of dune that allow you to implement variables in certain parts of your query code. This variable can be changed from dashboards and therefore allows you to make an interactive dashboard.**
 
-Parameters allow you to make changes to certain defined parameters of your code with a few simple clicks. For instance instead of hard coding `contract_address` , `symbol` or `date ranges` you can just use the parameter function to change these aspects of your code using a parameter. This allows you to build an interactive dashboard that the viewer can use to query for exactly the data he needs.
+Parameters allow you to make changes to certain defined parameters of your code with a few simple clicks. For instance instead of hard coding `contract_address` , `symbol` or `date ranges` you can just use the parameter function to change these aspects of your code using a parameter. This allows you to build an interactive dashboard or customizable query that the viewer can use to query for exactly the data he needs.
 
 Parameters are defined in the query code as `{{parametername}}` and will appear below the query and in any dashboards in which a query visualization with parameters is used in.
 
-You can pass on input to the parameter below the query or at the top of your dashboard. Simply run the query or click `apply` in your dashboard to rerun the queries/dashboard with the newly put in parameters.
+You can pass on input to the parameter below the query or in the parameter field on a dashboard. \
+\
+Simply run the query to apply the parameter for a query within the query editor.\
+\
+On a dashboard you can either click `apply all` at the top or change the parameters individually and hit `Enter`. The `Enter` submission also works for dropdowns and the date picker.
 
-Parameters in a Dashboard can be shared between different queries, just make sure to use the same name between all of them.
+Parameters in a Dashboard can be shared between different queries, just make sure to use the same name, type and default value between all of them.
 
 ![](<../.gitbook/assets/image (30).png>)
 
-![](<../.gitbook/assets/image (27) (2).png>)
+![](<../.gitbook/assets/image (30) (1).png>)
 
 ![](<../.gitbook/assets/image (29).png>)
 
 ## How to use Parameters?
 
-You can simply add a parameter to your queries by writing `{{parametername}}` or using the button below the query. You can order them by prefacing them with the corresponding position you want the Parameter to appear in the User Interface : `{{1. parametername}}`.
+You can simply add a parameter to your queries by writing `{{parametername}}` or using the button below the query.&#x20;
 
-You can edit the properties of single parameters by clicking on the litte gear wheel next to the parameter in the query editor. This allows you to set a default value, define a list of possible parameters or change the type of the parameter.
-
-
+You can edit the properties of single parameters by clicking on the gear wheel next to the parameter in the query editor. This allows you to set a default value, define a list of possible parameters or change the type of of the parameter. If you want to share parameters between different queries on a dashboard make sure they exactly match in regards to name, type and default value.
 
 ![](<../.gitbook/assets/2021-12-10 15-41-07.gif>)
 
@@ -75,6 +77,10 @@ ORDER BY block_time DESC
 ```
 
 Find this query [here](https://dune.xyz/queries/64430/128463)
+
+## Embedding parameterized Dashboards and Queries
+
+
 
 ## **Example Dashboards**
 

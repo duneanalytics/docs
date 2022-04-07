@@ -10,7 +10,7 @@ description: Embeds allow you to enjoy beautiful, updating dune charts across th
 
 Instead of using static screenshots in varying forms of quality, Dune has a native embed function that works across most platforms.&#x20;
 
-You can generate embedd links by clicking on any query title and selecting the embed function in the top right corner.
+You can generate embed links by clicking on any query title and selecting the embed function in the top right corner.
 
 ![generating an embedd link](<../../.gitbook/assets/2021-11-01 14-30-33.gif>)
 
@@ -35,7 +35,7 @@ An example of this would be:
 
 ### Embeds across different platforms
 
-Here is a couple of exemplary usecases for Dune embeds:
+Here is a couple of exemplary use cases for Dune embeds:
 
 {% content-ref url="discord.md" %}
 [discord.md](discord.md)
