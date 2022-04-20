@@ -1,12 +1,12 @@
 ---
-description: Welcome to Dune Analytics
+description: Welcome to Dune
 ---
 
-# Introduction to Dune Analytics
+# Introduction to Dune
 
 ## Introduction
 
-**Dune Analytics is a powerful tool for blockchain research. Dune gives you all the tools to query, extract, and visualize vast amounts of data from the blockchain. Dune is unlocking the power of public blockchain data by making it accessible to everyone. This documentation will help you answer questions like:**
+**Dune is a powerful tool for blockchain research. Dune gives you all the tools to query, extract, and visualize vast amounts of data from the blockchain. Dune is unlocking the power of public blockchain data by making it accessible to everyone. This documentation will help you answer questions like:**
 
 [How much volume flows through Uniswap each day?](https://dune.xyz/queries/3)
 
@@ -14,11 +14,11 @@ description: Welcome to Dune Analytics
 
 [How are important Stablecoins behaving today?](https://dune.xyz/hagaetc/stablecoins)
 
-## Dune Analytics Basics
+## Dune Basics
 
 #### Dune App
 
-While navigating Dune Analytics, it helps to have a good understanding of [queries](./#queries), [visualizations](duneapp/visualizations/), and [dashboards](duneapp/dashboards.md). These are the basic building blocks that act as your portal to the world's blockchain information. As a blockchain analyst, you can create custom queries to fetch data, visualize the results of these queries, and then tell stories with your data using dashboards.
+While navigating Dune, it helps to have a good understanding of [queries](./#queries), [visualizations](duneapp/visualizations/), and [dashboards](duneapp/dashboards.md). These are the basic building blocks that act as your portal to the world's blockchain information. As a blockchain analyst, you can create custom queries to fetch data, visualize the results of these queries, and then tell stories with your data using dashboards.
 
 #### Data available on Dune
 
@@ -42,7 +42,7 @@ Queries return rows and columns of data (same as traditional SQL queries) that c
 
 There are a few ways that a blockchain analyst (ie. you!) can get started running queries:
 
-1. Use Dune Analytics _abstractions_ to query commonly used data tables. This is the simplest and most common way to use Dune Analytics. Some popular abstractions include `dex.trades`, `lending.borrow`, and `stablecoin.transfer` (you can find a complete list of abstractions [here](https://github.com/duneanalytics/abstractions))
+1. Use Dune _abstractions_ to query commonly used data tables. This is the simplest and most common way to use Dune. Some popular abstractions include `dex.trades`, `lending.borrow`, and `stablecoin.transfer` (you can find a complete list of abstractions [here](https://github.com/duneanalytics/abstractions))
 2. Query the raw ethereum data including blocks, logs, and transactions.
 3. It is also possible to query centralized exchange data. Use `prices.usd` to quickly return the price of almost any cryptoasset
 

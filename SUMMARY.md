@@ -1,8 +1,8 @@
 # Table of contents
 
-* [Introduction to Dune Analytics](README.md)
+* [Introduction to Dune](README.md)
 
-## About Dune Analytics <a href="#about" id="about"></a>
+## About Dune <a href="#about" id="about"></a>
 
 * [Use Cases](about/usecases/README.md)
   * [Project Dashboards](about/usecases/project-dashboards.md)
@@ -55,7 +55,7 @@
 
 ## Onboarding
 
-* [Onboarding to dune](onboarding/onboarding-to-dune.md)
+* [Onboarding to Dune](onboarding/onboarding-to-dune.md)
 
 ## Bounties
 
