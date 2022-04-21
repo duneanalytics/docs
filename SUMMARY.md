@@ -34,6 +34,8 @@
     * [xDai Data](data-tables/data-tables/raw-data/xdai-data.md)
     * [Solana Data](data-tables/data-tables/raw-data/solana-data/README.md)
       * [Changelog](data-tables/data-tables/raw-data/solana-data/changelog.md)
+    * [Community Data](data-tables/data-tables/raw-data/community-data/README.md)
+      * [Flashbots](data-tables/data-tables/raw-data/community-data/flashbots.md)
   * [Decoded Data](data-tables/data-tables/decoded-data.md)
   * [Token standards](data-tables/data-tables/special-tables.md)
   * [ERC-20 balances](data-tables/data-tables/erc-20-balances.md)
