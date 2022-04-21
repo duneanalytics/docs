@@ -1,7 +1,7 @@
 ---
 description: >-
-  Flashbots is a research and development organization formed with the goal is
-  to make sure MEV incentives do not become opaque and undemocratic.
+  Flashbots is a research and development organization formed with the goal of
+  making sure MEV incentives do not become opaque and undemocratic.
 ---
 
 # Flashbots
@@ -10,7 +10,7 @@ description: >-
 
 This table contains summary of all the classified transactions
 
-&#x20;Query examples can be found here:&#x20;
+&#x20;Query examples can be found here: [Miner Revenue from Liquidations and Arbitrages](https://dune.com/queries/625974/1167301)
 
 | **Column name**                      | **Type**  | **Description**                                        |
 | ------------------------------------ | --------- | ------------------------------------------------------ |
@@ -35,7 +35,7 @@ This table contains summary of all the classified transactions
 
 This table contains records with additional information about each arbitrage trade.
 
-&#x20;Query examples can be found here:&#x20;
+&#x20;Query examples can be found here: [Total Arb Protocols](https://dune.com/queries/626076/1167481)
 
 | **Column name**        | **Type**  | **Description**                               |
 | ---------------------- | --------- | --------------------------------------------- |
@@ -56,7 +56,7 @@ This table contains records with additional information about each arbitrage tra
 
 Liquidation is another MEV strategy. This table contains details related to executed liquidations.
 
-&#x20;Query examples can be found here:&#x20;
+&#x20;Query examples can be found here: [Liquidations by Protocol](https://dune.com/queries/625715/1166880)
 
 | **Column name**          | **Type**  | **Description**                                                                                                     |
 | ------------------------ | --------- | ------------------------------------------------------------------------------------------------------------------- |
@@ -75,7 +75,7 @@ Liquidation is another MEV strategy. This table contains details related to exec
 
 ## **flashbots.sandwiched\_swaps**
 
-One common way to extract MEV is to execute automated swaps to capture arbitrage opportunities across different platforms. This table contains records of swaps executed within specified arbitrage trades.
+The sandwiched\_swaps table contains additional data about one or more swaps that were sandwiched with a corresponding sandwich in the database.
 
 &#x20;Query examples can be found here:&#x20;
 
@@ -94,19 +94,19 @@ This table contains detailed information about executed sandwiches
 
 &#x20;Query examples can be found here:&#x20;
 
-| **Column name**                   | **Type**  | **Description**                            |
-| --------------------------------- | --------- | ------------------------------------------ |
-| created\_at                       | datetime  | Time of the records creation               |
-| block\_number                     | bigint    | Block number                               |
-| backrun\_swap\_trace\_address     | string    |                                            |
-| backrun\_swap\_transaction\_hash  | string    |                                            |
-| frontrun\_swap\_trace\_address    | string    |                                            |
-| frontrun\_swap\_transaction\_hash | string    |                                            |
-| id                                | string    | Internal id of the sandwich                |
-| profit\_amount                    | bigint    | Profit amount after the arbitrage          |
-| profit\_token\_address            | string    | Address of the profit asset                |
-| sandwicher\_address               | string    | Address of the sandwicher                  |
-| timestamp                         | timestamp | Timestamp of the latest update of the file |
+| **Column name**                   | **Type**  | **Description**                                                 |
+| --------------------------------- | --------- | --------------------------------------------------------------- |
+| created\_at                       | datetime  | Time of the records creation                                    |
+| block\_number                     | bigint    | Block number                                                    |
+| backrun\_swap\_trace\_address     | string    | address of the swap in the backrun transaction                  |
+| backrun\_swap\_transaction\_hash  | string    | transaction\_hash of backrun transaction of specified sandwich  |
+| frontrun\_swap\_trace\_address    | string    | address of the swap in the frontrun transaction                 |
+| frontrun\_swap\_transaction\_hash | string    | transaction\_hash of frontrun transaction of specified sandwich |
+| id                                | string    | Internal id of the sandwich                                     |
+| profit\_amount                    | bigint    | Profit amount after the arbitrage                               |
+| profit\_token\_address            | string    | Address of the profit asset                                     |
+| sandwicher\_address               | string    | Address of the sandwicher                                       |
+| timestamp                         | timestamp | Timestamp of the latest update of the file                      |
 
 ## **flashbots.blocks**
 
