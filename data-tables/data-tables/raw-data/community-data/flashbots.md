@@ -6,6 +6,12 @@ description: >-
 
 # Flashbots
 
+**Note:** mev-inspect-py, Flashbots’ open source engine for generating MEV data, is used to power dashboards such as mev-explore and Dune’s Flashbots integration. We’re always looking to improve, fix bugs, cover edge cases, and add protocol coverage to the best of our ability with the help of our community and contributors. We encourage researchers and developers to report and help correct any found bugs, or implement any new features! Feel free to consult the documentation and join the Flashbots discord for more information and updates on our data and mev-inspect
+
+**Docs:** [https://docs.flashbots.net/](https://docs.flashbots.net)&#x20;
+
+**Discord:** [https://discord.gg/Ed87NZ3m](https://discord.gg/Ed87NZ3m)
+
 ## **flashbots.mev\_summary**
 
 This table contains summary of all the classified transactions
