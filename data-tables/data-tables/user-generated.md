@@ -121,9 +121,27 @@ CREATE OR REPLACE view dune_user_generated.uniswap_v3 as
 
 ### Testing Abstractions
 
-Another great usecase of utilizing the "create" function is to test out if the Pull Request you are making to our abstractions github actually produce the intended results. Simply try running the query with the schema **dune\_user\_generated** instead of the actual schema that you want in Github.
+Another great use case of utilizing the "create" function is to test out if the Pull Request you are making to our abstractions github actually produce the intended results. Simply try running the query with the schema **dune\_user\_generated** instead of the actual schema that you want in Github.
 
 If the test succeeds, you can proceed in making the Pull Request. If you can please attach the "Test Table/View" into the Pull Request.
+
+### View Definition
+
+To find out how a particular view got created you can run queries against pgsql base tables.
+
+**A particular view**
+
+```sql
+select definition from pg_views 
+where viewname = 'view_name_here'
+```
+
+**All views**
+
+```sql
+select * from pg_views 
+where schemaname = 'dune_user_generated'
+```
 
 ### View dependencies
 

@@ -16,7 +16,7 @@ The Dune App contains an extensive catalog of decoded contracts in the form of [
 
 Contracts can be submitted for decoding through the New contract form, which can be accessed via [My Creations > Contracts](https://dune.xyz/browse/contracts/authored) or within the dataset explorer in the query editor's sidebar:
 
-![](<../.gitbook/assets/Screen Shot 2022-01-03 at 15.46.22.png>)
+![](<../.gitbook/assets/Screen Shot 2022-01-03 at 15.46.22 (1).png>)
 
 Clicking there will pop up a new browser tab with the contract submission form, which consists of 2 steps:
 
