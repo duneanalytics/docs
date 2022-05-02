@@ -68,7 +68,7 @@ A few shortcuts to make working in the query editor easier are provided below.\
 | Shortcut     | Action                         |
 | ------------ | ------------------------------ |
 | ctrl + enter | execute the query              |
-| ctrl + #     | comments out the selected code |
+| ctrl + # or /| comments out the selected code |
 | ctrl + space | brings up a list of keywords   |
 | crtl + z     | undoes your last changes       |
 | ctrl + y     | redoes your last changes       |
