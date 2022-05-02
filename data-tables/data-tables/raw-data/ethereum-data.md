@@ -95,8 +95,8 @@ Read more [here](https://medium.com/chainalysis/ethereum-traces-not-transactions
 | gas             | numeric      |                                                                                                  |
 | gas\_used       | numeric      | the gas consumed by the transaction in wei                                                       |
 | tx\_index       | numeric      | the index of the transaction                                                                     |
-| trace\_address  |              |                                                                                                  |
-| sub\_traces     |              |                                                                                                  |
+| trace\_address  | array<int8>  | address of the trace within the call graph forest. E.g., [0, 2, 1] is a parent of [0, 2, 1, 0].  |
+| sub\_traces     | numeric      | number of children of a trace                                                                    |
 | type            | text         | type of action                                                                                   |
 | address         | bytea        | the contract that is called when the type is suicide or create                                   |
 | code            | bytea        |                                                                                                  |
