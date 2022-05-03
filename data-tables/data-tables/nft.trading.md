@@ -20,6 +20,7 @@ So far we have indexed the data of the following platforms:
 * SuperRare
 * CryptoPunks (They get traded in their own contracts)
 * Foundation
+* LooksRare
 
 All of this data is easily accessible with very simple queries like these:
 
