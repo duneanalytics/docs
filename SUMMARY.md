@@ -32,10 +32,6 @@
   * [Raw Data](data-tables/data-tables/raw-data/README.md)
     * [Ethereum data](data-tables/data-tables/raw-data/ethereum-data.md)
     * [xDai Data](data-tables/data-tables/raw-data/xdai-data.md)
-    * [Solana Data](data-tables/data-tables/raw-data/solana-data/README.md)
-      * [Changelog](data-tables/data-tables/raw-data/solana-data/changelog.md)
-    * [Community Data](data-tables/data-tables/raw-data/community-data/README.md)
-      * [Flashbots](data-tables/data-tables/raw-data/community-data/flashbots.md)
   * [Decoded Data](data-tables/data-tables/decoded-data.md)
   * [Token standards](data-tables/data-tables/special-tables.md)
   * [ERC-20 balances](data-tables/data-tables/erc-20-balances.md)
@@ -43,6 +39,14 @@
   * [User Generated](data-tables/data-tables/user-generated.md)
   * [Prices](data-tables/data-tables/prices.md)
   * [Labels](data-tables/data-tables/labels.md)
+
+## Dune Engine V2 (beta)
+
+* [Dune's New Query Engine](dune-engine-v2-beta/dunes-new-query-engine/README.md)
+  * [Solana Data](dune-engine-v2-beta/dunes-new-query-engine/solana-data/README.md)
+    * [Changelog](dune-engine-v2-beta/dunes-new-query-engine/solana-data/changelog.md)
+  * [Third Party Data](dune-engine-v2-beta/dunes-new-query-engine/community-data/README.md)
+    * [Flashbots](dune-engine-v2-beta/dunes-new-query-engine/community-data/flashbots.md)
 
 ## Dune App <a href="#duneapp" id="duneapp"></a>
 

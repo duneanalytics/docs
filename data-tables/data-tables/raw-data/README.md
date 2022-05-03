@@ -8,8 +8,8 @@
 [xdai-data.md](xdai-data.md)
 {% endcontent-ref %}
 
-{% content-ref url="solana-data/" %}
-[solana-data](solana-data/)
+{% content-ref url="../../../dune-engine-v2-beta/dunes-new-query-engine/solana-data/" %}
+[solana-data](../../../dune-engine-v2-beta/dunes-new-query-engine/solana-data/)
 {% endcontent-ref %}
 
 
