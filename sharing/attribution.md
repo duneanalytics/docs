@@ -1,14 +1,23 @@
+---
+description: Content on Dune is community created and should be attributed accordingly!
+---
+
 # Attribution
 
 ### Attribution
 
-**Content on Dune is community created and should be attributed accordingly!**
+Content on Dune is first and foremost the product of the creators on the platform. \
+Any mention of analysis published on our platform outside of the platform should credit the creators of this specific piece of analysis and not just "Dune". \
+\
+Crediting charts and dashboards should be done in the following way:
 
-Content on Dune is first and foremost the product of the creators on the platform. Any source/credit you want to give belongs first and foremost to them. Crediting charts and dashboards should be done in the following way:
-
-_"@eliasmos via @duneanalytics"_ with a link back to the query or dashboard
+_"@eliasmos via_ [_https://dune.com/queries/610591_](https://dune.com/queries/610591)_"._
 
 You can find the twitter tags and more information of most creators in their [profile page](https://dune.xyz/rchen8).
+
+
+
+![opening the profile of a creator](<../.gitbook/assets/opening up profile.gif>)
 
 \
 
