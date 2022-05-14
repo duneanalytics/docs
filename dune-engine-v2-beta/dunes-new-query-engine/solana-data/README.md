@@ -153,7 +153,7 @@ An example query can be found here:&#x20;
 | pre\_balance             | bigint      | The balance of this account before the transaction was processed |
 | pre\_token_\__balance    | decimal     | The token balance before the transaction was processed           |
 | post\_balance            | bigint      | The balance of this account after the transaction was processed  |
-| post\_token_\__balance   | decimal     | he token balance after the transaction was processed             |
+| post\_token_\__balance   | decimal     | The token balance after the transaction was processed             |
 | balance\_change          | bigint      | The balance change that occurred as part of the transaction      |
 | token\_balance_\__change | decimal     | The balance change that occurred as part of the transaction      |
 
