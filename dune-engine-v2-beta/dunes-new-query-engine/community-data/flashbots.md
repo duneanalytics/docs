@@ -10,7 +10,7 @@ description: >-
 
 **Docs:** [https://docs.flashbots.net/](https://docs.flashbots.net)&#x20;
 
-**Discord:** [https://discord.gg/Ed87NZ3m](https://discord.gg/Ed87NZ3m)
+**Discord:** [https://discord.gg/7hvTycdNcK](https://discord.gg/7hvTycdNcK)
 
 ## **flashbots.mev\_summary**
 
@@ -124,4 +124,3 @@ This table contains block numbers and corresponding block\_timestamps
 | ---------------- | --------- | --------------- |
 | block\_number    | bigint    | Block number    |
 | block\_timestamp | timestamp | Block timestamp |
-
