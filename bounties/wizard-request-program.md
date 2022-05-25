@@ -31,7 +31,7 @@ Think of every request as a dashboard. If you’d like to see all of your inform
 \
 _- I’m an analyst. How do I enroll?_
 
-For the moment the only thing you need to do is join [our Discord](https://discord.gg/ErrzwBz), go to our “freelancer-listing” channel and click on the flying dollar bill emoji there, this way you’ll get notified when new requests arrive. Oh and you should definitely follow the [bounty bot](https://twitter.com/Dune\_Bounties) on Twitter.
+For the moment the only thing you need to do is join [our Discord](https://discord.gg/dunecom), go to our “freelancer-listing” channel and click on the flying dollar bill emoji there, this way you’ll get notified when new requests arrive. Oh and you should definitely follow the [bounty bot](https://twitter.com/Dune_Bounties) on Twitter.
 
 \
 _- I want to create a requests but I don’t know how much should I pay/offer for it_
