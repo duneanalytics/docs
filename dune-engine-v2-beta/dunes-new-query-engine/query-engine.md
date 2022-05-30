@@ -2,13 +2,13 @@
 
 ### Welcome to DuneV2
 
-DuneV2 changes our whole database architecture. We are transitioning away from a PostgresQL database to an Instance of Apache Spark hosted on Databricks. The difference between the two systems can be summarized as follows:
+DuneV2 changes our whole database architecture. We are transitioning away from a PostgreSQL database to an Instance of Apache Spark hosted on Databricks. The difference between the two systems can be summarized as follows:
 
-* Instead of PostgresQL, we will now use DatabricksSQL. The change in SQL keywords is minimal but might be relevant for some of your querying habits.&#x20;
-* Spark is a column oriented database in contrast to PostgresQL’s row oriented approach.
+* Instead of PostgreSQL, we will now use Databricks SQL. The change in SQL keywords is minimal but might be relevant for some of your querying habits.&#x20;
+* Spark is a column oriented database in contrast to PostgreSQL’s row oriented approach.
 * traditional indexes are replaced by column chunk level `min/max` values
 
-### DatabricksSQL <> PostgresSQL operator changes
+### Databricks SQL <> PostgresSQL operator changes
 
 The changes between the 2 coding languages syntax and the keyword operators are quite minimal, however there is some differences you should be mindful of:
 
@@ -31,7 +31,7 @@ The changes between the 2 coding languages syntax and the keyword operators are 
 
 If you have found any other changes that are important to note, please feel free to sumbit a PR to our docs or leave us feedback in Discord!
 
-When googling for SQL questions, instead of googling `PGSQL median`, you should now google for `databricksSQL median`. Databricks has a well documented index of built in functions on their website.
+When googling for SQL questions, instead of googling `PGSQL median`, you should now google for `Databricks SQL median`. Databricks has a well documented index of built in functions on their website.
 
 {% embed url="https://docs.databricks.com/sql/language-manual/sql-ref-functions-builtin.html" %}
 
@@ -87,7 +87,7 @@ Unfortunately, the `min/max` values of strings are often times not very useful. 
 That said, since the query engine at large is still able to read through individual columns in which these strings are stored very efficiently, most of the time this won't make a big difference in your query execution speed. \
 This is mostly relevant for base tables like `ethereum.transactions`, `bnb.logs`, `erc20_ethereum.erc20_evt_transfer`, etc. which contain very large datasets which are not prefiltered.
 
-A noteable exception from this is the solana dataset account\_activity_,_ which instead of being order by `block_time` like the rest of our datasets, is ordered by `account_keys[0]`. This allows us to actually reasonably utilize the `min/max` values for the account keys which were used and therefore run efficient queries based on the `account_keys[0]` field.
+A notable exception from this is the solana dataset account\_activity_,_ which instead of being order by `block_time` like the rest of our datasets, is ordered by `account_keys[0]`. This allows us to actually reasonably utilize the `min/max` values for the account keys which were used and therefore run efficient queries based on the `account_keys[0]` field.
 
 ### Query examples
 
@@ -102,7 +102,7 @@ where hash = '0xce1f1a2dd0c10fcf9385d14bc92c686c210e4accf00a3fe7ec2b5db7a5499cff
 
 If you think about this for second with all the knowledge we have learned earlier, you will hopefully know that this query is very inefficient. Our only filter condition here is a `tx_hash` string, therefore we basically force the query engine to read all pages which store the data of the `tx_hash` column in full. We probably can skip a few column chunks where the min/max value stored in the footer of each parquet file is `0xa0 - 0xcd`, but those will be a rare exception. Given that we are basically doing a full scan over the entire history of Ethereum mainnet (1.6b entries at time of writing) while searching for one tx\_hash, it's pretty impressive that this query runs in about 6 minutes.
 
-Given that querying for `tx_hash` is a very common occurence in the workflow of an analyst on Dune, let's think about how we can make this faster.
+Given that querying for `tx_hash` is a very common occurrence in the workflow of an analyst on Dune, let's think about how we can make this faster.
 
 We simply have to use a column that actually has useful min/max values in order to be able to not read all pages in full, but rather be able to skip over a lot of files and column chunks. Both `block_time` and `block_number` are useful for this purpose.
 
@@ -129,7 +129,7 @@ This query runs in an amazing 7 seconds. This is mainly due to the fact that ins
 
 **Lesson:** Querying for data across a large amount of logical rows is now much more efficient and a lot of queries that were formerly sheer impossible due to timing out are now able to be executed.
 
-A good example of illustrating this is Hilldobby's [Ethereum Overview](https://dune.com/hildobby/Ethereum-Overview) dashboard. This is simply a level of data processing that was not possible before.
+A good example to illustrate this is hildobby's [Ethereum Overview](https://dune.com/hildobby/Ethereum-Overview) dashboard. This is simply a level of data processing that was not possible before.
 
 ### Closing remarks
 
