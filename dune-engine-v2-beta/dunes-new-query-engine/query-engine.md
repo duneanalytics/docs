@@ -2,7 +2,7 @@
 
 ### Welcome to DuneV2
 
-DuneV2 is a massive undertaking that changes our whole database architecture. We are transitioning away from a PostgresQL database to an Instance of Apache Spark hosted on Databricks. The difference between the two systems can be summarized as follows:
+DuneV2 changes our whole database architecture. We are transitioning away from a PostgresQL database to an Instance of Apache Spark hosted on Databricks. The difference between the two systems can be summarized as follows:
 
 * Instead of PostgresQL, we will now use DatabricksSQL. The change in SQL keywords is minimal but might be relevant for some of your querying habits.&#x20;
 * Spark is a column oriented database in contrast to PostgresQL’s row oriented approach.
@@ -31,7 +31,9 @@ The changes between the 2 coding languages syntax and the keyword operators are 
 
 If you have found any other changes that are important to note, please feel free to sumbit a PR to our docs or leave us feedback in Discord!
 
-When googling for SQL questions, instead of googling `PGSQL median`, you should now google for `databricksSQL median`. Databricks has a well documented index of built in functions [on their website](https://docs.databricks.com/sql/language-manual/sql-ref-functions-builtin.html).
+When googling for SQL questions, instead of googling `PGSQL median`, you should now google for `databricksSQL median`. Databricks has a well documented index of built in functions on their website.
+
+{% embed url="https://docs.databricks.com/sql/language-manual/sql-ref-functions-builtin.html" %}
 
 ### Changes in how the database works
 
