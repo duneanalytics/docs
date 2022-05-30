@@ -39,7 +39,7 @@ When googling for SQL questions, instead of googling `PGSQL median`, you should 
 
 **How does a database work?**
 
-On a very high level, databases read data from storage into memory in order to return your query results. A database is often times limited by the speed of the database being able to read data into it's memory. This is a classic computer science problem that's commonly referred to as being [ I/O bound](https://en.wikipedia.org/wiki/I/O\_bound).
+On a very high level, databases read data from storage into memory in order to return your query results. A database is often times limited by the speed of the database being able to read data into it's memory. This is a classic computer science problem that's commonly referred to as being[ I/O bound](https://en.wikipedia.org/wiki/I/O\_bound).
 
 #### **Row oriented database**
 
@@ -50,7 +50,7 @@ Databases store their data in pages. Pages traditionally contain rows of informa
 When retrieving data from the database, the database will read data into memory/cache in the size of pages. This is the smallest amount of data the database will read at once and is a common bottleneck while reading data from any database. After reading the data into memory, the database will either create temporary files or is able to read the data from memory again to finally arrive at the desired query output.
 
 In any database system, we want to reduce the amount of pages we read when retrieving any amount of data from the database. Since traditional databases store rows in one page, they are best suited for retrieving all columns of one row in a query. The database will always have to read the entire page in which a specific row is stored, therefore it is quite simple for the database to return the data also stored in this same page. The same is true for querying for rows which are stored closely together in the database. So querying for rows 500-600 is very efficient, querying for rows 5, 87, 789 and 1050 is not really all that efficient, but still alright.\
-In contrast, querying for data which is stored in many different logical rows and therefore different pages is a hugely expensive operation. Most of the queries we run on Dune today are aggregation of datapoints in a column over thousands if not millions of rows. In these cases, the database will  read the entire pages in which this column data is stored, even though it only needs the data of one column. This means that on average, we are reading large amounts of data that is not needed to return the query results, just because it is also contained on a page and the database is not able to read "just" the one column, but has to read the entire row in which the column is contained.
+In contrast, querying for data which is stored in many different logical rows and therefore different pages is a hugely expensive operation. Most of the queries we run on Dune today are aggregation of datapoints in a column over thousands if not millions of rows. In these cases, the database will read the entire pages in which this column data is stored, even though it only needs the data of one column. This means that on average, we are reading large amounts of data that is not needed to return the query results, just because it is also contained on a page and the database is not able to read "just" the one column, but has to read the entire row in which the column is contained.
 
 In Postgres, we can use indexes to not force the database to read through the entire table (and therefore a lot of pages), but rather only look at a structured subset. This will lead to very fast and efficient queries, but is limited to the columns which are indexed. Since every new index that is created for a specific table will be a new file in the database and make it harder to update and maintain that table, this is not a sustainable approach to scale a database. \
 We can't possibly create an index on every column or combination of columns in our database without running into trouble down the line. Therefore, Dune V2 will not run on row-oriented database, but rather on a column-oriented database.
@@ -85,9 +85,9 @@ Using these `min/max` values, both on a file level and on a column chunk level, 
 
 Unfortunately, the `min/max` values of strings are often times not very useful. Especially `tx_hash` strings and `address` strings in blockchain systems are not suited well for this kind of `min/max` data gathering since they are randomly generated. That means the database won't be able to skip files or column chunks based on these strings and queries will therefore be quite inefficient since it requires the database to actually load all the pages into memory.\
 That said, since the query engine at large is still able to read through individual columns in which these strings are stored very efficiently, most of the time this won't make a big difference in your query execution speed. \
-This is mostly relevant for base tables like `ethereum.transactions`, `bnb.logs`, `erc20_ethereum.erc20_evt_transfer`, etc. which contain very large datasets which are not prefiltered. &#x20;
+This is mostly relevant for base tables like `ethereum.transactions`, `bnb.logs`, `erc20_ethereum.erc20_evt_transfer`, etc. which contain very large datasets which are not prefiltered.
 
-A noteable exception from this is the solana dataset  account\_activity_,_ which instead of being order by `block_time` like the rest of our datasets, is ordered by `account_keys[0]`. This allows us to actually reasonably utilize the `min/max` values for the account keys which were used and therefore run efficient queries based on the `account_keys[0]` field.
+A noteable exception from this is the solana dataset account\_activity_,_ which instead of being order by `block_time` like the rest of our datasets, is ordered by `account_keys[0]`. This allows us to actually reasonably utilize the `min/max` values for the account keys which were used and therefore run efficient queries based on the `account_keys[0]` field.
 
 ### Query examples
 
@@ -100,11 +100,11 @@ Select * from ethereum.transactions
 where hash = '0xce1f1a2dd0c10fcf9385d14bc92c686c210e4accf00a3fe7ec2b5db7a5499cff'
 ```
 
-If you think about this for second with all the knowledge we have learned earlier, you will hopefully know that this query is very inefficient. Our only filter condition here is a `tx_hash` string, therefore we basically force the query engine to read all pages which store the data of the `tx_hash`  column in full. We probably can skip a few column chunks where the min/max value stored in the footer of each parquet file is `0xa0 - 0xcd`, but those will be a rare exception. Given that we are basically doing a full scan over the entire history of Ethereum mainnet (1.6b entries at time of writing) while searching for one tx\_hash, it's pretty impressive that this query runs in about 6 minutes.
+If you think about this for second with all the knowledge we have learned earlier, you will hopefully know that this query is very inefficient. Our only filter condition here is a `tx_hash` string, therefore we basically force the query engine to read all pages which store the data of the `tx_hash` column in full. We probably can skip a few column chunks where the min/max value stored in the footer of each parquet file is `0xa0 - 0xcd`, but those will be a rare exception. Given that we are basically doing a full scan over the entire history of Ethereum mainnet (1.6b entries at time of writing) while searching for one tx\_hash, it's pretty impressive that this query runs in about 6 minutes.
 
 Given that querying for `tx_hash` is a very common occurence in the workflow of an analyst on Dune, let's think about how we can make this faster.
 
-We simply have to use a column that actually has useful min/max values in order to be able to not read all pages in full, but rather be able to skip over a lot of files and column chunks. Both `block_time` and `block_number` are useful for this purpose.&#x20;
+We simply have to use a column that actually has useful min/max values in order to be able to not read all pages in full, but rather be able to skip over a lot of files and column chunks. Both `block_time` and `block_number` are useful for this purpose.
 
 ```sql
 Select * from ethereum.transactions
@@ -116,8 +116,6 @@ This query is still not as fast as in postgres, where we can make use of btree i
 What happens during the query execution in this case is that the database engine is able to read the footer of the parquet files, is able to determine that the `min/max` values of a lot of parquet files is not meeting the defined criteria and skip over them efficiently. Once we have found a parquet file that actually meets our conditions, we can simply drill down into the column chunk `min/max` values, find the right column chunks, load the few pages of column data that are left into memory and find the match for the `hash` condition as well. Since we are selecting all entries from the logical row in this query, we actually need to access a few other pages as well, but this is a reasonably efficient operation if we only do this for a few rows.
 
 **Lesson:** Define your conditions in a way in which the database is able to reasonably work with `min/max` values of files and columns chunks so it can efficiently find the logical row you need.
-
-
 
 **Aggregating data over a large amount of logical rows**
 
