@@ -71,7 +71,7 @@ You can view your submissions and their processing status at any time by navigat
 
 Although we try to fetch contract information such as the ABI, sometimes this information might not be available through our sources.&#x20;
 
-In those instances, you will need to manually input the contract's name and its ABI. This information should be available in block explorers such as [Etherscan](http://etherscan.io) or [Blockscout](https://blockscout.com) if the contract is verified in any of those sites.
+In those instances, you will need to manually input the contract's name and its ABI. This information should be available in block explorers such as [Etherscan](http://etherscan.io/) or [Blockscout](https://blockscout.com/) if the contract is verified in any of those sites.
 
 {% hint style="info" %}
 If the contract being manually submitted is a Proxy contract, we recommend you to move on to the next section.

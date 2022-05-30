@@ -39,14 +39,16 @@
   * [User Generated](data-tables/data-tables/user-generated.md)
   * [Prices](data-tables/data-tables/prices.md)
   * [Labels](data-tables/data-tables/labels.md)
+  * [Solana Data](data-tables/data-tables/solana-data/README.md)
+    * [Changelog](data-tables/data-tables/solana-data/changelog.md)
+  * [Third Party Data](data-tables/data-tables/community-data/README.md)
+    * [Flashbots](data-tables/data-tables/community-data/flashbots.md)
 
 ## Dune Engine V2 (beta)
 
-* [Dune's New Query Engine](dune-engine-v2-beta/dunes-new-query-engine/README.md)
-  * [Solana Data](dune-engine-v2-beta/dunes-new-query-engine/solana-data/README.md)
-    * [Changelog](dune-engine-v2-beta/dunes-new-query-engine/solana-data/changelog.md)
-  * [Third Party Data](dune-engine-v2-beta/dunes-new-query-engine/community-data/README.md)
-    * [Flashbots](dune-engine-v2-beta/dunes-new-query-engine/community-data/flashbots.md)
+* [Dune's New Database](dune-engine-v2-beta/dunes-new-query-engine/README.md)
+  * [Query Engine](dune-engine-v2-beta/dunes-new-query-engine/query-engine.md)
+  * [Abstractions in DuneV2](dune-engine-v2-beta/dunes-new-query-engine/abstractions-in-dunev2.md)
 
 ## Dune App <a href="#duneapp" id="duneapp"></a>
 

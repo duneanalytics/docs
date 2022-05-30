@@ -78,4 +78,4 @@ If you do need Privacy for your Queries, the [pro Plan](https://dune.xyz/pricing
 
 Join our [Community Discord](https://discord.gg/BJBHFR6sdy) to get world class support from our team and the community.
 
-If you have any feedback, whether feature requests or bug reports, you can submit it [here](https://feedback.dune.xyz).
+If you have any feedback, whether feature requests or bug reports, you can submit it [here](https://feedback.dune.xyz/).

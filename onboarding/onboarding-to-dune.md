@@ -1,4 +1,4 @@
-# Onboarding to dune
+# Onboarding to Dune
 
 ### Dune is an open platform that anyone can build on
 
@@ -20,7 +20,7 @@ All you need is either a skilled freelancer or one of your team members to take 
 
 ### How to find a freelancer
 
-There is quite a few people in the web3 scene which either specialized in building on dune or have the skillset in their repertoire. To reach out to this pool of freelancers, you can **fill in this** [**form**](http://bounties.dune.xyz) **** and freelancers will get back to you in little to no time. Alternatively, you could also use platforms like gitcoin or layer3.xyz to find suitable freelancers.
+There is quite a few people in the web3 scene which either specialized in building on dune or have the skillset in their repertoire. To reach out to this pool of freelancers, you can **fill in this** [**form**](http://bounties.dune.xyz/) **** and freelancers will get back to you in little to no time. Alternatively, you could also use platforms like gitcoin or layer3.xyz to find suitable freelancers.
 
 If hiring a freelancer for the first time, please make sure to check their past works and dashboards to verify that they are indeed capable of solving the task at hand.
 
