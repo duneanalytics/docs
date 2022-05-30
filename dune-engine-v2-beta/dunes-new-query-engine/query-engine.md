@@ -79,7 +79,7 @@ This video does a pretty good job of explaining the differences in row vs column
 
 Indexes don't exist in a traditional sense in a parquet based system. However, they are basically created on the fly with each parquet file having a footer that contains `min/max` values for every column stored in that parquet file. This pattern is then repeated on a column chunk level, which stores this metadata for the columns within a specific row group within the parquet file.
 
-![schematic view of mix/max values](<../../.gitbook/assets/column chunk minmax.png>)
+![schematic view of mix/max values](<../../.gitbook/assets/minmax schema.JPG>)
 
 Using these `min/max` values, both on a file level and on a column chunk level, allows the database to efficiently skip over entire parquet files or column chunks within parquet files while scanning through the table.
 
