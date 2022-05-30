@@ -61,7 +61,7 @@ Instead of storing rows in pages, we store columns in pages. In this way, we red
 
 ![column oriented database (Spark)](<../../.gitbook/assets/column oriented database.png>)
 
-Specifically, in Dune V2 we are using the parquet file format for our new database. Parquet is sometimes described as a hybrid approach between row-oriented databases and column-oriented databases since a table in the database will still consist of multiple parquet files which are partitioned by rows of the dataset. Inside of the parquet file the pages which actually contain the data will contain columns instead of rows, but are still stored within row groups which further partition the data by rows. The database is still roughly stored in a row oriented format, but the individual values are stored on pages in column orientation.
+Specifically, in Dune V2 we are using the [parquet file format](https://github.com/apache/parquet-format) for our new database. Parquet is sometimes described as a hybrid approach between row-oriented databases and column-oriented databases since a table in the database will still consist of multiple parquet files which are partitioned by rows of the dataset. Inside of the parquet file the pages which actually contain the data will contain columns instead of rows, but are still stored within row groups which further partition the data by rows. The database is still roughly stored in a row oriented format, but the individual values are stored on pages in column orientation.
 
 ![schematic view of parquet files](<../../.gitbook/assets/parquet file schema.png>)
 
@@ -89,7 +89,7 @@ This is mostly relevant for base tables like `ethereum.transactions`, `bnb.logs`
 
 A noteable exception from this is the solana dataset  account\_activity_,_ which instead of being order by `block_time` like the rest of our datasets, is ordered by `account_keys[0]`. This allows us to actually reasonably utilize the `min/max` values for the account keys which were used and therefore run efficient queries based on the `account_keys[0]` field.
 
-#### Query examples
+### Query examples
 
 Equipped with this knowledge, let's look at some queries on the new Dune V2 engine.&#x20;
 
@@ -127,16 +127,14 @@ This is mainly a case study to illustrate how efficient DuneV2 is in aggregating
 Select avg(gas_used) from ethereum.transactions
 ```
 
-This query runs in an amazing 7 seconds. This is mainly due to the fact that instead of having to read a near infinite amount of pages, we are now able to able to majorly reduce the amount of pages we have to read, since all this data is stored together in pages across parquet files. In Postgres, each page that we would have to had read would have contained a lot of not needed data, in Dune V2, we just read the data that we actually need.
+This query runs in an amazing 7 seconds. This is mainly due to the fact that instead of having to read literally the entire table, we are now able to able to majorly reduce the amount of pages we have to read, since all this data is stored together in pages across parquet files. In Postgres, each page that we would have to read would have contained a lot of not needed data, in Dune V2, we just read the data that we actually need.
 
 **Lesson:** Querying for data across a large amount of logical rows is now much more efficient and a lot of queries that were formerly sheer impossible due to timing out are now able to be executed.
 
 A good example of illustrating this is Hilldobby's [Ethereum Overview](https://dune.com/hildobby/Ethereum-Overview) dashboard. This is simply a level of data processing that was not possible before.
 
-
-
 ### Closing remarks
 
-Some queries that were heavily indexed on our v1 database might feel a bit awkward in DuneV2. This is especially the case for erc20 event transfer tables, `ethereum.transactions` and `ethereum.logs` and their counterparts on other blockchains. This is a tradeoff we were willing to take to enable blockchain analytics on a large scale basis. We will continue to keep innovating on these datasets and our database architecture to make every query run as fast as possible on DuneV2, but things like queries for `tx_hash` being slow is just in the nature of this new database system. That said, we think we have done a pretty damn good job of enabling a lot of new usecases and speeding up a large amount of already exisiting queries.
+Some queries that were heavily indexed on our v1 database might feel a bit awkward in DuneV2. This is especially the case for erc20 event transfer tables, `ethereum.transactions` and `ethereum.logs` and their counterparts on other blockchains. This is a tradeoff we were willing to take to enable blockchain analytics on a large scale basis. We will continue to keep innovating on these datasets and our database architecture to make every query run as fast as possible on DuneV2, but things like queries for `tx_hash` being slow is just in the nature of this new database system. That said, we think we have done a pretty damn good job of enabling a lot of new usecases and speeding up a large amount of already existing queries.
 
 If you have any feedback or run into trouble with the new system, we are all ears and await your feedback on [Canny](https://feedback.dune.xyz) and [Discord](https://discord.com/dunecom).
