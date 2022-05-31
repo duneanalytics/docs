@@ -46,9 +46,9 @@
 
 ## Dune Engine V2 (beta)
 
-* [Dune's New Database](dune-engine-v2-beta/dunes-new-query-engine/README.md)
-  * [Query Engine](dune-engine-v2-beta/dunes-new-query-engine/query-engine.md)
-  * [Abstractions in DuneV2](dune-engine-v2-beta/dunes-new-query-engine/abstractions-in-dunev2.md)
+* [Dune V2 Intro](dune-engine-v2-beta/dunes-new-query-engine.md)
+* [Query Engine](dune-engine-v2-beta/query-engine.md)
+* [Abstractions in Dune V2](dune-engine-v2-beta/abstractions-in-dunev2.md)
 
 ## Dune App <a href="#duneapp" id="duneapp"></a>
 
