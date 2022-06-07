@@ -1,7 +1,7 @@
 # Does Dune have an API?
 
-**Dune does currently not offer an API.**
+**Dune is currently working on an API!**&#x20;
 
-However, selected paid users can export results as CSV. Learn more and upgrade at [dune.xyz/pricing](https://www.dune.xyz/pricing).
+If you'd like to express interest in receiving early access and would be willing to tell us more on how you expect to use the API - please complete our [API Interest form](https://docs.google.com/forms/d/e/1FAIpQLSdoF4\_LC1BdPumRq1TJguxAsKC-g5i6u2f7-sac5v14EubLsw/viewform).
 
-Also note that anyone can embed Dune charts on their page for free. Simply click "Embed" on any query visualisation.
+Until then, [paid plan users](https://dune.com/pricing) can export results as CSV and anyone can embed Dune charts on their page for free by clicking "[Embed](../sharing/embeds/)" on any query visualisation.
