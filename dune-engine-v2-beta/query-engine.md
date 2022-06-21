@@ -25,6 +25,7 @@ The changes between the 2 coding languages syntax and the keyword operators are 
 | **Generate\_series () is now sequence ()**                               | `generate_series('2022-05-15', CURRENT_DATE, '1 day')`                                                                                                                    | `explode(sequence(to_date('2022-01-01'), to_date('2022-02-01'), interval 1 day))`                                           |
 | **Decimals are no longer in prices.usd**                                 | <p>Don’t use<br><code>prices.usd</code> decimals</p>                                                                                                                      | Replace by `blockchain.erc20_tokens.decimals`                                                                               |
 | **Define NULL array**                                                    | `NULL::integer[]`                                                                                                                                                         | `CAST(NULL AS ARRAY<int>))`                                                                                                 |
+| **encoding strings to hex**                                              | `encode(string, 'hex')`                                                                                                                                                   | `hex(string)`                                                                                                               |
 | <p><strong>Get json object</strong><br><strong>differences</strong></p>  | <p><code>("takerOutputUpdate"-></code><br><code>'deltaWei'->'value'</code>)<br><br><br><code>decode(substring(("addressSet"->'baseAsset')::TEXT, 4,40), 'hex')</code></p> | <p><code>get_json_object(get_json_object(takerOutputUpdate,'$.deltaWei'),'$.value')</code><br><br><code>'0x'</code></p>     |
 
 If you have found any other changes that are important to note, please feel free to sumbit a PR to our docs or leave us feedback in Discord!
@@ -45,7 +46,7 @@ On a very high level, databases read data from storage into memory in order to r
 
 Databases store their data in pages. Pages traditionally contain rows of information. Multiple pages will make up one datafile. A table in a database will sometimes consist of multiple datafiles.
 
-![row oriented database (Postgres)](<../../.gitbook/assets/row based database (1).png>)
+![row oriented database (Postgres)](<../.gitbook/assets/row based database (1).png>)
 
 When retrieving data from the database, the database will read data into memory/cache in the size of pages. This is the smallest amount of data the database will read at once and is a common bottleneck while reading data from any database. After reading the data into memory, the database will either create temporary files or is able to read the data from memory again to finally arrive at the desired query output.
 
@@ -59,11 +60,11 @@ We can't possibly create an index on every column or combination of columns in o
 
 Instead of storing rows in pages, we store columns in pages. In this way, we reduce the amount of pages the database needs to read while aggregating or reading through a specific column.
 
-![column oriented database (Spark)](<../../.gitbook/assets/column oriented database.png>)
+![column oriented database (Spark)](<../.gitbook/assets/column oriented database.png>)
 
 Specifically, in Dune V2 we are using the [parquet file format](https://github.com/apache/parquet-format) for our new database. Parquet is sometimes described as a hybrid approach between row-oriented databases and column-oriented databases since a table in the database will still consist of multiple parquet files which are partitioned by rows of the dataset. Inside of the parquet file the pages which actually contain the data will contain columns instead of rows, but are still stored within row groups which further partition the data by rows. The database is still roughly stored in a row oriented format, but the individual values are stored on pages in column orientation.
 
-![schematic view of parquet files](<../../.gitbook/assets/parquet file schema.png>)
+![schematic view of parquet files](<../.gitbook/assets/parquet file schema.png>)
 
 \
 This means, that even though the database at large is somewhat oriented in a row oriented manner, should we actually want to read data, we will always read from a page which is column oriented. In this way, we can easily aggregate data in one column over a large amounts of logical rows, as in this layout the amount of pages we have to load into memory to actually read the data is minimized.\
@@ -79,7 +80,7 @@ This video does a pretty good job of explaining the differences in row vs column
 
 Indexes don't exist in a traditional sense in a parquet based system. However, they are basically created on the fly with each parquet file having a footer that contains `min/max` values for every column stored in that parquet file. This pattern is then repeated on a column chunk level, which stores this metadata for the columns within a specific row group within the parquet file.
 
-![schematic view of mix/max values](<../../.gitbook/assets/minmax schema.JPG>)
+![schematic view of mix/max values](<../.gitbook/assets/minmax schema.JPG>)
 
 Using these `min/max` values, both on a file level and on a column chunk level, allows the database to efficiently skip over entire parquet files or column chunks within parquet files while scanning through the table.
 
@@ -100,7 +101,7 @@ Select * from ethereum.transactions
 where hash = '0xce1f1a2dd0c10fcf9385d14bc92c686c210e4accf00a3fe7ec2b5db7a5499cff'
 ```
 
-If you think about this for second with all the knowledge we have learned earlier, you will hopefully understand that this query is very inefficient. Our only filter condition here is a `hash` string, therefore we basically force the query engine to read all pages which store the data of the `tx_hash` column in full. We probably can skip a few column chunks where the min/max value stored in the footer of each parquet file is `0xa0 - 0xcd`, but those will be a rare exception. \
+If you think about this for second with all the knowledge we have learned earlier, you will hopefully understand that this query is very inefficient. Our only filter condition here is a `hash` string, therefore we basically force the query engine to read all pages which store the data of the `tx_hash` column in full. We probably can skip a few column chunks where the min/max value stored in the footer of each parquet file is `0xa0 - 0xcd`, but those will be a rare exception.\
 Given that we are basically doing a full scan over the entire history of Ethereum mainnet (1.6b entries at time of writing) while searching for one `hash`, it's pretty impressive that this query runs in about 6 minutes.
 
 Given that querying for `hash` is a very common occurence in the workflow of an analyst on Dune, let's think about how we can make this faster.
