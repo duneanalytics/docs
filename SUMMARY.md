@@ -60,6 +60,7 @@
 * [Dashboards](duneapp/dashboards.md)
 * [Parameters](duneapp/parameters.md)
 * [Adding new contracts](duneapp/adding-new-contracts.md)
+* [Teams](duneapp/teams.md)
 
 ## Onboarding
 
