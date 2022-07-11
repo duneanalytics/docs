@@ -1,4 +1,4 @@
-# Dune's New Database
+# Dune V2 Intro
 
 ### **Introduction**
 
@@ -8,23 +8,23 @@ It leverages **Apache Spark** to enable increased performance of complex queries
 
 All of the data sources contained in this section are available for querying with the new query engine today. Currently we have the following data available to query:
 
-* ****[**Raw tables**](../../data-tables/data-tables/raw-data/)****
+* [**Raw tables**](../data-tables/data-tables/raw-data/)
   * Ethereum
   * Gnosis Chain
   * BNB Chain
   * Optimism
   * Solana
-* [**Decoded tables**](../../data-tables/data-tables/decoded-data.md)****
+* [**Decoded tables**](../data-tables/data-tables/decoded-data.md)\*\*\*\*
   * we are still optimizing this, only a few are decoded for now
-* ****[**Flashbots**](../../data-tables/data-tables/community-data/flashbots.md)****
+* [**Flashbots**](../data-tables/data-tables/community-data/flashbots.md)
   * Example: [https://dune.com/niftytable/MEV](https://dune.com/niftytable/MEV)
-* ****[**Prices**](../../data-tables/data-tables/prices.md) (including Solana)
+* \*\*\*\*[**Prices**](../data-tables/data-tables/prices.md) (including Solana)
 
 ### New query engine
 
 DuneV2 changes our entire database architecture. We are transitioning away from a PostgresQL database to an Instance of Apache Spark hosted on Databricks. The difference between the two systems can be summarized as follows:
 
-* Instead of PostgresQL, we will now use DatabricksSQL. The change in SQL keywords is minimal but might be relevant for some of your querying habits.&#x20;
+* Instead of PostgresQL, we will now use DatabricksSQL. The change in SQL keywords is minimal but might be relevant for some of your querying habits.
 * Spark is a column oriented database in contrast to PostgresQL’s row oriented approach.
 * traditional indexes are replaced by column chunk level `min/max` values
 
@@ -40,8 +40,8 @@ Abstraction in DuneV2 will run on [dbt](https://docs.getdbt.com/docs/introductio
 
 This will make abstractions more robust, scaleable and easier to work with.
 
-{% content-ref url="abstractions-in-dunev2.md" %}
-[abstractions-in-dunev2.md](abstractions-in-dunev2.md)
+{% content-ref url="abstractions-in-dunev2/" %}
+[abstractions-in-dunev2](abstractions-in-dunev2/)
 {% endcontent-ref %}
 
 ### Feedback

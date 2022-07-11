@@ -48,7 +48,20 @@
 
 * [Dune V2 Intro](dune-engine-v2-beta/dunes-new-query-engine.md)
 * [Query Engine](dune-engine-v2-beta/query-engine.md)
-* [Abstractions in Dune V2](dune-engine-v2-beta/abstractions-in-dunev2.md)
+* [Abstractions/Spells in Dune V2](dune-engine-v2-beta/abstractions-in-dunev2/README.md)
+  * [🪄 Introducing Spellbook](dune-engine-v2-beta/abstractions-in-dunev2/introducing-spellbook.md)
+  * [🔧 How to Contribute a Spell](dune-engine-v2-beta/abstractions-in-dunev2/how-to-contribute-a-spell/README.md)
+    * [🤔 Decide on what problem you’re trying to solve with a spell.](dune-engine-v2-beta/abstractions-in-dunev2/how-to-contribute-a-spell/decide-on-what-problem-youre-trying-to-solve-with-a-spell..md)
+    * [📙 Identify the required raw and decoded tables (henceforth sources) needed.](dune-engine-v2-beta/abstractions-in-dunev2/how-to-contribute-a-spell/identify-the-required-raw-and-decoded-tables-henceforth-sources-needed..md)
+    * [🧪 Define a unit test for your spell.](dune-engine-v2-beta/abstractions-in-dunev2/how-to-contribute-a-spell/define-a-unit-test-for-your-spell..md)
+    * [⛏ Write your spell as a select statement.](dune-engine-v2-beta/abstractions-in-dunev2/how-to-contribute-a-spell/write-your-spell-as-a-select-statement./README.md)
+      * [A reformatted transfers table.](dune-engine-v2-beta/abstractions-in-dunev2/how-to-contribute-a-spell/write-your-spell-as-a-select-statement./a-reformatted-transfers-table..md)
+      * [A daily aggregation of transfers.](dune-engine-v2-beta/abstractions-in-dunev2/how-to-contribute-a-spell/write-your-spell-as-a-select-statement./a-daily-aggregation-of-transfers..md)
+      * [Rolling sum of daily transfers](dune-engine-v2-beta/abstractions-in-dunev2/how-to-contribute-a-spell/write-your-spell-as-a-select-statement./rolling-sum-of-daily-transfers.md)
+      * [Final daily Ethereum ERC20 token balances spell](dune-engine-v2-beta/abstractions-in-dunev2/how-to-contribute-a-spell/write-your-spell-as-a-select-statement./final-daily-ethereum-erc20-token-balances-spell.md)
+    * [🏃♀ Run your spell on dune.com](dune-engine-v2-beta/abstractions-in-dunev2/how-to-contribute-a-spell/run-your-spell-on-dune.com.md)
+    * [🍴 Fork of the abstractions Github Repo, open a Pull Request.](dune-engine-v2-beta/abstractions-in-dunev2/how-to-contribute-a-spell/fork-of-the-abstractions-github-repo-open-a-pull-request..md)
+    * [🎯 Dune will merge and deploy](dune-engine-v2-beta/abstractions-in-dunev2/how-to-contribute-a-spell/dune-will-merge-and-deploy.md)
 
 ## Dune App <a href="#duneapp" id="duneapp"></a>
 
