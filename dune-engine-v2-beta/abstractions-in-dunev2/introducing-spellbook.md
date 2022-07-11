@@ -28,10 +28,14 @@ dbt natively understands the dependencies between all models. In our old abstrac
 
 ![Dependency graph created by dbt showing erc20 daily balances dependency tree](https://lh5.googleusercontent.com/0WikhWy2j\_jonRdBkuf0S2Z9f2ZJegTnM4WQjKZpO0T-biYx\_JNzBceEuM10AevnCeSE077ikWSFGicf90XBvCxa1XGOVYxi4hVCsP6HRwLFjugV6gTQSn15aviuQ1VQ0nYb0ir4pmRqKR3DV9g)
 
-We hope you are as excited as we are about this new tool. Spellbook is now live in prod and we welcome new contributors.\
-\
-Continue reading here to learn how to cast a spell into our github repo:&#x20;
+We hope you are as excited as we are about this new tool. Spellbook is now live in prod and we welcome new contributors.
+
+#### Continue reading here to learn how to cast a spell into our github repo:&#x20;
 
 {% content-ref url="how-to-contribute-a-spell/" %}
 [how-to-contribute-a-spell](how-to-contribute-a-spell/)
 {% endcontent-ref %}
+
+#### Visit the spellbook models documentation to see the current models
+
+{% embed url="https://spellbook-docs.dune.com/#!/overview/spellbook" %}
