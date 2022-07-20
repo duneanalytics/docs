@@ -6,7 +6,7 @@ description: >-
 
 # Adding new contracts
 
-The Dune App contains an extensive catalog of decoded contracts in the form of [call and event tables](../data-tables/data-tables/decoded-data.md#decoded-smart-contract-data). These contracts are brought into Dune by wizards through a process commonly referred to as [Decoding](../data-tables/data-tables/decoded-data.md).
+The Dune App contains an extensive catalog of decoded contracts in the form of [call and event tables](../data-tables/evm-blockchains/decoded-data/#decoded-smart-contract-data). These contracts are brought into Dune by wizards through a process commonly referred to as [Decoding](../data-tables/evm-blockchains/decoded-data/).
 
 ## Quick tour
 
@@ -16,7 +16,7 @@ The Dune App contains an extensive catalog of decoded contracts in the form of [
 
 Contracts can be submitted for decoding through the New contract form, which can be accessed via [My Creations > Contracts](https://dune.xyz/browse/contracts/authored) or within the dataset explorer in the query editor's sidebar:
 
-![](<../.gitbook/assets/Screen Shot 2022-01-03 at 15.46.22.png>)
+![](<../.gitbook/assets/Screen Shot 2022-01-03 at 15.46.22 (1).png>)
 
 Clicking there will pop up a new browser tab with the contract submission form, which consists of 2 steps:
 
@@ -28,7 +28,7 @@ For instance, below we submit the USDT contract (`0x94b008aA00579c1307B0EF2c499a
 
 ![](<../.gitbook/assets/Screen Shot 2022-01-03 at 16.02.19.png>)
 
-If we can find the contract through a third party source, we will show a green check mark next to the address field. This means we were able to fetch information such as the contract's name and ABI.&#x20;
+If we can find the contract through a third party source, we will show a green check mark next to the address field. This means we were able to fetch information such as the contract's name and ABI.
 
 ### 2. Contract details
 
@@ -42,7 +42,7 @@ Once you submit it, you are done! The contract will be stored in our queue, whic
 
 ### Advanced options
 
-In some instances, Dune can automatically detect and index multiple contract addresses under the same submission. This is useful for examples such as AMM pools where there often exists one contract instance per pair.&#x20;
+In some instances, Dune can automatically detect and index multiple contract addresses under the same submission. This is useful for examples such as AMM pools where there often exists one contract instance per pair.
 
 We have two strategies for detecting other contracts for decoding:
 
@@ -54,7 +54,7 @@ In both cases, we assume that all the contracts found through either method corr
 If you want us to index more than one contract, toggle on Advanced options and select "Yes" to the first question. Then, to the question of "Is it created by a factory contract?" select "No" to index all other contracts with the same bytecode or "Yes" to index all other contracts originating from the same creator.
 
 {% hint style="warning" %}
-Only use these options if you know what you're doing and are extremely familiar with the project's architecture and deployment hierarchy.&#x20;
+Only use these options if you know what you're doing and are extremely familiar with the project's architecture and deployment hierarchy.
 
 Incorrectly applying these settings may lead to a rejected submission.
 {% endhint %}
@@ -69,7 +69,7 @@ You can view your submissions and their processing status at any time by navigat
 
 ### Submitting contract information manually
 
-Although we try to fetch contract information such as the ABI, sometimes this information might not be available through our sources.&#x20;
+Although we try to fetch contract information such as the ABI, sometimes this information might not be available through our sources.
 
 In those instances, you will need to manually input the contract's name and its ABI. This information should be available in block explorers such as [Etherscan](http://etherscan.io/) or [Blockscout](https://blockscout.com/) if the contract is verified in any of those sites.
 
@@ -79,7 +79,7 @@ If the contract being manually submitted is a Proxy contract, we recommend you t
 
 ### Submitting a Proxy contract
 
-In order to properly decode transactions towards contracts that fit the Proxy pattern, Dune needs to map the Proxy contract's address with the implementation contract's ABI.&#x20;
+In order to properly decode transactions towards contracts that fit the Proxy pattern, Dune needs to map the Proxy contract's address with the implementation contract's ABI.
 
 We avoid monitoring the implementation contract's address because its logic is accessed via usage of Delegatecall in transactions. This would cause us to miss out on any event logs in the implementation contract's logic, since these are actually fired by the caller (the Proxy in this case) when calling a function through Delegatecall.
 
@@ -96,7 +96,7 @@ Dune assumes each address in the blockchain can map to at most 1 contract. For t
 * If the project or contract name has changed, we will generate new tables for all of the contract's methods and events. In turn, previous tables will stop updating, data will be fragmented, and queries will stop working.
 * If the ABI has changed in a way that modifies an existing table's parameters, queries that depend on such table might break or become inaccurate.
 
-If you attempt to submit an already existent contract, make sure to include extra context as part of the submission so we can assess whether it's worth overriding the contract's data.&#x20;
+If you attempt to submit an already existent contract, make sure to include extra context as part of the submission so we can assess whether it's worth overriding the contract's data.
 
 Sometimes, the risk of accepting a re-submission is higher than the perceived value by us, and my result in a rejection. If you disagree, feel free to reach out to us at #decoding in the Dune Discord and we'll see what we can do.
 

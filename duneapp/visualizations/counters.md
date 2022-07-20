@@ -2,15 +2,15 @@
 
 #### Counters are a great way to provide your audience with immediate "on a glance" stats.
 
-!["on a glance" stats in https://dune.xyz/0xBoxer/NFT](<../../.gitbook/assets/image (41).png>)
+!["on a glance" stats in https://dune.xyz/0xBoxer/NFT](<../../.gitbook/assets/image (48).png>)
 
 ## Configuring your counter
 
-![](<../../.gitbook/assets/image (48).png>)
+![](<../../.gitbook/assets/image (62).png>)
 
 ### Counter options
 
-In this section you can define what kind of data the counter should display.&#x20;
+In this section you can define what kind of data the counter should display.
 
 #### Title
 
@@ -24,7 +24,7 @@ In this section you can define what kind of data the counter should display.&#x2
 #### Row
 
 * This field can be used to define which row of the underlying datatable you want displayed e.g. row 1
-* Usually this requires you to sort or limit your query results in order for row 1 to show the wanted results.&#x20;
+* Usually this requires you to sort or limit your query results in order for row 1 to show the wanted results.
 
 ### Formatting
 
@@ -51,7 +51,6 @@ In this section you can define what kind of data the counter should display.&#x2
 
 Here is an example to bring some points explained earlier home.
 
-![label](<../../.gitbook/assets/image (39).png>)
+![label](<../../.gitbook/assets/image (44).png>)
 
-![label configuration](<../../.gitbook/assets/image (55).png>)
-
+![label configuration](<../../.gitbook/assets/image (77).png>)

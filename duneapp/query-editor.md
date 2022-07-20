@@ -2,7 +2,7 @@
 
 **The query editor is the place to query for your data.**
 
-![](<../.gitbook/assets/image (45).png>)
+![](<../.gitbook/assets/image (53).png>)
 
 The Query Editor consists of three parts:
 
@@ -20,29 +20,26 @@ Let's take a look at each of these parts in more detail.
 
 The data(-set) explorer allows you to search for datasets to use in your queries.
 
-To learn more about Dune's datasets, please visit the [section datasets](../data-tables/data-tables/).
+To learn more about Dune's datasets, please visit the [section datasets](broken-reference).
 
 ![](<../.gitbook/assets/2021-12-08 22-44-18.gif>)
 
-You can simply put in any keywords, protocol names, contract names or anything else into the search bar at the top to filter the list of available datasets down to only those you might need at that moment. \
+You can simply put in any keywords, protocol names, contract names or anything else into the search bar at the top to filter the list of available datasets down to only those you might need at that moment.\
 The search bar also accepts spaces, that way you can construct a multi keyword search.
 
 \
 Let's explore a few examples of querying for tables to further elaborate on this:\
 \
-Searching for `uniswap_v2.` __ will bring up all tables related to _the_ `uniswap_v2` _schema_
+Searching for `uniswap_v2.` \_\_ will bring up all tables related to _the_ `uniswap_v2` _schema_
 
 Searching for `uniswap_v2. evt` will bring up only event tables related to the `uniswap_v2` schema
 
 Searching for just `uniswap` will bring up all tables that contain the keyword `uniswap` in some form.
 
-
-
 **Takeaways**
 
 * Always query for data schemas where applicable
-* Use spaces to filter down for events, calls or specific contracts after a schema.\
-
+* Use spaces to filter down for events, calls or specific contracts after a schema.\\
 
 ### Query window
 
@@ -50,42 +47,37 @@ The query window is where you can work your magic in Dune.\
 \
 You can input any SQL code and execute it.
 
-![](<../.gitbook/assets/image (44).png>)
+![](<../.gitbook/assets/image (52).png>)
 
 **Autocomplete function**
 
 You can enable/disable the autocomplete function of the query editor using the gear wheel in the top right corner. The autocomplete feature will only bring up PGSQL keywords and already used tables and aliasses.\
 \
-![](<../.gitbook/assets/image (36).png>)
-
-
+![](<../.gitbook/assets/image (40).png>)
 
 **Shortcuts**
 
-A few shortcuts to make working in the query editor easier are provided below.\
+A few shortcuts to make working in the query editor easier are provided below.\\
 
-
-| Shortcut     | Action                         |
-| ------------ | ------------------------------ |
-| ctrl + enter | execute the query              |
-| ctrl + # or /| comments out the selected code |
-| ctrl + space | brings up a list of keywords   |
-| crtl + z     | undoes your last changes       |
-| ctrl + y     | redoes your last changes       |
-| ctrl + f     | search for keywords            |
-| ctrl + h     | search and replace keywords    |
+| Shortcut      | Action                         |
+| ------------- | ------------------------------ |
+| ctrl + enter  | execute the query              |
+| ctrl + # or / | comments out the selected code |
+| ctrl + space  | brings up a list of keywords   |
+| crtl + z      | undoes your last changes       |
+| ctrl + y      | redoes your last changes       |
+| ctrl + f      | search for keywords            |
+| ctrl + h      | search and replace keywords    |
 
 ### Query results
 
 The query results section contains a table with the results of your query.
 
-![](<../.gitbook/assets/image (56).png>)
+![](<../.gitbook/assets/image (78).png>)
 
 You can change the formatting and appearance of your table with the options below the table. We don't currently support hiding individual columns for displaying this table on a dashboard, but we are looking to implement this function soon.
 
 The tick formats follow this logic:
-
-
 
 | Value        | Tick format | Output          | Description                                                                                                                                           |
 | ------------ | ----------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |

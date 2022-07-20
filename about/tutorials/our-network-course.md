@@ -6,8 +6,11 @@ The course consists of presentations around all important topics that you need t
 
 More details and course materials can be found here:
 
-[https://ournetwork.mirror.xyz/gP16wLY-9BA1E\_ZuOSv1EUAgYGfK9mELNza8cfgMWPQ](https://ournetwork.mirror.xyz/gP16wLY-9BA1E\_ZuOSv1EUAgYGfK9mELNza8cfgMWPQ)
-
-
+{% embed url="https://ournetwork.mirror.xyz/gP16wLY-9BA1E_ZuOSv1EUAgYGfK9mELNza8cfgMWPQ" %}
 
 Please consider buying an edition of the mirror post to support the teachers of this course.
+
+Videos are also available on YouTube:
+
+{% embed url="https://www.youtube.com/watch?list=PL_7kfUeJgSzz5Fltb2nivE_8xuAe2XTJl&v=yDSmTUrpdoQ" %}
+

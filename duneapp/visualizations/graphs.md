@@ -6,9 +6,9 @@ description: Graphs are good for condensing data points into a visualization.
 
 **Graphs are great for condensing data points into a visualization.**
 
-![a graph with mixed line and scatter graphs](<../../.gitbook/assets/image (47).png>)
+![a graph with mixed line and scatter graphs](<../../.gitbook/assets/image (60).png>)
 
-![a stacked bar chart](<../../.gitbook/assets/image (58).png>)
+![a stacked bar chart](<../../.gitbook/assets/image (80).png>)
 
 ### Dune offers you to create the following graph types:
 
@@ -17,8 +17,9 @@ description: Graphs are good for condensing data points into a visualization.
 * scatter charts
 * line charts
 
-You can mix all of these graph types together in one visualization**.**\
-****
+You can mix all of these graph types together in one visualization\*\*.\*\*\\
+
+***
 
 ### Configuring your visualizations
 
@@ -26,13 +27,13 @@ All graph visualizations share a common editing schema.
 
 In essence, you can define your visualization in detail here. The three different sections of this are explained below.
 
-![](<../../.gitbook/assets/image (34).png>)
+![](<../../.gitbook/assets/image (33).png>)
 
 ### Chart options
 
 This section allows you to define how to display your data.
 
-![see explanations below](<../../.gitbook/assets/image (57).png>)
+![see explanations below](<../../.gitbook/assets/image (79).png>)
 
 **Title**
 
@@ -79,7 +80,7 @@ This section allows you to define how to display your data.
 
 Here you can pick the data points that are to be displayed.
 
-![see explanations below](<../../.gitbook/assets/image (46).png>)
+![see explanations below](<../../.gitbook/assets/image (55).png>)
 
 You can choose one **x-axis** and multiple **y-axis.**
 
@@ -89,15 +90,15 @@ Alternatively, you can also choose one data series on the y-axis and choose to g
 
 Using these options you can influence how your x-axis data gets displayed.
 
-![see explanations below](<../../.gitbook/assets/image (37).png>)
+![see explanations below](<../../.gitbook/assets/image (42).png>)
 
-**Axis title**&#x20;
+**Axis title**
 
 * This field allows you to specify a title for your x-axis.
 
 <!---->
 
-* [ ] **Sort Values**&#x20;
+* [ ] **Sort Values**
 
 <!---->
 
@@ -118,13 +119,13 @@ Using these options you can influence how your x-axis data gets displayed.
 
 <!---->
 
-* Ticking this box will make your x-axis values display __ logarithmically.
+* Ticking this box will make your x-axis values display \_\_ logarithmically.
 
 ### **Y-axis options**
 
 With these options you can influence how your x-axis data gets displayed.
 
-![see explanations below](<../../.gitbook/assets/image (40).png>)
+![see explanations below](<../../.gitbook/assets/image (45).png>)
 
 **Axis title**
 
@@ -132,11 +133,11 @@ With these options you can influence how your x-axis data gets displayed.
 
 <!---->
 
-* [ ] **Logarithmic**&#x20;
+* [ ] **Logarithmic**
 
 <!---->
 
-* Ticking this box will make your x-axis values display __ logarithmically.
+* Ticking this box will make your x-axis values display \_\_ logarithmically.
 
 <!---->
 
@@ -149,7 +150,7 @@ With these options you can influence how your x-axis data gets displayed.
 
 ### **Tick formats**
 
-****![](<../../.gitbook/assets/image (59).png>)****
+![](<../../.gitbook/assets/image (83).png>)
 
 Tick formats will change how values in your chart and the axis labels will get displayed.
 
@@ -166,7 +167,7 @@ It follows this logic:
 
 ### Ordering your series
 
-![](<../../.gitbook/assets/image (50).png>)
+![](<../../.gitbook/assets/image (65).png>)
 
 In this section of the visualization editor you can finalize your graph.
 
@@ -181,7 +182,4 @@ You can pick colors with your browser native color selector.
 
 This might look slightly different for you depending on which browser you use.
 
-&#x20;
-
 ![Choose any color you want!](<../../.gitbook/assets/2021-11-26 17-25-04.gif>)
-

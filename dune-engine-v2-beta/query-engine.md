@@ -46,7 +46,7 @@ On a very high level, databases read data from storage into memory in order to r
 
 Databases store their data in pages. Pages traditionally contain rows of information. Multiple pages will make up one datafile. A table in a database will sometimes consist of multiple datafiles.
 
-![row oriented database (Postgres)](<../.gitbook/assets/row based database (1).png>)
+![row oriented database (Postgres)](<../.gitbook/assets/row based database.png>)
 
 When retrieving data from the database, the database will read data into memory/cache in the size of pages. This is the smallest amount of data the database will read at once and is a common bottleneck while reading data from any database. After reading the data into memory, the database will either create temporary files or is able to read the data from memory again to finally arrive at the desired query output.
 

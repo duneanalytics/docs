@@ -2,11 +2,11 @@
 
 **Pie charts are great for showing the composition of something.**
 
-![Marketshare of different decentralized exchanges on https://dune.xyz/hagaetc/dex-metrics](<../../.gitbook/assets/image (49).png>)
+![Marketshare of different decentralized exchanges on https://dune.xyz/hagaetc/dex-metrics](<../../.gitbook/assets/image (64).png>)
 
 ## Configuring your pie chart
 
-![](<../../.gitbook/assets/image (53).png>)
+![](<../../.gitbook/assets/image (70).png>)
 
 ### Chart Options
 
@@ -28,7 +28,7 @@
 
 Here you can pick the data points that are to be displayed.
 
-![The configuration for the chart above](<../../.gitbook/assets/image (33).png>)
+![The configuration for the chart above](<../../.gitbook/assets/image (32).png>)
 
 You can choose one **x-axis** and one y-axis.
 

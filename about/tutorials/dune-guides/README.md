@@ -15,7 +15,7 @@ Some of our Community Members have produced great written tutorials for Dune:
 
 [Paul Pivat](https://twitter.com/paulapivat)
 
-* [Lean foundational Ethereum topics with SQL](https://ethereum.org/en/developers/tutorials/learn-foundational-ethereum-topics-with-sql/)&#x20;
+* [Lean foundational Ethereum topics with SQL](https://ethereum.org/en/developers/tutorials/learn-foundational-ethereum-topics-with-sql/)
 
 [Alex Kroeger](https://twitter.com/alex\_kroeger)
 
@@ -29,8 +29,12 @@ Some of our Community Members have produced great written tutorials for Dune:
 
 * [PostgreSQL Query Optimization Tricks - How to Make Queries Faster in Dune Analytics](https://gracelily.medium.com/postgresql-query-optimization-tricks-6d5b7358d7fa)
 
+[0xPhilan](https://twitter.com/0xPhillan)
 
+* [Dune Analytics: A Guide for Complete Beginners](https://mirror.xyz/phillan.eth/17VAXsMPpwJg4OQNBHKTYAQTWfJMwFuXZQDAxPStf0o)
 
-These guides are all great and we recommend reading all of them.\
+These guides are all great and we recommend reading all of them.
+
+\
 \
 Big **thank you** to the authors of these guides, you are amazing!
