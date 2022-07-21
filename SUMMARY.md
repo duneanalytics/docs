@@ -86,6 +86,7 @@
     * [🏃♀ Run your spell on dune.com](dune-engine-v2-beta/abstractions-in-dunev2/how-to-contribute-a-spell/run-your-spell-on-dune.com.md)
     * [🍴 Fork of the abstractions Github Repo, open a Pull Request.](dune-engine-v2-beta/abstractions-in-dunev2/how-to-contribute-a-spell/fork-of-the-abstractions-github-repo-open-a-pull-request..md)
     * [🎯 Dune will merge and deploy](dune-engine-v2-beta/abstractions-in-dunev2/how-to-contribute-a-spell/dune-will-merge-and-deploy.md)
+  * [📑 spellbook docs](https://spellbook-docs.dune.com/#!/overview/spellbook)
 
 ## Bounties
 
