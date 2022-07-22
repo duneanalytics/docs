@@ -1,7 +1,3 @@
----
-description: Dune's Dashboards allow you to easily aggre
----
-
 # Dashboards
 
 ### Dashboards are where Dune's content lives and gets discovered.

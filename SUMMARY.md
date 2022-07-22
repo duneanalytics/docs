@@ -65,8 +65,7 @@
 * [Dashboards](duneapp/dashboards.md)
 * [Parameters](working-on-dune/parameters.md)
 * [Adding new contracts](duneapp/adding-new-contracts.md)
-* [Teams](duneapp/teams/README.md)
-  * [Spellbook Docs](https://spellbook-docs.dune.com/#!/overview)
+* [Teams](duneapp/teams.md)
 
 ## Dune Engine V2 (beta)
 
