@@ -102,7 +102,7 @@ Also read the section "[abstractions](./)" about this topic.
 
 ## **Table contents**
 
-| column\_name                 | data\_type               | description                                                                       |
+| **column_name**                 | **data_type**               | **description**                                                                       |
 | ---------------------------- | ------------------------ | --------------------------------------------------------------------------------- |
 | block\_time                  | timestamp with time zone | When was this trade exectuted                                                     |
 | nft\_project\_name           | text                     | NFT project name (e.g. "the dudes")                                               |

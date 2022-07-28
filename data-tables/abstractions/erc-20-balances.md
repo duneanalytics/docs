@@ -68,7 +68,7 @@ This dashboard contains the most important use cases related to a single erc20 t
 
 This view depends on the erc20.token\_balances table and gives you the information of the latest distribution of that token.
 
-| column name                   | data type   | description                                                                                |
+| **column name**                   | **data type**   | **description**                                                                    |
 | ----------------------------- | ----------- | ------------------------------------------------------------------------------------------ |
 | amount                        | numeric     | the correct display format for that token                                                  |
 | amount\_raw                   | numeric     | the raw amount of that token (need to divide by decimals!)                                 |
@@ -82,7 +82,7 @@ This view depends on the erc20.token\_balances table and gives you the informati
 
 This table will provide information about all token balances on an hourly basis. It also already includes decimals and prices in most cases, so they are pretty much ready to go out of the box.
 
-| column name     | data type   | description                                                |
+| **column name**    | **data type**   | **description**                                     |
 | --------------- | ----------- | ---------------------------------------------------------- |
 | amount          | numeric     | the correct display format for that token                  |
 | amount\_raw     | numeric     | the raw amount of that token (need to divide by decimals!) |
@@ -96,7 +96,7 @@ This table will provide information about all token balances on an hourly basis.
 
 **This table will perform much better than `erc20.view_token_balances_hourly` since it's only querying for data on a daily basis**. If you want to make high level analysis, this is your way to go.
 
-| column name     | data type   | description                                                |
+| **column name**     | **data type**   | **description**                                    |
 | --------------- | ----------- | ---------------------------------------------------------- |
 | amount          | numeric     | the correct display format for that token                  |
 | amount\_raw     | numeric     | the raw amount of that token (need to divide by decimals!) |
@@ -110,7 +110,7 @@ This table will provide information about all token balances on an hourly basis.
 
 This table contains the hourly balance of all erc20 tokens over the entire existence of these tokens. You can use this table as a fallback option might the views we have provided above not be sufficient for the usecase you are trying to establish.
 
-| column name     | data type   | description                                                |
+| **column name**     | **data type**   | **description**                                    |
 | --------------- | ----------- | ---------------------------------------------------------- |
 | amount          | numeric     | the correct display format for that token                  |
 | amount\_raw     | numeric     | the raw amount of that token (need to divide by decimals!) |
