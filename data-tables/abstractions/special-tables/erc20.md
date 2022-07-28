@@ -57,8 +57,9 @@ Additionally, we parse all token approval events into the `erc20."ERC20_evt_Appr
 
 This is the event that gets emitted upon successful transfer of a token within a ERC20 smart contract. This can be triggered by calling the `transfer` or `transferFrom` function.
 
+| **Column Name**     | **datatype** | **Description**                                                                          |
+| ------------------- | ------------ | ---------------------------------------------------------------------------------------- |
 | from               | bytea       | the sender of the `ERC20` token                                                                                                                                              |
-| ------------------ | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | to                 | bytea       | the receiver of the `ERC20` token                                                                                                                                            |
 | value              | numeric     | the amount of `ERC20` tokens sent. Notice that you have to divide this by the relevant decimals of the `ERC20` token to get to the commonly used denomination of this token. |
 | contract\_address  | bytea       | the contract\_address of the `ERC20` token                                                                                                                                   |
@@ -71,8 +72,9 @@ This is the event that gets emitted upon successful transfer of a token within a
 
 ERC20 tokens can be moved by other smart contracts. In order to allow this action, user will call the `approve` function first. Should that transaction complete successfully, the `Approval` event will get emitted.
 
-| owner              | bytea                    | the address giving the approval                                                        |
+| **Column Name**     | **datatype** | **Description**                                                                          |
 | ------------------ | ------------------------ | -------------------------------------------------------------------------------------- |
+| owner              | bytea                    | the address giving the approval                                                        |
 | spender            | bytea                    | the address which has approval to move the tokens                                      |
 | value              | numeric                  | the spending limit                                                                     |
 | contract\_address  | bytea                    | the contract address of the erc20 token that can be moved                              |
