@@ -1,6 +1,6 @@
 # Traces
 
-## blockchain.traces
+## gnosis.traces
 
 Transactions can trigger smaller atomic actions that modify the internal state of an Ethereum Virtual Machine. Information about the execution of these actions is logged and can be found stored as an EVM execution trace, or just a _trace_. In Etherscan these are referred to as "internal transactions".
 
@@ -16,7 +16,7 @@ Read more [here](https://medium.com/chainalysis/ethereum-traces-not-transactions
 | tx\_hash        | bytea        | the transaction hash of the event                                                                                                                                                                                                              |
 | from            | bytea        | address of the sender                                                                                                                                                                                                                          |
 | to              | bytea        | address of the receiver. `Null` when its a contract creation transaction                                                                                                                                                                       |
-| value           | numeric      | the amount of ether sent in this transaction in `wei`.                                                                                                                                                                                         |
+| value           | numeric      | the amount of ether sent in this transaction in `atta`.                                                                                                                                                                                         |
 | gas             | numeric      |                                                                                                                                                                                                                                                |
 | gas\_used       | numeric      | the gas consumed by the transaction in wei                                                                                                                                                                                                     |
 | tx\_index       | numeric      | The position of the transaction in a block.                                                                                                                                                                                                    |
@@ -31,9 +31,11 @@ Read more [here](https://medium.com/chainalysis/ethereum-traces-not-transactions
 | refund\_address | bytea        | only contains data if `type` was `suicide`. Specifies where to send the outstanding ether balance.                                                                                                                                             |
 
 
+
+
 ### Gas used in traces
 
-The `gas_used` column in the ethereum.traces table is a bit hard to understand, so here is some pointers:
+The `gas_used` column in the gnosis.traces table is a bit hard to understand, so here is some pointers:
 
 * the `gas_used` of a trace will always include the gas consumed by the trace and all it's subtraces.
 * the `gas_used` of the inital call will not contain the cost of making the call in the first place

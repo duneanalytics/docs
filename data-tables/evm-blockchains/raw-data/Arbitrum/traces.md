@@ -1,6 +1,6 @@
 # Traces
 
-## blockchain.traces
+## arbitrum.traces
 
 Transactions can trigger smaller atomic actions that modify the internal state of an Ethereum Virtual Machine. Information about the execution of these actions is logged and can be found stored as an EVM execution trace, or just a _trace_. In Etherscan these are referred to as "internal transactions".
 
@@ -18,7 +18,7 @@ Read more [here](https://medium.com/chainalysis/ethereum-traces-not-transactions
 | to              | bytea        | address of the receiver. `Null` when its a contract creation transaction                                                                                                                                                                       |
 | value           | numeric      | the amount of ether sent in this transaction in `wei`.                                                                                                                                                                                         |
 | gas             | numeric      |                                                                                                                                                                                                                                                |
-| gas\_used       | numeric      | the gas consumed by the transaction in wei                                                                                                                                                                                                     |
+| gas\_used       | numeric      | the gas consumed by the transaction in ArbGas                                                                                                                                                                                                     |
 | tx\_index       | numeric      | The position of the transaction in a block.                                                                                                                                                                                                    |
 | trace\_address  | array        | address of the trace within the call graph forest. E.g., \[0, 2, 1] is the parent of \[0, 2, 1, 0].                                                                                                                                            |
 | sub\_traces     | numeric      | number of children of a trace                                                                                                                                                                                                                  |
@@ -30,14 +30,12 @@ Read more [here](https://medium.com/chainalysis/ethereum-traces-not-transactions
 | output          | bytea        | the bytecode answer the smart contract that was called gives back                                                                                                                                                                              |
 | refund\_address | bytea        | only contains data if `type` was `suicide`. Specifies where to send the outstanding ether balance.                                                                                                                                             |
 
-
 ### Gas used in traces
 
-The `gas_used` column in the ethereum.traces table is a bit hard to understand, so here is some pointers:
+The `gas_used` column in the arbitrum.traces table is a bit hard to understand, so here is some pointers:
 
 * the `gas_used` of a trace will always include the gas consumed by the trace and all it's subtraces.
 * the `gas_used` of the inital call will not contain the cost of making the call in the first place
-  * you need to add 21000 gas units + the cost of sending zero + non zero bytes to the `gas_used` value of the top trace to arrive at the "true" `gas_used` value.
+  * you need to add X gas units + the cost of sending zero + non zero bytes to the `gas_used` value of the top trace to arrive at the "true" `gas_used` value.
   * for more reading on this please refer to this [stackexchange entry](https://ethereum.stackexchange.com/questions/31443/what-do-the-response-values-of-a-parity-trace-transaction-call-actually-repres)
-  * a query doing this in dune: [https://dune.com/queries/895857](https://dune.com/queries/895857)
 

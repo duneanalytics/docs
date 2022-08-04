@@ -1,6 +1,6 @@
 # Traces
 
-## blockchain.traces
+## optimism.traces
 
 Transactions can trigger smaller atomic actions that modify the internal state of an Ethereum Virtual Machine. Information about the execution of these actions is logged and can be found stored as an EVM execution trace, or just a _trace_. In Etherscan these are referred to as "internal transactions".
 
@@ -29,6 +29,8 @@ Read more [here](https://medium.com/chainalysis/ethereum-traces-not-transactions
 | input           | bytea        | the bytecode of the call that is made to another smart contract                                                                                                                                                                                |
 | output          | bytea        | the bytecode answer the smart contract that was called gives back                                                                                                                                                                              |
 | refund\_address | bytea        | only contains data if `type` was `suicide`. Specifies where to send the outstanding ether balance.                                                                                                                                             |
+
+
 
 
 ### Gas used in traces
