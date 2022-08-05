@@ -2,7 +2,7 @@
 
 ## Introduction
 
-All EVM blockchains and rollups fundamentally share the same Ethereum virtual machine(EVM) execution environment. However, there is some speicifcs of each blockchain that should be considered in querying for raw data.
+All EVM blockchains and rollups fundamentally share the same Ethereum virtual machine(EVM) execution environment. However, there is some speicifcs of each blockchain that should be considered in querying for raw data. 
 
 
 
