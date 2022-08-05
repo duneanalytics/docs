@@ -1,6 +1,6 @@
 # Transactions
 
-## arbitrum.transactions
+## blockchain.transactions
 
 Transactions are cryptographically signed instructions from accounts. An account will initiate a transaction to update the state of the Ethereum network. Transactions will always originate from externally owned accounts, a smart contract can not initiate a transaction.
 
@@ -15,19 +15,19 @@ Read more in the official Ethereum documentation [here](https://ethereum.org/en/
 | index                        | numeric      | the transactions index position in the block                                                                                                                                                           |
 | success                      | boolean      | a true/false value that shows if the transaction succeeded                                                                                                                                             |
 | from                         | bytea        | address of the sender                                                                                                                                                                                  |
-| to                           | bytea        | address of the receiver. Null when it's a contract creation transaction                                                                                                                                |
-| value                        | numeric      | the amount of ether sent in this transaction in wei. Note that erc20 tokens do not show up here.                                                                                                       |
+| to                           | bytea        | address of the receiver. Null when its a contract creation transaction                                                                                                                                 |
+| value                        | numeric      | the amount of ether sent in this transaction in wei. note that erc20 tokens do not show up here.                                                                                                       |
 | block\_number                | int8         | the length of the blockchain in blocks                                                                                                                                                                 |
 | block\_hash                  | bytea        | a unique identifier for that block                                                                                                                                                                     |
-| gas\_price                   | numeric      | the maximum gas price this transaction is willing to pay in wei                                                                                                                                        |
-| effective\_gas\_price        | numeric      | the gas price this transaction paid in wei                                                                                                                                                             |
-| gas\_limit                   | numeric      | the gas limit in ArbGas                                                                                                                                                                                |
-| gas\_used                    | numeric      | the gas consumed by the transaction in ArbGas                                                                                                                                                          |
-| gas\_used\_for\_l1           | numeric      | the gas consumed by the L1 resources used for this transaction in ArbGas                                                                                                                               |
+| gas\_limit                   | numeric      | the gas limit in wei                                                                                                                                                                                   |
+| gas\_price                   | numeric      | the gas price in wei                                                                                                                                                                                   |
+| gas\_used                    | numeric      | the gas consumed by the transaction in wei                                                                                                                                                             |
 | data                         | bytea        | can either be empty, a hex encoded message or instructions for a smart contract call                                                                                                                   |
 | hash                         | bytea        | the hash of the transaction                                                                                                                                                                            |
-| type                         | text         | not applicable for Arbitrum                                                                                                                                                                            |
-| access\_list                 | jsonb        | not applicable for Arbitrum                                                                                                                                                                            |
-| max\_fee\_per\_gas           | numeric      | not applicable for Arbitrum                                                                                                                                                                            |
-| max\_priority\_fee\_per\_gas | numeric      | not applicable for Arbitrum                                                                                                                                                                            |
-| priority\_fee\_per\_gas      | numeric      | not applicable for Arbitrum                                                                                                                                                                            |
+| type                         | text         | the type of the transaction: `Legacy`, `AccessList`, or`DynamicFee`                                                                                                                                    |
+| access\_list                 | jsonb        | a list of addresses and storage keys the transactions intends to access. See [EIP2930](https://eips.ethereum.org/EIPS/eip-2930). Applicable if the transaction is of type `AccessList` or `DynamicFee` |
+| max\_fee\_per\_gas           | numeric      | the maximum fee per gas the transaction sender is willing to pay total (introduced by [EIP1559](https://eips.ethereum.org/EIPS/eip-1559))                                                              |
+| max\_priority\_fee\_per\_gas | numeric      | maximum fee per gas the transaction sender is willing to give to miners to incentivize them to include their transaction (introduced by [EIP1559](https://eips.ethereum.org/EIPS/eip-1559))            |
+| priority\_fee\_per\_gas      | numeric      | the priority fee paid out to the miner for this transaction (introduced by [EIP1559](https://eips.ethereum.org/EIPS/eip-1559))                                                                         |
+
+\*\*\*\*[**Take a look for yourself**](https://dune.xyz/queries/38964)\*\*\*\*

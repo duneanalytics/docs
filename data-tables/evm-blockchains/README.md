@@ -2,9 +2,16 @@
 
 ## Introduction
 
-All EVM blockchains and rollups fundamentally share the same Ethereum virtual machine(EVM) execution environment. However, there is some speicifcs of each blockchain that should be considered in querying for raw data.
+All EVM blockchains and rollups fundamentally share the same Ethereum virtual machine(EVM) execution environment. Therefore, the concepts explained in the following apply to the following blockchains that are currently available on Dune:
 
+* Ethereum Mainnet
+* Gnosis Chain (formerly xDai)
+* BNB Smart Chain (formerly Binance Smart Chain)
+* Polygon
+* Optimism
+* Arbitrum
 
+If not specified otherwise, all information in the EVM Blockchain sections apply to all blockchains which share the EVM execution model.
 
 ### Data for EVM chains
 
