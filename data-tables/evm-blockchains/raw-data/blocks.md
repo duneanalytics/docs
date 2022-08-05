@@ -1,6 +1,6 @@
 # Blocks
 
-## bnb.blocks
+## blockchain.blocks
 
 Blocks are the building blocks of blockchains and rollups. A block contains transactions which will alter the state of an EVM system incrementally. Transaction within a block can only be executed one after the other, not in parallel.
 
@@ -21,5 +21,5 @@ Blocks are the building blocks of blockchains and rollups. A block contains tran
 | total\_difficulty   | numeric      | total difficulty of the chain until this block                                           |
 | nonce               | bytea        | the block nonce is used to demonstrate the proof of work during mining                   |
 | size                | numeric      | this block's size in bytes (limited by gas limit)                                        |
-| base\_fee\_per\_gas | numeric      | n/a                                                                                      |
+| base\_fee\_per\_gas | numeric      | this block's base fee (introduced by [EIP1559](https://eips.ethereum.org/EIPS/eip-1559)) |
 
