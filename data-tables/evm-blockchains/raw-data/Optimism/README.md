@@ -2,20 +2,47 @@
 description: Raw data tables are the basic building blocks of our database.
 ---
 
-# Raw Data
+# Optimism
 
-## Introduction
+Optimism is a Layer 2 Optimistic Rollup network designed to utilize the strong security guarantees of Ethereum while reducing its cost and latency. Optimism processes transactions outside of Ethereum Mainnet, reducing congestion on the base layer and improving scalability.
+For a Deep Dive into Optimism, we recommend reading through their [Documentation]https://community.optimism.io/docs/how-optimism-works/#).
 
-**Raw data tables allow you to query for any transaction, block, event log or trace across the blockchains Dune supports. These tables provide you raw, unfiltered and unedited data.**
+Optimism differs in it's EVM implementation in the calculation of gas costs, since it also needs to pay for L1 resources.
 
-Raw data tables are very useful to get meta information about the blockchain, a transaction, traces or certain events.
+## Gas costs on Optimism
+Optimism settles it's transactions on Ethereum Mainnet. This happens via a sequencer contract on L1 that submits the raw calldata of any given transaction on Optimism's Network on L1 in batches. These costs for the batch Settlement transactions needs to be accounted for in the Calculation of gas costs on Optimism.
+The transaction fees on Optimism are caluclated with the following formula:
 
-Additionally, with a few tricks and a bit of patience, you can actually gain substantial insights into systems of smart contracts using the encoded data. [Alex Kroeger](https://twitter.com/alex\_kroeger) wrote [a great article](https://alexkroeger.mirror.xyz/0C3EQBtFqAK4k2TAGPZhg0JMY-upfTAxuTD-o91vBPc) about this exact topic. We have a several [SQL functions](https://github.com/duneanalytics/abstractions/tree/master/ethereum/public) in our database that allow you to more easily work with encoded data.
+```math
+Transaction\ Fees = L1\ fee + (L2\ gas\ price * L2\ gas\ used)
+```
 
-However, queries that have been written using raw data tables are notoriously hard to understand and audit due to the nature of the the encoded data commonly found in these tables. Furthermore, the raw data tables have a very large number of rows and hence can be slow to query.&#x20;
+The L1 Fee consists of:
 
-Most of the time you are better off submitting contracts for [decoding](../../../duneapp/adding-new-contracts.md) and working with [decoded data](../decoded-data/).
+```math
+L1\ Fee = Fee\ Scalar * L1\ Gas\ Price * L1\ Gas\ Used 
+```
+``L1 Fee Scalar`` is a variable that can be increased/decreased by the Optimism Team. It ensures that the gas costs for L1 are sufficiently covered and provides income to the Optimism Team. 
+``L1 Gas Price`` is an estimation of the gas price on Mainnet.
+``L1 Gas used`` breaks down to:
+```math
+L1\ Gas\ Used = Calldata\ gas + a\ fixed\ overhead\ gas\ cost
+```
+So the full calculation of gas costs on optimism consists of:
+```math
+Transaction\ Fee = Fee\ Scalar * L1\ Gas\ Price * (L1 Calldata\ gas + a\ fixed\ overhead\ gas\ cost)
+```
 
+You can read more about Optimism Gas Costs and the approach to mimize them in [this article](https://help.optimism.io/hc/en-us/articles/4411895794715-Transaction-fees).
+
+
+##TL;DR
+To calculate gas costs for a transaction on Optimism you need to follow this formula:
+```math
+L1\_Fee + (gas_price*gas_used)
+```
+
+Additionally, Optimism hasn't implented EIP1559, so it follows the "old" gas auction model.
 ### Raw data tables
 
 {% content-ref url="blocks.md" %}

@@ -52,7 +52,7 @@ Arbitrum does not follow the standard EVM standards and rules to calculate how m
 **You can't compare Arbitrum gas costs to other EVM chains gas costs!**
 
 
-### TLDR
+### TL;DR
 
 Use `effective_gas_price` for calculating gas costs on Arbitrum.
 

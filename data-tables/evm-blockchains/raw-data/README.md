@@ -2,20 +2,13 @@
 description: Raw data tables are the basic building blocks of our database.
 ---
 
-# Raw Data
+# Polygon POS
 
-## Introduction
+Polygon(formerly MATIC) is an Ethereum sidechain hosted and maintained by by Polygon Technology. Polygon PoS is a solution that achieves transaction speed and cost savings by utilizing a POS network. Polygon node requirements are significantly higher than Mainnet requirements as Polygon has a higer gas limit and shorter blocktime. 
 
-**Raw data tables allow you to query for any transaction, block, event log or trace across the blockchains Dune supports. These tables provide you raw, unfiltered and unedited data.**
+You can read more about Polygon and their approach to scaling an EVM in their [documentation](https://docs.polygon.technology/).
 
-Raw data tables are very useful to get meta information about the blockchain, a transaction, traces or certain events.
-
-Additionally, with a few tricks and a bit of patience, you can actually gain substantial insights into systems of smart contracts using the encoded data. [Alex Kroeger](https://twitter.com/alex\_kroeger) wrote [a great article](https://alexkroeger.mirror.xyz/0C3EQBtFqAK4k2TAGPZhg0JMY-upfTAxuTD-o91vBPc) about this exact topic. We have a several [SQL functions](https://github.com/duneanalytics/abstractions/tree/master/ethereum/public) in our database that allow you to more easily work with encoded data.
-
-However, queries that have been written using raw data tables are notoriously hard to understand and audit due to the nature of the the encoded data commonly found in these tables. Furthermore, the raw data tables have a very large number of rows and hence can be slow to query.&#x20;
-
-Most of the time you are better off submitting contracts for [decoding](../../../duneapp/adding-new-contracts.md) and working with [decoded data](../decoded-data/).
-
+Polygon follows all the rules of ETH mainnet and querying on Dune works exactly the same.
 ### Raw data tables
 
 {% content-ref url="blocks.md" %}
