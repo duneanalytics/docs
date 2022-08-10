@@ -8,13 +8,13 @@ description: Get the Dune brand assets and learn about the usage guidelines
 
 This is the primary Dune logo. It should be used in this format whenever possible.
 
-![](../.gitbook/assets/dune-horizontal-logo-cover.png)
+![](<../.gitbook/assets/dune-horizontal-logo-cover (1).png>)
 
-{% file src="../.gitbook/assets/dune-standard-logo.svg" %}
+{% file src="../.gitbook/assets/dune-standard-logo (1).svg" %}
 Standard logo (SVG)
 {% endfile %}
 
-{% file src="../.gitbook/assets/dune-standard-logo@2x (1).png" %}
+{% file src="../.gitbook/assets/dune-standard-logo@2x.png" %}
 Standard logo (PNG)
 {% endfile %}
 
@@ -25,8 +25,6 @@ Standard logo dark (SVG)
 {% file src="../.gitbook/assets/dune-standard-logo-dark@2x.png" %}
 Standard logo dark (PNG)
 {% endfile %}
-
-
 
 ## Vertical logo
 
@@ -44,7 +42,7 @@ Vertical logo (PNG)
 Vertical logo dark (SVG)
 {% endfile %}
 
-{% file src="../.gitbook/assets/dune-vertical-logo-dark@2x (1).png" %}
+{% file src="../.gitbook/assets/dune-vertical-logo-dark@2x.png" %}
 Vertical logo dark (PNG)
 {% endfile %}
 
@@ -65,6 +63,3 @@ Icon only (PNG)
 {% file src="../.gitbook/assets/Dune-logo-Full.zip" %}
 All logos in SVG and PNG format (ZIP)
 {% endfile %}
-
-
-

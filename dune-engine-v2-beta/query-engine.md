@@ -46,7 +46,7 @@ On a very high level, databases read data from storage into memory in order to r
 
 Databases store their data in pages. Pages traditionally contain rows of information. Multiple pages will make up one datafile. A table in a database will sometimes consist of multiple datafiles.
 
-![row oriented database (Postgres)](<../.gitbook/assets/image (66) (1).png>)
+![row oriented database (Postgres)](<../.gitbook/assets/row based database (2).png>)
 
 When retrieving data from the database, the database will read data into memory/cache in the size of pages. This is the smallest amount of data the database will read at once and is a common bottleneck while reading data from any database. After reading the data into memory, the database will either create temporary files or is able to read the data from memory again to finally arrive at the desired query output.
 
@@ -60,11 +60,11 @@ We can't possibly create an index on every column or combination of columns in o
 
 Instead of storing rows in pages, we store columns in pages. In this way, we reduce the amount of pages the database needs to read while aggregating or reading through a specific column.
 
-![column oriented database (Spark)](<../.gitbook/assets/image (59).png>)
+![column oriented database (Spark)](<../.gitbook/assets/image (77).png>)
 
 Specifically, in Dune V2 we are using the [parquet file format](https://github.com/apache/parquet-format) for our new database. Parquet is sometimes described as a hybrid approach between row-oriented databases and column-oriented databases since a table in the database will still consist of multiple parquet files which are partitioned by rows of the dataset. Inside of the parquet file the pages which actually contain the data will contain columns instead of rows, but are still stored within row groups which further partition the data by rows. The database is still roughly stored in a row oriented format, but the individual values are stored on pages in column orientation.
 
-![schematic view of parquet files](<../.gitbook/assets/image (74).png>)
+![schematic view of parquet files](<../.gitbook/assets/image (52).png>)
 
 \
 This means, that even though the database at large is somewhat oriented in a row oriented manner, should we actually want to read data, we will always read from a page which is column oriented. In this way, we can easily aggregate data in one column over a large amounts of logical rows, as in this layout the amount of pages we have to load into memory to actually read the data is minimized.\

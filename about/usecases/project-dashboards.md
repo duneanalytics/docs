@@ -13,11 +13,11 @@ description: Project Dashboards are a great way to track the metrics of your pro
 
 This is the dashboard from Tornado Cash on which someone assembled all the important metrics in one place.
 
-![](<../../.gitbook/assets/image (18).png>)
+![](<../../.gitbook/assets/image (45).png>)
 
 We can see that the creator is showing us a few "on a glance" counters which tell us the most important information in simple numbers.
 
-![](<../../.gitbook/assets/image (18) (1).png>)
+![](<../../.gitbook/assets/image (18).png>)
 
 He follows this up with some interesting historical data points which show the growth in users and volume. The Dashboard continues, but you can clearly already see how much value these stats and charts can produce for your project.
 

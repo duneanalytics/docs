@@ -26,7 +26,7 @@ All of this data is easily accessible with very simple queries like these:
 
 * [**all trades for a given NFT**](https://dune.xyz/queries/146090)
 
-![](<../../.gitbook/assets/image (34).png>)
+![](<../../.gitbook/assets/image (27).png>)
 
 ```sql
 select * from nft.trades 

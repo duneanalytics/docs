@@ -8,7 +8,7 @@ All EVM blockchains and rollups fundamentally share the same Ethereum virtual ma
 
 For the listed EVM chains above we offer you **raw data** and **decoded data**. We further work with these tables in our [abstraction](../abstractions/) tables to standardize and normalize this data.
 
-### [**Raw data**](raw-data/Chains/)
+### [**Raw data**](raw-data/chains/)
 
 Raw data is just that: unedited, raw and encoded blockchain data.\
 These tables are notoriously hard to work with since the data is encoded, but these tables do contain all the information you could ever need. You might be using these tables to pull metadata for transactions, look at the network as a whole or to work with contracts which are not able to be decoded due to missing smart contract source code.

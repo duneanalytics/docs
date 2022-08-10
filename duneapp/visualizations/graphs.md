@@ -6,9 +6,9 @@ description: Graphs are good for condensing data points into a visualization.
 
 **Graphs are great for condensing data points into a visualization.**
 
-![a graph with mixed line and scatter graphs](<../../.gitbook/assets/image (60).png>)
+![a graph with mixed line and scatter graphs](../../.gitbook/assets/image.png)
 
-![a stacked bar chart](<../../.gitbook/assets/image (80).png>)
+![a stacked bar chart](<../../.gitbook/assets/image (19).png>)
 
 ### Dune offers you to create the following graph types:
 
@@ -27,13 +27,13 @@ All graph visualizations share a common editing schema.
 
 In essence, you can define your visualization in detail here. The three different sections of this are explained below.
 
-![](<../../.gitbook/assets/image (33).png>)
+![](<../../.gitbook/assets/image (47).png>)
 
 ### Chart options
 
 This section allows you to define how to display your data.
 
-![see explanations below](<../../.gitbook/assets/image (79).png>)
+![see explanations below](<../../.gitbook/assets/image (50).png>)
 
 **Title**
 
@@ -80,7 +80,7 @@ This section allows you to define how to display your data.
 
 Here you can pick the data points that are to be displayed.
 
-![see explanations below](<../../.gitbook/assets/image (55).png>)
+![see explanations below](<../../.gitbook/assets/image (29).png>)
 
 You can choose one **x-axis** and multiple **y-axis.**
 
@@ -90,7 +90,7 @@ Alternatively, you can also choose one data series on the y-axis and choose to g
 
 Using these options you can influence how your x-axis data gets displayed.
 
-![see explanations below](<../../.gitbook/assets/image (42).png>)
+![see explanations below](<../../.gitbook/assets/image (9).png>)
 
 **Axis title**
 
@@ -125,7 +125,7 @@ Using these options you can influence how your x-axis data gets displayed.
 
 With these options you can influence how your x-axis data gets displayed.
 
-![see explanations below](<../../.gitbook/assets/image (45).png>)
+![see explanations below](<../../.gitbook/assets/image (16).png>)
 
 **Axis title**
 
@@ -150,7 +150,7 @@ With these options you can influence how your x-axis data gets displayed.
 
 ### **Tick formats**
 
-![](<../../.gitbook/assets/image (83).png>)
+![](<../../.gitbook/assets/image (21).png>)
 
 Tick formats will change how values in your chart and the axis labels will get displayed.
 
@@ -167,7 +167,7 @@ It follows this logic:
 
 ### Ordering your series
 
-![](<../../.gitbook/assets/image (65).png>)
+![](<../../.gitbook/assets/image (4).png>)
 
 In this section of the visualization editor you can finalize your graph.
 
