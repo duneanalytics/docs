@@ -26,7 +26,7 @@
         * [Transactions](data-tables/evm-blockchains/raw-data/Chains/Arbitrum/transactions.md)
         * [Event Logs](data-tables/evm-blockchains/raw-data/Chains/Arbitrum/event-logs.md)
         * [Traces](data-tables/evm-blockchains/raw-data/Chains/Arbitrum/traces.md)
-      * [Avalanche C-Chain](data-tables/evm-blockchains/raw-data/Chains/Avalanche-C-Chain/README.md)
+      * [Avalanche C-Chain](data-tables/evm-blockchains/raw-data/Chains/Avalanche C-Chain/README.md)
         * [Blocks](data-tables/evm-blockchains/raw-data/Chains/Avalanche-C-Chain/blocks.md)
         * [Transactions](data-tables/evm-blockchains/raw-data/Chains/Avalanche-C-Chain/transactions.md)
         * [Event Logs](data-tables/evm-blockchains/raw-data/Chains/Avalanche-C-Chain/event-logs.md)
