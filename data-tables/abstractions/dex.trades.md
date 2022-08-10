@@ -17,9 +17,8 @@ The scripts that generate the table dex.trades can be found in this [public gith
 
 ### dex.trades
 
-| **Column Name**     | **datatype** | **Description**                                                                          |
-| ------------------- | ------------ | ---------------------------------------------------------------------------------------- |
 | block\_time                 | timestamptz | the timestamp of the block that included this transaction                                                                |
+| --------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------ |
 | token\_a\_symbol            | text        | the symbol of one of the two tokens that got traded                                                                      |
 | token\_b\_symbol            | text        | the symbol of one of the two tokens that got traded                                                                      |
 | token\_a\_amount            | numeric     | the amount of token A that got traded                                                                                    |

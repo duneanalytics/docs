@@ -65,7 +65,7 @@ Note that there might be a few minutes delay from adding the label on [dune.xyz]
 
 Labels are stored in the new `labels.labels` table which has the following schema:
 
-| **column name** | **data type**   | **description**                                              |
+| column name | data type   | description                                              |
 | ----------- | ----------- | -------------------------------------------------------- |
 | id          | int         | incrementing integer                                     |
 | address     | bytea       | the address of a contract or wallet this label describes |
