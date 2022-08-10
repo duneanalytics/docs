@@ -1,10 +1,10 @@
-# A daily aggregation of transfers.
+# A daily aggregation of transfers
 
 This sums all transfers for the day. This table is materialized as an incrementally loaded table updated every 15 minutes because the next step includes a slower \`[window](https://spark.apache.org/docs/latest/sql-ref-syntax-qry-select-window.html)\` function to capture a rolling sum.
 
 There’s a few novel components to make this spell incremental:
 
-The `{% if is_incremental() %} {% endif %}` JINJA block allows us to add an arbitrary filter when running in “incremental” mode. Incremental mode is default and a full refresh is denoted by a command line arg to completely recreate the table.&#x20;
+The `<div data-gb-custom-block data-tag="if"> </div>` JINJA block allows us to add an arbitrary filter when running in “incremental” mode. Incremental mode is default and a full refresh is denoted by a command line arg to completely recreate the table.
 
 Here we use this block to filter for all data timestamped in the last two days. We are running this model every fifteen minutes, but we allow a look back of 2 days to account for data arriving late from the blockchain.
 
@@ -35,6 +35,7 @@ select
    unique_tx_id || '-' || wallet_address || '-' || token_address || '-' || sum(tr.amount_raw)::string as unique_transfer_id
 from {{ ref('transfers_ethereum_erc20') }} tr
 left join {{ ref('tokens_ethereum_erc20') }} t on t.contract_address = tr.token_address
+
 {% raw %}
 {% if is_incremental() %}
 -- this filter will only be applied on an incremental run

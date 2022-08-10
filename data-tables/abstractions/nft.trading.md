@@ -26,7 +26,7 @@ All of this data is easily accessible with very simple queries like these:
 
 * [**all trades for a given NFT**](https://dune.xyz/queries/146090)
 
-![](<../../.gitbook/assets/image (31).png>)
+![](<../../.gitbook/assets/image (34).png>)
 
 ```sql
 select * from nft.trades 
@@ -91,8 +91,9 @@ In the most recent version of `nft.trades`, information about the amount and per
 
 [**https://dune.xyz/rantum/NFT-Collection-Dashboard**](https://dune.xyz/rantum/NFT-Collection-Dashboard)
 
-****[**https://dune.com/sealaunch/NFT**](https://dune.com/sealaunch/NFT)****\
-****
+[**https://dune.com/sealaunch/NFT**](https://dune.com/sealaunch/NFT)\\
+
+***
 
 ## **Ser, my platform is not indexed**
 

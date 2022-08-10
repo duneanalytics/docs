@@ -8,7 +8,7 @@ It leverages **Apache Spark** to enable increased performance of complex queries
 
 All of the data sources contained in this section are available for querying with the new query engine today. Currently we have the following data available to query:
 
-* [**Raw tables**](../data-tables/evm-blockchains/raw-data/)
+* [**Raw tables**](../data-tables/evm-blockchains/raw-data/Chains/)
   * Ethereum
   * Gnosis Chain
   * BNB Chain

@@ -45,13 +45,11 @@ Read more about submitting contracts in this section:
 
 ## How does decoding work?
 
-Smart Contracts on any EVM blockchain are mostly written in high level languages like [Solidity](https://docs.soliditylang.org/en/v0.8.2/) or [Vyper](https://vyper.readthedocs.io/en/stable/). In order for them to be able to be deployed to an EVM execution environment, they need to be compiled to EVM executable bytecode.  Once deployed, the bytecode gets associated to an address on the respective chain and is permanently stored in this chain's state storage. To be able to interact with this smart contract, which is now just bytecode, we need a guide to be able to call the functions which are defined in the high-level languages. This translation of names and arguments into byte representation is done using an **ABI (Application Binary Interface)**. The ABI documents names, types and arguments precisely and allows us to interact with the smart contract using a somewhat human readable format. The ABI can be compiled using the high level language source code.&#x20;
+Smart Contracts on any EVM blockchain are mostly written in high level languages like [Solidity](https://docs.soliditylang.org/en/v0.8.2/) or [Vyper](https://vyper.readthedocs.io/en/stable/). In order for them to be able to be deployed to an EVM execution environment, they need to be compiled to EVM executable bytecode. Once deployed, the bytecode gets associated to an address on the respective chain and is permanently stored in this chain's state storage. To be able to interact with this smart contract, which is now just bytecode, we need a guide to be able to call the functions which are defined in the high-level languages. This translation of names and arguments into byte representation is done using an **ABI (Application Binary Interface)**. The ABI documents names, types and arguments precisely and allows us to interact with the smart contract using a somewhat human readable format. The ABI can be compiled using the high level language source code.
 
 **The ABI is used to be able to call a smart contract or interpret the data it emits.**
 
 ![source: https://hackernoon.com/hn-images/1\*Sz1a7G2pQ62UnkHoieve4w.jpeg](<../../../.gitbook/assets/image (67).png>)
-
-
 
 **Let's put this into practice and look at a practical example.**
 
@@ -83,7 +81,7 @@ where
 | ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------ |
 | 0x2bb7c8283b782355875fa37d05e4bd962519ea294678a3dcf2fdffbbd0761bc5 | 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef | 0x00000000000000000000000075e89d5979e4f6fba9f97c104c2f0afb3f1dcb88 | 0x00000000000000000000000087d9da48db6e1f925cb67d3b7d2a292846c24cf7 | 0x00000000000000000000000000000000000000000000001a894d51f85cb08000 |
 
-**Now this is not at all helpful to analyse data.**&#x20;
+**Now this is not at all helpful to analyse data.**
 
 Using the contract's ABI we can convert this encoded bytecode to decoded data.
 
@@ -120,25 +118,22 @@ The structure for the `Transfer` event log of an ERC20 token will always be:
 Transfer(address from, address to, uint256 value)
 ```
 
-This basically tells us that topic2 and topic3 are of the type `address`(32bytes) and are respectively the sender and recipient of the token transfer. An event log only has 3 indexed fields, so the `data` field is used to store the information about how much units of the token have been moved in  this transaction. This field is called `value`.
+This basically tells us that topic2 and topic3 are of the type `address`(32bytes) and are respectively the sender and recipient of the token transfer. An event log only has 3 indexed fields, so the `data` field is used to store the information about how much units of the token have been moved in this transaction. This field is called `value`.
 
-Since `topic1` always is just the Keccak-256 hash of the signature of the event, we are left with decoding `topic2`, `topic3` and `data`.\
-
+Since `topic1` always is just the Keccak-256 hash of the signature of the event, we are left with decoding `topic2`, `topic3` and `data`.\\
 
 In this case, they map out like this:
 
-| raw data field | decoded data description                       | raw data                                                           | decoded data                                                                   |
-| -------------- | ---------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| topic1         | keccak256("Transfer(address,address,uint256)") | 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef | not needed, this table only contains event logs from the  `transfer` event log |
-| topic2         | from                                           | 0x00000000000000000000000075e89d5979e4f6fba9f97c104c2f0afb3f1dcb88 | 0x75e89d5979e4f6fba9f97c104c2f0afb3f1dcb88                                     |
-| topic3         | to                                             | 0x00000000000000000000000087d9da48db6e1f925cb67d3b7d2a292846c24cf7 | 0x87d9da48db6e1f925cb67d3b7d2a292846c24cf7                                     |
-| data           | value                                          | 0x00000000000000000000000000000000000000000000001a894d51f85cb08000 | 489509000000000000000                                                          |
-
-
+| raw data field | decoded data description                       | raw data                                                           | decoded data                                                                  |
+| -------------- | ---------------------------------------------- | ------------------------------------------------------------------ | ----------------------------------------------------------------------------- |
+| topic1         | keccak256("Transfer(address,address,uint256)") | 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef | not needed, this table only contains event logs from the `transfer` event log |
+| topic2         | from                                           | 0x00000000000000000000000075e89d5979e4f6fba9f97c104c2f0afb3f1dcb88 | 0x75e89d5979e4f6fba9f97c104c2f0afb3f1dcb88                                    |
+| topic3         | to                                             | 0x00000000000000000000000087d9da48db6e1f925cb67d3b7d2a292846c24cf7 | 0x87d9da48db6e1f925cb67d3b7d2a292846c24cf7                                    |
+| data           | value                                          | 0x00000000000000000000000000000000000000000000001a894d51f85cb08000 | 489509000000000000000                                                         |
 
 **In summary:**
 
-We can use the contracts ABI to go from encoded bytecode to decoded data. This helps you run analysis fast and efficient as the decoded data is easy to work with.&#x20;
+We can use the contracts ABI to go from encoded bytecode to decoded data. This helps you run analysis fast and efficient as the decoded data is easy to work with.
 
 ## How to understand decoded data?
 
@@ -154,11 +149,9 @@ Some good showcasing of how to deal with decoded data can be found all throughou
 
 Working with decoded data allows you deep access to information stored on the blockchain and is very information rich, but understanding that data sometimes takes a bit of effort on your side since you are interacting with the data of the contract in a direct way.
 
-
-
 ## Which tables should you use?
 
-**Events** are designed to be analysed and stored on the blockchain to allow backward looking analysis of what is happening, **transactions** and **message calls** are made to pass information between smart contracts. Therefore, in most cases the easiest and most accessible way to analyse various things happening on the blockchain is by looking at events. However, there is some cases where the emitted events miss some crucial information or there is just no events that get emitted. In these cases you might have to fall back to transaction and message calls (found in call tables). Cases where no event gets emitted get rarer over time as developers now mostly understand that events are important enough to be emitted, but they still exist. In some cases, it might make sense to combine the decoded data with [raw data](../raw-data/) in order to get metadata about the transaction or dive even deeper.
+**Events** are designed to be analysed and stored on the blockchain to allow backward looking analysis of what is happening, **transactions** and **message calls** are made to pass information between smart contracts. Therefore, in most cases the easiest and most accessible way to analyse various things happening on the blockchain is by looking at events. However, there is some cases where the emitted events miss some crucial information or there is just no events that get emitted. In these cases you might have to fall back to transaction and message calls (found in call tables). Cases where no event gets emitted get rarer over time as developers now mostly understand that events are important enough to be emitted, but they still exist. In some cases, it might make sense to combine the decoded data with [raw data](../raw-data/Chains/) in order to get metadata about the transaction or dive even deeper.
 
 ## **Queries to explore decoded Contracts**
 
