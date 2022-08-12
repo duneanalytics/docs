@@ -18,18 +18,18 @@ Gnosis Chain follows all standards and upgrades of Ethereum Mainnet, querying on
 
 ### Raw data tables
 
-{% content-ref url="../arbitrum/blocks.md" %}
-[blocks.md](../arbitrum/blocks.md)
+{% content-ref url="../gnosis-chain-xdai/blocks.md" %}
+[blocks.md](../gnosis-chain-xdai/blocks.md)
 {% endcontent-ref %}
 
-{% content-ref url="../ethereum-mainnet/transactions.md" %}
-[transactions.md](../ethereum-mainnet/transactions.md)
+{% content-ref url="../gnosis-chain-xdai/transactions.md" %}
+[transactions.md](../gnosis-chain-xdai/transactions.md)
 {% endcontent-ref %}
 
-{% content-ref url="../ethereum-mainnet/event-logs.md" %}
-[event-logs.md](../ethereum-mainnet/event-logs.md)
+{% content-ref url="../gnosis-chain-xdai/event-logs.md" %}
+[event-logs.md](../gnosis-chain-xdai/event-logs.md)
 {% endcontent-ref %}
 
-{% content-ref url="../ethereum-mainnet/traces.md" %}
-[traces.md](../ethereum-mainnet/traces.md)
+{% content-ref url="../gnosis-chain-xdai/traces.md" %}
+[traces.md](../gnosis-chain-xdai/traces.md)
 {% endcontent-ref %}
