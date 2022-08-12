@@ -14,18 +14,18 @@ Explaining the Ethereum history, Roadmap and technical details goes beyond the s
 
 ### Raw data tables
 
-{% content-ref url="../Polygon/blocks.md" %}
+{% content-ref url="../ethereum-mainnet/blocks.md" %}
 [blocks.md](../Polygon/blocks.md)
 {% endcontent-ref %}
 
-{% content-ref url="transactions.md" %}
-[transactions.md](transactions.md)
+{% content-ref url="../ethereum-mainnet/transactions.md" %}
+[transactions.md](../ethereum-mainnet/transactions.md)
 {% endcontent-ref %}
 
-{% content-ref url="event-logs.md" %}
-[event-logs.md](event-logs.md)
+{% content-ref url="../ethereum-mainnet/event-logs.md" %}
+[event-logs.md](../ethereum-mainnet/event-logs.md)
 {% endcontent-ref %}
 
-{% content-ref url="../Avalanche-C-Chain/traces.md" %}
-[traces.md](../Avalanche-C-Chain/traces.md)
+{% content-ref url="../ethereum-mainnet/traces.md" %}
+[traces.md](../ethereum-mainnet/traces.md)
 {% endcontent-ref %}
