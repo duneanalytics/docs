@@ -52,18 +52,18 @@ Additionally, Optimism hasn't implemented EIP1559, so it follows the "old" gas a
 
 ### Raw data tables
 
-{% content-ref url="../../Chains/Optimism/blocks.md" %}
-[blocks.md](../../Chains/Optimism/blocks.md)
+{% content-ref url="blocks.md" %}
+[blocks.md](blocks.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../Chains/Optimism/transactions.md" %}
-[transactions.md](../../Chains/Optimism/transactions.md)
+{% content-ref url="transactions.md" %}
+[transactions.md](transactions.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../Chains/Optimism/event-logs.md" %}
-[event-logs.md](../../Chains/Optimism/event-logs.md)
+{% content-ref url="event-logs.md" %}
+[event-logs.md](event-logs.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../Chains/Optimism/traces.md" %}
-[traces.md](../../Chains/Optimism/traces.md)
+{% content-ref url="traces.md" %}
+[traces.md](traces.md)
 {% endcontent-ref %}
