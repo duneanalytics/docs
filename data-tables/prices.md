@@ -24,7 +24,7 @@ If the token you desire is not listed in here, please make a pull request to our
 
 Note that `WETH` can be used for ETH price as it trades at virtually the same price.
 
-### **prices.layer\_1usd**
+### **prices.layer1\_usd**
 
 This table supports layer 1 assets on other blockchains.
 
