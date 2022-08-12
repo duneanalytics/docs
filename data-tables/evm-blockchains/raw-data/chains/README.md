@@ -8,31 +8,31 @@ EVM chains at large follow the same execution model, however there is sometimes 
 
 You can find out about the individual chains in the specific sections of the documentation:
 
-{% content-ref url="arbitrum/" %}
-[arbitrum](arbitrum/)
+{% content-ref url="Arbitrum/" %}
+[Arbitrum](Arbitrum/)
 {% endcontent-ref %}
 
-{% content-ref url="avalanche-c-chain/" %}
-[avalanche-c-chain](avalanche-c-chain/)
+{% content-ref url="Avalanche-C-Chain/" %}
+[Avalanche-C-Chain](Avalanche-C-Chain/)
 {% endcontent-ref %}
 
-{% content-ref url="bnb-chain-bsc/" %}
-[bnb-chain-bsc](bnb-chain-bsc/)
+{% content-ref url="BNB-Chain-(BSC)/" %}
+[BNB-Chain-(BSC)](BNB-Chain-\(BSC\)/)
 {% endcontent-ref %}
 
-{% content-ref url="ethereum-mainnet/" %}
-[ethereum-mainnet](ethereum-mainnet/)
+{% content-ref url="Ethereum-Mainnet/" %}
+[Ethereum-Mainnet](Ethereum-Mainnet/)
 {% endcontent-ref %}
 
-{% content-ref url="gnosis-chain-xdai/" %}
-[gnosis-chain-xdai](gnosis-chain-xdai/)
+{% content-ref url="Gnosis-Chain-(xDai)/" %}
+[Gnosis-Chain-(xDai)](Gnosis-Chain-\(xDai\)/)
 {% endcontent-ref %}
 
-{% content-ref url="optimism/" %}
-[optimism](optimism/)
+{% content-ref url="Optimism/" %}
+[Optimism](Optimism/)
 {% endcontent-ref %}
 
-{% content-ref url="polygon/" %}
-[polygon](polygon/)
+{% content-ref url="Polygon/" %}
+[Polygon](Polygon/)
 {% endcontent-ref %}
 

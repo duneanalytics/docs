@@ -14,8 +14,8 @@ Explaining the Ethereum history, Roadmap and technical details goes beyond the s
 
 ### Raw data tables
 
-{% content-ref url="../polygon/blocks.md" %}
-[blocks.md](../polygon/blocks.md)
+{% content-ref url="../Polygon/blocks.md" %}
+[blocks.md](../Polygon/blocks.md)
 {% endcontent-ref %}
 
 {% content-ref url="transactions.md" %}
@@ -26,6 +26,6 @@ Explaining the Ethereum history, Roadmap and technical details goes beyond the s
 [event-logs.md](event-logs.md)
 {% endcontent-ref %}
 
-{% content-ref url="../avalanche-c-chain/traces.md" %}
-[traces.md](../avalanche-c-chain/traces.md)
+{% content-ref url="../Avalanche-C-Chain/traces.md" %}
+[traces.md](../Avalanche-C-Chain/traces.md)
 {% endcontent-ref %}
