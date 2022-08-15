@@ -25,9 +25,15 @@ extra:
       link: https://github.com/duneanalytics
 markdown_extensions:
   - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
 plugins:
   - search
   - awesome-pages
+  - mkdocs-video
 extra:
   generator: false
 extra_css:

@@ -10,11 +10,9 @@ hide:
 
 **Dune is a powerful tool for blockchain research. Dune gives you all the tools to query, extract, and visualize vast amounts of data from the blockchain. Dune is unlocking the power of public blockchain data by making it accessible to everyone. This documentation will help you answer questions like:**
 
-[How much volume flows through Uniswap each day?](https://dune.xyz/queries/3)
-
-[Which Dex has the highest volume?](https://dune.xyz/queries/1847)
-
-[How are important Stablecoins behaving today?](https://dune.xyz/hagaetc/stablecoins)
+- [How much volume flows through Uniswap each day?](https://dune.xyz/queries/3)
+- [Which Dex has the highest volume?](https://dune.xyz/queries/1847)
+- [How are important Stablecoins behaving today?](https://dune.xyz/hagaetc/stablecoins)
 
 ## Dune Basics
 
@@ -66,7 +64,7 @@ Dune offers a variety of visualizations that you can use to visually present dat
 
 ## Dashboards
 
-Using carefully planned visuals, a clever blockchain analyst can tell a story about a particular group of data. For example, in the below[ dashboard](https://dune.xyz/hagaetc/dex-metrics) it is clear at the top that 'Dex' as a category is growing. Below, the audience sees which dex's are the most popular by volume, and finally can view a stacked bar chart that shows changes over time. By just looking at this single dashboard, the audience sees a clear picture of the entire DEX market.
+Using carefully planned visuals, a clever blockchain analyst can tell a story about a particular group of data. For example, in the below [dashboard](https://dune.xyz/hagaetc/dex-metrics) it is clear at the top that 'Dex' as a category is growing. Below, the audience sees which dex's are the most popular by volume, and finally can view a stacked bar chart that shows changes over time. By just looking at this single dashboard, the audience sees a clear picture of the entire DEX market.
 
 ![Screen Shot 2021-04-23 at 10 51 25 AM](https://user-images.githubusercontent.com/76178256/115889404-e7841080-a421-11eb-9e30-8d43e58e28f4.png)
 

@@ -12,5 +12,4 @@ Please consider buying an edition of the mirror post to support the teachers of 
 
 Videos are also available on YouTube:
 
-{% embed url="https://www.youtube.com/watch?list=PL_7kfUeJgSzz5Fltb2nivE_8xuAe2XTJl&v=yDSmTUrpdoQ" %}
-
+![type:video](https://www.youtube.com/embed/yDSmTUrpdoQ)

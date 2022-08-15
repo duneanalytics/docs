@@ -10,9 +10,7 @@ The Dune App contains an extensive catalog of decoded contracts in the form of [
 
 ## Quick tour
 
-<div class="video-wrapper">
-  <iframe src="https://www.youtube.com/embed/4v9zEYZvv34" frameborder="0" allowfullscreen></iframe>
-</div>
+![type:video](https://www.youtube.com/embed/4v9zEYZvv34)
 
 ## Submitting a new contract
 
