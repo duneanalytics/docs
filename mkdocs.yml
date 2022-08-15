@@ -1,3 +1,29 @@
 site_name: Dune Docs
+repo_url: https://github.com/duneanalytics/docs
 theme:
   name: material
+  logo: assets/dune-icon-only.png
+  favicon: assets/dune-icon-only.png
+  palette:
+    primary: indigo
+  font:
+    text: IBM Plex Sans
+    code: IBM Plex Mono
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+extra:
+  social:
+    - icon: fontawesome/brands/twitter 
+      link: https://twitter.com/DuneAnalytics
+    - icon: fontawesome/brands/discord 
+      link: https://discord.com/invite/ErrzwBz
+    - icon: fontawesome/brands/github 
+      link: https://github.com/duneanalytics
+extra:
+  generator: false
+extra_css:
+  - stylesheets/extra.css
