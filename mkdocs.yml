@@ -23,6 +23,9 @@ extra:
       link: https://discord.com/invite/ErrzwBz
     - icon: fontawesome/brands/github 
       link: https://github.com/duneanalytics
+plugins:
+  - search
+  - awesome-pages
 extra:
   generator: false
 extra_css:
