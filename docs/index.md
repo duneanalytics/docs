@@ -1,8 +1,10 @@
 ---
 description: Welcome to Dune
+hide:
+  - navigation
 ---
 
-# Introduction to Dune
+# Home
 
 ## Introduction
 
