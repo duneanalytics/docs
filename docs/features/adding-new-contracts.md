@@ -10,7 +10,9 @@ The Dune App contains an extensive catalog of decoded contracts in the form of [
 
 ## Quick tour
 
-{% embed url="https://www.youtube.com/watch?v=4v9zEYZvv34" %}
+<div class="video-wrapper">
+  <iframe src="https://www.youtube.com/embed/4v9zEYZvv34" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ## Submitting a new contract
 
@@ -53,11 +55,9 @@ In both cases, we assume that all the contracts found through either method corr
 
 If you want us to index more than one contract, toggle on Advanced options and select "Yes" to the first question. Then, to the question of "Is it created by a factory contract?" select "No" to index all other contracts with the same bytecode or "Yes" to index all other contracts originating from the same creator.
 
-{% hint style="warning" %}
-Only use these options if you know what you're doing and are extremely familiar with the project's architecture and deployment hierarchy.
+!!! warning
 
-Incorrectly applying these settings may lead to a rejected submission.
-{% endhint %}
+    Only use these options if you know what you're doing and are extremely familiar with the project's architecture and deployment hierarchy. Incorrectly applying these settings may lead to a rejected submission.
 
 ## Tracking your submissions
 
@@ -73,9 +73,8 @@ Although we try to fetch contract information such as the ABI, sometimes this in
 
 In those instances, you will need to manually input the contract's name and its ABI. This information should be available in block explorers such as [Etherscan](http://etherscan.io/) or [Blockscout](https://blockscout.com/) if the contract is verified in any of those sites.
 
-{% hint style="info" %}
-If the contract being manually submitted is a Proxy contract, we recommend you to move on to the next section.
-{% endhint %}
+!!! info
+    If the contract being manually submitted is a Proxy contract, we recommend you to move on to the next section.
 
 ### Submitting a Proxy contract
 
@@ -85,9 +84,8 @@ We avoid monitoring the implementation contract's address because its logic is a
 
 **When submitting proxy contracts to Dune, you should input the address of the Proxy contract.** We then will attempt to fetch the proxy's contract name and the implementation address it's pointing towards. After, we will attempt to source the implementation contract's ABI.
 
-{% hint style="info" %}
-For correctly decoding a Proxy contract, Dune needs the **Proxy address** and the **Implementation ABI**.
-{% endhint %}
+!!! info
+    For correctly decoding a Proxy contract, Dune needs the **Proxy address** and the **Implementation ABI**.
 
 ### Re-submitting a contract
 

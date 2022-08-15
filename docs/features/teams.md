@@ -33,9 +33,8 @@ You can invite other Dune users to join your team in the People section within y
   * ✏️ **Editor:** in addition to the above, they can create and edit queries under the team’s domain.
   * ⚙️ **Admin:** in addition to the above, they can manage the team and its content.
 
-{% hint style="info" %}
-Once the user has been invited, they will receive an email. They can also directly go to [Settings > Teams](https://dune.com/settings/teams), and accept their invite there.
-{% endhint %}
+!!! info
+    Once the user has been invited, they will receive an email. They can also directly go to [Settings > Teams](https://dune.com/settings/teams), and accept their invite there.
 
 #### Team content
 
@@ -49,9 +48,8 @@ You can transfer a query or a dashboard owned by you to your team by going to th
 
 ![](<../../assets/Screen Shot 2022-06-16 at 09.59.57.png>)
 
-{% hint style="warning" %}
-Once you transfer content to a team, you will only be able to transfer it out of the team if you are an Admin. If you accidentally transfer content to a team you will have to ask your team's Admin to transfer it back to you.
-{% endhint %}
+!!! warning
+    Once you transfer content to a team, you will only be able to transfer it out of the team if you are an Admin. If you accidentally transfer content to a team you will have to ask your team's Admin to transfer it back to you.
 
 #### Finding your team’s content
 

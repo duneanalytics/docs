@@ -23,6 +23,8 @@ extra:
       link: https://discord.com/invite/ErrzwBz
     - icon: fontawesome/brands/github 
       link: https://github.com/duneanalytics
+markdown_extensions:
+  - admonition
 plugins:
   - search
   - awesome-pages
