@@ -20,14 +20,14 @@ hide:
 
 #### Dune App
 
-While navigating Dune, it helps to have a good understanding of [queries](./#queries), [visualizations](duneapp/visualizations/), and [dashboards](duneapp/dashboards.md). These are the basic building blocks that act as your portal to the world's blockchain information. As a blockchain analyst, you can create custom queries to fetch data, visualize the results of these queries, and then tell stories with your data using dashboards.
+While navigating Dune, it helps to have a good understanding of [queries](./#queries), [visualizations](features/visualizations), and [dashboards](dashboards.md). These are the basic building blocks that act as your portal to the world's blockchain information. As a blockchain analyst, you can create custom queries to fetch data, visualize the results of these queries, and then tell stories with your data using dashboards.
 
 #### Data available on Dune
 
 Behind the scenes, Dune transforms difficult-to-access data into human-readable tables. Using SQL queries, you can query for exactly the information you need.
 
-Dune has raw blockchain data and decoded blockchain data available. Decoded data is only available if somebody signaled to us before that a contract needs to be decoded. You can signal a decoding request to us via our [website](https://dune.xyz/contracts/new).\
-\
+Dune has raw blockchain data and decoded blockchain data available. Decoded data is only available if somebody signaled to us before that a contract needs to be decoded. You can signal a decoding request to us via our [website](https://dune.xyz/contracts/new).
+
 You can currently query data from **Ethereum, Polygon, Binance Smart Chain, Optimism** and **Gnosis Chain**.
 
 Dune picks up events and internal calls from the blockchains we index, we don't have state/storage data.
