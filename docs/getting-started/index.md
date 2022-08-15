@@ -7,7 +7,8 @@ Whether you are a seasoned SQL developer or just starting out, you can use our p
 
 The Dune Team and several of our community members have produced great content to aid you in your journey of becoming a Dune Wizard.
 
-You can either start out by watching our video series [here](video-series.md) or looking through written tutorials [here](dune-guides/).\
+You can either start out by watching our video series [here](video-series.md) or looking through written tutorials [here](dune-guides/).
+
 If you are entirely unfamiliar with SQL, it might be good to start off by learning some SQL with the guides listed [here](sql-guides.md).
 
 {% content-ref url="video-series.md" %}

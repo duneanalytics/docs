@@ -1,7 +1,7 @@
 nav:
-    - index.md
-    - getting-started
-    - features
-    - tables
-    - spellbook
-    - resources
+- index.md
+- getting-started
+- features
+- tables
+- spellbook
+- resources
