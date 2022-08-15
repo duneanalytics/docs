@@ -12,7 +12,7 @@ Twitter will render the visualizations automatically and they will update automa
 
 Definitely a better experience compared to static screenshots!
 
-![Twitter automatically renders the embed link correctly](<../../.gitbook/assets/2021-11-01 14-45-28.gif>)
+![Twitter automatically renders the embed link correctly](<../../assets/2021-11-01 14-45-28.gif>)
 
 
 

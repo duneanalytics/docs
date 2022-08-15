@@ -16,7 +16,7 @@ The Dune App contains an extensive catalog of decoded contracts in the form of [
 
 Contracts can be submitted for decoding through the New contract form, which can be accessed via [My Creations > Contracts](https://dune.xyz/browse/contracts/authored) or within the dataset explorer in the query editor's sidebar:
 
-![](<../.gitbook/assets/Screen Shot 2022-01-03 at 15.46.22.png>)
+![](<../assets/Screen Shot 2022-01-03 at 15.46.22.png>)
 
 Clicking there will pop up a new browser tab with the contract submission form, which consists of 2 steps:
 
@@ -26,7 +26,7 @@ We first ask for the contract's address and blockchain. Requesting this data fir
 
 For instance, below we submit the USDT contract (`0x94b008aA00579c1307B0EF2c499aD98a8ce58e58`) in Optimism:
 
-![](<../.gitbook/assets/Screen Shot 2022-01-03 at 16.02.19.png>)
+![](<../assets/Screen Shot 2022-01-03 at 16.02.19.png>)
 
 If we can find the contract through a third party source, we will show a green check mark next to the address field. This means we were able to fetch information such as the contract's name and ABI.
 
@@ -34,7 +34,7 @@ If we can find the contract through a third party source, we will show a green c
 
 Then, after pressing Next, you will be prompted for other information about the contract that we need in order to decode it:
 
-![](<../.gitbook/assets/Screen Shot 2022-01-03 at 16.05.07.png>)
+![](<../assets/Screen Shot 2022-01-03 at 16.05.07.png>)
 
 If we found the contract through other third party sources, you will only have to fill in the project name. We have some naming conventions on that, partly due to our technical setup and also to make finding data more predictable.
 
@@ -63,7 +63,7 @@ Incorrectly applying these settings may lead to a rejected submission.
 
 You can view your submissions and their processing status at any time by navigating to [My Creations > Contracts](https://dune.xyz/browse/contracts/authored):
 
-![](<../.gitbook/assets/Screen Shot 2022-01-03 at 14.43.07.png>)
+![](<../assets/Screen Shot 2022-01-03 at 14.43.07.png>)
 
 ## Frequently Asked Questions
 

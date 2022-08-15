@@ -14,11 +14,11 @@ You can see Dex Volume, Market share, Total Volume across all exchanges and many
 
 All of this updates in real time and is maintained by the community, if a new dex wants to be on this dashboard, all they have to do is submit their code to our public github. More on this in [abstractions](../../data-tables/abstractions/).
 
-![](<../../.gitbook/assets/image (65).png>)
+![](<../../assets/image (65).png>)
 
-![](<../../.gitbook/assets/image (11).png>)
+![](<../../assets/image (11).png>)
 
-![](<../../.gitbook/assets/image (70).png>)
+![](<../../assets/image (70).png>)
 
 ## Indices
 
@@ -28,19 +28,19 @@ Another interesting Dashboard we have is a dashboard on decentralized indices.
 
 Here again, you can evaluate the entire state of a sector in one glance, being able to compare different products and projects to each other with ease.
 
-![](<../../.gitbook/assets/image (7).png>)
+![](<../../assets/image (7).png>)
 
-![](<../../.gitbook/assets/image (36).png>)
+![](<../../assets/image (36).png>)
 
-![](<../../.gitbook/assets/image (3).png>)
+![](<../../assets/image (3).png>)
 
 ## Lending
 
 The same applies for lending protocols, it allows you to easily check the state of lending protocols and compare them to each other with ease.
 
-![](<../../.gitbook/assets/image (1).png>)
+![](<../../assets/image (1).png>)
 
-![](<../../.gitbook/assets/image (39).png>)
+![](<../../assets/image (39).png>)
 
 ## Summary
 

@@ -2,11 +2,11 @@
 
 #### Counters are a great way to provide your audience with immediate "on a glance" stats.
 
-!["on a glance" stats in https://dune.xyz/0xBoxer/NFT](<../../.gitbook/assets/image (35).png>)
+!["on a glance" stats in https://dune.xyz/0xBoxer/NFT](<../../assets/image (35).png>)
 
 ## Configuring your counter
 
-![](<../../.gitbook/assets/image (42).png>)
+![](<../../assets/image (42).png>)
 
 ### Counter options
 
@@ -51,6 +51,6 @@ In this section you can define what kind of data the counter should display.
 
 Here is an example to bring some points explained earlier home.
 
-![label](<../../.gitbook/assets/image (24).png>)
+![label](<../../assets/image (24).png>)
 
-![label configuration](<../../.gitbook/assets/image (75).png>)
+![label configuration](<../../assets/image (75).png>)

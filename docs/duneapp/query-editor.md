@@ -2,7 +2,7 @@
 
 **The query editor is the place to query for your data.**
 
-![](<../.gitbook/assets/image (49).png>)
+![](<../assets/image (49).png>)
 
 The Query Editor consists of three parts:
 
@@ -12,7 +12,7 @@ The Query Editor consists of three parts:
 
 You can change the sizing of each of these parts by dragging the dune logo around.
 
-![changing the layout is easy](<../.gitbook/assets/2021-12-08 22-33-19.gif>)
+![changing the layout is easy](<../assets/2021-12-08 22-33-19.gif>)
 
 Let's take a look at each of these parts in more detail.
 
@@ -22,7 +22,7 @@ The data(-set) explorer allows you to search for datasets to use in your queries
 
 To learn more about Dune's datasets, please visit the [section datasets](broken-reference/).
 
-![](<../.gitbook/assets/2021-12-08 22-44-18.gif>)
+![](<../assets/2021-12-08 22-44-18.gif>)
 
 You can simply put in any keywords, protocol names, contract names or anything else into the search bar at the top to filter the list of available datasets down to only those you might need at that moment.\
 The search bar also accepts spaces, that way you can construct a multi keyword search.
@@ -47,13 +47,13 @@ The query window is where you can work your magic in Dune.\
 \
 You can input any SQL code and execute it.
 
-![](<../.gitbook/assets/image (73).png>)
+![](<../assets/image (73).png>)
 
 **Autocomplete function**
 
 You can enable/disable the autocomplete function of the query editor using the gear wheel in the top right corner. The autocomplete feature will only bring up PGSQL keywords and already used tables and aliasses.\
 \
-![](<../.gitbook/assets/image (10).png>)
+![](<../assets/image (10).png>)
 
 **Shortcuts**
 
@@ -73,7 +73,7 @@ A few shortcuts to make working in the query editor easier are provided below.\\
 
 The query results section contains a table with the results of your query.
 
-![](<../.gitbook/assets/image (33).png>)
+![](<../assets/image (33).png>)
 
 You can change the formatting and appearance of your table with the options below the table. We don't currently support hiding individual columns for displaying this table on a dashboard, but we are looking to implement this function soon.
 

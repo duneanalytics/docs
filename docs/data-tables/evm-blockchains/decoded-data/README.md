@@ -49,7 +49,7 @@ Smart Contracts on any EVM blockchain are mostly written in high level languages
 
 **The ABI is used to be able to call a smart contract or interpret the data it emits.**
 
-![source: https://hackernoon.com/hn-images/1\*Sz1a7G2pQ62UnkHoieve4w.jpeg](<../../../.gitbook/assets/image (66).png>)
+![source: https://hackernoon.com/hn-images/1\*Sz1a7G2pQ62UnkHoieve4w.jpeg](<../../../assets/image (66).png>)
 
 **Let's put this into practice and look at a practical example.**
 
@@ -57,7 +57,7 @@ We are going to look at an event log of an ERC20 transfer event from the [smart 
 
 On [Etherscan](https://etherscan.io/tx/0x2bb7c8283b782355875fa37d05e4bd962519ea294678a3dcf2fdffbbd0761bc5#eventlog) the undecoded event looks like this:
 
-![](<../../../.gitbook/assets/image (71).png>)
+![](<../../../assets/image (71).png>)
 
 If we query for this transaction in the `ethereum.logs` table in the dune database, we will receive the same encoded bytecode as our result dataset.
 

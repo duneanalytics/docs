@@ -17,7 +17,7 @@ You can find the twitter tags and more information of most creators in their [pr
 
 
 
-![opening the profile of a creator](<../.gitbook/assets/opening up profile.gif>)
+![opening the profile of a creator](<../assets/opening up profile.gif>)
 
 \
 

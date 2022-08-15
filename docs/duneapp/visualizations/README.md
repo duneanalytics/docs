@@ -27,7 +27,7 @@ One query can have multiple visualizations.
 
 
 
-![](<../../.gitbook/assets/2021-11-26 13-08-16.gif>)
+![](<../../assets/2021-11-26 13-08-16.gif>)
 
 **Read more about the different visualization options here:**
 

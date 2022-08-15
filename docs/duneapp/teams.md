@@ -41,13 +41,13 @@ Once the user has been invited, they will receive an email. They can also direct
 
 Team queries and dashboards are created as you normally would. When you’re prompted to save it for the first time, you can pick your team as the Owner so your teammates can also access it:
 
-![](<../../.gitbook/assets/Screen Shot 2022-06-16 at 10.13.57.png>)
+![](<../../assets/Screen Shot 2022-06-16 at 10.13.57.png>)
 
 #### Transferring content to the team
 
 You can transfer a query or a dashboard owned by you to your team by going to the query or dashboard’s settings and changing the owner there:
 
-![](<../../.gitbook/assets/Screen Shot 2022-06-16 at 09.59.57.png>)
+![](<../../assets/Screen Shot 2022-06-16 at 09.59.57.png>)
 
 {% hint style="warning" %}
 Once you transfer content to a team, you will only be able to transfer it out of the team if you are an Admin. If you accidentally transfer content to a team you will have to ask your team's Admin to transfer it back to you.
@@ -57,7 +57,7 @@ Once you transfer content to a team, you will only be able to transfer it out of
 
 Go to My Creations. Here you can see all of your personal content as well as your team’s. You can filter by owner to narrow down your search:
 
-![](<../../.gitbook/assets/Screen Shot 2022-06-16 at 10.15.54.png>)
+![](<../../assets/Screen Shot 2022-06-16 at 10.15.54.png>)
 
 ### FAQ
 

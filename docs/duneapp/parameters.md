@@ -23,11 +23,11 @@ On a dashboard you can either click `apply all` at the top or change the paramet
 
 Parameters in a Dashboard can be shared between different queries, just make sure to use the same name, type and default value between all of them.
 
-![](<../.gitbook/assets/image (41).png>)
+![](<../assets/image (41).png>)
 
-![](<../.gitbook/assets/image (27) (1) (2) (2) (1).png>)
+![](<../assets/image (27) (1) (2) (2) (1).png>)
 
-![](<../.gitbook/assets/image (40).png>)
+![](<../assets/image (40).png>)
 
 ## How to use Parameters?
 
@@ -35,7 +35,7 @@ You can simply add a parameter to your queries by writing `{{parametername}}` or
 
 You can edit the properties of single parameters by clicking on the gear wheel next to the parameter in the query editor. This allows you to set a default value, define a list of possible parameters or change the type of of the parameter. If you want to share parameters between different queries on a dashboard make sure they exactly match in regards to name, type and default value.
 
-![](<../.gitbook/assets/2021-12-10 15-41-07.gif>)
+![](<../assets/2021-12-10 15-41-07.gif>)
 
 ## Example Query
 
