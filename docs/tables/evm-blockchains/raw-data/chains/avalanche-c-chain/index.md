@@ -10,9 +10,9 @@ You can read more about Avalanche Network and C-Chain [in this article](https://
 
 Working with the C-Chain on Dune works exactly like querying Ethereum mainnet data. Only `avalanche_c.blocks` has slightly different properties as Avalanche C-Chain is already in a proof of stake(POS) consensus algorithm.
 
-{% embed url="https://learn.figment.io/protocols/avalanche" %}
-Avalanche Learn by Figment
-{% endembed %}
+<div class="cards grid" markdown>
+- [Avalanche Learn by Figment](https://learn.figment.io/protocols/avalanche)
+</div>
 
 ### Raw data tables
 

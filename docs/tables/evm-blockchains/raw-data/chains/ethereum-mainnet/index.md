@@ -10,7 +10,9 @@ Since it's inception in 2015, Ethereum has undergone a range of updates.
 
 Explaining the Ethereum history, Roadmap and technical details goes beyond the scope of this documentation, therefore we encourage you to read the Documentation on [Ethereum.org](https://ethereum.org/en/developers/docs/).
 
-{% embed url="https://ethereum.org/en/developers/docs/" %}
+<div class="cards grid" markdown>
+- [Ethereum Developer Docs](https://ethereum.org/en/developers/docs)
+</div>
 
 ### Raw data tables
 

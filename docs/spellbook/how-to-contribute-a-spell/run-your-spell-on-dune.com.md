@@ -6,6 +6,4 @@ We are working diligently on a secure sandbox where you can freely run your spel
 
 After you’re [instatited DBT](https://github.com/duneanalytics/abstractions/blob/master/README.md) with \`dbt init\`, run \`dbt compile\`. This will create a new folder called “target”. Inside the target folder will be all of the spells compiled into plain SQL. Then you can copy your spell and run it directly on dune.com.
 
-{% embed url="https://youtu.be/9sut8560oUE" %}
-**Compiling and running your spell**
-{% endembed %}
+![type:video](https://www.youtube.com/embed/9sut8560oUE)

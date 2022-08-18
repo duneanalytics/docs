@@ -8,9 +8,9 @@ Arbitrum is an optimistic rollup that settles it's transactions on Ethereum Main
 
 Arbitrum's execution environment differs from the Mainnet EVM implementation in it's calculation of gas costs. Since Arbitrum is an optimistic rollup that publishes it's transaction on Ethereum Mainnet, the gas calculations have to account for additional factors.
 
-{% embed url="https://developer.offchainlabs.com/docs/inside_arbitrum" %}
-Arbitrum Documentation
-{% endembed %}
+<div class="cards grid" markdown>
+- [Arbitrum Documentation](https://developer.offchainlabs.com/docs/inside_arbitrum)
+</div>
 
 ## Gas costs for L1
 

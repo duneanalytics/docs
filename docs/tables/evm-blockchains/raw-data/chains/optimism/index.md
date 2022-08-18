@@ -6,7 +6,9 @@ description: Raw data tables are the basic building blocks of our database.
 
 Optimism is a Layer 2 Optimistic Rollup network designed to utilize the strong security guarantees of Ethereum while reducing its cost and latency. Optimism processes transactions outside of Ethereum Mainnet, reducing congestion on the base layer and improving scalability. For a Deep Dive into Optimism, we recommend reading through their [Documentation](https://community.optimism.io/docs/how-optimism-works/).
 
-{% embed url="https://community.optimism.io/docs/how-optimism-works/" %}
+<div class="cards grid" markdown>
+- [How Optimism Works](https://community.optimism.io/docs/how-optimism-works)
+</div>
 
 Optimism differs in it's EVM implementation in the calculation of gas costs, since it also needs to pay for L1 resources.
 

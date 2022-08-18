@@ -10,9 +10,9 @@ You can read more about BNB Chain in [the documentation](https://docs.bnbchain.o
 
 On Dune, that means that the gas fields for EIP1559 transactions stay empty, everything else is the same.
 
-{% embed url="https://docs.bnbchain.org/docs/bnbIntro/" %}
-BNB Chain Documentation
-{% endembed %}
+<div class="cards grid" markdown>
+- [BNB Chain Documentation](https://docs.bnbchain.org/docs/bnbIntro)
+</div>
 
 ### Raw data tables
 

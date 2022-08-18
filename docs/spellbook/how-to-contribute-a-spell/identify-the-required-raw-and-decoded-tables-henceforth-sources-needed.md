@@ -4,9 +4,7 @@
 
 The main base Dune table we’ll use for this purpose is `erc20_ethereum.evt_Transfer` which you can find via the data explorer.a
 
-{% embed url="https://www.loom.com/share/198148674ded4f5e944f65452852482b" %}
-Using the data explorer to identify sources
-{% endembed %}
+![type:video](https://www.loom.com/embed/198148674ded4f5e944f65452852482b)
 
 Then, in the Spellbook project, the source must be defined in a YAML file. We define this source in [base\_sources/ethereum\_base\_sources.yml.](https://github.com/duneanalytics/abstractions/blob/master/spellbook/models/base\_sources/ethereum\_base\_sources.yml) Once a source has been defined it does not need to be defined again.
 

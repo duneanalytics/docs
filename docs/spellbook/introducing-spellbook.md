@@ -38,4 +38,8 @@ We hope you are as excited as we are about this new tool. Spellbook is now live 
 
 #### Visit the spellbook models documentation to see the current models
 
-{% embed url="https://spellbook-docs.dune.com/#!/overview/spellbook" %}
+<div class="cards grid" markdown>
+- [Spellbook Docs](https://spellbook-docs.dune.com/#!/overview/spellbook)
+</div>
+
+

@@ -6,6 +6,6 @@ In Dune V1, abstractions were used first to define community-generated views and
 
 Spellbook is our community data transformation layer that allows our community to create views, tables, and incremental tables and implement tests to validate data quality.&#x20;
 
-{% embed url="https://github.com/duneanalytics/abstractions#readme" %}
-
-####
+<div class="cards grid" markdown>
+- [Spellbook - Github](https://github.com/duneanalytics/abstractions#readme)
+</div>
