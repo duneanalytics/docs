@@ -8,58 +8,37 @@ description: Get the Dune brand assets and learn about the usage guidelines
 
 This is the primary Dune logo. It should be used in this format whenever possible.
 
-![](<../assets/dune-horizontal-logo-cover (1).png>)
+![Dune horizontal logo cover](images/dune-horizontal-logo-cover.png)
 
-{% file src="../assets/dune-standard-logo (1).svg" %}
-Standard logo (SVG)
-{% endfile %}
-
-{% file src="../assets/dune-standard-logo@2x.png" %}
-Standard logo (PNG)
-{% endfile %}
-
-{% file src="../assets/dune-standard-logo-dark.svg" %}
-Standard logo dark (SVG)
-{% endfile %}
-
-{% file src="../assets/dune-standard-logo-dark@2x.png" %}
-Standard logo dark (PNG)
-{% endfile %}
+<div class="cards grid" markdown>
+- [dune-standard-logo.svg](images/dune-standard-logo.svg)
+- [dune-standard-logo@2x.png](images/dune-standard-logo@2x.png)
+- [dune-standard-logo-dark.svg](images/dune-standard-logo-dark.svg)
+- [dune-standard-logo-dark@2x.png](images/dune-standard-logo-dark@2x.png)
+</div>
 
 ## Vertical logo
 
-![](<../assets/dune-vertical-logo-cover (1).png>)
+![Dune vertical logo cover](<../assets/dune-vertical-logo-cover (1).png>)
 
-{% file src="../assets/dune-vertical-logo (1).svg" %}
-Vertical logo (SVG)
-{% endfile %}
-
-{% file src="../assets/dune-vertical-logo@2x (1).png" %}
-Vertical logo (PNG)
-{% endfile %}
-
-{% file src="../assets/dune-vertical-logo-dark.svg" %}
-Vertical logo dark (SVG)
-{% endfile %}
-
-{% file src="../assets/dune-vertical-logo-dark@2x.png" %}
-Vertical logo dark (PNG)
-{% endfile %}
+<div class="cards grid" markdown>
+- [dune-vertical-logo.svg](images/dune-vertical-logo.svg)
+- [dune-vertical-logo@2x.png](images/dune-vertical-logo@2x.png)
+- [dune-vertical-logo-dark.svg](images/dune-vertical-logo-dark.svg)
+- [dune-vertical-logo-dark@2x.png](images/dune-vertical-logo-dark@2x.png)
+</div>
 
 ## Icon only
 
-![](../assets/dune-icon-only.svg)
+![Dune icon only](images/dune-icon-only.svg)
 
-{% file src="../assets/dune-icon-only.svg" %}
-Icon only (SVG)
-{% endfile %}
-
-{% file src="../assets/dune-icon-only@2x.png" %}
-Icon only (PNG)
-{% endfile %}
+<div class="cards grid" markdown>
+- [dune-icon-only.svg](images/dune-icon-only.svg)
+- [dune-icon-only@2x.png](images/dune-icon-only@2x.png)
+</div>
 
 ## Complete set of all logos
 
-{% file src="../assets/Dune-logo-Full.zip" %}
-All logos in SVG and PNG format (ZIP)
-{% endfile %}
+<div class="cards grid" markdown>
+- [Dune-logo-Full.zip](images/Dune-logo-Full.zip)
+</div>
