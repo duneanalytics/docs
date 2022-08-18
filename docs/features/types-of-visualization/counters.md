@@ -2,7 +2,7 @@
 
 #### Counters are a great way to provide your audience with immediate "on a glance" stats.
 
-!["on a glance" stats in https://dune.xyz/0xBoxer/NFT](<../../assets/image (35).png>)
+!["on a glance" stats in https://dune.com/0xBoxer/NFT](<../../assets/image (35).png>)
 
 ## Configuring your counter
 

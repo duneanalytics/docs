@@ -20,7 +20,7 @@ While all the core functionality you expect from Dune is available in Dune v2 th
 
 By default, **new queries are not saved** to your queries so you can play around and test various ideas quickly. If you want to keep your work, remember to hit the **Save button** and give your query a name.
 
-This means that if you navigate away from a page without saving, your work is lost. If you allow notifications from [dune.xyz](http://dune.xyz/) in your browser, the app will notify you when you navigate away from unsaved content.
+This means that if you navigate away from a page without saving, your work is lost. If you allow notifications from [dune.com](http://dune.com/) in your browser, the app will notify you when you navigate away from unsaved content.
 
 The same applies to forks. A fork is not saved to your queries before you click the **Save button** and give your fork a name.
 
@@ -64,7 +64,7 @@ Automatically refreshed results (as we talked about above) does not use the quer
 
 **Click query title to go to query from a dashboard**
 
-We’d love to get your feedback on your experience with Dune v2 in the #feedback channel in our [Discord](https://discord.com/invite/ErrzwBz). You can also contact [support@dune.xyz](mailto:support@dune.xyz) if you face any issues.
+We’d love to get your feedback on your experience with Dune v2 in the #feedback channel in our [Discord](https://discord.com/invite/ErrzwBz). You can also contact [support@dune.com](mailto:support@dune.com) if you face any issues.
 
 Happy querying!
 

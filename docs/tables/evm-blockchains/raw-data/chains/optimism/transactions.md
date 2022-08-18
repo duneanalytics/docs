@@ -37,4 +37,4 @@ Read more in the official Ethereum documentation [here](https://ethereum.org/en/
 | l1\_timestamp              | numeric        | the timestamp of the block in which this transaction got batch settled on L1                                                                                                                           |
 | l1\_tx\_origin              | numeric       | ??                                                                                                                                                                                                     |
 
-\*\*\*\*[**Take a look for yourself**](https://dune.xyz/queries/38964)\*\*\*\*
+\*\*\*\*[**Take a look for yourself**](https://dune.com/queries/38964)\*\*\*\*

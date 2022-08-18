@@ -4,7 +4,7 @@
 
 If you're a project looking to have more/better dashboards on Dune, we've created this program for you. This is how it works:
 
-1. Project fills out [this form](https://bounties.dune.xyz) explaining what they're all about and the kind of insights they'd like to see surfaced on Dune and how much they're willing to pay for it.\
+1. Project fills out [this form](https://bounties.dune.com) explaining what they're all about and the kind of insights they'd like to see surfaced on Dune and how much they're willing to pay for it.\
 
 2. We share this with our community and interested wizards get in touch with you.\
 

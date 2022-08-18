@@ -9,7 +9,7 @@ description: Project Dashboards are a great way to track the metrics of your pro
 
 **Let's explore this with an example:**
 
-\*\*\*\*[**https://dune.xyz/poma/tornado-cash\_1**](https://dune.xyz/poma/tornado-cash\_1)\*\*\*\*
+\*\*\*\*[**https://dune.com/poma/tornado-cash\_1**](https://dune.com/poma/tornado-cash\_1)\*\*\*\*
 
 This is the dashboard from Tornado Cash on which someone assembled all the important metrics in one place.
 
@@ -23,4 +23,4 @@ He follows this up with some interesting historical data points which show the g
 
 Having all these stats in one place greatly helps to manage your project and help it succeed.
 
-You can find many other great dashboard on our [Projects Page](https://dune.xyz/projects).
+You can find many other great dashboard on our [Projects Page](https://dune.com/projects).

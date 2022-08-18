@@ -4,7 +4,7 @@
 
 This table contains the transaction data within Solana’s blockchain. Most of the relevant data related to account, protocol, and program activity is available in this table.
 
-Query examples can be found here: [NFT transactions of popular programs past 7 days](https://dune.xyz/queries/390720/745376) and [drift-protocol overview](https://dune.xyz/bigz/drift-\(solana\))
+Query examples can be found here: [NFT transactions of popular programs past 7 days](https://dune.com/queries/390720/745376) and [drift-protocol overview](https://dune.com/bigz/drift-\(solana\))
 
 | Column Name                      | Column Type                   | Description                                                                                                                                                                                                                           |
 | -------------------------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -35,7 +35,7 @@ Query examples can be found here: [NFT transactions of popular programs past 7 d
 
 Within several of these columns is a data type of STRUCT which allows for representing nested hierarchical data and has key-value pairs. It's similar to a dictionary in python and can be used to group fields together to make them more accessible.
 
-An example of how these can be used to extract data: [# of Solana instructions by day for DEXes](https://dune.xyz/queries/416358/794290)
+An example of how these can be used to extract data: [# of Solana instructions by day for DEXes](https://dune.com/queries/416358/794290)
 
 **token\_balance**
 

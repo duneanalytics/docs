@@ -4,7 +4,7 @@
 
 This table contains data about rewards paid out on Solana. One block may contain zero or more rewards, and each row corresponds to one reward.
 
-An example query can be found here: [Solana rewards fee per day](https://dune.xyz/queries/391421/747012)
+An example query can be found here: [Solana rewards fee per day](https://dune.com/queries/391421/747012)
 
 | Column Name   | Column Type | Description                                                                                       |
 | ------------- | ----------- | ------------------------------------------------------------------------------------------------- |

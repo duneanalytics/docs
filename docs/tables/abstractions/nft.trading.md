@@ -24,7 +24,7 @@ So far we have indexed the data of the following platforms:
 
 All of this data is easily accessible with very simple queries like these:
 
-* [**all trades for a given NFT**](https://dune.xyz/queries/146090)
+* [**all trades for a given NFT**](https://dune.com/queries/146090)
 
 ![](<../../assets/image (27).png>)
 
@@ -34,7 +34,7 @@ select * from nft.trades
 where nft_contract_address = '\xb47e3cd837ddf8e4c57f05d70ab865de6e193bbb' --this is the cryptopunks address
 ```
 
-* [**trades in the last 24 hour on a given platform**](https://dune.xyz/queries/146152)
+* [**trades in the last 24 hour on a given platform**](https://dune.com/queries/146152)
 
 ```sql
 select date_trunc('day', block_time), usd_amount, nft_contract_address, token_id from nft.trades 
@@ -44,7 +44,7 @@ where platform = 'OpenSea' --only shows trades on given Platform
 and block_time > now() - interval '24hours'
 ```
 
-* [**platform volumes in the last year**](https://dune.xyz/queries/146160)
+* [**platform volumes in the last year**](https://dune.com/queries/146160)
 
 ```sql
 select  sum(usd_amount), 
@@ -83,13 +83,13 @@ In the most recent version of `nft.trades`, information about the amount and per
 
 **Dashboard that utilize parameters**
 
-[**https://dune.xyz/0xBoxer/NFT**](https://dune.xyz/0xBoxer/NFT)
+[**https://dune.com/0xBoxer/NFT**](https://dune.com/0xBoxer/NFT)
 
-[**https://dune.xyz/rantum/NFT-Sales-Overview-by-Project**](https://dune.xyz/rantum/NFT-Sales-Overview-by-Project)
+[**https://dune.com/rantum/NFT-Sales-Overview-by-Project**](https://dune.com/rantum/NFT-Sales-Overview-by-Project)
 
 **Dashboards that look across the entire Ecosystem**
 
-[**https://dune.xyz/rantum/NFT-Collection-Dashboard**](https://dune.xyz/rantum/NFT-Collection-Dashboard)
+[**https://dune.com/rantum/NFT-Collection-Dashboard**](https://dune.com/rantum/NFT-Collection-Dashboard)
 
 [**https://dune.com/sealaunch/NFT**](https://dune.com/sealaunch/NFT)\\
 

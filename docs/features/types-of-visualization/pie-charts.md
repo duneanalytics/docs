@@ -2,7 +2,7 @@
 
 **Pie charts are great for showing the composition of something.**
 
-![Marketshare of different decentralized exchanges on https://dune.xyz/hagaetc/dex-metrics](<../../assets/image (59).png>)
+![Marketshare of different decentralized exchanges on https://dune.com/hagaetc/dex-metrics](<../../assets/image (59).png>)
 
 ## Configuring your pie chart
 
@@ -36,4 +36,4 @@ You can choose one **x-axis** and one y-axis.
 
 **Label format**
 
-* This field allows you to define the [tick format](https://docs.dune.xyz/duneapp/visualizations#tick-formats) of the data labels.
+* This field allows you to define the [tick format](https://docs.dune.com/duneapp/visualizations#tick-formats) of the data labels.

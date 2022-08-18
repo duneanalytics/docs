@@ -32,4 +32,4 @@ Read more in the official Ethereum documentation [here](https://ethereum.org/en/
 | max\_priority\_fee\_per\_gas | numeric      | maximum fee per gas the transaction sender is willing to give to miners to incentivize them to include their transaction (introduced by [EIP1559](https://eips.ethereum.org/EIPS/eip-1559))            |
 | priority\_fee\_per\_gas      | numeric      | the priority fee paid out to the miner for this transaction (introduced by [EIP1559](https://eips.ethereum.org/EIPS/eip-1559))                                                                         |
 
-\*\*\*\*[**Take a look for yourself**](https://dune.xyz/queries/38964)\*\*\*\*
+\*\*\*\*[**Take a look for yourself**](https://dune.com/queries/38964)\*\*\*\*

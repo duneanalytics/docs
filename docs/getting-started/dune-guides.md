@@ -11,7 +11,7 @@ Some of our Community Members have produced great written tutorials for Dune:
 
 [Alex Manuskin](https://twitter.com/amanusk\_)
 
-* [How to get started with querying on Dune Analytics](https://dune.xyz/blog/get-started-guide)
+* [How to get started with querying on Dune Analytics](https://dune.com/blog/get-started-guide)
 
 [Paul Pivat](https://twitter.com/paulapivat)
 

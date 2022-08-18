@@ -4,7 +4,7 @@
 
 This table contains the block data within Solana’s blockchain. It can be used to identify block activity and transaction changes over time.
 
-Query examples can be found here: [Solana blocks over time](https://dune.xyz/queries/389979) and [Transactions per day](https://dune.xyz/queries/390045)
+Query examples can be found here: [Solana blocks over time](https://dune.com/queries/389979) and [Transactions per day](https://dune.com/queries/390045)
 
 | Column Name               | Column Type | Description                                         |
 | ------------------------- | ----------- | --------------------------------------------------- |

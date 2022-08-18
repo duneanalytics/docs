@@ -30,4 +30,4 @@ Read more in the official Ethereum documentation [here](https://ethereum.org/en/
 | max\_priority\_fee\_per\_gas | numeric      | n/a                                                                                                                                                                                                    |
 | priority\_fee\_per\_gas      | numeric      | n/a                                                                                                                                                                                                    |
 
-\*\*\*\*[**Take a look for yourself**](https://dune.xyz/queries/38964)\*\*\*\*
+\*\*\*\*[**Take a look for yourself**](https://dune.com/queries/38964)\*\*\*\*

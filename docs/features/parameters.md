@@ -74,30 +74,30 @@ ON date_trunc('minute', block_time) = minute
 ORDER BY block_time DESC
 ```
 
-Find this query [here](https://dune.xyz/queries/64430/128463)
+Find this query [here](https://dune.com/queries/64430/128463)
 
 ## Embedding parameterized Dashboards and Queries
 
 ## **Example Dashboards**
 
 **Find interesting stats on Ethereum Wallets with this dashboard:**\
-[https://dune.xyz/kevdnlol/Transaction-Breakdown](https://dune.xyz/kevdnlol/Transaction-Breakdown)
+[https://dune.com/kevdnlol/Transaction-Breakdown](https://dune.com/kevdnlol/Transaction-Breakdown)
 
 _The author has included the parameters `wallet address`, `start date` and `end date` in this Dashboard._
 
 **Drill down into the single pools of Barnbridge's Smart Yield Product:**\
-[https://dune.xyz/0xBoxer/Barnbridge-or-Smart-Yield](https://dune.xyz/0xBoxer/Barnbridge-or-Smart-Yield)
+[https://dune.com/0xBoxer/Barnbridge-or-Smart-Yield](https://dune.com/0xBoxer/Barnbridge-or-Smart-Yield)
 
 _The Author has chosen to make the parameter `poolsymbol` into a drop down list here. This allows for easy access to all the relevant pools and detailed statistics on those._
 
 **Find out how many people are participating in Yearn Vaults:**\
-[https://dune.xyz/msilb7/Yearn-How-Many-Addresses-are-Participating](https://dune.xyz/msilb7/Yearn-How-Many-Addresses-are-Participating)
+[https://dune.com/msilb7/Yearn-How-Many-Addresses-are-Participating](https://dune.com/msilb7/Yearn-How-Many-Addresses-are-Participating)
 
-[https://dune.xyz/0xrusowsky/KLIMA-Wallet-Activity](https://dune.xyz/0xrusowsky/KLIMA-Wallet-Activity)
+[https://dune.com/0xrusowsky/KLIMA-Wallet-Activity](https://dune.com/0xrusowsky/KLIMA-Wallet-Activity)
 
 **Find out how your investment in $KLIMA is doing:**
 
-[**https://dune.xyz/0xrusowsky/KLIMA-Wallet-Activity**](https://dune.xyz/0xrusowsky/KLIMA-Wallet-Activity)
+[**https://dune.com/0xrusowsky/KLIMA-Wallet-Activity**](https://dune.com/0xrusowsky/KLIMA-Wallet-Activity)
 
 ## Summary
 

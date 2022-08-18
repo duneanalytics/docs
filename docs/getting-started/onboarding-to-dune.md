@@ -21,6 +21,6 @@ All you need is either a skilled freelancer or one of your team members to take 
 
 ### How to find a freelancer
 
-There is quite a few people in the crypto scene which either specialized in building on dune or have the skillset in their repertoire. To reach out to this pool of freelancers, you can **fill in** [**this questionnaire**](http://bounties.dune.xyz/) and hopefully freelancers will get back to you in little to no time. If that yields no results, posting the bounty on relevant social channels and spreading it in your networks may help.
+There is quite a few people in the crypto scene which either specialized in building on dune or have the skillset in their repertoire. To reach out to this pool of freelancers, you can **fill in** [**this questionnaire**](http://bounties.dune.com/) and hopefully freelancers will get back to you in little to no time. If that yields no results, posting the bounty on relevant social channels and spreading it in your networks may help.
 
 If hiring a freelancer for the first time, please make sure to check their past works and dashboards to verify that they are indeed capable of solving the task at hand.

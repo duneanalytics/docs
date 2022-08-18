@@ -62,7 +62,7 @@ group by 1,3
 
 This dashboard contains the most important use cases related to a single erc20 token that is used as gov token.
 
-[https://dune.xyz/0xBoxer/pickle-finance\_1](https://dune.xyz/0xBoxer/pickle-finance\_1)
+[https://dune.com/0xBoxer/pickle-finance\_1](https://dune.com/0xBoxer/pickle-finance\_1)
 
 ## erc20.view\_token\_balances\_latest
 

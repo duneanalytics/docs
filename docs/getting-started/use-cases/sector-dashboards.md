@@ -6,7 +6,7 @@ Let's explore this with some examples:
 
 ## Dex Metrics
 
-[**https://dune.xyz/hagaetc/dex-metrics**](https://dune.xyz/hagaetc/dex-metrics)
+[**https://dune.com/hagaetc/dex-metrics**](https://dune.com/hagaetc/dex-metrics)
 
 This Dashboard allows you to take a look at the entirety of decentralized exchanges at once.
 
@@ -22,7 +22,7 @@ All of this updates in real time and is maintained by the community, if a new de
 
 ## Indices
 
-[**https://dune.xyz/0xBoxer/indices-products**](https://dune.xyz/0xBoxer/indices-products)
+[**https://dune.com/0xBoxer/indices-products**](https://dune.com/0xBoxer/indices-products)
 
 Another interesting Dashboard we have is a dashboard on decentralized indices.
 

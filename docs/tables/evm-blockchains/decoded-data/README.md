@@ -12,7 +12,7 @@ The tables are named accordingly:
 
 **function calls:** `projectname."contractName_call_eventName"`
 
-As an example, decoded data for the `swap`-event of the uniswap V2 pair contract is found in the table [`uniswap_v2."pair_swap"`](https://dune.xyz/queries/38968).
+As an example, decoded data for the `swap`-event of the uniswap V2 pair contract is found in the table [`uniswap_v2."pair_swap"`](https://dune.com/queries/38968).
 
 **Read more about the difference between calls and events here:**
 
@@ -23,7 +23,7 @@ As an example, decoded data for the `swap`-event of the uniswap V2 pair contract
 
 ## What contracts have decoded data?
 
-You can check if contracts are already decoded by querying `"blockchain".contracts` tables through our database or use [this dashboard](https://dune.xyz/0xBoxer/Is-my-Contract-decoded-yet).
+You can check if contracts are already decoded by querying `"blockchain".contracts` tables through our database or use [this dashboard](https://dune.com/0xBoxer/Is-my-Contract-decoded-yet).
 
 ```sql
 Select * from ethereum.contracts

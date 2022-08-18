@@ -14,7 +14,7 @@ The Dune App contains an extensive catalog of decoded contracts in the form of [
 
 ## Submitting a new contract
 
-Contracts can be submitted for decoding through the New contract form, which can be accessed via [My Creations > Contracts](https://dune.xyz/browse/contracts/authored) or within the dataset explorer in the query editor's sidebar:
+Contracts can be submitted for decoding through the New contract form, which can be accessed via [My Creations > Contracts](https://dune.com/browse/contracts/authored) or within the dataset explorer in the query editor's sidebar:
 
 ![](<../assets/Screen Shot 2022-01-03 at 15.46.22.png>)
 
@@ -59,7 +59,7 @@ If you want us to index more than one contract, toggle on Advanced options and s
 
 ## Tracking your submissions
 
-You can view your submissions and their processing status at any time by navigating to [My Creations > Contracts](https://dune.xyz/browse/contracts/authored):
+You can view your submissions and their processing status at any time by navigating to [My Creations > Contracts](https://dune.com/browse/contracts/authored):
 
 ![](<../assets/Screen Shot 2022-01-03 at 14.43.07.png>)
 

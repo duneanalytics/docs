@@ -28,7 +28,7 @@ The syntax for this is:
 
 An example of this would be:
 
-`>https://dune.xyz/embeds/118220/238460/aa002dd3-f9e2-4d63-86c8-b765569306c6NFT?address=0xff9c1b15b16263c61d017ee9f65c50e4ae0113d7&rolling_n_trades=500`\
+`>https://dune.com/embeds/118220/238460/aa002dd3-f9e2-4d63-86c8-b765569306c6NFT?address=0xff9c1b15b16263c61d017ee9f65c50e4ae0113d7&rolling_n_trades=500`\
 \`\`
 
 ### Embeds across different platforms

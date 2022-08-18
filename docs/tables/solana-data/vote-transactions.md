@@ -4,7 +4,7 @@
 
 This table contains the full set of vote transactions that are submitted by validators to vote on a block. It can be joined with the non-vote transactions table above to get a full breakdown of all transactions. It has the same schema as the main transactions table.
 
-An example query that demonstrates that is available here: [Solana transactions past 30 days](https://dune.xyz/queries/389976/743760)
+An example query that demonstrates that is available here: [Solana transactions past 30 days](https://dune.com/queries/389976/743760)
 
 | Column Name                      | Column Type                   | Description                                                                                                                                                                                                                           |
 | -------------------------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

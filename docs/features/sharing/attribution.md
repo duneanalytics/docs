@@ -13,7 +13,7 @@ Crediting charts and dashboards should be done in the following way:
 
 _"@eliasmos via_ [_https://dune.com/queries/610591_](https://dune.com/queries/610591)_"._
 
-You can find the twitter tags and more information of most creators in their [profile page](https://dune.xyz/rchen8).
+You can find the twitter tags and more information of most creators in their [profile page](https://dune.com/rchen8).
 
 
 
@@ -22,7 +22,7 @@ You can find the twitter tags and more information of most creators in their [pr
 \
 
 
-![Be the galaxy brain! Meme by https://dune.xyz/eliasimos/](https://pbs.twimg.com/media/E2YSaD2WUAAU7RU?format=png\&name=900x900)
+![Be the galaxy brain! Meme by https://dune.com/eliasimos/](https://pbs.twimg.com/media/E2YSaD2WUAAU7RU?format=png\&name=900x900)
 
 ##
 

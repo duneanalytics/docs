@@ -30,7 +30,7 @@ Read more [here](https://medium.com/chainalysis/ethereum-traces-not-transactions
 | output          | bytea        | the bytecode answer the smart contract that was called gives back                                                                                                                                                                              |
 | refund\_address | bytea        | only contains data if `type` was `suicide`. Specifies where to send the outstanding BNB balance.                                                                                                                                             |
 
-\*\*\*\*[**Take a look for yourself**](https://dune.xyz/queries/38730)\*\*\*\*
+\*\*\*\*[**Take a look for yourself**](https://dune.com/queries/38730)\*\*\*\*
 
 
 

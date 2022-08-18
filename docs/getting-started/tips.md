@@ -1,6 +1,6 @@
 # Tips for querying
 
-You can interact with the data tables through our interface at [dune.xyz](https://www.dune.xyz/).
+You can interact with the data tables through our interface at [dune.com](https://www.dune.com/).
 
 To create a new query you simply click `New Query` in the top right corner
 
