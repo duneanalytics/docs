@@ -6,7 +6,9 @@ The course consists of presentations around all important topics that you need t
 
 More details and course materials can be found here:
 
-{% embed url="https://ournetwork.mirror.xyz/gP16wLY-9BA1E_ZuOSv1EUAgYGfK9mELNza8cfgMWPQ" %}
+<div class="cards grid" markdown>
+- [Our Network Course](https://ournetwork.mirror.xyz/gP16wLY-9BA1E_ZuOSv1EUAgYGfK9mELNza8cfgMWPQ)
+</div>
 
 Please consider buying an edition of the mirror post to support the teachers of this course.
 

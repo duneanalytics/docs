@@ -27,4 +27,4 @@ To get more insights into how people use Dune, you can follow our Twitter accoun
 
 Just click through the last few tweets and see what people are up to on Dune currently!
 
-{% embed url="https://twitter.com/DuneAnalytics" %}
+<a class="twitter-timeline" href="https://twitter.com/DuneAnalytics?ref_src=twsrc%5Etfw">Tweets by DuneAnalytics</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

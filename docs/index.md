@@ -18,7 +18,7 @@ hide:
 
 #### Dune App
 
-While navigating Dune, it helps to have a good understanding of [queries](#queries), [visualizations](features/visualizations.md), and [dashboards](features/dashboards.md). These are the basic building blocks that act as your portal to the world's blockchain information. As a blockchain analyst, you can create custom queries to fetch data, visualize the results of these queries, and then tell stories with your data using dashboards.
+While navigating Dune, it helps to have a good understanding of [queries](#queries), [visualizations](features/visualizations), and [dashboards](features/dashboards). These are the basic building blocks that act as your portal to the world's blockchain information. As a blockchain analyst, you can create custom queries to fetch data, visualize the results of these queries, and then tell stories with your data using dashboards.
 
 #### Data available on Dune
 
@@ -38,7 +38,7 @@ Maybe you want to know _all the Dex trades that happened today_, or the _total v
 
 Queries return rows and columns of data (same as traditional SQL queries) that can later be visualized and presented.
 
-![Screen Shot 2021-04-22 at 9 56 34 AM](https://user-images.githubusercontent.com/76178256/115726979-357d1380-a351-11eb-83ee-16f0d57c6ecb.png)
+![SQL Query - Uniswap USD volume](images/sql-query-uniswap-usd-volume.png)
 
 There are a few ways that a blockchain analyst (ie. you!) can get started running queries:
 
@@ -52,11 +52,11 @@ Data presented in table form (rows and columns) can be difficult to read. Visual
 
 You can use visualizations to begin to tell a story with your data. With Dune visualizations it is easy to transform this:
 
-![Screen Shot 2021-04-22 at 10 59 48 AM](https://user-images.githubusercontent.com/76178256/115737269-fa331280-a359-11eb-9a31-c0dfe4b038e6.png)
+![Table chart](images/table-chart.png)
 
 Into this:
 
-![Screen Shot 2021-04-22 at 11 01 02 AM](https://user-images.githubusercontent.com/76178256/115737692-5b5ae600-a35a-11eb-8145-bdcf9396cd03.png)
+![Bar chart](images/bar-chart.png)
 
 The bar chart visualization makes it clear that April 19th had the highest transfer volume, and helps the audience see the trend over time.
 
@@ -66,7 +66,7 @@ Dune offers a variety of visualizations that you can use to visually present dat
 
 Using carefully planned visuals, a clever blockchain analyst can tell a story about a particular group of data. For example, in the below [dashboard](https://dune.com/hagaetc/dex-metrics) it is clear at the top that 'Dex' as a category is growing. Below, the audience sees which dex's are the most popular by volume, and finally can view a stacked bar chart that shows changes over time. By just looking at this single dashboard, the audience sees a clear picture of the entire DEX market.
 
-![Screen Shot 2021-04-23 at 10 51 25 AM](https://user-images.githubusercontent.com/76178256/115889404-e7841080-a421-11eb-9e30-8d43e58e28f4.png)
+![Dashboard](images/dashboard.png)
 
 ## Dune is a collaborative effort
 

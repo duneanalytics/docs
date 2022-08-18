@@ -37,7 +37,7 @@ We usually take about 24 hours to decode smart contracts.
 Read more about submitting contracts in this section:
 
 <div class="cards grid" markdown>
-- [Adding new contracts](../../../duneapp/adding-new-contracts.md)
+- [Adding new contracts](../../../features/adding-new-contracts.md)
 </div>
 
 ## How does decoding work?

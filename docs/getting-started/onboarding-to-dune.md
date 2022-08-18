@@ -10,7 +10,7 @@ All you need is either a skilled freelancer or one of your team members to take 
 
 **The Process looks like this:**
 
-1. **Compile a List of all relevant contracts and submit them for** [**decoding**](../../duneapp/adding-new-contracts.md)**.**
+1. **Compile a List of all relevant contracts and submit them for** [**decoding**](/features/adding-new-contracts)**.**
 2. **Surface the data using SQL queries**
 3. **Visualize the results**
 4. **Assemble visualizations on a dashboard.**

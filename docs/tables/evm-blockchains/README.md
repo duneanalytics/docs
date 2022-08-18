@@ -18,4 +18,4 @@ These tables are notoriously hard to work with since the data is encoded, but th
 The tables on Dune which contain decoded data allow you to view the decoded calls and events made to smart contracts. We use the ABI for smart contracts and the interface standard for standardised token smart contracts (ERC20, ERC721 etc.) to decode data and produce nice human readable tables.
 
 These are the tables that you will mainly be working with while working on Dune. They provide you with easy access to relevant data. Not all smart contracts are decoded on Dune by default, you need to signal to us that you want to work with this data in order for us to decode the data.\
-Learn more about this in "[Adding new contracts](../../duneapp/adding-new-contracts.md)". However at time of writing, we have indexed over 280k contracts, so chances are pretty high that the smart contracts you want to work with are already decoded.
+Learn more about this in "[Adding new contracts](../../features/adding-new-contracts.md)". However at time of writing, we have indexed over 280k contracts, so chances are pretty high that the smart contracts you want to work with are already decoded.

@@ -36,4 +36,4 @@ You can choose one **x-axis** and one y-axis.
 
 **Label format**
 
-* This field allows you to define the [tick format](https://docs.dune.com/duneapp/visualizations#tick-formats) of the data labels.
+* This field allows you to define the [tick format](https://docs.dune.com/features/visualizations#tick-formats) of the data labels.

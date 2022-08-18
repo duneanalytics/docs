@@ -8,13 +8,13 @@ Whether you are a seasoned SQL developer or just starting out, you can use our p
 
 The Dune Team and several of our community members have produced great content to aid you in your journey of becoming a Dune Wizard.
 
-You can either start out by watching our video series [here](video-series.md) or looking through written tutorials [here](dune-guides/).
+You can either start out by watching our video series [here](video-series) or looking through written tutorials [here](dune-guides/).
 
-If you are entirely unfamiliar with SQL, it might be good to start off by learning some SQL with the guides listed [here](sql-guides.md).
+If you are entirely unfamiliar with SQL, it might be good to start off by learning some SQL with the guides listed [here](sql-guides).
 
 <div class="cards grid" markdown>
-- [Video Series](video-series.md)
-- [SQL Guides](sql-guides.md)
+- [Video Series](video-series)
+- [SQL Guides](sql-guides)
 - [Dune Guides](dune-guides/)
 </div>
 
@@ -30,7 +30,7 @@ PostgreSQL Database Systems are widely used across almost all walks of life and 
 
 The data you will find on chain and therefore in Dune's databases is in many ways connected to understanding how the Ethereum Virtual Machine works as a whole and then in more specific terms understanding how the specific smart contracts work. If you are able to read most of the data in Etherscan, you are already well on your way to being able to query for things on dune.
 
-Unfortunately there really isn't one great resource we can point you to currently as each smart contract has it's own rules. We have written up a few words on this in our [Section "decoded data"](../../tables/evm-blockchains/decoded-data/).
+Unfortunately there really isn't one great resource we can point you to currently as each smart contract has it's own rules. We have written up a few words on this in our [Section "decoded data"](../../data-tables/evm-blockchains/decoded-data/).
 
 #### Business Understanding
 

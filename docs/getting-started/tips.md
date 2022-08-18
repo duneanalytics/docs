@@ -4,13 +4,13 @@ You can interact with the data tables through our interface at [dune.com](https:
 
 To create a new query you simply click `New Query` in the top right corner
 
-![](https://i.imgur.com/dMHavC8.png)
+![New query](images/new-query.png)
 
 On your left you can select which database you want to use in the dropdown list and then see the data tables in the window. Just search for the project you are interested in working with.
 
 ## Use abstractions
 
-The easiest way to do great analysis with Dune Analytics is to use prepared [abstractions](../../../tables/abstractions/) tables like `dex.trades`. All tables are cleaned and contains data and metadata (like human readable token symbols) that make them very straight forward to query.
+The easiest way to do great analysis with Dune Analytics is to use prepared [abstractions](/tables/abstractions/) tables like `dex.trades`. All tables are cleaned and contains data and metadata (like human readable token symbols) that make them very straight forward to query.
 
 ## Using Inline Ethereum addresses
 
@@ -89,7 +89,7 @@ Parameters can turn your query or dashboard into an app for blockchain data.
 
 Click `Add parameter` in the bottom right of the SQL editor on the query editor page
 
-![](https://i.imgur.com/rYJVSqA.png)
+![Add parameter](images/add-parameter.png)
 
 Double curly bracets will appear in your query `{{}}`. Inside these you put the name of your paramter like `token symbol` or `holder address`.
 

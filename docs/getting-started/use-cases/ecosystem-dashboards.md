@@ -8,9 +8,9 @@
 
 You can easily assemble the data on average gas spent per tx, gas limit, gas spent in total in a block etc. using Dune.
 
-![](<../../assets/image (13) (1).png>)
+![Kroeger gas 1](images/kroeger-gas-1.png)
 
-![](<../../assets/image (15).png>)
+![Kroeger gas 2](images/kroeger-gas-2.png)
 
 Data on gas spent and similar metrics can also be relevant to certain protocols, so do keep this in mind.
 
@@ -18,6 +18,6 @@ Data on gas spent and similar metrics can also be relevant to certain protocols,
 
 [Richard Chen](https://twitter.com/richardchen39) has compiled the user numbers of all important DeFi Protocols and compiled them in one Dashboard.
 
-![](<../../assets/image (17).png>)
+![rchen DeFi](images/rchen-defi.png)
 
 [https://dune.com/rchen8/defi-users-over-time](https://dune.com/rchen8/defi-users-over-time)

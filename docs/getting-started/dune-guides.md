@@ -35,6 +35,4 @@ Some of our Community Members have produced great written tutorials for Dune:
 
 These guides are all great and we recommend reading all of them.
 
-\
-\
 Big **thank you** to the authors of these guides, you are amazing!

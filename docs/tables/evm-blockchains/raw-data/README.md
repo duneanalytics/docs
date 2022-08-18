@@ -12,7 +12,7 @@ Additionally, with a few tricks and a few tricks, you can actually gain substant
 
 However, queries that have been written using raw data tables are notoriously hard to understand and audit due to the nature of the the encoded data commonly found in these tables. Furthermore, the raw data tables have a very large number of rows and hence can be slow to query.
 
-Most of the time you are better off [submitting contracts for decoding](../../../duneapp/adding-new-contracts.md) and working with [decoded data](../decoded-data/).
+Most of the time you are better off [submitting contracts for decoding](../../../features/adding-new-contracts.md) and working with [decoded data](../decoded-data/).
 
 
 
