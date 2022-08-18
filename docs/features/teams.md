@@ -21,7 +21,7 @@ Creating a team several benefits:
 
 Head over to [**Settings > Teams**](https://dune.com/settings/teams) to create your team.
 
-Make sure to pimp up your team’s profile. Here is ours: [**@dune**](https://dune.com/dune)****
+Make sure to pimp up your team’s profile. Here is ours: [**@dune**](https://dune.com/dune)
 
 #### Adding users
 
@@ -29,9 +29,9 @@ You can invite other Dune users to join your team in the People section within y
 
 * **Dune Username.** If they’re not a Dune user they will have to sign up first.
 * **Role**
-  * 👀 **Viewer:** can see the team’s content through My Creations and will be listed as a team member in the team page.
-  * ✏️ **Editor:** in addition to the above, they can create and edit queries under the team’s domain.
-  * ⚙️ **Admin:** in addition to the above, they can manage the team and its content.
+    - 👀 **Viewer:** can see the team’s content through My Creations and will be listed as a team member in the team page.
+    - ✏️ **Editor:** in addition to the above, they can create and edit queries under the team’s domain.
+    - ⚙️ **Admin:** in addition to the above, they can manage the team and its content.
 
 !!! info
     Once the user has been invited, they will receive an email. They can also directly go to [Settings > Teams](https://dune.com/settings/teams), and accept their invite there.
@@ -40,13 +40,13 @@ You can invite other Dune users to join your team in the People section within y
 
 Team queries and dashboards are created as you normally would. When you’re prompted to save it for the first time, you can pick your team as the Owner so your teammates can also access it:
 
-![](<../../assets/Screen Shot 2022-06-16 at 10.13.57.png>)
+![Team content](images/teams-1.png)
 
 #### Transferring content to the team
 
 You can transfer a query or a dashboard owned by you to your team by going to the query or dashboard’s settings and changing the owner there:
 
-![](<../../assets/Screen Shot 2022-06-16 at 09.59.57.png>)
+![Transferring content](images/teams-2.png)
 
 !!! warning
     Once you transfer content to a team, you will only be able to transfer it out of the team if you are an Admin. If you accidentally transfer content to a team you will have to ask your team's Admin to transfer it back to you.
@@ -55,7 +55,7 @@ You can transfer a query or a dashboard owned by you to your team by going to th
 
 Go to My Creations. Here you can see all of your personal content as well as your team’s. You can filter by owner to narrow down your search:
 
-![](<../../assets/Screen Shot 2022-06-16 at 10.15.54.png>)
+![Finding your team's content](images/teams-3.png)
 
 ### FAQ
 

@@ -15,19 +15,19 @@ Parameters allow you to make changes to certain defined parameters of your code 
 
 Parameters are defined in the query code as `{{parametername}}` and will appear below the query and in any dashboards in which a query visualization with parameters is used in.
 
-You can pass on input to the parameter below the query or in the parameter field on a dashboard.\
-\
-Simply run the query to apply the parameter for a query within the query editor.\
-\
+You can pass on input to the parameter below the query or in the parameter field on a dashboard.
+
+Simply run the query to apply the parameter for a query within the query editor.
+
 On a dashboard you can either click `apply all` at the top or change the parameters individually and hit `Enter`. The `Enter` submission also works for dropdowns and the date picker.
 
 Parameters in a Dashboard can be shared between different queries, just make sure to use the same name, type and default value between all of them.
 
-![](<../assets/image (41).png>)
+![Parameters overview 1](images/parameters-overview-1.png)
 
-![](<../assets/image (27) (1) (2) (2) (1).png>)
+![Parameters overview 2](images/parameters-overview-2.png)
 
-![](<../assets/image (40).png>)
+![Parameters overview 3](images/parameters-overview-3.png)
 
 ## How to use Parameters?
 
@@ -35,7 +35,7 @@ You can simply add a parameter to your queries by writing `{{parametername}}` or
 
 You can edit the properties of single parameters by clicking on the gear wheel next to the parameter in the query editor. This allows you to set a default value, define a list of possible parameters or change the type of of the parameter. If you want to share parameters between different queries on a dashboard make sure they exactly match in regards to name, type and default value.
 
-![](<../assets/2021-12-10 15-41-07.gif>)
+![Parameters how to use](images/parameters-how-to-use.gif)
 
 ## Example Query
 

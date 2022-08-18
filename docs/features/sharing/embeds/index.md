@@ -12,7 +12,7 @@ Instead of using static screenshots in varying forms of quality, Dune has a nati
 
 You can generate embed links by clicking on any query title and selecting the embed function in the top right corner.
 
-![generating an embedd link](<../../assets/2021-11-01 14-30-33.gif>)
+![generating an embedd link](images/embed-link.gif)
 
 ### Parameterized embeds
 
