@@ -30,9 +30,9 @@ One query can have multiple visualizations.
 **Read more about the different visualization options here:**
 
 <div class="cards grid" markdown>
-- [Graphs](graphs.md)
-- [Counters](counters.md)
-- [Pie Charts](pie-charts.md)
+- [Graphs](types-of-visualization/graphs.md)
+- [Counters](types-of-visualization/counters.md)
+- [Pie Charts](types-of-visualization/pie-charts.md)
 </div>
 
 ## What you can do with Visualizations
