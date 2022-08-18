@@ -12,19 +12,19 @@ You can create a new dashboard by navigating to our "Discover" page and clicking
 
 The initial name that you give to your dashboard will also be the url slug. You can't change the url slug afterwards, so be mindful of the name you choose. Changing the dashboards display name is always possible though.
 
-![creating a dashboard](<../assets/2021-11-03 16-59-42 (1) (1) (2).gif>)
+![create dashboard](images/create-dashboard.gif)
 
 ### Adding Visualizations
 
 You can simply add visualizations to your dashboard by going into the editor mode and clicking on the corresponding button. To go into editor mode first open one of your own dashboards and click on the edit button on the top right.
 
-![](<../assets/2021-11-09 13-17-41.gif>)
+![Add visualizations](images/dashboard-visualizations.gif)
 
 ### Adding text boxes
 
 To add text boxes to your dashboard you have to go into editor mode first and can afterwards click on "add text widget". This will open a simple text editor window.
 
-![](<../assets/2021-11-09 13-20-39.gif>)
+![Text widget](images/dashboard-text-widget.gif)
 
 Text boxes support a subset of markdown. You can manipulate text and embed images and gifs.
 
@@ -67,7 +67,7 @@ You can resize the image by simply resizing the widget it is contained in.
 
 You can combine images and text in one widget.
 
-![embedding an image and resizing it](<../assets/2021-11-18 16-23-05.gif>)
+![embedding an image and resizing it](images/dashboard-image.gif)
 
 ### Arranging the layout of the dashboard
 
@@ -75,4 +75,4 @@ You can arrange the different widgets on the dashboard in whatever way you like.
 
 Widgets will always try to move upwards, so if you want to create a visual divider section in your dashboard it is advised to create a big text box as a divider.
 
-![](<../assets/2021-11-19 01-22-49.gif>)
+![Dashboard layout](images/dashboard-layout.gif)

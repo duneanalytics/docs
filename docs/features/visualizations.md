@@ -25,7 +25,7 @@ Simply click on the `New visualization` button and configure the visualization t
 
 One query can have multiple visualizations.
 
-![](<../../assets/2021-11-26 13-08-16.gif>)
+![Multiple visualizations](images/multiple-visualizations.gif)
 
 **Read more about the different visualization options here:**
 
@@ -37,5 +37,5 @@ One query can have multiple visualizations.
 
 ## What you can do with Visualizations
 
-Visualizations can either live on your [dashboard](../dashboards.md) or be embedded on their own using the [embedd function](../../sharing/embeds/)
+Visualizations can either live on your [dashboard](/features/dashboards) or be embedded on their own using the [embed function](/features/sharing/embeds/)
 
