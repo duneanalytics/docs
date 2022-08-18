@@ -4,8 +4,6 @@
 
 Blocks are the building blocks of blockchains and rollups. A block contains transactions which will alter the state of an EVM system incrementally. Transaction within a block can only be executed one after the other, not in parallel.
 
-![source: Ethereum EVM illustrated, Takenobu T](<../../../assets/image (61).png>)
-
 
 
 | **Column Name**     | **datatype** | **Description**                                                                          |

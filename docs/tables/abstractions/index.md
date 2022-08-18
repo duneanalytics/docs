@@ -13,7 +13,6 @@ Abstractions are custom tables that are maintained by Dune and our community. Th
 
 This public [github repository](https://github.com/duneanalytics/abstractions) hosts the logic to construct the tables and views which make up our abstractions.
 
-\
 Which abstractions are there?
 -----------------------------
 
@@ -25,8 +24,8 @@ Sector Abstractions are tables like dex.trades, erc20.stablecoins, lending.borro
 
 These abstractions take in data from multiple contracts and projects, standardize the data across them and therefore make it very easy to query for this data and compare the metrics of different projects with each other.
 
-Most of the [sector](../../about/usecases/sector-dashboards.md) Dashboards depend on sector abstractions. This introduces an interesting dynamic in which projects can easily get their data into these dashboards by making a pull request to our public [github repo](https://github.com/duneanalytics/abstractions).\
-\
+Most of the [sector](/features/usecases/sector-dashboards.md) Dashboards depend on sector abstractions. This introduces an interesting dynamic in which projects can easily get their data into these dashboards by making a pull request to our public [github repo](https://github.com/duneanalytics/abstractions).
+
 Team Dune and the community are always improving on these sector abstractions, all new additions to existing ones are always welcome.
 
 ### Project Abstractions
