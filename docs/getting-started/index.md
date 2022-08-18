@@ -12,17 +12,11 @@ You can either start out by watching our video series [here](video-series.md) or
 
 If you are entirely unfamiliar with SQL, it might be good to start off by learning some SQL with the guides listed [here](sql-guides.md).
 
-{% content-ref url="video-series.md" %}
-[video-series.md](video-series.md)
-{% endcontent-ref %}
-
-{% content-ref url="sql-guides.md" %}
-[sql-guides.md](sql-guides.md)
-{% endcontent-ref %}
-
-{% content-ref url="dune-guides/" %}
-[dune-guides](dune-guides/)
-{% endcontent-ref %}
+<div class="cards grid" markdown>
+- [Video Series](video-series.md)
+- [SQL Guides](sql-guides.md)
+- [Dune Guides](dune-guides/)
+</div>
 
 ## What do you need to know?
 
