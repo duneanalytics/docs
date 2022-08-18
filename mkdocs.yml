@@ -1,4 +1,5 @@
 site_name: Dune Docs
+site_url: https://dune-mkdocs-material.vercel.app/
 repo_url: https://github.com/duneanalytics/docs
 theme:
   name: material
