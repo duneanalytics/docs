@@ -6,9 +6,9 @@ description: Graphs are good for condensing data points into a visualization.
 
 **Graphs are great for condensing data points into a visualization.**
 
-![a graph with mixed line and scatter graphs](../../assets/image.png)
+![a graph with mixed line and scatter graphs](images/graphs-1.png)
 
-![a stacked bar chart](<../../assets/image (19).png>)
+![a stacked bar chart](images/graphs-2.png)
 
 ### Dune offers you to create the following graph types:
 
@@ -27,51 +27,35 @@ All graph visualizations share a common editing schema.
 
 In essence, you can define your visualization in detail here. The three different sections of this are explained below.
 
-![](<../../assets/image (47).png>)
+![](images/graphs-3.png)
 
 ### Chart options
 
 This section allows you to define how to display your data.
 
-![see explanations below](<../../assets/image (50).png>)
+![see explanations below](images/graphs-4.png)
 
 **Title**
 
 * The title will appear in all instances of this graph prominently at the top.
 * The graph will always keep the name of the query, even if you edit this.
 
-<!---->
-
-* [ ] **Show chart legend**
-
-<!---->
+**Show chart legend**
 
 * Ticking this box will enable or disable the legend for the chart.
 
-<!---->
-
-* [ ] **Enable stacking**
-
-<!---->
+**Enable stacking**
 
 * If applicable, ticking this box will stack the chart values on top of each other based on the x-axis values.
 * If this is not turned on, the values will be plotted individually on the y-axis.
 * The calculation underpinning this will always group the value corresponding to one value on the x-axis. Make sure your data is clean in able for this to work (avoid gaps in your data).
 
-<!---->
-
-* [ ] **Normalize to percentage data**
-
-<!---->
+**Normalize to percentage data**
 
 * This will normalize the chart to display percentage values of the chosen data table.
 * The calculation underpinning this will always group the value corresponding to one value on the x-axis. Make sure your data is clean in able for this to work (avoid gaps in your data).
 
-<!---->
-
-* [ ] **Show data labels**
-
-<!---->
+**Show data labels**
 
 * Ticking this box leads to the display of the individual datapoints inside of the graph.
 * This only makes sense in cases where you have few datapoints that are spread out far enough from each other to not overlap.
@@ -80,7 +64,7 @@ This section allows you to define how to display your data.
 
 Here you can pick the data points that are to be displayed.
 
-![see explanations below](<../../assets/image (29).png>)
+![see explanations below](images/graphs-5.png)
 
 You can choose one **x-axis** and multiple **y-axis.**
 
@@ -90,34 +74,22 @@ Alternatively, you can also choose one data series on the y-axis and choose to g
 
 Using these options you can influence how your x-axis data gets displayed.
 
-![see explanations below](<../../assets/image (9).png>)
+![see explanations below](images/graphs-6.png)
 
 **Axis title**
 
 * This field allows you to specify a title for your x-axis.
 
-<!---->
-
-* [ ] **Sort Values**
-
-<!---->
+**Sort Values**
 
 * by ticking this box you can specify if you want the values in your chart to be ordered.
 * If your x-axis is a timeseries, this will automatically happen.
 
-<!---->
-
-* [ ] **Reverse value**
-
-<!---->
+**Reverse value**
 
 * Ticking this box will reverse the order of the values on the x-axis.
 
-<!---->
-
-* [ ] **Logarithmic**
-
-<!---->
+**Logarithmic**
 
 * Ticking this box will make your x-axis values display \_\_ logarithmically.
 
@@ -125,32 +97,24 @@ Using these options you can influence how your x-axis data gets displayed.
 
 With these options you can influence how your x-axis data gets displayed.
 
-![see explanations below](<../../assets/image (16).png>)
+![see explanations below](images/graphs-7.png)
 
 **Axis title**
 
 * This field allows you to specify a title for your y-axis.
 
-<!---->
-
-* [ ] **Logarithmic**
-
-<!---->
+**Logarithmic**
 
 * Ticking this box will make your x-axis values display \_\_ logarithmically.
 
-<!---->
-
-* [ ] **Enable right y-axis**
-
-<!---->
+**Enable right y-axis**
 
 * Ticking this box will enable an additional y-axis that you can plot values on.
 * You can choose in the [chart series section](graphs.md#ordering-your-series) what you want to be displayed on the left and right axis.
 
 ### **Tick formats**
 
-![](<../../assets/image (21).png>)
+![](images/graphs-8.png)
 
 Tick formats will change how values in your chart and the axis labels will get displayed.
 
@@ -167,7 +131,7 @@ It follows this logic:
 
 ### Ordering your series
 
-![](<../../assets/image (4).png>)
+![](images/graphs-9.png)
 
 In this section of the visualization editor you can finalize your graph.
 
@@ -182,4 +146,4 @@ You can pick colors with your browser native color selector.
 
 This might look slightly different for you depending on which browser you use.
 
-![Choose any color you want!](<../../assets/2021-11-26 17-25-04.gif>)
+![Choose any color you want!](images/graphs-color.gif)
