@@ -30,7 +30,7 @@ PostgreSQL Database Systems are widely used across almost all walks of life and 
 
 The data you will find on chain and therefore in Dune's databases is in many ways connected to understanding how the Ethereum Virtual Machine works as a whole and then in more specific terms understanding how the specific smart contracts work. If you are able to read most of the data in Etherscan, you are already well on your way to being able to query for things on dune.
 
-Unfortunately there really isn't one great resource we can point you to currently as each smart contract has it's own rules. We have written up a few words on this in our [Section "decoded data"](../../data-tables/evm-blockchains/decoded-data/).
+Unfortunately there really isn't one great resource we can point you to currently as each smart contract has it's own rules. We have written up a few words on this in our [Section "decoded data"](../../tables/evm-blockchains/decoded-data/).
 
 #### Business Understanding
 

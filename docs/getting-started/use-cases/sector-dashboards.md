@@ -12,7 +12,7 @@ This Dashboard allows you to take a look at the entirety of decentralized exchan
 
 You can see Dex Volume, Market share, Total Volume across all exchanges and many more stats all on one glance. This allows you to compare the performance of different dexes with each other and at the same time evaluate the performance of the entire sector.
 
-All of this updates in real time and is maintained by the community, if a new dex wants to be on this dashboard, all they have to do is submit their code to our public github. More on this in [abstractions](../../data-tables/abstractions/).
+All of this updates in real time and is maintained by the community, if a new dex wants to be on this dashboard, all they have to do is submit their code to our public github. More on this in [abstractions](../../tables/abstractions/).
 
 ![](<../../assets/image (65).png>)
 
@@ -46,4 +46,4 @@ The same applies for lending protocols, it allows you to easily check the state 
 
 Sector Dashboards allow your audience to make assumptions on a whole sector of this nascent Industry. This is very useful for comparing different products with each other and trying to spot trends.
 
-Most Sector Dashboards are relying on one or many [abstraction](../../data-tables/abstractions/) tables which make it easy to query for vast amounts of data and standardizing between the different protocols.
+Most Sector Dashboards are relying on one or many [abstraction](../../tables/abstractions/) tables which make it easy to query for vast amounts of data and standardizing between the different protocols.
