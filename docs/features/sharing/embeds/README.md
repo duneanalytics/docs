@@ -35,21 +35,12 @@ An example of this would be:
 
 Here is a couple of exemplary use cases for Dune embeds:
 
-{% content-ref url="discord.md" %}
-[discord.md](discord.md)
-{% endcontent-ref %}
-
-{% content-ref url="twitter.md" %}
-[twitter.md](twitter.md)
-{% endcontent-ref %}
-
-{% content-ref url="mirror.xyz.md" %}
-[mirror.xyz.md](mirror.xyz.md)
-{% endcontent-ref %}
-
-{% content-ref url="webpages.md" %}
-[webpages.md](webpages.md)
-{% endcontent-ref %}
+<div class="cards grid" markdown>
+- [Discord](discord.md)
+- [Twitter](twitter.md)
+- [Mirror.xyz](mirror.xyz.md)
+- [Webpages](webpages.md)
+</div>
 
 ### Known Issues
 

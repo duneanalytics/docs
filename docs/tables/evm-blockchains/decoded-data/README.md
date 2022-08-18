@@ -16,13 +16,10 @@ As an example, decoded data for the `swap`-event of the uniswap V2 pair contract
 
 **Read more about the difference between calls and events here:**
 
-{% content-ref url="call-tables.md" %}
-[call-tables.md](call-tables.md)
-{% endcontent-ref %}
-
-{% content-ref url="event-logs.md" %}
-[event-logs.md](event-logs.md)
-{% endcontent-ref %}
+<div class="cards grid" markdown>
+- [Call tables](call-tables.md)
+- [Event logs](event-logs.md)
+</div>
 
 ## What contracts have decoded data?
 
@@ -39,9 +36,9 @@ We usually take about 24 hours to decode smart contracts.
 
 Read more about submitting contracts in this section:
 
-{% content-ref url="../../../duneapp/adding-new-contracts.md" %}
-[adding-new-contracts.md](../../../duneapp/adding-new-contracts.md)
-{% endcontent-ref %}
+<div class="cards grid" markdown>
+- [Adding new contracts](../../../duneapp/adding-new-contracts.md)
+</div>
 
 ## How does decoding work?
 

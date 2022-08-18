@@ -32,9 +32,9 @@ We hope you are as excited as we are about this new tool. Spellbook is now live 
 
 #### Continue reading here to learn how to cast a spell into our github repo:&#x20;
 
-{% content-ref url="how-to-contribute-a-spell/" %}
-[how-to-contribute-a-spell](how-to-contribute-a-spell/)
-{% endcontent-ref %}
+<div class="cards grid" markdown>
+- [How to contribute a spell](how-to-contribute-a-spell/)
+</div>
 
 #### Visit the spellbook models documentation to see the current models
 

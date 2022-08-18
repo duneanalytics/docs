@@ -25,23 +25,15 @@ Simply click on the `New visualization` button and configure the visualization t
 
 One query can have multiple visualizations.
 
-
-
 ![](<../../assets/2021-11-26 13-08-16.gif>)
 
 **Read more about the different visualization options here:**
 
-{% content-ref url="graphs.md" %}
-[graphs.md](graphs.md)
-{% endcontent-ref %}
-
-{% content-ref url="counters.md" %}
-[counters.md](counters.md)
-{% endcontent-ref %}
-
-{% content-ref url="pie-charts.md" %}
-[pie-charts.md](pie-charts.md)
-{% endcontent-ref %}
+<div class="cards grid" markdown>
+- [Graphs](graphs.md)
+- [Counters](counters.md)
+- [Pie Charts](pie-charts.md)
+</div>
 
 ## What you can do with Visualizations
 

@@ -14,18 +14,9 @@ Explaining the Ethereum history, Roadmap and technical details goes beyond the s
 
 ### Raw data tables
 
-{% content-ref url="../ethereum-mainnet/blocks.md" %}
-[blocks.md](../Polygon/blocks.md)
-{% endcontent-ref %}
-
-{% content-ref url="../ethereum-mainnet/transactions.md" %}
-[transactions.md](../ethereum-mainnet/transactions.md)
-{% endcontent-ref %}
-
-{% content-ref url="../ethereum-mainnet/event-logs.md" %}
-[event-logs.md](../ethereum-mainnet/event-logs.md)
-{% endcontent-ref %}
-
-{% content-ref url="../ethereum-mainnet/traces.md" %}
-[traces.md](../ethereum-mainnet/traces.md)
-{% endcontent-ref %}
+<div class="cards grid" markdown>
+- [Blocks](blocks.md)
+- [Transactions](transactions.md)
+- [Event logs](event-logs.md)
+- [Traces](traces.md)
+</div>

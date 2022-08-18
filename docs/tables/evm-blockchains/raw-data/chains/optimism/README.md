@@ -52,18 +52,9 @@ Additionally, Optimism hasn't implemented EIP1559, so it follows the "old" gas a
 
 ### Raw data tables
 
-{% content-ref url="blocks.md" %}
-[blocks.md](blocks.md)
-{% endcontent-ref %}
-
-{% content-ref url="transactions.md" %}
-[transactions.md](transactions.md)
-{% endcontent-ref %}
-
-{% content-ref url="event-logs.md" %}
-[event-logs.md](event-logs.md)
-{% endcontent-ref %}
-
-{% content-ref url="traces.md" %}
-[traces.md](traces.md)
-{% endcontent-ref %}
+<div class="cards grid" markdown>
+- [Blocks](blocks.md)
+- [Transactions](transactions.md)
+- [Event logs](event-logs.md)
+- [Traces](traces.md)
+</div>

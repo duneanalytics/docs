@@ -10,6 +10,6 @@ While Blockchain data is cool on it's own and we do our best to prepare, standar
 
 We are still building out the infrastructure for this endeavor and can therefore not support more datasets at the current moment.
 
-{% content-ref url="flashbots/" %}
-[flashbots](flashbots/)
-{% endcontent-ref %}
+<div class="cards grid" markdown>
+- [Flashbots](flashbots/)
+</div>

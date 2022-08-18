@@ -11,18 +11,9 @@ You can read more about Polygon and their approach to scaling an EVM in their [d
 Polygon follows all the rules of ETH mainnet and querying on Dune works exactly the same.
 ### Raw data tables
 
-{% content-ref url="blocks.md" %}
-[blocks.md](blocks.md)
-{% endcontent-ref %}
-
-{% content-ref url="transactions.md" %}
-[transactions.md](transactions.md)
-{% endcontent-ref %}
-
-{% content-ref url="event-logs.md" %}
-[event-logs.md](event-logs.md)
-{% endcontent-ref %}
-
-{% content-ref url="traces.md" %}
-[traces.md](traces.md)
-{% endcontent-ref %}
+<div class="cards grid" markdown>
+- [Blocks](blocks.md)
+- [Transactions](transactions.md)
+- [Event logs](event-logs.md)
+- [Traces](traces.md)
+</div>

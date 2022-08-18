@@ -30,9 +30,9 @@ DuneV2 changes our entire database architecture. We are transitioning away from 
 
 **You can read more about the changes here:**
 
-{% content-ref url="query-engine.md" %}
-[query-engine.md](query-engine.md)
-{% endcontent-ref %}
+<div class="cards grid" markdown>
+- [Query Engine](query-engine.md)
+</div>
 
 ### Abstractions
 
@@ -40,9 +40,9 @@ Abstraction in DuneV2 will run on [dbt](https://docs.getdbt.com/docs/introductio
 
 This will make abstractions more robust, scaleable and easier to work with.
 
-{% content-ref url="abstractions-in-dunev2/" %}
-[abstractions-in-dunev2](abstractions-in-dunev2/)
-{% endcontent-ref %}
+<div class="cards grid" markdown>
+- [Abstractions/Spells in Dune V2](abstractions-in-dunev2/)
+</div>
 
 ### Feedback
 
