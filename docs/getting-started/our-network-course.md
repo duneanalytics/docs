@@ -1,5 +1,8 @@
 # Our Network course
 
+!!! note
+    This course is based on Dune's V1 engine. Much of the content is still applicable, but the SQL dialect and some table names have changed in Dune V2.
+
 Our friends from OurNetwork have created a course in cooperation with Dune Analytics that taught 30 people web3 data in 30 days.
 
 The course consists of presentations around all important topics that you need to become a Dune Creator and is available for free to everyone. It was hosted by some of the best creators we have on Dune nowadays and is currently the place to start your Dune Journey.

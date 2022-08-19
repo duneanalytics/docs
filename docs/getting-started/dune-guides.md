@@ -2,6 +2,13 @@
 
 Some of our Community Members have produced great written tutorials for Dune:
 
+[0xPhilan](https://twitter.com/0xPhillan)
+
+* [Dune Analytics: A Guide for Complete Beginners](https://mirror.xyz/phillan.eth/17VAXsMPpwJg4OQNBHKTYAQTWfJMwFuXZQDAxPStf0o)
+
+!!! note
+    These articles are based on Dune's V1 engine. Much of the content is still applicable, but the SQL dialect and some table names have changed in Dune V2.
+
 [Andrew Hong](https://twitter.com/andrewhong5297)
 
 * [Your guide to basic SQL while learning Ethereum at the same time](https://towardsdatascience.com/your-guide-to-basic-sql-while-learning-ethereum-at-the-same-time-9eac17a05929) (Part 1)
@@ -28,10 +35,6 @@ Some of our Community Members have produced great written tutorials for Dune:
 [Gracelily](https://twitter.com/\_grace\_lily)
 
 * [PostgreSQL Query Optimization Tricks - How to Make Queries Faster in Dune Analytics](https://gracelily.medium.com/postgresql-query-optimization-tricks-6d5b7358d7fa)
-
-[0xPhilan](https://twitter.com/0xPhillan)
-
-* [Dune Analytics: A Guide for Complete Beginners](https://mirror.xyz/phillan.eth/17VAXsMPpwJg4OQNBHKTYAQTWfJMwFuXZQDAxPStf0o)
 
 These guides are all great and we recommend reading all of them.
 

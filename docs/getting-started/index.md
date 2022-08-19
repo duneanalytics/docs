@@ -24,7 +24,10 @@ If you are entirely unfamiliar with SQL, it might be good to start off by learni
 
 A fundamental understanding of SQL is needed to be able to successfully query for data on Dune.
 
-PostgreSQL Database Systems are widely used across almost all walks of life and you can find a lot of non Dune specific documentation about it. This often times helps with answering query related questions since most answers can easily be found in the internet. The official [PostgreSQL documentation](https://www.postgresql.org/docs/12/index.html) is quite helpful as well. Dune runs on PostgreSQL 12.2.
+SQL is widely used across almost all walks of life and you can find a lot of non Dune specific documentation about it. This often times helps with answering query related questions since most answers can easily be found in the internet.
+
+- For Dune V1, the official [PostgreSQL documentation](https://www.postgresql.org/docs/12/index.html) is great. Dune runs on PostgreSQL 12.2.
+- For Dune V2, the official [DatabricksSQL ](https://docs.databricks.com/sql/language-manual/index.html) documentation is super helpful!
 
 #### Ethereum Virtual Machine data
 

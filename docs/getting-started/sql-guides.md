@@ -1,10 +1,10 @@
 # SQL guides
 
-**General PostgreSQL Tutorials**
-
-To be a successful Dune Wizard you need to have a good understanding of PostgreSQL to be able to query data from our database.
+To be a successful Dune Wizard you need to have a good understanding of SQL to be able to query data from our database.
 
 We have compiled a few resources that we think are helpful in your journey to becoming a Dune Wizard.
+
+**General PostgreSQL Tutorials**
 
 [FreecodeCamp.org](https://www.youtube.com/watch?v=qw--VYLpxG4) Video Playlist (FREE)
 
@@ -14,3 +14,8 @@ We have compiled a few resources that we think are helpful in your journey to be
 
 [Mode SQL Tutorial](https://mode.com/sql-tutorial/) (FREE)
 
+**General SparkSQL Tutorials**
+
+<div class="cards grid" markdown>
+- [Coursera Learn Spark SQL](https://www.coursera.org/learn/spark-sql)
+</div>

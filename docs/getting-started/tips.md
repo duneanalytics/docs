@@ -14,6 +14,9 @@ The easiest way to do great analysis with Dune Analytics is to use prepared [abs
 
 ## Using Inline Ethereum addresses
 
+!!! note
+    This feature is only available in the Dune V1 engine.
+
 In Dune Ethereum addresses are stored as postgres bytearrays which are encoded with the `\x` prefix. This differs from the customary `0x` prefix. If you’d like to use an inline address, say to filter for a given token, you would do
 
 ```sql
@@ -27,6 +30,9 @@ WHERE token = '\x6b175474e89094c44da98b954eedeac495271d0f'::bytea
 ```
 
 ## Quote camel case column and table names
+
+!!! note
+    This feature is only available in the Dune V1 engine.
 
 Column and table names are mostly taken directly from smart contract ABIs, with no modification. Since most smart contracts are written in Solidity, and written with a camelCased naming convention, so is many of Dune’s table and column names. Postgres requires you to quote columns and tablenames that are case sensitive:
 
@@ -51,7 +57,17 @@ Schemas are always lowercase in Dune.
 
 Ether transfers and most ERC-20 tokens have 18 decimal places. To get a more human readable number you need to remove all the decimals. The table `erc20.tokens` gives you contract address, symbol and number of decimals for popular tokens. Token value transfers are then divided by 10 to the power of decimals from this table:
 
-`transfer_value / 10^erc20.tokens.decimals`
+=== "PostgreSQL"
+
+    ```sql
+    transfer_value / 10^erc20.tokens.decimals
+    ```
+
+=== "SparkSQL"
+
+    ```sql
+    transfer_value / x*power(10,y)` or `transfer_value / x*1e*y
+    ```
 
 ## Use `date_trunc` to get time
 
@@ -81,7 +97,13 @@ You often want to group your results by token address. For instance you want to 
 
 Therefore you often want to use the token symbol instead. Simply join the table `erc20.tokens` with your event table where asset = token address. You then select symbol in your select statement instead of token address.
 
-**NB** The `erc20.tokens` table cointains a selection of popular tokens. If you are working with more obscure tokens you should be careful with joining with this table because tokens that are not in the coincap table might be excluded from your results.
+=== "PostgreSQL"
+
+    **NB** The `erc20.tokens` table cointains a selection of popular tokens. If you are working with more obscure tokens you should be careful with joining with this table because tokens that are not in the coincap table might be excluded from your results.
+
+=== "SparkSQL"
+
+    **NB** The `tokens_blockchain.erc20` table cointains a selection of popular tokens. If you are working with more obscure tokens you should be careful with joining with this table because tokens that are not in the coincap table might be excluded from your results.
 
 ## Filter queries and dashboards with parameters
 
@@ -94,6 +116,9 @@ Click `Add parameter` in the bottom right of the SQL editor on the query editor 
 Double curly bracets will appear in your query `{{}}`. Inside these you put the name of your paramter like `token symbol` or `holder address`.
 
 Note that you need to put single quotes if you want to use the parameter in your query `WHERE token = '{{token symbol}}'`.
+
+!!! note
+    This feature is only available in the Dune V1 engine.
 
 To save the user from having to put in `\x` for the address a useful formatting of addresses is this one:
 
