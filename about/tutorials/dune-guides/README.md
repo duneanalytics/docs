@@ -33,6 +33,10 @@ Some of our Community Members have produced great written tutorials for Dune:
 
 * [Dune Analytics: A Guide for Complete Beginners](https://mirror.xyz/phillan.eth/17VAXsMPpwJg4OQNBHKTYAQTWfJMwFuXZQDAxPStf0o)
 
+[James Bachini](https://jamesbachini.com/)
+
+* [Dune Analytics Tutorial | How To Create A Dune Analytics Dashboard](https://jamesbachini.com/dune-analytics-tutorial/)
+
 These guides are all great and we recommend reading all of them.
 
 \
