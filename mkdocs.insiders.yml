@@ -1,3 +1,6 @@
 INHERIT: mkdocs.yml
 plugins:
+  - search
+  - awesome-pages
+  - mkdocs-video
   - social
