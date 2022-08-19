@@ -3,8 +3,8 @@ site_url: https://dune-mkdocs-material.vercel.app/
 repo_url: https://github.com/duneanalytics/docs
 theme:
   name: material
-  logo: assets/dune-icon-only.png
-  favicon: assets/dune-icon-only.png
+  logo: images/dune-icon-only.png
+  favicon: images/dune-icon-only.png
   palette:
     primary: indigo
   font:
