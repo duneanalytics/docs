@@ -19,12 +19,12 @@ This is the primary Dune logo. It should be used in this format whenever possibl
 
 ## Vertical logo
 
-![Dune vertical logo cover](<../assets/dune-vertical-logo-cover (1).png>)
+![Dune vertical logo cover](images/dune-vertical-logo-cover.png)
 
 <div class="cards grid" markdown>
 - [dune-vertical-logo.svg](images/dune-vertical-logo.svg)
 - [dune-vertical-logo@2x.png](images/dune-vertical-logo@2x.png)
-- [dune-vertical-logo-dark.svg](images/dune-vertical-logo-dark.svg)
+- [dune-vertical-logo-dark.svg](images/dune-vertical-logo.svg)
 - [dune-vertical-logo-dark@2x.png](images/dune-vertical-logo-dark@2x.png)
 </div>
 
