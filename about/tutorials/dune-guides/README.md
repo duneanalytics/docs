@@ -15,7 +15,7 @@ Some of our Community Members have produced great written tutorials for Dune:
 
 [Paul Pivat](https://twitter.com/paulapivat)
 
-* [Lean foundational Ethereum topics with SQL](https://ethereum.org/en/developers/tutorials/learn-foundational-ethereum-topics-with-sql/)
+* [Learn foundational Ethereum topics with SQL](https://ethereum.org/en/developers/tutorials/learn-foundational-ethereum-topics-with-sql/)
 
 [Alex Kroeger](https://twitter.com/alex\_kroeger)
 
