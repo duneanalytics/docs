@@ -1,7 +1,7 @@
 ---
 description: >-
   dex.trades makes erc20 trading data available to everyone on Dune Analytics.
-  Dex.trades aggregates data across multiple NFT platforms into one simple
+  Dex.trades aggregates data across multiple DEX platforms into one simple
   table.
 ---
 
