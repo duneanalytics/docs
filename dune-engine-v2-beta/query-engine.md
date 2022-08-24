@@ -28,7 +28,6 @@ The changes between the 2 coding languages syntax and the keyword operators are 
 | **encoding strings to hex**                                              | `encode(string, 'hex')`                                                                                                                                                   | `hex(string)`                                                                                                               |
 | <p><strong>Get json object</strong><br><strong>differences</strong></p>  | <p><code>("takerOutputUpdate"-></code><br><code>'deltaWei'->'value'</code>)<br><br><br><code>decode(substring(("addressSet"->'baseAsset')::TEXT, 4,40), 'hex')</code></p> | <p><code>get_json_object(get_json_object(takerOutputUpdate,'$.deltaWei'),'$.value')</code><br><br><code>'0x'</code></p>     |
 
-If you have found any other changes that are important to note, please feel free to sumbit a PR to our docs or leave us feedback in Discord!
 
 If you have found any other changes that are important to note, please feel free to sumbit a PR to our docs or leave us feedback in [Discord](https://discord.com/dunecom)!
 
