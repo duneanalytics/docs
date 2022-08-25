@@ -6,6 +6,9 @@ description: >-
 
 # User Generated
 
+!!! note
+    User generated tables are not yet available on V2.
+
 #### Note that these tables are not guaranteed to contain correct data, please use these with caution if you haven't created them yourself.
 
 **Always save the constructor arguments for your views. Sometimes we have to drop views in order to be able to change some decoding tables or proxy dependencies and you might have to redeploy your view.**
