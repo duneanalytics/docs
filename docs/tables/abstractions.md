@@ -11,7 +11,7 @@ description: >-
 
 Abstractions are custom tables that are maintained by Dune and our community. They allow you to gain access to more complex SQL operators like creating your own tables, looping through values or other operations that are more catered towards database administration. This sometimes is necessary to aggregate the on-chain data or simplify the process of querying for data.
 
-This public [github repository](https://github.com/duneanalytics/abstractions) hosts the logic to construct the tables and views which make up our abstractions.
+This public [github repository](https://github.com/duneanalytics/spellbook) hosts the logic to construct the tables and views which make up our abstractions.
 
 Which abstractions are there?
 -----------------------------
