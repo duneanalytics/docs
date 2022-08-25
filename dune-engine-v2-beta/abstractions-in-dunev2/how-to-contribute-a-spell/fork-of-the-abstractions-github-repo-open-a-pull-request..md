@@ -1,6 +1,6 @@
 # 🍴 Fork of the abstractions Github Repo, open a Pull Request.
 
-When you’re happy with your spell, from a fork of the abstractions Github Repo, open a Pull Request.
+When you’re happy with your spell, from a fork of the spellbook Github Repo, open a Pull Request.
 
 This step is non-specific to Spellbook. So I will farm out the explanation to Jake Jarvis who has an excellent [step by step guide](https://jarv.is/notes/how-to-pull-request-fork-github/) to forking and committing a Pull Request to a public Github repository.
 
