@@ -4,7 +4,7 @@ description: >-
   function or table inside of our database.
 ---
 
-# User Generated Tables
+# User Generated
 
 #### Note that these tables are not guaranteed to contain correct data, please use these with caution if you haven't created them yourself.
 
@@ -12,7 +12,8 @@ description: >-
 
 ## Usecases
 
-There is several ways in which you can utilize your own views and tables inside of Dune to make working with your data on Dune even easier.\
+There is several ways in which you can utilize your own views and tables inside of Dune to make working with your data on Dune even easier.
+
 Your own tables, views and function all have an important part to play in creating content on Dune and make maintenance of your dashboards and queries easier if used correctly.
 
 If you are unfamiliar with tables, views, materialized views and functions please consult the [pgSQL documentation](https://www.postgresqltutorial.com/postgresql-views/) or check out our [Tutorials](../about/tutorials/).

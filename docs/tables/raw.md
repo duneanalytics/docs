@@ -1,4 +1,4 @@
-# Raw Data
+# Raw
 
 **Raw data tables allow you to query for any transaction, block, event log or trace across the blockchains Dune supports. These tables provide you raw, unfiltered and unedited data.**
 
