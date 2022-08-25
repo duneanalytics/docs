@@ -12,7 +12,7 @@ Does that create duplicates? It would, but we are also using a “`merge`” inc
 
 You’ll also note that this is the first use of “refs” in this spellset. A ref, like `{{ ref('tokens_ethereum_erc20') }}` is simply a reference to another model in the DBT project. It doesn’t matter what the name of the view or table is. The ref references the name of the file itself. That means, we can’t have duplicate file names.
 
-[transfers\_ethereum\_erc20\_agg\_day.sql](https://github.com/duneanalytics/abstractions/blob/master/spellbook/models/transfers/ethereum/erc20/transfers\_ethereum\_erc20\_agg\_day.sql)
+[transfers\_ethereum\_erc20\_agg\_day.sql](https://github.com/duneanalytics/spellbook/blob/main/models/transfers/ethereum/erc20/transfers_ethereum_erc20_agg_day.sql)
 
 ```sql
 {{ config(
@@ -46,7 +46,7 @@ group by
    date_trunc('day', tr.evt_block_time), tr.wallet_address, tr.token_address, t.symbol,unique_tx_id
 ```
 
-[transfers\_ethereum\_schema.yml](https://github.com/duneanalytics/abstractions/blob/master/spellbook/models/transfers/ethereum/transfers\_ethereum\_schema.yml)
+[transfers\_ethereum\_schema.yml](https://github.com/duneanalytics/spellbook/blob/main/models/transfers/ethereum/transfers_ethereum_schema.yml)
 
 ```yaml
   - name: transfers_ethereum_erc20_agg_hour
