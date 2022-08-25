@@ -1,4 +1,4 @@
-# 🍴 Fork of the abstractions Github Repo, open a Pull Request.
+# 🍴 Fork of the spellbook Github Repo, open a Pull Request.
 
 When you’re happy with your spell, from a fork of the spellbook Github Repo, open a Pull Request.
 
