@@ -1,3 +1,4 @@
 mkdocs-material
 mkdocs-awesome-pages-plugin
 mkdocs-video
+mkdocs-redirects

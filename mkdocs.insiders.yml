@@ -4,3 +4,6 @@ plugins:
   - awesome-pages
   - mkdocs-video
   - social
+  - redirects:
+      redirect_maps:
+        dune-engine-v2-beta/abstractions-in-dunev2/how-to-contribute-a-spell/index.md: spellbook/how-to-contribute-a-spell/index.md
