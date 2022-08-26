@@ -12,7 +12,7 @@ Any contributions are welcome, from spelling mistakes to entire guides on the EV
 
 If you'd like to run the docs locally, follow these instructions.
 
-Setup your local python3 environment, e.g. with [Miniconda](https://docs.conda.io/en/latest/miniconda.html).
+Setup your local python 3 environment, e.g. with [Miniconda](https://docs.conda.io/en/latest/miniconda.html).
 
 Install the python libraries:
 
