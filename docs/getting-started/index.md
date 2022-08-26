@@ -4,11 +4,13 @@
 
 Whether you are a seasoned SQL developer or just starting out, you can use our platform to start analyzing Blockchain data in an instant.
 
+!!! note
+    By default, this documentation shows information for our Dune V1 Engine, which runs on a PostgreSQL database.
+    Our new data platform, [Dune Engine V2](https://dune.com/blog/dune-engine-v2) is currently in beta with a Databricks SQL query engine. It offers exciting features like better scaling, cross chain queries and spellbook. Dune Engine V2 will become the default over the next few months, so we reccommend you try it out!
+
 The Dune Team and several of our community members have produced great content to aid you in your journey of becoming a Dune Wizard.
 
-You can either start out by watching our video series [here](video-series) or looking through written tutorials [here](dune-guides/).
-
-If you are entirely unfamiliar with SQL, it might be good to start off by learning some SQL with the guides listed [here](sql-guides).
+You can either start out by watching our video series [here](video-series) or looking through written tutorials [here](dune-guides/). If you are entirely unfamiliar with SQL, it might be good to start off by learning some SQL with the guides listed [here](sql-guides).
 
 <div class="cards grid" markdown>
 - [Video Series](video-series)
@@ -24,14 +26,17 @@ A fundamental understanding of SQL is needed to be able to successfully query fo
 
 SQL is widely used across almost all walks of life and you can find a lot of non Dune specific documentation about it. This often times helps with answering query related questions since most answers can easily be found in the internet.
 
-- For Dune V1, the official [PostgreSQL documentation](https://www.postgresql.org/docs/12/index.html) is great. Dune runs on PostgreSQL 12.2.
-- For Dune V2, the official [DatabricksSQL ](https://docs.databricks.com/sql/language-manual/index.html) documentation is super helpful!
+=== "PostgreSQL"
+    The official [PostgreSQL documentation](https://www.postgresql.org/docs/12/index.html) is great. Dune runs on PostgreSQL 12.2.
+
+=== "Databricks SQL"
+    The official [Databricks SQL ](https://docs.databricks.com/sql/language-manual/index.html) documentation is super helpful.
 
 #### Ethereum Virtual Machine data
 
 The data you will find on chain and therefore in Dune's databases is in many ways connected to understanding how the Ethereum Virtual Machine works as a whole and then in more specific terms understanding how the specific smart contracts work. If you are able to read most of the data in Etherscan, you are already well on your way to being able to query for things on dune.
 
-Unfortunately there really isn't one great resource we can point you to currently as each smart contract has it's own rules. We have written up a few words on this in our [Section "decoded data"](../../data-tables/evm-blockchains/decoded-data/).
+Unfortunately there really isn't one great resource we can point you to currently as each smart contract has it's own rules. We have written up a few words on this in our section on [decoded data](/tables/decoded).
 
 #### Business Understanding
 

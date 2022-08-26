@@ -2,40 +2,41 @@
 
 Some of our Community Members have produced great written tutorials for Dune:
 
-[0xPhilan](https://twitter.com/0xPhillan)
+=== "PostgreSQL"
 
-* [Dune Analytics: A Guide for Complete Beginners](https://mirror.xyz/phillan.eth/17VAXsMPpwJg4OQNBHKTYAQTWfJMwFuXZQDAxPStf0o)
+    [Andrew Hong](https://twitter.com/andrewhong5297)
 
-!!! note
-    These articles are based on Dune's V1 engine. Much of the content is still applicable, but the SQL dialect and some table names have changed in Dune V2.
+    * [Your guide to basic SQL while learning Ethereum at the same time](https://towardsdatascience.com/your-guide-to-basic-sql-while-learning-ethereum-at-the-same-time-9eac17a05929) (Part 1)
+    * [Your guide to intermediate SQL while learning Ethereum at the same time](https://towardsdatascience.com/your-guide-to-intermediate-sql-while-learning-ethereum-at-the-same-time-7b25119ef1e2?source=user\_profile---------6----------------------------) (Part 2)
+    * [Learning SQL and Ethereum](https://towardsdatascience.com/learning-sql-and-ethereum-part-3-5422f080ad36) (Part 3)
+    * [SQL on Ethereum: How to Work With All the Data from a Transaction](https://ath.mirror.xyz/mbR1n\_CvflL1KIKCTG42bnM4HpfGBqDPNndH8mu2eJw)
 
-[Andrew Hong](https://twitter.com/andrewhong5297)
+    [Alex Manuskin](https://twitter.com/amanusk\_)
 
-* [Your guide to basic SQL while learning Ethereum at the same time](https://towardsdatascience.com/your-guide-to-basic-sql-while-learning-ethereum-at-the-same-time-9eac17a05929) (Part 1)
-* [Your guide to intermediate SQL while learning Ethereum at the same time](https://towardsdatascience.com/your-guide-to-intermediate-sql-while-learning-ethereum-at-the-same-time-7b25119ef1e2?source=user\_profile---------6----------------------------) (Part 2)
-* [Learning SQL and Ethereum](https://towardsdatascience.com/learning-sql-and-ethereum-part-3-5422f080ad36) (Part 3)
-* [SQL on Ethereum: How to Work With All the Data from a Transaction](https://ath.mirror.xyz/mbR1n\_CvflL1KIKCTG42bnM4HpfGBqDPNndH8mu2eJw)
+    * [How to get started with querying on Dune Analytics](https://dune.com/blog/get-started-guide)
 
-[Alex Manuskin](https://twitter.com/amanusk\_)
+    [Paul Pivat](https://twitter.com/paulapivat)
 
-* [How to get started with querying on Dune Analytics](https://dune.com/blog/get-started-guide)
+    * [Lean foundational Ethereum topics with SQL](https://ethereum.org/en/developers/tutorials/learn-foundational-ethereum-topics-with-sql/)
 
-[Paul Pivat](https://twitter.com/paulapivat)
+    [Alex Kroeger](https://twitter.com/alex\_kroeger)
 
-* [Lean foundational Ethereum topics with SQL](https://ethereum.org/en/developers/tutorials/learn-foundational-ethereum-topics-with-sql/)
+    * [How to use Dune Analytics like a degen](https://mirror.xyz/0x7B542178633f16940a131F8F6d670ffdbBe6b2Ab/0C3EQBtFqAK4k2TAGPZhg0JMY-upfTAxuTD-o91vBPc)
 
-[Alex Kroeger](https://twitter.com/alex\_kroeger)
+    [Chuxin](https://twitter.com/chuxin\_h)
 
-* [How to use Dune Analytics like a degen](https://mirror.xyz/0x7B542178633f16940a131F8F6d670ffdbBe6b2Ab/0C3EQBtFqAK4k2TAGPZhg0JMY-upfTAxuTD-o91vBPc)
+    * [Select \* from web3](https://www.chuxinhuang.com/blog/select-from-web3/)
 
-[Chuxin](https://twitter.com/chuxin\_h)
+    [Gracelily](https://twitter.com/\_grace\_lily)
 
-* [Select \* from web3](https://www.chuxinhuang.com/blog/select-from-web3/)
+    * [PostgreSQL Query Optimization Tricks - How to Make Queries Faster in Dune Analytics](https://gracelily.medium.com/postgresql-query-optimization-tricks-6d5b7358d7fa)
 
-[Gracelily](https://twitter.com/\_grace\_lily)
+    These guides are all great and we recommend reading all of them.
 
-* [PostgreSQL Query Optimization Tricks - How to Make Queries Faster in Dune Analytics](https://gracelily.medium.com/postgresql-query-optimization-tricks-6d5b7358d7fa)
+    Big **thank you** to the authors of these guides, you are amazing!
 
-These guides are all great and we recommend reading all of them.
+=== "Databricks SQL"
 
-Big **thank you** to the authors of these guides, you are amazing!
+    [0xPhilan](https://twitter.com/0xPhillan)
+
+    * [Dune Analytics: A Guide for Complete Beginners](https://mirror.xyz/phillan.eth/17VAXsMPpwJg4OQNBHKTYAQTWfJMwFuXZQDAxPStf0o)
