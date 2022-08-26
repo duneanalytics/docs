@@ -6,11 +6,25 @@ We create tables for each event and function defined in the smart contract's ABI
 
 The tables are named accordingly:
 
-**events:** `projectname."contractName_evt_eventName"`
+=== "PostgreSQL"
 
-**function calls:** `projectname."contractName_call_eventName"`
+    **events:** `projectname."contractName_evt_eventName"`
 
-As an example, decoded data for the `swap`-event of the uniswap V2 pair contract is found in the table [`uniswap_v2."pair_swap"`](https://dune.com/queries/38968).
+    **function calls:** `projectname."contractName_call_eventName"`
+
+    As an example, decoded data for the `swap`-event of the uniswap V2 pair contract is found in the table [`uniswap_v2."pair_swap"`](https://dune.com/queries/38968).
+
+=== "SparkSQL"
+
+    **events:** `projectname_blockchain.contractName_evt_eventName`
+
+    **function calls:** `projectname_blockchain.contractName_call_eventName`
+
+    As an example, decoded data for the `swap`-event of the uniswap V2 pair contract on ethereum is found in the table `uniswap_v2_ethereum.Pair_evt_Swap`.
+
+If a contract has multiple instances, we will decode all of them into the same table, you will be able to identify the specific smart contract using the `contract_address` column.
+
+Since all chain's data resides in one database, but the multichain world is a reality, contracts on Dune have a meta attribute that describes which blockchain this specific table is pulling the data from.
 
 **Read more about the difference between calls and events here:**
 
@@ -21,18 +35,30 @@ As an example, decoded data for the `swap`-event of the uniswap V2 pair contract
 
 ## What contracts have decoded data?
 
-You can check if contracts are already decoded by querying `"blockchain".contracts` tables through our database or use [this dashboard](https://dune.com/0xBoxer/Is-my-Contract-decoded-yet).
+=== "PostgreSQL"
 
-```sql
-Select * from ethereum.contracts
-where address = '\x429881672B9AE42b8EbA0E26cD9C73711b891Ca5'
-```
+    You can check if contracts are already decoded by querying `"blockchain".contracts` tables through our database or use [this dashboard](https://dune.com/0xBoxer/Is-my-Contract-decoded-yet).
+
+    ```sql
+    Select * from ethereum.contracts
+    where address = '\x429881672B9AE42b8EbA0E26cD9C73711b891Ca5'
+    ```
+
+=== "SparkSQL"
+
+    You can check if contracts are already decoded by querying _`blockchain.`_`contracts` tables.
+
+    ```sql
+    Select * from ethereum.contracts
+    where address = '0x429881672B9AE42b8EbA0E26cD9C73711b891Ca5'
+    --you can change ethereum.contracts to the e.g. optimism.contracts
+    ```
 
 If the contract is not in our database yet, you can submit them here: [dune.com/contracts/new](https://dune.com/contracts/new).
 
 We usually take about 24 hours to decode smart contracts.
 
-Read more about submitting contracts in this section:
+Read more about submitting contracts for decoding in this section:
 
 <div class="cards grid" markdown>
 - [Adding new contracts](../../../features/adding-new-contracts.md)
@@ -40,7 +66,13 @@ Read more about submitting contracts in this section:
 
 ## How does decoding work?
 
-Smart Contracts on any EVM blockchain are mostly written in high level languages like [Solidity](https://docs.soliditylang.org/en/v0.8.2/) or [Vyper](https://vyper.readthedocs.io/en/stable/). In order for them to be able to be deployed to an EVM execution environment, they need to be compiled to EVM executable bytecode. Once deployed, the bytecode gets associated to an address on the respective chain and is permanently stored in this chain's state storage. To be able to interact with this smart contract, which is now just bytecode, we need a guide to be able to call the functions which are defined in the high-level languages. This translation of names and arguments into byte representation is done using an **ABI (Application Binary Interface)**. The ABI documents names, types and arguments precisely and allows us to interact with the smart contract using a somewhat human readable format. The ABI can be compiled using the high level language source code.
+Smart Contracts on any EVM blockchain are mostly written in high level languages like [Solidity](https://docs.soliditylang.org/en/v0.8.2/) or [Vyper](https://vyper.readthedocs.io/en/stable/).
+
+In order for them to be able to be deployed to an EVM execution environment, they need to be compiled to EVM executable bytecode. Once deployed, the bytecode gets associated to an address on the respective chain and is permanently stored in this chain's state storage.
+
+To be able to interact with this smart contract, which is now just bytecode, we need a guide to be able to call the functions which are defined in the high-level languages. This translation of names and arguments into byte representation is done using an **ABI (Application Binary Interface)**.
+
+The ABI documents names, types and arguments precisely and allows us to interact with the smart contract using a somewhat human readable format. The ABI can be compiled using the high level language source code.
 
 **The ABI is used to be able to call a smart contract or interpret the data it emits.**
 
@@ -56,19 +88,39 @@ On [Etherscan](https://etherscan.io/tx/0x2bb7c8283b782355875fa37d05e4bd962519ea2
 
 If we query for this transaction in the `ethereum.logs` table in the dune database, we will receive the same encoded bytecode as our result dataset.
 
-```sql
-Select
-  tx_hash
-  ,topic1
-  ,topic2
-  ,topic3
-  ,data
-  
-  from
-  ethereum.logs
-where
- tx_hash = '\x2bb7c8283b782355875fa37d05e4bd962519ea294678a3dcf2fdffbbd0761bc5'
-```
+=== "PostgreSQL"
+
+    ```sql
+    Select
+      tx_hash
+      ,topic1
+      ,topic2
+      ,topic3
+      ,data
+      
+      from
+      ethereum.logs
+    where
+    tx_hash = '\x2bb7c8283b782355875fa37d05e4bd962519ea294678a3dcf2fdffbbd0761bc5'
+    ```
+
+=== "SparkSQL"
+
+    ```sql
+    Select
+      tx_hash
+      ,topic1
+      ,topic2
+      ,topic3
+      ,data
+      
+      from
+      ethereum.logs
+    where
+      1=1
+      and tx_hash = '0x2bb7c8283b782355875fa37d05e4bd962519ea294678a3dcf2fdffbbd0761bc5'
+      and block_numer = 15145909
+    ```
 
 **Result:**
 
@@ -83,17 +135,35 @@ Using the contract's ABI we can convert this encoded bytecode to decoded data.
 The event log we are looking at here is from the $PICKLE ERC20 token `transfer` event log.\
 Since this table is decoded on Dune, we can query the `pickle_finance."PickleToken_evt_Transfer"` table in Dune to receive the decoded information.
 
-```sql
-Select
-  tx_hash,
-  "from",
-  "to",
-  value
-from
-  pickle_finance."PickleToken_evt_Transfer"
-where
-  tx_hash = '\x2bb7c8283b782355875fa37d05e4bd962519ea294678a3dcf2fdffbbd0761bc5'
-```
+=== "PostgreSQL"
+
+    ```sql
+    Select
+      tx_hash,
+      "from",
+      "to",
+      value
+    from
+      pickle_finance."PickleToken_evt_Transfer"
+    where
+      tx_hash = '\x2bb7c8283b782355875fa37d05e4bd962519ea294678a3dcf2fdffbbd0761bc5'
+    ```
+
+=== "SparkSQL"
+
+    ```sql
+    Select
+      tx_hash,
+      "from",
+      "to",
+      value
+    from
+      pickle_finance_ethereum.PickleToken_evt_Transfer
+    where
+      1=1
+      and tx_hash = '0x2bb7c8283b782355875fa37d05e4bd962519ea294678a3dcf2fdffbbd0761bc5'
+      and block_numer = 15145909
+    ```
 
 **Result:**
 
@@ -115,7 +185,7 @@ Transfer(address from, address to, uint256 value)
 
 This basically tells us that topic2 and topic3 are of the type `address`(32bytes) and are respectively the sender and recipient of the token transfer. An event log only has 3 indexed fields, so the `data` field is used to store the information about how much units of the token have been moved in this transaction. This field is called `value`.
 
-Since `topic1` always is just the Keccak-256 hash of the signature of the event, we are left with decoding `topic2`, `topic3` and `data`.\\
+Since `topic1` always is just the Keccak-256 hash of the signature of the event, we are left with decoding `topic2`, `topic3` and `data`.
 
 In this case, they map out like this:
 
@@ -152,12 +222,31 @@ Working with decoded data allows you deep access to information stored on the bl
 
 **See all projects we have decoded data for**
 
-```sql
-SELECT DISTINCT namespace FROM ethereum."contracts";
-```
+=== "PostgreSQL"
+
+    ```sql
+    SELECT DISTINCT namespace FROM ethereum."contracts";
+    ```
+
+=== "SparkSQL"
+
+    ```sql
+    SELECT DISTINCT namespace FROM blockchain.contracts;
+    --change blockchain.contracts to e.g. ethereum.contracts
+    ```
 
 If you are working with a an event or call table directly you can see if there are several instances of that contract with this query.
 
-```sql
-SELECT DISTINCT contract_address FROM projectname."contractName_evt_eventName";
-```
+=== "PostgreSQL"
+
+    ```sql
+    SELECT DISTINCT contract_address FROM projectname."contractName_evt_eventName";
+    ```
+
+=== "SparkSQL"
+
+    ```sql
+    SELECT DISTINCT contract_address 
+    FROM projectname_blockchain.contractName_evt_eventName;
+    --change blockchain.contracts to e.g. ethereum.contracts
+    ```
