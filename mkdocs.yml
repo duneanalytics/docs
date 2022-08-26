@@ -1,5 +1,5 @@
 site_name: Dune Docs
-site_url: https://dune-mkdocs-material.vercel.app/
+site_url: https://dune-docs.vercel.app/
 repo_url: https://github.com/duneanalytics/docs
 theme:
   language: en
@@ -46,5 +46,12 @@ plugins:
   - mkdocs-video
 extra:
   generator: false
+  alternate:
+    - name: English
+      link: /
+      lang: en
+    - name: Chinese (Simplified)
+      link: https://docs.dune.com/v/chinese/
+      lang: zh
 extra_css:
   - stylesheets/extra.css
