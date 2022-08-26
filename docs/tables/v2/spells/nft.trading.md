@@ -12,6 +12,4 @@ description: >-
 
 The culmination of this is a dataset which makes it extremely easy to query for any NFT related trading data across all indexed platforms.
 
-**You can find the specifications for nft.trades on our dbt documentation:**
-
-{% embed url="https://spellbook-docs.dune.com/#!/model/model.spellbook.nft_trades" %}
+You can find the specifications for nft.trades on our [Spellbook documentation](https://spellbook-docs.dune.com/#!/model/model.spellbook.nft_trades).
