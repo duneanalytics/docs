@@ -8,10 +8,6 @@ Arbitrum is an optimistic rollup that settles it's transactions on Ethereum Main
 
 Arbitrum's execution environment differs from the Mainnet EVM implementation in it's calculation of gas costs. Since Arbitrum is an optimistic rollup that publishes it's transaction on Ethereum Mainnet, the gas calculations have to account for additional factors.
 
-{% embed url="https://developer.offchainlabs.com/docs/inside_arbitrum" %}
-Arbitrum Documentation
-{% endembed %}
-
 ## Gas costs for L1
 
 Transactions on Arbitrum have to pay for both L1 and L2 resources. The L1 resources are essentially just Ethereum calldata; i.e., you pay the size in raw data of your transaction times Arbitrum's view of the L1 calldata price. This already factors in L1's fluctuating gas prices. The L2 resources in a given transaction are the natively emerging costs for computation and storage that you invoke with your transaction, similar to any other EVM.
@@ -65,18 +61,9 @@ That being said, you can't compare Arbitrum's gas consumption to other EVM chain
 
 ### Raw data tables
 
-{% content-ref url="blocks.md" %}
-[blocks.md](blocks.md)
-{% endcontent-ref %}
-
-{% content-ref url="transactions.md" %}
-[transactions.md](transactions.md)
-{% endcontent-ref %}
-
-{% content-ref url="event-logs.md" %}
-[event-logs.md](event-logs.md)
-{% endcontent-ref %}
-
-{% content-ref url="traces.md" %}
-[traces.md](traces.md)
-{% endcontent-ref %}
+<div class="cards grid" markdown>
+- [Blocks](blocks.md)
+- [Transactions](transactions.md)
+- [Event logs](event-logs.md)
+- [Traces](traces.md)
+</div>

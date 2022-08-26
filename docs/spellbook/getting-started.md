@@ -15,7 +15,7 @@ Build your spell. At minimum, you'll need to:
 - [Write your spell](reference/spell-sql/) as a SQL select statement with Jinja templating
 - Write a schema in a separate YAML file
 
-To learn more about all the features in DBT, take a look at their [documentation](https://docs.getdbt.com/docs/introduction).
+To learn more about all the features in DBT, take a look at their [documentation](https://docs.getdbt.com/docs/introduction). We've written a few [example](examples) guides for building spells for ERC20.
 
 !!! tip
     As you go along, you can use `dbt compile` to generate a SQL statement, and [validate it](reference/validation.md) on dune.com in the query editor.

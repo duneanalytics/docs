@@ -1,4 +1,4 @@
-# Spell SQL
+# Examples
 
 How to write your spell as a select statement.
 

@@ -10,22 +10,11 @@ Since it's inception in 2015, Ethereum has undergone a range of updates.
 
 Explaining the Ethereum history, Roadmap and technical details goes beyond the scope of this documentation, therefore we encourage you to read the Documentation on [Ethereum.org](https://ethereum.org/en/developers/docs/).
 
-{% embed url="https://ethereum.org/en/developers/docs/" %}
-
 ### Raw data tables
 
-{% content-ref url="blocks.md" %}
-[blocks.md](blocks.md)
-{% endcontent-ref %}
-
-{% content-ref url="transactions.md" %}
-[transactions.md](transactions.md)
-{% endcontent-ref %}
-
-{% content-ref url="event-logs.md" %}
-[event-logs.md](event-logs.md)
-{% endcontent-ref %}
-
-{% content-ref url="traces.md" %}
-[traces.md](traces.md)
-{% endcontent-ref %}
+<div class="cards grid" markdown>
+- [Blocks](blocks.md)
+- [Transactions](transactions.md)
+- [Event logs](event-logs.md)
+- [Traces](traces.md)
+</div>

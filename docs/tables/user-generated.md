@@ -13,7 +13,7 @@ description: >-
 
 **Always save the constructor arguments for your views. Sometimes we have to drop views in order to be able to change some decoding tables or proxy dependencies and you might have to redeploy your view.**
 
-## Usecases
+## Use Cases
 
 There is several ways in which you can utilize your own views and tables inside of Dune to make working with your data on Dune even easier.
 
