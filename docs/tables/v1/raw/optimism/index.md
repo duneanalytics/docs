@@ -26,7 +26,7 @@ $$
 L1\ Fee = Fee\ Scalar * L1\ Gas\ Price * L1\ Gas\ Used
 $$
 
-`L1 Fee Scalar` is a variable that can be increased/decreased by the Optimism Team. It ensures that the gas costs for L1 are sufficiently covered and provides income to the Optimism Team. `L1 Gas Price` is an estimation of the gas price on Mainnet.&#x20;
+`L1 Fee Scalar` is a variable that can be increased/decreased by the Optimism Team. It ensures that the gas costs for L1 are sufficiently covered and provides income to the Optimism Team. `L1 Gas Price` is an estimation of the gas price on Mainnet.
 
 `L1 Gas used` **breaks down to:**
 
@@ -42,7 +42,7 @@ $$
 
 You can read more about Optimism Gas Costs and the approach to minimize them in [this article](https://help.optimism.io/hc/en-us/articles/4411895794715-Transaction-fees).
 
-### TL;DR&#x20;
+### TL;DR
 
 To calculate gas costs for a transaction on Optimism you need to follow this formula:
 

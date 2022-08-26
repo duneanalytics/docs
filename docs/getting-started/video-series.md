@@ -1,6 +1,6 @@
 # Video Series
 
-We have produced a video tutorial series on our [Youtube Channel](https://www.youtube.com/channel/UCPrm9d2hLd\_YxSExH7oRyAg).&#x20;
+We have produced a video tutorial series on our [Youtube Channel](https://www.youtube.com/channel/UCPrm9d2hLd\_YxSExH7oRyAg).
 
 !!! note
     These Videos all reference DuneV1, while the domain learnings are still applicable, query execution is different in V2.

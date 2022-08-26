@@ -8,7 +8,7 @@ description: >-
 
 You can use embeds to share Dune's visualizations on Twitter.
 
-Twitter will render the visualizations automatically and they will update automatically  as time progresses.&#x20;
+Twitter will render the visualizations automatically and they will update automatically  as time progresses.
 
 Definitely a better experience compared to static screenshots!
 

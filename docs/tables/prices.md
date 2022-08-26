@@ -6,7 +6,7 @@ description: These tables allow you to get the price of almost all relevant erc2
 
 ### Prices from third party data providers <a href="#centralised-exchanges-trading-data" id="centralised-exchanges-trading-data"></a>
 
-We pull price data from the [coinpaprika ](https://coinpaprika.com/)and [coingecko](https://www.coingecko.com/) APIs.
+We pull price data from the [coinpaprika](https://coinpaprika.com/) API.
 
 The Price is the volume-weighted price based on real-time market data, translated to USD.
 
@@ -14,7 +14,7 @@ The Price is the volume-weighted price based on real-time market data, translate
 
 This table supports a range of erc20.tokens.
 
-If the token you desire is not listed in here, please make a pull request to our [github repository](https://github.com/duneanalytics/abstractions/tree/master/prices) **** or use the decentralized price feed **dex.view\_token\_prices.**
+If the token you desire is not listed in here, please make a pull request to our [github repository](https://github.com/duneanalytics/spellbook). (For V1 Engine, you can alsouse the decentralized price feed **dex.view\_token\_prices.**)
 
 | <p></p><p><strong>column name</strong></p> | **description**                               |
 | ------------------------------------------ | --------------------------------------------- |

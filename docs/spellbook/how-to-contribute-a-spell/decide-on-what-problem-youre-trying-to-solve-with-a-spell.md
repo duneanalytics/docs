@@ -10,9 +10,9 @@ The benefits of building a spell are:
 * **Improved clarity on metrics.** There are often a few ways a metric can be calculated. If everyone builds their version, it’s difficult to determine the source of truth, and time is wasted hunting down the inconsistencies. Spells are built in a completely transparent fashion on a public Github repo which means the community can work to agree upon implementations.
 * **Simplicity and developer experience.** Who wants to write the same query over and over again? Automate the boring and focus on novel analysis. [DRY](https://www.softwareyoga.com/is-your-code-dry-or-wet/) applies to SQL as much as it does to other programming languages.
 
-Some signs it’s time to make a spell:&#x20;
+Some signs it’s time to make a spell:
 
-* &#x20;When you have multiple queries that include the same subquery.&#x20;
-* You’re copying long(ish) lists of static values between queries.&#x20;
-* The query has been forked or copied many times.&#x20;
+* When you have multiple queries that include the same subquery.
+* You’re copying long(ish) lists of static values between queries.
+* The query has been forked or copied many times.
 * Your query contains complex logic that you’d like to use elsewhere or that others might benefit from.

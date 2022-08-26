@@ -10,7 +10,7 @@ For more on this topic read [this article](https://medium.com/mycrypto/understan
 
 
 
-**Note: Our topic index is off by 1, so `topic0` shows up as `topic1`, `topic1` shows up as `topic2` and so on.**&#x20;
+**Note: Our topic index is off by 1, so `topic0` shows up as `topic1`, `topic1` shows up as `topic2` and so on.**
 
 | **Column Name**   | **datatype** | **Description**                                                                                              |
 | ----------------- | ------------ | ------------------------------------------------------------------------------------------------------------ |

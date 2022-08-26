@@ -4,7 +4,7 @@ Our base table records the transfer amount to and from an account. To make it ea
 
 Additionally, WETH requires special handling given the additional functions of deposit and withdrawal. This means we need to add `zeroex_ethereum.weth9_evt_deposit` as a source like we did for `erc20_ethereum.evt_transfer` above.
 
-Similar to a source, the model is defined in a YAML file. This is where things like the description, tests, and metadata are defined. This is also where we track “contributors”. So make sure you get your clout and add your handle when writing or editing a spell. Then you’ll be credited for your contribution in the [documentation](https://spellbook-docs.dune.com/#!/overview).&#x20;
+Similar to a source, the model is defined in a YAML file. This is where things like the description, tests, and metadata are defined. This is also where we track “contributors”. So make sure you get your clout and add your handle when writing or editing a spell. Then you’ll be credited for your contribution in the [documentation](https://spellbook-docs.dune.com/#!/overview).
 
 In the JINJA config block, we define that the alias for this view is `erc20`. Without this alias, the table name would default to the file name. The schema name for this view is defined in the [dbt\_project.yml](https://github.com/duneanalytics/abstractions/blob/master/spellbook/dbt\_project.yml) file in the root of the spellbook project. Schema’s are defined there by the directory structure. The name of this view would be transfers\_ethereum.erc20 given the current structure.
 

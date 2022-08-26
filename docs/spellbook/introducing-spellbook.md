@@ -4,7 +4,7 @@ description: Spells transform blockchain data into easy to use tables for all an
 
 # 🪄 Introducing Spellbook
 
-## New level unlocked.&#x20;
+## New level unlocked.
 
 We’ve updated our database and now it’s time to update our contribution tools.
 
@@ -30,7 +30,7 @@ dbt natively understands the dependencies between all models. In our old abstrac
 
 We hope you are as excited as we are about this new tool. Spellbook is now live in prod and we welcome new contributors.
 
-#### Continue reading here to learn how to cast a spell into our github repo:&#x20;
+#### Continue reading here to learn how to cast a spell into our github repo:
 
 <div class="cards grid" markdown>
 - [How to contribute a spell](how-to-contribute-a-spell/)

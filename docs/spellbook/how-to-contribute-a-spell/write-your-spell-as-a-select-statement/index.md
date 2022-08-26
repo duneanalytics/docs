@@ -8,10 +8,10 @@ The basic trade-off is that a view is fast to create and doesn’t require addit
 
 In our case, we have broken down the spell into a more modular series of spells.
 
-1\) A reformatted transfers table.&#x20;
+1\) A reformatted transfers table.
 
-2\) A daily aggregation of transfers.&#x20;
+2\) A daily aggregation of transfers.
 
-3\) Rolling sum of daily transfers.&#x20;
+3\) Rolling sum of daily transfers.
 
 4\) Final daily Ethereum ERC20 token balances spell
