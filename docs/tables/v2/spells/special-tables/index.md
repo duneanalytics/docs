@@ -6,14 +6,8 @@ When we’re interested in a subset of events logs fired regardless of the origi
 
 You can read more about the individual token standards and the tables here:
 
-{% content-ref url="erc20.md" %}
-[erc20.md](erc20.md)
-{% endcontent-ref %}
-
-{% content-ref url="erc721.md" %}
-[erc721.md](erc721.md)
-{% endcontent-ref %}
-
-{% content-ref url="erc1155.md" %}
-[erc1155.md](erc1155.md)
-{% endcontent-ref %}
+<div class="cards grid" markdown>
+- [ERC-20](erc20.md)
+- [ERC-721](erc721.md)
+- [ERC-1155](erc1155.md)
+</div>
