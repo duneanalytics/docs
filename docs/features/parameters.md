@@ -80,17 +80,17 @@ Find this query [here](https://dune.com/queries/64430/128463)
 
 ## **Example Dashboards**
 
-**Find interesting stats on Ethereum Wallets with this dashboard:**\
+**Find interesting stats on Ethereum Wallets with this dashboard:**
 [https://dune.com/kevdnlol/Transaction-Breakdown](https://dune.com/kevdnlol/Transaction-Breakdown)
 
 _The author has included the parameters `wallet address`, `start date` and `end date` in this Dashboard._
 
-**Drill down into the single pools of Barnbridge's Smart Yield Product:**\
+**Drill down into the single pools of Barnbridge's Smart Yield Product:**
 [https://dune.com/0xBoxer/Barnbridge-or-Smart-Yield](https://dune.com/0xBoxer/Barnbridge-or-Smart-Yield)
 
 _The Author has chosen to make the parameter `poolsymbol` into a drop down list here. This allows for easy access to all the relevant pools and detailed statistics on those._
 
-**Find out how many people are participating in Yearn Vaults:**\
+**Find out how many people are participating in Yearn Vaults:**
 [https://dune.com/msilb7/Yearn-How-Many-Addresses-are-Participating](https://dune.com/msilb7/Yearn-How-Many-Addresses-are-Participating)
 
 [https://dune.com/0xrusowsky/KLIMA-Wallet-Activity](https://dune.com/0xrusowsky/KLIMA-Wallet-Activity)
@@ -101,5 +101,6 @@ _The Author has chosen to make the parameter `poolsymbol` into a drop down list 
 
 ## Summary
 
-Parameters allow you to make a certain part of your SQL query dynamic and thereby offer you to make queries and dashboards interactive. That way you can easily display detailed data on your dashboard since it allows the viewer to customize the dashboard for his needs.\
+Parameters allow you to make a certain part of your SQL query dynamic and thereby offer you to make queries and dashboards interactive. That way you can easily display detailed data on your dashboard since it allows the viewer to customize the dashboard for his needs.
+
 You could think of parameters like filters, but the possibilities of using this feature go beyond that.

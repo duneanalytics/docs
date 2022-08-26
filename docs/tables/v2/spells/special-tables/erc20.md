@@ -50,7 +50,8 @@ event Approval(address indexed _owner, address indexed _spender, uint256 _value)
 
 ### Tables on Dune
 
-In Dune, we decode all transfer events across all smart contracts that use the ERC20 token standard into the `erc20_blockchain.ERC20_evt_Transfer` table.\
+In Dune, we decode all transfer events across all smart contracts that use the ERC20 token standard into the `erc20_blockchain.ERC20_evt_Transfer` table.
+
 Additionally, we parse all token approval events into the `erc20_blockchain.ERC20_evt_Approval` table.
 
 #### erc20\_blockchain.ERC20\_evt\_Transfer

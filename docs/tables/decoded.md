@@ -141,7 +141,8 @@ If we query for this transaction in the `ethereum.logs` table in the dune databa
 
 Using the contract's ABI we can convert this encoded bytecode to decoded data.
 
-The event log we are looking at here is from the $PICKLE ERC20 token `transfer` event log.\
+The event log we are looking at here is from the $PICKLE ERC20 token `transfer` event log.
+
 Since this table is decoded on Dune, we can query the `pickle_finance."PickleToken_evt_Transfer"` table in Dune to receive the decoded information.
 
 === "PostgreSQL"

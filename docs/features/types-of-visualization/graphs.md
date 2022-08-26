@@ -17,7 +17,8 @@ description: Graphs are good for condensing data points into a visualization.
 * scatter charts
 * line charts
 
-You can mix all of these graph types together in one visualization\*\*.\*\*\\
+You can mix all of these graph types together in one visualization\*\*.\*\*\
+
 
 ***
 

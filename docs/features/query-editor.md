@@ -24,11 +24,12 @@ To learn more about Dune's datasets, please visit the [section datasets](/tables
 
 ![Data explorer](images/data-explorer.gif)
 
-You can simply put in any keywords, protocol names, contract names or anything else into the search bar at the top to filter the list of available datasets down to only those you might need at that moment.\
+You can simply put in any keywords, protocol names, contract names or anything else into the search bar at the top to filter the list of available datasets down to only those you might need at that moment.
+
 The search bar also accepts spaces, that way you can construct a multi keyword search.
 
 
-Let's explore a few examples of querying for tables to further elaborate on this:\
+Let's explore a few examples of querying for tables to further elaborate on this:
 
 Searching for `uniswap_v2.` \_\_ will bring up all tables related to _the_ `uniswap_v2` _schema_
 

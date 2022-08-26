@@ -4,7 +4,8 @@ description: Project Dashboards are a great way to track the metrics of your pro
 
 # Project Dashboards
 
-**Project Dashboard allow you to easily assemble data on your favorite project in one place.**\
+**Project Dashboard allow you to easily assemble data on your favorite project in one place.**
+
 **Without having to maintain infrastructure or overhead, you can simply query for the data you desire and assemble it on a Dashboard to make a Datahub for your project Reality.**
 
 **Let's explore this with an example:**
