@@ -63,7 +63,7 @@ Ether transfers and most ERC-20 tokens have 18 decimal places. To get a more hum
     transfer_value / 10^erc20.tokens.decimals
     ```
 
-=== "SparkSQL"
+=== "Databricks SQL"
 
     ```sql
     transfer_value / x*power(10,y)` or `transfer_value / x*1e*y
@@ -101,7 +101,7 @@ Therefore you often want to use the token symbol instead. Simply join the table 
 
     **NB** The `erc20.tokens` table cointains a selection of popular tokens. If you are working with more obscure tokens you should be careful with joining with this table because tokens that are not in the coincap table might be excluded from your results.
 
-=== "SparkSQL"
+=== "Databricks SQL"
 
     **NB** The `tokens_blockchain.erc20` table cointains a selection of popular tokens. If you are working with more obscure tokens you should be careful with joining with this table because tokens that are not in the coincap table might be excluded from your results.
 

@@ -20,7 +20,7 @@ You can find out about the individual chains in the specific sections of the doc
 
 <div class="cards grid" markdown>
 - [V1 Engine](v1/raw) (PostgreSQL)
-- [V2 Engine](v2/raw) (SparkSQL)
+- [V2 Engine](v2/raw) (Databricks SQL)
 </div>
 
 

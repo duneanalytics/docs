@@ -14,7 +14,7 @@ We have compiled a few resources that we think are helpful in your journey to be
 
 [Mode SQL Tutorial](https://mode.com/sql-tutorial/) (FREE)
 
-**General SparkSQL Tutorials**
+**General Databricks SQL Tutorials**
 
 <div class="cards grid" markdown>
 - [Coursera Learn Spark SQL](https://www.coursera.org/learn/spark-sql)

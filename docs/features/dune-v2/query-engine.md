@@ -35,7 +35,7 @@ If you have found any other changes that are important to note, please feel free
 When googling for SQL questions, instead of googling `PGSQL median`, you should now google for `Databricks SQL median`. Databricks has a well documented index of built in functions on their website.
 
 <div class="cards grid" markdown>
-- [Databricks - SparkSQL Language Reference](https://docs.databricks.com/sql/language-manual/sql-ref-functions-builtin.html)
+- [Databricks - Databricks SQL Language Reference](https://docs.databricks.com/sql/language-manual/sql-ref-functions-builtin.html)
 </div>
 
 ### Changes in how the database works

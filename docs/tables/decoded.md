@@ -14,7 +14,7 @@ The tables are named accordingly:
 
     As an example, decoded data for the `swap`-event of the uniswap V2 pair contract is found in the table [`uniswap_v2."pair_swap"`](https://dune.com/queries/38968).
 
-=== "SparkSQL"
+=== "Databricks SQL"
 
     **events:** `projectname_blockchain.contractName_evt_eventName`
 
@@ -35,7 +35,7 @@ Since all chain's data resides in one database, but the multichain world is a re
     - [Event logs](v1/decoded/event-logs.md)
     </div>
 
-=== "SparkSQL"
+=== "Databricks SQL"
 
     <div class="cards grid" markdown>
     - [Call tables](v2/decoded/call-tables.md)
@@ -53,7 +53,7 @@ Since all chain's data resides in one database, but the multichain world is a re
     where address = '\x429881672B9AE42b8EbA0E26cD9C73711b891Ca5'
     ```
 
-=== "SparkSQL"
+=== "Databricks SQL"
 
     You can check if contracts are already decoded by querying _`blockchain.`_`contracts` tables.
 
@@ -113,7 +113,7 @@ If we query for this transaction in the `ethereum.logs` table in the dune databa
     tx_hash = '\x2bb7c8283b782355875fa37d05e4bd962519ea294678a3dcf2fdffbbd0761bc5'
     ```
 
-=== "SparkSQL"
+=== "Databricks SQL"
 
     ```sql
     Select
@@ -158,7 +158,7 @@ Since this table is decoded on Dune, we can query the `pickle_finance."PickleTok
       tx_hash = '\x2bb7c8283b782355875fa37d05e4bd962519ea294678a3dcf2fdffbbd0761bc5'
     ```
 
-=== "SparkSQL"
+=== "Databricks SQL"
 
     ```sql
     Select
@@ -237,7 +237,7 @@ Working with decoded data allows you deep access to information stored on the bl
     SELECT DISTINCT namespace FROM ethereum."contracts";
     ```
 
-=== "SparkSQL"
+=== "Databricks SQL"
 
     ```sql
     SELECT DISTINCT namespace FROM blockchain.contracts;
@@ -252,7 +252,7 @@ If you are working with a an event or call table directly you can see if there a
     SELECT DISTINCT contract_address FROM projectname."contractName_evt_eventName";
     ```
 
-=== "SparkSQL"
+=== "Databricks SQL"
 
     ```sql
     SELECT DISTINCT contract_address 
