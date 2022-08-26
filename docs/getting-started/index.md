@@ -1,7 +1,5 @@
 # Getting started
 
-## How to get started
-
 **Dune is made for technical and non-technical users alike.**
 
 Whether you are a seasoned SQL developer or just starting out, you can use our platform to start analyzing Blockchain data in an instant.
