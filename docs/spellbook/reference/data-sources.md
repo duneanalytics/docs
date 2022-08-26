@@ -1,14 +1,6 @@
 # Data sources
 
-How to identify the required raw and decoded tables (henceforth sources) needed.
-
-As an example, we'll look at ERC-20. [ERC-20](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/) tokens are fungible tokens that all follow a contract standard set by the Ethereum Foundation. To track daily balances, we need to first identify the transfers.
-
-The main base Dune table we’ll use for this purpose is `erc20_ethereum.evt_Transfer` which you can find via the data explorer.a
-
-![type:video](https://www.loom.com/embed/198148674ded4f5e944f65452852482b)
-
-Then, in the Spellbook project, the source must be defined in a YAML file. We define this source in [base\_sources/ethereum\_base\_sources.yml.](https://github.com/duneanalytics/spellbook/blob/master/spellbook/models/base\_sources/ethereum\_base\_sources.yml) Once a source has been defined it does not need to be defined again.
+In the Spellbook project, the source (i.e. raw and decoded tables your spell depends on) must be defined in a YAML file. Once a source has been defined it does not need to be defined again.
 
 Defining a source can be as simple as adding its schema and name. But to harness the full power of the tool, we’ll also want to define tests, freshness checks, and add column descriptions.
 
@@ -75,6 +67,6 @@ sources:
           description: "Amount of ERC20 token transferred" 
 ```
 
-These descriptions are rendered in the docs by dbt. Locally, you can open them by running `dbt docs generate` and `dbt docs serve` from your CLI in the spellbook directory. Soon they will be hosted on dune.com for all wizards to use.
+These descriptions are rendered in the docs by dbt. Locally, you can open them by running `dbt docs generate` and `dbt docs serve` from your CLI in the spellbook directory. They are automatically deployed as our [Spellbook docs](https://spellbook-docs.dune.com/#!/overview).
 
 ![dbt documentation page](https://lh6.googleusercontent.com/vr9DleUs\_HcdzMZ6mWq81l-IRq1C\_utHCVB5WddOHy9Z1\_fSyz8GcB8Cyj877nKNHsXLh3K3-owFssNIl4ZaJS27clEeBppHBi8DlNjzVKGeGZdF\_AE8VxRj0pziR-2jGTA-MED7OtTq3GhuwQM)

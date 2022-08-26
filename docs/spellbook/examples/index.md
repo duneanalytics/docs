@@ -1,14 +1,11 @@
 # Examples
 
-How to write your spell as a select statement.
+As an example, we'll look at ERC-20. [ERC-20](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/) tokens are fungible tokens that all follow a contract standard set by the Ethereum Foundation. To track daily balances, we need to first identify the transfers.
 
-Everything in a `.sql` file should solely consist of a `select` statement. You don’t need to specify `create view` or `create table`. [Materialization strategies](https://docs.getdbt.com/docs/building-a-dbt-project/building-models/materializations) are handled by JINJA blocks or by the YAML schema file for the model.
+The main base Dune table we’ll use for this purpose is `erc20_ethereum.evt_Transfer` which you can find via the data explorer.
+![type:video](https://www.loom.com/embed/198148674ded4f5e944f65452852482b)
 
-Models will (by default) be views but we can override that to make them tables or incrementally loaded tables.
-
-The basic trade-off is that a view is fast to create and doesn’t require additional storage but is slower to query. A table is much slower to create and does require additional storage but is faster to query. Generally, we’ll try to stick to views but upgrade to tables or incrementally loaded tables if performance is an issue.
-
-In our case, we have broken down the spell into a more modular series of spells for ERC 20 transfers:
+In our case, we have broken down the spell into a more modular series of spells:
 
 - [Reformatted](reformatted.md) transfers
 - [Daily aggregation](daily-aggregation.md) of transfers

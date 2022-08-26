@@ -1,6 +1,6 @@
 nav:
 - data-modelling.md
 - data-sources.md
-- testing.md
-- validation.md
+- tests.md
+- spells.md
 - submissions.md

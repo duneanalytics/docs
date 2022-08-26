@@ -8,17 +8,17 @@ To start with, clone the [Spellbook](https://github.com/duneanalytics/spellbook)
 
 Decide what problem you're trying to solve. Think about the [data model](reference/data-modelling.md).
 
-Build your spell. At minimum, you'll need to:
+Write your spell. At minimum, you'll need to:
 
 - Reference your [data sources](reference/data-sources.md), with tests and freshness checks
-- Define a unit [test](reference/testing.md) for your spell
-- [Write your spell](reference/spell-sql/) as a SQL select statement with Jinja templating
+- Define a unit [test](reference/tests.md) for your spell
+- [Write your spell](reference/spells.md) as a SQL select statement with Jinja templating
 - Write a schema in a separate YAML file
 
 To learn more about all the features in DBT, take a look at their [documentation](https://docs.getdbt.com/docs/introduction). We've written a few [example](examples) guides for building spells for ERC20.
 
 !!! tip
-    As you go along, you can use `dbt compile` to generate a SQL statement, and [validate it](reference/validation.md) on dune.com in the query editor.
+    As you go along, you can use `dbt compile` to generate a SQL statement, and validate it on dune.com in the query editor.
 
 Once you're happy with your spell, you can [submit it to Dune](reference/submissions.md):
 
