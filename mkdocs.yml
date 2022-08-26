@@ -2,6 +2,7 @@ site_name: Dune Docs
 site_url: https://dune-mkdocs-material.vercel.app/
 repo_url: https://github.com/duneanalytics/docs
 theme:
+  language: en
   name: material
   logo: images/dune-icon-only.png
   favicon: images/dune-icon-only.png
@@ -24,6 +25,13 @@ extra:
       link: https://discord.com/invite/ErrzwBz
     - icon: fontawesome/brands/github 
       link: https://github.com/duneanalytics
+  alternate:
+    - name: English
+      link: /en/ 
+      lang: en
+    - name: Chinese (Simplified)
+      link: /zh/
+      lang: zh
 markdown_extensions:
   - admonition
   - pymdownx.highlight:
