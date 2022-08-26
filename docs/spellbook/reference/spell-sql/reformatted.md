@@ -1,4 +1,4 @@
-# A reformatted transfers table.
+# Reformatted transfers
 
 Our base table records the transfer amount to and from an account. To make it easier to sum of transfers, we munge this into a union of sent txns and received txns.
 

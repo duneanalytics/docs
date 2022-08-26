@@ -1,9 +1,0 @@
-nav:
-- index.md
-- decide-on-what-problem-youre-trying-to-solve-with-a-spell.md
-- identify-the-required-raw-and-decoded-tables-henceforth-sources-needed.md
-- define-a-unit-test-for-your-spell.md
-- write-your-spell-as-a-select-statement
-- run-your-spell-on-dune.com.md
-- fork-of-the-abstractions-github-repo-open-a-pull-request.md
-- dune-will-merge-and-deploy.md

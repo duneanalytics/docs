@@ -1,4 +1,4 @@
-# A daily aggregation of transfers
+# Daily Aggregation
 
 This sums all transfers for the day. This table is materialized as an incrementally loaded table updated every 15 minutes because the next step includes a slower \`[window](https://spark.apache.org/docs/latest/sql-ref-syntax-qry-select-window.html)\` function to capture a rolling sum.
 

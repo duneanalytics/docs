@@ -2,9 +2,9 @@
 description: Spells transform blockchain data into easy to use tables for all analysts!
 ---
 
-# 🪄 Introducing Spellbook
+# Introduction
 
-## New level unlocked.
+**New level unlocked.**
 
 We’ve updated our database and now it’s time to update our contribution tools.
 

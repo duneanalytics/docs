@@ -1,4 +1,6 @@
-# 🧪 Define a unit test for your spell.
+# Testing
+
+How to define a unit test for your spell.
 
 Writing a [test](https://docs.getdbt.com/docs/building-a-dbt-project/tests) before I write my spell? What is this software engineering? Is this language even Turing Complete?!
 

@@ -1,4 +1,4 @@
-# Final daily Ethereum ERC20 token balances spell
+# Final daily balance
 
 This is our final daily Ethereum ERC20 token balances spell. We expand our spell to cover all days, not just the days with transfer activity. We add price data, we remove known rebase tokens and any tokens that resulted in large negative balances.
 

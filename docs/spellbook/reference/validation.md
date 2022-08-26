@@ -1,4 +1,6 @@
-# 🏃♀ Run your spell on dune.com
+# Validation
+
+How to run your spell on dune.com.
 
 Copy your spell from the target folder and try running it on dune.com in a new query window.
 
