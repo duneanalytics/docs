@@ -4,7 +4,7 @@ This is our final daily Ethereum ERC20 token balances spell. We expand our spell
 
 The ref tokens\_ethereum\_rebase is a static list of known rebase tokens that we manage. Whereas, the ref `'balances_ethereum_erc20_noncompliant'` is a table we derive from transfers\_ethereum\_erc20\_rolling\_day. That table looks for unique token\_addresses with larger negative balances which indicate the contract may not be compliant with ERC20.
 
-[balances\_ethereum\_erc20\_day.sql](https://github.com/duneanalytics/abstractions/blob/master/spellbook/models/balances/ethereum/erc20/balances\_ethereum\_erc20\_day.sql)
+[balances\_ethereum\_erc20\_day.sql](https://github.com/duneanalytics/spellbook/blob/master/spellbook/models/balances/ethereum/erc20/balances\_ethereum\_erc20\_day.sql)
 
 ```sql
 {{ config(
@@ -58,7 +58,7 @@ WHERE r.contract_address is null
 and nc.token_address is null
 ```
 
-[transfers\_ethereum\_schema.yml](https://github.com/duneanalytics/abstractions/blob/master/spellbook/models/transfers/ethereum/transfers\_ethereum\_schema.yml)
+[transfers\_ethereum\_schema.yml](https://github.com/duneanalytics/spellbook/blob/master/spellbook/models/transfers/ethereum/transfers\_ethereum\_schema.yml)
 
 ```yaml
   - name: balances_ethereum_erc20_day

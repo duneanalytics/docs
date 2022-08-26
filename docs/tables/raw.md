@@ -6,11 +6,11 @@ This allows you to query for any transaction, block, event log or trace across t
 
 Additionally, with a few tricks and a few tricks, you can actually gain substantial insights into systems of smart contracts using the encoded data. [Alex Kroeger](https://twitter.com/alex\_kroeger) wrote [a great article](https://alexkroeger.mirror.xyz/0C3EQBtFqAK4k2TAGPZhg0JMY-upfTAxuTD-o91vBPc) about this exact topic.
 
-We have a several [SQL functions](https://github.com/duneanalytics/abstractions/tree/master/ethereum/public) in our database that allow you to more easily work with encoded data.
+We have a several [SQL functions](https://github.com/duneanalytics/spellbook/tree/master/ethereum/public) in our database that allow you to more easily work with encoded data.
 
 However, queries that have been written using raw data tables are notoriously hard to understand and audit due to the nature of the the encoded data commonly found in these tables. Furthermore, the raw data tables have a very large number of rows and hence can be slow to query.
 
-Most of the time you are better off [submitting contracts for decoding](../../../features/adding-new-contracts.md) and working with [decoded data](../decoded-data/).
+Most of the time you are better off [submitting contracts for decoding](/features/adding-new-contracts.md) and working with [decoded data](../decoded-data/).
 
 ### Differences in EVM chains
 

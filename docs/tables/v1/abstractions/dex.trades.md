@@ -13,7 +13,7 @@ Decentralized exchanges are the beating heart of the industry. You can swap any 
 
 This table standardizes and normalizes the trading data across virtually all relevant decentralized exchanges. This in turn allows you to easily query for trading data for your favorite tokens without having to deal with all of the different dex smart contracts yourself.
 
-The scripts that generate the table dex.trades can be found in this [public github](https://github.com/duneanalytics/abstractions/tree/master/ethereum/dex) repo.
+The scripts that generate the table dex.trades can be found in this [public github](https://github.com/duneanalytics/spellbook/tree/master/ethereum/dex) repo.
 
 ### dex.trades
 

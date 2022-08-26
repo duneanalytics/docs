@@ -65,7 +65,7 @@ A trade occurs between a `buyer`and a `seller`.\
 They exchange an item which is uniquely identified by the combination of `nft_contract_address` and `token_id`. The Buyer will pay the Seller a given `original_amount`of tokens in any given `original_currency`. To make it easier, we have calculated the `usd_amount` that this was worth at the time of the trade for you. Most trades will be done in ETH or WETH, but especially non OpenSea trades often contain other currencies.\
 The trade is committed on any of the indexed `platforms`and will be facilitated through a smart contract of those platform's `exchange_contract_address`. Each trade will have metadata like `block_time`, `tx_hash`_,_ `block_number`, `platform version`, `evt_index` etc.\
 \
-Additionally, we also provide metadata about the traded NFT. `nft_project_name` and `erc_standard` will help you in analysing your dataset more easily. `nft_project_name` data gets pulled from the `nft.tokens` [table](https://github.com/duneanalytics/abstractions/blob/master/ethereum/nft/tokens.sql), if your NFT is missing in that table, you are welcome to make a PR to add it.
+Additionally, we also provide metadata about the traded NFT. `nft_project_name` and `erc_standard` will help you in analysing your dataset more easily. `nft_project_name` data gets pulled from the `nft.tokens` [table](https://github.com/duneanalytics/spellbook/blob/master/ethereum/nft/tokens.sql), if your NFT is missing in that table, you are welcome to make a PR to add it.
 
 **Bundle Trade**
 
@@ -73,7 +73,7 @@ There can also be trades in which a single trade transaction contains multiple I
 
 **Aggregator Trade**
 
-There can also be trades in which a single trade transaction contains multiple items, especially when using NFT aggregator platforms. Our approach is to unravel aggregator trades so that each row correspond to a unique item that was traded, with its associated ID, price, collection, etc. Importantly, the `trade_type` will be indicated as `Aggregator Trade`, and platform names and address can be found in the `nft.aggregators` [table](https://github.com/duneanalytics/abstractions/blob/master/ethereum/nft/aggregators.sql). If your aggregator platform is missing in that table, you are welcome to make a PR to add it.
+There can also be trades in which a single trade transaction contains multiple items, especially when using NFT aggregator platforms. Our approach is to unravel aggregator trades so that each row correspond to a unique item that was traded, with its associated ID, price, collection, etc. Importantly, the `trade_type` will be indicated as `Aggregator Trade`, and platform names and address can be found in the `nft.aggregators` [table](https://github.com/duneanalytics/spellbook/blob/master/ethereum/nft/aggregators.sql). If your aggregator platform is missing in that table, you are welcome to make a PR to add it.
 
 **Platform and Royalty Fees**
 
@@ -97,7 +97,7 @@ In the most recent version of `nft.trades`, information about the amount and per
 
 ## **Ser, my platform is not indexed**
 
-The SQL code that processes the data for every market place is open source and available in our [github repository](https://github.com/duneanalytics/abstractions/tree/master/ethereum/nft/trades). Everyone can review the code, make pull requests and submit code to add more marketplaces.
+The SQL code that processes the data for every market place is open source and available in our [github repository](https://github.com/duneanalytics/spellbook/tree/master/ethereum/nft/trades). Everyone can review the code, make pull requests and submit code to add more marketplaces.
 
 Also read the section "[abstractions](./)" about this topic.
 

@@ -12,13 +12,13 @@ We created a table that creates price feeds based on decentralized exchange trad
 
 **Please keep in mind that this script can generate wrong prices in rare cases.**
 
-This table is very resource intensive and can therefore only be updated every few hours, please keep that in mind when utilizing it. **** Also the resolution is only hourly, so if you need minutely prices do refer to [`prices.usd`](../prices.md).
+This table is very resource intensive and can therefore only be updated every few hours, please keep that in mind when utilizing it. **** Also the resolution is only hourly, so if you need minutely prices do refer to [`prices.usd`](/tables/prices.md).
 
 This table currently only exists for Ethereum on our old database architecture.
 
 ### How this works
 
-The logic of how this table works can be accessed in our [public github](https://github.com/duneanalytics/abstractions/tree/master/ethereum/prices) repo.
+The logic of how this table works can be accessed in our [public github](https://github.com/duneanalytics/spellbook/tree/master/ethereum/prices) repo.
 
 This script generates median hourly prices based on data from decentralized exchanges found in `dex.trades`. It will assign asset prices based on a trading pair which has a pricefeed in `prices.usd`.
 

@@ -2,7 +2,7 @@
 
 The next step is to apply the rolling sum window function to each daily transfer sum. This is a pretty straightforward query. We’d end here for balances if it was guaranteed that each wallet/contract pair made a transfer every day. But since that’s not the case we’ll finish the spell in the next model by filling in all the missing days and doing a few more clean up steps.
 
-[transfers\_ethereum\_erc20\_rolling\_day.sql](https://github.com/duneanalytics/abstractions/blob/master/spellbook/models/transfers/ethereum/erc20/transfers\_ethereum\_erc20\_rolling\_day.sql)
+[transfers\_ethereum\_erc20\_rolling\_day.sql](https://github.com/duneanalytics/spellbook/blob/master/spellbook/models/transfers/ethereum/erc20/transfers\_ethereum\_erc20\_rolling\_day.sql)
 
 ```sql
 {{ config(
@@ -26,7 +26,7 @@ The next step is to apply the rolling sum window function to each daily transfer
        from {{ ref('transfers_ethereum_erc20_agg_day') }}
 ```
 
-[transfers\_ethereum\_schema.yml](https://github.com/duneanalytics/abstractions/blob/master/spellbook/models/transfers/ethereum/transfers\_ethereum\_schema.yml)
+[transfers\_ethereum\_schema.yml](https://github.com/duneanalytics/spellbook/blob/master/spellbook/models/transfers/ethereum/transfers\_ethereum\_schema.yml)
 
 ```yaml
   - name: transfers_ethereum_erc20_rolling_hour

@@ -48,7 +48,7 @@ Good for specific labels like “this is a binance wallet”.
 
 Use Dune queries to label addresses. A very powerful and scalable way to add labels like “all these addresses used Uniswap”, and much much more.
 
-Please see our [Github](https://github.com/duneanalytics/abstractions/tree/master/labels) for examples of labels created with queries and PR in your own!
+Please see our [Github](https://github.com/duneanalytics/spellbook/tree/master/labels) for examples of labels created with queries and PR in your own!
 
 Examples of what you can do:
 

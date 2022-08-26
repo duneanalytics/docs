@@ -49,7 +49,7 @@ Queries return rows and columns of data (same as traditional SQL queries) that c
 
 There are a few ways that a blockchain analyst (ie. you!) can get started running queries:
 
-1. Use Dune _abstractions_ to query commonly used data tables. This is the simplest and most common way to use Dune. Some popular abstractions include `dex.trades`, `lending.borrow`, and `stablecoin.transfer` (you can find a complete list of abstractions [here](https://github.com/duneanalytics/abstractions))
+1. Use Dune _abstractions_ to query commonly used data tables. This is the simplest and most common way to use Dune. Some popular abstractions include `dex.trades`, `lending.borrow`, and `stablecoin.transfer` (you can find a complete list of abstractions [here](https://github.com/duneanalytics/spellbook))
 2. Query the raw ethereum data including blocks, logs, and transactions.
 3. It is also possible to query centralized exchange data. Use `prices.usd` to quickly return the price of almost any cryptoasset
 

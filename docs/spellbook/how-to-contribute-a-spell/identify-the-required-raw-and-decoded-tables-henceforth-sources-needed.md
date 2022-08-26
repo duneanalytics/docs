@@ -6,7 +6,7 @@ The main base Dune table we’ll use for this purpose is `erc20_ethereum.evt_Tra
 
 ![type:video](https://www.loom.com/embed/198148674ded4f5e944f65452852482b)
 
-Then, in the Spellbook project, the source must be defined in a YAML file. We define this source in [base\_sources/ethereum\_base\_sources.yml.](https://github.com/duneanalytics/abstractions/blob/master/spellbook/models/base\_sources/ethereum\_base\_sources.yml) Once a source has been defined it does not need to be defined again.
+Then, in the Spellbook project, the source must be defined in a YAML file. We define this source in [base\_sources/ethereum\_base\_sources.yml.](https://github.com/duneanalytics/spellbook/blob/master/spellbook/models/base\_sources/ethereum\_base\_sources.yml) Once a source has been defined it does not need to be defined again.
 
 Defining a source can be as simple as adding its schema and name. But to harness the full power of the tool, we’ll also want to define tests, freshness checks, and add column descriptions.
 

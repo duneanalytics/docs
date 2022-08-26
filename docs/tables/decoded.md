@@ -28,10 +28,19 @@ Since all chain's data resides in one database, but the multichain world is a re
 
 **Read more about the difference between calls and events here:**
 
-<div class="cards grid" markdown>
-- [Call tables](call-tables.md)
-- [Event logs](event-logs.md)
-</div>
+=== "PostgreSQL"
+
+    <div class="cards grid" markdown>
+    - [Call tables](v1/decoded/call-tables.md)
+    - [Event logs](v1/decoded/event-logs.md)
+    </div>
+
+=== "SparkSQL"
+
+    <div class="cards grid" markdown>
+    - [Call tables](v2/decoded/call-tables.md)
+    - [Event logs](v2/decoded/event-logs.md)
+    </div>
 
 ## What contracts have decoded data?
 
@@ -61,7 +70,7 @@ We usually take about 24 hours to decode smart contracts.
 Read more about submitting contracts for decoding in this section:
 
 <div class="cards grid" markdown>
-- [Adding new contracts](../../../features/adding-new-contracts.md)
+- [Adding new contracts](/features/adding-new-contracts.md)
 </div>
 
 ## How does decoding work?
@@ -208,7 +217,7 @@ If you are not able to make sense of the data by just searching the tables, it u
 
 If that also doesn't lead to satisfactory results, scouring the relevant docs and github of the project can lead you to the desired answers. Furthermore, talking to the developers and core community of a project can also help you to get an understanding of the smart contracts.
 
-Some good showcasing of how to deal with decoded data can be found all throughout Dune, but especially our [abstraction repository](https://github.com/duneanalytics/abstractions) is full of great examples.
+Some good showcasing of how to deal with decoded data can be found all throughout Dune, but especially our [abstraction repository](https://github.com/duneanalytics/spellbook) is full of great examples.
 
 **In Summary**:
 

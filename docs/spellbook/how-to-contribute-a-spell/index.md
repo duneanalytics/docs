@@ -4,7 +4,7 @@
 
 **On a high level, these are the steps you should take:**
 
-1. Set up your local dev env as [per the instructions on the repo](https://github.com/duneanalytics/abstractions/blob/master/README.md)
+1. Set up your local dev env as [per the instructions on the repo](https://github.com/duneanalytics/spellbook/blob/master/README.md)
 2. Decide on what problem you’re trying to solve with a spell.
 3. Identify the required raw and decoded tables (henceforth sources) needed. Define tests and freshness for your sources.
 4. Define a unit test for your spell.

@@ -12,7 +12,7 @@ On January 31, 2020, we launched the abstractions repo as a place for wizards to
 
 ![Mats inaugural comment](https://lh3.googleusercontent.com/meUyvFUduwOIY8pm1I0Ce2HTTSndb5rgGycrWEWzcIeMCNsluARtfEP980iyJ0oiURs-KI6S8iF5vRiemNol7nEZn4UZjFUqhADOPlxXkdimu7T5jA-gisFoEzkoGszWTuXNoZpbj5rRU3EWPk8)
 
-Abstractions are some of the most queried tables on Dune. That makes creating them one of the highest leverage things a wizard can do. We want to make that experience better by launching the **Spellbook**, a retooling of our existing [abstractions](https://github.com/duneanalytics/abstractions) repo + a first-in-class open-source analytics engineering tool called dbt.
+Abstractions are some of the most queried tables on Dune. That makes creating them one of the highest leverage things a wizard can do. We want to make that experience better by launching the **Spellbook**, a retooling of our existing [abstractions](https://github.com/duneanalytics/spellbook) repo + a first-in-class open-source analytics engineering tool called dbt.
 
 [dbt-core](https://docs.getdbt.com/docs/introduction) (data build tool) is an open-source framework that injects more classical software engineering practices into writing SQL by mixing SQL with JINJA templating.
 
