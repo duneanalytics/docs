@@ -4,11 +4,18 @@ hide:
   - navigation
 ---
 
-# Home
+<style>
+  .md-typeset h1,
+  .md-content__button {
+    display: none;
+  }
+</style>
 
-## Introduction
+![Dune Docs cover](images/dune-docs-cover.jpg)
 
-**Dune is a powerful tool for blockchain research. Dune gives you all the tools to query, extract, and visualize vast amounts of data from the blockchain. Dune is unlocking the power of public blockchain data by making it accessible to everyone. This documentation will help you answer questions like:**
+**Dune is a powerful tool for blockchain research.**
+
+Dune gives you all the tools to query, extract, and visualize vast amounts of data from the blockchain. Dune is unlocking the power of public blockchain data by making it accessible to everyone. This documentation will help you answer questions like:
 
 - [How much volume flows through Uniswap each day?](https://dune.com/queries/3)
 - [Which Dex has the highest volume?](https://dune.com/queries/1847)
