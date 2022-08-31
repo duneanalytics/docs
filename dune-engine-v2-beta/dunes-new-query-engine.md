@@ -14,6 +14,8 @@ All of the data sources contained in this section are available for querying wit
   * BNB Chain
   * Optimism
   * Solana
+  * Arbitrum
+  * Avalanche C-Chain
 * [**Decoded tables**](../data-tables/evm-blockchains/decoded-data/)\*\*\*\*
   * we are still optimizing this, only a few are decoded for now
 * [**Flashbots**](../data-tables/community/flashbots/)
