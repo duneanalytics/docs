@@ -25,7 +25,7 @@ Parameters in a Dashboard can be shared between different queries, just make sur
 
 ![](<../.gitbook/assets/image (41).png>)
 
-![](<../.gitbook/assets/image (27) (1) (2) (2) (1).png>)
+![](<../.gitbook/assets/image (27) (1) (2) (2) (1) (4).png>)
 
 ![](<../.gitbook/assets/image (40).png>)
 
