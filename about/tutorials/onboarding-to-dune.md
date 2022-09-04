@@ -5,7 +5,7 @@
 Team Dune often gets asked about "possible cooperation" and "ways to work together" and while we appreciate all these kind requests, there really isn't anything you need from the core team to be able to surface your data on dune.\
 \
 Our platform is free, open and permissionless and anyone can use the platform as they see fit.\
-All you need is either a skilled freelancer or one of your team members to take care of the actually surfacing the data.
+All you need is either a skilled freelancer or one of your team members to take care of actually surfacing the data.
 
 **The Process looks like this:**
 
