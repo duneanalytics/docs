@@ -1,5 +1,5 @@
 ---
-description: You can embedd Dune's Visualizations on most Websites with ease.
+description: You can embed Dune's Visualizations on most Websites with ease.
 ---
 
 # Webpages
