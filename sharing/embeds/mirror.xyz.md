@@ -1,5 +1,5 @@
 ---
-description: Dune embedds work in Mirror.xyz!
+description: Dune embeds work in Mirror.xyz!
 ---
 
 # Mirror.xyz
