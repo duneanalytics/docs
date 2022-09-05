@@ -4,4 +4,4 @@ When a visualisation is viewed, either on a query page or on a dashboard, the Du
 
 This means that dashboards will always be kept up to date when they are being viewed and the query creator does not need to set a refresh schedule.
 
-Note that the query execution queue is separate from each individual users queue when they create and run queries in the query editor.
+Note that the query execution queue is separate from each individual user's queue when they create and run queries in the query editor.
