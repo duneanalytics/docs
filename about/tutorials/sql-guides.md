@@ -10,7 +10,8 @@ We have compiled a few resources that we think are helpful in your journey to be
 
 [Amigoscode](https://www.youtube.com/watch?v=5hzZtqCNQKk) Youtube Video (FREE)
 
-[UDEMY Course SQL & PostgreSQL for Beginners](https://www.udemy.com/course/sql-and-postgresql-for-beginners/?ranMID=39197\&ranEAID=JVFxdTr9V80\&ranSiteID=JVFxdTr9V80-nnMsdWXzWeu9lqxtbEa72g\&utm\_source=aff-campaign\&LSNPUBID=JVFxdTr9V80\&utm\_medium=udemyads) ($10)
+[UDEMY Course SQL & PostgreSQL for Beginners](https://www.udemy.com/course/sql-and-postgresql-for-beginners/?ranMID=39197&ranEAID=JVFxdTr9V80&ranSiteID=JVFxdTr9V80-nnMsdWXzWeu9lqxtbEa72g&utm_source=aff-campaign&LSNPUBID=JVFxdTr9V80&utm_medium=udemyads) ($10)
 
 [Mode SQL Tutorial](https://mode.com/sql-tutorial/) (FREE)
 
+[Introduction to SQL by DataCamp](https://app.datacamp.com/learn/courses/introduction-to-sql) (FREE)
