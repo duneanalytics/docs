@@ -39,6 +39,6 @@ We've compiled a few resources that we think are helpful in your journey to beco
 
     - [Introduction to SQL by DataCamp](https://app.datacamp.com/learn/courses/introduction-to-sql) (FREE)
 
-=== "DatabrickSQL"
+=== "Databricks SQL"
 
     - [Coursera Learn Spark SQL](https://www.coursera.org/learn/spark-sql)
