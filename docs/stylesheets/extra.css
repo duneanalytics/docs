@@ -1,28 +1,108 @@
+/* Custom colors for mkdoc-material */
+/* https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#custom-colors */
+/* https://github.com/squidfunk/mkdocs-material/blob/master/src/assets/stylesheets/main/_colors.scss */
+
 :root > * {
-    --md-primary-bg-color: #2D2D2D; /* Dune Black */
-    --md-typeset-a-color: #1E1870; /* Blue 500 */
-    --md-accent-fg-color: #F4603E; /* Orange 500 */
-    --md-default-fg-color--light: #F49282; /* Orange 400 */
-    --md-typeset-color: #2D2D2D; /* Dune Black */
 
-    /* Code Blocks */
-    --md-code-fg-color: #404040;
-    --md-code-bg-color: #F2F2F2;
-    --md-code-hl-color: hsla(#{hex2hsl($clr-yellow-a200)}, 0.5);
-    --md-code-hl-number-color: #D93025;
-    --md-code-hl-special-color: hsla(340, 83%, 47%, 1);
-    --md-code-hl-function-color: hsla(291, 45%, 50%, 1);
-    --md-code-hl-constant-color: #8E8ECE;
-    --md-code-hl-keyword-color: #31C7ED;
-    --md-code-hl-string-color: #006400;
-}
+    /* Dune Palette */
+    --dune-black: #2D2D2D;
+    --dune-blue-500: #1E1870;
+    --dune-blue-400: #56569B;
+    --dune-blue-300: #8E8ECE;
+    --dune-blue-200: #E1E1F9;
+    --dune-orange-500: #F4603E;
+    --dune-orange-400: #F49282;
+    --dune-orange-300: #FFBDB6;
+    --dune-orange-200: #FFECEB;
 
-[data-md-color-scheme="slate"] {
-  --md-default-bg-color: #2D2D2D; /* Grey 700 */
-  --md-typeset-color: #fff;
-  --md-typeset-a-color: #8E8ECE; /* Blue 300 */
+    /* Default color shades */
+    --md-default-fg-color:               hsla(0, 0%, 0%, 0.87);
+    --md-default-fg-color--light:        hsla(0, 0%, 0%, 0.54);
+    --md-default-fg-color--lighter:      hsla(0, 0%, 0%, 0.32);
+    --md-default-fg-color--lightest:     hsla(0, 0%, 0%, 0.07);
+    --md-default-bg-color:               hsla(0, 0%, 100%, 1);
+    --md-default-bg-color--light:        hsla(0, 0%, 100%, 0.7);
+    --md-default-bg-color--lighter:      hsla(0, 0%, 100%, 0.3);
+    --md-default-bg-color--lightest:     hsla(0, 0%, 100%, 0.12);
 
+    /* Primary color shades */
+    --md-primary-fg-color:               var(--dune-orange-300);
+    --md-primary-fg-color--light:        var(--dune-orange-200);
+    --md-primary-fg-color--dark:         var(--dune-orange-400);
+    --md-primary-bg-color:               var(--dune-blue-500);
+    --md-primary-bg-color--light:        var(--dune-blue-400);
+
+    /* Accent color shades */
+    --md-accent-fg-color:                var(--dune-orange-500);
+    --md-accent-fg-color--transparent:   hsla(#{hex2hsl($clr-indigo-a200)}, 0.1);
+    --md-accent-bg-color:                hsla(0, 0%, 100%, 1);
+    --md-accent-bg-color--light:         hsla(0, 0%, 100%, 0.7);
+
+    /* Code color shades */
+    --md-code-fg-color:                  hsla(200, 18%, 26%, 1);
+    --md-code-bg-color:                  hsla(0, 0%, 96%, 1);
+
+    /* Code highlighting color shades */
+    --md-code-hl-color:                  hsla(#{hex2hsl($clr-yellow-a200)}, 0.5);
+    --md-code-hl-number-color:           hsla(0, 67%, 50%, 1);
+    --md-code-hl-special-color:          hsla(340, 83%, 47%, 1);
+    --md-code-hl-function-color:         hsla(291, 45%, 50%, 1);
+    --md-code-hl-constant-color:         hsla(250, 63%, 60%, 1);
+    --md-code-hl-keyword-color:          hsla(219, 54%, 51%, 1);
+    --md-code-hl-string-color:           hsla(150, 63%, 30%, 1);
+    --md-code-hl-name-color:             var(--md-code-fg-color);
+    --md-code-hl-operator-color:         var(--md-default-fg-color--light);
+    --md-code-hl-punctuation-color:      var(--md-default-fg-color--light);
+    --md-code-hl-comment-color:          var(--md-default-fg-color--light);
+    --md-code-hl-generic-color:          var(--md-default-fg-color--light);
+    --md-code-hl-variable-color:         var(--md-default-fg-color--light);
+
+    /* Typeset color shades */
+    --md-typeset-color:                  var(--md-default-fg-color);
   
+    /* Typeset `a` color shades */
+    --md-typeset-a-color:                var(--dune-blue-500);
+  
+    /* Typeset `mark` color shades */
+    --md-typeset-mark-color:             hsla(#{hex2hsl($clr-yellow-a200)}, 0.5);
+  
+    /* Typeset `del` and `ins` color shades */
+    --md-typeset-del-color:              hsla(6, 90%, 60%, 0.15);
+    --md-typeset-ins-color:              hsla(150, 90%, 44%, 0.15);
+  
+    /* Typeset `kbd` color shades */
+    --md-typeset-kbd-color:              hsla(0, 0%, 98%, 1);
+    --md-typeset-kbd-accent-color:       hsla(0, 100%, 100%, 1);
+    --md-typeset-kbd-border-color:       hsla(0, 0%, 72%, 1);
+  
+    /* Typeset `table` color shades */
+    --md-typeset-table-color:            hsla(0, 0%, 0%, 0.12);
+  
+    /* Admonition color shades */
+    --md-admonition-fg-color:            var(--md-default-fg-color);
+    --md-admonition-bg-color:            var(--md-default-bg-color);
+  
+    /* Footer color shades */
+    --md-footer-fg-color:                var(--dune-blue-500);
+    --md-footer-fg-color--light:         var(--dune-blue-400);
+    --md-footer-fg-color--lighter:       var(--dune-blue-300);
+    --md-footer-bg-color:                var(--dune-orange-200);
+    --md-footer-bg-color--dark:          var(--dune-orange-200);
+  
+    /* Shadow depth 1 */
+    --md-shadow-z1:
+      0 #{px2rem(4px)} #{px2rem(10px)} hsla(0, 0%, 0%, 0.05),
+      0 0              #{px2rem(1px)}  hsla(0, 0%, 0%, 0.1);
+  
+    /* Shadow depth 2 */
+    --md-shadow-z2:
+      0 #{px2rem(4px)} #{px2rem(10px)} hsla(0, 0%, 0%, 0.1),
+      0 0              #{px2rem(1px)}  hsla(0, 0%, 0%, 0.25);
+  
+    /* Shadow depth 3 */
+    --md-shadow-z3:
+      0 #{px2rem(4px)} #{px2rem(10px)} hsla(0, 0%, 0%, 0.2),
+      0 0              #{px2rem(1px)}  hsla(0, 0%, 0%, 0.35);
 }
 
 @font-face {
@@ -34,183 +114,33 @@ h1, h2, h3, h4, h5, h6{
     font-family: "IBM Plex Serif";
 }
 
-a {
-  color: var(--md-typeset-a-color);
-}
+/* Custom CSS selectors */
 
-/* Header */
-.md-header__title--active{
-    font-weight: bold;
-}
-
-.md-nav__source{
-    background-color: var(--md-accent-fg-color);
-}
-
-.md-nav--primary .md-nav__title {
-    background-color: var(--md-accent-fg-color);
-    color: #fff;
-}
-
-/* Header Links */
-.md-tabs{
-    background-color: var(--md-default-bg-color);
+.md-header__title{
+    font-weight: 600;
 }
 
 .md-tabs__link{
-    font-weight: bold;
-    opacity: 1;
+    font-weight: 500;
 }
 
-.md-header{
-    color: var(--md-typeset-color);
-    background-color: var(--md-default-bg-color);
-}
-
-.md-header__button{
-    color: var(--md-typeset-a-color);
-}
-
-.md-search__input+.md-search__icon{
-    color: #2D2D2D;
-}
-
-.md-search__input{
-    background-color: #FFBDB6;
-}
-
-.md-source:hover{
-    opacity: 1;
-    color: var(--md-default-fg-color--light);
-}
-
- .md-header--shadow{
+.md-header--shadow{
     box-shadow: none;
- }
-
-.md-tabs__link:is(:focus,:hover),.md-header__button:is(:focus,:hover), .md-header__source:is(:focus,:hover){
-    color: var(--md-default-fg-color--light);
-    opacity: 1;
 }
 
-.md-tabs__link--active,.md-tabs__link--active:is(:focus,:hover){
-    color: var(--md-typeset-color);
-    opacity: 1;
-    font-size: 20px !important;
+.md-tabs__link--active {
     text-decoration: underline;
     text-decoration-color: var(--md-accent-fg-color);
-    text-decoration-thickness: 4px;
+    text-decoration-thickness: 0.125rem;
+    text-underline-offset: 0.125rem;
 }
 
-a.md-tabs__link{
-    font-size: 16px;
-}
-
-
-a.md-select__link:is(:focus,:hover){
-  color: var(--md-accent-fg-color);
-}
-
-
-/*Body Content*/
-
-.md-typeset h1
-{
-    color: var(--md-accent-fg-color);
+.md-typeset h1 {
+    color: var(--dune-blue-400);
     font-weight: 700;
-    font-size: 2rem;
-    text-decoration: underline;
 }
 
-.md-typeset h2
-{
-    margin-top: 1.5rem;
-    color: var(--md-accent-fg-color);
+.md-typeset h2 {
+    color: var(--dune-blue-500);
     font-weight: 700;
-    font-size: 1.5rem;
-}
-
-.md-typeset h3{
-    margin-top: 1.5rem;
-    font-size: 1.25rem;
-}
-
-.md-typeset a:hover{
-    color: var(--md-default-fg-color--light);
-}
-
-/*Sidebar/TOC Nav*/
-
-.md-nav__item .md-nav__item--nested{
-    color: var(--md-typeset-a-color);
-}
-
-.md-nav__item .md-nav__link--active{
-    color: var(--md-accent-fg-color);
-}
-
-.md-nav__link:is(:focus,:hover){
-    color: var(--md-default-fg-color--light);
-}
-
-.md-nav__icon{
-    color: var(--md-typeset-a-color);
-}
-
-.md-nav__link--passed{
-    color: var(--md-typeset-a-color);
-}
-
-
-/* Tabbed Body Content */
-
-.md-typeset .tabbed-set>input:first-child:checked~.tabbed-labels>:first-child, .md-typeset .tabbed-set>input:nth-child(10):checked~.tabbed-labels>:nth-child(10), .md-typeset .tabbed-set>input:nth-child(11):checked~.tabbed-labels>:nth-child(11), .md-typeset .tabbed-set>input:nth-child(12):checked~.tabbed-labels>:nth-child(12), .md-typeset .tabbed-set>input:nth-child(13):checked~.tabbed-labels>:nth-child(13), .md-typeset .tabbed-set>input:nth-child(14):checked~.tabbed-labels>:nth-child(14), .md-typeset .tabbed-set>input:nth-child(15):checked~.tabbed-labels>:nth-child(15), .md-typeset .tabbed-set>input:nth-child(16):checked~.tabbed-labels>:nth-child(16), .md-typeset .tabbed-set>input:nth-child(17):checked~.tabbed-labels>:nth-child(17), .md-typeset .tabbed-set>input:nth-child(18):checked~.tabbed-labels>:nth-child(18), .md-typeset .tabbed-set>input:nth-child(19):checked~.tabbed-labels>:nth-child(19), .md-typeset .tabbed-set>input:nth-child(2):checked~.tabbed-labels>:nth-child(2), .md-typeset .tabbed-set>input:nth-child(20):checked~.tabbed-labels>:nth-child(20), .md-typeset .tabbed-set>input:nth-child(3):checked~.tabbed-labels>:nth-child(3), .md-typeset .tabbed-set>input:nth-child(4):checked~.tabbed-labels>:nth-child(4), .md-typeset .tabbed-set>input:nth-child(5):checked~.tabbed-labels>:nth-child(5), .md-typeset .tabbed-set>input:nth-child(6):checked~.tabbed-labels>:nth-child(6), .md-typeset .tabbed-set>input:nth-child(7):checked~.tabbed-labels>:nth-child(7), .md-typeset .tabbed-set>input:nth-child(8):checked~.tabbed-labels>:nth-child(8), .md-typeset .tabbed-set>input:nth-child(9):checked~.tabbed-labels>:nth-child(9) {
-    color: var(--md-accent-fg-color);
-}
-
-.md-typeset .tabbed-labels>label{
-  color: var(--md-typeset-a-color);  
-}
-
-.md-typeset .tabbed-labels>label:hover {
-    color: var(--md-default-fg-color--light);
-}
-
-
-.js .md-typeset .tabbed-labels:before{
-    background-color: var(--md-accent-fg-color);   
-}
-
-/* Notes */
-.md-typeset :is(.admonition,details):is(.note) {
-    border-color: var(--md-accent-fg-color);
-}
-
-.md-typeset :is(.note)>:is(.admonition-title,summary):before {
-    background-color: var(--md-accent-fg-color);
-}
-
-.md-typeset :is(.note)>:is(.admonition-title,summary) {
-    background-color: rgba(128, 128, 128, .1);
-    color: var(--md-accent-fg-color);
-}
-
-
-/* Footer */
-.md-footer, .md-footer-meta{
-    background-color: var(--md-default-bg-color);
-}
-
-.md-footer__inner{
-    border-top: 3px;
-    border-color: var(--md-typeset-color);
-    border-top-style: solid;
-}
-
-.md-footer__link{
-    font-weight: bold;
-}
-
-.md-footer__link:is(:focus,:hover) {
-    color: var(--md-default-fg-color--light);
 }
