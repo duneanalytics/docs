@@ -48,5 +48,9 @@ extra:
     - name: Chinese (Simplified)
       link: https://docs.dune.com/v/chinese/
       lang: zh
+  analytics:
+    provider: posthog
+    api_key: !ENV POSTHOG_API_KEY
+    api_host: !ENV POSTHOG_API_HOST
 extra_css:
   - stylesheets/extra.css
