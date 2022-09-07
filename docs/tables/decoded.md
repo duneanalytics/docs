@@ -1,4 +1,17 @@
-# Decoded
+---
+title: Decoded Tables
+---
+<style>
+  .md-typeset h1,
+  .md-content__button {
+    display: none;
+  }
+  .md-header__topic{
+    font-weight: bold;
+  }
+</style>
+
+![dune docs cover decoded tables](images/cover-tables-decoded.jpg)
 
 Instead of working with the transactions, logs, and traces in their raw states, on Dune we decode smart contract activity into nice human-readable tables.
 
@@ -20,7 +33,7 @@ The tables are named accordingly:
 
     **function calls:** `projectname_blockchain.contractName_call_eventName`
 
-    As an example, decoded data for the `swap`-event of the uniswap V2 pair contract on ethereum is found in the table `uniswap_v2_ethereum.Pair_evt_Swap`.
+    As an example, decoded data for the `swap`-event of the Uniswap V2 pair contract on Ethereum is found in the table `uniswap_v2_ethereum.Pair_evt_Swap`.
 
 If a contract has multiple instances, we will decode all of them into the same table, you will be able to identify the specific smart contract using the `contract_address` column.
 
@@ -42,7 +55,7 @@ Since all chain's data resides in one database, but the multichain world is a re
     - [Event logs](v2/decoded/event-logs.md)
     </div>
 
-## What contracts have decoded data?
+## Which contracts have decoded data?
 
 === "PostgreSQL"
 
@@ -210,13 +223,13 @@ In this case, they map out like this:
 
 We can use the contracts ABI to go from encoded bytecode to decoded data. This helps you run analysis fast and efficient as the decoded data is easy to work with.
 
-## How to understand decoded data?
+## How do I understand decoded data?
 
 Decoded data is the high level programming language representation of two pieces of software talking to each other via the blockchain. It's not always easy for a human to understand what exactly is going on in these interactions, but most of the time, looking at column names and the data that is transmitted within them should help you to understand what is happening within that specific log or call.
 
-If you are not able to make sense of the data by just searching the tables, it usually helps to look at single transactions using the transaction hash and etherscan. Furthermore, actually going into the smart contracts code (my favourite way to do this is [DethCode](https://etherscan.deth.net/)) to read the comments or the actual logic can help to understand the smart contract's emitted data.
+If you are not able to make sense of the data by just searching the tables, it usually helps to look at single transactions using the transaction hash and Etherscan. Furthermore, actually going into the smart contracts code (my favorite way to do this is [DethCode](https://etherscan.deth.net/)) to read the comments or the actual logic can help to understand the smart contract's emitted data.
 
-If that also doesn't lead to satisfactory results, scouring the relevant docs and github of the project can lead you to the desired answers. Furthermore, talking to the developers and core community of a project can also help you to get an understanding of the smart contracts.
+If that also doesn't lead to satisfactory results, scouring the relevant docs and GitHub of the project can lead you to the desired answers. Furthermore, talking to the developers and core community of a project can also help you to get an understanding of the smart contracts.
 
 Some good showcasing of how to deal with decoded data can be found all throughout Dune, but especially our [abstraction repository](https://github.com/duneanalytics/spellbook) is full of great examples.
 
@@ -224,11 +237,11 @@ Some good showcasing of how to deal with decoded data can be found all throughou
 
 Working with decoded data allows you deep access to information stored on the blockchain and is very information rich, but understanding that data sometimes takes a bit of effort on your side since you are interacting with the data of the contract in a direct way.
 
-## Which tables should you use?
+## Which tables should I use?
 
-**Events** are designed to be analysed and stored on the blockchain to allow backward looking analysis of what is happening, **transactions** and **message calls** are made to pass information between smart contracts. Therefore, in most cases the easiest and most accessible way to analyse various things happening on the blockchain is by looking at events. However, there is some cases where the emitted events miss some crucial information or there is just no events that get emitted. In these cases you might have to fall back to transaction and message calls (found in call tables). Cases where no event gets emitted get rarer over time as developers now mostly understand that events are important enough to be emitted, but they still exist. In some cases, it might make sense to combine the decoded data with [raw data](../raw-data/chains/) in order to get metadata about the transaction or dive even deeper.
+**Events** are designed to be analyzed and stored on the blockchain to allow backward looking analysis of what is happening, **transactions** and **message calls** are made to pass information between smart contracts. Therefore, in most cases the easiest and most accessible way to analyze various things happening on the blockchain is by looking at events. However, there is some cases where the emitted events miss some crucial information or there is just no events that get emitted. In these cases you might have to fall back to transaction and message calls (found in call tables). Cases where no event gets emitted get rarer over time as developers now mostly understand that events are important enough to be emitted, but they still exist. In some cases, it might make sense to combine the decoded data with [raw data](../raw-data/chains/) in order to get metadata about the transaction or dive even deeper.
 
-## **Queries to explore decoded Contracts**
+## Queries to explore decoded Contracts
 
 **See all projects we have decoded data for**
 

@@ -1,4 +1,6 @@
-# Rolling sum of daily transfers
+---
+title: Rolling Sum of Daily Transfers
+---
 
 The next step is to apply the rolling sum window function to each daily transfer sum. This is a pretty straightforward query. We’d end here for balances if it was guaranteed that each wallet/contract pair made a transfer every day. But since that’s not the case we’ll finish the spell in the next model by filling in all the missing days and doing a few more clean up steps.
 

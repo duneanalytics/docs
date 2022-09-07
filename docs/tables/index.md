@@ -1,19 +1,33 @@
-# Tables
+---
+title: Tables
+---
+
+<style>
+  .md-typeset h1,
+  .md-content__button {
+    display: none;
+  }
+  .md-header__topic{
+    font-weight: bold;
+  }
+</style>
+
+![dune docs cover tables](images/cover-tables.jpg)
 
 **Dune enables you to query data on our supported chains at different levels of abstraction.**
 
 To start with, you have access to the raw tables for each supported blockchain, with tables like `blocks` and `transactions`. This is the most flexible option.
 
-To make it easier to work with smart contracts, Dune also provides decoded data as individual, human readable tables. We use the ABI for smart contracts and the interface standard for standardised token smart contracts (ERC20, ERC721 etc.). We've indexed over 280k contracts as of writing, and you can [submit new contracts](/features/adding-new-contracts.md).
+To make it easier to work with smart contracts, Dune also provides decoded data as individual, human readable tables. We use the ABI for smart contracts and the interface standard for standardized token smart contracts (ERC20, ERC721 etc.). We've indexed over 280k contracts as of writing, and you can [submit new contracts](/features/adding-new-contracts.md).
 
 On top of that, we're building a set of abstractions for common use cases (e.g. NFTs or DEX) and third party datasets.
 
 Here is an overview what is available:
 
-- [Raw data](raw.md): unedicated, raw and encoded blockchain data
+- [Raw data](raw.md): unedited, raw and encoded blockchain data
 - [Decoded data](decoded.md): (**most popular**) view the decoded calls and events made to smart contracts
 - [Abstractions, or Spells](abstractions.md): custom tables that are maintained by Dune and our community
-- [Community](community.md): partnering with select organisations for off-chain data
+- [Community](community.md): partnering with select organizations for off-chain data
 - [Prices](prices.md): prices from third party data providers
 - [User generated](user-generated.md): construct your own view, function or table inside of our database
 

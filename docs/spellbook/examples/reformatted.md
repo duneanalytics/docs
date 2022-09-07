@@ -1,4 +1,6 @@
-# Reformatted transfers
+---
+title: Reformatted Transfers
+---
 
 Our base table records the transfer amount to and from an account. To make it easier to sum of transfers, we munge this into a union of sent txns and received txns.
 
@@ -6,9 +8,9 @@ Additionally, WETH requires special handling given the additional functions of d
 
 Similar to a source, the model is defined in a YAML file. This is where things like the description, tests, and metadata are defined. This is also where we track “contributors”. So make sure you get your clout and add your handle when writing or editing a spell. Then you’ll be credited for your contribution in the [documentation](https://spellbook-docs.dune.com/#!/overview).
 
-In the JINJA config block, we define that the alias for this view is `erc20`. Without this alias, the table name would default to the file name. The schema name for this view is defined in the [dbt\_project.yml](https://github.com/duneanalytics/spellbook/blob/master/spellbook/dbt\_project.yml) file in the root of the spellbook project. Schema’s are defined there by the directory structure. The name of this view would be transfers\_ethereum.erc20 given the current structure.
+In the JINJA config block, we define that the alias for this view is `erc20`. Without this alias, the table name would default to the file name. The schema name for this view is defined in the [dbt\_project.yml](https://github.com/duneanalytics/spellbook/blob/master/spellbook/dbt\_project.yml) file in the root of the Spellbook project. Schema’s are defined there by the directory structure. The name of this view would be transfers\_ethereum.erc20 given the current structure.
 
-Note: I’m generally against using SHOUT CASE, that’s what IDEs are for. Sue me.
+Note: we're generally against using SHOUT CASE, that’s what IDEs are for. Sue us.
 
 [transfers\_ethereum\_erc20.sql](https://github.com/duneanalytics/spellbook/blob/master/spellbook/models/transfers/ethereum/erc20/transfers\_ethereum\_erc20.sql)
 

@@ -1,4 +1,5 @@
 ---
+title: Press Kit
 description: Get the Dune brand assets and learn about the usage guidelines
 ---
 

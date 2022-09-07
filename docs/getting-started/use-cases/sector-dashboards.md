@@ -1,18 +1,20 @@
-# Sector Dashboards
+---
+title: Sector Dashboards
+---
 
-**Sector Dashboards allow you to glance at an entire sector of our new Economy and analyse what's happening in real time.**
+**Sector Dashboards allow you to get an overview of an entire sector of the crypto economy and analyze what's happening in real time.**
 
 Let's explore this with some examples:
 
-## Dex Metrics
+## [Dex Metrics](https://dune.com/hagaetc/dex-metrics) by [@hagaetc](https://dune.com/hagaetc)
 
-[**https://dune.com/hagaetc/dex-metrics**](https://dune.com/hagaetc/dex-metrics)
+This Dashboard allows you to view data and learn about the entire Decentralized Exchange sector at a glance.
 
-This Dashboard allows you to take a look at the entirety of decentralized exchanges at once.
+Here you can see metrics like Dex Volume, Market Share, and Total Volume across all exchanges, along with many more stats.
 
-You can see Dex Volume, Market share, Total Volume across all exchanges and many more stats all on one glance. This allows you to compare the performance of different dexes with each other and at the same time evaluate the performance of the entire sector.
+Together they make it easy to compare the performance of different DEXes against each other and evaluate the performance of the entire sector.
 
-All of this updates in real time and is maintained by the community, if a new dex wants to be on this dashboard, all they have to do is submit their code to our public github. More on this in [abstractions](/tables/abstractions/).
+All of these stats and charts update in real time and are maintained by the community; if a new DEX wants to be added to this Dashboard, all they have to do is submit their code to our public GitHub. More on this in [Abstractions](/tables/abstractions/).
 
 ![DEX weekly](images/dex-weekly.png)
 
@@ -20,13 +22,11 @@ All of this updates in real time and is maintained by the community, if a new de
 
 ![DEX 24 hour](images/dex-24-hour.png)
 
-## Indices
+## [Indices](https://dune.com/0xBoxer/indices-products) by [@0xBoxer](https://dune.com/0xBoxer)
 
-[**https://dune.com/0xBoxer/indices-products**](https://dune.com/0xBoxer/indices-products)
+Another interesting sector-based Dune Dashboard covers Indices.
 
-Another interesting Dashboard we have is a dashboard on decentralized indices.
-
-Here again, you can evaluate the entire state of a sector in one glance, being able to compare different products and projects to each other with ease.
+Here again, you can evaluate the entire state of a sector in one glance to compare different products and projects with ease.
 
 ![Indices sector](images/indices-sector.png)
 
@@ -34,16 +34,10 @@ Here again, you can evaluate the entire state of a sector in one glance, being a
 
 ![Indices AUM 2](images/indices-aum-2.png)
 
-## Lending
+## [Lending](https://dune.com/drethereum/Lending-Analysis) by [@drethereum](https://dune.com/drethereum)
 
-The same applies for lending protocols, it allows you to easily check the state of lending protocols and compare them to each other with ease.
+The same applies for lending protocols, you can easily check the state of lending as a sector and compare protocol performance.
 
 ![Lending deposits](images/lending-deposits.png)
 
 ![Lending borrowers](images/lending-borrowers.png)
-
-## Summary
-
-Sector Dashboards allow your audience to make assumptions on a whole sector of this nascent Industry. This is very useful for comparing different products with each other and trying to spot trends.
-
-Most Sector Dashboards are relying on one or many [abstraction](/tables/abstractions/) tables which make it easy to query for vast amounts of data and standardizing between the different protocols.

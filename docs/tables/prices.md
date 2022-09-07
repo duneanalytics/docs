@@ -1,20 +1,31 @@
 ---
+title: Prices
 description: These tables allow you to get the price of almost all relevant erc20 tokens.
 ---
 
-# Prices
+<style>
+  .md-typeset h1,
+  .md-content__button {
+    display: none;
+  }
+  .md-header__topic{
+    font-weight: bold;
+  }
+</style>
 
-### Prices from third party data providers <a href="#centralised-exchanges-trading-data" id="centralised-exchanges-trading-data"></a>
+![dune docs cover prices](images/cover-prices.jpg)
+
+## Prices from third party data providers <a href="#centralised-exchanges-trading-data" id="centralised-exchanges-trading-data"></a>
 
 We pull price data from the [coinpaprika](https://coinpaprika.com/) API.
 
 The Price is the volume-weighted price based on real-time market data, translated to USD.
 
-### **prices.usd**
+### prices.usd
 
 This table supports a range of erc20.tokens.
 
-If the token you desire is not listed in here, please make a pull request to our [github repository](https://github.com/duneanalytics/spellbook). (For V1 Engine, you can alsouse the decentralized price feed **dex.view\_token\_prices.**)
+If the token you desire is not listed in here, please make a pull request to our [GitHub repository](https://github.com/duneanalytics/spellbook). (For V1 Engine, you can also use the decentralized price feed **dex.view\_token\_prices.**)
 
 | <p></p><p><strong>column name</strong></p> | **description**                               |
 | ------------------------------------------ | --------------------------------------------- |
@@ -25,7 +36,7 @@ If the token you desire is not listed in here, please make a pull request to our
 
 Note that `WETH` can be used for ETH price as it trades at virtually the same price.
 
-### **prices.layer\_1usd**
+### prices.layer\_1usd
 
 This table supports layer 1 assets on other blockchains.
 

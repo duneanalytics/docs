@@ -1,3 +1,7 @@
+---
+title: January 2020
+---
+
 # January 2020
 
 ## Postgres 12.1 <a href="#postgres-121" id="postgres-121"></a>

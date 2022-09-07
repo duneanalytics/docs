@@ -1,15 +1,26 @@
 ---
+title: User Generated Tables
 description: >-
   The Schema dune_user_generated is an easy way to construct your own view,
   function or table inside of our database.
 ---
 
-# User Generated
+<style>
+  .md-typeset h1,
+  .md-content__button {
+    display: none;
+  }
+  .md-header__topic{
+    font-weight: bold;
+  }
+</style>
+
+![dune docs cover user generated tables](images/cover-tables-user-generated.jpg)
 
 !!! note
     User generated tables are not yet available on V2.
 
-#### Note that these tables are not guaranteed to contain correct data, please use these with caution if you haven't created them yourself.
+**Note that these tables are not guaranteed to contain correct data, please use these with caution if you haven't created them yourself.**
 
 **Always save the constructor arguments for your views. Sometimes we have to drop views in order to be able to change some decoding tables or proxy dependencies and you might have to redeploy your view.**
 
@@ -56,7 +67,7 @@ A great example of this in action is almost all queries on [this dashboard](http
 
 Please do note that while this approach works for most cases, views can get very computationally expensive and you might be better off constructing a materialized view or table in our [abstractions](abstractions/).
 
-This example takes the data from uniswap\_v3 and standardizes the data for the dex.trades table.
+This example takes the data from Uniswap\_v3 and standardizes the data for the dex.trades table.
 
 ```sql
 CREATE OR REPLACE view dune_user_generated.uniswap_v3 as 
@@ -126,13 +137,13 @@ CREATE OR REPLACE view dune_user_generated.uniswap_v3 as
 
 ### Testing Abstractions
 
-Another great use case of utilizing the "create" function is to test out if the Pull Request you are making to our abstractions github actually produce the intended results. Simply try running the query with the schema **dune\_user\_generated** instead of the actual schema that you want in Github.
+Another great use case of utilizing the "create" function is to test out if the Pull Request you are making to our abstractions GitHub actually produce the intended results. Simply try running the query with the schema **dune\_user\_generated** instead of the actual schema that you want in GitHub.
 
 If the test succeeds, you can proceed in making the Pull Request. If you can please attach the "Test Table/View" into the Pull Request.
 
 ### View Definition
 
-To find out how a particular view got created you can run queries against pgsql base tables.
+To find out how a particular view got created you can run queries against PostgreSQL base tables.
 
 **A particular view**
 
@@ -177,4 +188,4 @@ WHERE tgtdep.deptype = 'i'::"char" AND tgtobj.relkind = 'v'::"char"
 
 You need to temporarily break the dependencies in order to be able to change `view1`.
 
-Find the query [here](https://dune.com/queries/70916). Big thanks to gosuto for uncovering this.
+Find the query [here](https://dune.com/queries/70916). Big thanks to [@gosuto](https://dune.com/gosuto) for uncovering this.

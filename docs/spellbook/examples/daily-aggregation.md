@@ -1,8 +1,10 @@
-# Daily Aggregation
+---
+title: Daily Aggregation
+---
 
 This sums all transfers for the day. This table is materialized as an incrementally loaded table updated every 15 minutes because the next step includes a slower \`[window](https://spark.apache.org/docs/latest/sql-ref-syntax-qry-select-window.html)\` function to capture a rolling sum.
 
-There’s a few novel components to make this spell incremental:
+There are a few novel components to make this spell incremental:
 
 The `<div data-gb-custom-block data-tag="if"> </div>` JINJA block allows us to add an arbitrary filter when running in “incremental” mode. Incremental mode is default and a full refresh is denoted by a command line arg to completely recreate the table.
 

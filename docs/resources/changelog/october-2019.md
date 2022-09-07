@@ -1,3 +1,6 @@
+---
+title: October 2019
+---
 # October 2019
 
 #### New data structure <a href="#new-data-structure" id="new-data-structure"></a>

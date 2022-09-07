@@ -1,4 +1,17 @@
-# Raw
+---
+title: Raw Tables
+---
+<style>
+  .md-typeset h1,
+  .md-content__button {
+    display: none;
+  }
+  .md-header__topic{
+    font-weight: bold;
+  }
+</style>
+
+![dune docs cover raw tables](images/cover-tables-raw.jpg)
 
 **Raw tables provide you raw, unfiltered and unedited data.**
 
@@ -12,7 +25,7 @@ However, queries that have been written using raw data tables are notoriously ha
 
 Most of the time you are better off [submitting contracts for decoding](/features/adding-new-contracts.md) and working with [decoded data](../decoded-data/).
 
-### Differences in EVM chains
+## Differences in EVM chains
 
 EVM chains at large follow the same execution model, however there is sometimes is differences in the consensus algorithm, the gas costs or even the calculation of gas costs.
 

@@ -1,3 +1,216 @@
 :root > * {
-    --md-primary-fg-color: #56569B; /* Blue 400 */
+    --md-primary-bg-color: #2D2D2D; /* Dune Black */
+    --md-typeset-a-color: #1E1870; /* Blue 500 */
+    --md-accent-fg-color: #F4603E; /* Orange 500 */
+    --md-default-fg-color--light: #F49282; /* Orange 400 */
+    --md-typeset-color: #2D2D2D; /* Dune Black */
+
+    /* Code Blocks */
+    --md-code-fg-color: #404040;
+    --md-code-bg-color: #F2F2F2;
+    --md-code-hl-color: hsla(#{hex2hsl($clr-yellow-a200)}, 0.5);
+    --md-code-hl-number-color: #D93025;
+    --md-code-hl-special-color: hsla(340, 83%, 47%, 1);
+    --md-code-hl-function-color: hsla(291, 45%, 50%, 1);
+    --md-code-hl-constant-color: #8E8ECE;
+    --md-code-hl-keyword-color: #31C7ED;
+    --md-code-hl-string-color: #006400;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: #2D2D2D; /* Grey 700 */
+  --md-typeset-color: #fff;
+  --md-typeset-a-color: #8E8ECE; /* Blue 300 */
+
+  
+}
+
+@font-face {
+  font-family: "IBM Plex Serif";
+  src: "https://fonts.googleapis.com/css?family=IBM Plex Serif";
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: "IBM Plex Serif";
+}
+
+a {
+  color: var(--md-typeset-a-color);
+}
+
+/* Header */
+.md-header__title--active{
+    font-weight: bold;
+}
+
+.md-nav__source{
+    background-color: var(--md-accent-fg-color);
+}
+
+.md-nav--primary .md-nav__title {
+    background-color: var(--md-accent-fg-color);
+    color: #fff;
+}
+
+/* Header Links */
+.md-tabs{
+    background-color: var(--md-default-bg-color);
+}
+
+.md-tabs__link{
+    font-weight: bold;
+    opacity: 1;
+}
+
+.md-header{
+    color: var(--md-typeset-color);
+    background-color: var(--md-default-bg-color);
+}
+
+.md-header__button{
+    color: var(--md-typeset-a-color);
+}
+
+.md-search__input+.md-search__icon{
+    color: #2D2D2D;
+}
+
+.md-search__input{
+    background-color: #FFBDB6;
+}
+
+.md-source:hover{
+    opacity: 1;
+    color: var(--md-default-fg-color--light);
+}
+
+ .md-header--shadow{
+    box-shadow: none;
+ }
+
+.md-tabs__link:is(:focus,:hover),.md-header__button:is(:focus,:hover), .md-header__source:is(:focus,:hover){
+    color: var(--md-default-fg-color--light);
+    opacity: 1;
+}
+
+.md-tabs__link--active,.md-tabs__link--active:is(:focus,:hover){
+    color: var(--md-typeset-color);
+    opacity: 1;
+    font-size: 20px !important;
+    text-decoration: underline;
+    text-decoration-color: var(--md-accent-fg-color);
+    text-decoration-thickness: 4px;
+}
+
+a.md-tabs__link{
+    font-size: 16px;
+}
+
+
+a.md-select__link:is(:focus,:hover){
+  color: var(--md-accent-fg-color);
+}
+
+
+/*Body Content*/
+
+.md-typeset h1
+{
+    color: var(--md-accent-fg-color);
+    font-weight: 700;
+    font-size: 2rem;
+    text-decoration: underline;
+}
+
+.md-typeset h2
+{
+    margin-top: 1.5rem;
+    color: var(--md-accent-fg-color);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.md-typeset h3{
+    margin-top: 1.5rem;
+    font-size: 1.25rem;
+}
+
+.md-typeset a:hover{
+    color: var(--md-default-fg-color--light);
+}
+
+/*Sidebar/TOC Nav*/
+
+.md-nav__item .md-nav__item--nested{
+    color: var(--md-typeset-a-color);
+}
+
+.md-nav__item .md-nav__link--active{
+    color: var(--md-accent-fg-color);
+}
+
+.md-nav__link:is(:focus,:hover){
+    color: var(--md-default-fg-color--light);
+}
+
+.md-nav__icon{
+    color: var(--md-typeset-a-color);
+}
+
+.md-nav__link--passed{
+    color: var(--md-typeset-a-color);
+}
+
+
+/* Tabbed Body Content */
+
+.md-typeset .tabbed-set>input:first-child:checked~.tabbed-labels>:first-child, .md-typeset .tabbed-set>input:nth-child(10):checked~.tabbed-labels>:nth-child(10), .md-typeset .tabbed-set>input:nth-child(11):checked~.tabbed-labels>:nth-child(11), .md-typeset .tabbed-set>input:nth-child(12):checked~.tabbed-labels>:nth-child(12), .md-typeset .tabbed-set>input:nth-child(13):checked~.tabbed-labels>:nth-child(13), .md-typeset .tabbed-set>input:nth-child(14):checked~.tabbed-labels>:nth-child(14), .md-typeset .tabbed-set>input:nth-child(15):checked~.tabbed-labels>:nth-child(15), .md-typeset .tabbed-set>input:nth-child(16):checked~.tabbed-labels>:nth-child(16), .md-typeset .tabbed-set>input:nth-child(17):checked~.tabbed-labels>:nth-child(17), .md-typeset .tabbed-set>input:nth-child(18):checked~.tabbed-labels>:nth-child(18), .md-typeset .tabbed-set>input:nth-child(19):checked~.tabbed-labels>:nth-child(19), .md-typeset .tabbed-set>input:nth-child(2):checked~.tabbed-labels>:nth-child(2), .md-typeset .tabbed-set>input:nth-child(20):checked~.tabbed-labels>:nth-child(20), .md-typeset .tabbed-set>input:nth-child(3):checked~.tabbed-labels>:nth-child(3), .md-typeset .tabbed-set>input:nth-child(4):checked~.tabbed-labels>:nth-child(4), .md-typeset .tabbed-set>input:nth-child(5):checked~.tabbed-labels>:nth-child(5), .md-typeset .tabbed-set>input:nth-child(6):checked~.tabbed-labels>:nth-child(6), .md-typeset .tabbed-set>input:nth-child(7):checked~.tabbed-labels>:nth-child(7), .md-typeset .tabbed-set>input:nth-child(8):checked~.tabbed-labels>:nth-child(8), .md-typeset .tabbed-set>input:nth-child(9):checked~.tabbed-labels>:nth-child(9) {
+    color: var(--md-accent-fg-color);
+}
+
+.md-typeset .tabbed-labels>label{
+  color: var(--md-typeset-a-color);  
+}
+
+.md-typeset .tabbed-labels>label:hover {
+    color: var(--md-default-fg-color--light);
+}
+
+
+.js .md-typeset .tabbed-labels:before{
+    background-color: var(--md-accent-fg-color);   
+}
+
+/* Notes */
+.md-typeset :is(.admonition,details):is(.note) {
+    border-color: var(--md-accent-fg-color);
+}
+
+.md-typeset :is(.note)>:is(.admonition-title,summary):before {
+    background-color: var(--md-accent-fg-color);
+}
+
+.md-typeset :is(.note)>:is(.admonition-title,summary) {
+    background-color: rgba(128, 128, 128, .1);
+    color: var(--md-accent-fg-color);
+}
+
+
+/* Footer */
+.md-footer, .md-footer-meta{
+    background-color: var(--md-default-bg-color);
+}
+
+.md-footer__inner{
+    border-top: 3px;
+    border-color: var(--md-typeset-color);
+    border-top-style: solid;
+}
+
+.md-footer__link{
+    font-weight: bold;
+}
+
+.md-footer__link:is(:focus,:hover) {
+    color: var(--md-default-fg-color--light);
 }

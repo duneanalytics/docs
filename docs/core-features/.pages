@@ -1,0 +1,9 @@
+nav:
+- queries
+- visualizations
+- dashboards.md
+- parameters.md
+- teams.md
+- adding-new-contracts.md
+- dune-v2
+- sharing

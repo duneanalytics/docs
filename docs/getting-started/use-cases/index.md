@@ -1,18 +1,37 @@
 ---
+title: Use Cases
 description: >-
   Leverage Dune to generate Insights for yourself, your project or your
   organisation.
 ---
 
-# Use Cases
+<style>
+  .md-typeset h1,
+  .md-content__button {
+    display: none;
+  }
+  .md-header__topic{
+    font-weight: bold;
+  }
+</style>
+
+![dune docs cover use cases](images/cover-use-cases.jpg)
 
 ## Dune is an open platform
 
-Dune is a data analytics platform that surfaces blockchain data turns on chain data into human readable data available to users for free. Users can query on chain data using PostgreSQL and create dashboards that group queries together to tell a story. Queries on Dune are public goods and are available for anyone to view and fork with the exception of private queries, which are available to users who have the pro plan subscription.
+Dune is a blockchain data analytics platform that serves a few different groups:
+
+- **Dune Spectators** can view a variety of on-chain data made interesting and understandable via Dashboards on Dune.com.
+
+- **Dune Wizards** are the magicians who take the raw data the Dune Platform ingests and use it to tell stories via [Dashboards](/core-features/dashboards), [Visualizations](/core-features/visualizations) and [Queries](/core-features/queries).
+
+- **Dune Patrons** including the crypto communities, protocols, and companies who, with the help of Dune Wizards, leverage Dune's powers to solve problems and share insights within their organizations.
 
 ## **What is Dune used for?**
 
-Since pretty much everything is possible on Dune, there really aren't any limitations as to what you can query in regards to on-chain data. There still is some distinct Use Cases we can establish:
+Nearly the entire world of blockchain data analytics can be explored with Dune - there really aren't many limitations to what you can query and visualize with Dune. 
+
+That being said, to help you get a clearer picture of the type of problems you can explore and solve with done, we can establish a few broad Use Cases:
 
 <div class="cards grid" markdown>
 - [Sector Dashbaords](sector-dashboards.md)
@@ -27,4 +46,4 @@ To get more insights into how people use Dune, you can follow our Twitter accoun
 
 Just click through the last few tweets and see what people are up to on Dune currently!
 
-<a class="twitter-timeline" href="https://twitter.com/DuneAnalytics?ref_src=twsrc%5Etfw">Tweets by DuneAnalytics</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<a class="twitter-timeline" href="https://twitter.com/DuneAnalytics?ref_src=twsrc%5Etfw">Tweets by Dune</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

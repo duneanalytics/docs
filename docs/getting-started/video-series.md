@@ -1,37 +1,41 @@
-# Video Series
+---
+title: Video Tutorials
+---
 
-We have produced a video tutorial series on our [Youtube Channel](https://www.youtube.com/channel/UCPrm9d2hLd\_YxSExH7oRyAg).
+<style>
+  .md-typeset h1,
+  .md-content__button {
+    display: none;
+  }
+  .md-header__topic{
+    font-weight: bold;
+  }
+</style>
+
+![Dune Docs cover video tutorials](images/cover-video-tutorials.jpg)
 
 !!! note
-    These videos all reference our Dune V1 Engine. While the domain learnings are still applicable, query execution is different in Dune Engine V2.
+    These videos all reference our Dune V1 Engine. While the general concepts are still applicable, some specifics related to Query execution are different in Dune Engine V2.
 
-## Dune Analytics 5 Minute Intro
+We have produced a video tutorial series which you can follow below or on our [Youtube Channel](https://www.youtube.com/playlist?list=PLK3b5d4iK10ext4v-GBySekaA8-GP8quD).
 
-This Video is the quickest and best way to get an introduction to Dune, be sure to check it out.
+## The ⚡ Quick 5-minute Dune Overview
 
 ![type:video](https://www.youtube.com/embed/S-cctFmR828)
 
-## Intro to the Course
-
-This Video serves as an overview and intro to the whole course.
+## Intro to the tutorial series
 
 ![type:video](https://www.youtube.com/embed/USTIesVPk68)
 
-## Episode 1: Usecases and Applications
-
-This Video explains the basics of Dune and what it can be used for.
+## Episode 1: Dune Use cases and applications
 
 ![type:video](https://www.youtube.com/embed/IHC8HAZvw_Q)
 
-## Episode 2: The database
-
-This Video goes over the Data tables in Dune and how the database works.
+## Episode 2: How the Dune database works
 
 ![type:video](https://www.youtube.com/embed/UDu23Eyvo_Y)
 
-## Episode 3.1: Simple Queries and recreating Fees.wtf in Dune
-
-This Video is a great introduction to querying inside of Dune. Our Community Manager Boxer recreates Fees.wtf inside of Dune, so the Video mostly focuses on gas transactions.
+## Episode 3.1: How to use Dune Queries to recreate Fees.wtf
 
 ![type:video](https://www.youtube.com/embed/ez3VfcfNwvc)
 

@@ -1,19 +1,35 @@
-# Our Network course
+---
+title: OurNetwork Course
+---
+
+<style>
+  .md-typeset h1,
+  .md-content__button {
+    display: none;
+  }
+  .md-header__topic{
+    font-weight: bold;
+  }
+</style>
+
+![Dune Docs cover ournetwork course](images/cover-ournetwork.jpg)
 
 !!! note
     This course is based on Dune's V1 engine. Much of the content is still applicable, but the SQL dialect and some table names have changed in Dune V2.
 
-Our friends from OurNetwork have created a course in cooperation with Dune Analytics that taught 30 people web3 data in 30 days.
+In collaboration with the Dune Team and Community, our friends at OurNetwork created a course with an ambitious goal: teach 30 people web3 data analytics in 30 days.
 
-The course consists of presentations around all important topics that you need to become a Dune Creator and is available for free to everyone. It was hosted by some of the best creators we have on Dune nowadays and is currently the place to start your Dune Journey.
+Hosted by some of our community's top Wizards, you can now access the presentations for free!
 
-More details and course materials can be found here:
+As it covers all of the important topics you'll need to know to effectively analyze blockchain data and become a full-fledged Dune Wizard, it's one of the best places to start your Dune Journey.
+
+More details and all of the course materials can be found here:
 
 <div class="cards grid" markdown>
-- [Our Network Course](https://ournetwork.mirror.xyz/gP16wLY-9BA1E_ZuOSv1EUAgYGfK9mELNza8cfgMWPQ)
+- [OurNetwork Course](https://ournetwork.mirror.xyz/gP16wLY-9BA1E_ZuOSv1EUAgYGfK9mELNza8cfgMWPQ)
 </div>
 
-Please consider buying an edition of the mirror post to support the teachers of this course.
+Please consider buying an edition of the Mirror post to support the teachers of this course.
 
 Videos are also available on YouTube:
 
