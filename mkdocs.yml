@@ -18,15 +18,6 @@ theme:
     - navigation.indexes
 nav:
   - ...
-
-extra:
-  social:
-    - icon: fontawesome/brands/twitter 
-      link: https://twitter.com/DuneAnalytics
-    - icon: fontawesome/brands/discord 
-      link: https://discord.com/invite/ErrzwBz
-    - icon: fontawesome/brands/github 
-      link: https://github.com/duneanalytics
 markdown_extensions:
   - admonition
   - pymdownx.highlight:
@@ -42,6 +33,8 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true 
+  - toc:
+      permalink: true
 plugins:
   - search
   - awesome-pages
@@ -55,5 +48,12 @@ extra:
     - name: Chinese (Simplified)
       link: https://docs.dune.com/v/chinese/
       lang: zh
+  social:
+    - icon: fontawesome/brands/twitter 
+      link: https://twitter.com/DuneAnalytics
+    - icon: fontawesome/brands/discord 
+      link: https://discord.com/invite/ErrzwBz
+    - icon: fontawesome/brands/github 
+      link: https://github.com/duneanalytics
 extra_css:
   - stylesheets/extra.css
