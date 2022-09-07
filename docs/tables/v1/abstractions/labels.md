@@ -1,4 +1,4 @@
-# Labels
+# labels
 
 Have you ever made a query on Dune where you get a list of addresses, only to stop and wonder what’s behind these beautiful, random hexadecimal encoded strings? So have we.
 
@@ -37,14 +37,6 @@ The address in the past interacted with Uniswap.
 You are free to come up with both new types and label names, as labels on Dune are open ended and **crowd sourced.**
 
 ## Adding labels
-
-There are two ways to add labels:
-
-**1. Directly to an address via our labels page**
-
-Good for specific labels like “this is a binance wallet”.
-
-**2. Via a Dune query**
 
 Use Dune queries to label addresses. A very powerful and scalable way to add labels like “all these addresses used Uniswap”, and much much more.
 

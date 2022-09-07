@@ -64,3 +64,7 @@ You are amazing! 🪄
     ### [0xPhilan](https://dune.com/phillan) [:material-twitter:](https://twitter.com/0xPhillan)
 
     * [Dune Analytics: A Guide for Complete Beginners](https://mirror.xyz/phillan.eth/17VAXsMPpwJg4OQNBHKTYAQTWfJMwFuXZQDAxPStf0o)
+
+    ### [Kirubakumaresh](https://twitter.com/kirubakumaresh)
+
+    * [Buid Ethereum Metrics Dashboard](https://www.twigblock.com/projects/eth-intro-dune/t/eit-overview)
