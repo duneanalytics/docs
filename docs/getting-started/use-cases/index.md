@@ -23,7 +23,7 @@ Dune is a blockchain data analytics platform that serves a few different groups:
 
 - **Dune Spectators** can view a variety of on-chain data made interesting and understandable via Dashboards on Dune.com.
 
-- **Dune Wizards** are the magicians who take the raw data the Dune Platform ingests and use it to tell stories via [Dashboards](/core-features/dashboards), [Visualizations](/core-features/visualizations) and [Queries](/core-features/queries).
+- **Dune Wizards** are the magicians who take the raw data the Dune Platform ingests and use it to tell stories via [Dashboards](/features/dashboards), [Visualizations](/features/visualizations) and [Queries](/features/queries).
 
 - **Dune Patrons** including the crypto communities, protocols, and companies who, with the help of Dune Wizards, leverage Dune's powers to solve problems and share insights within their organizations.
 

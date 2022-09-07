@@ -35,7 +35,7 @@ The next steps to dive deeper depend on whether you
     [OurNetwork Course](our-network-course) is also provides a thorough, broad overview.
 
 === "Just-in-Time"
-    Just-in-Time learning is for those who learn by doing. If you already have an idea of what you want to do with Dune and just need to unblock yourself by finding some specific tactical knowledge, [Core Features](/core-features/queries) likely contains the information you need.
+    Just-in-Time learning is for those who learn by doing. If you already have an idea of what you want to do with Dune and just need to unblock yourself by finding some specific tactical knowledge, [Core Features](/features/queries) likely contains the information you need.
 
     [Tables](/tables) and [Spellbook](/spellbook) are more advanced features worth experimenting with once you've understood the basics.
 
