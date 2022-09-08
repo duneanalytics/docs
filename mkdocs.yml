@@ -1,5 +1,5 @@
 site_name: Dune Docs
-site_url: https://dune.com/docs/
+site_url: https://dune-docs.vercel.app/docs
 repo_url: https://github.com/duneanalytics/docs
 theme:
   language: en
