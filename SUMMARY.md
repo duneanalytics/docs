@@ -114,7 +114,7 @@
       * [A daily aggregation of transfers](dune-engine-v2-beta/abstractions-in-dunev2/how-to-contribute-a-spell/write-your-spell-as-a-select-statement/a-daily-aggregation-of-transfers.md)
       * [Rolling sum of daily transfers](dune-engine-v2-beta/abstractions-in-dunev2/how-to-contribute-a-spell/write-your-spell-as-a-select-statement/rolling-sum-of-daily-transfers.md)
       * [Final daily Ethereum ERC20 token balances spell](dune-engine-v2-beta/abstractions-in-dunev2/how-to-contribute-a-spell/write-your-spell-as-a-select-statement/final-daily-ethereum-erc20-token-balances-spell.md)
-    * [🏃♀ 🏃♀ 🏃♀ 🏃♀ Run your spell on dune.com](dune-engine-v2-beta/abstractions-in-dunev2/how-to-contribute-a-spell/run-your-spell-on-dune.com.md)
+    * [🏃♀ 🏃♀ 🏃♀ 🏃♀ 🏃♀ Run your spell on dune.com](dune-engine-v2-beta/abstractions-in-dunev2/how-to-contribute-a-spell/run-your-spell-on-dune.com.md)
     * [🍴 Fork of the spellbook Github Repo, open a Pull Request.](dune-engine-v2-beta/abstractions-in-dunev2/how-to-contribute-a-spell/fork-of-the-spellbook-github-repo-open-a-pull-request..md)
     * [🎯 Dune will merge and deploy](dune-engine-v2-beta/abstractions-in-dunev2/how-to-contribute-a-spell/dune-will-merge-and-deploy.md)
   * [📑 spellbook docs](https://spellbook-docs.dune.com/#!/overview/spellbook)
@@ -152,3 +152,7 @@
   * [March 2020](changelog/dune-changes/march-2020.md)
   * [January 2020](changelog/dune-changes/january-2020.md)
   * [October 2019](changelog/dune-changes/october-2019.md)
+
+## Dunecon Workshop <a href="#dunecon" id="dunecon"></a>
+
+* [Spellbook Workshop](dunecon/spellbook-workshop.md)

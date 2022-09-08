@@ -12,7 +12,7 @@ You can create a new dashboard by navigating to our "Discover" page and clicking
 
 The initial name that you give to your dashboard will also be the url slug. You can't change the url slug afterwards, so be mindful of the name you choose. Changing the dashboards display name is always possible though.
 
-![creating a dashboard](<../.gitbook/assets/2021-11-03 16-59-42 (1) (1) (2) (1).gif>)
+![creating a dashboard](<../.gitbook/assets/2021-11-03 16-59-42 (1) (1) (2) (1) (1).gif>)
 
 ### Adding Visualizations
 
