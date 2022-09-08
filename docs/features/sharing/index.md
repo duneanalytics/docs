@@ -3,6 +3,18 @@ title: Sharing
 description: Content on Dune is community created and should be attributed accordingly!
 ---
 
+<style>
+  .md-typeset h1,
+  .md-content__button {
+    display: none;
+  }
+  .md-header__topic{
+    font-weight: bold;
+  }
+</style>
+
+![dune docs cover sharing](images/cover-sharing.jpg)
+
 ## Please shout out creators when sharing!
 
 Content on Dune is first and foremost the product of the creators on the platform.

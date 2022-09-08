@@ -1,6 +1,6 @@
 ---
-title: Home
-description: Welcome to Dune
+title: Welcome
+description: Welcome to Dune Docs
 hide:
   - navigation
 ---
