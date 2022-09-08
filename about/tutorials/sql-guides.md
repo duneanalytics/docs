@@ -14,4 +14,4 @@ We have compiled a few resources that we think are helpful in your journey to be
 
 [Mode SQL Tutorial](https://mode.com/sql-tutorial/) (FREE)
 
-[Introduction to SQL by DataCamp](https://app.datacamp.com/learn/courses/introduction-to-sql) (FREE)
+[Introduction to SQL by DataCamp](https://www.datacamp.com/courses/introduction-to-sql) (FREE)
