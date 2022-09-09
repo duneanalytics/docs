@@ -44,9 +44,11 @@ You can currently query data from:
 
 - **Ethereum**
 - **Polygon**
-- **Binance Smart Chain**
+- **Arbitrum**
+- **BNB Chain**
 - **Optimism**
 - **Gnosis Chain**
+- **Solana**
 
 Dune picks up events and internal calls from the blockchains we index, we don't have state/storage data.
 
