@@ -22,7 +22,7 @@ Let's take a look at each of these parts in more detail.
 
 The data(-set) explorer allows you to search for datasets to use in your Queries.
 
-To learn more about Dune's datasets, please visit the [section datasets](../tables).
+To learn more about Dune's datasets, please visit the [section datasets](../../tables/index.md).
 
 ![Data explorer](images/data-explorer.gif)
 
