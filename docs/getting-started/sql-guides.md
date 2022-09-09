@@ -2,18 +2,6 @@
 title: SQL Guides
 ---
 
-<style>
-  .md-typeset h1,
-  .md-content__button {
-    display: none;
-  }
-  .md-header__topic{
-    font-weight: bold;
-  }
-</style>
-
-![Dune Docs cover sql guides](images/cover-sql-guides.jpg)
-
 To be a successful Dune Wizard, you'll need to have a good understanding of SQL in order to query data from Dune's database.
 
 We've compiled a few resources that we think are helpful in your journey to becoming a Dune Wizard below.

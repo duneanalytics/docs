@@ -6,18 +6,6 @@ description: >-
   user interface without changing the SQL.
 ---
 
-<style>
-  .md-typeset h1,
-  .md-content__button {
-    display: none;
-  }
-  .md-header__topic{
-    font-weight: bold;
-  }
-</style>
-
-![dune docs cover parameters](images/cover-parameters.jpg)
-
 ## What are Parameters?
 
 **Parameters are a specialized feature of dune that allow you to implement variables in certain parts of your Query code. This variable can be changed from dashboards and therefore allows you to make an interactive dashboard.**

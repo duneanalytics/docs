@@ -2,18 +2,6 @@
 title: Teams
 ---
 
-<style>
-  .md-typeset h1,
-  .md-content__button {
-    display: none;
-  }
-  .md-header__topic{
-    font-weight: bold;
-  }
-</style>
-
-![dune docs cover teams](images/cover-teams.jpg)
-
 It is now possible to create Teams on Dune. **A Team is a shared workspace for wizards to work together and share their work under a single shared entity.** As such, Teams can own content and have their own profile page, allowing for seamless collaboration and serving as a promotional tool.
 
 ## Why Teams?

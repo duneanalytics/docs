@@ -2,18 +2,6 @@
 title: Video Tutorials
 ---
 
-<style>
-  .md-typeset h1,
-  .md-content__button {
-    display: none;
-  }
-  .md-header__topic{
-    font-weight: bold;
-  }
-</style>
-
-![Dune Docs cover video tutorials](images/cover-video-tutorials.jpg)
-
 !!! note
     These videos all reference our Dune V1 Engine. While the general concepts are still applicable, some specifics related to Query execution are different in Dune Engine V2.
 

@@ -2,18 +2,6 @@
 title: Getting Started
 ---
 
-<style>
-  .md-typeset h1,
-  .md-content__button {
-    display: none;
-  }
-  .md-header__topic{
-    font-weight: bold;
-  }
-</style>
-
-![getting started dune docs cover](images/getting-started-cover.jpg)
-
 ## Dune is made for technical and non-technical users alike.
 
 Whether you are a seasoned SQL developer, blockchain researcher, business analyst or none of the above - you can use Dune to start analyzing Blockchain data in an instant.

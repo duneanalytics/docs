@@ -2,18 +2,6 @@
 title: Dune V2
 ---
 
-<style>
-  .md-typeset h1,
-  .md-content__button {
-    display: none;
-  }
-  .md-header__topic{
-    font-weight: bold;
-  }
-</style>
-
-![dune docs cover dune V2](images/cover-dune-V2.jpg)
-
 **Dune Engine V2** is Dune's new Query engine that brings a new level of performance, scalability and functionality to Dune's core set of tools that enables wizards to query, extract, and visualize the vast amounts of data on the blockchain.
 
 It leverages **Apache Spark** to enable increased performance of complex Queries, handle data scale, and enable cross-chain Queries all within the same UI.

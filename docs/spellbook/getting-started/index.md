@@ -1,17 +1,6 @@
 ---
 title: Spellbook Getting Started
 ---
-<style>
-  .md-typeset h1,
-  .md-content__button {
-    display: none;
-  }
-  .md-header__topic{
-    font-weight: bold;
-  }
-</style>
-
-![Dune Docs cover spellbook getting started](images/cover-spellbook-getting-started.jpg)
 
 **Spellbook is essentially a DBT project that runs on Dune's data platform.**
 

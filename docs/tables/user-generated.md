@@ -5,18 +5,6 @@ description: >-
   function or table inside of our database.
 ---
 
-<style>
-  .md-typeset h1,
-  .md-content__button {
-    display: none;
-  }
-  .md-header__topic{
-    font-weight: bold;
-  }
-</style>
-
-![dune docs cover user generated tables](images/cover-tables-user-generated.jpg)
-
 !!! note
     User generated tables are not yet available on V2.
 

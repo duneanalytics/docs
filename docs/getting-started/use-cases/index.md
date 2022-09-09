@@ -5,18 +5,6 @@ description: >-
   organisation.
 ---
 
-<style>
-  .md-typeset h1,
-  .md-content__button {
-    display: none;
-  }
-  .md-header__topic{
-    font-weight: bold;
-  }
-</style>
-
-![dune docs cover use cases](images/cover-use-cases.jpg)
-
 ## Dune is an open platform
 
 Dune is a blockchain data analytics platform that serves a few different groups:

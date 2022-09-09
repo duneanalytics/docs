@@ -3,18 +3,6 @@ title: Prices
 description: These tables allow you to get the price of almost all relevant erc20 tokens.
 ---
 
-<style>
-  .md-typeset h1,
-  .md-content__button {
-    display: none;
-  }
-  .md-header__topic{
-    font-weight: bold;
-  }
-</style>
-
-![dune docs cover prices](images/cover-prices.jpg)
-
 ## Prices from third party data providers <a href="#centralised-exchanges-trading-data" id="centralised-exchanges-trading-data"></a>
 
 We pull price data from the [coinpaprika](https://coinpaprika.com/) API.

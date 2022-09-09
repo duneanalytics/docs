@@ -1,17 +1,6 @@
 ---
 title: Raw Tables
 ---
-<style>
-  .md-typeset h1,
-  .md-content__button {
-    display: none;
-  }
-  .md-header__topic{
-    font-weight: bold;
-  }
-</style>
-
-![dune docs cover raw tables](images/cover-tables-raw.jpg)
 
 **Raw tables provide you raw, unfiltered and unedited data.**
 

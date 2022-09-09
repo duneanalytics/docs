@@ -2,18 +2,6 @@
 title: Tables
 ---
 
-<style>
-  .md-typeset h1,
-  .md-content__button {
-    display: none;
-  }
-  .md-header__topic{
-    font-weight: bold;
-  }
-</style>
-
-![dune docs cover tables](images/cover-tables.jpg)
-
 **Dune enables you to query data on our supported chains at different levels of abstraction.**
 
 To start with, you have access to the raw tables for each supported blockchain, with tables like `blocks` and `transactions`. This is the most flexible option.

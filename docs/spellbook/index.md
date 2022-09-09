@@ -1,17 +1,6 @@
 ---
 title: Spellbook
 ---
-<style>
-  .md-typeset h1,
-  .md-content__button {
-    display: none;
-  }
-  .md-header__topic{
-    font-weight: bold;
-  }
-</style>
-
-![Dune Docs cover spellbook](images/cover-spellbook.jpg)
 
 **Spellbook is a data transformation layer for Dune, built by the community.**
 

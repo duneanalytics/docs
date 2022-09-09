@@ -5,18 +5,6 @@ description: >-
   party data providers
 ---
 
-<style>
-  .md-typeset h1,
-  .md-content__button {
-    display: none;
-  }
-  .md-header__topic{
-    font-weight: bold;
-  }
-</style>
-
-![dune docs cover community tables](images/cover-tables-community.jpg)
-
 !!! note
     Community is only available on V2 Engine.
 

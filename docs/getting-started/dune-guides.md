@@ -2,18 +2,6 @@
 title: Dune Guides
 ---
 
-<style>
-  .md-typeset h1,
-  .md-content__button {
-    display: none;
-  }
-  .md-header__topic{
-    font-weight: bold;
-  }
-</style>
-
-![Dune Docs cover Dune guides](images/cover-dune-guides.jpg)
-
 Some of our best Wizard Community Members have produced outstanding written tutorials for Dune.
 
 These guides are all great and we recommend reading all of them, **BIG THANK YOU** to the Wizards who created them.

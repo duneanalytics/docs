@@ -2,18 +2,6 @@
 title: OurNetwork Course
 ---
 
-<style>
-  .md-typeset h1,
-  .md-content__button {
-    display: none;
-  }
-  .md-header__topic{
-    font-weight: bold;
-  }
-</style>
-
-![Dune Docs cover ournetwork course](images/cover-ournetwork.jpg)
-
 !!! note
     This course is based on Dune's V1 engine. Much of the content is still applicable, but the SQL dialect and some table names have changed in Dune V2.
 

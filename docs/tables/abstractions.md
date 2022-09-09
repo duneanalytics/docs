@@ -6,18 +6,6 @@ description: >-
   with as little friction as possible.
 ---
 
-<style>
-  .md-typeset h1,
-  .md-content__button {
-    display: none;
-  }
-  .md-header__topic{
-    font-weight: bold;
-  }
-</style>
-
-![dune docs cover abstractions](images/cover-abstractions.jpg)
-
 **Abstractions are custom tables that are built and maintained by Dune and our community.**
 
 Our abstractions layer is managed in this public [GitHub repository](https://github.com/duneanalytics/spellbook). We welcome pull requests.

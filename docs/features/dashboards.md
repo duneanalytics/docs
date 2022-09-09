@@ -2,18 +2,6 @@
 title: Dashboards
 ---
 
-<style>
-  .md-typeset h1,
-  .md-content__button {
-    display: none;
-  }
-  .md-header__topic{
-    font-weight: bold;
-  }
-</style>
-
-![dune docs cover dashboards](images/cover-dashboards.jpg)
-
 **Dashboards are where Dune's content lives and gets discovered.**
 
 Dashboards on Dune consist of widgets. Widgets can either be Visualizations or a text box. It is also possible to embed images/GIFs inside of the text box.

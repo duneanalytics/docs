@@ -1,17 +1,6 @@
 ---
 title: Decoded Tables
 ---
-<style>
-  .md-typeset h1,
-  .md-content__button {
-    display: none;
-  }
-  .md-header__topic{
-    font-weight: bold;
-  }
-</style>
-
-![dune docs cover decoded tables](images/cover-tables-decoded.jpg)
 
 Instead of working with the transactions, logs, and traces in their raw states, on Dune we decode smart contract activity into nice human-readable tables.
 

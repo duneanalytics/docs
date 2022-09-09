@@ -2,18 +2,6 @@
 title: Queries
 ---
 
-<style>
-  .md-typeset h1,
-  .md-content__button {
-    display: none;
-  }
-  .md-header__topic{
-    font-weight: bold;
-  }
-</style>
-
-![dune docs cover queries](images/cover-queries.jpg)
-
 **The Query Editor is the place to Query for your data.**
 
 ![Query editor](images/query-editor.png)

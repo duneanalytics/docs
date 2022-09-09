@@ -3,18 +3,6 @@ title: Visualizations
 description: Visualizations make your data come alive!
 ---
 
-<style>
-  .md-typeset h1,
-  .md-content__button {
-    display: none;
-  }
-  .md-header__topic{
-    font-weight: bold;
-  }
-</style>
-
-![dune docs cover visualizations](images/cover-visualizations.jpg)
-
 Visualizing your query results makes the results accessible and allows you to effectively communicate your findings to your audience.
 
 Dune offers you a variety of different Visualization options:
