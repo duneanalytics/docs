@@ -9,7 +9,7 @@ Spells are recipes to build high level tables that support common use cases, lik
 Spellbook automates the build, maintenance and data quality of these tables. Anyone in our community can contribute to our spells, whether that is adding a new exchange or writing an entirely new spell.
 
 !!! note
-    Spellbook is available on our Dune V2 Engine. For abstractions on Dune V1 Engine, see [abstractions](/tables/v1/abstractions).
+    Spellbook is available on our Dune V2 Engine. For abstractions on Dune V1 Engine, see [abstractions](/docs/tables/v1/abstractions).
 
 ## New level unlocked.
 

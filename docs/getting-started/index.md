@@ -23,9 +23,9 @@ The next steps to dive deeper depend on whether you
     [OurNetwork Course](our-network-course) is also provides a thorough, broad overview.
 
 === "Just-in-Time"
-    Just-in-Time learning is for those who learn by doing. If you already have an idea of what you want to do with Dune and just need to unblock yourself by finding some specific tactical knowledge, [Core Features](/features/queries) likely contains the information you need.
+    Just-in-Time learning is for those who learn by doing. If you already have an idea of what you want to do with Dune and just need to unblock yourself by finding some specific tactical knowledge, [Core Features](/docs/features/queries) likely contains the information you need.
 
-    [Tables](/tables) and [Spellbook](/spellbook) are more advanced features worth experimenting with once you've understood the basics.
+    [Tables](/docs/tables) and [Spellbook](/docs/spellbook) are more advanced features worth experimenting with once you've understood the basics.
 
 
 === "Don't Know SQL?"
@@ -45,7 +45,7 @@ A fundamental understanding of SQL is needed to be able to successfully query fo
 
 !!! note
     By default, this documentation shows information for our Dune V1 Engine, which runs on a PostgreSQL database.
-    Our new data platform, [Dune Engine V2](https://dune.com/blog/dune-engine-v2) is currently in beta with a Databricks SQL query engine. It offers exciting features like better scaling, cross chain Queries and [Spellbook](/spellbook). Dune Engine V2 will become the default over the next few months, so we recommend you try it out!
+    Our new data platform, [Dune Engine V2](https://dune.com/blog/dune-engine-v2) is currently in beta with a Databricks SQL query engine. It offers exciting features like better scaling, cross chain Queries and [Spellbook](/docs/spellbook). Dune Engine V2 will become the default over the next few months, so we recommend you try it out!
 
 === "Basic SQL"
     If you're not very familiar with SQL in general, we recommend starting with our [SQL Guides](sql-guides).
@@ -64,7 +64,7 @@ Thus, understanding how the Ethereum Virtual Machine and smart contracts work as
 
 If you are able to read most of the data in Etherscan, you're already well on your way to being able to create insightful Queries and Visualizations with Dune.
 
-Unfortunately we haven't yet found one great resource we can point you to currently as each smart contract has it's own rules. We have written up a few words on this in our section on [Decoded Data](/tables/decoded).
+Unfortunately we haven't yet found one great resource we can point you to currently as each smart contract has it's own rules. We have written up a few words on this in our section on [Decoded Data](/docs/tables/decoded).
 
 ### What communities, protocols, and businesses care about
 
