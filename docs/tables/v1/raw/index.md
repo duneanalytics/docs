@@ -9,9 +9,9 @@ EVM chains at large follow the same execution model, however there is sometimes 
 You can find out about the individual chains in the specific sections of the documentation:
 
 <div class="cards grid" markdown>
-- [BNB Chain (BSC)](bnb-chain-bsc/)
-- [Ethereum Mainnet](ethereum-mainnet/)
-- [Gnosis Chain (xDai)](gnosis-chain-xdai/)
-- [Optimism](optimism/)
-- [Polygon](polygon/)
+- [BNB Chain (BSC)](bnb-chain-bsc/index.md)
+- [Ethereum Mainnet](ethereum-mainnet/index.md)
+- [Gnosis Chain (xDai)](gnosis-chain-xdai/index.md)
+- [Optimism](optimism/index.md)
+- [Polygon](polygon/index.md)
 </div>

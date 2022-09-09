@@ -12,7 +12,7 @@ The ERC-20 standard was proposed by Fabian Vogelsteller in November 2015 and rep
 
 A smart contract that contains the erc20 token standard is not limited to only having these functions, but it needs to contain these functions to be within the standard.
 
-For more reading check out the [initial proposal](https://eips.ethereum.org/EIPS/eip-20) or the [ethereum.org documentation](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/).
+For more reading check out the [initial proposal](https://eips.ethereum.org/EIPS/eip-20) or the [ethereum.org documentation](https://ethereum.org/en/developers/docs/standards/tokens/erc-20).
 
 _Please note that Binance Smart Chain chose to rename ERC to BEP, this is reflected in out tables._
 

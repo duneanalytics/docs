@@ -41,9 +41,9 @@ Abstraction in DuneV2 will run on [dbt](https://docs.getdbt.com/docs/introductio
 This will make abstractions more robust, scalable and easier to work with.
 
 <div class="cards grid" markdown>
-- [Abstractions/Spells in Dune V2](abstractions-in-dunev2/)
+- [Abstractions/Spells in Dune V2](abstractions-in-dunev2/index.md)
 </div>
 
 ## Feedback
 
-One final note, as the Query engine is still in in **beta** you may run into bugs or have feedback on how it can be improved, feel free to share it with us on [Discord](https://discord.com/invite/ErrzwBz) and [Canny](https://dune.canny.io/).
+One final note, as the Query engine is still in in **beta** you may run into bugs or have feedback on how it can be improved, feel free to share it with us on [Discord](https://discord.com/invite/ErrzwBz) and [Canny](https://dune.canny.io).

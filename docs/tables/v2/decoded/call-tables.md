@@ -16,7 +16,7 @@ For a contract where multiple instances exist, we will decode all calls to all i
 
 **Common misconceptions**
 
-One thing to keep in mind here is that [web3.js](https://web3js.readthedocs.io/), [web3.py](https://web3py.readthedocs.io/en/stable/) and all other methods of (locally) calling a `pure`, `read`, or `constant` function do not broadcast or publish anything on the blockchain and are therefore not recorded in Dune.
+One thing to keep in mind here is that [web3.js](https://web3js.readthedocs.io), [web3.py](https://web3py.readthedocs.io/en/stable) and all other methods of (locally) calling a `pure`, `read`, or `constant` function do not broadcast or publish anything on the blockchain and are therefore not recorded in Dune.
 
 However, if one of these functions is invoked by another smart contract in the context of a transaction, this will be broadcast on the chain and therefore accessible in Dune.
 

@@ -5,7 +5,7 @@ description: These tables allow you to get the price of almost all relevant erc2
 
 ## Prices from third party data providers <a href="#centralised-exchanges-trading-data" id="centralised-exchanges-trading-data"></a>
 
-We pull price data from the [coinpaprika](https://coinpaprika.com/) API.
+We pull price data from the [coinpaprika](https://coinpaprika.com) API.
 
 The Price is the volume-weighted price based on real-time market data, translated to USD.
 

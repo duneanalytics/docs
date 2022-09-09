@@ -82,6 +82,6 @@ There are thousands of ways to go about finding metrics that are interesting, th
 
 There are quite a few people in the crypto industry who either specialize in building on Dune or have the necessary skills to quickly get up to speed on the particulars.
 
-To reach out to this pool of freelancers, you can [**fill out this questionnaire**](http://bounties.dune.com/) and hopefully freelancers will get back to you in little to no time. If that yields no results, posting the bounty on relevant social channels and spreading it in your networks may help.
+To reach out to this pool of freelancers, you can [**fill out this questionnaire**](http://bounties.dune.com) and hopefully freelancers will get back to you in little to no time. If that yields no results, posting the bounty on relevant social channels and spreading it in your networks may help.
 
 If hiring a freelancer for the first time, please be sure to review their past work and Dashboards to verify that they are indeed capable of the kind of problem solving you need.

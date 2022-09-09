@@ -9,13 +9,13 @@ EVM chains at large follow the same execution model, however there is sometimes 
 You can find out about the individual chains in the specific sections of the documentation:
 
 <div class="cards grid" markdown>
-- [Ethereum Mainnet](ethereum-mainnet/)
-- [Arbitrum](arbitrum/)
-- [Solana](solana/)
-- [Polygon](polygon/)
-- [Optimism](optimism/)
-- [Avalanche C-Chain](avalanche-c-chain/)
-- [BNB Chain (BSC)](bnb-chain-bsc/)
-- [Gnosis Chain (xDai)](gnosis-chain-xdai/)
+- [Ethereum Mainnet](ethereum-mainnet/index.md)
+- [Arbitrum](arbitrum/index.md)
+- [Solana](solana/index.md)
+- [Polygon](polygon/index.md)
+- [Optimism](optimism/index.md)
+- [Avalanche C-Chain](avalanche-c-chain/index.md)
+- [BNB Chain (BSC)](bnb-chain-bsc/index.md)
+- [Gnosis Chain (xDai)](gnosis-chain-xdai/index.md)
 </div>
 

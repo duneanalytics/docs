@@ -6,7 +6,7 @@ Transactions are cryptographically signed instructions from accounts. An account
 
 Transactions need to be broadcast to the whole network. Any node can broadcast a request for a transaction to be executed on the EVM; after this happens, a miner will execute the transaction and propagate the resulting state change to the rest of the network.
 
-Read more in the official Ethereum documentation [here](https://ethereum.org/en/developers/docs/transactions/).
+Read more in the official Ethereum documentation [here](https://ethereum.org/en/developers/docs/transactions).
 
 | **Column Name**              | **datatype** | **Description**                                                                                                                                                                                        |
 | ---------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

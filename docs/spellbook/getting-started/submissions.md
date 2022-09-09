@@ -8,7 +8,7 @@ Here's how you can contribute your spell on GitHub.
 
 When you’re happy with your spell, from a fork of the abstractions GitHub Repo, open a Pull Request.
 
-This step is non-specific to Spellbook. So I will farm out the explanation to Jake Jarvis who has an excellent [step by step guide](https://jarv.is/notes/how-to-pull-request-fork-github/) to forking and committing a Pull Request to a public GitHub repository.
+This step is non-specific to Spellbook. So I will farm out the explanation to Jake Jarvis who has an excellent [step by step guide](https://jarv.is/notes/how-to-pull-request-fork-github) to forking and committing a Pull Request to a public GitHub repository.
 
 Once you’ve opened your pull request, fill out the [pull request template](https://github.com/duneanalytics/spellbook/blob/master/pull\_request\_template.md) and tag the duneanalytics/team-data-experience team-data-experience.
 

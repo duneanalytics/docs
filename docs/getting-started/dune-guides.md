@@ -33,7 +33,7 @@ You are amazing! 🪄
 
     ### [Paul Pivat](https://dune.com/paulapivat) [:material-twitter:](https://twitter.com/paulapivat)
 
-    * [Lean foundational Ethereum topics with SQL](https://ethereum.org/en/developers/tutorials/learn-foundational-ethereum-topics-with-sql/)
+    * [Lean foundational Ethereum topics with SQL](https://ethereum.org/en/developers/tutorials/learn-foundational-ethereum-topics-with-sql)
 
     ### [Alex Kroeger](https://dune.com/kroeger0x) [:material-twitter:](https://twitter.com/alex\_kroeger)
 
@@ -41,7 +41,7 @@ You are amazing! 🪄
 
     ### [Chuxin](https://dune.com/chuxin) [:material-twitter:](https://twitter.com/chuxin\_h)
 
-    * [Select \* from web3](https://www.chuxinhuang.com/blog/select-from-web3/)
+    * [Select \* from web3](https://www.chuxinhuang.com/blog/select-from-web3)
 
     ### Gracelily [:material-twitter:](https://twitter.com/\_grace\_lily)
 

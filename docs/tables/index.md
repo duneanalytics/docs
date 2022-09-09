@@ -19,4 +19,4 @@ Here is an overview what is available:
 - [Prices](prices.md): prices from third party data providers
 - [User generated](user-generated.md): construct your own view, function or table inside of our database
 
-The details of the data model depends on the blockchain and engine. We've compiled detailed references for tables on our [Dune V1 Engine](v1/) (PostgreSQL) and [Dune V2 Engine](v2/) (Databricks SQL).
+The details of the data model depends on the blockchain and engine. We've compiled detailed references for tables on our [Dune V1 Engine](v1/index.md) (PostgreSQL) and [Dune V2 Engine](v2/index.md) (Databricks SQL).

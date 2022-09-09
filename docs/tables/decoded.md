@@ -77,7 +77,7 @@ Read more about submitting contracts for decoding in this section:
 
 ## How does decoding work?
 
-Smart Contracts on any EVM blockchain are mostly written in high level languages like [Solidity](https://docs.soliditylang.org/en/v0.8.2/) or [Vyper](https://vyper.readthedocs.io/en/stable/).
+Smart Contracts on any EVM blockchain are mostly written in high level languages like [Solidity](https://docs.soliditylang.org/en/v0.8.2) or [Vyper](https://vyper.readthedocs.io/en/stable).
 
 In order for them to be able to be deployed to an EVM execution environment, they need to be compiled to EVM executable bytecode. Once deployed, the bytecode gets associated to an address on the respective chain and is permanently stored in this chain's state storage.
 
@@ -216,7 +216,7 @@ We can use the contracts ABI to go from encoded bytecode to decoded data. This h
 
 Decoded data is the high level programming language representation of two pieces of software talking to each other via the blockchain. It's not always easy for a human to understand what exactly is going on in these interactions, but most of the time, looking at column names and the data that is transmitted within them should help you to understand what is happening within that specific log or call.
 
-If you are not able to make sense of the data by just searching the tables, it usually helps to look at single transactions using the transaction hash and Etherscan. Furthermore, actually going into the smart contracts code (my favorite way to do this is [DethCode](https://etherscan.deth.net/)) to read the comments or the actual logic can help to understand the smart contract's emitted data.
+If you are not able to make sense of the data by just searching the tables, it usually helps to look at single transactions using the transaction hash and Etherscan. Furthermore, actually going into the smart contracts code (my favorite way to do this is [DethCode](https://etherscan.deth.net)) to read the comments or the actual logic can help to understand the smart contract's emitted data.
 
 If that also doesn't lead to satisfactory results, scouring the relevant docs and GitHub of the project can lead you to the desired answers. Furthermore, talking to the developers and core community of a project can also help you to get an understanding of the smart contracts.
 
@@ -228,7 +228,7 @@ Working with decoded data allows you deep access to information stored on the bl
 
 ## Which tables should I use?
 
-**Events** are designed to be analyzed and stored on the blockchain to allow backward looking analysis of what is happening, **transactions** and **message calls** are made to pass information between smart contracts. Therefore, in most cases the easiest and most accessible way to analyze various things happening on the blockchain is by looking at events. However, there is some cases where the emitted events miss some crucial information or there is just no events that get emitted. In these cases you might have to fall back to transaction and message calls (found in call tables). Cases where no event gets emitted get rarer over time as developers now mostly understand that events are important enough to be emitted, but they still exist. In some cases, it might make sense to combine the decoded data with [raw data](../raw-data/chains/) in order to get metadata about the transaction or dive even deeper.
+**Events** are designed to be analyzed and stored on the blockchain to allow backward looking analysis of what is happening, **transactions** and **message calls** are made to pass information between smart contracts. Therefore, in most cases the easiest and most accessible way to analyze various things happening on the blockchain is by looking at events. However, there is some cases where the emitted events miss some crucial information or there is just no events that get emitted. In these cases you might have to fall back to transaction and message calls (found in call tables). Cases where no event gets emitted get rarer over time as developers now mostly understand that events are important enough to be emitted, but they still exist. In some cases, it might make sense to combine the decoded data with [raw data](../raw-data/chains/index.md) in order to get metadata about the transaction or dive even deeper.
 
 ## Queries to explore decoded Contracts
 

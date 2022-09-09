@@ -104,7 +104,7 @@ In the most recent version of `nft.trades`, information about the amount and per
 
 The SQL code that processes the data for every market place is open source and available in our [github repository](https://github.com/duneanalytics/spellbook/tree/master/ethereum/nft/trades). Everyone can review the code, make pull requests and submit code to add more marketplaces.
 
-Also read the section "[abstractions](./)" about this topic.
+Also read the section "[abstractions](index.md)" about this topic.
 
 ## **Table contents**
 

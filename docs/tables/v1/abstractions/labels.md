@@ -51,7 +51,7 @@ Examples of what you can do:
 
 You could also do more novel and involved things around user patterns like who did arbitrage trades or profited from flash loans and so much more.
 
-Note that there might be a few minutes delay from adding the label on [dune.com](http://dune.com/) until you can query it in SQL.
+Note that there might be a few minutes delay from adding the label on [dune.com](http://dune.com) until you can query it in SQL.
 
 ## The labels table
 

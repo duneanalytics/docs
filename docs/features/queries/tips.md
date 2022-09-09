@@ -2,7 +2,7 @@
 title: Query Tips
 ---
 
-You can interact with the data tables through our interface at [dune.com](https://www.dune.com/).
+You can interact with the data tables through our interface at [dune.com](https://dune.com).
 
 To create a new Query you simply click `New Query` in the top right corner
 
