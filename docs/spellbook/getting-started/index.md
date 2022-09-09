@@ -6,7 +6,7 @@ title: Spellbook Getting Started
 
 At a high level, you need to setup our DBT project locally, develop a spell in Jinja-templated SQL, and get it to run on our data platform.
 
-To start with, clone the [Spellbook](https://github.com/duneanalytics/spellbook) repository and setup your local dev env as per the README.
+To start with, clone the [Spellbook](https://github.com/duneanalytics/spellbook/index.md) repository and setup your local dev env as per the README.
 
 Decide what problem you're trying to solve. Think about the [data model](data-modelling.md).
 
@@ -17,7 +17,7 @@ Write your spell. At minimum, you'll need to:
 - [Write your spell](spells.md) as a SQL select statement with Jinja templating
 - Write a schema in a separate YAML file
 
-To learn more about all the features in DBT, take a look at their [documentation](https://docs.getdbt.com/docs/introduction). We've written a few [example](/docs/spellbook/examples) guides for building spells for ERC20.
+To learn more about all the features in DBT, take a look at their [documentation](https://docs.getdbt.com/docs/introduction). We've written a few [example](../spellbook/examples) guides for building spells for ERC20.
 
 !!! tip
     As you go along, you can use `dbt compile` to generate a SQL statement, and validate it on dune.com in the Query editor.

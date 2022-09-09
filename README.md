@@ -4,7 +4,7 @@ Welcome to the Dune docs!
 
 Dune is a crypto analytics tool by and for the community.
 
-These docs are open source and built with [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
+These docs are open source and built with [Material for MkDocs](https://squidfunk.github.io/mkdocs-material).
 
 Any contributions are welcome, from spelling mistakes to entire guides on the EVM. Just submit a PR.
 

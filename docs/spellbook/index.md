@@ -9,7 +9,7 @@ Spells are recipes to build high level tables that support common use cases, lik
 Spellbook automates the build, maintenance and data quality of these tables. Anyone in our community can contribute to our spells, whether that is adding a new exchange or writing an entirely new spell.
 
 !!! note
-    Spellbook is available on our Dune V2 Engine. For abstractions on Dune V1 Engine, see [abstractions](/docs/tables/v1/abstractions).
+    Spellbook is available on our Dune V2 Engine. For abstractions on Dune V1 Engine, see [abstractions](../tables/v1/abstractions/index.md).
 
 ## New level unlocked.
 
@@ -19,7 +19,7 @@ On January 31, 2020, we launched the abstractions repo as a place for wizards to
 
 ![Mats inaugural comment](images/mats-inaugural-comment.jpg)
 
-Abstractions are some of the most queried tables on Dune. That makes creating them one of the highest leverage things a wizard can do. We want to make that experience better by launching the **Spellbook**, a retooling of our existing [abstractions](https://github.com/duneanalytics/spellbook) repo + a first-in-class open-source analytics engineering tool called dbt.
+Abstractions are some of the most queried tables on Dune. That makes creating them one of the highest leverage things a wizard can do. We want to make that experience better by launching the **Spellbook**, a retooling of our existing [abstractions](https://github.com/duneanalytics/spellbook/index.md) repo + a first-in-class open-source analytics engineering tool called dbt.
 
 [dbt-core](https://docs.getdbt.com/docs/introduction) (data build tool) is an open-source framework that injects more classical software engineering practices into writing SQL by mixing SQL with JINJA templating.
 

@@ -8,17 +8,17 @@ It leverages **Apache Spark** to enable increased performance of complex Queries
 
 All of the data sources contained in this section are available for querying with the new Query engine today. Currently we have the following data available to query:
 
-- [**Raw tables**](/docs/tables/evm-blockchains/raw-data/chains/)
+- [**Raw tables**](../tables/evm-blockchains/raw-data/chains/index.md)
     * Ethereum
     * Gnosis Chain
     * BNB Chain
     * Optimism
     * Solana
-- [**Decoded tables**](/docs/tables/evm-blockchains/decoded-data/)
+- [**Decoded tables**](../tables/evm-blockchains/decoded-data/index.md)
     * we are still optimizing this, only a few are decoded for now
-- [**Flashbots**](/docs/tables/community/flashbots/)
+- [**Flashbots**](../tables/community/flashbots/index.md)
     * Example: [https://dune.com/niftytable/MEV](https://dune.com/niftytable/MEV)
-- [**Prices**](/docs/tables/prices) (including Solana)
+- [**Prices**](../tables/prices/index.md) (including Solana)
 
 ## New Query engine
 
