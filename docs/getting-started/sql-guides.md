@@ -23,9 +23,9 @@ We've compiled a few resources that we think are helpful in your journey to beco
 
     - [UDEMY Course SQL & PostgreSQL for Beginners](https://www.udemy.com/course/sql-and-postgresql-for-beginners/?ranMID=39197\&ranEAID=JVFxdTr9V80\&ranSiteID=JVFxdTr9V80-nnMsdWXzWeu9lqxtbEa72g\&utm\_source=aff-campaign\&LSNPUBID=JVFxdTr9V80\&utm\_medium=udemyads) ($10)
 
-    - [Mode SQL Tutorial](https://mode.com/sql-tutorial) (FREE)
+    - [Mode SQL Tutorial](https://mode.com/sql-tutorialhttps://www.datacamp.com/courses/introduction-to-sql) (FREE)
 
-    - [Introduction to SQL by DataCamp](https://app.datacamp.com/learn/courses/introduction-to-sql) (FREE)
+    - [Introduction to SQL by DataCamp](https://www.datacamp.com/courses/introduction-to-sql) (FREE)
 
 === "Databricks SQL"
 
