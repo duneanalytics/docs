@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block styles %}
+    <!-- Enable mkdocs-material to work without trailing slashes -->
+    <script>
+        if (!window.location.pathname.endsWith('/')) {
+            history.pushState({}, null, window.location.pathname + '/')
+        }
+    </script>
+    <!-- Manually add the stylesheet, for hard-coded mkdocs-material and mkdocs-material-insiders -->
+    <link rel="stylesheet" href="/docs/assets/stylesheets/main.{% if config.insiders %}846d444e{% else %}1d29e8d0{% endif %}.min.css">
+    {% include "partials/icons.html" %}
+{% endblock %}
+
+{% block fonts %}
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400&display=swap" rel="stylesheet">
+{% endblock %}
