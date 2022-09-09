@@ -68,7 +68,7 @@ As a Dune Wizard (what we call "blockchain analysts" because it's way cooler), y
 
 Dune aggregates blockchain data into an SQL database that can be easily queried. 
 
-[Queries](features/queries) are used to specify what data from the blockchain should be found in the our database and returned.
+[Queries](features/queries/index.md) are used to specify what data from the blockchain should be found in the our database and returned.
 
 Maybe you want to know _all the Dex trades that happened today_, or the _total value of stablecoins minted this year_. Whatever the question, discovering the answer starts with a Dune Query!
 
@@ -84,7 +84,7 @@ There are a few ways that a blockchain analyst (i.e. Wizard i.e. you!) can get s
 
 ### Visualizations
 
-Data presented in table form (rows and columns) can be difficult to read. [Visualizations](features/visualizations) take the results of a Query and present the information in a clear, precise, and _visual_ way.
+Data presented in table form (rows and columns) can be difficult to read. [Visualizations](features/visualizations/index.md) take the results of a Query and present the information in a clear, precise, and _visual_ way.
 
 With Dune Visualizations, it's easy to begin to tell a story with your data by transforming something like this:
 
@@ -108,7 +108,7 @@ Dune offers a variety of Visualizations you can use to visually present data inc
 
 ### Dashboards
 
-Using carefully planned visuals, a clever blockchain analyst (Wizard!) can tell a story about different collections of data through [Dune Dashboards](features/dashboards).
+Using carefully planned visuals, a clever blockchain analyst (Wizard!) can tell a story about different collections of data through [Dune Dashboards](features/dashboards/index.md).
 
 For example, in the below Dashboard, [Dex Metrics](https://dune.com/hagaetc/dex-metrics) by [@hagaetc](https://dune.com/hagaetc), it's clear at the top that 'DEX' as a category is growing. Below, the audience sees which DEX's are the most popular by volume, and finally can view a stacked bar chart that shows changes over time.
 

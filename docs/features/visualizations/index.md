@@ -36,5 +36,5 @@ One query can have multiple Visualizations.
 
 ## What you can do with Visualizations
 
-Visualizations can either live on your [dashboard](../features/dashboards) or be embedded on their own using the [embed function](../features/sharing/embeds/index.md)
+Visualizations can either live on your [dashboard](../features/dashboards.md) or be embedded on their own using the [embed function](../features/sharing/embeds/index.md)
 

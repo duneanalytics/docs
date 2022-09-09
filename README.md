@@ -25,3 +25,7 @@ Run the docs locally:
 ```bash
 mkdocs serve
 ```
+
+## Notes
+
+Remember to use relative paths to markdown files for internal links (e.g. `[link](../../relative/path/to/index.md)`), otherwise the mkdocs compiler will not detect broken internal inks - [read more](/index.md).

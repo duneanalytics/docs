@@ -10,7 +10,7 @@ Models will (by default) be views but we can override that to make them tables o
 
 The basic trade-off is that a view is fast to create and doesn’t require additional storage but is slower to query. A table is much slower to create and does require additional storage but is faster to query. Generally, we’ll try to stick to views but upgrade to tables or incrementally loaded tables if performance is an issue.
 
-To learn more about all the features in DBT, take a look at their [documentation](https://docs.getdbt.com/docs/introduction). We've written a few [example](examples) guides for building spells for ERC20.
+To learn more about all the features in DBT, take a look at their [documentation](https://docs.getdbt.com/docs/introduction). We've written a few [example](examples/index.md) guides for building spells for ERC20.
 
 ## Checking your spell
 
