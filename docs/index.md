@@ -78,7 +78,7 @@ Queries return rows and columns of data (just like traditional SQL queries) that
 
 There are a few ways that a blockchain analyst (i.e. Wizard i.e. you!) can get started running Queries:
 
-1. The simplest way is to use Dune [_Abstractions_](tables/spellbook/index.md)) to query commonly used data tables. Some popular Abstractions include `dex.trades`, `lending.borrow`, and `stablecoin.transfer`.
+1. The simplest way is to use Dune [_Abstractions_](tables/abstractions.md)) to query commonly used data tables. Some popular Abstractions include `dex.trades`, `lending.borrow`, and `stablecoin.transfer`.
 2. Query the raw Ethereum data like blocks, logs, and transactions.
 3. It is also possible to query centralized exchange data. For example, you can use `prices.usd` to quickly return the price of almost any cryptoasset.
 
@@ -108,7 +108,7 @@ Dune offers a variety of Visualizations you can use to visually present data inc
 
 ### Dashboards
 
-Using carefully planned visuals, a clever blockchain analyst (Wizard!) can tell a story about different collections of data through [Dune Dashboards](features/dashboards/index.md).
+Using carefully planned visuals, a clever blockchain analyst (Wizard!) can tell a story about different collections of data through [Dune Dashboards](features/dashboards.md).
 
 For example, in the below Dashboard, [Dex Metrics](https://dune.com/hagaetc/dex-metrics) by [@hagaetc](https://dune.com/hagaetc), it's clear at the top that 'DEX' as a category is growing. Below, the audience sees which DEX's are the most popular by volume, and finally can view a stacked bar chart that shows changes over time.
 

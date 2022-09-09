@@ -8,17 +8,17 @@ It leverages **Apache Spark** to enable increased performance of complex Queries
 
 All of the data sources contained in this section are available for querying with the new Query engine today. Currently we have the following data available to query:
 
-- [**Raw tables**](../tables/evm-blockchains/raw-data/chains/index.md)
+- [**Raw tables**](../../tables/v2/raw/index.md)
     * Ethereum
     * Gnosis Chain
     * BNB Chain
     * Optimism
     * Solana
-- [**Decoded tables**](../tables/evm-blockchains/decoded-data/index.md)
+- [**Decoded tables**](../../tables/decoded.md)
     * we are still optimizing this, only a few are decoded for now
-- [**Flashbots**](../tables/community/flashbots/index.md)
+- [**Flashbots**](../../tables/v2/community/flashbots/index.md)
     * Example: [https://dune.com/niftytable/MEV](https://dune.com/niftytable/MEV)
-- [**Prices**](../tables/prices/index.md) (including Solana)
+- [**Prices**](../../tables/prices.md) (including Solana)
 
 ## New Query engine
 
@@ -41,7 +41,7 @@ Abstraction in DuneV2 will run on [dbt](https://docs.getdbt.com/docs/introductio
 This will make abstractions more robust, scalable and easier to work with.
 
 <div class="cards grid" markdown>
-- [Abstractions/Spells in Dune V2](abstractions-in-dunev2/index.md)
+- [Abstractions/Spells in Dune V2](../../spellbook/index.md)
 </div>
 
 ## Feedback

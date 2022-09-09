@@ -8,7 +8,7 @@ Whether you are a seasoned SQL developer, blockchain researcher, business analys
 
 With the help of our community, we've created a lot of helpful guides and tools to aid you in your journey of becoming a full-fledged Dune Wizard.
 
-The absolute quickest way to get started with Dune is to follow along with our [Getting Started Video Series here](video-series/index.md).
+The absolute quickest way to get started with Dune is to follow along with our [Getting Started Video Series here](video-series.md).
 
 The next steps to dive deeper depend on whether you
 
@@ -18,9 +18,9 @@ The next steps to dive deeper depend on whether you
 === "Just-in-Case"
     Just-in-Case learning is school-style - read and watch a lot of content up front to get a general understanding, then start experimenting with doing.
 
-    If this is your preferred learning style, our long form [Dune Guides](dune-guides/index.md) go a lot deeper than our videos while still guiding you through simple projects to give you a general understanding of how to create with Dune.
+    If this is your preferred learning style, our long form [Dune Guides](dune-guides.md) go a lot deeper than our videos while still guiding you through simple projects to give you a general understanding of how to create with Dune.
 
-    [OurNetwork Course](our-network-course/index.md) is also provides a thorough, broad overview.
+    [OurNetwork Course](our-network-course.md) is also provides a thorough, broad overview.
 
 === "Just-in-Time"
     Just-in-Time learning is for those who learn by doing. If you already have an idea of what you want to do with Dune and just need to unblock yourself by finding some specific tactical knowledge, [Core Features](../features/queries/index.md) likely contains the information you need.
@@ -29,7 +29,7 @@ The next steps to dive deeper depend on whether you
 
 
 === "Don't Know SQL?"
-    If you're not very familiar with SQL, start by exploring our [SQL Guides here](sql-guides/index.md).
+    If you're not very familiar with SQL, start by exploring our [SQL Guides here](sql-guides.md).
 
 
 ## What do you need to know to Become a Great Wizard?
@@ -48,7 +48,7 @@ A fundamental understanding of SQL is needed to be able to successfully query fo
     Our new data platform, [Dune Engine V2](https://dune.com/blog/dune-engine-v2) is currently in beta with a Databricks SQL query engine. It offers exciting features like better scaling, cross chain Queries and [Spellbook](../spellbook/index.md). Dune Engine V2 will become the default over the next few months, so we recommend you try it out!
 
 === "Basic SQL"
-    If you're not very familiar with SQL in general, we recommend starting with our [SQL Guides](sql-guides/index.md).
+    If you're not very familiar with SQL in general, we recommend starting with our [SQL Guides](sql-guides.md).
 
 === "PostgreSQL"
     The official [PostgreSQL documentation](https://www.postgresql.org/docs/12/index.html) is great. Dune runs on PostgreSQL 12.2.
@@ -64,7 +64,7 @@ Thus, understanding how the Ethereum Virtual Machine and smart contracts work as
 
 If you are able to read most of the data in Etherscan, you're already well on your way to being able to create insightful Queries and Visualizations with Dune.
 
-Unfortunately we haven't yet found one great resource we can point you to currently as each smart contract has it's own rules. We have written up a few words on this in our section on [Decoded Data](../tables/decoded/index.md).
+Unfortunately we haven't yet found one great resource we can point you to currently as each smart contract has it's own rules. We have written up a few words on this in our section on [Decoded Data](../tables/decoded.md).
 
 ### What communities, protocols, and businesses care about
 

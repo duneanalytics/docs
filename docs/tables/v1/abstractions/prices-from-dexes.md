@@ -12,7 +12,7 @@ We created a table that creates price feeds based on decentralized exchange trad
 
 **Please keep in mind that this script can generate wrong prices in rare cases.**
 
-This table is very resource intensive and can therefore only be updated every few hours, please keep that in mind when utilizing it. **** Also the resolution is only hourly, so if you need minutely prices do refer to [`prices.usd`](../tables/prices.md).
+This table is very resource intensive and can therefore only be updated every few hours, please keep that in mind when utilizing it. **** Also the resolution is only hourly, so if you need minutely prices do refer to [`prices.usd`](../../prices.md).
 
 This table currently only exists for Ethereum on our old database architecture.
 

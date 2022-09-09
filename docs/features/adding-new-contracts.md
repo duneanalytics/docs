@@ -5,7 +5,7 @@ description: >-
   new contracts
 ---
 
-The Dune App contains an extensive catalog of decoded contracts in the form of [call and event tables](../tables/evm-blockchains/decoded-data/index.md#decoded-smart-contract-data). These contracts are brought into Dune by wizards through a process commonly referred to as [Decoding](../tables/evm-blockchains/decoded-data/index.md).
+The Dune App contains an extensive catalog of decoded contracts in the form of [call and event tables](../tables/decoded.md#decoded-smart-contract-data). These contracts are brought into Dune by wizards through a process commonly referred to as [Decoding](../tables/decoded.md).
 
 ## Quick tour
 
