@@ -4,7 +4,7 @@ description: Here's how to access the Dune API via JavaScript.
 ---
 
 !!! Warning
-    This guide is not yet comprehensive. If you have questions, please reach out to our team via the #[dune-api](https://discord.com/channels/757637422384283659/973606737393352745) channel on Discord.
+    This guide is not yet comprehensive. If you have questions, please reach out to our team via the #[dune-api](https://discord.com/channels/757637422384283659/1019910980634939433) channel on Discord.
 
 Let's get started using the Dune API via JavaScript!
 
