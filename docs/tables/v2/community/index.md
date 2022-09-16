@@ -12,4 +12,5 @@ We are still building out the infrastructure for this endeavor and can therefore
 
 <div class="cards grid" markdown>
 - [Flashbots](flashbots/index.md)
+- [Reservoir](reservoir/index.md)
 </div>
