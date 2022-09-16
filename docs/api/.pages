@@ -1,4 +1,5 @@
 nav:
+- ETHBerlin Hackers Start Here!: eth-ber.md
 - index.md
 - Quick Start: quick-start
 - API Reference: api-reference

@@ -5,3 +5,4 @@ nav:
 - Execution Status: execution-status.md
 - Execution Results: execution-results.md
 - Cancel Execution: cancel-execution.md
+- Error Codes: errors.md
