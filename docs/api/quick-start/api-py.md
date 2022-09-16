@@ -8,7 +8,7 @@ Let's get staretd using the Dune API via Python!
 In this example we'll be using Python3. We recommend using a virtual environment and the `pip` package manager.
 
 !!! example "Prerequisites"
-    This Quick Start Guide assumes you have some prior experience using Python, though we aimed to make the code here easy to follow. If you are looking for a complete Dune API example with Object Oriented Programming, you can also checkout the [Python Client](https://github.com/duneanalytics/duneapi-client-python) we are working on. And if you have questions, please reach out to our team via the #[dune-api](https://discord.com/channels/757637422384283659/973606737393352745) channel on Discord.
+    This Quick Start Guide assumes you have some prior experience using Python, though we aimed to make the code here easy to follow. If you have questions, please reach out to our team via the #[dune-api](https://discord.com/channels/757637422384283659/973606737393352745) channel on Discord.
 
 ## Getting Set Up
 
