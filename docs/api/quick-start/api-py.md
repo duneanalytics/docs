@@ -3,7 +3,7 @@ title: Python
 description: Here's how to access the Dune API via Python.
 ---
 
-Let's get staretd using the Dune API via Python!
+Let's get started using the Dune API via Python!
 
 In this example we'll be using Python3. We recommend using a virtual environment and the `pip` package manager.
 
@@ -12,7 +12,7 @@ In this example we'll be using Python3. We recommend using a virtual environment
 
 ## Getting Set Up
 
-We'll primarily be working with the `requests` library to access the API, so let's install it:
+We'll primarily be working with the `requests` library to access the API (but you can also use https://github.com/cowprotocol/dune-client which makes it easier), so let's install it:
 
 ``` bash
 pip install requests
@@ -157,7 +157,7 @@ response = get_query_status(execution_id)
 ```
 #### Output
 
-The `response` object retured by this function will look something like the example shown here:
+The `response` object returned by this function will look something like the example shown here:
 
 ``` json
 {'execution_id': '01GCQKPC4QZ6Q8645C3JC4WBT1',
