@@ -9,11 +9,7 @@ Welcome hackers! We are excited to see what you build with our APIs.
 Here are the best ways to get an API key from us:
 
 1. Find us at our booth!
-2. Ask us on our [#dune-api Discord Channel](https://discord.com/channels/757637422384283659/1019910980634939433)
-3. Email us at [api@dune.com](mailto:api@dune.com)
-
-
-You can reach out to our booth at the conference, and we will quickly set you up. You can also write to us over api@dune.com and we will provide you an API key.
+2. Email us at [api@dune.com](mailto:api@dune.com)
 
 ## Important Links
  - API Documentation - you're already here, check out the sidebar to learn more!
