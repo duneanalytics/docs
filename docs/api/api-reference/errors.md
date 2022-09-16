@@ -1,17 +1,20 @@
 ---
-title: Handling Errors
-description: Here's how to .
+title: Errors Codes
+description: Here's how to handle errors that may come up when working with the Dune API.
 ---
 
-The amazing thing is, you are very early.
-Now that also means, we are still working on getting the details right.
+The good news: you are very early to Dune API.  🧙‍♂️
 
-Our API at the moment, doesn't always throw error messages. So in a lot of cases, when things do not work as expected, you would need to decipher that from our response objects.
+The bad news: that means we're still working out the gremlins. 👹
+
+For now, the Dune API doesn't always throw error messages, so in some cases when things do not work as expected you'll need to decode what happened using our response objects.
 
 !!! Note
-    If this is too technical/ difficult for you, you don't need to break you head, just reach out to us on Discord over the #dune-api channel. And we will help you where ever you are stuck!
+    If this is too technical/difficult/confusing, don't break your wand - reach out to us on the [#dune-api Discord channel](https://discord.com/channels/757637422384283659/1019910980634939433) and we'll help out when you're stuck!
 
-Here are a few common scenarios. 
+Here are a few common error scenarios:
+
+## Invalid API Key
 
 ### Response Object
 
@@ -21,18 +24,23 @@ Here are a few common scenarios.
 
 #### Checks
  
-  -  Make sure that you are passing the API key to our end point *in a header*. See the section on Authentication for what that means. And our quick start guides for specific language examples.
+  -  Make sure that you are passing your API key to our endpoint *in a header*. See the section on [Authentication](../api-reference/authentication) for how to do that, and our [quick start guides](../quick-start/api-py) for specific language examples.
   - If you are already passing the API key in an header, make sure that it is correctly entered.
+
+
+## An Internal Error Occurred
 
 ### Response Object
 
 ```
- {'error': 'An internal error occured'}
+ {'error': 'An internal error occurred'}
 ```
 #### Checks
 
-  - If you are using our GET endpoint, ensure that the query ID you have entered is correct.
-  - If you are using one of our POST endpoints, ensure that the execution ID you obtained from the GET endpoint has been correctly passed on to this endpoint.
+  - If you are using one of our GET endpoints, ensure that the `query_id` you have entered is correct.
+  - If you are using one of our POST endpoints, ensure that the `execution_id` you obtained from your GET endpoint has been correctly passed on to your POST endpoint.
 
 
-The documentation here isn't exhaustive, while we are working on making it better, we will repeat ourselves, the best place to get any support is our Discord channel.
+The documentation here isn't exhaustive!
+
+While we are working on making it better, again, the best place to get any support is our [#dune-api Discord channel](https://discord.com/channels/757637422384283659/1019910980634939433).
