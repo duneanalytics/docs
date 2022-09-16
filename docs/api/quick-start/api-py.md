@@ -12,7 +12,7 @@ In this example we'll be using Python3. We recommend using a virtual environment
 
 ## Getting Set Up
 
-We'll primarily be working with the `requests` library to access the API (but you can also use https://github.com/cowprotocol/dune-client which makes it easier), so let's install it:
+We'll primarily be working with the `requests` library to access the API, so let's install it:
 
 ``` bash
 pip install requests
