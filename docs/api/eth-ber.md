@@ -17,7 +17,7 @@ Here are the best ways to get an API key from us:
  - [API Client (Community Sourced)](https://dune.com/docs/api/quick-start/community-clients/)
 
 ## Picking a Programming Language
-While you can consume our API in the language of your choice - see the [API Reference](../api-reference/authentication) section - we currently have quick start guides for [Python](../api/quick-start/api-py) and [Node.js](../api/quick-start/api-js).
+While you can consume our API in the language of your choice - see the [API Reference](../api-reference/authentication) section - we currently have quick start guides for [Python](../quick-start/api-py) and [Node.js](../quick-start/api-js).
 
 ## What to Build
 With Dune, you have access to almost all of the data from today's most popular blockchain ecosystems. There is no limit to what you can build on top of this data!
