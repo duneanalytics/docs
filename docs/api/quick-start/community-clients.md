@@ -3,9 +3,11 @@ title: Community Clients
 description: Here's a list of Dune API clients built by our magnificent community!
 ---
 
-While we are still building our own [Python Client](https://github.com/duneanalytics/duneapi-client-python), our community is already ahead of us - exactly the way we want it to be!
+Our community once again comes through for the win with the below API clients.
 
-## Cow Protocol
+If you've built your own let us know about it in our [#dune-api Discord Channel](https://discord.com/channels/757637422384283659/1019910980634939433)!
+
+## Cow Protocol Python Client
 
 Built by [@bh2smith](https://dune.com/bh2smith) and the team at [Cow Protocol](https://dune.com/cowprotocol), you can find this client on [PyPi](https://pypi.org/project/dune-client/).
 

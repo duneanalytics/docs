@@ -17,6 +17,12 @@ SLAs will be available in the future on Enterprise pricing plans.
 
 ## Executing Queries
 
+### How do I find a query id?
+
+When navigating to a query, it’s the first number after “/queries/” in the URL.
+
+![query-id-example](../images/query-id-example.jpg)
+
 ### What are the performance and overall differences between the Dune API and the Dune web app? What are the differences in what I can query?
 
 There are no major performance differences or differences in what can be accessed between the two.
