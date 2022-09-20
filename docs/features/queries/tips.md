@@ -36,7 +36,7 @@ WHERE token = '\x6b175474e89094c44da98b954eedeac495271d0f'::bytea
 !!! note
     This feature is only available in the Dune V1 engine.
 
-Column and table names are mostly taken directly from smart contract ABIs, with no modification. Since most smart contracts are written in Solidity, and written with a camelCased naming convention, so is many of Dune’s table and column names. PostgreSQL requires you to quote columns and table names that are case sensitive:
+Column and table names are mostly taken directly from smart contract ABIs, with no modification. Since most smart contracts are written in Solidity, and written with a camelCased naming convention, so are many of Dune’s table and column names. PostgreSQL requires you to quote columns and table names that are case sensitive:
 
 ```sql
 SELECT “columnName”

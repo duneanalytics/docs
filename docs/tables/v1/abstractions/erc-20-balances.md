@@ -8,13 +8,13 @@ description: >-
 
 ## Easily track wallets and token balances over time.
 
-The following tables allow for easy tracking or wallet-balances, token allocations or supply of a token over time or in a snapshot format.
+The following tables allow for easy tracking of wallet-balances, token allocations or supply of a token over time or in a snapshot format.
 
 On a raw data level it's pretty hard to work with erc20 tokens since you need to sum all transfers for all addresses over time. This unnecessarily bloats queries and quickly leads to human errors. To prevent that from happening we have constructed several views and tables that will help you query for erc20 data with ease.
 
 These tables can be used for all kinds of interesting analysis, but you still need to watch out for a few things while working with them:
 
-* the **mint/burn address** is not standardized, so you need to find out those addresses and manually apply a fix in your queries. In most cases it will be `x0000000000000000000000000000000000000000` for minting and burning, but always make sure that that is indeed the case. In the example given that's exactly not the case, there is an additional burn address `x000000000000000000000000000000000000dead`.
+* the **mint/burn address** is not standardized, so you need to find out those addresses and manually apply a fix in your queries. In most cases it will be `x0000000000000000000000000000000000000000` for minting and burning, but always make sure that is indeed the case. In the example given that's exactly not the case, there is an additional burn address `x000000000000000000000000000000000000dead`.
 
 **example:**
 
