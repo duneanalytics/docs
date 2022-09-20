@@ -54,7 +54,7 @@ Dune picks up events and internal calls from the blockchains we index, we don't 
 
 ## Dune.com
 
-Dune.com is the first killer app built on top of the Dune Data Platform, designed to make it as easy as possible for anyone with at least a little bit of SQL, Etherium Virtual Machine, and Business knowledge to analyze blockchain data in interesting ways.
+Dune.com is the first killer app built on top of the Dune Data Platform, designed to make it as easy as possible for anyone with at least a little bit of SQL, Ethereum Virtual Machine, and Business knowledge to analyze blockchain data in interesting ways.
 
 The basic building blocks of the Dune.com app are:
 
