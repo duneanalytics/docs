@@ -33,7 +33,7 @@ Similarly, results from API executions are not currently reflected on Dune’s w
 Dune API is currently in private beta with a closed set of users, but will be publicly available in November!
 
 ### Picking a Programming Language
-While you can consume our API in the language of your choice - see the [API Reference](../api-reference/authentication) section - we currently have quick start guides for [Python](../quick-start/api-py) and [Node.js](../quick-start/api-js).
+While you can consume our API in the language of your choice - see the [API Reference](api-reference/authentication.md) section - we currently have quick start guides for [Python](quick-start/api-py.md) and [Node.js](quick-start/api-js.md).
 
 ### What can I build with the Dune API?
 With Dune, you have access to almost all of the data from today's most popular blockchain ecosystems. There is no limit to what you can build on top of this data!
