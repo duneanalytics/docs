@@ -17,11 +17,11 @@ Query examples can be found here: [TBD](TBD)
 | order\_source        | string    | Source of the listing (e.g. opensea.io)           |
 | from                 | string    | Maker wallet address                              |
 | to                   | string    | Taker wallet address                              |
-| price                | bigint    | Sale price (native currency)                      |
+| price                | decimal   | Sale price (native currency)                      |
 | usd\_price           | string    | Sale price in USD                                 |
 | currency\_address    | string    | The currency address used for this sale           |
 | currency\_symbol     | string    | The currency symbol used for this sale            |
-| currency\_price      | string    | Sale price                                        |
+| currency\_price      | decimal   | Sale price                                        |
 | amount               | string    | Amount of tokens sold                             |
 | fill\_source         | string    | Where the order was filled                        |
 | aggregator\_source   | string    | aggregator source (e.g. reservoir)                |

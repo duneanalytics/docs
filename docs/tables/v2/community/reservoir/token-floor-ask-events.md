@@ -14,8 +14,8 @@ Query examples can be found here: [TBD](TBD)
 | token\_id       | string    | Id of the token in the collection                                                                               |
 | order\_id       | string    | Associated Ask id                                                                                               |
 | maker           | string    | Associated Ask maker wallet address                                                                             |
-| price           | bigint    | Associated ask price (native currency)                                                                          |
-| previous\_price | bigint    | Associated ask price (native currency)                                                                          |
+| price           | decimal   | Associated ask price (native currency)                                                                          |
+| previous\_price | decimal   | Associated ask price (native currency)                                                                          |
 | nonce           | string    | The order nonce of the maker                                                                                    |
 | valid\_from     | bigint    | Associated ask validity start                                                                                   |
 | valid\_until    | bigint    | Associated ask validity expiration                                                                              |

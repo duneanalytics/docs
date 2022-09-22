@@ -15,12 +15,12 @@ Query examples can be found here: [TBD](TBD)
 | token\_id           | string    | Id of the token in the collection            |
 | maker               | string    | Maker wallet address                         |
 | taker               | string    | Taker wallet address                         |
-| price               | bigint    | The current price (native currency)          |
+| price               | decimal   | The current price (native currency)          |
 | start\_price        | bigint    | Start Listing price (for dutch auctions)     |
 | end\_price          | bigint    | End Listing price (for dutch auctions)       |
 | currency\_address   | string    | Currency address                             |
 | currency\_symbol    | string    | Currency symbol                              |
-| currency\_price     | bigint    | Currency price                               |
+| currency\_price     | decimal   | Currency price                               |
 | dynamic             | boolean   | Is dutch auction?                            |
 | quantity            | bigint    | Amount of tokens that is listed              |
 | quantity\_filled    | bigint    | Amount of tokens that was filled             |
@@ -29,7 +29,7 @@ Query examples can be found here: [TBD](TBD)
 | valid\_until        | bigint    | Listing end time                             |
 | nonce               | string    | The order nonce of the maker                 |
 | source              | string    | Source of the listing (e.g. opensea.io)      |
-| fee\_bps            | string    | Listing fee                                  |
+| fee\_bps            | bigint    | Listing fee                                  |
 | expiration          | bigint    | Associated transaction hash                  |
 | raw\_data           | string    | Raw order data (format will vary per source) |
 | created\_at         | timestamp | Timestamp the listing was created            |

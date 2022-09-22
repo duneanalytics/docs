@@ -15,8 +15,8 @@ Query examples can be found here: [TBD](TBD)
 | token\_id       | string    | Id of the token in the collection                                                                               |
 | order\_id       | string    | Associated ask id                                                                                               |
 | maker           | string    | Associated ask maker wallet address                                                                             |
-| price           | bigint    | Associated ask price (native currency)                                                                          |
-| previous\_price | bigint    | previous floor ask price (native currency)                                                                      |
+| price           | decimal   | Associated ask price (native currency)                                                                          |
+| previous\_price | decimal   | previous floor ask price (native currency)                                                                      |
 | valid\_until    | bigint    | Associated ask validity expiration                                                                              |
 | source          | string    | Source of the order (e.g. opensea.io)                                                                           |
 | tx\_hash        | string    | Associated transaction hash                                                                                     |

@@ -13,7 +13,7 @@ Query examples can be found here: [TBD](TBD)
 | value              | string    | Attribute value                                            |
 | token\_count       | bigint    | Amount of tokens that have the attribute                   |
 | on\_sale\_count    | bigint    | Amount of tokens that have the attribute which are on sale |
-| floor\_sell\_value | bigint    | Current floor ask price                                    |
+| floor\_sell\_value | decimal   | Current floor ask price                                    |
 | sell\_updated\_at  | timestamp | Timestamp the floor sale was last updated                  |
 | collection\_id     | string    | Associated collection id                                   |
 | kind               | string    | Value type (string, number, date, range)                   |
