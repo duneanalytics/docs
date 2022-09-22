@@ -1,6 +1,6 @@
 # Dune Docs
 
-Welcome to the Dune docs!
+Welcome to the Dune Docs!
 
 Dune is a crypto analytics tool by and for the community.
 
