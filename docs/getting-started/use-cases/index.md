@@ -22,8 +22,8 @@ Nearly the entire world of blockchain data analytics can be explored with Dune -
 That being said, to help you get a clearer picture of the type of problems you can explore and solve with done, we can establish a few broad Use Cases:
 
 <div class="cards grid" markdown>
-- [Sector Dashbaords](sector-dashboards.md)
 - [Project Dashboards](project-dashboards.md)
+- [Sector Dashbaords](sector-dashboards.md)
 - [Ecosystem Dashboards](ecosystem-dashboards.md)
 </div>
 

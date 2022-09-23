@@ -1,6 +1,6 @@
 ---
 title: mirror.xyz
-description: Dune embedds work in Mirror.xyz!
+description: Dune embeds work in Mirror.xyz!
 ---
 
 Dune Visualizations can easily be embedded into articles on mirror.xyz. Simply generate an embed link and postfix it with `?display=iframe`

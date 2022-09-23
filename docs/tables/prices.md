@@ -13,7 +13,7 @@ The Price is the volume-weighted price based on real-time market data, translate
 
 This table supports a range of erc20.tokens.
 
-If the token you desire is not listed in here, please make a pull request to our [GitHub repository](https://github.com/duneanalytics/spellbook/index.md). (For V1 Engine, you can also use the decentralized price feed **dex.view\_token\_prices.**)
+If the token you desire is not listed in here, please make a pull request to our [GitHub repository](https://github.com/duneanalytics/spellbook/blob/main/models/prices/prices_tokens.sql). (For V1 Engine, you can also use the decentralized price feed **dex.view\_token\_prices.**)
 
 | <p></p><p><strong>column name</strong></p> | **description**                               |
 | ------------------------------------------ | --------------------------------------------- |
@@ -24,7 +24,7 @@ If the token you desire is not listed in here, please make a pull request to our
 
 Note that `WETH` can be used for ETH price as it trades at virtually the same price.
 
-### prices.layer\_1usd
+### prices.layer\_usd
 
 This table supports layer 1 assets on other blockchains.
 
