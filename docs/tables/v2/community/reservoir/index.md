@@ -1,10 +1,9 @@
 ---
-description: >-
-Reservoir is enabling the next generation of NFT products and liquidity sources through open-source,
-on-chain NFT order aggregation.
+title: Reservoir
+description: Reservoir is enabling the next generation of NFT products and liquidity sources through open-source, on-chain NFT order aggregation.
 ---
 
-# Flashbots
+# Reservoir
 
 **Note:** TBD
 
