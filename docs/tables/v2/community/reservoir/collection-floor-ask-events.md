@@ -2,9 +2,13 @@
 
 ## **reservoir.collection\_floor\_ask\_events**
 
-This table contains records with information about each collection floor ask changes.
+This table contains records with information about each collection floor ask change.
 
-Query examples can be found here: [TBD](TBD)
+Query examples can be found here:
+
+[https://dune.com/queries/1302799/2232083](https://dune.com/queries/1302799/2232083)
+
+[https://dune.com/queries/1302841/2232151](https://dune.com/queries/1302841/2232151)
 
 | **Column name** | **Type**  | **Description**                                                                                                 |
 |-----------------|-----------|-----------------------------------------------------------------------------------------------------------------|

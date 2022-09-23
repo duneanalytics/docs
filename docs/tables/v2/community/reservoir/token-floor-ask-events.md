@@ -2,9 +2,13 @@
 
 ## **reservoir.token\_floor\_ask\_events**
 
-This table contains records with information about each NFT token floor ask changes.
+This table contains records with information about each NFT token floor ask change.
 
-Query examples can be found here: [TBD](TBD)
+Query examples can be found here:
+
+[https://dune.com/queries/1302852/2232169](https://dune.com/queries/1302852/2232169)
+
+[https://dune.com/queries/1302854/2232173](https://dune.com/queries/1302854/2232173)
 
 | **Column name** | **Type**  | **Description**                                                                                                 |
 |-----------------|-----------|-----------------------------------------------------------------------------------------------------------------|

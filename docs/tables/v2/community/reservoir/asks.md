@@ -4,7 +4,11 @@
 
 This table contains records with information about each listing.
 
-Query examples can be found here: [TBD](TBD)
+Query examples can be found here:
+
+[https://dune.com/queries/1302885/2232229](https://dune.com/queries/1302885/2232229)
+
+[https://dune.com/queries/1302904/2232257](https://dune.com/queries/1302904/2232257)
 
 | **Column name**     | **Type**  | **Description**                              |
 |---------------------|-----------|----------------------------------------------|
