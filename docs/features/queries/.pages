@@ -1,3 +1,6 @@
 nav:
 - index.md
+- data-explorer.md
+- query-window.md
+- query-results.md
 - tips.md
