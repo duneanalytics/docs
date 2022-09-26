@@ -30,7 +30,7 @@ For Dune Queries that include Parameters, you can pass parameter data as part of
 
 Learn more about [building Dune Queries with Parameters here](../../features/parameters.md).
 
-And learn how to pass parameter data using [cURL here](../../api/api-reference/execute-query-id.md#curl-with-parameters) and with [Python here](../../api/quick-start/api-py.md).
+And learn how to pass parameter data using [cURL here](../../api/api-reference/execute-query-id.md#curl-with-parameters) and with [Python here](../../api/quick-start/api-py.md#parameterized-queries).
 
 ### What are the performance and overall differences between the Dune API and the Dune web app? What are the differences in what I can query?
 

@@ -251,5 +251,42 @@ response = cancel_query_execution(execution_id)
 
 When you have a running Query and call this function, you'll get a response object returned to you confirming the cancellation of query execution.
 
+## Parameterized Queries
+
+Only one step changes when you are working with parameterized queries. You need to pass query parameters to the execution endpoint of our API. There is no change to working with rest of the endpoints after this step.
+
+So, let us define a function `execute_query_with_params` to call the execute endpoint for parameterized queries.
+
+```py
+def execute_query_with_params(query_id, param_dict):
+    """
+    Takes in the query ID. And a dictionary containing parameter values.
+    Calls the API to execute the query.
+    Returns the execution ID of the instance which is executing the query.
+    """
+    
+    url = make_api_url("query", "execute", query_id)
+    response = post(url, headers=HEADER, json={"query_parameters" : param_dict})
+    execution_id = response.json()['execution_id']
+    
+    return execution_id
+```
+
+#### Create a Dictionary of parameters
+For our example, we are creating a dictionary with just one key, the `wallet_address`. We will be working with a query that returns the total amount spent on gas from a given `wallet_address`.
+
+```py
+parameters = {"wallet_address" : "0xb10f35351ff21bb81dc02d4fd901ac5ae34e8dc4"}
+```
+
+#### Pass the parameters dictionary to the execution endpoint
+We shall make use of the function that we just defined to achieve this.
+
+```py
+execution_id = execute_query_with_params("638435", parameters)
+```
+
+And that is it. Once you have this `execution_id` from the POST endpoint, you can use it with all the GET endpoints of the API, just like you would with a simple query without parameters.
+
 !!! Complete-Code
     The complete code for this tutorial is available on [this link](https://github.com/SusmeetJain/dune_api_python).
