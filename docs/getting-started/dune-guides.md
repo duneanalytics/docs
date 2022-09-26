@@ -53,6 +53,10 @@ You are amazing! 🪄
 
     * [Dune Analytics: A Guide for Complete Beginners](https://mirror.xyz/phillan.eth/17VAXsMPpwJg4OQNBHKTYAQTWfJMwFuXZQDAxPStf0o)
 
+    ### [James Bachini](https://dune.com/jamesbachini) [:material-twitter:](https://twitter.com/james_bachini)
+
+    * [Dune Analytics Tutorial | How To Create A Dune Analytics Dashboard](https://jamesbachini.com/dune-analytics-tutorial/)
+
     ### [Kirubakumaresh](https://twitter.com/kirubakumaresh)
 
     * [Buid Ethereum Metrics Dashboard](https://www.twigblock.com/projects/eth-intro-dune/t/eit-overview)

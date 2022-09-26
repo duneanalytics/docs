@@ -1,6 +1,6 @@
 ---
 title: Web Pages
-description: You can embedd Dune's Visualizations on most Websites with ease.
+description: You can embed Dune's Visualizations on most Websites with ease.
 ---
 
 **Dune Charts can live in your website!**

@@ -1,14 +1,14 @@
 ---
 title: Execute Query ID
-description: Here's how to execute (run) a query to retrieve updated data.
+description: Here's how to execute (run) a Query with or without parameters to retrieve data.
 ---
 # [POST] Execute Query ID
 
-Here's how to execute (run) a query to retrieve updated data.
+Here's how to execute (run) a query with or without parameters to retrieve data.
 
 ## Arguments
 
-None required. You may optionally add query parameters.
+None required. You may optionally add query parameters ([see this example](#curl-with-parameters)).
 
 ## Returns
 
@@ -28,7 +28,7 @@ https://api.dune.com/api/v1/query/{{query_id}}/execute
 curl -X POST -H x-dune-api-key:{{api_key}} "https://api.dune.com/api/v1/query/{{query_id}}/execute"
 ```
 
-#### cURL example with params
+### cURL with Parameters
 
 ```
 curl -X POST -d '{"query_parameters": { "param1":24}}' -H x-dune-api-key:{{api_key}}  "https://api.dune.com/api/v1/query/{{query_id}}/execute"

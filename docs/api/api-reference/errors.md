@@ -24,7 +24,7 @@ Here are a few common error scenarios:
 
 #### Checks
  
-  -  Make sure that you are passing your API key to our endpoint *in a header*. See the section on [Authentication](../api-reference/authentication) for how to do that, and our [quick start guides](../quick-start/api-py) for specific language examples.
+  -  Make sure that you are passing your API key to our endpoint *in a header*. See the section on [Authentication](../api-reference/authentication.md) for how to do that, and our [quick start guides](../quick-start/api-py.md) for specific language examples.
   - If you are already passing the API key in an header, make sure that it is correctly entered.
 
 
