@@ -253,9 +253,9 @@ When you have a running Query and call this function, you'll get a response obje
 
 ## Parameterized Queries
 
-Only one step changes when you are working with parameterized queries. You need to pass query parameters to the execution endpoint of our API. There is no change to working with rest of the endpoints after this step.
+Only one step changes when you are working with parameterized queries - you need to pass query parameters to the execution endpoint of our API. There is no change to working with rest of the endpoints after this step.
 
-So, let us define a function `execute_query_with_params` to call the execute endpoint for parameterized queries.
+So let's define a function `execute_query_with_params` to call the execute endpoint for parameterized queries:
 
 ```py
 def execute_query_with_params(query_id, param_dict):
@@ -273,20 +273,22 @@ def execute_query_with_params(query_id, param_dict):
 ```
 
 #### Create a Dictionary of parameters
-For our example, we are creating a dictionary with just one key, the `wallet_address`. We will be working with a query that returns the total amount spent on gas from a given `wallet_address`.
+For our example, we're creating a dictionary with just one key, the `wallet_address`, for use in a query that returns the total amount spent on gas from a given `wallet_address`:
 
 ```py
 parameters = {"wallet_address" : "0xb10f35351ff21bb81dc02d4fd901ac5ae34e8dc4"}
 ```
 
 #### Pass the parameters dictionary to the execution endpoint
-We shall make use of the function that we just defined to achieve this.
+Now let's make use of the function that we just defined to achieve this:
 
 ```py
 execution_id = execute_query_with_params("638435", parameters)
 ```
 
-And that is it. Once you have this `execution_id` from the POST endpoint, you can use it with all the GET endpoints of the API, just like you would with a simple query without parameters.
+And that is it!
+
+Once you get the `execution_id` from this POST endpoint, you can use it with all the GET endpoints of the API, just like you would with a simple query without parameters.
 
 !!! Complete-Code
     The complete code for this tutorial is available on [this link](https://github.com/SusmeetJain/dune_api_python).
