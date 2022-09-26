@@ -12,3 +12,5 @@ To keep track of our live (streamed and IRL events), [check out our events Googl
 Here's how to subscribe to that calendar and add it to yours:
 
 ![how to subscribe to our events calendar](images/subscribe-to-events-calendar.gif){ loading=lazy }
+
+Diff
