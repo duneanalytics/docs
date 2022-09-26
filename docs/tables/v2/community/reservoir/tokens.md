@@ -4,7 +4,11 @@
 
 This table contains records with information about each NFT token.
 
-Query examples can be found here: [TBD](TBD)
+Query examples can be found here:
+
+[https://dune.com/queries/1303052/2232521](https://dune.com/queries/1303052/2232521)
+
+[https://dune.com/queries/1303064/2232571](https://dune.com/queries/1303064/2232571)
 
 | **Column name**         | **Type**  | **Description**                    |
 |-------------------------|-----------|------------------------------------|

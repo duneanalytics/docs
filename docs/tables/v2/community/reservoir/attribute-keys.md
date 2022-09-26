@@ -4,7 +4,9 @@
 
 This table contains records with information about each attribute key.
 
-Query examples can be found here: [TBD](TBD)
+Query examples can be found here:
+
+[https://dune.com/queries/1302930/2232305](https://dune.com/queries/1302930/2232305)
 
 | **Column name** | **Type**  | **Description**                          |
 |-----------------|-----------|------------------------------------------|

@@ -4,7 +4,9 @@
 
 This table contains records with information about each NFT token attribute.
 
-Query examples can be found here: [TBD](TBD)
+Query examples can be found here:
+
+[https://dune.com/queries/1302940/2232326](https://dune.com/queries/1302940/2232326)
 
 | **Column name** | **Type**  | **Description**                           |
 |-----------------|-----------|-------------------------------------------|
