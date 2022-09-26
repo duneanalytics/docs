@@ -130,4 +130,6 @@ This positive feedback loop is how the Dune Community Succeeds together through 
 
 Join our [Community Discord](https://discord.gg/BJBHFR6sdy) to get world class support from our team and the community.
 
+Check out our [events calendar](resources/events.md) to join in the fun LIVE.
+
 And if you have any feedback, whether feature requests or bug reports, please submit it [here](https://feedback.dune.com).
