@@ -1,6 +1,6 @@
 ---
 title: Events
-description: 
+description: Dune is all about the community and communities all have get togethers!
 ---
 
 Dune is all about the community and communities all have get togethers!
