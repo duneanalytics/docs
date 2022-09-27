@@ -36,6 +36,13 @@ DuneV2 changes our entire database architecture. We are transitioning away from 
 - [Query Engine](query-engine.md)
 </div>
 
+**Or start getting your wand dirty by following along here:**
+
+<div class="cards grid" markdown>
+- [@springzhang](https://dune.com/springzhang/)'s [Tips and Tricks for Dune V2 Queries and Visualizations](https://dune.com/springzhang/tips-and-tricks-for-query-and-visualization-in-v2-engine)
+</div>
+ 
+
 ## Abstractions
 
 Abstraction in DuneV2 will run on [dbt](https://docs.getdbt.com/docs/introduction) (data build tool). dbt enables analytics engineers to transform data in their warehouses by simply writing select statements. dbt handles turning these select statements into [tables](https://docs.getdbt.com/terms/table) and [views](https://docs.getdbt.com/terms/view).

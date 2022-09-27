@@ -2,15 +2,15 @@
 title: Getting Started
 ---
 
-## Dune is made for technical and non-technical users alike.
+## Dune is made for technical and less-technical users alike.
 
 Whether you are a seasoned SQL developer, blockchain researcher, business analyst or none of the above - you can use Dune to start analyzing Blockchain data in an instant.
 
 With the help of our community, we've created a lot of helpful guides and tools to aid you in your journey of becoming a full-fledged Dune Wizard.
 
-The absolute quickest way to get started with Dune is to follow along with our [Getting Started Video Series here](video-series.md).
+The absolute quickest way to get started with Dune is to follow along with our [Getting Started Video Series here](video-series.md) and to check out our [Getting Started Dashboard here](https://dune.com/dune/get-started).
 
-The next steps to dive deeper depend on whether you
+The next steps to dive deeper depend on whether you:
 
 1. Already know SQL
 2. Are more of a just-in-case or just-in-time learner.
