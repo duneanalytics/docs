@@ -5,7 +5,7 @@ description: Reservoir is enabling the next generation of NFT products and liqui
 
 # Reservoir
 
-**Note:** TBD
+**Dashboard:** [https://dune.com/reservoir0x/reservoir-dune-docs-dashboard](https://dune.com/reservoir0x/reservoir-dune-docs-dashboard)
 
 **Docs:** [https://docs.reservoir.tools/docs](https://docs.reservoir.tools/docs)
 

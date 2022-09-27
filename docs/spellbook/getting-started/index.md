@@ -6,7 +6,7 @@ title: Spellbook Getting Started
 
 At a high level, you need to setup our DBT project locally, develop a spell in Jinja-templated SQL, and get it to run on our data platform.
 
-To start with, clone the [Spellbook](https://github.com/duneanalytics/spellbook/index.md) repository and setup your local dev env as per the README.
+To start with, clone the [Spellbook](https://github.com/duneanalytics/spellbook/) repository and setup your local dev env as per the README.
 
 Decide what problem you're trying to solve. Think about the [data model](data-modelling.md).
 

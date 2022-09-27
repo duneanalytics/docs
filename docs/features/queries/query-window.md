@@ -30,3 +30,5 @@ Here are a handful of shortcuts to make crafting Queries a 💨
 | ctrl + y      | redoes your last changes       |
 | ctrl + f      | search for keywords            |
 | ctrl + h      | search and replace keywords    |
+
+_These shortcuts work on US/UK Keyboards and might vary based on the language setting on your machine._
