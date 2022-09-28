@@ -46,7 +46,7 @@ Likewise `call` will bring up calls, and searching for a specific `{{contractNam
 
 ## Finding Specific Contract Data
 
-Click a Table name to see a list of all the functions and data inside that contract's table:
+Click a Table name to see a list of all the columns inside that contract's table:
 
 ![how to find contract data in tables](images/how-to-find-contract-data-in-tables.gif)
 
