@@ -27,6 +27,8 @@ The next steps to dive deeper depend on whether you:
 
     [Tables](../tables/index.md) and [Spellbook](../spellbook/index.md) are more advanced features worth experimenting with once you've understood the basics.
 
+    Be sure to ask whatever questions you have in the [#beginners Discord channel](https://discord.com/channels/757637422384283659/1016725609797402634)!
+
 
 === "Don't Know SQL?"
     If you're not very familiar with SQL, start by exploring our [SQL Guides here](sql-guides.md).
@@ -85,3 +87,9 @@ There are quite a few people in the crypto industry who either specialize in bui
 To reach out to this pool of freelancers, you can [**fill out this questionnaire**](http://bounties.dune.com) and hopefully freelancers will get back to you in little to no time. If that yields no results, posting the bounty on relevant social channels and spreading it in your networks may help.
 
 If hiring a freelancer for the first time, please be sure to review their past work and Dashboards to verify that they are indeed capable of the kind of problem solving you need.
+
+## Additional Tools and Support
+
+Check out our [Support](../resources/support-feedback.md) page to learn the best way to get help if you can't find the answers you're looking for in our docs.
+
+And give our [Wizard Tools](../resources/wizard-tools.md) page a gander to learn more about all the awesome non-Dune tools our wizards use to make 🎇.

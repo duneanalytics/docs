@@ -47,6 +47,11 @@ You are amazing! 🪄
 
     * [PostgreSQL Query Optimization Tricks - How to Make Queries Faster in Dune Analytics](https://gracelily.medium.com/postgresql-query-optimization-tricks-6d5b7358d7fa)
 
+    ### Twigblock
+
+    * [Build an Ethereum Metrics Dashboard](https://www.twigblock.com/projects/eth-intro-dune/t/eit-overview)
+    * [Learn to Analyze Ethereum Gas Prices](https://www.twigblock.com/projects/eth-gas-analysis/t/eg-overview)
+
 === "Databricks SQL"
 
     ### [0xPhilan](https://dune.com/phillan) [:material-twitter:](https://twitter.com/0xPhillan)

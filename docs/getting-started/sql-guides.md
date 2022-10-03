@@ -15,6 +15,10 @@ We've compiled a few resources that we think are helpful in your journey to beco
     * [Learning SQL and Ethereum](https://towardsdatascience.com/learning-sql-and-ethereum-part-3-5422f080ad36) (Part 3)
     * [SQL on Ethereum: How to Work With All the Data from a Transaction](https://ath.mirror.xyz/mbR1n\_CvflL1KIKCTG42bnM4HpfGBqDPNndH8mu2eJw)
 
+    ### Twigblock
+
+    * [Getting Started with SQL](https://www.twigblock.com/projects/eth-intro-dune/t/sql-basics)
+
 === "PostgreSQL"
     
     - [FreecodeCamp.org](https://www.youtube.com/watch?v=qw--VYLpxG4) Video Playlist (FREE)
