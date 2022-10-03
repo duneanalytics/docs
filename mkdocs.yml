@@ -44,7 +44,7 @@ extra:
   generator: false
   alternate:
     - name: English
-      link: /
+      link: /docs
       lang: en
     - name: Chinese (Simplified)
       link: https://docs.dune.com/v/chinese/
