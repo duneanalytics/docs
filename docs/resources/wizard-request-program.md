@@ -18,9 +18,15 @@ If you're a project looking to have more/better dashboards on Dune, we've create
 
 As opposed to more traditional bounty programs, the Wizard Request program is meant to unlock long-lasting relationships/collaborations between the analysts and the projects at large.
 
+For help with smaller projects, post your request in our [#query-dash-requests](https://discord.com/channels/757637422384283659/786952850034262066) Discord channel.
+
 ## For Wizards looking for :moneybag::moneybag::moneybag:
 
-If you are a wizard looking for bounties, make sure to join [our Discord](https://discord.gg/ErrzwBz), go to our “freelancer-listing” channel and click on the flying dollar bill emoji there. Also follow the [bounty bot](https://twitter.com/Dune\_Bounties) on Twitter.
+If you are a wizard looking for bounties, make sure to join [our Discord](https://discord.gg/ErrzwBz), go to our “freelancer-listing” channel and click on the flying dollar bill emoji there. 
+
+You also might find projects in [#query-dash-requests](https://discord.com/channels/757637422384283659/786952850034262066) and [#new-bounties](https://discord.com/channels/757637422384283659/1024301019074674688).
+
+Also follow the [bounty bot](https://twitter.com/Dune\_Bounties) on Twitter.
 
 ### FAQs about the program
 
