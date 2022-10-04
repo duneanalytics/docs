@@ -37,8 +37,11 @@ We also have 2 feedback channels in Discord:
 1. [#feedback](https://discord.com/channels/757637422384283659/799689116920709170) for general feedback
 2. [#v2-feedback](https://discord.com/channels/757637422384283659/1012706316755664926) for Dune V2 specific feedback.
 
-If you're working with any of our open repositories (eg Spellbook), open a Github issue.
+If you're working with any of our public repositories (e.g. Spellbook), you can also open a Github issue.
 
-And for Docs feedback (or spelling fixes ;), click the pencil icon to the right of the page title and open a GitHub issue/submit a pull request:
+For Docs feedback fixes or additions, click the pencil icon to the right of the page title and open a GitHub issue or submit a pull request:
 
 ![edit docs pencil](images/edit-docs-pencil.png)
+
+## Account issues
+For any issues related to your account, billing or any other administrative problems, please send an email to [support@dune.com](mailto:support@dune.com).
