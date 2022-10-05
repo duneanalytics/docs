@@ -19,4 +19,4 @@ This is list of prerequisites strongly recommended before you go to a spellbook 
 
 - Review Github’s [instructions](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork) on how to make a pull request from a fork.
 
-P.S. If you have trouble with these prerequisites, please join our [Community Discord](https://discord.gg/BJBHFR6sdy) and reach out for help 🧙
+P.S. If you have trouble with these prerequisites, please join our 🧙[Community Discord](https://discord.gg/BJBHFR6sdy) and reach out for help in the [#📜spellbook](https://discord.com/channels/757637422384283659/999683200563564655) channel!
