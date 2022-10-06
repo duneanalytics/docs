@@ -6,7 +6,7 @@ description: Answers to questions about how the Dune API works.
 
 ## General
 
-### How many Requests Per Second can I make?
+### How many Requests Per Minute can I make?
 
 The API is temporarily rate-limited to ~12 requests per minute for overload protection. Please reach out if you require higher throughput!
 
