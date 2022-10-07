@@ -32,7 +32,7 @@ Dework offers us to write out tasks on our own [board](https://app.dework.xyz/du
     
 2. **Define tasks**
 
-     After completing the initial setup, you can start creating tasks for anything really, but in our case, we want to define tasks with the "Dune Analytics" Skill. Once you have created a task, the task will be 1) in your board and 2) in the Dune hub. From there on out, people can find your open task and apply. It helps to also raise awarness for tasks in your Discord/ Socials. Read more about proper task configuration here.
+     After completing the initial setup, you can start creating tasks for anything really, but in our case, we want to define tasks with the "Dune Analytics" Skill. Once you have created a task, the task will be 1) in your board and 2) in the Dune hub. From there on out, people can find your open task and apply.
 
 3.  **Choose an applicant**
 
