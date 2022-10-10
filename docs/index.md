@@ -20,7 +20,7 @@ hide:
 Dune is a powerful tool for blockchain research, complete with all the tools you need to discover, explore, and visualize vast amounts of blockchain data.
 
 
- Dune is your key to answering questions questions like:
+ Dune is your key to answering questions like:
 
 - [How much volume flows through Uniswap each day?](https://dune.com/queries/3)
 - [Which Dex has the highest volume?](https://dune.com/queries/1847)
