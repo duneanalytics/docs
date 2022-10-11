@@ -12,7 +12,6 @@ theme:
     text: IBM Plex Sans
     code: IBM Plex Mono
   features:
-    # - navigation.instant
     - navigation.tracking
     - navigation.tabs
     - navigation.tabs.sticky
