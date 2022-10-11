@@ -12,7 +12,6 @@ theme:
     text: IBM Plex Sans
     code: IBM Plex Mono
   features:
-    - navigation.instant
     - navigation.tracking
     - navigation.tabs
     - navigation.tabs.sticky
@@ -36,6 +35,8 @@ markdown_extensions:
       alternate_style: true 
   - toc:
       permalink: true
+  - pymdownx.arithmatex:
+      generic: true
 plugins:
   - search
   - awesome-pages
@@ -55,3 +56,7 @@ extra:
     api_host: !ENV POSTHOG_API_HOST
 extra_css:
   - stylesheets/extra.css
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
