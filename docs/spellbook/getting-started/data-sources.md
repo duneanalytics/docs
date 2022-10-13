@@ -71,4 +71,4 @@ sources:
 
 These descriptions are rendered in the docs by dbt. Locally, you can open them by running `dbt docs generate` and `dbt docs serve` from your CLI in the Spellbook directory. They are automatically deployed as our [Spellbook docs](https://spellbook-docs.dune.com/#!/overview).
 
-![dbt documentation page](https://lh6.googleusercontent.com/vr9DleUs\_HcdzMZ6mWq81l-IRq1C\_utHCVB5WddOHy9Z1\_fSyz8GcB8Cyj877nKNHsXLh3K3-owFssNIl4ZaJS27clEeBppHBi8DlNjzVKGeGZdF\_AE8VxRj0pziR-2jGTA-MED7OtTq3GhuwQM)
+![dbt documentation page](images/dbt-documentation-page.png)
