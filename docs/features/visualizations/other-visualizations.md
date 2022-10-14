@@ -86,7 +86,7 @@ Counters are a great way to provide your audience with immediate "on a glance" s
 
 #### Counter options
 
-In this section you can define what kind of data the counter should display.
+In this section you can define what kind of data the counter should display:
 
 === "Title"
 
