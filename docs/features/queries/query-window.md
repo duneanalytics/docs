@@ -7,7 +7,7 @@ The Query window is where you work your Dune 🪄 by inputting SQL code and runn
 
 ![Query window](images/query-window.png)
 
-### Autocomplete
+## Autocomplete
 
 You can enable/disable the autocomplete function of the Query editor using the gear wheel in the top right corner:
 
@@ -17,7 +17,21 @@ The autocomplete feature will bring up PostgreSQL keywords, as well as tables an
 
 ![query editor autocomplete example](images/query-editor-autocomplete-example.gif)
 
-### Shortcuts
+## Run Selection
+
+To save yourself time while testing and debugging your Queries, you can run just a part of your Query.
+
+To do this, highlight a part of your Query. You'll then see the <span class="fk-btn-1">Run</span> button turn into a <span class="fk-btn-1">Run selection</span> button.
+
+Click and 🪄
+
+![run selection example gif](images/run-selection.gif)
+
+You'll need to highlight a syntactically complete and correct piece of SQL otherwise you'll get an error:
+
+![run selection syntax error](images/run-selection-syntax-error.gif)
+
+## Shortcuts
 
 Here are a handful of shortcuts to make crafting Queries a 💨
 

@@ -13,6 +13,12 @@ After a short time, your Query Results will appear 🪄 as a table:
 
 ![query results example](images/query-results.png)
 
+
+!!! warning
+    Queries run on the database you've currently selected in the Data Explorer dropdown. EG if you run a Query that uses Dune V1 Ethereum data, it will fail to run if you select another V1 Blockchain dataset or Dune V2:
+    
+    ![query failed when switching data sets](images/query-failed-switching-datasets.gif)
+
 Above your Results table you'll find:
   
   1. The "Query Results" tab; if you make more Visualizations they'll appear as tabs next to this one.

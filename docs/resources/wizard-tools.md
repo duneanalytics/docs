@@ -13,6 +13,19 @@ Here are some of the awesome non-Dune tools our wizards use to make 🎇.
   - [His Chaininsight tool](https://twitter.com/zk7hao/status/1361948073300164609?cxt=HHwWgoCs-dCjzuYlAAAA) is pretty cool too, could help you build the next trending dashboard before someone else does 🧙
 - [Immersion Den](https://immersionden.xyz/) - a giant collection of web3 information sources.
 
+## Blockchain Explorers
+
+Here you'll find the primary web-based explorers for the most popular blockchains. While they won't let you do half of the cool things Dune does, they're indispensible for figuring out how certain protocols work and what data you need to include in your queries:
+
+- Ethereum - [Etherscan](https://etherscan.io/)
+- Solana - [Solscan](https://solscan.io/)
+- Arbitrum - [Arbiscan](https://arbiscan.io/)
+- Polygon - [Polygonscan](https://polygonscan.com/)
+- Optimism - [Optimistic.Etherscan](https://optimistic.etherscan.io/)
+- Avalanche C-Chain - [Snowtrace](https://snowtrace.io/)
+- Binance Smart Chain - [BscScan](https://bscscan.com/)
+- Gnosis Chain - [Gnosisscan](https://gnosisscan.io)
+
 ## Cool Blockchain Data Websites
 - [cryptofees.info](https://cryptofees.info)
 - [ultrasound.money](https://ultrasound.money)

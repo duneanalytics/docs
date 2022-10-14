@@ -171,7 +171,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 
-
+/*Dark blue bckgrnd w/radius */
 .fk-btn-1 {
     background-color: var(--dune-blue-500);
     border-color: var(--dune-blue-500);
@@ -181,6 +181,7 @@ h1, h2, h3, h4, h5, h6{
     white-space: nowrap;
 }
 
+/*Light blue bckgrnd w/o radius */
 .fk-btn-2 {
     background-color: var(--dune-blue-200);
     border-color: var(--dune-blue-200);
@@ -189,12 +190,22 @@ h1, h2, h3, h4, h5, h6{
     white-space: nowrap;
 }
 
+/*Light blue bckgrnd w/radius */
 .fk-btn-3 {
     background-color: var(--dune-blue-200);
     border-color: var(--dune-blue-200);
     color: var(--dune-blue-500);
     padding: 4px 16px;
     border-radius: 5px;
+    white-space: nowrap;
+}
+
+/* Dark blue bckgrnd, w/o radius */
+.fk-btn-4 {
+    background-color: var(--dune-blue-500);
+    border-color: var(--dune-blue-500);
+    color: #fff;
+    padding: 4px 16px;
     white-space: nowrap;
 }
 
