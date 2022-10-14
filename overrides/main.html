@@ -3,8 +3,10 @@
 {% block styles %}
     <!-- Enable mkdocs-material to work without trailing slashes -->
     <script>
-        if (!window.location.pathname.endsWith('/')) {
-            history.pushState({}, null, window.location.pathname + '/')
+        const url = new URL(window.location)
+        if (!url.pathname.endsWith('/')) {
+            url.pathname += '/'
+            history.pushState({}, null, url)
         }
     </script>
     <!-- Manually add the stylesheet, for hard-coded mkdocs-material and mkdocs-material-insiders -->
