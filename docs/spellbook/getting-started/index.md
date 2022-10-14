@@ -32,8 +32,6 @@ Once you're happy with your spell, you can [submit it to Dune](submissions.md):
 After that, your spell will be visible on dune.com under "Spells". LFG!
 
 
-## Community tutorials
+## How To Guides
 
-Some of our Community Members have produced great tutorials for Spellbook:
-
-- @ilemi aka Andrew Hong released tutorial - [read it](https://ath.mirror.xyz/K-S_Mwhj7osTBqN-AOWbCmfNn9TZViEkzICCmK-oObM), and watch the [video](https://www.youtube.com/watch?v=7zReSzVdV2s)!
+Check out our [How To Guides](../how-to-guides/) section for a variety of step-by-step tutorials to help you start casting Spells in no time!
