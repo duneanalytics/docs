@@ -1,6 +1,5 @@
 nav:
 - index.md
-- spellbook-model-docs.md
 - data-modelling.md
 - data-sources.md
 - tests.md

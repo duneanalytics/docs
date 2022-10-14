@@ -4,6 +4,17 @@ description: Raw data tables are the basic building blocks of our database.
 
 # Optimism
 
+!!! note
+    We've included Optimism's OVM 1.0 base tables (blocks, logs, traces, transactions) in Dune V2, which can be found in the `optimism_legacy_ovm1` database. Data from these tables are labeled "Optimism (Legacy)" in the dropdown menu and use this icon: 
+    
+    ![optimism legacy icon](../../../../features/queries/images/optimism-legacy-icon.png)
+
+    These tables are no longer updated as Optimism made significant changes with their [OVM 2.0 update](https://twitter.com/optimismFND/status/1458953238867165192).
+
+    Data for the current version of Optimism's blockchain (November 11th, 2021 to present), is contained in the `optimism` database, are labeled "Optimism" in the dropdown menu, and use this icon:
+    
+    ![optimism icon](../../../../features/queries/images/optimism-icon.png)
+
 Optimism is a Layer 2 Optimistic Rollup network designed to utilize the strong security guarantees of Ethereum while reducing its cost and latency. Optimism processes transactions outside of Ethereum Mainnet, reducing congestion on the base layer and improving scalability. For a Deep Dive into Optimism, we recommend reading through their [Documentation](https://community.optimism.io/docs/how-optimism-works).
 
 Optimism differs in it's EVM implementation in the calculation of gas costs, since it also needs to pay for L1 resources.

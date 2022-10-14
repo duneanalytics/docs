@@ -5,8 +5,6 @@ description: The Data Explorer allows you to search for blockchain and other dat
 
 The Data Explorer empowers you to search for blockchain and other data to use in your Queries (learn about all the data Dune offers in the [Tables section](../../tables/index.md)).
 
-![the dune data explorer](images/dune-data-explorer-close-up.png)
-
 To find the data you're looking for, first select which database you want to search in:
 
 ![data explorer dropdown example](images/data-explorer-dropdown.gif)
@@ -15,13 +13,15 @@ Then simply enter any keywords, protocol names, contract names, or event names i
 
 This will bring up a list of [Tables](../../tables/index.md) containing blockchain data you can use to your Queries! 🧙
 
-## Searching with the Data Explorer
+## Advanced Searching in Dune V2 and V1
 
 If you've selected one of the blockchain databases available in the dropdown, see the v1 tab below.
 
+![v1 searches](images/v1-searches.png)
+
 If you've selected the Dune Engine V2 (beta) database, see the V2 tab.
 
-![v1 searches](images/v1-searches.png)
+Learn about the [differences between V1 and V2 data sets here](../../dune-v2/).
 
 === "V2"
 
@@ -34,8 +34,8 @@ If you've selected the Dune Engine V2 (beta) database, see the V2 tab.
 
     One way you'll experience the power of this change is in your Queries - with V2 you can incorporate data from multiple chains in one SQL query!
 
-    Another improvement lies in the Data Explorer.
-
+    You'll also notice this in how searching works in the Data Explorer.
+    
     To get started exploring Dune V2, select it from the dropdown list instead of one of the individual chains:
 
     ![select dune V2 from dropdown](images/select-dune-v2-from-dropdown.gif)
@@ -190,6 +190,7 @@ If you've selected the Dune Engine V2 (beta) database, see the V2 tab.
     | `string` | Character sequences of any length greater or equal to 0. |
     | `long` | Represents 8-byte signed integer numbers. The range of numbers is from -9223372036854775808 to 9223372036854775807. |
     | `integer` | Represents 4-byte signed integer numbers. The range of numbers is from -2147483648 to 2147483647. |
+    | `double` | Represents 8-byte double-precision floating point numbers. |
     | `boolean` | Represents boolean values. (TRUE|FALSE) |
     | `date` | Represents values comprising values of fields year, month and day, without a time-zone. |
     | `timestamp` | Represents values comprising values of fields year, month, day, hour, minute, and second, with the session local time-zone. The timestamp value represents an absolute point in time. |
