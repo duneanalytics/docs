@@ -9,7 +9,7 @@ Here you'll find a variety of how-to guides for making ✨ with Spellbook!
 
 In collaboration with [MetricsDAO](https://metricsdao.xyz/), in this workshop [@agaperste](https://dune.com/agaperste) walks us through casting a Spell from scratch!
 
-![type:video](https://www.youtube.com/embed/VdTYRxg96-E)
+![type:video](https://www.youtube.com/embed/7zReSzVdV2s)
 
 ## Spellbook Intro with Megan Heintz
 
