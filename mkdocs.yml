@@ -48,7 +48,7 @@ extra:
       link: /docs
       lang: en
     - name: Chinese (Simplified)
-      link: https://docs.dune.com/v/chinese/
+      link: /zh/
       lang: zh
   analytics:
     provider: posthog
