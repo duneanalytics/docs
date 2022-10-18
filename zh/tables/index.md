@@ -1,22 +1,22 @@
 ---
-title: Tables
+title: 数据表
 ---
 
-**Dune enables you to query data on our supported chains at different levels of abstraction.**
+**Dune 使您能够在不同抽象级别上查询我们支持的区块链上的数据。**
 
-To start with, you have access to the raw tables for each supported blockchain, with tables like `blocks` and `transactions`. This is the most flexible option.
+首先，您可以访问每个受支持区块链的原始表，包括“blocks”和“transactions”等表。 这是最灵活的选项。
 
-To make it easier to work with smart contracts, Dune also provides decoded data as individual, human readable tables. We use the ABI for smart contracts and the interface standard for standardized token smart contracts (ERC20, ERC721 etc.). We've indexed over 280k contracts as of writing, and you can [submit new contracts](../features/adding-new-contracts.md).
+为了更轻松地使用智能合约，Dune 还提供已解码数据作为单个易于读取的数据表。 我们使用智能合约的 ABI 和标准化代币智能合约的接口标准（ERC20、ERC721 等）进行解码。 截至撰写本文时，我们已经索引了超过 28 万份智能合约，您还可以 [提交新合约](../features/adding-new-contracts.md)。
 
-On top of that, we're building a set of abstractions for common use cases (e.g. NFTs or DEX) and third party datasets.
+最重要的是，我们正在为常见用例（例如 NFT 或 DEX）和第三方数据集构建一组抽象表。
 
-Here is an overview what is available:
+以下是关于当前可用数据表的概述：
 
-- [Raw data](raw.md): unedited, raw and encoded blockchain data
-- [Decoded data](decoded.md): (**most popular**) view the decoded calls and events made to smart contracts
-- [Abstractions, or Spells](abstractions.md): custom tables that are maintained by Dune and our community
-- [Community](community.md): partnering with select organizations for off-chain data
-- [Prices](prices.md): prices from third party data providers
-- [User generated](user-generated.md): construct your own view, function or table inside of our database
+- [原始数据表](raw.md): 未经编辑、原始和已编码的区块链数据
+- [已解码数据表](decoded.md): (**最受欢迎**) 查看对智能合约进行的调用（Calls）和产生的事件（Events）的已解码数据
+- [抽象数据表（Abstractions 或 Spells）](abstractions.md): 由 Dune 和我们的社区用户维护的自定义表格
+- [社区提交的数据表](community.md): 通过与选定的组织合作而获取的链下数据
+- [价格表](prices.md): 第三方数据提供商提供的价格数据
+- [用户生成的数据表](user-generated.md): 在我们的数据库中构建您自己的视图、函数或数据表
 
-The details of the data model depends on the blockchain and engine. We've compiled detailed references for tables on our [Dune V1 Engine](v1/raw/index.md) (PostgreSQL) and [Dune V2 Engine](v2/raw/index.md) (Databricks SQL).
+数据模型的细节取决于区块链和引擎。 我们已经为我们的 [Dune V1 引擎](v1/raw/index.md)（PostgreSQL）和 [Dune V2 引擎](v2/raw/index.md)（Databricks SQL）上的数据表分别编译了详细的参考资料。
