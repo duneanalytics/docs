@@ -1,6 +1,6 @@
 ---
-title: Resources
-description: Here you'll find a collection of somewhat random other info we think you should know!
+title: 扩展资源
+description: 在这里可以找到我们认为您应该知道的一些不同来源的其他信息！
 ---
 
-Here you'll find a collection of somewhat random other info we think you should know!
+在这里可以找到我们认为您应该知道的一些不同来源的其他信息！
