@@ -2,7 +2,7 @@
 
 ## **flashbots.套利**
 
-This table contains records with additional information about each arbitrage trade.
+此表包含有关于每个套利交易的额外信息的记录。
 
 查询可以在这里找到: [Total Arb Protocols](https://dune.com/queries/626076/1167481)
 
