@@ -1,22 +1,22 @@
-# arbitrages
+# 套利
 
-## **flashbots.arbitrages**
+## **flashbots.套利**
 
 This table contains records with additional information about each arbitrage trade.
 
-Query examples can be found here: [Total Arb Protocols](https://dune.com/queries/626076/1167481)
+查询可以在这里找到: [Total Arb Protocols](https://dune.com/queries/626076/1167481)
 
-| **Column name**        | **Type**  | **Description**                               |
+| **列名称**        | **类型**  | **描述**                               |
 | ---------------------- | --------- | --------------------------------------------- |
-| block\_number          | bigint    | Block number                                  |
-| account\_address       | string    | Address of the searcher                       |
-| created\_at            | string    | Time of the record creation                   |
-| end\_amount            | bigint    | Available amount after the arbitrage          |
-| error                  | string    | Available amount after the arbitrage          |
-| id                     | string    | Internal id of the arbitrage                  |
-| profit\_amount         | bigint    | Profit amount after the arbitrage             |
-| profit\_token\_address | string    | Address of the profit asset                   |
-| protocols              | string    | List of protocols involved in the transaction |
-| start\_amount          | bigint    | Available amount before the arbitrage         |
-| transaction\_hash      | string    | Hash of the transaction                       |
-| timestamp              | timestamp | Timestamp of the latest update of the file    |
+| block\_number          | 大数    | 区块号                                  |
+| account\_address       | 字符串    | 寻找人的地址                       |
+| created\_at            | 字符串    | 记录的时间                   |
+| end\_amount            | 大数    | 套利后可获数量          |
+| error                  | 字符串    | 套利后可获数量         |
+| id                     | 字符串   | 套利的内部Id                 |
+| profit\_amount         | 大数    | 套利后可获收益        |
+| profit\_token\_address | 字符串    | 获利资产地址                  |
+| protocols              | 字符串    |交易中设计的协议列表 |
+| start\_amount          | 大数    | 套利前可获数量       |
+| transaction\_hash      | 字符串   | 交易哈希                       |
+| timestamp              | 时间戳 | 文件最后更新的时间戳    |
