@@ -16,6 +16,7 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.indexes
+    - navigation.expand
 nav:
   - ...
 markdown_extensions:
