@@ -49,7 +49,7 @@ Dune API 目前尚处于私人测试阶段，有一批内测用户，但会在11
 
 有了 Dune API，就可以在你自己超丝滑、超酷的应用 UX 中为这个看板或 Dune 上的任何其他看板搭建一个更漂亮的用户界面。
 
-或者通过 Excel、Google 表格、Notion 页面、 Discord 机器人、Telegram 机器人，没有任何限制。
+除此之外，还可以将 API 查询结果用于 Excel、Google 表格、Notion 页面、 Discord 机器人、Telegram 机器人等处，没有任何使用限制。
 
 有了 API，数据可以流向任何地方！
 
