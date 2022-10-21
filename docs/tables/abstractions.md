@@ -14,4 +14,4 @@ For our **V1 Engine** (PostgreSQL), abstractions are snippets of SQL executed th
 
 For our **V2 Engine** (Databricks SQL), abstractions are now upgraded to **spells** and live in [Spellbook](../spellbook/index.md). Spellbook is built with DBT, an open-source framework that injects more classical software engineering practices into writing SQL by mixing SQL with JINJA templating.
 
-To view available spells, take a look at our Spellbook [documentation](https://spellbook-docs.dune.com) and learn how to contribute new spells [here](../spellbook/index.md).
+To view available spells, take a look at our Spellbook [documentation](https://dune.com/spellbook) and learn how to contribute new spells [here](../spellbook/index.md).
