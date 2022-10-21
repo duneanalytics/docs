@@ -90,6 +90,6 @@ title: 入门
 
 ## 额外的工具和支持
 
-查看我们的[帮助](.../resources/support-feedback.md)页面，了解如果您在我们的文档中找不到您想要的答案，可以通过什么方式获得帮助。
+查看我们的[帮助](../resources/support-feedback.md)页面，了解如果您在我们的文档中找不到您想要的答案，可以通过什么方式获得帮助。
 
-也可以看看我们的[巫师工具](.../resources/wizard-tools.md)页面，了解更多关于我们的巫师用来制作 🎇 的所有很棒的非 Dune 工具。
+也可以看看我们的[巫师工具](../resources/wizard-tools.md)页面，了解更多关于我们的巫师用来制作 🎇 的所有很棒的非 Dune 工具。
