@@ -1,18 +1,19 @@
 ---
 title: Python
-description: Here's how to access the Dune API via Python.
+description: 如何通过 Python 接入 Dune API
 ---
 
-Let's get started using the Dune API via Python!
+让我们开始用 Python 来接入 Dune API！
 
-In this example we'll be using Python3. We recommend using a virtual environment and the `pip` package manager.
 
-!!! example "Prerequisites"
-    This Quick Start Guide assumes you have some prior experience using Python, though we aimed to make the code here easy to follow. If you have questions, please reach out to our team via the #[dune-api](https://discord.com/channels/757637422384283659/973606737393352745) channel on Discord.
+本例中我们讲使用 Python3。 我们建议使用虚拟环境和 `pip` 包管理器。
 
-## Getting Set Up
+!!! 示例的“先决条件”
+    这份快速入门指南假设你已经有了一些使用 Python 的经验，尽管我们的目标是尽可能让代码易于理解。如果你有问题，请通过 Discord 的 #[dune-api](https://discord.com/channels/757637422384283659/973606737393352745) 频道与我们的团队联系。
 
-We'll primarily be working with the `requests` library to access the API, so let's install it:
+## 准备开始
+
+我们将主要使用 `requests` 库来访问 API，所以先安装这个库。
 
 ``` bash
 pip install requests
