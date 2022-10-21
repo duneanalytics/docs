@@ -1,66 +1,62 @@
 ---
 title: API
-description: 欢迎来到 Dune API
+description: Welcome to the Dune API
 ---
 
-# 欢迎来到 Dune API
+# Welcome to the Dune API
 
 ![dune API Cover](images/dune_api_cover.jpg)
 
-所有您能在 Dune 网站上看到的查询和数据，通过 Dune API 都可以完整获取到。这也就意味着，任何的公共查询，您都可以执行查询并读取结果，当然也包括您账户拥有访问权限的私人查询。
+The Dune API gives you full access to the queries and data you can see on the Dune website. This means you can execute and read results from any public query, as well as any personal private queries your Dune account has access to.
 
-本文档描述了所有可用的 API 调用及返回对象的属性。如果您有任何疑问或反馈意见，请通过 [api-feedback@dune.com](mailto:api-feedback@dune.com) 联系我们，或者来我们的 #[dune-api](https://discord.com/channels/757637422384283659/1019910980634939433) Discord 频道。
+This documentation describes all of the available API calls and properties of the returned objects. If you have any questions or feedback, please reach out to [api-feedback@dune.com](mailto:api-feedback@dune.com) or our #[dune-api](https://discord.com/channels/757637422384283659/1019910980634939433) Discord channel!
 
-！！！ 注意
+!!! warning 
+    At this time, the Dune API is in private beta. This means that the way it works and the data it returns may change with advanced notice. 
 
-截至目前，Dune API 尚处于私人测试阶段。这意味着它的工作方式和返回数据可能会在提前通知后发生变化。
+## How does the API work?
 
-## API 如何工作？
+The API currently lets users:
 
-我们的 API 目前允许用户：
+1. Execute a query
+2. Check the status of an execution
+3. Get the results of an execution
 
-1. 执行查询
-2. 检查执行状态
-3. 获取执行结果
+These results are currently stored separately from anything you see on the Dune.com website. This means the only way to get query results from the Dune API is to execute a query using the Dune API.
 
-这些执行结果目前单独存储，与您在 Dune.com 网站上看到的任何内容都不一样。这意味着从 Dune API 获得查询结果的唯一方法是使用 Dune API 执行查询。
+Similarly, results from API executions are not currently reflected on Dune’s website.
 
-同样的，通过 API 执行的结果目前也没有出现在 Dune 的网站上。
+## API Getting Started
 
-## API 入门
+### Obtaining an API Key
 
-### 获取一枚 API 密钥
+Dune API is currently in private beta with a closed set of users, but will be publicly available in November!
 
-Dune API 目前尚处于私人测试阶段，有一批内测用户，但会在11月的时候对外开放！
+### Picking a Programming Language
+While you can consume our API in the language of your choice - see the [API Reference](api-reference/authentication.md) section - we currently have quick start guides for [Python](quick-start/api-py.md) and [Node.js](quick-start/api-js.md).
 
-### 选择一门编程语言
+### What can I build with the Dune API?
+With Dune, you have access to almost all of the data from today's most popular blockchain ecosystems. There is no limit to what you can build on top of this data!
 
-您可以自由选择自己的语言来使用我们的 API - 查阅 [API 参考](api-reference/authentication.md) 区 - 我们目前针对 [Python](quick-start/api-py.md) 和 [Node.js](quick-start/api-js.md) 有快速入门教程。
+With so many possibilities, it can be challenging to figure out what to work on at times, so here are some ideas to help you ideate:
 
-### 我可以用 Dune API 构建什么？
+#### New Kinds of Interfaces for Blockchain Data
 
-通过 Dune，您可以访问当下最流行的区块链生态的几乎所有数据。使用这些数据来构建的东西是没有任何限制的！
+Our community champion [@0xBoxer](https://dune.com/0xBoxer) has this [tutorial](https://youtu.be/ez3VfcfNwvc) where he walks us through creating a [dashboard](https://dune.com/0xBoxer/gas-tracker-dashboard) for personalized metrics for any wallet.
 
-由于有如此之多的可能性，有时候构思要做什么东西可能相当有挑战，所以这里给一些帮你构思的小提示：
+With the Dune API it's possible to build a much nicer interface for this or any dashboard on Dune inside of your own super-smooth, super-cool app UX.
 
-#### 区块链数据的新型接口
+Or Excel, Google sheets, Notion Pages, Discord Bots, Telegram Bots, there are no limits.
 
-我们的社区冠军 [@0xBoxer](https://dune.com/0xBoxer) 制作了一个 [教程](https://youtu.be/ez3VfcfNwvc) ，他带我们一起创建一个给任何钱包地址自定义个性化指标的 [数据看板](https://dune.com/0xBoxer/gas-tracker-dashboard) 。
+With the API, the Data Can Flow anywhere!
 
-有了 Dune API，就可以在你自己超丝滑、超酷的应用 UX 中为这个看板或 Dune 上的任何其他看板搭建一个更漂亮的用户界面。
+#### Real World Examples from Cow Protocol
 
-除此之外，还可以将 API 查询结果用于 Excel、Google 表格、Notion 页面、 Discord 机器人、Telegram 机器人等处，没有任何使用限制。
+[@bh2smith](https://dune.com/bh2smith) from our community (and [Cow Protocol](https://dune.com/cowprotocol)), gave a talk Thursday at [DuneCon](https://dunecon.com) where he walked us through some real-world examples of how Cow Protocol has been using the API.
 
-有了 API，数据可以流向任何地方！
+[Check out the replay here](https://youtu.be/VEvk-iqxXIM?t=404)!
 
-#### 来自 CoW Protocol 的真实案例
-
-我们社区的 [@bh2smith](https://dune.com/bh2smith)  (同时也来自 [Cow Protocol](https://dune.com/cowprotocol)) 周四在 [DuneCon](https://dunecon.com) 发表了一次讲话，向我们展示了 Cow Protocol 使用 API 的真实案例。
-
-[在这里看视频重播](https://youtu.be/VEvk-iqxXIM?t=404)!
-
-## 重要链接
-
- - API 文档 - 您已经在这儿了，查看侧边栏以了解更多信息！
- - [#dune-api Discord 频道](https://discord.com/channels/757637422384283659/1019910980634939433)
- - [API 客户端 (来自社区构建)](https://dune.com/docs/api/quick-start/community-clients/)
+## Important Links
+ - API Documentation - you're already here, check out the sidebar to learn more!
+ - [#dune-api Discord Channel](https://discord.com/channels/757637422384283659/1019910980634939433)
+ - [API Client (Community Sourced)](https://dune.com/docs/api/quick-start/community-clients/)
