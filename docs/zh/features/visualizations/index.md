@@ -18,7 +18,7 @@ description: 可视化让您的数据变得生动起来! 以下是您需要知�
 [**其它可视化**](other-visualizations.md)
 
 * 计数器
-* 表格
+* 数据表
 
 以一种周到的方式将这些结合起来，使您能够将您的数据通过[看板](../../features/dashboards.md)和[嵌入](../sharing/embeds/index.md)以最好的方式传达给您的受众。
 
