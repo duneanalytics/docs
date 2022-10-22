@@ -1,169 +1,169 @@
 ---
-title: Charts & Graphs
-description: Charts are good for condensing data points into a Visualization. Learn how to make them here!
+title: 图表 & 图形
+description: 图表是将数据点浓缩为一个可视化的好办法。在这里学习如何制作它们!
 ---
 
-Graphs are great for condensing data points into a Visualization.
+图形是将数据点浓缩为一个可视化的好办法。
 
-With Dune, you can create the following types of graphs:
+通过 Dune，您可以创建以下类型的图形：
 
-=== "Bar charts"
+=== "柱状图"
 
     ![bar chart example](images/bar-chart-example.png)
 
-=== "Area charts"
+=== "区域图"
 
     ![area chart example](images/area-chart.png)
 
-=== "Scatter charts"
+=== "散点图"
 
     ![scatter chart example](images/scatter-chart-example.png)
 
-=== "Line charts"
+=== "线状图"
 
     ![line chart example](images/line-chart-example.png)
 
-=== "Pie charts"
+=== "饼状图"
 
     ![pie chart example](images/pie-chart-example.png)
 
-=== "Mixed graphs"
+=== "混合图"
 
-    You can mix all of these graph types together in one Visualization, as long as your base graph isn't a Pie chart:
+    只要您的基础图不是饼状图，您就可以在一个可视化中混合所有这些图形类型：
 
     ![mixed graph example](images/mixed-graph-example.png)
 
-All graph Visualizations share a common set of editing options, see the tabs below for how to configure each.
+所有的可视化图形都有一套共同的编辑选项，请看下面的选项标签，了解如何配置每个选项。
 
 ![all visualization configuration options](images/all-visualization-configuration-options.png)
 
-## Visualization Configuration Options
+## 可视化配置选项
 
-=== "Chart options"
+=== "图表选项 (Chart options)"
 
-    This section allows you to define how to display your data.
+    本节允许您定义如何显示您的数据。
 
     ![see explanations below](images/graphs-4.png)
 
-    **Title**
+    **标题（Title）**
 
-    * The title will appear in all instances of this graph prominently at the top.
-    * The graph will always keep the name of the Query, even if you edit this.
+    * 标题将出现在该图的所有实例的顶部显著位置。
+    * 图形将始终保持查询的名称，即使您编辑它。
 
-    **Show chart legend**
+    **显示图例（Show chart legend）**
 
-    * Ticking this box will enable or disable the legend for the chart.
+    * 勾选此框将启用或禁用图表的图例。
 
-    **Enable stacking**
+    **启用堆叠（Enable stacking）**
 
-    * If applicable, ticking this box will stack the chart values on top of each other based on the x-axis values.
-    * If this is not turned on, the values will be plotted individually on the y-axis.
-    * The calculation underpinning this will always group the value corresponding to one value on the x-axis. Make sure your data is clean in able for this to work (avoid gaps in your data).
+    * 如果适用，勾选此框将根据 X-轴 的值将图表的值堆叠在一起。
+    * 如果没有开启，这些值将被单独绘制在 Y-轴 上。
+    * 支撑这个计算的将总是把 X-轴 上的一个值对应的数值分组。请确保您的数据是干净的，这样才能发挥作用（避免您的数据出现空隙）。
 
-    **Normalize to percentage data**
+    **归一化为百分比数据（Normalize to percentage data）**
 
-    * This will normalize the chart to display percentage values of the chosen data table.
-    * The calculation underpinning this will always group the value corresponding to one value on the x-axis. Make sure your data is clean in able for this to work (avoid gaps in your data).
+    * 这将使图表归一化以显示所选数据表的百分比值。
+    * 支撑这个计算的将总是把 X-轴 上的一个值对应的数值分组。请确保您的数据是干净的，这样才能发挥作用（避免您的数据出现空隙）。
 
-    **Show data labels**
+    **显示数据标签（Show data labels）**
 
-    * Ticking this box leads to the display of the individual datapoints inside of the graph.
-    * This only makes sense in cases where you have few datapoints that are spread out far enough from each other to not overlap.
+    * 勾选此框，就可以在图中显示各个数据点。
+    * 这只有在您的数据点很少，而且相互之间分布得很远，不会重叠的情况下才有意义。
 
-=== "Result data"
+=== "结果数据（Result data）"
 
-    Here you can pick the data points that are to be displayed.
+    在这里您可以挑选要显示的数据点。
 
     ![see explanations below](images/graphs-5.png)
 
-    You can choose one **x-axis** and multiple **y-axis.**
+    您可以选择一个 **x-轴 **和多个 **y-轴**。
 
-    Alternatively, you can also choose one data series on the y-axis and choose to group it by a different column of your table (as shown in the example above).
+    另外，您也可以在 Y-轴 上选择一个数据序列，并选择按数据表的不同列进行分组（如上例所示）。
 
-=== "X-axis options"
+=== "X-轴选项（X-axis options）"
 
-    Using these options you can influence how your x-axis data gets displayed.
+    使用这些选项，您可以影响您的 X-轴 数据的显示方式。
 
     ![see explanations below](images/graphs-6.png)
 
-    **Axis title**
+    **轴标题（Axis title）**
 
-    * This field allows you to specify a title for your x-axis.
+    * 这个栏目允许您为您的 X-轴 指定一个标题。
 
-    **Sort Values**
+    **排序值（Sort Values）**
 
-    * by ticking this box you can specify if you want the values in your chart to be ordered.
-    * If your x-axis is a time series, this will automatically happen.
+    * 通过勾选此框，您可以指定是否要对图表中的数值进行排序。
+    * 如果您的 X-轴 是一个时间序列，这将自动发生。
 
-    **Reverse value**
+    **倒序值（Reverse value）**
 
-    * Ticking this box will reverse the order of the values on the x-axis.
+    * 勾选此框将反转 X-轴 上数值的顺序。
 
-    **Logarithmic**
+    **对数化（Logarithmic）**
 
-    * Ticking this box will make your x-axis values display \_\_ logarithmically.
+    * 勾选此框将使您的 X-轴 数值以对数方式显示。
 
-=== "Y-axis options"
+=== "Y-轴选项（Y-axis options）"
 
-    With these options you can influence how your x-axis data gets displayed.
+    通过这些选项，您可以影响您的 X-轴 数据的显示方式。
 
     ![see explanations below](images/graphs-7.png)
 
-    **Axis title**
+    **轴标题（Axis title）**
 
-    * This field allows you to specify a title for your y-axis.
+    * 这个栏目允许您为您的 Y-轴 指定一个标题。
 
-    **Logarithmic**
+    **对数化（Logarithmic）**
 
-    * Ticking this box will make your x-axis values display \_\_ logarithmically.
+    * 勾选此框将使您的 X-轴 数值以对数方式显示。
 
-    **Enable right y-axis**
+    **启用右侧 Y-轴（Enable right y-axis）**
 
-    * Ticking this box will enable an additional y-axis that you can plot values on.
-    * You can choose in the [chart series section](charts-graphs.md#ordering-your-series) what you want to be displayed on the left and right axis.
+    * 勾选此框将启用一个额外的 Y-轴，您可以在上面绘制数值。
+    * 您可以在[图表序列部分](charts-graphs.md#ordering-your-series)里面选择您想在左和右轴上显示什么。
 
-=== "Series options"
+=== "序列选项（Series options）"
 
     ![](images/graphs-9.png)
 
-    In this section of the Visualization editor you can finalize your graph.
+    在可视化编辑器的这一部分，您可以最终确定您的图形。
 
-    * You can rename the "series" by simply clicking into the field.
-    * You can change the chart type by clicking into the dropdown.
-    * You can change the colors by clicking into the color box.
-    * Finally you can also change the order of the series.
+    * 您可以通过点击栏目重命名序列（series）。
+    * 您可以通过点击下拉菜单来改变图表类型。
+    * 您可以通过点击颜色框来改变颜色。
+    * 最后，您还可以改变序列的顺序。
 
-    **Picking Colors**
+    **选择颜色**
 
-    You can pick colors with your browser native color selector.
+    您可以用您的浏览器本地颜色选择器来挑选颜色。
 
-    This might look slightly different for you depending on which browser you use.
+    这对您来说可能略有不同，取决于您使用的浏览器。
 
     ![Choose any color you want!](images/graphs-color.gif)
 
-=== "Pie options"
+=== "饼状选项（Pie options）"
     
     ![pie options](images/pie-options.png)
     
-    **Label format**
+    **标签格式（Label format）**
 
-    * This field allows you to define the [tick format](#xy-axis-tick-and-label-formats) of the data labels in your pie chart.
+    * 这个栏目允许您定义您饼状图里面的数字标签的[刻度格式](#xy-axis-tick-and-label-formats)。
 
 ***
 
-## X/Y-axis Tick and Label formats
+## X/Y-轴 刻度和标签格式（X/Y-axis Tick and Label formats）
 
 ![](images/graphs-8.png)
 
-Tick formats change how numeric values and axis labels in your graphs are displayed.
+刻度格式改变了图形中数值和轴标签的显示方式。
 
-Here's how to format them:
+这是更改它们格式的方法：
 
-| Starting Value        | Tick/Label format | Output          | Description                                                                                                                                           |
+| 起始值       | 刻度/标签格式 | 输出          | 说明                                                                                                                                           |
 | ------------ | ----------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1256784.3745 | `[blank]`  | 1256784.3745000 | Displays the number 7 decimal precision.                                                                                                                |
-| 1256784.3745 | `0`           | 1256784         | Displays only the integer.                                                                                                                            |
-| 1256784.3745 | `0,0`         | 1,256,784       | Only displays the integer with comma separation.                                                                                                      |
-| 1256784.3745 | `0,0.00`      | 1,256,784.38    | Displays the number with [x] decimal precision, where [x] is the number of `0` you add after the decimal point.                                                                |
-| 1256784.3745 | `0.0a`     | 1.2M            | <p>Displays the number with [x] precision and a letter based on the number's 1e[y] power (eg "m" for million, "b" for billion)  |
-| 1256784.3745 | `$0.0a`    | $1.2M           | Adds a "\$" to the number. Works with all formats above though use of the `a` suffix is recommended. Currently the only "\$" is the only supported currency symbol.                                                                                      |
+| 1256784.3745 | `[blank]`  | 1256784.3745000 | 显示数字的小数点后 7 位精度。                                                                                                               |
+| 1256784.3745 | `0`           | 1256784         | 只显示整数。                                                                                                                            |
+| 1256784.3745 | `0,0`         | 1,256,784       | 只显示用逗号分隔的整数。                                                                                                   |
+| 1256784.3745 | `0,0.00`      | 1,256,784.38    | 显示具有 [x] 小数点精度的数字，其中 [x] 是您在小数点后面添加的 `0` 的数量。                                                                |
+| 1256784.3745 | `0.0a`     | 1.2M            | <p>显示具有 [x] 精度的数字和基于该数字 1e[y] 幂的字母（例如，"m" 表示百万，"b" 表示十亿）。  |
+| 1256784.3745 | `$0.0a`    | $1.2M           | 在数字上添加一个 "\$"。可用于上述所有格式，但建议使用 `a` 后缀。目前只有 "\$" 是唯一支持的货币符号。                                                                                                           |
