@@ -2,18 +2,18 @@
 
 ## **reservoir.attribute\_keys**
 
-This table contains records with information about each attribute key.
+该表包含有每个密钥属性的记录
 
-Query examples can be found here:
+查询的示例可以在这里找到:
 
 [https://dune.com/queries/1302930/2232305](https://dune.com/queries/1302930/2232305)
 
-| **Column name** | **Type**  | **Description**                          |
+| **列名** | **类型**  | **说明**                          |
 |-----------------|-----------|------------------------------------------|
-| id              | string    | Internal attribute key id                |
-| collection\_id  | string    | Associated collection id                 |
-| key             | string    | The name of the attribute                |
-| kind            | string    | Value type (string, number, date, range) |
-| rank            | string    | Sort order                               |
-| created\_at     | timestamp | Timestamp the attribute key was created  |
-| updated\_at     | timestamp | Timestamp the attribute key was updated  |
+| id              | 字符串    | 内部密钥属性ID                |
+| collection\_id  | 字符串    | 相关集合ID                 |
+| key             | 字符串    | 属性名称                |
+| kind            | 字符串    | 值类型 (字符串, 数字, 日期, 范围) |
+| rank            | 字符串    | 排序顺序                               |
+| created\_at     | 时间戳 | 创建密钥属性的时间戳  |
+| updated\_at     | 时间戳 | 更新密钥属性的时间戳  |
