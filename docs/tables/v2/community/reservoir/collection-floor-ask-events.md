@@ -19,8 +19,8 @@
 | token\_id       | 字符串    | 集合中的代币ID                                                                              |
 | order\_id       | 字符串    | 相关的请求ID                                                                                              |
 | maker           | 字符串    | 相关的请求者钱包地址                                                                            |
-| price           | 精确小数   | 相关的请求价格 (本地货币)                                                                         |
-| previous\_price | 精确小数   | 以前的请求底价 (本地货币)                                                                      |
+| price           | 精确小数型   | 相关的请求价格 (本地货币)                                                                         |
+| previous\_price | 精确小数型   | 以前的请求底价 (本地货币)                                                                      |
 | valid\_until    | 长整型数字    | 相关的有效请求到期                                                                              |
 | source          | 字符串    | 订单来源 (e.g. opensea.io)                                                                           |
 | tx\_hash        | 字符串    | 相关的交易哈希值                                                                                     |
