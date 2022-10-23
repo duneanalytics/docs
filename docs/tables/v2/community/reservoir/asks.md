@@ -27,7 +27,7 @@
 | currency\_price     | 精确小数型   | 货币价格                               |
 | dynamic             | 布尔型   | 是荷兰拍卖                            |
 | quantity            | 长整型数字    | 列表的代币数量              |
-| quantity\_filled    | 长整型数字    | 填补的代币数量             |
+| quantity\_filled    | 长整型数字    | 执行的代币数量             |
 | quantity\_remaining | 长整型数字    | 剩余的代币数量                   |
 | valid\_from         | 长整型数字    | 列表开始时间                          |
 | valid\_until        | 长整型数字    | 列表结束时间                             |
