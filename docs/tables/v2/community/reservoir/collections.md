@@ -2,39 +2,39 @@
 
 ## **reservoir.collections**
 
-This table contains records with information about each NFT collection.
+该表包含有关于每个NFT系列的信息记录.
 
-Query examples can be found here:
+查询的示例可以在这里找到:
 
 [https://dune.com/queries/1302781/2232054](https://dune.com/queries/1302781/2232054)
 
 [https://dune.com/queries/1302788/2232065](https://dune.com/queries/1302788/2232065)
 
-| **Column name**            | **Type**  | **Description**                             |
+| **列名**            | **类型**  | **说明**                             |
 |----------------------------|-----------|---------------------------------------------|
-| id                         | string    | Internal collection id                      |
-| slug                       | string    | Collection slug                             |
-| name                       | string    | Collection name                             |
-| description                | string    | Collection description                      |
-| token\_count               | bigint    | Id of the token in the collection           |
-| contract                   | string    | Contract address                            |
-| day1\_rank                 | bigint    | Ranking in the previous day                 |
-| day7\_rank                 | bigint    | Ranking in the previous 7 days              |
-| day30\_rank                | bigint    | Ranking in the previous 30 days             |
-| all\_time\_rank            | bigint    | All time ranking                            |
-| day1\_volume               | decimal   | Trade volume in the previous day            |
-| day7\_volume               | decimal   | Trade volume in the previous 7 days         |
-| day30\_volume              | decimal   | Trade volume in the previous 30 days        |
-| all\_time\_volume          | decimal   | All time trade volume                       |
-| day1\_volume\_change       | double    | Trade volume change in the previous day     |
-| day7\_volume\_change       | double    | Trade volume change in the previous 7 days  |
-| day30\_volume\_change      | double    | Trade volume change in the previous 30 days |
-| floor\ask\_value           | decimal   | Current floor sale price (native currency)  |
-| day1\_floor\_sale\_value   | decimal   | Floor sale price in the previous day        |
-| day7\_floor\_sale\_value   | decimal   | Floor sale price 7 days ago                 |
-| day30\_floor\_sale\_value  | decimal   | Floor sale price 30 days ago                |
-| day1\_floor\_sale\_change  | double    | Floor sale price change from previous day   |
-| day7\_floor\_sale\_change  | double    | Floor sale price change from 7 days ago     |
-| day30\_floor\_sale\_change | double    | Floor sale price change from 30 days ago    |
-| created\_at                | timestamp | Timestamp the collection was created        |
-| updated\_at                | timestamp | Timestamp the collection was updated        |                                                               |
+| id                         | 字符串    | 内部集合ID                      |
+| slug                       | 字符串    | 集合标题                             |
+| name                       | 字符串    | 集合名称                             |
+| description                | 字符串    | 集合说明                      |
+| token\_count               | 长整型数字    | 集合中的代币ID           |
+| contract                   | 字符串    | 合约地址                            |
+| day1\_rank                 | 长整型数字    | 前1日的排名                 |
+| day7\_rank                 | 长整型数字    | 前7日的排名              |
+| day30\_rank                | 长整型数字    | 前30日的排名             |
+| all\_time\_rank            | 长整型数字    | 所有时间的排名                            |
+| day1\_volume               | 精确小数型   | 前1日的交易量            |
+| day7\_volume               | 精确小数型   | 前7日的交易量         |
+| day30\_volume              | 精确小数型   | 前30日的交易量        |
+| all\_time\_volume          | 精确小数型   | 所有时间的交易量                       |
+| day1\_volume\_change       | 双精度浮点型    | 前1日的交易量变化     |
+| day7\_volume\_change       | 双精度浮点型    | 前7日的交易量变化  |
+| day30\_volume\_change      | 双精度浮点型    | 前30日的交易量变化 |
+| floor\ask\_value           | 精确小数型   | 当前的出售底价 (本地货币)  |
+| day1\_floor\_sale\_value   | 精确小数型   | 前1日的出售底价        |
+| day7\_floor\_sale\_value   | 精确小数型   | 前7日的出售底价                 |
+| day30\_floor\_sale\_value  | 精确小数型   | 前30日的出售底价                |
+| day1\_floor\_sale\_change  | 双精度浮点型    | 前1日的出售底价变化   |
+| day7\_floor\_sale\_change  | 双精度浮点型    | 前7日的出售底价变化     |
+| day30\_floor\_sale\_change | 双精度浮点型    | 前30日的出售底价变化    |
+| created\_at                | 时间戳 | 创建集合的时间戳        |
+| updated\_at                | 时间戳 | 更新集合的时间戳        |                                                               |
