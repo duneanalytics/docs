@@ -2,28 +2,28 @@
 
 ## **reservoir.token\_floor\_ask\_events**
 
-This table contains records with information about each NFT token floor ask change.
+该表包含有关于每个NFT代币地板价变化的记录.
 
-Query examples can be found here:
+查询的示例可以在这里找到:
 
 [https://dune.com/queries/1302852/2232169](https://dune.com/queries/1302852/2232169)
 
 [https://dune.com/queries/1302854/2232173](https://dune.com/queries/1302854/2232173)
 
-| **Column name** | **Type**  | **Description**                                                                                                 |
+| **列名** | **类型**  | **说明**                                                                                                 |
 |-----------------|-----------|-----------------------------------------------------------------------------------------------------------------|
-| id              | bigint    | Internal token attribute id                                                                                     |
-| kind            | string    | Event type (new-order, expiry, sale, cancel, balance-change, approval-change, bootstrap, revalidation, reprice) |
-| contract        | string    | Contract address                                                                                                |
-| token\_id       | string    | Id of the token in the collection                                                                               |
-| order\_id       | string    | Associated Ask id                                                                                               |
-| maker           | string    | Associated Ask maker wallet address                                                                             |
-| price           | decimal   | Associated ask price (native currency)                                                                          |
-| previous\_price | decimal   | Associated ask price (native currency)                                                                          |
-| nonce           | string    | The order nonce of the maker                                                                                    |
-| valid\_from     | bigint    | Associated ask validity start                                                                                   |
-| valid\_until    | bigint    | Associated ask validity expiration                                                                              |
-| source          | string    | Source of the order (e.g. opensea.io)                                                                           |
-| tx\_hash        | string    | Associated transaction hash                                                                                     |
-| tx\_timestamp   | bigint    | Associated transaction timestamp                                                                                |   
-| created\_at     | timestamp | Timestamp the event was recorded                                                                                |
+| id              | 长整型数字    | 内部代币属性ID                                                                                     |
+| kind            | 字符串    | 事件类型（新订单、到期、出售、取消、余额变化、批准变化、引导、重新验证、重新定价） |
+| contract        | 字符串    | 合约地址                                                                                                |
+| token\_id       | 字符串    | 集合中的代币ID                                                                               |
+| order\_id       | 字符串    | 相关的请求ID                                                                                             |
+| maker           | 字符串    | 相关的制作者钱包地址                                                                             |
+| price           | 精确小数型   | 相关的请求价格 (本地货币)                                                                          |
+| previous\_price | 精确小数型   | 前一天的请求底价 (本地货币)                                                                          |
+| nonce           | 字符串    | 制作者的订单nonce值                                                                                    |
+| valid\_from     | 长整型数字    | Associated ask validity start                                                                                   |
+| valid\_until    | 长整型数字    | Associated ask validity expiration                                                                              |
+| source          | 字符串    | Source of the order (e.g. opensea.io)                                                                           |
+| tx\_hash        | 字符串    | Associated transaction hash                                                                                     |
+| tx\_timestamp   | 长整型数字    | Associated transaction timestamp                                                                                |   
+| created\_at     | 时间戳 | Timestamp the event was recorded                                                                                |
