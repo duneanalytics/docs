@@ -9,7 +9,7 @@ description: The Query Results section is where you can see the data your Query 
 
 ![first time run query example](images/first-time-run-query-example.png)
 
-短暂时间过后，您的查询结果会以表格形式 🪄 出现：
+短暂时间过后，您的查询结果会以数据表形式 🪄 出现：
 
 ![query results example](images/query-results.png)
 
@@ -59,16 +59,16 @@ description: The Query Results section is where you can see the data your Query 
 
 ![run time counter buttons](images/run-time-counter-buttons.png)
 
-### 结果表格排版
+### 结果数据表排版
 
-您可以通过表格下面的选项来改变查询结果表格的格式和外观。
+您可以通过数据表下面的选项来改变查询结果表格的格式和外观。
 
 ![query results table options](images/query-results-table-options.png)
 
 我们这有什么？👀
 
 1. <span class="fk-btn-3">Add to dashboard</span>【添加到看板】按钮在您[保存您的查询](#saving-your-query)之前不会起作用。在这里了解更多关于[制作看板](../../features/dashboards.md)的信息。
-2. 一个改变您表格标题的栏目。
+2. 一个改变您数据表标题的栏目。
 3. 针对您每一栏的设置。
 
 栏目设置是简单直接的：
