@@ -1,46 +1,47 @@
 ---
-title: Errors Codes
-description: Here's how to handle errors that may come up when working with the Dune API.
+title: 错误代码
+description: 如何处理在使用 Dune API 的过程中可能遇到的错误。
 ---
 
-The good news: you are very early to Dune API.  🧙‍♂️
+好消息：你在非常早期的时候接触到了 Dune API。 🧙‍♂️
 
-The bad news: that means we're still working out the gremlins. 👹
+坏消息：这意味着我们仍在努力解决一些潜在的小问题。 👹
 
-For now, the Dune API doesn't always throw error messages, so in some cases when things do not work as expected you'll need to decode what happened using our response objects.
+目前，Dune API 并不总是抛出异常信息。在某些情况下，当事情未按预期进行时，您需要使用我们的响应对象来解析具体信息。
 
 !!! Note
-    If this is too technical/difficult/confusing, don't break your wand - reach out to us on the [#dune-api Discord channel](https://discord.com/channels/757637422384283659/1019910980634939433) and we'll help out when you're stuck!
+    如果这些东西对您而言，太过于生僻、复杂或困惑，不要太勉强自己。欢迎在 [#dune-api Discord channel](https://discord.com/channels/757637422384283659/1019910980634939433) 联系我们，我们会在您卡住的时候提供帮助。
 
-Here are a few common error scenarios:
+以下是几种常见的错误情况：
 
-## Invalid API Key
+## API Key 无效
 
-### Response Object
+### 返回对象
 
 ```
  {'error': 'invalid API Key'}
 ```
 
-#### Checks
+#### 核查
  
-  -  Make sure that you are passing your API key to our endpoint *in a header*. See the section on [Authentication](../api-reference/authentication.md) for how to do that, and our [quick start guides](../quick-start/api-py.md) for specific language examples.
-  - If you are already passing the API key in an header, make sure that it is correctly entered.
+  - 确保您在 *header* 中将您的 API Key 传给接入点。具体实现方式，请参阅 [鉴权] 章节（.../api-reference/authentication.md），以及我们 [快速入门指南]（.../quick-start/api-py.md）中具体语言的实现案例。
+  - 如果您已经在 header 中传递了 API Key，请确保输入正确。
 
 
-## An Internal Error Occurred
+## 发生了内部错误
 
-### Response Object
+### 返回对象
 
 ```
  {'error': 'An internal error occurred'}
 ```
-#### Checks
 
-  - If you are using one of our GET endpoints, ensure that the `query_id` you have entered is correct.
-  - If you are using one of our POST endpoints, ensure that the `execution_id` you obtained from your GET endpoint has been correctly passed on to your POST endpoint.
+#### 核查
+
+  - 如果您正在使用我们的某个 GET 接入地址，请确保您输入的 "query_id" 是正确的。
+  - 如果您正在使用我们的某个 POST 接入地址，请确保您从 GET 接入地址获取的 `execution_id` 已经被正确传递到 POST 接入地址。
 
 
-The documentation here isn't exhaustive!
+当前文档并不完善！
 
-While we are working on making it better, again, the best place to get any support is our [#dune-api Discord channel](https://discord.com/channels/757637422384283659/1019910980634939433).
+我们目前正在努力完善中，但还是那句话，获得任何帮助的最佳途径依旧是我们的 [#dune-api Discord channel](https://discord.com/channels/757637422384283659/1019910980634939433)。
