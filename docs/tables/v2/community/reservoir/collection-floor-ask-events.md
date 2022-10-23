@@ -25,4 +25,4 @@
 | source          | 字符串    | 订单来源 (e.g. opensea.io)                                                                           |
 | tx\_hash        | 字符串    | 相关的交易哈希值                                                                                     |
 | tx\_timestamp   | 长整型数字    | 相关的交易时间戳                                                                                |
-| created\_at     | 时间戳 | 事件记录的时间戳                                                                                |
+| created\_at     | 时间戳 | 记录事件的时间戳                                                                                |
