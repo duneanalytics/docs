@@ -17,7 +17,7 @@
 | value              | 字符串    | 属性值                                            |
 | token\_count       | 长整型数字    | 具有属性的代币数量                   |
 | on\_sale\_count    | 长整型数字    | 正在出售的具有属性的代币数量 |
-| floor\_sell\_value | 精确小数型   | 当前的请求底价                                    |
+| floor\_sell\_value | 精确小数型   | 当前的出售底价                                    |
 | sell\_updated\_at  | 时间戳 | 最后更新底价的时间戳                  |
 | collection\_id     | 字符串    | 相关的集合ID                                   |
 | kind               | 字符串    | 值类型 (字符串, 数字, 日期, 范围)                   |
