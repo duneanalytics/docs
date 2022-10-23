@@ -19,12 +19,12 @@
 | token\_id           | 字符串    | 集合中的代币ID            |
 | maker               | 字符串    | 制作者的钱包地址                         |
 | taker               | 字符串    | 接受者的钱包地址                        |
-| price               | 精确小数   | 当前的价格 (本地货币)          |
+| price               | 精确小数型   | 当前的价格 (本地货币)          |
 | start\_price        | 长整型数字    | 列表的初始价格 (用于荷兰拍卖)     |
 | end\_price          | 长整型数字    | 列表的结束价格 (用于荷兰拍卖)       |
 | currency\_address   | 字符串    | 货币地址                             |
 | currency\_symbol    | 字符串    | 货币代码                              |
-| currency\_price     | 精确小数   | 货币价格                               |
+| currency\_price     | 精确小数型   | 货币价格                               |
 | dynamic             | 布尔型   | 是荷兰拍卖                            |
 | quantity            | 长整型数字    | 列表的代币数量              |
 | quantity\_filled    | 长整型数字    | 填补的代币数量             |
