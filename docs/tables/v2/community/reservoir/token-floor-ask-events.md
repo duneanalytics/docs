@@ -21,9 +21,9 @@
 | price           | 精确小数型   | 相关的请求价格 (本地货币)                                                                          |
 | previous\_price | 精确小数型   | 前一天的请求底价 (本地货币)                                                                          |
 | nonce           | 字符串    | 制作者的订单nonce值                                                                                    |
-| valid\_from     | 长整型数字    | Associated ask validity start                                                                                   |
-| valid\_until    | 长整型数字    | Associated ask validity expiration                                                                              |
-| source          | 字符串    | Source of the order (e.g. opensea.io)                                                                           |
-| tx\_hash        | 字符串    | Associated transaction hash                                                                                     |
-| tx\_timestamp   | 长整型数字    | Associated transaction timestamp                                                                                |   
-| created\_at     | 时间戳 | Timestamp the event was recorded                                                                                |
+| valid\_from     | 长整型数字    | 相关的列表开始订单                                                                                   |
+| valid\_until    | 长整型数字    | 相关的列表到期订单                                                                              |
+| source          | 字符串    | 订单来源 (e.g. opensea.io)                                                                           |
+| tx\_hash        | 字符串    | 相关的交易哈希值                                                                                     |
+| tx\_timestamp   | 长整型数字    | 相关的交易时间戳                                                                               |   
+| created\_at     | 时间戳 | 记录事件的时间戳                                                                                |
