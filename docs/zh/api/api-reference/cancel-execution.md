@@ -33,7 +33,7 @@ curl -X POST -H x-dune-api-key:{{api_key}} "https://api.dune.com/api/v1/executio
 
 ## 返回示例
 
-！！！注意： "Dune API 以 JSON 格式返回响应。"
+!!! info "Dune API 以 JSON 格式返回响应。"
 
 ```json
 {
