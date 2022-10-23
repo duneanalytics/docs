@@ -80,7 +80,7 @@ Dune 将区块链数据汇总到一个可以轻松查询的 SQL 数据库中。
 
 区块链分析师（即 巫师 即你！）有几种方法可以开始运行查询：
 
-1. 最简单的方法是使用 Dune [_Abstractions_](tables/abstractions.md) 来查询常用的数据表格。一些流行的 Abstractions 包括 `dex.trades`, `lending.borrow`，和 `stablecoin.transfer`。
+1. 最简单的方法是使用 Dune [_数据抽象（Abstractions）_](tables/abstractions.md) 来查询常用的数据表格。一些流行的数据抽象包括 `dex.trades`, `lending.borrow`，和 `stablecoin.transfer`。
 2. 查询原始以太坊数据，如区块、日志和交易。
 3. 也可以查询中心化交易所的数据。如，您可以使用 `prices.usd` 来快速返回几乎所有加密资产的价格。
 
