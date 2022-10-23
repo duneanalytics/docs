@@ -1,21 +1,21 @@
 ---
 title: 其它可视化
-description: 下面是一些你可以用 Dune 制作的非图形可视化内容!
+description: 下面是一些您可以用 Dune 制作的非图形可视化内容!
 ---
 
-下面是一些你可以用 Dune 制作的非图形可视化内容!
+下面是一些您可以用 Dune 制作的非图形可视化内容!
 
 ## 数据表
 
-数据表是默认的可视化，每当你创建和运行一个查询时，你会发现标有 <span class="fk-btn-4">Query results</span> 的表格：
+数据表是默认的可视化，每当您创建和运行一个查询时，您会发现标有 <span class="fk-btn-4">Query results</span> 的表格：
 
 ![query results table example](images/query-results-table-example.png)
 
-你还可以使用 <span class="fk-btn-2">New visualization</span> 按钮和下拉菜单制作更多的数据表，以不同的方式显示你的数据：
+您还可以使用 <span class="fk-btn-2">New visualization</span> 按钮和下拉菜单制作更多的数据表，以不同的方式显示您的数据：
 
 ![new table visualization](images/new-table-visualization.png)
 
-### 配置你的数据表
+### 配置您的数据表
 
 ![table configuration options](images/table-configuration-options.png)
 
@@ -25,9 +25,9 @@ description: 下面是一些你可以用 Dune 制作的非图形可视化内容!
 
 标题显示在您数据表格的上方。
 
-保留默认值（`Table`）或将其设为空白，使你的表标题与查询的标题/名称相同。
+保留默认值（`Table`）或将其设为空白，使您的表标题与查询的标题/名称相同。
 
-在这个栏目中添加任何其他值，都会先添加该值，然后是你的查询名称：
+在这个栏目中添加任何其他值，都会先添加该值，然后是您的查询名称：
 
 ![table title example](images/table-title-example.png)
 
@@ -35,13 +35,13 @@ description: 下面是一些你可以用 Dune 制作的非图形可视化内容!
 
 #### [x] 列的选项（Column [x]） 
 
-你可以为你的数据表中的每一列配置以下选项
+您可以为您的数据表中的每一列配置以下选项
 
 === "标题（Title）"
 
     标题出现在数据表的顶部。
 
-    将此留空使你的列标题与你的 Dune 数据库名称相同。
+    将此留空使您的列标题与您的 Dune 数据库名称相同。
 
 === "对齐（Align）"
 
@@ -49,11 +49,11 @@ description: 下面是一些你可以用 Dune 制作的非图形可视化内容!
 
 === "更改格式（Format）"
     
-    允许你在这里按照 [X/Y-轴的刻度和标签格式](../visualizations/charts-graphs.md#xy-axis-tick-and-label-formats)调整数据的数字格式。
+    允许您在这里按照 [X/Y-轴的刻度和标签格式](../visualizations/charts-graphs.md#xy-axis-tick-and-label-formats)调整数据的数字格式。
 
 === "隐藏列（Hide Column）"
 
-    从你的数据表中隐藏这一列。
+    从您的数据表中隐藏这一列。
 
 ***
 
@@ -106,7 +106,7 @@ description: 下面是一些你可以用 Dune 制作的非图形可视化内容!
 
 #### 更改格式（Formatting）
 
-在这一部分，你可以调整你的数字数据显示方式。
+在这一部分，您可以调整您的数字数据显示方式。
 
 === "前缀（Prefix）"
 
