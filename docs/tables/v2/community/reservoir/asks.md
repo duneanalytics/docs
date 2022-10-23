@@ -31,7 +31,7 @@
 | quantity\_remaining | 长整型数字    | 剩余的代币数量                   |
 | valid\_from         | 长整型数字    | 列表开始时间                          |
 | valid\_until        | 长整型数字    | 列表结束时间                             |
-| nonce               | 字符串    | 制作者的目前订单                 |
+| nonce               | 字符串    | 制作者订单的nonce值                 |
 | source              | 字符串    | 列表的来源 (e.g. opensea.io)      |
 | fee\_bps            | 长整型数字    | 列表费用                                  |
 | expiration          | 长整型数字    | 相关的交易哈希值                  |
