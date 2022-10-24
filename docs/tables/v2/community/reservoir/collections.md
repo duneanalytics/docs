@@ -1,8 +1,8 @@
-# collections
+# 集合
 
-## **reservoir.collections**
+## **reservoir.集合**
 
-该表包含有关于每个NFT系列的信息记录.
+该表包含有关于每个NFT集合的信息记录.
 
 查询的示例可以在这里找到:
 
@@ -16,12 +16,12 @@
 | slug                       | 字符串    | 集合标题                             |
 | name                       | 字符串    | 集合名称                             |
 | description                | 字符串    | 集合说明                      |
-| token\_count               | 长整型数字    | 集合中的代币ID           |
+| token\_count               | 大数    | 集合中的代币ID           |
 | contract                   | 字符串    | 合约地址                            |
-| day1\_rank                 | 长整型数字    | 前1日的排名                 |
-| day7\_rank                 | 长整型数字    | 前7日的排名              |
-| day30\_rank                | 长整型数字    | 前30日的排名             |
-| all\_time\_rank            | 长整型数字    | 所有时间的排名                            |
+| day1\_rank                 | 大数    | 前1日的排名                 |
+| day7\_rank                 | 大数    | 前7日的排名              |
+| day30\_rank                | 大数    | 前30日的排名             |
+| all\_time\_rank            | 大数    | 所有时间的排名                            |
 | day1\_volume               | 精确小数型   | 前1日的交易量            |
 | day7\_volume               | 精确小数型   | 前7日的交易量         |
 | day30\_volume              | 精确小数型   | 前30日的交易量        |
