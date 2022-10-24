@@ -11,13 +11,13 @@ Thanks to [@ilemi](https://dune.com/ilemi) for putting this together!
 
 ## 1. Find the main point of entry
 
-Using the [Dune Data Explorer](../features/queries/data-explorer.md) and the protocol app page/docs and try to figure out what the main user entry point function is.
+Using the [Dune Data Explorer](../../features/queries/data-explorer.md) and the protocol app page/docs and try to figure out what the main user entry point function is.
 
 Sometimes this is straightforward, but different contract patterns on more complex protocols will make this confusing. 
 
 For most of decentralized finance (DeFi), the primary entry point for users is just some variation of `Deposit`.
 
-If the contract isn't [Decoded](../features/decoded-contracts.md) yet, you can start with some raw queries for finding the most common function and event signatures here: [Dune Utility Queries](utility-queries.md)
+If the contract isn't [Decoded](../../features/decoded-contracts.md) yet, you can start with some raw queries for finding the most common function and event signatures here: [Dune Utility Queries](../utility-queries.md)
     
 If you're having trouble figuring out the tables, [see our Table docs here](../../tables/).    
     
@@ -25,7 +25,7 @@ If you're having trouble figuring out the tables, [see our Table docs here](../.
 
 Typically a function call is not as simple as an ETH/token transfer that only involves one contract.
 
-Once you figure out the entry point, run a basic LIMIT query on it and look at some example transactions in [the relevant blockchain explorer](../../resources/../docs/resources/wizard-tools/blockchain-explorers.md) for data hints (i.e. what protocols did the tx interact with besides the main one).
+Once you figure out the entry point, run a basic LIMIT query on it and look at some example transactions in [the relevant blockchain explorer](../../resources/wizard-tools/blockchain-explorers.md) for data hints (i.e. what protocols did the tx interact with besides the main one).
     
 ```sql
 SELECT * FROM protocol_name."Contractname_evt_EventEmitted"
