@@ -1,6 +1,6 @@
-# asks
+# 请求
 
-## **reservoir.asks**
+## **reservoir.请求**
 
 该表包含有关于每个列表信息的记录.
 
@@ -20,21 +20,21 @@
 | maker               | 字符串    | 制作者的钱包地址                         |
 | taker               | 字符串    | 接受者的钱包地址                        |
 | price               | 精确小数型   | 当前的价格 (本地货币)          |
-| start\_price        | 长整型数字    | 列表的初始价格 (用于荷兰拍卖)     |
-| end\_price          | 长整型数字    | 列表的结束价格 (用于荷兰拍卖)       |
+| start\_price        | 大数    | 列表的初始价格 (用于荷兰拍卖)     |
+| end\_price          | 大数    | 列表的结束价格 (用于荷兰拍卖)       |
 | currency\_address   | 字符串    | 货币地址                             |
 | currency\_symbol    | 字符串    | 货币代码                              |
 | currency\_price     | 精确小数型   | 货币价格                               |
 | dynamic             | 布尔型   | 是荷兰拍卖                            |
-| quantity            | 长整型数字    | 列表的代币数量              |
-| quantity\_filled    | 长整型数字    | 执行的代币数量             |
-| quantity\_remaining | 长整型数字    | 剩余的代币数量                   |
-| valid\_from         | 长整型数字    | 列表开始时间                          |
-| valid\_until        | 长整型数字    | 列表结束时间                             |
+| quantity            | 大数    | 列表的代币数量              |
+| quantity\_filled    | 大数    | 执行的代币数量             |
+| quantity\_remaining | 大数    | 剩余的代币数量                   |
+| valid\_from         | 大数    | 列表开始时间                          |
+| valid\_until        | 大数    | 列表结束时间                             |
 | nonce               | 字符串    | 制作者订单的nonce值                 |
 | source              | 字符串    | 列表的来源 (e.g. opensea.io)      |
-| fee\_bps            | 长整型数字    | 列表费用                                  |
-| expiration          | 长整型数字    | 相关的交易哈希值                  |
+| fee\_bps            | 大数    | 列表费用                                  |
+| expiration          | 大数    | 相关的交易哈希值                  |
 | raw\_data           | 字符串    | 原始订单数据（每个来源的格式会有所不同） |
 | created\_at         | 时间戳 | 创建列表的时间戳            |
 | updated\_at         | 时间戳 | 更新列表的时间戳            |
