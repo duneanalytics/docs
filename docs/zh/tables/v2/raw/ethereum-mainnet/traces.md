@@ -22,20 +22,20 @@
 | tx\_index       | numeric      | 归属的交易在区块中的索引位置                                                                                                                                                                                                   |
 | trace\_address  | array        | 当前内部合约调用在调用图森林中的地址。例如，[0, 2, 1] 是 [0, 2, 1, 0] 的父级                                                                                                                                           |
 | sub\_traces     | numeric      | 子级内部合约调用的数量                                                                                                                                                                                                                 |
-| type            | text         | 可以是`reward`，`create`，`call`或者`suicide`。描述在此内部合约调用中采取的操作类型。                                                                                                                                             |
-| address         | string       | 当类型是`suicide`或者`create`时调用的合约地址                                                                                                                                                                            |
+| type            | text         | 可以是`reward`，`create`，`call`或者`suicide`。描述在此内部合约调用中使用的操作类型。                                                                                                                                             |
+| address         | string       | 当类型是`suicide`或者`create`时保存调用的合约地址                                                                                                                                                                            |
 | code            | string       | 部署新合约的字节码，仅在调用类型为`create`时包含数据。                                                                                                                                                              |
 | call\_type      | string       | <p>可以是<code>staticcall</code>，<code>delegatecall</code>或者<code>call</code>。<br>更多信息请参考<a href="https://medium.com/coinmonks/delegatecall-calling-another-contract-function-in-solidity-b579f804178c">这里</a>。</p> |
 | input           | string       | 调用另一个智能合约的字节码                                                                                                                                                                               |
-| output          | string       | 被调用智能合约发送回来的字节码应答                                                                                                                                                                             |
-| refund\_address | string       | 仅在`type`是`suicide`时包含数据。指定将结余的以太币余额发送到哪里。                                                                                                                                            |
+| output          | string       | 被调用智能合约发送回来的字节码响应                                                                                                                                                                             |
+| refund\_address | string       | 仅在`type`是`suicide`时包含数据。指定将未支出的以太币余额发送到哪里。                                                                                                                                            |
 
 ### 内部合约调用消耗的燃料
 
 ethereum.traces表中的`gas_used`字段有点难以理解，所以这里有一些提示：
 
 * 内部合约调用的`gas_used`将始终包括合约调用本身以及其所有子级合约调用所消耗的燃料。
-* 初始调用的`gas_used`将不包含发起调用时已发生的成本
-* 您需要将“21000个燃料单位 + 发送零子节 + 发送非零字节的成本”添加到顶部内部合约调用的`gas_used`值上，以得到“真实”的`gas_used`值。
+* 初始调用的`gas_used`将不包含发起调用时已发生的燃料消耗。
+* 您需要将“21000个燃料单位 + 发送零子节及发送非零字节的燃料成本”添加到顶部内部合约调用的`gas_used`值上，以得到“真实”的`gas_used`值。
 * 有关此内容的更多信息，请参阅此[stackexchange条目](https://ethereum.stackexchange.com/questions/31443/what-do-the-response-values-of-a-parity-trace-transaction-call-actually-repres)
 * 在Dune中执行此操作的查询示例：[https://dune.com/queries/895857](https://dune.com/queries/895857)
