@@ -1,20 +1,20 @@
-# Blocks
+# 区块表
 
 ## avalanche\_c.blocks
 
-Blocks are the building blocks of blockchains and rollups. A block contains transactions which will alter the state of an EVM system incrementally. Transaction within a block can only be executed one after the other, not in parallel.
+区块是区块链和汇总（rollups）的构建组件。一个区块包含将逐渐改变EVM系统状态的多个交易。区块内的交易只能一个接一个地执行，不能并行执行。
 
-| **Column Name**     | **datatype** | **Description**                                                                          |
+| **字段名称**     | **数据类型** | **描述**                                                                          |
 | ------------------- | ------------ | ---------------------------------------------------------------------------------------- |
-| time                | timestamptz  | the time when the block was mined.                                                       |
-| number              | numeric      | the length of the blockchain in blocks                                                   |
-| hash                | string       | a unique identifier for that block                                                       |
-| parent hash         | string       | the unique identifier for the prior block                                                |
-| gas\_limit          | numeric      | the gas limit of the current block                                                       |
-| gas\_used           | numeric      | the gas used in this block                                                               |
-| miner               | string       | not applicable                                                                           |
-| difficulty          | numeric      | not applicable                                                                           |
-| total\_difficulty   | numeric      | total difficulty of the chain until this block                                           |
-| nonce               | string       | the block nonce is used to demonstrate the proof of work during mining                   |
-| size                | numeric      | this block's size in bytes (limited by gas limit)                                        |
-| base\_fee\_per\_gas | numeric      | this block's base fee (introduced by [EIP1559](https://eips.ethereum.org/EIPS/eip-1559)) |
+| time                | timestamptz  | 当前区块被开采的时间                                                     |
+| number              | numeric      | 区块链的长度（以区块数为单位）                                                  |
+| hash                | string       | 当前区块的唯一标识符                                                      |
+| parent hash         | string       | 前一个区块的唯一标识符                                               |
+| gas\_limit          | numeric      | 当前区块的燃料限制                                                      |
+| gas\_used           | numeric      | 当前区块消耗的燃料数量                                                              |
+| miner               | string       | 不适用                                                                           |
+| difficulty          | numeric      | 不适用                                                                           |
+| total\_difficulty   | numeric      | 区块链到当前区块为止的总难度值                                          |
+| nonce               | string       | 区块随机数，用于展示挖矿过程中的工作量证明                  |
+| size                | numeric      | 区块的大小（以字节为单位），受本区块燃料限制的约束                                       |
+| base\_fee\_per\_gas | numeric      | 当前区块的基本燃料费用（由[EIP1559](https://eips.ethereum.org/EIPS/eip-1559)）引入 |
