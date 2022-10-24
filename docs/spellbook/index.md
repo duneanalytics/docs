@@ -2,7 +2,7 @@
 title: Spellbook
 ---
 
-**Spellbook is a data transformation layer for Dune, built by the community.**
+**[Spellbook](http://github.com/duneanalytics/spellbook) is a data transformation layer for Dune, built by the community.**
 
 Spells are recipes to build high level tables that support common use cases, like NFT trades. You write them in SQL, wrapped in a Python templating language called Jinja2.
 
@@ -36,3 +36,23 @@ dbt natively understands the dependencies between all models. In our old abstrac
 ![Dependency graph created by dbt showing erc20 daily balances dependency tree](images/dbt-erc20-dependency-graph.jpg)
 
 We hope you are as excited as we are about this new tool. Spellbook is now live in prod and we welcome new contributors.
+
+## Getting Started
+
+To get a better sense of what Spells are already available to you, check out our Spellbook Model Docs:
+
+<div class="cards grid" markdown>
+- [Spellbook Model Docs](spellbook-model-docs.md)
+</div>
+
+To take a look under the hood, check out Spellbook on GitHub:
+
+<div class="cards grid" markdown>
+- [Spellbook on GitHub](https://github.com/duneanalytics/spellbook)
+</div>
+
+To learn how to build your own Spells, check out our Getting Started section here:
+
+<div class="cards grid" markdown>
+- [Spellbook Getting Started Guide](getting-started/index.md)
+</div>

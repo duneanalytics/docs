@@ -1,4 +1,6 @@
-## Abstractions (V1)
+---
+title: Abstractions (V1)
+---
 
 You can check for existing abstractions in our [public github repository](https://github.com/duneanalytics/spellbook/index.md), under `deprecated-dune-v1-abstractions`.
 

@@ -20,7 +20,7 @@ By default, [Dashboard Explorer](https://dune.com/browse/dashboards) shows Dashb
 Looking to the right sidebar, we can sort this list by:
 
 1. **Favorites** - Dashboards that have gotten the most stars in the last 1/7/30 days as well as all time.
-2. **Trending** - Dashboards that have been quickly getting stars in the last 1/4/24 hours.
+2. **Trending** - Dashboards that have been getting more attention in the last 1/4/24 hours.
 3. **New** - Dashboards sorted by publish time.
 
 And we can filter this list by:
