@@ -1,6 +1,6 @@
-# sales
+# 出售
 
-## **reservoir.sales**
+## **reservoir.出售**
 
 该表包含有关于每笔出售的信息记录
 
@@ -34,6 +34,6 @@
 | tx\_hash             | 字符串    | 相关的交易哈希值                       |
 | tx\_log\_index       | 整数型       | 相关的交易日志索引                  |
 | tx\_batch\_index     | 整数型       | 相关的交易批次索引                |
-| tx\_timestamp        | 长整数型数字    | 相关的交易时间戳                  |
+| tx\_timestamp        | 大数    | 相关的交易时间戳                  |
 | created\_at          | 时间戳 | 记录出售的时间戳                   |
 | updated\_at          | 时间戳 | 更新出售的时间戳                    |                                                               |
