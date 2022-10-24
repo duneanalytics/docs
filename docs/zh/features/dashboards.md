@@ -1,78 +1,77 @@
 ---
-title: Dashboards
+title: 数据看板
 ---
 
-**Dashboards are where Dune's content lives and gets discovered.**
+**数据看板是 Dune 的内容存在和被发现的地方。**
 
-Dashboards on Dune consist of widgets. Widgets can either be Visualizations or a text box. It is also possible to embed images/GIFs inside of the text box.
+Dune 上的数据看板由部件组成。部件可以是可视化的，也可以是一个文本框。也可以在文本框内嵌入图片/GIF。
 
-You can freely resize every widget to match the layout you want to create.
+您可以自由调整每个部件的大小，以配合您想要创建的布局。
 
-## Creating a Dashboard
+## 创建一个看板
 
-You can create a new Dashboard by navigating to our "Discover" page and clicking on the "new Dashboard" button on the right.
+您可以通过浏览我们的 "Discover" 页面并点击右侧的 "New dashboard" 按钮来创建一个新的看板。
 
-The initial name that you give to your Dashboard will also be the URL slug. You can't change the URL slug afterwards, so be mindful of the name you choose. Changing the Dashboards display name is always possible though.
+您给您的看板的初始名称也将是 URL slug。之后您不能改变 URL slug，所以要注意您选择的名字。不过，您总能改变看板的显示名称。
 
 ![create Dashboard](images/create-dashboard.gif)
 
-## Adding Visualizations
+## 添加可视化
 
-You can simply add Visualizations to your Dashboard by going into the editor mode and clicking on the corresponding button. To go into editor mode first open one of your own Dashboards and click on the edit button on the top right.
+您可以通过进入编辑者模式并点击相应的按钮简单地将可视化添加到您的看板中。要进入编辑模式，首先打开一个您自己的看板，然后点击右上方的编辑按钮。
 
 ![Add Visualizations](images/dashboard-visualizations.gif)
 
-## Adding text boxes
+## 添加文本框
 
-To add text boxes to your Dashboard you have to go into editor mode first and can afterwards click on "add text widget". This will open a simple text editor window.
+要在看板上添加文本框，您必须先进入编辑者模式，然后可以点击 "添加文本部件"。这将打开一个简单的文本编辑窗口。
 
 ![Text widget](images/dashboard-text-widget.gif)
 
-Text boxes support a subset of markdown. You can manipulate text and embed images and GIFs.
+文本框支持 markdown 的一个子集。您可以处理文本并嵌入图像和 GIF。
 
-### Text manipulation
+### 文本处理
 
-This is a short list to markdown syntax. A more advanced markdown guide can be found [here](dashboards.md#dashboards-are-where-dunes-content-lives-and-gets-discovered.).
+这是一个关于 markdown 语法的简短列表。可以在[这里](dashboards.md#dashboards-are-where-dunes-content-lives-and-gets-discovered.)找到更高级的 markdown 指南。
 
-| Element                                                                         | Markdown Syntax                                                                                    |
+| 元素                                                                         | Markdown 语法                                                                                    |
 | ------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| [Heading](https://www.markdownguide.org/basic-syntax/#headings)                 | <p><code># H1</code><br><code>## H2</code><br><code>### H3</code></p>                              |
-| [Bold](https://www.markdownguide.org/basic-syntax/#bold)                        | `**bold text**`                                                                                    |
-| [Italic](https://www.markdownguide.org/basic-syntax/#italic)                    | `*italicized text`                                                                                 |
-| [Ordered List](https://www.markdownguide.org/basic-syntax/#ordered-lists)       | <p><code>1. First item</code><br><code>2. Second item</code><br><code>3. Third item</code><br></p> |
-| [Unordered List](https://www.markdownguide.org/basic-syntax/#unordered-lists)   | <p><code>- First item</code><br><code>- Second item</code><br><code>- Third item</code><br></p>    |
-| [Code](https://www.markdownguide.org/basic-syntax/#code)                        | `` `code` ``                                                                                       |
-| [Horizontal Rule](https://www.markdownguide.org/basic-syntax/#horizontal-rules) | `---`                                                                                              |
-| [Link](https://www.markdownguide.org/basic-syntax/#links)                       | `[title](https://www.example.com)`                                                                 |
+| [标题](https://www.markdownguide.org/basic-syntax/#headings)                 | <p><code># H1</code><br><code>## H2</code><br><code>### H3</code></p>                              |
+| [粗体](https://www.markdownguide.org/basic-syntax/#bold)                        | `**粗体文字**`                                                                                    |
+| [斜体](https://www.markdownguide.org/basic-syntax/#italic)                    | `*斜体文字*`                                                                                 |
+| [有序列表](https://www.markdownguide.org/basic-syntax/#ordered-lists)       | <p><code>1. 第一项</code><br><code>2. 第二项</code><br><code>3. 第三项</code><br></p> |
+| [无序列表](https://www.markdownguide.org/basic-syntax/#unordered-lists)   | <p><code>- 第一项</code><br><code>- 第二项</code><br><code>- 第三项</code><br></p>    |
+| [代码](https://www.markdownguide.org/basic-syntax/#code)                        | `` `代码` ``                                                                                       |
+| [分隔线](https://www.markdownguide.org/basic-syntax/#horizontal-rules) | `---`                                                                                              |
+| [链接](https://www.markdownguide.org/basic-syntax/#links)                       | `[标题](https://www.example.com)`                                                                 |
 
-## Embedding Images and GIFs
+## 嵌入图像和 GIF
 
-Our text boxes can also be used to embed images or GIFs into your Dashboard.
+我们的文本框也可用于将图像或 GIF 嵌入您的看板。
 
-The Syntax for embedding images is:
+嵌入图像的语法是：
 
-| [Image](https://www.markdownguide.org/basic-syntax/#images-1) | `![alt text](image url)` |
+| [图像](https://www.markdownguide.org/basic-syntax/#images-1) | `![替代文本](图像 url)` |
 | ------------------------------------------------------------- | ------------------------ |
 
-Since you can't store images locally on our servers, you need to upload your images somewhere else or find the raw file somewhere on the internet.
+由于您不能在我们的服务器上本地存储图像，您需要在其他地方上传您的图像，或在互联网的某个地方找到原始文件。
 
-In practice this might look like this:
+在实践中，这可能看起来像这样：
 
 ```
-![text](https://pbs.twimg.com/media/FEWVLQwWUAQcqLY?format=jpg&name=medium)
---this is an image stored on twitters servers
+![文字](https://pbs.twimg.com/media/FEWVLQwWUAQcqLY?format=jpg&name=medium)
+--这是一个储存在推特服务器的图像
 ```
+您可以通过简单地调整它所包含的部件的大小来调整图像的大小。
 
-You can resize the image by simply resizing the widget it is contained in.
-
-You can combine images and text in one widget.
+您可以在一个部件中结合图片和文字。
 
 ![embedding an image and resizing it](images/dashboard-image.gif)
 
-## Arranging the layout of the Dashboard
+## 安排看板的布局
 
-You can arrange the different widgets on the Dashboard in whatever way you like.
+您可以以任何您喜欢的方式安排看板上的不同部件。
 
-Widgets will always try to move upwards, so if you want to create a visual divider section in your Dashboard it is advised to create a big text box as a divider.
+部件总是试图向上移动，所以如果您想在您的看板上创建一个视觉分隔部分，建议创建一个大的文本框作为分隔。
 
 ![Dashboard layout](images/dashboard-layout.gif)
