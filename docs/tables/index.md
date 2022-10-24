@@ -8,13 +8,13 @@ To start with, you have access to the raw tables for each supported blockchain, 
 
 To make it easier to work with smart contracts, Dune also provides decoded data as individual, human readable tables. We use the ABI for smart contracts and the interface standard for standardized token smart contracts (ERC20, ERC721 etc.). We've indexed over 280k contracts as of writing, and you can [submit new contracts](../features/decoded-contracts.md).
 
-On top of that, we're building a set of abstractions for common use cases (e.g. NFTs or DEX) and third party datasets.
+On top of that, we're building a set of [Spells](spells.md) for common use cases (e.g. NFTs or DEX) and third party datasets.
 
 Here is an overview what is available:
 
 - [Raw data](raw.md): unedited, raw and encoded blockchain data
 - [Decoded data](decoded.md): (**most popular**) view the decoded calls and events made to smart contracts
-- [Abstractions, or Spells](abstractions.md): custom tables that are maintained by Dune and our community
+- [Spells](spells.md): custom tables that are maintained by Dune and our community
 - [Community](community.md): partnering with select organizations for off-chain data
 - [Prices](prices.md): prices from third party data providers
 - [User generated](user-generated.md): construct your own view, function or table inside of our database
@@ -42,4 +42,4 @@ Dune V2 data also has a handy Lineage Graph that lets you explore how all of Dun
 
 ![what should a trade table look like](images/what-should-a-trade-table-look-like.png)
 
-You should always try to use the [Decoded](decoded.md) or [Abstraction/Spell](abstractions.md) tables when you can as these are human-readable and pre-organized so they're much easier to use.
+You should always try to use the [Decoded](decoded.md) or [Spell](spells.md) tables when you can as these are human-readable and pre-organized so they're much easier to use.

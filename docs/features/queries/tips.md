@@ -7,9 +7,9 @@ Below you'll find a selection of Query related tips to help you become a more po
 
 If you have a tip you think we should add, [propose a change on this doc in our GitHub repository](https://github.com/duneanalytics/docs/edit/master/docs/features/queries/tips.md)!
 
-## Use Abstractions and Spells
+## Use Spells
 
-The easiest way to do great analysis with Dune is to use the well-organized data you'll find in [Abstractions](../../tables/abstractions.md) (Dune V1) and [Spells](../../spellbook/index.md) (Dune V2).
+The easiest way to do great analysis with Dune is to use the well-organized data you'll find in [Spells](../../tables/spells.md) (Dune V2) and [Abstractions](../../tables/v1/abstractions/index.md) (Dune V1).
 
 Theses tables, like `dex.trades`, are cleaned and contain data/metadata (like human readable token symbols) that make them very straight forward to query.
 

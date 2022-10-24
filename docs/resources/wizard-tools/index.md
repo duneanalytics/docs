@@ -11,10 +11,5 @@ Here are some of the awesome non-Dune tools our wizards use to make 🎇.
 - [deth.net](https://deth.net) is a set of Ethereum developer tools that help with blockchain data sleuthing.
 - [ZK Zhao's map of the Crypto Data Landscape](https://twitter.com/zk7hao/status/1576492616715116547) is helpful for getting a sense of the current crypto data ecosystem
   - [His Chaininsight tool](https://twitter.com/zk7hao/status/1361948073300164609?cxt=HHwWgoCs-dCjzuYlAAAA) is pretty cool too, could help you build the next trending dashboard before someone else does 🧙
-- [Immersion Den](https://immersionden.xyz/) - a giant collection of web3 information sources.
-
-## Cool Blockchain Data Websites
-- [cryptofees.info](https://cryptofees.info)
-- [ultrasound.money](https://ultrasound.money)
-- [fees.wtf](https://fees.wtf)
-- [liquidated.live](https://liquidated.live)
+- [Our Recommended Reading List](../recommended-reading.md) for a bunch of guides on crypto data topics and projects to check out.
+- [DeepDAO](https://deepdao.io/organizations) - stats on DAOs and their treasuries.
