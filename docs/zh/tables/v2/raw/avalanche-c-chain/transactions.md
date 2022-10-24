@@ -31,4 +31,4 @@
 | max\_priority\_fee\_per\_gas | numeric      | 交易发送者愿意向矿工支付的每单位燃料的最高费用，以激励他们在新区块中包含他们的交易（由[EIP1559](https://eips.ethereum.org/EIPS/eip-1559)引入）            |
 | priority\_fee\_per\_gas      | numeric      | 本次交易支付给矿工的优先费用（由[EIP1559](https://eips.ethereum.org/EIPS/eip-1559) 引入）                                                                         |
 
-\*\*\*\*[**请自行查看**](https://dune.xyz/queries/38964)\*\*\*\*
+\*\*\*\*[**请自行查看查询示例**](https://dune.xyz/queries/38964)\*\*\*\*

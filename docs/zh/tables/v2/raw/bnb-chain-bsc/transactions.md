@@ -30,4 +30,4 @@
 | max\_priority\_fee\_per\_gas | numeric      | n/a            |
 | priority\_fee\_per\_gas      | numeric      | n/a                                                                         |
 
-\*\*\*\*[**请自行查看示例**](https://dune.xyz/queries/38964)\*\*\*\*
+\*\*\*\*[**请自行查看查询示例**](https://dune.xyz/queries/38964)\*\*\*\*

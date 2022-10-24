@@ -30,7 +30,7 @@
 | output          | string       | 被调用智能合约发送回来的字节码响应                                                                                                                                                                             |
 | refund\_address | string       | 仅在`type`是`suicide`时包含数据。指定将未支出的BNB余额发送到哪里。                                                                                                                                            |
 
-\*\*\*\*[**请自行查看**](https://dune.xyz/queries/38730)\*\*\*\*
+\*\*\*\*[**请自行查看查询示例**](https://dune.xyz/queries/38730)\*\*\*\*
 
 ### 内部合约调用消耗的燃料
 
