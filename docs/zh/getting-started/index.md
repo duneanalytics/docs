@@ -25,7 +25,7 @@ title: 入门
 === "适时学习"
     适时学习是为那些在实践中学习的人准备的。如果您已经对您想用 Dune 做什么有了想法，只是需要通过寻找一些具体的策略知识来释放自己的想法，那么[核心功能](../features/queries/index.md)很可能包含您需要的信息。
 
-    [表格](../tables/index.md)和[魔法书](../spellbook/index.md)是更高级的功能，一旦您理解了基础知识，就值得去尝试。
+    [数据表](../tables/index.md)和[魔法书](../spellbook/index.md)是更高级的功能，一旦您理解了基础知识，就值得去尝试。
 
     请务必在[#beginners Discord channel](https://discord.com/channels/757637422384283659/1016725609797402634)中提出您的任何问题！
 
@@ -90,6 +90,6 @@ title: 入门
 
 ## 额外的工具和支持
 
-查看我们的[帮助](.../resources/support-feedback.md)页面，了解如果您在我们的文档中找不到您想要的答案，可以通过什么方式获得帮助。
+查看我们的[帮助](../resources/support-feedback.md)页面，了解如果您在我们的文档中找不到您想要的答案，可以通过什么方式获得帮助。
 
-也可以看看我们的[巫师工具](.../resources/wizard-tools.md)页面，了解更多关于我们的巫师用来制作 🎇 的所有很棒的非 Dune 工具。
+也可以看看我们的[巫师工具](../resources/wizard-tools.md)页面，了解更多关于我们的巫师用来制作 🎇 的所有很棒的非 Dune 工具。

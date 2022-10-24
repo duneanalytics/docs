@@ -1,5 +1,6 @@
 nav:
 - index.md
-- counters.md
-- graphs.md
-- pie-charts.md
+- charts-graphs.md
+- other-visualizations.md
+
+

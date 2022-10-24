@@ -1,23 +1,23 @@
 ---
-title: Cancel Execution
-description: Here's how to cancel your Dune API execution requests.
+title: 撤销执行
+description: 如何撤销您的 Dune API 执行请求。
 ---
 
-# [POST] Cancel Execution
+# [POST] 撤销执行
 
-Here's how to cancel your Dune API execution requests.
+如何撤销您的 Dune API 执行请求。
 
-## Arguments
+## 请求参数
 
-None.
+无需参数。
 
-## Returns
+## 返回值
 
-Returns a boolean for whether the execution is successfully canceled.
+返回一个布尔值，用于表示执行是否被成功撤销。
 
-## Example Request
+## 请求示例
 
-You need to pass the `execution_id` you obtained from making a [Execute Query ID POST](execute-query-id.md) request to the complete a Cancel Execution API request.
+您需要传递您从 [Execute Query ID POST](execute-query-id.md) 请求中获得的 `execution_id` 参数，用以完成撤销执行的 API 请求。
 
 ```
 POST v1/execution/{{execution_id}}/cancel
@@ -31,9 +31,9 @@ https://api.dune.com/api/v1/execution/{{execution_id}}/cancel
 curl -X POST -H x-dune-api-key:{{api_key}} "https://api.dune.com/api/v1/execution/{{execution_id}}/cancel"
 ```
 
-## Example Response
+## 返回示例
 
-!!! info "Dune API responses are delivered in JSON format."
+!!! info "Dune API 以 JSON 格式返回响应。"
 
 ```json
 {
@@ -41,4 +41,4 @@ curl -X POST -H x-dune-api-key:{{api_key}} "https://api.dune.com/api/v1/executio
 }
 ```
 
- - *success* : A boolean, indicating whether the request to cancel the query execution was made successfully.
+ - *success* : 一个布尔值，用于表示撤销查询执行的请求是否成功。
