@@ -3,7 +3,7 @@ title: 有帮助的看板
 description: 一些法力无边的巫师把一些看板放在一起，对那些想成为巫师大师的人也超级有帮助。
 ---
 
-一些法力无边的巫师把一些看板放在一起，对那些想成为巫师大师的人也超级有帮助。🧙
+一些法力无边的巫师把一些数据看板放在一起，对那些想成为巫师大师的人也超级有帮助。🧙
 
 如果您发现（或制作）其他类似的看板，[请提交 GitHub Pull Request](https://github.com/duneanalytics/docs/edit/master/docs/入门/helpful-dashboards.md)，如果我们认为它是有帮助的，我们将把它添加到列表中！
 
