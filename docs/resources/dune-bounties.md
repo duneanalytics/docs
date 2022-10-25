@@ -42,9 +42,10 @@ All open tasks that have the Dune Analytics Skill attached will appear in the [D
 
 **If you are an organisation in need of web3 analytics, it’s now easier than ever before to connect with Dune Wizards!**
 
+
 === "Self Serve"
 
-[Dework's Documentation](https://dework.gitbook.io/product-docs/guides-for-orgs/getting-started-on-dework) is way better of going in depth with this, but here is a short breakdown:
+    [Dework's Documentation](https://dework.gitbook.io/product-docs/guides-for-orgs/getting-started-on-dework) is way better of going in depth with this, but here is a short breakdown:
 
     1. **Create an organisation**
 
@@ -77,10 +78,10 @@ All open tasks that have the Dune Analytics Skill attached will appear in the [D
     <button data-tf-popup="DtX4jqkd" data-tf-size="100" style="all:unset;font-family:Helvetica,Arial,sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#0445AF;color:#FFFFFF;font-size:20px;border-radius:25px;padding:0 33px;font-weight:bold;height:50px;cursor:pointer;line-height:50px;text-align:center;margin:0;text-decoration:none;">Typeform</button><script src="//embed.typeform.com/next/embed.js"></script>
 
 
-## For Wizards looking for :moneybag::moneybag::moneybag:
+## For Wizards looking for Work
 
 If you are a Wizard or an aspiring Wizard, join the Dune Analytics organisation on Dework and start looking for tasks on our [board](https://app.dework.xyz/dune/board) or on the [Dune hub](https://app.dework.xyz/hubs/dune).   
-Joining our organisation is highly recommended so other organisation on Dework can see the roles we have assigned to you. Make sure to properly define your profile with relevant links to socials, Github and Dune profile so organisations trying to assess your skills can make sure to judge you properly.
+Make sure to properly define your profile with relevant links to socials, Github and Dune profile so organisations trying to assess your skills can make sure to judge you properly.
 
 ## Some notes about working on Dune
 
