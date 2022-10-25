@@ -92,4 +92,4 @@ If hiring a freelancer for the first time, please be sure to review their past w
 
 Check out our [Support](../resources/support-feedback.md) page to learn the best way to get help if you can't find the answers you're looking for in our docs.
 
-And give our [Wizard Tools](../resources/wizard-tools.md) page a gander to learn more about all the awesome non-Dune tools our wizards use to make 🎇.
+And give our [Wizard Tools](../resources/wizard-tools/index.md) page a gander to learn more about all the awesome non-Dune tools our wizards use to make 🎇.

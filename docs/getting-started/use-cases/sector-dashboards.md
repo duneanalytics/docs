@@ -14,7 +14,7 @@ Here you can see metrics like Dex Volume, Market Share, and Total Volume across 
 
 Together they make it easy to compare the performance of different DEXes against each other and evaluate the performance of the entire sector.
 
-All of these stats and charts update in real time and are maintained by the community; if a new DEX wants to be added to this Dashboard, all they have to do is submit their code to our public GitHub. More on this in [Abstractions](../../tables/abstractions.md).
+All of these stats and charts update in real time and are maintained by the community; if a new DEX wants to be added to this Dashboard, all they have to do is submit their code to our public GitHub. More on this in [Spells](../../tables/spells.md).
 
 ![DEX weekly](images/dex-weekly.png)
 
