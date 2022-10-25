@@ -51,3 +51,29 @@ We don’t have a committed timeline yet, but this is tentatively planned to be 
 ### Can I query using both Dune v2 Engine and the original v1 databases?
 
 Currently yes, but we’re slowly deprecating usage and support of the old engine, so we recommend using the new Dune v2 Engine as much as possible.
+
+## Check Execution Status
+
+### What is the difference between the states “Executing” and “Pending”?
+
+Pending means, the execution is waiting for an available execution connection slot.
+
+Executing means the query is currently executing against the database.
+
+## Reading Results Data
+
+### Can I ingest data by getting a direct connection to the database instead?
+    
+Not currently. In the interim we recommend periodically fetching from “max(latestBlockNumber) - 2” to “lastFetchedBlockNumber” in regular intervals. Fetching from 2 behind the latest block number ensures you receive full sets of data from each new request.
+
+### Are query results data saved for faster retrieval?
+    
+Yes!
+
+### How long are the results data from an execution stored for?
+    
+Currently set to 2 years but we may reduce this to something closer to 90 days in the future. This is visible on the API response on the “expires_at” field in the execution status and results body.
+
+### How much data can I retrieve in a single API result call?
+    
+There is currently a 500MB limit, but there is a chance we increase this for certain paid plans. The API does not currently return an explicit error upon hitting this limit but will instead fail (timeout) when attempting to retrieve the results.

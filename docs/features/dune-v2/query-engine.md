@@ -6,7 +6,7 @@ title: Query Engine
 
 DuneV2 changes our whole database architecture. We are transitioning away from a PostgreSQL database to an Instance of [Apache Spark](https://www.databricks.com/glossary/what-is-apache-spark) hosted on [Databricks](https://docs.databricks.com/getting-started/introduction/index.html). The difference between the two systems can be summarized as follows:
 
-* Instead of PostgreSQL, we will now use Databricks SQL. T]he change in SQL keywords is minimal but might be relevant for some of your querying habits.
+* Instead of PostgreSQL, we will now use Databricks SQL. The change in SQL keywords is minimal but might be relevant for some of your querying habits.
 * Spark is a column oriented database in contrast to PostgreSQL’s row oriented approach.
 * traditional indexes are replaced by column chunk level `min/max` values
 

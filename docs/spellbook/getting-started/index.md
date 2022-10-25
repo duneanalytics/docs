@@ -6,7 +6,11 @@ title: Spellbook Getting Started
 
 At a high level, you need to setup our DBT project locally, develop a spell in Jinja-templated SQL, and get it to run on our data platform.
 
-To start with, clone the [Spellbook](https://github.com/duneanalytics/spellbook/) repository and setup your local dev env as per the README.
+To start with, clone the Spellbook GitHub repository and setup your local dev env as per the README:
+
+<div class="cards grid" markdown>
+- [Spellbook on GitHub](https://github.com/duneanalytics/spellbook)
+</div>
 
 Decide what problem you're trying to solve. Think about the [data model](data-modelling.md).
 
@@ -32,8 +36,6 @@ Once you're happy with your spell, you can [submit it to Dune](submissions.md):
 After that, your spell will be visible on dune.com under "Spells". LFG!
 
 
-## Community tutorials
+## How To Guides
 
-Some of our Community Members have produced great tutorials for Spellbook:
-
-- @ilemi aka Andrew Hong released tutorial - [read it](https://ath.mirror.xyz/K-S_Mwhj7osTBqN-AOWbCmfNn9TZViEkzICCmK-oObM), and watch the [video](https://www.youtube.com/watch?v=7zReSzVdV2s)!
+Check out our [How To Guides](../how-to-guides/) section for a variety of step-by-step tutorials to help you start casting Spells in no time!

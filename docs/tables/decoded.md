@@ -72,7 +72,7 @@ We usually take about 24 hours to decode smart contracts.
 Read more about submitting contracts for decoding in this section:
 
 <div class="cards grid" markdown>
-- [Adding new contracts](../features/adding-new-contracts.md)
+- [Adding new contracts](../features/decoded-contracts.md)
 </div>
 
 ## How does decoding work?
@@ -220,7 +220,7 @@ If you are not able to make sense of the data by just searching the tables, it u
 
 If that also doesn't lead to satisfactory results, scouring the relevant docs and GitHub of the project can lead you to the desired answers. Furthermore, talking to the developers and core community of a project can also help you to get an understanding of the smart contracts.
 
-Some good showcasing of how to deal with decoded data can be found all throughout Dune, but especially our [abstraction repository](https://github.com/duneanalytics/spellbook/index.md) is full of great examples.
+Some good showcasing of how to deal with decoded data can be found all throughout Dune, but especially our [Spellbook repository](https://github.com/duneanalytics/spellbook/index.md) is full of great examples.
 
 **In Summary**:
 

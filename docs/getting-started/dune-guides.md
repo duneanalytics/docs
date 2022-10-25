@@ -10,7 +10,7 @@ You are amazing! 🪄
 
 ## The general process for surfacing data with Dune
 
-1. **Compile a List of all relevant contracts and submit them for** [**decoding**](../features/adding-new-contracts.md)**.**
+1. **Compile a List of all relevant contracts and submit them for** [**decoding**](../features/decoded-contracts.md)**.**
 2. **Surface the data using SQL queries**
 3. **Visualize the results**
 4. **Assemble Visualizations on a Dashboard.**

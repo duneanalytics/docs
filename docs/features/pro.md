@@ -2,6 +2,8 @@
 title: Dune Pro
 description: Dune pro let's you access a host of premium features, learn more on our Pricing page!
 ---
+![dune community vs pro](images/dune-community-vs-pro.png)
+
 Dune pro let's you access a host of premium features including:
 
 - Private Queries and Dashboards
@@ -10,7 +12,7 @@ Dune pro let's you access a host of premium features including:
 - No Dune watermarks
 - Processing for up to 6 Queries at once
 
-[Learn more and get started on our Pricing page](dune.com/pricing)!
+[Learn more and get started on our Pricing page](https://dune.com/pricing)!
 
 
 

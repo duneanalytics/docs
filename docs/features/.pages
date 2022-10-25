@@ -4,8 +4,8 @@ nav:
 - visualizations
 - dashboards.md
 - parameters.md
+- decoded-contracts.md
+- dune-v2
 - Dune Pro: pro.md
 - teams.md
-- adding-new-contracts.md
-- dune-v2
 - sharing

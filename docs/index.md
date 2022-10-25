@@ -20,7 +20,7 @@ hide:
 Dune is a powerful tool for blockchain research, complete with all the tools you need to discover, explore, and visualize vast amounts of blockchain data.
 
 
- Dune is your key to answering questions questions like:
+ Dune is your key to answering questions like:
 
 - [How much volume flows through Uniswap each day?](https://dune.com/queries/3)
 - [Which Dex has the highest volume?](https://dune.com/queries/1847)
@@ -80,7 +80,7 @@ Queries return rows and columns of data (just like traditional SQL queries) that
 
 There are a few ways that a blockchain analyst (i.e. Wizard i.e. you!) can get started running Queries:
 
-1. The simplest way is to use Dune [_Abstractions_](tables/abstractions.md)) to query commonly used data tables. Some popular Abstractions include `dex.trades`, `lending.borrow`, and `stablecoin.transfer`.
+1. The simplest way is to use Dune [_Spells_](tables/spells.md)) to query commonly used data tables. Some popular Spells include `dex.trades`, `lending.borrow`, and `stablecoin.transfer`.
 2. Query the raw Ethereum data like blocks, logs, and transactions.
 3. It is also possible to query centralized exchange data. For example, you can use `prices.usd` to quickly return the price of almost any cryptoasset.
 
