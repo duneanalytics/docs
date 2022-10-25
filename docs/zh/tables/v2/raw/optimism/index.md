@@ -1,58 +1,58 @@
 ---
-description: Raw data tables are the basic building blocks of our database.
+description: 原始数据表是我们数据库的基本构建块。
 ---
 
 # Optimism
 
-Optimism is a Layer 2 Optimistic Rollup network designed to utilize the strong security guarantees of Ethereum while reducing its cost and latency. Optimism processes transactions outside of Ethereum Mainnet, reducing congestion on the base layer and improving scalability. For a Deep Dive into Optimism, we recommend reading through their [Documentation](https://community.optimism.io/docs/how-optimism-works).
+Optimism是一个第2层乐观汇总网络，旨在利用以太坊的强大安全保证，同时降低其成本和延迟。Optimism在以太坊主网之外处理交易，减少基础层的拥塞并提高可扩展性。要深入了解Optimism，我们建议阅读他们的[文档](https://community.optimism.io/docs/how-optimism-works)。
 
-Optimism differs in it's EVM implementation in the calculation of gas costs, since it also needs to pay for L1 resources.
+Optimism的不同之处在于其EVM实现中计算燃料成本的方式，因为它还需要为L1资源付费。
 
-## Gas costs on Optimism
+## Optimism的燃料成本
 
-Optimism settles it's transactions on Ethereum Mainnet. This happens via a sequencer contract on L1 that submits the raw calldata of any given transaction on Optimism's Network on L1 in batches. These costs for the batch settlement transactions needs to be accounted for in the Calculation of gas costs on Optimism. The transaction fees on Optimism are calculated with the following formula:
-
-$$
-Transaction\ Fees = L1\ fee + (L2\ gas\ price * L2\ gas\ used)
-$$
-
-**The L1 Fee consists of:**
+Optimism在以太坊主网上结清它的交易。通过在L1上的排序器合约将Optimism网络上的任意给定交易的原始调用数据批量提交到L1网络。批量结清交易的这些成本需要包括在Optimism的燃料成本计算中。Optimism的交易费用使用以下公式计算：
 
 $$
-L1\ Fee = Fee\ Scalar * L1\ Gas\ Price * L1\ Gas\ Used
+交易费用 = L1费用 + (L2燃料价格 * L2燃料消耗数量)
 $$
 
-`L1 Fee Scalar` is a variable that can be increased/decreased by the Optimism Team. It ensures that the gas costs for L1 are sufficiently covered and provides income to the Optimism Team. `L1 Gas Price` is an estimation of the gas price on Mainnet.
-
-`L1 Gas used` **breaks down to:**
+**L1费用包括：**
 
 $$
-L1\ Gas\ Used = Calldata\ gas + a\ fixed\ overhead\ gas\ cost
+L1费用 = L1费用标量 * L1燃料价格 * L1燃料消耗数量
 $$
 
-**So the full calculation of gas costs on optimism consists of:**
+`L1费用标量`是一个可以由Optimism团队增加或减少的变量。它确保L1的燃料成本得到充分覆盖，并为Optimism团队提供收入。`L1燃料价格`是对以太坊主网上的燃料价格的估计。
+
+`L1燃料消耗数量` **可以分解为：**
 
 $$
-Transaction\ Fee = Fee\ Scalar * L1\ Gas\ Price * (L1 Calldata\ gas + a\ fixed\ overhead\ gas\ cost)
+L1燃料消耗数量 = 调用数据消耗的燃料 + 一个固定的间接燃料成本
 $$
 
-You can read more about Optimism Gas Costs and the approach to minimize them in [this article](https://help.optimism.io/hc/en-us/articles/4411895794715-Transaction-fees).
+**因此，Optimism的燃料成本的完整计算包括：**
 
-### TL;DR
+$$
+交易费用 = L1费用标量 * L1燃料价格 * (L1调用数据消耗的燃料 + 一个固定的间接燃料成本)
+$$
 
-To calculate gas costs for a transaction on Optimism you need to follow this formula:
+您可以在[这篇文章](https://help.optimism.io/hc/en-us/articles/4411895794715-Transaction-fees)中阅读更多关于Optimism燃料成本以及将其最小化的方法。
+
+### 简而言之
+
+要计算Optimism交易的燃料成本，您需要遵循以下公式：
 
 ```
-L1\_Fee + (gas_price*gas_used)
+L1费用 + (燃料价格 * 燃料消耗数量)
 ```
 
-Additionally, Optimism hasn't implemented EIP1559, so it follows the "old" gas auction model.
+此外，Optimism尚未实施EIP1559，因此它遵循“旧”的燃料拍卖模型。
 
-### Raw data tables
+### 原始数据表
 
 <div class="cards grid" markdown>
-- [Blocks](blocks.md)
-- [Transactions](transactions.md)
-- [Event logs](event-logs.md)
-- [Traces](traces.md)
+- [区块表（Blocks）](blocks.md)
+- [交易表（Transactions）](transactions.md)
+- [事件日志表（Logs）](event-logs.md)
+- [内部合约调用表（Traces）](traces.md)
 </div>
