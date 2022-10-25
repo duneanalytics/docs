@@ -1,78 +1,78 @@
-# Transactions
+# 交易表
 
 ## Solana.transactions
 
-This table contains the transaction data within Solana’s blockchain. Most of the relevant data related to account, protocol, and program activity is available in this table.
+此表包含Solana区块链中的交易数据。此表中提供了与帐户、协议和计划活动相关的大多数相关数据。
 
-Query examples can be found here: [NFT transactions of popular programs past 7 days](https://dune.xyz/queries/390720/745376) and [drift-protocol overview](https://dune.xyz/bigz/drift-\(solana\))
+查询示例可以在这里找到：[过去7天热门程序的NFT交易](https://dune.xyz/queries/390720/745376)和[drift-protocol概述](https://dune.xyz/bigz/drift-\(solana\))
 
-| Column Name                      | Column Type                   | Description                                                                                                                                                                                                                           |
+| 字段名称                     | 字段类型                   | 描述                                                                                                                                                                                                                           |
 | -------------------------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| block\_slot                      | bigint                        | This block’s slot index in the ledger                                                                                                                                                                                                 |
-| block\_time                      | timestamp                     | The (estimated) time this block was produced                                                                                                                                                                                          |
-| block\_date                      | date                          | Event date                                                                                                                                                                                                                            |
-| index                            | bigint                        | Index into the block’s transactions                                                                                                                                                                                                   |
-| fee                              | bigint                        | Fee this transaction was charged, as paid by first account                                                                                                                                                                            |
-| block\_hash                      | string                        | The hash of this block, base-58 encoded                                                                                                                                                                                               |
-| error                            | STRUCT error                  | NULL if success is true.                                                                                                                                                                                                              |
-| required\_signatures             | bigint                        | The total number of signatures required to make the transaction valid.                                                                                                                                                                |
-| readonly\_signed\_\_\_accounts   | bigint                        | The last readonly\_signed\_accounts of the signed keys are read-only accounts.                                                                                                                                                        |
-| readonly\_unsigned\_\_\_accounts | bigint                        | The last readonly\_unsigned\_accounts of the unsigned keys are read-only accounts.                                                                                                                                                    |
-| id                               | string                        | The first signature in the transaction                                                                                                                                                                                                |
-| success                          | boolean                       | The transaction was valid and thus committed.                                                                                                                                                                                         |
-| recent\_block\_\_\_hash          | string                        | The hash of a recent block in the ledger, used to prevent transaction duplication and to give transactions lifetimes                                                                                                                  |
-| instructions                     | array\<STRUCT instructions>   | Instructions to execute (in order)                                                                                                                                                                                                    |
-| accountKeys                      | array\<string>                | The account keys used in the transaction                                                                                                                                                                                              |
-| log\_messages                    | array\<string>                | The log messages emitted by the transaction                                                                                                                                                                                           |
-| pre\_balances                    | array\<bigint>                | Array of account balances before the transaction was processed. The i-th balance is the balance of the i-th account key in account\_keys                                                                                              |
-| post\_balances                   | array\<bigint>                | Array of account balances after the transaction was processed. The i-th balance is the balance of the i-th account key in account\_keys                                                                                               |
-| pre\_token\_balance              | array\<STRUCT token\_balance> | List of [token balances](https://docs.solana.com/developing/clients/jsonrpc-api#token-balances-structure) from before the transaction was processed or omitted if token balance recording was not yet enabled during this transaction |
-| post\_token\_balance             | array\<STRUCT token\_balance> | List of [token balances](https://docs.solana.com/developing/clients/jsonrpc-api#token-balances-structure) from after the transaction was processed or omitted if token balance recording was not yet enabled during this transaction  |
-| signatures                       | array\<string>                | A list of base-58 encoded signatures applied to the transaction. Always of length numRequiredSignatures                                                                                                                               |
-| signer                           | string                        | The initial value from the account\_keys array that initiates the transaction and pays the transaction fee                                                                                                                            |
+| block\_slot                      | bigint                        | 此区块在账本中的槽索引                                                                                                                                                                                                |
+| block\_time                      | timestamp                     | 此区块的（估计）生成时间                                                                                                                                                                                          |
+| block\_date                      | date                          | 事件日期                                                                                                                                                                                                                            |
+| index                            | bigint                        | 此交易在区块中的索引位置                                                                                                                                                                                                   |
+| fee                              | bigint                        | 此交易支付的费用，由第一个帐户支付                                                                                                                                                                            |
+| block\_hash                      | string                        | 此区块的哈希值，base-58编码                                                                                                                                                                                               |
+| error                            | STRUCT error                  | 如果 success = true 则为 NULL值.                                                                                                                                                                                                              |
+| required\_signatures             | bigint                        | 使当前交易有效所需的签名数量                                                                                                                                                                |
+| readonly\_signed\_\_\_accounts   | bigint                        | 只读的签名账户数量                                                                                                                                                        |
+| readonly\_unsigned\_\_\_accounts | bigint                        | 只读的非签名账户数量                                                                                                                                                    |
+| id                               | string                        | 交易的第一个签名（也就是交易的哈希值）                                                                                                                                                                                               |
+| success                          | boolean                       | 交易有效且已被提交                                                                                                                                                                                         |
+| recent\_block\_\_\_hash          | string                        | 账本中最近区块的哈希值，用于防止交易重复并赋予交易生命周期                                                                                                                  |
+| instructions                     | array\<STRUCT instructions>   | 执行的指令数组（按顺序）                                                                                                                                                                                                    |
+| accountKeys                      | array\<string>                | 交易中使用的帐户地址                                                                                                                                                                                             |
+| log\_messages                    | array\<string>                | 此交易发出的日志消息                                                                                                                                                                                           |
+| pre\_balances                    | array\<bigint>                | 处理交易之前的账户余额数组。第i个余额值就是account\_keys数组中第i个账户的余额                                                                                              |
+| post\_balances                   | array\<bigint>                | 处理交易之后的账户余额数组。第i个余额值就是account\_keys数组中第i个账户的余额                                                                                               |
+| pre\_token\_balance              | array\<STRUCT token\_balance> | 交易处理前的[代币余额](https://docs.solana.com/developing/clients/jsonrpc-api#token-balances-structure)列表，如果在此交易期间尚未启用代币余额记录，则省略     |
+| post\_token\_balance             | array\<STRUCT token\_balance> | 交易处理后的[代币余额](https://docs.solana.com/developing/clients/jsonrpc-api#token-balances-structure)列表，如果在此交易期间尚未启用代币余额记录，则省略     |
+| signatures                       | array\<string>                | 应用于交易的base-58编码签名列表。长度总是等于numRequiredSignatures值                                                                                                                               |
+| signer                           | string                        | 发起交易并支付交易费用的 account\_keys 数组的初始值                                                                                                                            |
 
-### Struct definitions
+### 结构定义
 
-Within several of these columns is a data type of STRUCT which allows for representing nested hierarchical data and has key-value pairs. It's similar to a dictionary in python and can be used to group fields together to make them more accessible.
+在其中的几个列中使用了STRUCT数据类型，它允许表示嵌套的分层数据并具有键值对。它类似于python中的字典，可用于将字段组合在一起以使它们更易于访问。
 
-An example of how these can be used to extract data: [# of Solana instructions by day for DEXes](https://dune.xyz/queries/416358/794290)
+一个如何关于从结构字段提取数据的示例：[Solana去中心化交易所的指令数](https://dune.xyz/queries/416358/794290)
 
 **token\_balance**
 
-| Field   | Data type | Description                                                                                                                                                                  |
+| 字段名称   | 字段类型 | 描述                                                                                                                                                                  |
 | ------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| account | string    | The account key of the account that the token balance is provided for.                                                                                                       |
-| mint    | string    | Public key of the token’s mint. This is an account that stores metadata about the token: The supply, number of decimals, and various authorities with control over the mint. |
-| amount  | Decimal   | Derived from the token balance's raw amount (ui\_token\_amount.amount) and the number of decimals (ui\_token\_amount.decimals)                                               |
+| account | string    | 代币余额归属的帐户地址                                                                                                       |
+| mint    | string    | 代币铸造合约的公钥。这是一个存储有关代币元数据的帐户：供应量、小数位数以及控制铸造的各种权限。         |
+| amount  | Decimal   | 源自代币余额的原始金额 (ui\_token\_amount.amount) 和小数位数 (ui\_token\_amount.decimals)                                               |
 
 ***
 
 **instructions**
 
-| Field               | Data type                          | Description                                                    |
+| 字段名称               | 字段类型                          | 描述                                                    |
 | ------------------- | ---------------------------------- | -------------------------------------------------------------- |
-| account\_arguments  | array\<string>                     | Ordered list of accounts to pass to the program                |
-| data                | string                             | Program input data in a base-58 string                         |
-| executing\_account  | string                             | The account key of the program that executed this instruction. |
-| inner\_instructions | array\<STRUCT inner\_instructions> | The instructions invoked by this instruction.                  |
+| account\_arguments  | array\<string>                     | 要传递给程序的帐户的有序列表                |
+| data                | string                             | 以base-58编码的程序输入数据                         |
+| executing\_account  | string                             | 执行此指令的程序的帐户地址 |
+| inner\_instructions | array\<STRUCT inner\_instructions> | 该指令调用的内部指令                  |
 
 ***
 
 **inner\_instructions**
 
-| Field              | Data type      | Description                                                    |
+| 字段名称              | 字段类型      | 描述                                                    |
 | ------------------ | -------------- | -------------------------------------------------------------- |
-| account\_arguments | array\<string> | Ordered list of accounts to pass to the program                |
-| data               | string         | Program input data in a base-58 string                         |
-| executing\_account | string         | The account key of the program that executed this instruction. |
+| account\_arguments | array\<string> | 要传递给程序的帐户的有序列表                |
+| data               | string         | 以base-58编码的程序输入数据                         |
+| executing\_account | string         | 执行此指令的程序的帐户地址        |
 
 ***
 
 **error**
 
-| Field                  | Data type | Description                        |
+| 字段名称                  | 字段类型 | 描述                        |
 | ---------------------- | --------- | ---------------------------------- |
-| **instruction\_index** | int       | The instruction number that failed |
-| message                | string    | The error message                  |
+| **instruction\_index** | int       | 失败的指令号码 |
+| message                | string    | 错误信息                  |
 
 ##
