@@ -12,4 +12,4 @@ Dune pro 让你获得大量的高级功能，包括：
 - 无 Dune 水印
 - 最多同时处理 6 个查询
 
-[在我们的价格界面了解更多并开始吧](https://dune.com/pricing)!
+[在我们的价格界面了解更多并开始吧](https://dune.com/pricing)！
