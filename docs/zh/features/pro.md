@@ -1,16 +1,15 @@
 ---
 title: Dune Pro
-description: Dune pro let's you access a host of premium features, learn more on our Pricing page!
+description: Dune pro 让你获得大量的高级功能，请在我们的价格页面了解更多信息！
 ---
-Dune pro let's you access a host of premium features including:
+![dune community vs pro](images/dune-community-vs-pro.png)
 
-- Private Queries and Dashboards
-- CSV Exports
-- Higher Priority in the Query processing queue
-- No Dune watermarks
-- Processing for up to 6 Queries at once
+Dune pro 让你获得大量的高级功能，包括：
+
+- 私密查询和看板
+- 导出 CSV 文件
+- 在查询处理队列中具有更高的优先级
+- 无 Dune 水印
+- 最多同时处理 6 个查询
 
 [Learn more and get started on our Pricing page](https://dune.com/pricing)!
-
-
-
