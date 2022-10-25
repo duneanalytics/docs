@@ -35,6 +35,51 @@ Dework describes itself as a “web3 native trello with payments and credentiali
 Dework offers infrastructure for us to write out tasks on our own [board](https://app.dework.xyz/dune/board) and allows other organisations to seamlessly connect with Dune Wizards by simply specifying “Dune Analytics” as Skill.   
 All open tasks that have the Dune Analytics Skill attached will appear in the [Dune hub](https://app.dework.xyz/hubs/dune), allowing for tasks to be easily found by our Wizard Community.
 
+
+
+## For projects looking for Wizards
+
+**If you are an organisation in need of web3 analytics, it’s now easier than ever before to connect with Dune Wizards!**
+
+=== "Self Serve"
+
+[Dework's Documentation](https://dework.gitbook.io/product-docs/guides-for-orgs/getting-started-on-dework) is way better of going in depth with this, but here is a short breakdown:
+
+    1. **Create an organisation**
+
+        If you don’t have a Dework organisation yet, the first step is creating one. For a basic setup, we recommend setting up at least a description, an icon and link to your socials so Wizards know who they are working with.
+        
+    2. **Define tasks**
+
+        After completing the initial setup, you can start creating tasks for anything really, but in our case, we want to define tasks with the "Dune Analytics" Skill. Once you have created a task, the task will be 1) in your board and 2) in the Dune hub. From there on out, people can find your open task and apply.
+
+
+    3.  **Choose an applicant**
+
+        If you have defined a task that needs to be assigned to someone, you will get notifications within Dework and can vet the contributor using their work history, github profile and any other attached information on their profile. It is strongly recommended to spend some effort looking at the contributor to have a smooth bounty process.
+
+    4.  **Review the work**
+
+        Once the Wizard you have chosen has submitted their work for review, you can start reviewing the completed task. If it is satisfactory, you can mark the task as done and initiate the payment process.
+
+    5.  **Pay your contributor**
+
+        Dework integrates with Metamask, Gnosis Safes, Utopia Labs and even phantom wallet for Solana based payments. You can choose whatever works best for you here.
+
+
+=== "Supported approach"
+
+    1. **Fill in this typeform**  
+    Since onworking to dework and defining bounties can be quite a challenge, feel free to reach out to us via this typeform, we'll happily onboard you to the system and help you run successful bounties.
+    
+    <button data-tf-popup="DtX4jqkd" data-tf-size="100" style="all:unset;font-family:Helvetica,Arial,sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#0445AF;color:#FFFFFF;font-size:20px;border-radius:25px;padding:0 33px;font-weight:bold;height:50px;cursor:pointer;line-height:50px;text-align:center;margin:0;text-decoration:none;">Typeform</button><script src="//embed.typeform.com/next/embed.js"></script>
+
+
+## For Wizards looking for :moneybag::moneybag::moneybag:
+
+If you are a Wizard or an aspiring Wizard, join the Dune Analytics organisation on Dework and start looking for tasks on our [board](https://app.dework.xyz/dune/board) or on the [Dune hub](https://app.dework.xyz/hubs/dune).   
+Joining our organisation is highly recommended so other organisation on Dework can see the roles we have assigned to you. Make sure to properly define your profile with relevant links to socials, Github and Dune profile so organisations trying to assess your skills can make sure to judge you properly.
+
 ## Some notes about working on Dune
 
 Dune can rougly be seperated into two parts: the **app layer** and the **data layer**. 
@@ -54,82 +99,43 @@ If this all sounds confusing to you, don't worry we can advise you in this proce
 **TL;DR**
 We suggest to do things in this order so the data flows efficiently:
 
-1. Build Spells in Data Layer to take care of data engineering
-2. Build cool stuff in App Layer to surface findings
-
-## For projects looking for Wizards
-
-**If you are an organisation in need of web3 analytics, it’s now easier than ever before to connect with Dune Wizards!**
-
-
-
-
-
-=== "Self Serve"
-
-    1. **Create an organisation**
-
-        If you don’t have a Dework organisation yet, the first step is creating one. For a basic setup, we recommend setting up at least a description, an icon and link to your socials so Wizards know who they are working with.
-        
-    2. **Define tasks**
-
-        After completing the initial setup, you can start creating tasks for anything really, but in our case, we want to define tasks with the "Dune Analytics" Skill. Once you have created a task, the task will be 1) in your board and 2) in the Dune hub. From there on out, people can find your open task and apply.
-
-    ![dework skills](images/dework-skills.jpeg)
-
-    3.  **Choose an applicant**
-
-        If you have defined a task that needs to be assigned to someone, you will get notifications within Dework and can vet the contributor using their work history, github profile and any other attached information on their profile. It is strongly recommended to spend some effort looking at the contributor to have a smooth bounty process.
-
-    4.  **Review the work**
-
-        Once the Wizard you have chosen has submitted their work for review, you can start reviewing the completed task. If it is satisfactory, you can mark the task as done and initiate the payment process.
-
-    5.  **Pay your contributor**
-
-        Dework integrates with Metamask, Gnosis Safes, Utopia Labs and even phantom wallet for Solana based payments. You can choose whatever works best for you here.
-
-
-=== "Supported approach"
-
-    1. **Create an organisation**
-
-        If you don’t have a Dework organisation yet, the first step is creating one. For a basic setup, we recommend setting up at least a description, an icon and link to your socials so Wizards know who they are working with.
-        
-    2. **Define tasks**
-
-        After completing the initial setup, you can reach out to the Dune team via this form provided 
-
-    3.  **Choose an applicant**
-
-        If you have defined a task that needs to be assigned to someone, you will get notifications within Dework and can vet the contributor using their work history, github profile and any other attached information on their profile. It is strongly recommended to spend some effort looking at the contributor to have a smooth bounty process.
-
-    4.  **Review the work**
-
-        Once the Wizard you have chosen has submitted their work for review, you can start reviewing the completed task. If it is satisfactory, you can mark the task as done and initiate the payment process.
-
-    5.  **Pay your contributor**
-
-        Dework integrates with Metamask, Gnosis Safes, Utopia Labs and even phantom wallet for Solana based payments. You can choose whatever works best for you here.
-
-=== "bruv, help"
-
-    Just reach out to us via this 
-
-## For Wizards looking for :moneybag::moneybag::moneybag:
-
-If you are a Wizard or an aspiring Wizard, join the Dune Analytics organisation on Dework and start looking for tasks on our [board](https://app.dework.xyz/dune/board) or on the [Dune hub](https://app.dework.xyz/hubs/dune). Joining our organisation is highly recommended so other organisation on Dework can see the roles we have assigned to you. Make sure to properly define your profile with relevant links to socials, github and dune profile so organisations trying to assess your skills can make sure to judge you properly.
+1. Build Spells in the Data Layer to take care of the data engineering
+2. Build cool stuff in the App Layer to surface findings
 
 
 ## FAQs about the program
 
-### I want to create a requests but I don’t know how much should I pay/offer for it
 
-Well, that really depends on how much work/complexity your request entails but to the extent that you can, we encourage you to be generous. If you ain’t sure you can always ask on our Discord!
+#### I want to create a requests but I don’t know how much should I pay/offer for it
 
-### Does Dune take a cut?
+Dune is an open platform on which you can build all kinds of analysis, dashboards and spells. What you should pay really depends on your task. If in doubt, you can always get in touch with us via the Dune Discord or fill in the typeform so we can better judge your specific case.   
+Going rates for Freelance Dune Wizards is anywhere between $30-$100.
 
-No we don’t. In fact, Dune does not take part in closing the deal or following up over time, this is strictly between the wizard and the project.
+#### Does Dune take a cut?
+
+Dune does not take a cut in any of these deals.
+
+#### I don't have time/capacity to do this myself, can you run this for me?
+
+In some cases, the Dune team can actually run entire bounty campaigns/contests for you, but we can't offer this for every organisation.
+
+#### How do Wizards get paid?
+
+Dework has a native payment feature. Wizards can simply connect their wallet in their dework profile and will get paid as soon as the bounty is paid out.
+
+#### Can I run contests on dework?
+
+You can indeed run contests on dework, they are called multiple submissions.
+Read about this in [dework's documentation](https://dework.gitbook.io/product-docs/fundamentals/task-types-and-assignee-gating#multiple-submissions)
+
+#### Is all of this public?
+
+Dework allows you to define tasks privately and publicly, if you wanted to you could for example limit tasks for only members of your Discord.
+
+#### How do I choose the right applicant?
+
+You can click on any profile in Dework to see what the Credentials of the person are.
+For example: https://app.dework.xyz/profile/hamzat_iii
 
 
-<div data-tf-widget="DtX4jqkd" data-tf-opacity="100" style="width:100%;height:100%;"></div><script src="//embed.typeform.com/next/embed.js"></script>
+
