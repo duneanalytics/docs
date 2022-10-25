@@ -9,6 +9,9 @@ Instead of using static screenshots in varying forms of quality, Dune has a nati
 
 You can generate embed links by clicking on any query title and selecting the embed function in the top right corner.
 
+!!! note
+    The embed button works as a stand alone link and as a way to embed your live graphs into websites/apps. If your Query has no Visualizations, the link will be to the Query Results table. If you have multiple Visualizations, the link will be for whichever Visualization you've selected when you clicked the Embed button.
+
 ![generating an embed link](images/embed-link.gif)
 
 ## Parameterized embeds

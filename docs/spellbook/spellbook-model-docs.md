@@ -6,7 +6,7 @@ description: Spellbook comes with dedicated dbt documentation to help you naviga
 Spellbook comes with dedicated dbt documentation to help you navigate the data within! Find it here:
 
 <div class="grid cards" markdown>
-- [Spellbook Model Docs](https://spellbook-docs.dune.com/)
+- [Spellbook Model Docs](https://dune.com/spellbook)
 </div>
 
 These work similarly to the [V2 table documentation you can find here](../../tables/v2/raw/), with a couple of special features.

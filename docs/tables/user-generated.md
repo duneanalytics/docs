@@ -53,7 +53,7 @@ Utilizing this will make the maintenance of your dashboards much easier since yo
 
 A great example of this in action is almost all queries on [this dashboard](https://dune.com/keeganead/cryptoart\_1). The Creator made one base dataset in the **dune\_user\_generated** schema and uses that to base all of his queries on.
 
-Please do note that while this approach works for most cases, views can get very computationally expensive and you might be better off constructing a materialized view or table in our [abstractions](abstractions.md).
+Please do note that while this approach works for most cases, views can get very computationally expensive and you might be better off constructing a materialized view or table in our [Spells](spells.md).
 
 This example takes the data from Uniswap\_v3 and standardizes the data for the dex.trades table.
 
