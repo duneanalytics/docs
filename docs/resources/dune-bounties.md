@@ -7,7 +7,8 @@ title: Dune Bounties
 Over the past 3 years, Dune has become the go-to solution for on-demand crypto analytics. 
 How many Holders does BAYC have? Wanna do some whale watching? How is the UST depeg going? How many users are using Uniswap V3 in a day?
 
-Dune has it all and can do it all, but there is still lots of things that are left unexplored. Dune only works because of the countless Wizards out there who surface this data for the greater space. Many of the dashboards and queries you see on Dune today were made out of sheer curiosity and enjoyment, but fundamentally, Wizards should and want to be paid.  
+Dune has it all and can do it all, but there is still lots of things that are left unexplored.  
+Dune only works because of the countless Wizards out there who surface this data for the greater space. Many of the dashboards and queries you see on Dune today were made out of sheer curiosity and enjoyment, but fundamentally, Wizards should and want to be paid.  
 Wizards will work for clout, carrots and stars, but they also do like money.
 
 ![type:video](https://www.youtube.com/embed/MRfC9cqAUKw)
@@ -23,7 +24,7 @@ For **Projects** on the other hand, it makes it exceedingly hard to find the rig
 Fundamentally, what solves this problem is the emergence of one marketplace which helps the data flow.
 This one solution should be able to handle task creation, the application process, communication, reputation, payments and additionally be web3 native.
 
-Thankfully, such solutions exist!
+**Thankfully, such solutions exist!**
 
 ## The solution
 
@@ -48,15 +49,16 @@ All open tasks that have the Dune Analytics Skill attached will appear in the [D
     1. **Create an organisation**
 
         If you don’t have a Dework organisation yet, the first step is creating one. For a basic setup, we recommend setting up at least a description, an icon and link to your socials so Wizards know who they are working with.
+        We also strongly recommend setting up the Discord integrations to allow for easy communication with the chosen Applicants.
         
     2. **Define tasks**
 
-        After completing the initial setup, you can start creating tasks for anything really, but in our case, we want to define tasks with the "Dune Analytics" Skill. Once you have created a task, the task will be 1) in your board and 2) in the Dune hub. From there on out, people can find your open task and apply.
+        After completing the initial setup, you can start creating tasks for anything really, but in our case, we want to define tasks with the **"Dune Analytics" Skill"**. Once you have created a task, the task will be 1) in your board and 2) in the [Dune hub](https://app.dework.xyz/hubs/dune). From there on out, people can find your open task and apply or compete.
 
 
     3.  **Choose an applicant**
 
-        If you have defined a task that needs to be assigned to someone, you will get notifications within Dework and can vet the contributor using their work history, github profile and any other attached information on their profile. It is strongly recommended to spend some effort looking at the contributor to have a smooth bounty process.
+        If you have defined a task that needs to be assigned to someone, you will get notifications within Dework and can vet the contributor using their work history, github profile and any other attached information on their profile. It is strongly recommended to spend some effort vetting the contributor to have a smooth bounty process.
 
     4.  **Review the work**
 
@@ -126,7 +128,11 @@ Dework has a native payment feature. Wizards can simply connect their wallet in 
 #### Can I run contests on dework?
 
 You can indeed run contests on dework, they are called multiple submissions.
-Read about this in [dework's documentation](https://dework.gitbook.io/product-docs/fundamentals/task-types-and-assignee-gating#multiple-submissions)
+Read about this in [dework's documentation](https://dework.gitbook.io/product-docs/fundamentals/task-types-and-assignee-gating#multiple-submissions).
+
+After running contests it often times makes sense to give the one of the winners a follow-up task to reconcile the best ideas of all submitted dashboards into one final version.
+
+We do not recommend running contests, work on Dune should be collaborative, not competitve.
 
 #### Is all of this public?
 
@@ -135,7 +141,10 @@ Dework allows you to define tasks privately and publicly, if you wanted to you c
 #### How do I choose the right applicant?
 
 You can click on any profile in Dework to see what the Credentials of the person are.
-For example: https://app.dework.xyz/profile/hamzat_iii
+For example:  
+[https://app.dework.xyz/profile/hamzat_iii](https://app.dework.xyz/profile/hamzat_iii)
 
+#### What's your recommend approach?
 
+Our advice is to run specific tasks to to data engineering in the spellbook first and run a dashboard design contest afterwards. In that way, you will surely produce the best outcome.
 
