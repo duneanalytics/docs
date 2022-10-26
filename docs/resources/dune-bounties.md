@@ -57,7 +57,7 @@ Dework describes itself as a “web3 native Trello with payments and credentiali
 
 What exactly does that mean?
 
-Let's here what Lonis, co-founder of Dework, has to say:
+Let's hear what Lonis, co-founder of Dework, has to say:
 
 ![type:video](https://www.youtube.com/embed/hyOLRGurjDc)
 
