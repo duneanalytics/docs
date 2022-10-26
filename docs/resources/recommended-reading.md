@@ -7,7 +7,7 @@ Here are a few reading resources to help you in your web3 data analytics journey
 
 Have a resource you think we should include? [Propose your changes here](https://github.com/duneanalytics/docs/edit/master/docs/resources/recommended-reading.md)!
 
-## Wizard Newsletters
+## Wizard Content
 
 A few members of our Wizard community are also amazing content creators, check out their work here:
 
