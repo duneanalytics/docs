@@ -69,6 +69,8 @@ All open tasks that have the Dune Analytics Skill attached will appear in the [D
 
 **If you are an organization in need of web3 analytics, it’s now easier than ever to connect with Dune Wizards!**
 
+You can either do all of this by yourself or ask for our help via the typeform in the "supported approach" tab in the section below, we are happy to help!
+
 
 === "Self Serve"
 
