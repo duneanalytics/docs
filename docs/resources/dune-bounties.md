@@ -49,7 +49,7 @@ and it should be web3 native.
 
 **Thankfully this marketplace now exists!**
 
-## The solution: The Dune Bounty Board
+## The solution: Dune Bounties
 
 Leveraging [dework.xyz](https://www.dework.xyz), we've set up a bounty board to manage our Dune internal bounty programs - and we've set it up so it's accessible for other projects and organizations to make use of this infrastructure!
 
@@ -173,7 +173,7 @@ We suggest working in this order so your data flows efficiently:
 
 Dune is an open platform on which you can build all kinds of analysis, Dashboards and Spells, so the official answer here is the dreaded "it depends."
 
-BUT going rates for Freelance Dune Wizards seem to be anywhere between $30-$100 per hour.
+Going rates for Freelance Dune Wizards seem to be anywhere between \$30-\$100 per hour.
 
 And you can always ask in our Discord or fill out the Typeform in the "Supported approach" tab above to get some help on this! 
 
