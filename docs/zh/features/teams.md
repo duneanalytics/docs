@@ -9,8 +9,8 @@ title: Teams
 创建一个 Team 有许多好处：
 
 1. **🤝 在同一内容上协作。**让 Team 成员在共享的查询和看板上协作。
-2. **🗂 每个 Team 都有一个独立的工作空间。**将你的个人工作与你的 Teams 分开。通过 My Creations 轻松地访问你的 Team 的查询和看板。
-3. **🖼 一个新的 Team 资料。**在一个地方展示你的 Team 的所有作品。
+2. **🗂 每个 Team 都有一个独立的工作空间。**将您的个人工作与您的 Teams 分开。通过 My Creations 轻松地访问您的 Team 的查询和看板。
+3. **🖼 一个新的 Team 资料。**在一个地方展示您的 Team 的所有作品。
 4. **👥 用户角色。**加入 Team 成员作为浏览者、编辑或管理员。
 
 ## 入门
@@ -19,11 +19,11 @@ title: Teams
 
 前往 [**Settings > Teams**](https://dune.com/settings/teams) 创建您的 Team。    
 
-请确保提升你的 Team 的形象。 这是我们的：[**@dune**](https://dune.com/dune)
+请确保提升您的 Team 的形象。 这是我们的：[**@dune**](https://dune.com/dune)
 
 ### 添加用户
 
-你可以邀请其他 Dune 用户加入你的 Team，在你的 Team 设置页面中的 People 部分。当你邀请某人时，你必须指定：
+您可以邀请其他 Dune 用户加入您的 Team，在您的 Team 设置页面中的 People 部分。当您邀请某人时，您必须指定：
 
 * **Dune 用户名。** 如果他们不是 Dune 用户，他们需要先注册。
 * **角色**
@@ -36,22 +36,22 @@ title: Teams
 
 ### Team 内容
 
-Team 查询和看板的创建与你平时一样。当你第一次被提示保存时，你可以选择你的 Team 作为所有者，这样你的队友也可以访问它：
+Team 查询和看板的创建与您平时一样。当您第一次被提示保存时，您可以选择您的 Team 作为所有者，这样您的队友也可以访问它：
 
 ![Team content](images/teams-1.png)
 
 ### 将内容转移到 Team
 
-你可以通过进入查询或看板的设置并在那里更改所有者，将你拥有的查询或看板转移到你的 Team：
+您可以通过进入查询或看板的设置并在那里更改所有者，将您拥有的查询或看板转移到您的 Team：
 
 ![Transferring content](images/teams-2.png)
 
 !!! warning
-    一旦你把内容转移到一个 Team，只有当你是管理员时，你才能把它从 Team 中转移出来。如果你不小心将内容转移到一个 Team，你将不得不要求你的 Team 的管理员将其转回给你。
+    一旦您把内容转移到一个 Team，只有当您是管理员时，您才能把它从 Team 中转移出来。如果您不小心将内容转移到一个 Team，您将不得不要求您的 Team 的管理员将其转回给您。
 
-### 寻找你的 Team 的内容
+### 寻找您的 Team 的内容
 
-前往 My Creations。 在这里，你可以看到你所有的个人内容以及你的 Team 的内容。你可以通过所有人筛选来缩小你的搜索范围：
+前往 My Creations。 在这里，您可以看到您所有的个人内容以及您的 Team 的内容。您可以通过所有人筛选来缩小您的搜索范围：
 
 ![Finding your Team's content](images/teams-3.png)
 
