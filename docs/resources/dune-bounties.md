@@ -2,7 +2,7 @@
 title: Dune Bounties
 ---
 
-# Wizard Request Program
+# Dune Bounties
 
 Over the past 3 years, Dune has become the go-to solution for on-demand crypto analytics. 
 How many Holders does BAYC have? Wanna do some whale watching? How is the UST depeg going? How many users are using Uniswap V3 in a day?
