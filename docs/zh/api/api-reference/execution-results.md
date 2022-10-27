@@ -17,7 +17,7 @@ description: 如果获取执行请求的结果数据。
 
 ## 请求示例
 
-您需要传递您从 [执行查询 ID POST](execute-query-id.md) 请求中获得的 `execution_id` 参数，用以完成获取执行结果的 API 请求。
+您需要传递您从 [执行查询 ID](execute-query-id.md) 请求中获得的 `execution_id` 参数，用以完成获取执行结果的 API 请求。
 
 ```
 GET v1/execution/{{execution_id}}/results
