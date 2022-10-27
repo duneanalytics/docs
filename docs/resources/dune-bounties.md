@@ -71,6 +71,15 @@ All open tasks that have the Dune Analytics Skill attached will appear in the [D
 
 You can either do all of this by yourself or ask for our help via the typeform in the "supported approach" tab in the section below, we are happy to help!
 
+=== "Supported approach"
+
+    1. **Fill in this Typeform**  
+    
+    We know setting up Dework, defining bounties, and managing your contributors can be quite a challenge.
+    
+    Reach out to us by clicking the button below and filling out our Typeform and we'll happily assist you in onboarding and running successful bounties.
+    
+    <button data-tf-popup="DtX4jqkd" data-tf-size="100" style="all:unset;font-family:Helvetica,Arial,sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#0445AF;color:#FFFFFF;font-size:20px;border-radius:25px;padding:0 33px;font-weight:bold;height:50px;cursor:pointer;line-height:50px;text-align:center;margin:0;text-decoration:none;">Typeform</button><script src="//embed.typeform.com/next/embed.js"></script>
 
 === "Self Serve"
 
@@ -112,15 +121,7 @@ You can either do all of this by yourself or ask for our help via the typeform i
         Dework integrates with Metamask, Gnosis Safe, Utopia Labs and even Phantom wallet for Solana based payments. You can choose whatever works best for you and your Wizard contributor here.
 
 
-=== "Supported approach"
 
-    1. **Fill in this Typeform**  
-    
-    We know setting up Dework, defining bounties, and managing your contributors can be quite a challenge.
-    
-    Reach out to us by clicking the button below and filling out our Typeform and we'll happily assist you in onboarding and running successful bounties.
-    
-    <button data-tf-popup="DtX4jqkd" data-tf-size="100" style="all:unset;font-family:Helvetica,Arial,sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#0445AF;color:#FFFFFF;font-size:20px;border-radius:25px;padding:0 33px;font-weight:bold;height:50px;cursor:pointer;line-height:50px;text-align:center;margin:0;text-decoration:none;">Typeform</button><script src="//embed.typeform.com/next/embed.js"></script>
 
 ## For Wizards looking for work
 
@@ -161,7 +162,7 @@ Once that is done, people working in the **App layer** will have a much easier t
 
 If this all sounds confusing to you, don't worry we can advise you in this process!
 
-Reach out via the Typeform in the "Supported approach" tab above, or ask about building your project in Spellbook in our [#spellbook Discord channel](https://discord.com/channels/757637422384283659/999683200563564655)!
+Reach out via the [Typeform](https://form.typeform.com/to/DtX4jqkd) in the "Supported approach" tab above, or ask about building your project in Spellbook in our [#spellbook Discord channel](https://discord.com/channels/757637422384283659/999683200563564655)!
 
 **TL;DR**
 We suggest working in this order so your data flows efficiently:
@@ -177,7 +178,7 @@ Dune is an open platform on which you can build all kinds of analysis, Dashboard
 
 Going rates for Freelance Dune Wizards seem to be anywhere between \$30-\$100 per hour.
 
-And you can always ask in our Discord or fill out the Typeform in the "Supported approach" tab above to get some help on this! 
+And you can always ask in our [Discord](https://discord.com/channels/757637422384283659/1025371996277706792) or fill out the [Typeform](https://form.typeform.com/to/DtX4jqkd) in the "Supported approach" tab above to get some help on this! 
 
 ### Does Dune take a cut of bounty payments?
 
@@ -187,7 +188,7 @@ Dune does not take a cut in any bounty payments.
 
 In some cases, the Dune team can actually run entire bounty campaigns/contests for you, but we can't offer this for every organization.
 
-Fill out the Typeform in the "Supported approach" tab above and we'll let you know what we can do to help! 
+Fill out the [Typeform](https://form.typeform.com/to/DtX4jqkd) in the "Supported approach" tab above and we'll let you know what we can do to help! 
 
 ### How do Wizards get paid for bounties?
 
@@ -200,8 +201,6 @@ You can indeed run contests on Dework, they are called "multiple submissions."
 You can learn more in [Dework's documentation](https://dework.gitbook.io/product-docs/fundamentals/task-types-and-assignee-gating#multiple-submissions).
 
 After running contests it often makes sense to give one of the winners a follow-up task to reconcile the best ideas of all submitted dashboards into one final version.
-
-We do not recommend running contests, work on Dune should be collaborative, not competitive.
 
 ### Is all of this public?
 
