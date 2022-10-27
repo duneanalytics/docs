@@ -1,4 +1,4 @@
-# 清算
+# 清算表
 ## **flashbots.liquidations**
 
 清算是另一种MEV策略。本表包含与已执行的清算有关的细节。
