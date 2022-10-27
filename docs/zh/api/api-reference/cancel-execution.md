@@ -17,7 +17,7 @@ description: 如何撤销您的 Dune API 执行请求。
 
 ## 请求示例
 
-您需要传递您从 [Execute Query ID POST](execute-query-id.md) 请求中获得的 `execution_id` 参数，用以完成撤销执行的 API 请求。
+您需要传递您从 [执行查询 ID POST](execute-query-id.md) 请求中获得的 `execution_id` 参数，用以完成撤销执行的 API 请求。
 
 ```
 POST v1/execution/{{execution_id}}/cancel
