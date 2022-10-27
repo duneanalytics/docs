@@ -1,23 +1,23 @@
 ---
-title: Execution Results
-description: Here's how to get the results data of an execution request.
+title: 执行结果
+description: 如果获取执行请求的结果数据。
 ---
 
-# [GET] Execution Results
+# [GET] 执行结果
 
-Here's how to get the results data of an execution request.
+如何获取执行请求的结果数据。
 
-## Arguments
+## 请求参数
 
-None.
+无需参数。
 
-## Returns
+## 返回值
 
-Returns back the status, metadata, and query results from a query execution.
+返回执行查询的状态、元数据和查询结果。
 
-## Example Request
+## 请求示例
 
-You need to pass the `execution_id` you obtained from making a [Execute Query ID POST](execute-query-id.md) request to the complete an Execution Results API request.
+您需要传递您从 [执行查询 ID](execute-query-id.md) 请求中获得的 `execution_id` 参数，用以完成获取执行结果的 API 请求。
 
 ```
 GET v1/execution/{{execution_id}}/results
@@ -31,9 +31,9 @@ https://api.dune.com/api/v1/execution/{{execution_id}}/results
 curl -X GET "https://api.dune.com/api/v1/execution/{{execution_id}}/results" -H x-dune-api-key:{{api_key}}
 ```
 
-## Example Response
+## 返回示例
 
-!!! info "Dune API responses are delivered in JSON format."
+!!! info “Dune API 以 JSON 格式返回响应。”
 
 ```json
 {
@@ -94,38 +94,38 @@ curl -X GET "https://api.dune.com/api/v1/execution/{{execution_id}}/results" -H 
 }
 ```
 
- - *execution_id* : The execution ID for which this API was called.
- - *query_id* : The ID of the Dune Query executed with this request.
- - *state* : The current state of the query's execution. Check our `FAQ` section to see what different status codes for `state` mean.
- - *submitted_at* : The timestamp at which the API for executing this query was called.
- - *expires_at* : The time upto which results from this query's execution shall be stored in our Database.
- - *execution_started_at* : The time at which query execution started for this request in our servers.
- - *execution_ended_at* : The time at which the query execution for this request got completed in our servers.
+ - *execution_id* : 当前 API 调用的执行 ID 。
+ - *query_id* : 当前请求所对应执行的 Dune 查询 ID 。
+ - *state* : 此查询的当前执行状态。查阅 `FAQ` 章节，了解不同状态码所对应 `state` 的具体含义。
+ - *submitted_at* : 执行该查询的 API 被调用时的时间戳。
+ - *expires_at* : 该查询的执行结果被储存在我们数据库中的过期时间。
+ - *execution_started_at* : 该请求在我们的服务器中查询执行开始的时间。
+ - *execution_ended_at* : 该请求在我们的服务器中查询执行完成的时间。
  - *result* :
-    - *rows* : The actual rows of data being returned for this request.
-    - *metadata* : Some properties of the queried data being returned.
-        - *column_names* : Names of the columns in the data returned.
-        - *result_set_bytes* : The size of the returned data.
-        - *total_row_count* : The number of rows in the data.
-        - *datapoint_count* : Total number of datapoints returned with this request, should equal to (`total_row_count` x number of columns).
-        - *pending_time_millis* : The time (in milliseconds) it took to assign a slot in our server for this request.
-        - *execution_time_millis* : The time (in milliseconds) it took for the actual execution of the query with this request.
+    - *rows* : 该请求返回的实际数据记录。
+    - *metadata* : 返回查询数据的一些属性值。
+        - *column_names* : 返回数据中的列名。
+        - *result_set_bytes* : 返回的数据大小。
+        - *total_row_count* : 数据中的行数。
+        - *datapoint_count* : 该请求返回的数据点（datapoints）总数，等值于（`total_row_count` x 列数）。
+        - *pending_time_millis* : 在我们的服务器中为这个请求分配一个插槽所花费的时间（以毫秒计）。
+        - *execution_time_millis* : 该请求实际执行查询所花费的时间（以毫秒计）。
 
 
-## Reading Results Data FAQ
+## 查询结果读取 FAQ
 
-### Can I ingest data by getting a direct connection to the database instead?
+### 我能否通过直连数据库来提取数据？
 
-Not currently. In the interim we recommend periodically fetching from “max(latestBlockNumber) - 2” to “lastFetchedBlockNumber” in regular intervals. Fetching from 2 behind the latest block number ensures you receive full sets of data from each new request.
+目前还不行。在过渡时期，我们建议定期从 "max(latestBlockNumber) - 2" 到 "lastFetchedBlockNumber" 之间获取数据。从最新区块编号往前2位开始获取，可以确保你从每次新请求中获取到完整数据集。
 
-### Are query results data saved for faster retrieval?
+### 查询结果数据是否会被存档以便快速检索？
 
-Yes
+没错
 
-### How long are the results data from an execution stored for?
+### 执行的结果数据会被储存多久？
 
-Currently set to 2 years but we may reduce this to something closer to 90 days in the future. This is visible on the API response on the “expires_at” field in the execution status and results body.
+目前是2年，但未来我们可能会降低到接近90天。这个值在 API 响应的执行状态和查询结果的 "expires_at" 字段均可见。
 
-### How much data can I retrieve in a single API result call?
+### 在单次 API 结果调用中，我可以获取多少数据？
 
-There is currently a 1GB limit, but there is a chance we reduce this overall or based on varying paid plan types.
+目前上限为 1GB，但我们可能会在整体上调低此限制，或依据不同的付费计划类型而有所不同。
