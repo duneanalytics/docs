@@ -36,7 +36,7 @@ curl -X POST -d '{"query_parameters": { "param1":24}}' -H x-dune-api-key:{{api_k
 
 ## 返回示例
 
-!!! info "Dune API 以 JSON 格式返回响应。"
+!!! info “Dune API 以 JSON 格式返回响应。”
 
 ```json
 {
