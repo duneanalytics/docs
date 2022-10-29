@@ -28,7 +28,7 @@ description: 数据浏览器允许您搜索区块链和其他数据，以便在�
     ## V2
 
     !!! warning
-        像所有的 Dune V2 一样，V2 数据浏览器仍处于测试阶段。所以它的功能可能与这里描述的略有不同，因为我们正在积极测试和迭代，以使它变得更好！如果您有关于如何使 V2 浏览器运行得更好的建议，请[在我们的反馈板上添加它](https://feedback.dune.com/)! 如果您对如何使这些文档变得更好有建议，请在[本页面的 Github](https://github.com/duneanalytics/docs/edit/master/docs/features/queries/data-explorer.md) 上进行编辑并提交一个 Pull Request！
+        像所有的 Dune V2 一样，V2 数据浏览器仍处于测试阶段。所以它的功能可能与这里描述的略有不同，因为我们正在积极测试和迭代，以使它变得更好！如果您有关于如何使 V2 浏览器运行得更好的建议，请[在我们的反馈板上添加它](https://feedback.dune.com/)！如果您对如何使这些文档变得更好有建议，请在[本页面的 Github](https://github.com/duneanalytics/docs/edit/master/docs/features/queries/data-explorer.md) 上进行编辑并提交一个 Pull Request！
 
     在 [Dune V2](.../.../dune-v2/) 中最大的变化之一在于我们的数据结构——不再将数据按区块链隔离到不同的数据库中，而是在一个数据湖中访问一切。
 

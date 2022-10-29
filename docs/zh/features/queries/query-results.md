@@ -28,7 +28,7 @@ description: The Query Results section is where you can see the data your Query 
 
 ![a wild save button appears](images/a-wild-save-button-appears.png)
 
-点击它可以看到一个弹出窗口，要求您给您的查询命名，并可以选择将这个查询设为私密查询（*~如果~*您是 [Dune Pro](../../features/pro.md) 的用户）：
+点击它可以看到一个弹出窗口，要求您给您的查询命名，并可以选择将这个查询设为私人查询（*~如果~*您是 [Dune Pro](../../features/pro.md) 的用户）：
 
 ![first time saving query example](images/first-time-saving-query-popup.png)
 
