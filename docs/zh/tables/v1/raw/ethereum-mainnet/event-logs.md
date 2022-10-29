@@ -1,4 +1,4 @@
-# 事件日志（Event Logs）
+# Event Logs
 
 ## ethereum.logs
 
