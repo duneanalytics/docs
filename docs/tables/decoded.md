@@ -32,17 +32,13 @@ Since all chain's data resides in one database, but the multichain world is a re
 
 === "PostgreSQL"
 
-    <div class="cards grid" markdown>
-    - [Call tables](v1/decoded/call-tables.md)
-    - [Event logs](v1/decoded/event-logs.md)
-    </div>
+  - [Call tables](v1/decoded/call-tables.md)
+  - [Event logs](v1/decoded/event-logs.md)
 
 === "Databricks SQL"
 
-    <div class="cards grid" markdown>
-    - [Call tables](v2/decoded/call-tables.md)
-    - [Event logs](v2/decoded/event-logs.md)
-    </div>
+  - [Call tables](v2/decoded/call-tables.md)
+  - [Event logs](v2/decoded/event-logs.md)
 
 ## Which contracts have decoded data?
 

@@ -20,7 +20,7 @@ With Dune, you have a variety of ways to transform your Query data into visual d
 * Counters
 * Tables
 
-Combining these in a thoughtful manner allows you to best communicate your data to your audience via [Dashboards](../../features/dashboards.md) and [Embeds](../sharing/embeds/index.md).
+Combining these in a thoughtful manner allows you to best communicate your data to your audience via [Dashboards](../../features/dashboards.md) and [Embeds](../sharing/embeds.md).
 
 ## Creating Visualizations
 
@@ -47,7 +47,7 @@ You can create multiple Visualizations from one Query (to test which works best 
 
 ## Sharing Visualizations
 
-Once you've created a Visualization you're happy with, you can share it with others on a [Dashboard](../dashboards.md) or be embedded on another website using an [Embed](../sharing/embeds/index.md).
+Once you've created a Visualization you're happy with, you can share it with others on a [Dashboard](../dashboards.md) or be embedded on another website using an [Embed](../sharing/embeds.md).
 
 ### Adding Visualizations to Dashboards
 
@@ -82,6 +82,6 @@ To remove a Visualization from a Dashboard, click the <span class="fk-btn-4">Add
 
 ### Creating Visualizations Embeds
 
-To create an [Embed](../sharing/embeds/index.md) from your Visualizations, first select the Visualization you want to embed, then click the <span class="fk-btn-3">Embed</span> button above the [Data Explorer](../../features/queries/data-explorer.md):
+To create an [Embed](../sharing/embeds.md) from your Visualizations, first select the Visualization you want to embed, then click the <span class="fk-btn-3">Embed</span> button above the [Data Explorer](../../features/queries/data-explorer.md):
 
 ![embed visualization demo](images/embed-visualization-demo.gif)
