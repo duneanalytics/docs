@@ -1,131 +1,131 @@
 ---
-title: Other Visualizations
-description: Here are a few non-graph visualizations you can make with Dune!
+title: 其它可视化
+description: 下面是一些您可以用 Dune 制作的非图形可视化内容!
 ---
 
-Here are a few non-graph visualizations you can make with Dune!
+下面是一些您可以用 Dune 制作的非图形可视化内容!
 
-## Tables
+## 数据表
 
-Tables are the default Visualization you'll find labeled <span class="fk-btn-4">Query results</span> whenever you create and run a Query:
+数据表是默认的可视化，每当您创建和运行一个查询时，您会发现标有 <span class="fk-btn-4">Query results</span> 的表格：
 
 ![query results table example](images/query-results-table-example.png)
 
-You can also make more Tables to display your data differently using the <span class="fk-btn-2">New visualization</span> button and drop down menu:
+您还可以使用 <span class="fk-btn-2">New visualization</span> 按钮和下拉菜单制作更多的数据表，以不同的方式显示您的数据：
 
 ![new table visualization](images/new-table-visualization.png)
 
-### Configuring your Table
+### 配置您的数据表
 
 ![table configuration options](images/table-configuration-options.png)
 
-#### Table options
+#### 数据表选项（Table options）
 
-**Title**
+**标题（Title）**
 
-The Title appears at the top of your Table.
+标题显示在您数据表格的上方。
 
-Leaving default value (`Table`) or making this blank makes your Table title the same as your Query's title/name.
+保留默认值（`Table`）或将其设为空白，使您的表标题与查询的标题/名称相同。
 
-Adding any other value to this field will add that value first, followed by your Query Name:
+在这个栏目中添加任何其他值，都会先添加该值，然后是您的查询名称：
 
 ![table title example](images/table-title-example.png)
 
-Note: the default value for "Query Results" is treated like an added value.
+注：默认值 "Query Results" 被视作一个添加值。
 
-#### "Column [x]:" options
+#### [x] 列的选项（Column [x]） 
 
-You can configure the following options for each column in your Table
+您可以为您的数据表中的每一列配置以下选项
 
-=== "Title"
+=== "标题（Title）"
 
-    The Title appears at the top of your Table.
+    标题出现在数据表的顶部。
 
-    Leaving this blank makes your column title the same as your it's Dune database name.
+    将此留空使您的列标题与您的 Dune 数据库名称相同。
 
-=== "Align"
+=== "对齐（Align）"
 
-    This changes the text alignment for the column data and title.
+    这将改变列的数据和标题的文本对齐方式。
 
-=== "Format"
+=== "更改格式（Format）"
+    
+    允许您在这里按照 [X/Y-轴的刻度和标签格式](../visualizations/charts-graphs.md#xy-axis-tick-and-label-formats)调整数据的数字格式。
 
-    Allows you to adjust the numerical format of your data following the [X/Y-axis Tick and Label formats here](../visualizations/charts-graphs.md#xy-axis-tick-and-label-formats).
+=== "隐藏列（Hide Column）"
 
-=== "Hide Column"
-
-    Hides this column from your table.
+    从您的数据表中隐藏这一列。
 
 ***
 
-#### Numerical Column options
+#### 数值列选项（Numerical Column options）
 
-Columns that return numerical data have these additional options:
+返回数字数据的列有这些附加选项：
 
-=== "Type"
+=== "类型（Type）"
 
-    - `Normal` simply displays the column's numerical data.
-    - `Progress bar` shows the column's numerical data with a progress bar visual that is "full" for the columns highest value and "nearly empty" for the columns lowest value, with the rest of the data ranging in between:
+    - `Normal` 只显示该列的数字数据。
+    - `Progress bar` 用一个进度条的视觉效果显示该列的数字数据，该列的最高值为"满"，最低值为"接近空"，其余的数据介于两者之间：
 
     ![progress bar example](images/progress-bar-example.gif)
 
-=== "Colored Values"
-
-    Check these boxes to color <span style="color:var(--success-green)">Positive Values Green</span> and <span style="color:var(--danger-red)">Negative Values Red</span>.
+=== "带色数值（Colored Values）"
+    
+    勾选 <span style="color:var(--success-green)">Positive Values Green</span> 和 <span style="color:var(--danger-red)">Negative Values Red</span> 的框给数值上色。
 
 ***
 
-## Counters
+## 计数器
 
-Counters are a great way to provide your audience with immediate "on a glance" stats.
+计数器是为您的受众提供即时“一目了然”的统计数据的一个好方法。
 
 !["on a glance" stats in https://dune.com/0xBoxer/NFT](images/counters-1.png)
 
-### Configuring your Counter
+### 配置您的计数器
 
 ![Counters 2](images/counters-2.png)
 
-#### Counter options
+#### 计数器选项
 
-In this section you can define what kind of data the counter should display:
+在这一部分，您可以定义计数器应该显示什么样的数据：
 
-=== "Title"
+=== "标题（Title）"
 
-    * The Title will appear in all instances of this graph prominently at the top
-    * If left blank the Query name will be the only thing that is left standing
+    * 标题将出现在该图的所有实例的顶部，非常明显
+    * 如果此处留空白，将默认显示查询名称
 
-=== "Column"
+=== "列（Column）"
 
-    * In this field you can define which column the counter should show.
+    * 在此栏目您可以定义计数器应该显示哪一列。
 
-=== "Row"
+=== "行（Row）"
 
-    * This field can be used to define which row of the underlying data table you want displayed e.g. row 1
-    * Usually this requires you to sort or limit your Query results in order for row 1 to show the wanted results.
+    * 此栏可以用来定义您想显示的基础数据表的哪一行，例如第 1 行。
+    * 通常这需要您对查询结果进行排序或限制，以使第 1 行显示所需的结果。
 
 ***
 
-#### Formatting
+#### 更改格式（Formatting）
 
-This section is where you can adjust how your numerical data is displayed.
+在这一部分，您可以调整您的数字数据显示方式。
 
-=== "Prefix"
+=== "前缀（Prefix）"
 
-    * This field allows you to define a prefix for your counter value.
-    * e.g.: `$`, `€`, `Ξ`, `฿`
+    * 此栏目允许您为您的计数器值定义一个前缀。
+    * 例如：`$`、`€`、`Ξ`、`฿`
 
-=== "Suffix"
+=== "后缀（Suffix）"
 
-    * This field allows you to define a suffix for your counter value.
+    * 此栏目允许您为您的计数器值定义一个后缀。
 
-=== "Label"
+=== "标签（Label）"
 
-    * This field allows you to define a label for your counter value.
-    * The label will appear beneath the counter value as text.
+    * 此栏目允许您为您的计数器值定义一个标签。
+    * 标签将以文字形式显示在计数器数值下方。
 
-=== "Decimals"
+=== "小数（Decimals）"
 
-    * In this field you can choose how many decimals you want displayed for your counter
-    * This is currently limited to 3 decimal places.
+    * 在此栏目中，您可以选择您想要在计数器上显示多少位小数。
+    * 目前限制为小数点后 3 位。
 
 ***
 

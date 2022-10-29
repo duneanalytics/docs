@@ -44,7 +44,7 @@ Learn about the [differences between V1 and V2 data sets here](../../dune-v2/).
 
     1. [**Raw**](../../tables/raw.md) - just like it sounds, raw data straight from the blockchain
     2. [**Decoded Projects**](../../tables/decoded.md) - contract calls and events from projects the Dune Team and Community have organized into nice human-readable tables.
-    3. [**Spells**](../../tables/abstractions.md) - standardized project and sector data (dex.trades, nft.trades, erc20.stablecoins, etc)
+    3. [**Spells**](../../tables/spells.md) - standardized project and sector data (dex.trades, nft.trades, erc20.stablecoins, etc)
     4. [**Community**](../../tables/community.md) - off-chain data supplied by the web3 community.
 
     ![v2 search dataset categories](images/v2-data-categories.png)

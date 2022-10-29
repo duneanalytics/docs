@@ -69,6 +69,6 @@ sources:
           description: "Amount of ERC20 token transferred" 
 ```
 
-These descriptions are rendered in the docs by dbt. Locally, you can open them by running `dbt docs generate` and `dbt docs serve` from your CLI in the Spellbook directory. They are automatically deployed as our [Spellbook docs](https://spellbook-docs.dune.com/#!/overview).
+These descriptions are rendered in the docs by dbt. Locally, you can open them by running `dbt docs generate` and `dbt docs serve` from your CLI in the Spellbook directory. They are automatically deployed as our [Spellbook docs](https://dune.com/spellbook).
 
 ![dbt documentation page](images/dbt-documentation-page.png)

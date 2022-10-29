@@ -20,7 +20,7 @@ description: 可视化让您的数据变得生动起来! 以下是您需要知�
 * 计数器
 * 数据表
 
-以一种周到的方式将这些结合起来，使您能够将您的数据通过[看板](../../features/dashboards.md)和[嵌入](../sharing/embeds/index.md)以最好的方式传达给您的受众。
+以一种周到的方式将这些结合起来，使您能够将您的数据通过[数据看板](../../features/dashboards.md)和[嵌入](../sharing/embeds/index.md)以最好的方式传达给您的受众。
 
 ## 创建可视化内容
 
@@ -47,7 +47,7 @@ description: 可视化让您的数据变得生动起来! 以下是您需要知�
 
 ## 分享可视化
 
-当您创建了一个满意的可视化，您可以在[看板](../dashboards.md)上与他人分享，或使用[嵌入](../sharing/embeds/index.md)功能将其嵌入另一个网站上。
+当您创建了一个满意的可视化，您可以在[数据看板](../dashboards.md)上与他人分享，或使用[嵌入](../sharing/embeds/index.md)功能将其嵌入另一个网站上。
 
 ### 将可视化添加至看板
 

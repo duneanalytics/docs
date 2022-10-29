@@ -58,7 +58,7 @@ Dune.com 是建立在 Dune 数据平台之上的第一个杀手级应用，旨�
 
 Dune.com 应用程序的基本构成部分是：
 
-- **看板：**一组包含可视化和文本的小部件，讲述了一个关于特定区块链数据组的故事。
+- **数据看板：**一组包含可视化和文本的小部件，讲述了一个关于特定区块链数据组的故事。
 - **可视化：**图表和图形，将难以理解的数据表形式的数据变成更容易理解的视觉形式。
 - **查询：**从Dune的数据库中提取数据的命令，以便通过数据表和可视化显示在 Dune 看板中。
 
@@ -80,7 +80,7 @@ Dune 将区块链数据汇总到一个可以轻松查询的 SQL 数据库中。
 
 区块链分析师（即 巫师 即你！）有几种方法可以开始运行查询：
 
-1. 最简单的方法是使用 Dune [_Abstractions_](tables/abstractions.md) 来查询常用的数据表格。一些流行的 Abstractions 包括 `dex.trades`, `lending.borrow`，和 `stablecoin.transfer`。
+1. 最简单的方法是使用 Dune [_数据抽象（Abstractions）_](tables/abstractions.md) 来查询常用的数据表格。一些流行的数据抽象包括 `dex.trades`, `lending.borrow`，和 `stablecoin.transfer`。
 2. 查询原始以太坊数据，如区块、日志和交易。
 3. 也可以查询中心化交易所的数据。如，您可以使用 `prices.usd` 来快速返回几乎所有加密资产的价格。
 
@@ -108,9 +108,9 @@ Dune 提供了各种可视化，您可以用它来直观地展示数据，包括
 - **计数器**
 - **数据表**
 
-### 看板
+### 数据看板
 
-使用精心策划的可视化内容，聪明的区块链分析师（巫师！）可以通过 [Dune 看板](features/dashboards.md)讲述不同数据集合的故事。
+使用精心策划的可视化内容，聪明的区块链分析师（巫师！）可以通过 [Dune 数据看板](features/dashboards.md)讲述不同数据集合的故事。
 
 例如，在下面看板中，[@hagaetc](https://dune.com/hagaetc) 创建的 [Dex Metrics](https://dune.com/hagaetc/dex-metrics)，在顶部可以清楚地看到 "DEX"（去中心化交易所）作为一个类别正在增长。在下面，访问者可以看到哪些 DEX 在交易量上最受欢迎，最后还可以看到一个堆叠的柱状图，显示随时间的变化。
 

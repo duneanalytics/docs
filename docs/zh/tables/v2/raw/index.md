@@ -1,12 +1,12 @@
 ---
-description: EVM chains have some differences
+description: EVM兼容链相比其他链，数据有一些不同
 ---
 
-# EVM Chains
+# EVM兼容链
 
-EVM chains at large follow the same execution model, however there is sometimes is differences in the consensus algorithm, the gas costs or even the calculation of gas costs.
+大多数EVM兼容链遵循相同的执行模型，但有时在共识算法、燃料（gas）成本甚至燃料成本的计算方面存在差异。
 
-You can find out about the individual chains in the specific sections of the documentation:
+您可以在文档的特定部分中找到有关各个链的详细信息：
 
 <div class="cards grid" markdown>
 - [Ethereum Mainnet](ethereum-mainnet/index.md)
