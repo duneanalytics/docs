@@ -1,40 +1,40 @@
-# collections
+# 合集表
 
 ## **reservoir.collections**
 
-This table contains records with information about each NFT collection.
+该表包含有关于每个NFT合集（collection）的信息记录。
 
-Query examples can be found here:
+查询的示例可以在这里找到：
 
 [https://dune.com/queries/1302781/2232054](https://dune.com/queries/1302781/2232054)
 
 [https://dune.com/queries/1302788/2232065](https://dune.com/queries/1302788/2232065)
 
-| **Column name**            | **Type**  | **Description**                             |
+| **列名称**            | **类型**  | **说明**                             |
 |----------------------------|-----------|---------------------------------------------|
-| id                         | string    | Internal collection id                      |
-| slug                       | string    | Collection slug                             |
-| name                       | string    | Collection name                             |
-| description                | string    | Collection description                      |
-| token\_count               | bigint    | Id of the token in the collection           |
-| contract                   | string    | Contract address                            |
-| day1\_rank                 | bigint    | Ranking in the previous day                 |
-| day7\_rank                 | bigint    | Ranking in the previous 7 days              |
-| day30\_rank                | bigint    | Ranking in the previous 30 days             |
-| all\_time\_rank            | bigint    | All time ranking                            |
-| day1\_volume               | decimal   | Trade volume in the previous day            |
-| day7\_volume               | decimal   | Trade volume in the previous 7 days         |
-| day30\_volume              | decimal   | Trade volume in the previous 30 days        |
-| all\_time\_volume          | decimal   | All time trade volume                       |
-| day1\_volume\_change       | double    | Trade volume change in the previous day     |
-| day7\_volume\_change       | double    | Trade volume change in the previous 7 days  |
-| day30\_volume\_change      | double    | Trade volume change in the previous 30 days |
-| floor\ask\_value           | decimal   | Current floor sale price (native currency)  |
-| day1\_floor\_sale\_value   | decimal   | Floor sale price in the previous day        |
-| day7\_floor\_sale\_value   | decimal   | Floor sale price 7 days ago                 |
-| day30\_floor\_sale\_value  | decimal   | Floor sale price 30 days ago                |
-| day1\_floor\_sale\_change  | double    | Floor sale price change from previous day   |
-| day7\_floor\_sale\_change  | double    | Floor sale price change from 7 days ago     |
-| day30\_floor\_sale\_change | double    | Floor sale price change from 30 days ago    |
-| created\_at                | timestamp | Timestamp the collection was created        |
-| updated\_at                | timestamp | Timestamp the collection was updated        |                                                               |
+| id                         | string    | 内部合集ID                      |
+| slug                       | string    | 合集简称                             |
+| name                       | string    | 合集名称                             |
+| description                | string    | 合集说明                      |
+| token\_count               | bigint    | 合集中的代币ID           |
+| contract                   | string    | 合约地址                            |
+| day1\_rank                 | bigint    | 前1日的排名                 |
+| day7\_rank                 | bigint    | 前7日的排名              |
+| day30\_rank                | bigint    | 前30日的排名             |
+| all\_time\_rank            | bigint    | 全时段排名                            |
+| day1\_volume               | decimal   | 前1日的交易量            |
+| day7\_volume               | decimal   | 前7日的交易量         |
+| day30\_volume              | decimal   | 前30日的交易量        |
+| all\_time\_volume          | decimal   | 全时段交易量                       |
+| day1\_volume\_change       | double    | 前1日的交易量变化     |
+| day7\_volume\_change       | double    | 前7日的交易量变化  |
+| day30\_volume\_change      | double    | 前30日的交易量变化 |
+| floor\ask\_value           | decimal   | 全时段地板价 (原生货币)  |
+| day1\_floor\_sale\_value   | decimal   | 前1日的地板价       |
+| day7\_floor\_sale\_value   | decimal   | 前7日的地板价                |
+| day30\_floor\_sale\_value  | decimal   | 前30日的地板价                |
+| day1\_floor\_sale\_change  | double    | 前1日的地板价变化   |
+| day7\_floor\_sale\_change  | double    | 前7日的地板价变化     |
+| day30\_floor\_sale\_change | double    | 前30日的地板价变化    |
+| created\_at                | timestamp | 创建合集的时间戳        |
+| updated\_at                | timestamp | 更新合集的时间戳        |                                                               |
