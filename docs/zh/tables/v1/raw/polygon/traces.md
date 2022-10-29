@@ -2,42 +2,41 @@
 
 ## polygon.traces
 
-Transactions can trigger smaller atomic actions that modify the internal state of an Ethereum Virtual Machine. Information about the execution of these actions is logged and can be found stored as an EVM execution trace, or just a _trace_. In Etherscan these are referred to as "internal transactions".
+Traces是交易中可以改变以太坊虚拟机状态的最小原子操作，这些操作的信息会被记录下来，并且可以存储为EVM执行跟踪，或者简称 _跟踪（trace）_，在Etherscan上称为”内部交易“。
 
-Read more [here](https://medium.com/chainalysis/ethereum-traces-not-transactions-3f0533d26aa).
+更多内容请阅读[这里](https://medium.com/chainalysis/ethereum-traces-not-transactions-3f0533d26aa).
 
-| **Column Name** | **datatype** | **Description**                                                                                                                                                                                                                                |
+| **列名** | **数据类型** | **说明**                                                                                                                                                                                                                                |
 | --------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| block\_time     | timestamptz  | the time when the block was mined                                                                                                                                                                                                              |
-| tx\_success     | boolean      | a true/false value that indicates if the transaction succeeded                                                                                                                                                                                 |
-| success         | boolean      | a true/false value that shows if the trace action succeeded                                                                                                                                                                                    |
-| block\_hash     | bytea        | a unique identifier for that block                                                                                                                                                                                                             |
-| block\_number   | int8         | the length of the blockchain in blocks                                                                                                                                                                                                         |
-| tx\_hash        | bytea        | the transaction hash of the event                                                                                                                                                                                                              |
-| from            | bytea        | address of the sender                                                                                                                                                                                                                          |
-| to              | bytea        | address of the receiver. `Null` when its a contract creation transaction                                                                                                                                                                       |
-| value           | numeric      | the amount of ether sent in this transaction in `wei`.                                                                                                                                                                                         |
-| gas             | numeric      |                                                                                                                                                                                                                                                |
-| gas\_used       | numeric      | the gas consumed by the transaction in wei                                                                                                                                                                                                     |
-| tx\_index       | numeric      | The position of the transaction in a block.                                                                                                                                                                                                    |
-| trace\_address  | array        | address of the trace within the call graph forest. E.g., \[0, 2, 1] is the parent of \[0, 2, 1, 0].                                                                                                                                            |
-| sub\_traces     | numeric      | number of children of a trace                                                                                                                                                                                                                  |
-| type            | text         | can be `reward`, `create`, `call` or `suicide`. Describes the type of action taken in this trace.                                                                                                                                              |
-| address         | bytea        | the contract that is called when the type is `suicide` or `create`                                                                                                                                                                             |
-| code            | bytea        | the bytecode to deploy a new contract, only contains data when type is `create`.                                                                                                                                                               |
-| call\_type      | bytea        | <p>can be <code>staticcall</code>, <code>delegatecall</code> or <code>call</code>.<br>For more information refer <a href="https://medium.com/coinmonks/delegatecall-calling-another-contract-function-in-solidity-b579f804178c">here</a>. </p> |
-| input           | bytea        | the bytecode of the call that is made to another smart contract                                                                                                                                                                                |
-| output          | bytea        | the bytecode answer the smart contract that was called gives back                                                                                                                                                                              |
-| refund\_address | bytea        | only contains data if `type` was `suicide`. Specifies where to send the outstanding ether balance.                                                                                                                                             |
+| block\_time     | timestamptz  | 区块被开采的时间                                                                                                                                                                                                              |
+| tx\_success     | boolean      | 显示交易是否成功的真/假值                                                                                                                                                                                 |
+| success         | boolean      | 显示跟踪操作是否成功的真/假值                                                                                                                                                                                    |
+| block\_hash     | bytea        | 该区块的唯一标识符                                                                                                                                                                                                             |
+| block\_number   | int8         | 区块链的长度（以块为单位）                                                                                                                                                                                                         |
+| tx\_hash        | bytea        | 事件的交易哈希                                                                                                                                                                                                              |
+| from            | bytea        | 发送者的地址                                                                                                                                                                                                                          |
+| to              | bytea        | 接收者的地址。当是合约创建交易时为NULL                                                                                                                                                                       |
+| value           | numeric      | 在此交易中发送的以 wei 为单位的以太币数量。                                                                                                                                                                                         |
+| gas             | numeric      | gas 限制                                                                                                                                                                                                             |
+| gas\_used       | numeric      | 以 wei 为单位的交易消耗的 gas                                                                                                                                                                                                     |
+| tx\_index       | numeric      | 交易索引                                                                                                                                                                                                    |
+| trace\_address  | array        | 调用图森林中的跟踪地址。例如，[0, 2, 1] 是 [0, 2, 1, 0] 的父级。                                                                                                                                            |
+| sub\_traces     | numeric      | 子跟踪(trace)的数量                                                                                                                                                                                                                  |
+| type            | text         | 描述在此trace中执行的操作类型，可以是 `reward`, `create`, `call` or `suicide`。                                                                                                                                              |
+| address         | bytea        | 当类型type是`suicide` or `create`被调用的合约                                                                                                                                                                           |
+| code            | bytea        | 部署新合约的子节代码数据，只包括type是`create`的数据。                                                                                                                                                               |
+| call\_type      | bytea        | <p>可以是 <code>staticcall</code>, <code>delegatecall</code> or <code>call</code>.<br>更多信息请参考 <a href="https://medium.com/coinmonks/delegatecall-calling-another-contract-function-in-solidity-b579f804178c">这里</a>. </p> |
+| input           | bytea        | 对另一个智能合约的调用的字节码                                                                                                                                                                                |
+| output          | bytea        | 被调用的智能合约的字节码                                                                                                                                                                              |
+| refund\_address | bytea        | 包括类型`type` 是 `suicide`的数据，用于指定将以太坊余额发送到哪里                                                                                                                                          |
 
 
-### Gas used in traces
 
-The `gas_used` column in the ethereum.traces table is a bit hard to understand, so here is some pointers:
 
-* the `gas_used` of a trace will always include the gas consumed by the trace and all it's subtraces.
-* the `gas_used` of the inital call will not contain the cost of making the call in the first place
-  * you need to add 21000 gas units + the cost of sending zero + non zero bytes to the `gas_used` value of the top trace to arrive at the "true" `gas_used` value.
-  * for more reading on this please refer to this [stackexchange entry](https://ethereum.stackexchange.com/questions/31443/what-do-the-response-values-of-a-parity-trace-transaction-call-actually-repres)
-  * a query doing this in dune: [https://dune.com/queries/895857](https://dune.com/queries/895857)
+### traces中的gas使用
 
+* 一个trace中的`gas_used`包括该trace和它所有的子trace所消耗的gas。
+* 最初调用的`gas_used`不包括首先进行调用的费用。
+  * 你需要把21000个gas单位+发送0的费用+非零字节的费用加到顶部trace的`gas_used`值中，以得出"真正的"`gas_used`值。
+  * 关于这个问题的更多阅读请参考这个[stackexchange条目](https://ethereum.stackexchange.com/questions/31443/what-do-the-response-values-of-a-parity-trace-transaction-call-actually-repres)
+  * 在dune中做的一个查询。[https://dune.com/queries/895857](https://dune.com/queries/895857)
