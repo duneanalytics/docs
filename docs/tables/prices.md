@@ -13,7 +13,7 @@
 
 这个表提供了一些列的erc20.tokens。
 
-如果您想要的代币没有在这里列出，请向我们的提交一个pull request [GitHub repository] (https://github.com/duneanalytics/spellbook/blob/main/models/prices/prices_tokens.sql). (对于V1引擎，你可以使用来自去中心化交易所的价格 **dex.view\_token\_prices.**)
+如果您想要的代币没有在这里列出，请向我们的提交一个pull request [GitHub repository](https://github.com/duneanalytics/spellbook/blob/main/models/prices/prices_tokens.sql). (对于V1引擎，你可以使用来自去中心化交易所的价格 **dex.view\_token\_prices.**)
 
 | <p></p><p><strong>变量名</strong></p> | **描述**                               |
 | ------------------------------------------ | --------------------------------------------- |
