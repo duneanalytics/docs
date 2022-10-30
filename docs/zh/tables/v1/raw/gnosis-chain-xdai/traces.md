@@ -1,4 +1,4 @@
-# Traces
+# 内部合约调用表
 
 ## gnosis.traces
 

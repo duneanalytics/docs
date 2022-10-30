@@ -1,4 +1,4 @@
-# Event Logs
+# 事件日志表
 
 ## optimism.logs
 

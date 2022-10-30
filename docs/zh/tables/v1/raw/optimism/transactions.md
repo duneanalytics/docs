@@ -1,4 +1,4 @@
-# Transactions
+# 交易表
 
 ## optimism.transactions
 
