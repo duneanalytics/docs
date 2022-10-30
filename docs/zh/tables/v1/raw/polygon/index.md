@@ -4,11 +4,12 @@ description: Raw data tables are the basic building blocks of our database.
 
 # Polygon POS
 
-Polygon(formerly MATIC) is an Ethereum sidechain hosted and maintained by by Polygon Technology. Polygon PoS is a solution that achieves transaction speed and cost savings by utilizing a POS network. Polygon node requirements are significantly higher than Mainnet requirements as Polygon has a higer gas limit and shorter blocktime. 
+Polygon（原MATIC）是一个由Polygon科技公司托管和维护的以太坊侧链，Polygon PoS是一个通过利用POS网络实现交易速度和成本节约的解决方案，Polygon的节点要求明显高于Ethereum Mainnet的要求，因为Polygon有较高的gas限制和较短的出块时间。
 
-You can read more about Polygon and their approach to scaling an EVM in their [documentation](https://docs.polygon.technology).
+你可以在他们的[文件]（https://docs.polygon.technology）中了解更多关于Polygon和他们扩展EVM的方法。
 
-Polygon follows all the rules of ETH mainnet and querying on Dune works exactly the same.
+Polygon遵循ETH主网的所有规则，在Dune上的查询工作也完全相同。
+
 ### Raw data tables
 
 <div class="cards grid" markdown>
