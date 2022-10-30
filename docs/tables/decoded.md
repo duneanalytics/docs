@@ -68,7 +68,7 @@
 这部分内容将让你了解更多提交合约解码的信息:
 
 <div class="cards grid" markdown>
-- [Adding new contracts](../features/decoded-contracts.md)
+- [添加新合约](../features/decoded-contracts.md)
 </div>
 
 ## 解码是怎样完成的?
