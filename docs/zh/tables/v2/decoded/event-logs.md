@@ -13,7 +13,7 @@
 
 **多个实例**
 
-如果合约有多个实例，我们将在同一张表中收集此智能合约所有实例的所有事件日志。 例如，所有 uniswap v3 池子的 `swap` 事件（以太坊上的）都存储在表 [`uniswap_v3_ethereum.Pair_evt_Swap`](https://dune.com/queries/742037)中。`contract_address` 列表明了是哪个智能合约发出了此事件。
+如果合约有多个实例，我们将在同一张表中收集此智能合约所有实例的所有事件日志。 例如，所有 uniswap v3 池子的 `swap` 事件（以太坊上的）都存储在表 [`uniswap_v3_ethereum.Pair_evt_Swap`](https://dune.com/queries/742037)中。`contract_address` 列表明了是哪个智能合约触发了此事件。
 
 **延伸阅读:**
 
