@@ -16,7 +16,7 @@
 
 **常见的误区**
 
-通过 [web3.js](https://web3js.readthedocs.io) 、[web3.py](https://web3py.readthedocs.io/en/stable) 或者通过其他所有方式在（本地）调用 `pure`,`read`,或者`constant`函数的人不会在区块链上广播或任何内容，因此不会记录在Dune中。
+如果有人通过 [web3.js](https://web3js.readthedocs.io) 、[web3.py](https://web3py.readthedocs.io/en/stable) 或者通过其他所有方式在（本地）调用 `pure`,`read`,或者`constant`函数，这将不会在区块链上广播或任何内容，因此这些行为也不会被记录在Dune中。
 
 
 简而言之：**存储在智能合约内存中的状态数据在Dune上获取不到！**
