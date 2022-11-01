@@ -1,8 +1,3 @@
----
-description: >-
-  nft.trades 给Dune上的每个用户提供NFT交易数据。nft.trades将跨多个 NFT 平台的数据聚合到一个单独的表中。
----
-
 # nft.trades
 
 ## **一个方便的查询NFT数据的方法**
