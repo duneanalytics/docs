@@ -1,7 +1,6 @@
 ---
 description: >-
-  nft.trades makes NFT trading data available to everyone on Dune. nft.trades
-  aggregates data across multiple NFT platforms into one simple table.
+  nft.trades 给Dune上的每个用户提供NFT交易数据。nft.trades将跨多个 NFT 平台的数据聚合到一个单独的表中。
 ---
 
 # nft.trades
