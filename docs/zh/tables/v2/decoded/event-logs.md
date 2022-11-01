@@ -8,7 +8,7 @@
 
 我们会将智能合约所有事件的日志解码为以入下方式命名的表：`projectname_blockchain.contractName_evt_eventName` 。
 
-让我们回到 [uniswap v3 factory](https://etherscan.io/address/0x1f98431c8ad98523631ae4a59f267346ea31f984#code) 的代码上下文中，去寻找在创建新池子的时候所触发的事件。该事件被称为“PoolCreated”，每次有人通过调用“createPool”函数成功部署新的 Uniswap V3 池子的时候都会触发该事件。该事件将很容易地为我们提供池子中的代币循序、该池的费率等级和tick spacing等信息。在 Etherscan 中，您可以通过打开[日志选项卡](https://etherscan.io/tx/0xdeb368592f3de0f2840754bce61d2c3f29cdb3407c63c699052e68a854c71eaa#eventlog)简单地找到事件的日志。 在 Dune 中，这种特定事件将存储在表 [`uniswap_v3_ethereum.Factory_evt_PoolCreated`](https://dune.com/queries/757381) 中。
+让我们回到 [uniswap v3 factory](https://etherscan.io/address/0x1f98431c8ad98523631ae4a59f267346ea31f984#code) 的代码上下文中，去寻找在创建新池子的时候所触发的事件。该事件被称为 `PoolCreated` ，每次有人通过调用 `createPool` 函数成功部署新的 Uniswap V3 池子的时候都会触发该事件。该事件将很容易地为我们提供池子中的代币循序、该池的费率等级和tick spacing等信息。在 Etherscan 中，您可以通过打开[日志选项卡](https://etherscan.io/tx/0xdeb368592f3de0f2840754bce61d2c3f29cdb3407c63c699052e68a854c71eaa#eventlog)简单地找到事件的日志。 在 Dune 中，这种特定事件将存储在表 [`uniswap_v3_ethereum.Factory_evt_PoolCreated`](https://dune.com/queries/757381) 中。
 
 
 **多个实例**
