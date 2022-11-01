@@ -1,10 +1,10 @@
-# Token standards
+# 代币标准
 
-## Interfaces
+## 接口
 
-When we’re interested in a subset of events logs fired regardless of the origin contract, Dune uses interface-decoding. Notable examples include `ERC20`, `ERC721` and `ERC1155` transfer events. This method is reserved for special cases. These tables make it easy to keep track of fungible and non fungible tokens flowing in and out of contracts and wallets and are widely used across Dune.
+每当我们对事件日志的子集感兴趣的时候(不管是哪个原始合约)，Dune 都会使用interface-decoding。 值得注意的例子包括“ERC20”、“ERC721”和“ERC1155”的转账事件。 此方法保留用于特殊情况。 这些表可以轻松跟踪流入和流出合约以及钱包的同质化以及非同质化代币，并在 Dune 中被广泛使用。
 
-You can read more about the individual token standards and the tables here:
+您可以在此处阅读有关各个代笔标准和表的更多信息：
 
 <div class="cards grid" markdown>
 - [ERC-20](erc20.md)
