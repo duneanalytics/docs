@@ -14,7 +14,7 @@
 
 对于存在多个实例的智能合约，对该智能合约所有实例的所有调用都会被我们解码到一张表中。例如，如果有交易调用了 [uniswap v3 pairs](https://etherscan.io/address/0x8f8ef111b67c04eb1641f5ff19ee54cda062f163#writeContract) 这个智能合约任何实例的`swap`函数，我们将在 `uniswap_v3_ethereum.Pair_call_swap`表中记录此数据 。
 
-**常见的误解**
+**常见的误区**
 
 这里要记住的一件事是[web3.js](https://web3js.readthedocs.io)、[web3.py](https://web3py.readthedocs.io/en/stable)和通过所有其他方式在（本地）调用 `pure`,`read`,或者`constant`函数的人不会在区块链上广播或任何内容，因此不会记录在Dune中。
 
