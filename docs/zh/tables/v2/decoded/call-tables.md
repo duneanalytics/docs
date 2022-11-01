@@ -4,7 +4,7 @@
 
 智能合约通常具有可由外部账户 (EOA) 或其他智能合约调用的函数。 函数可以有任何功能，从简单的状态读取、返回到更改多个状态和调用其他智能合约的消息。
 
-在 Dune 上，我们在相应的表中解析对智能合约进行的所有消息调用和交易。这些表被相应地命名为“projectname_blockchain.contractName_call_functionName”。
+在 Dune 上，我们在相应的表中解析对智能合约进行的所有消息调用和交易。这些表被相应地命名为`projectname_blockchain.contractName_call_functionName`。
 
 这些可以在单个智能合约级别（如 uniswap v3 工厂）或一类合约（如 uniswap v3 交易对）上完成。
 
