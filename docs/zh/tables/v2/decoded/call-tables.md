@@ -6,7 +6,7 @@
 
 在 Dune 上，我们在相应的表中解析对智能合约进行的所有消息调用和交易。这些表被相应地命名为`projectname_blockchain.contractName_call_functionName`。
 
-这些可以在单个智能合约级别（如 uniswap v3 工厂）或一类合约（如 uniswap v3 交易对）上完成。
+这些可以在单个智能合约级别（如 uniswap v3 factory）或一类合约（如 uniswap v3 pairs）上完成。
 
 例如，当通过 [uniswap v3 工厂](https://etherscan.io/address/0x1f98431c8ad98523631ae4a59f267346ea31f984#code)函数`createPool`（在以太坊上）创建 uniswap v3 池的时候，Dune 将在表[ `uniswap_v3_ethereum.Factory_call_createPool`](https://dune.com/queries/735856)中记录该交易。 无论是外部账户 (EOA) 通过交易还是智能合约通过消息调，这种记录行为都会发生。
 
