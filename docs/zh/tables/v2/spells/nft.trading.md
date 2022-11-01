@@ -1,15 +1,9 @@
----
-description: >-
-  nft.trades makes NFT trading data available to everyone on Dune. nft.trades
-  aggregates data across multiple NFT platforms into one simple table.
----
-
 # nft.trades
 
-## **An easy way of querying for NFT data**
+## **一个方便的查询NFT数据的方法**
 
-`nft.trades` is an effort to make NFT trading data easily available to everyone on Dune Analytics. This table aggregates and standardizes the data between different data platforms and provides auxiliary information and metadata all in one table.
+`nft.trades` 旨在让Dune Analytics上的每个人都能轻松获取到NFT的交易数据。该表将不同数据平台之间的数据聚合和标准化并在一张表中提供辅助信息和元数据。
 
-The culmination of this is a dataset which makes it extremely easy to query for any NFT related trading data across all indexed platforms.
+它是一个非常棒的数据集，通过它去查询在任何与NFT相关的交易数据(覆盖全平台)会变得非常容易.
 
-You can find the specifications for nft.trades on our [Spellbook documentation](https://spellbook-docs.dune.com/#!/model/model.spellbook.nft_trades).
+您可以在我们的 [Spellbook 文档](https://spellbook-docs.dune.com/#!/model/model.spellbook.nft_trades) 上找到 nft.trades 的规范。
