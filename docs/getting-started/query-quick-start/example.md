@@ -12,10 +12,10 @@ If you get stuck, [fork and test out the demo query here](https://dune.com/queri
 
 ## 1. Find the main point of entry
 
-The easiest place to start your query exploration is the [Dune Data Explorer](../../features/queries/data-explorer.md), for two reasons:
+The easiest place to start your query exploration is the [Dune Data Explorer](../queries/data-explorer.md), for two reasons:
 
 1. Searching here will let us discover whether the contracts we'll need have already been decoded; if so we'll have a lot less work to do.
-2. If our data is already [Decoded](../../features/decoded-contracts.md), the contracts, calls, events, and data points will probably have obvious labels - eg `amount_usd` is the US dollar amount an NFT was bought/sold for. So we might not need to dig through the project docs to understand which contracts and data we need to build our Query.
+2. If our data is already [Decoded](../decoding-contracts.md), the contracts, calls, events, and data points will probably have obvious labels - eg `amount_usd` is the US dollar amount an NFT was bought/sold for. So we might not need to dig through the project docs to understand which contracts and data we need to build our Query.
 
 So, let's get started by switching to the Dune V2 data set and searching for "opensea" to see what we find.
 
@@ -42,8 +42,8 @@ The first way is to run a `SELECT *` + `LIMIT` search to see what comes up.
 
 Note a couple of things here:
 
-1. Dune has a nice auto complete feature - just start typing to see options and hit enter to paste ([learn more about how the Query Window works here](../../features/queries/query-window.md))
-2. You can click the >> next to a table name in the Data Explorer to automatically paste that into your query ([learn more about the Data Explorer here](../../features/queries/data-explorer.md))
+1. Dune has a nice auto complete feature - just start typing to see options and hit enter to paste ([learn more about how the Query Window works here](../queries/query-window.md))
+2. You can click the >> next to a table name in the Data Explorer to automatically paste that into your query ([learn more about the Data Explorer here](../queries/data-explorer.md))
 
 Also since this is a pre-made how to guide you can just be lazy and copy this code:
 
@@ -71,7 +71,7 @@ Here we find an [`opensea_trades` table](https://dune.com/spellbook#!/model/mode
 
 Scrolling through the columns section we can see all the different data columns it has.
 
-Since this is a [Decoded Table](../../tables/decoded.md), a lot of the labels - like `amount_usd` - make sense just by reading them.
+Since this is a [Decoded Table](../../reference/tables/decoded.md), a lot of the labels - like `amount_usd` - make sense just by reading them.
 
 For those that aren't so obvious - like `trade_type` - we can click to get a description:
 
@@ -100,7 +100,7 @@ And in this example, to make it easy on you, we've already decided to:
 
 As a beginner, if you don't already have an idea of what you want to build, exploring Dune data from the Query builder is a fun way to dive in.
 
-You can also use the [Dune Explorer](../dune-explorer.md) to see what others are building as well!
+You can also use the [Dune Explorer](../../reference/dune-explorer.md) to see what others are building as well!
 
 Though this might not lead you to building the next [DeFi users over time](https://dune.com/rchen8/defi-users-over-time) (created by [@richardchen](https://dune.com/rchen8)), it's a great way to learn more about using Dune as you can see what's possible and even fork existing Queries to modify further!
 
@@ -126,7 +126,7 @@ Hmm, looks like this shows us top contracts by number of transactions, active wa
 
 But what about by USD value of transactions?
 
-To fork these Queries and add that data we just click the [Visualization name](../../features/visualizations/) (in this case a [Table Visualization](../../features/visualizations/other-visualizations.md)), then click the <span class="fk-btn-3">Fork</span> button at the top left:
+To fork these Queries and add that data we just click the [Visualization name](../visualizations) (in this case a [Table Visualization](../visualizations/other-visualizations.md)), then click the <span class="fk-btn-3">Fork</span> button at the top left:
 
 ![fork query example](images/fork-query-example.gif)
 
@@ -277,7 +277,7 @@ We'll wrap this basic query in a `WITH` statement, so we can return two separate
 
 ### Adding Parameters
 
-Now for extra points, let's add a [Parameter](../../features/parameters.md) so people who view our Visualizations can filter by 1 day, 1 week, and 1 month time periods.
+Now for extra points, let's add a [Parameter](../queries/parameters.md) so people who view our Visualizations can filter by 1 day, 1 week, and 1 month time periods.
 
 To do that, let's highlight our `24 hour` interval measure, then click the <span class="fk-btn-5">Add parameter</span> button
 
@@ -316,7 +316,7 @@ So for {{time period}} let's look at our top 10 wallets by total volume, as well
 
 ### Creating and Formatting Bar Charts
 
-To do that we'll use a Bar Chart [Visualization](../../features/visualizations/index.md):
+To do that we'll use a Bar Chart [Visualization](../visualizations/index.md):
 
 ![select bar chart visualization](images/select-bar-chart-visualization.gif)
 
@@ -342,7 +342,7 @@ Learn more about [formatting Visualizations here](../../features/queries/query-r
 
 ### Sharing Queries and Visualizations
 
-[To share your Queries](../../features/sharing/index.md) (either embedding them like the above or just to share a lin), click the <span class="fk-btn-3">Embed</span> button above the Query window:
+[To share your Queries](../embeds.md) (either embedding them like the above or just to share a lin), click the <span class="fk-btn-3">Embed</span> button above the Query window:
 
 ![embed button location](images/embed-button-location.png)
 
@@ -355,7 +355,7 @@ With a lot of copy/paste (literally and figuratively), we can make this same gra
 
 ### Making a Dashboard
 
-Finally, let's add our two visualizations to a starter [Dashboard](../../features/dashboards.md).
+Finally, let's add our two visualizations to a starter [Dashboard](../dashboards.md).
 
 To do that we:
 

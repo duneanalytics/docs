@@ -52,7 +52,7 @@ You can currently query data from:
 
 Dune picks up events and internal calls from the blockchains we index, we don't have state/storage data.
 
-## Dune.com
+## Making 🪄 with Dune.com
 
 Dune.com is the first killer app built on top of the Dune Data Platform, designed to make it as easy as possible for anyone with at least a little bit of SQL, Ethereum Virtual Machine, and Business knowledge to analyze blockchain data in interesting ways.
 
@@ -70,7 +70,7 @@ As a Dune Wizard (what we call "blockchain analysts" because it's way cooler), y
 
 Dune aggregates blockchain data into an SQL database that can be easily queried. 
 
-[Queries](features/queries/index.md) are used to specify what data from the blockchain should be found in the our database and returned.
+[Queries](getting-started/queries/index.md) are used to specify what data from the blockchain should be found in the our database and returned.
 
 Maybe you want to know _all the Dex trades that happened today_, or the _total value of stablecoins minted this year_. Whatever the question, discovering the answer starts with a Dune Query!
 
@@ -80,13 +80,13 @@ Queries return rows and columns of data (just like traditional SQL queries) that
 
 There are a few ways that a blockchain analyst (i.e. Wizard i.e. you!) can get started running Queries:
 
-1. The simplest way is to use Dune [_Spells_](tables/spells.md)) to query commonly used data tables. Some popular Spells include `dex.trades`, `lending.borrow`, and `stablecoin.transfer`.
+1. The simplest way is to use Dune [_Spells_](reference/tables/spells.md)) to query commonly used data tables. Some popular Spells include `dex.trades`, `lending.borrow`, and `stablecoin.transfer`.
 2. Query the raw Ethereum data like blocks, logs, and transactions.
 3. It is also possible to query centralized exchange data. For example, you can use `prices.usd` to quickly return the price of almost any cryptoasset.
 
 ### Visualizations
 
-Data presented in table form (rows and columns) can be difficult to read. [Visualizations](features/visualizations/index.md) take the results of a Query and present the information in a clear, precise, and _visual_ way.
+Data presented in table form (rows and columns) can be difficult to read. [Visualizations](getting-started/visualizations/index.md) take the results of a Query and present the information in a clear, precise, and _visual_ way.
 
 With Dune Visualizations, it's easy to begin to tell a story with your data by transforming something like this:
 
@@ -110,13 +110,26 @@ Dune offers a variety of Visualizations you can use to visually present data inc
 
 ### Dashboards
 
-Using carefully planned visuals, a clever blockchain analyst (Wizard!) can tell a story about different collections of data through [Dune Dashboards](features/dashboards.md).
+Using carefully planned visuals, a clever blockchain analyst (Wizard!) can tell a story about different collections of data through [Dune Dashboards](getting-started/dashboards.md).
 
 For example, in the below Dashboard, [Dex Metrics](https://dune.com/hagaetc/dex-metrics) by [@hagaetc](https://dune.com/hagaetc), it's clear at the top that 'DEX' as a category is growing. Below, the audience sees which DEX's are the most popular by volume, and finally can view a stacked bar chart that shows changes over time.
 
 Just by looking at this single Dashboard, anyone can get a clear picture of the entire DEX market.
 
 ![Dashboard](images/dashboard.png)
+
+## How to use these docs
+
+We've built these docs to answer all your who, what, when, where, why, and how questions for anything/everything Dune!
+
+Here's a quick run down of each of the sections:
+
+- [Getting Started](getting-started/index.md) is where you'll get oriented and learn how to use Dune!
+- [Reference](reference/index.md) is where you'll get answers to your "who, what, where" questions and find a few supplemental resources we've put together.
+- [Spellbook](spellbook/index.md) is where you'll find everything you need to build and use Spells.
+- [API](api/index.md) is where you'll find everything you need to integrate our API into your project.
+
+If you're itching to get your wand working, jump over to our [Query Quick Start](getting-started/query-quick-start/index.md) for a walkthrough that will help you build your first Dune Query!
 
 ## Dune is a community effort
 
@@ -130,6 +143,6 @@ This positive feedback loop is how the Dune Community Succeeds together through 
 
 Join our [Community Discord](https://discord.gg/BJBHFR6sdy) to get world class support from our team and the community.
 
-Check out our [events calendar](resources/events.md) to join in the fun LIVE.
+Check out our [events calendar](reference/events.md) to join in the fun LIVE.
 
 And if you have any feedback, whether feature requests or bug reports, please submit it [here](https://feedback.dune.com).
