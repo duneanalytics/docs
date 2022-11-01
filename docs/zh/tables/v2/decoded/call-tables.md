@@ -25,7 +25,7 @@
 
 这与使用 web3.py/web3.js 在本地调用此函数或使用Etherscan前端访问此状态的情况形成对比，这些本地调用不会记录在Dune中。
 
-**进一步阅读：**
+**进一步阅读：**  
 [交易和调用有什么区别？](https://ethereum.stackexchange.com/questions/765/what-is-the-difference-between-a-transaction-and-a-call)
 
 [Soliditylang.org 文档](https://docs.soliditylang.org/en/v0.8.13/contracts.html#function-visibility)
