@@ -21,7 +21,7 @@
 
 简而言之：**存储在智能合约内存中的状态数据在Dune上获取不到！**
 
-一个正面的例子是 [erc20 代币合约](https://etherscan.io/token/0x1f9840a85d5af5bf1d1762f925bdaddc4201f984#readContract) `Uni` 的函数 `decimals` ，它是一个通过自动创建的“[getter 函数](https://docs.soliditylang.org/en/v0.7.4/contracts.html#getter-functions)”可以访问的 `constant` 状态变量。如果智能合约在交易中调用此函数，则此消息调用将记录在Dune的表[`uniswap."UNI_call_decimals"`](https://dune.com/queries/741354)中。
+一个正面的例子是 [erc20 代币合约 Uni](https://etherscan.io/token/0x1f9840a85d5af5bf1d1762f925bdaddc4201f984#readContract) 的函数 `decimals` ，它是一个通过自动创建的“[getter 函数](https://docs.soliditylang.org/en/v0.7.4/contracts.html#getter-functions)”可以访问的 `constant` 状态变量。如果智能合约在交易中调用此函数，则此消息调用将记录在Dune的表[`uniswap."UNI_call_decimals"`](https://dune.com/queries/741354)中。
 
 这与使用 web3.py/web3.js 在本地调用此函数或使用Etherscan前端访问此状态的任何人形成对比。这些本地调用不会记录在Dune中。
 
