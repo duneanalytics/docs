@@ -12,7 +12,7 @@
 
 **多个实例**
 
-对于存在多个实例的智能合约，我们会将对该智能合约的所有实例的所有调用解码到一张表中。如果有交易调用 [Uniswap v3 交易对](https://etherscan.io/address/0x8f8ef111b67c04eb1641f5ff19ee54cda062f163#writeContract)智能合约的任何实例的`swap`函数，我们将在 `uniswap_v3_ethereum.Pair_call_swap`表中记录此数据 。
+对于存在多个实例的智能合约，我们会将对该智能合约的所有实例的所有调用都解码到一张表中。如果有交易调用 [uniswap v3 pairs](https://etherscan.io/address/0x8f8ef111b67c04eb1641f5ff19ee54cda062f163#writeContract)智能合约的任何实例的`swap`函数，我们将在 `uniswap_v3_ethereum.Pair_call_swap`表中记录此数据 。
 
 **常见的误解**
 
