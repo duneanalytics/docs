@@ -8,7 +8,7 @@
 
 这可以在单个智能合约级别（如 uniswap v3 factory）或一类合约（如 uniswap v3 pairs）上完成。
 
-例如，当通过 [uniswap v3 factory](https://etherscan.io/address/0x1f98431c8ad98523631ae4a59f267346ea31f984#code)的函数`createPool`（在以太坊上）创建 uniswap v3 池子的时候，Dune 将在表[ `uniswap_v3_ethereum.Factory_call_createPool`](https://dune.com/queries/735856)中记录该交易。无论是外部账户 (EOA) 通过交易还是智能合约通过消息调用，这种记录行为都会发生。
+例如，当通过 [uniswap v3 factory](https://etherscan.io/address/0x1f98431c8ad98523631ae4a59f267346ea31f984#code)合约中的函数`createPool`（在以太坊上）创建 uniswap v3 池子的时候，Dune 将在表[ `uniswap_v3_ethereum.Factory_call_createPool`](https://dune.com/queries/735856)中记录该交易。无论是外部账户 (EOA) 通过交易还是智能合约通过消息调用，这种记录行为都会发生。
 
 **多个实例**
 
