@@ -8,11 +8,11 @@
 
 这可以在单个智能合约级别（如 uniswap v3 factory）或一类合约（如 uniswap v3 pairs）上完成。
 
-例如，当我们通过 [uniswap v3 factory](https://etherscan.io/address/0x1f98431c8ad98523631ae4a59f267346ea31f984#code)合约中的函数`createPool`（在以太坊上）创建 uniswap v3 池子的时候，Dune 将在表[ `uniswap_v3_ethereum.Factory_call_createPool`](https://dune.com/queries/735856)中记录该交易。无论是外部账户 (EOA) 通过交易还是智能合约通过消息调用，这些行为都会被记录。
+例如，当我们通过 [uniswap v3 factory](https://etherscan.io/address/0x1f98431c8ad98523631ae4a59f267346ea31f984#code) 合约中的函数`createPool`（在以太坊上）创建 uniswap v3 池子的时候，Dune 将在表[ `uniswap_v3_ethereum.Factory_call_createPool`](https://dune.com/queries/735856)中记录该交易。无论是外部账户 (EOA) 通过交易还是智能合约通过消息调用，这些行为都会被记录。
 
 **多个实例**
 
-对于存在多个实例的智能合约，对该智能合约所有实例的所有调用都会被我们解码到一张表中。例如，如果有交易调用了[uniswap v3 pairs](https://etherscan.io/address/0x8f8ef111b67c04eb1641f5ff19ee54cda062f163#writeContract)这个智能合约的任何实例的`swap`函数，我们将在 `uniswap_v3_ethereum.Pair_call_swap`表中记录此数据 。
+对于存在多个实例的智能合约，对该智能合约所有实例的所有调用都会被我们解码到一张表中。例如，如果有交易调用了 [uniswap v3 pairs](https://etherscan.io/address/0x8f8ef111b67c04eb1641f5ff19ee54cda062f163#writeContract) 这个智能合约的任何实例的`swap`函数，我们将在 `uniswap_v3_ethereum.Pair_call_swap`表中记录此数据 。
 
 **常见的误解**
 
