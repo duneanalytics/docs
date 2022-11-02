@@ -7,17 +7,17 @@ description: >-
 !!! 注意
     V2现在尚未支持用户自制表。
 
-**请注意，这些表不能保证数据的准确性，如果不是由你自己创建，请谨慎使用。**
+**请注意，这些表不能保证数据的准确性，如果不是由您自己创建，请谨慎使用。**
 
-**请随时保存视图的构造函数参数。有时我们必须删除视图，以便能够更改某些解码表或代理依赖关系，你可能需要重新部署视图。**
+**请随时保存视图的构造函数参数。有时我们必须删除视图，以便能够更改某些解码表或代理依赖关系，您可能需要重新部署视图。**
 
 ## 使用案例
 
 有几种方法可以利用Dune内部的视图和表，使在Dune上处理数据更加容易。
 
-你自己的表、视图和函数在Dune上创建内容时都起着重要作用，如果正确使用，可以使仪表盘和查询的维护更容易。
+您自己的表、视图和函数在Dune上创建内容时都起着重要作用，如果正确使用，可以使仪表盘和查询的维护更容易。
 
-如果你不熟悉表、视图、物化视图和函数，请参阅 [pgSQL文档](https://www.postgresqltutorial.com/postgresql-views) 或查看我们的[入门指南](../getting-started/index.md).
+如果您不熟悉表、视图、物化视图和函数，请参阅 [pgSQL文档](https://www.postgresqltutorial.com/postgresql-views) 或查看我们的[入门指南](../getting-started/index.md).
 
 ### 存储信息
 
@@ -45,9 +45,9 @@ CREATE OR REPLACE VIEW dune_user_generated.view_test (symbol, contract_address, 
 
 视图还可以用于将多个智能合约的操作聚合到一个包含所有必要数据的视图中。
 
-如果你需要反复使用同一数据集，并且只更改显示或聚合数据的方式，这一点尤其有用。这样，你就不必一次又一次地查询数据集，只需将其放入一个视图中，然后就可以开始引用该视图。
+如果您需要反复使用同一数据集，并且只更改显示或聚合数据的方式，这一点尤其有用。这样，您就不必一次又一次地查询数据集，只需将其放入一个视图中，然后就可以开始引用该视图。
 
-这将允许你更改构建数据集的基本查询，而无需遍历查询。你可将此想象成，将数据收集和实际工作/显示拆分为两个独立工作的不同部分。
+这将允许您更改构建数据集的基本查询，而无需遍历查询。您可将此想象成，将数据收集和实际工作/显示拆分为两个独立工作的不同部分。
 
 利用这一点将使仪表板的维护变得更加容易，因为您只需更改 **dune\_user\_generated** 视图，而不必逐一查看所有查询。
 
@@ -125,9 +125,9 @@ CREATE OR REPLACE view dune_user_generated.uniswap_v3 as
 
 ### 测试抽象表
 
-"create"函数的另一个很好的用途是测试GitHub发出的Pull Request是否对我们的抽象表产生了预期的结果。你只需尝试使用模式**dune\_user\_generated**而需要在GitHub中所需的实际模式运行查询。
+"create"函数的另一个很好的用途是测试GitHub发出的Pull Request是否对我们的抽象表产生了预期的结果。您只需尝试使用模式**dune\_user\_generated**而需要在GitHub中所需的实际模式运行查询。
 
-如果测试成功，你可以继续进行Pull Request。如果可以，请将“测试表/视图”附加到Pull Request中。
+如果测试成功，您可以继续进行Pull Request。如果可以，请将“测试表/视图”附加到Pull Request中。
 
 ### 视图定义
 
@@ -176,4 +176,4 @@ WHERE tgtdep.deptype = 'i'::"char" AND tgtobj.relkind = 'v'::"char"
 
 您需要暂时中断依属关系才能更改`view1`。
 
-你可以在 [这里](https://dune.com/queries/70916)找到该检索。 感谢 [@gosuto](https://dune.com/gosuto) 发现这个问题。
+您可以在 [这里](https://dune.com/queries/70916)找到该检索。 感谢 [@gosuto](https://dune.com/gosuto) 发现这个问题。
