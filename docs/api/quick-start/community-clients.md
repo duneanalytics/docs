@@ -8,7 +8,7 @@ Our community once again comes through for the win with the below API clients.
 If you've built your own let us know about it in our [#dune-api Discord Channel](https://discord.com/channels/757637422384283659/1019910980634939433)!
 
 !!! warning "Disclaimer"
-    While we love that our community has taken the lead, these clients are not directly maintained by the Dune team. This means we can't guarantee they're bug free and might not be able to help if they aren't.
+    While we love that our community has taken the lead, these clients are not directly maintained by the Dune team.
 
 ## Cow Protocol Python Client
 

@@ -13,12 +13,12 @@ We'll show you one of the several ways the API can be consumed via JavaScript, i
 !!! example "Prerequisites"
     This Quick Start Guide assumes you have some level of familiarity with Node.js (Node), Node Package Manager (NPM) and Node Version Manager (NVM).
 
-To start, make sure you're using the current LTS version of Node.js (Node 16) and the latest version of NPM:
+To start, make sure you're using the current LTS version of Node.js (Node 18) and the latest version of NPM:
 
 ## Getting Set Up
 
 ```
-nvm use lts
+nvm use --lts
 npm install latest
 ```
 
