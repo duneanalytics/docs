@@ -265,3 +265,16 @@ h1, h2, h3, h4, h5, h6{
     .md-typeset :is(.example)>:is(.admonition-title,summary) {
         background-color: rgba(255, 136, 27, .1);
     }
+
+/* Horizontally Centers Images */
+.hoz-cent {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Vertically Centering; for inline text/images */
+
+.vrt-cent {
+    vertical-align: middle !important;
+}
