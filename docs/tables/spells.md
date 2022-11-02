@@ -4,11 +4,11 @@
 ---
 
 !!! 注意
-    Spells仅在Dune V2中可用。对于V1查询，你需要使用现已弃用的[这里的抽象表]（V1/abstractions/index.md）。
+    Spells仅在Dune V2中可用。对于V1查询，您需要使用现已弃用的[这里的抽象表]（V1/abstractions/index.md）。
 
 **Spells是Dune和社区定制和维护的数据表。**
 
- 它使你能够轻松地聚合大量数据，并尽可能减少问题。 
+ 它使您能够轻松地聚合大量数据，并尽可能减少问题。 
 
 要查阅可用的Spells，请参考我们的[Spellbook文档](https://dune.com/spellbook)并学习如何贡献新的Spells[在这里]（../spelbook/index.md）。
 
