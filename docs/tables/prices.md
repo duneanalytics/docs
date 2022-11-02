@@ -1,6 +1,6 @@
 ---
 标题: 价格
-描述: 这些数据表让你能够获取几乎所有ERC20代币的价格。
+描述: 这些数据表让您能够获取几乎所有ERC20代币的价格。
 ---
 
 ## 来自第三方数据供应方的价格数据 <a href="#centralised-exchanges-trading-data" id="centralised-exchanges-trading-data"></a>
@@ -13,7 +13,7 @@
 
 这个表提供了一些列的erc20.tokens。
 
-如果您想要的代币没有在这里列出，请向我们的 [GitHub repository](https://github.com/duneanalytics/spellbook/blob/main/models/prices/prices_tokens.sql)提交一个pull request。 (对于V1引擎，你可以使用来自去中心化交易所的价格 **dex.view\_token\_prices.**)
+如果您想要的代币没有在这里列出，请向我们的 [GitHub repository](https://github.com/duneanalytics/spellbook/blob/main/models/prices/prices_tokens.sql)提交一个pull request。 (对于V1引擎，您可以使用来自去中心化交易所的价格 **dex.view\_token\_prices.**)
 
 | <p></p><p><strong>变量名</strong></p> | **描述**                               |
 | ------------------------------------------ | --------------------------------------------- |
