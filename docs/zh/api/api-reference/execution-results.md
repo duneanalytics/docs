@@ -103,7 +103,7 @@ curl -X GET "https://api.dune.com/api/v1/execution/{{execution_id}}/results" -H 
  - *execution_ended_at* : 该请求在我们的服务器中查询执行完成的时间。
  - *result* :
     - *rows* : 该请求返回的实际数据记录。
-    - *metadata* : 返回查询数据的一些属性值。
+    - *metadata* : 返回查询数据的一些属性。
         - *column_names* : 返回数据中的列名。
         - *result_set_bytes* : 返回的数据大小。
         - *total_row_count* : 数据中的行数。
