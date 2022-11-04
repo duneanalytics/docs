@@ -1,32 +1,32 @@
-# Call tables
+# 调用表
 
-### **Message** **calls and transactions made to smart contracts**
+### **对智能合约的调用以及发起的交易**
 
-Smart contracts generally have functions that are able to be called by either an externally owned account(EOA) or other smart contracts. Functions can be anything from a simple state read and return to changing multiple states and invoking message calls to other smart contracts.
+智能合约通常具有可由外部账户(EOA)或其他智能合约调用的函数。函数可以有任何功能，从简单的状态读取、返回到更改多个状态和调用其他智能合约的消息。
 
-On Dune, we parse all message calls and transactions made to smart contracts in their own tables. The tables are then accordingly named `projectname_blockchain.contractName_call_functionName`.
+在Dune上，我们在相应的表中解析对智能合约进行的所有消息调用和交易。这些表被相应地命名为 `projectname_blockchain.contractName_call_functionName` 。
 
-This is either done on an individual contract level like for the uniswap v3 factory, or a class of contracts like the uniswap v3 pairs.
+这可以在单个智能合约级别（如 uniswap v3 factory）或一类合约（如 uniswap v3 pairs）上完成。
 
-For example, when a uniswap v3 pool gets created via the [uniswap v3 factory](https://etherscan.io/address/0x1f98431c8ad98523631ae4a59f267346ea31f984#code) (on ethereum) function `createPool`, Dune will record that transaction in the table [`uniswap_v3_ethereum.Factory_call_createPool`](https://dune.com/queries/735856). This will happen whether this was done by an externally owned account (EOA) through a transaction or a smart contract by the means of a message call.
+例如，当我们通过 [uniswap v3 factory](https://etherscan.io/address/0x1f98431c8ad98523631ae4a59f267346ea31f984#code) 合约中的函数 `createPool` （在以太坊上）创建 uniswap v3 池子的时候，Dune 将在表 [ `uniswap_v3_ethereum.Factory_call_createPool`](https://dune.com/queries/735856) 中记录该交易。无论是外部账户 (EOA) 通过交易还是智能合约通过消息调用，这些行为都会被记录。
 
-**Multiple Instances**
+**多个实例**
 
-For a contract where multiple instances exist, we will decode all calls to all instances of this smart contract into one table. If there is a transaction calling the `swap` function of any instance of a [Uniswap v3 pair](https://etherscan.io/address/0x8f8ef111b67c04eb1641f5ff19ee54cda062f163#writeContract) contract, we will collect this data in the table `uniswap_v3_ethereum.Pair_call_swap`.
+对于存在多个实例的智能合约，对该智能合约所有实例的所有调用都会被我们解码到一张表中。例如，如果有交易调用了 [uniswap v3 pairs](https://etherscan.io/address/0x8f8ef111b67c04eb1641f5ff19ee54cda062f163#writeContract) 这个智能合约任何实例的 `swap` 函数，我们将在  `uniswap_v3_ethereum.Pair_call_swap` 表中记录此数据 。
 
-**Common misconceptions**
+**常见的误区**
 
-One thing to keep in mind here is that [web3.js](https://web3js.readthedocs.io), [web3.py](https://web3py.readthedocs.io/en/stable) and all other methods of (locally) calling a `pure`, `read`, or `constant` function do not broadcast or publish anything on the blockchain and are therefore not recorded in Dune.
+如果有人通过 [web3.js](https://web3js.readthedocs.io) 、[web3.py](https://web3py.readthedocs.io/en/stable) 或者其他所有方式在（本地）调用 `pure` , `read` ,或者 `constant` 函数，这将不会在区块链上广播或任何内容，因此这些行为也不会被记录在Dune中。
 
-However, if one of these functions is invoked by another smart contract in the context of a transaction, this will be broadcast on the chain and therefore accessible in Dune.
 
-In short: **State data stored in the memory of a smart contract is not available on Dune!**
+简而言之：**存储在智能合约内存中的状态数据在Dune上获取不到！**
 
-A good example of this is the function `decimals` of the [erc20 token contract](https://etherscan.io/token/0x1f9840a85d5af5bf1d1762f925bdaddc4201f984#readContract) `Uni` which is a `constant` state variable that is able to be accessed through an automatically created "[getter function](https://docs.soliditylang.org/en/v0.7.4/contracts.html#getter-functions)". Should a smart contract invoke this function in the context of transaction, this message call will be recorded in the Dune table [`uniswap."UNI_call_decimals"`](https://dune.com/queries/741354).
+一个正面的例子是 [erc20 代币合约 Uni](https://etherscan.io/token/0x1f9840a85d5af5bf1d1762f925bdaddc4201f984#readContract) 的函数 `decimals` ，它是一个 `constant` 状态变量，通过自动生成的“[getter 函数](https://docs.soliditylang.org/en/v0.7.4/contracts.html#getter-functions)”可以访问。如果智能合约在交易中调用此函数，则此消息调用将记录在Dune的表[`uniswap."UNI_call_decimals"`](https://dune.com/queries/741354)中。
 
-This is in contrast to anyone calling this function locally using web3.py/web3.js or using the Etherscan frontend to access this state. These local calls are not recorded in Dune.
+这与使用 web3.py/web3.js 在本地调用此函数或使用Etherscan前端访问此状态的情况形成对比，这些本地调用不会记录在Dune中。
 
-**Further Reading:**
-[What is the difference between a transaction and a call?](https://ethereum.stackexchange.com/questions/765/what-is-the-difference-between-a-transaction-and-a-call)
+**进一步阅读：**  
 
-[Soliditylang.org documentation](https://docs.soliditylang.org/en/v0.8.13/contracts.html#function-visibility)
+[交易和调用有什么区别？](https://ethereum.stackexchange.com/questions/765/what-is-the-difference-between-a-transaction-and-a-call)
+
+[Soliditylang.org 文档](https://docs.soliditylang.org/en/v0.8.13/contracts.html#function-visibility)

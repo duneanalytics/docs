@@ -4,14 +4,15 @@ description: Raw data tables are the basic building blocks of our database.
 
 # BNB Chain (BSC)
 
-BNB Chain(formerly Binance Smart Chain, BSC) is an instance of the Ethereum Virtual Machine built and maintained by a team from the popular Crypto Exchange [Binance](https://binance.com). BNB Chain follows most of the rules of Ethereum Mainnet, but has not implemented EIP1559. Instead it relies on [BEP-95](https://github.com/bnb-chain/BEPs/blob/master/BEP95.md) to burn fees that accrue during usage of the platform. Furthermore, the gas limit per block is set to 100 mio, enabling more transactions to be processed in a given block. Transactions fees are paid in $BNB instead of $ETH.
+BNB链(之前叫币安智能链，BSC)是一个以太坊虚拟机的实例，由流行的加密货币交易所[Binance](https://binance.com)的团队建立和维护。BNB链遵循以太坊主网的大部分规则，但没有实施EIP1559。相反，它依靠[BEP-95](https://github.com/bnb-chain/BEPs/blob/master/BEP95.md)来燃烧平台使用过程中累积的费用。此外，每个区块的gas限制被设置为100 mio，使更多的交易能够在一个给定的区块中被处理。交易费用是以$BNB而不是$ETH支付的。
 
-You can read more about BNB Chain in [the documentation](https://docs.bnbchain.org/docs/bnbIntro).
+你可以在[文档]（https://docs.bnbchain.org/docs/bnbIntro）中阅读更多关于BNB链的信息。
 
-On Dune, that means that the gas fields for EIP1559 transactions stay empty, everything else is the same.
+在Dune上，这意味着EIP1559交易的gas字段保持为空，其他都是一样的。
+
 
 <div class="cards grid" markdown>
-- [BNB Chain Documentation](https://docs.bnbchain.org/docs/bnbIntro)
+- [BNB链文档](https://docs.bnbchain.org/docs/bnbIntro)
 </div>
 
 ### Raw data tables
