@@ -1,23 +1,23 @@
 ---
-title: Execution Status
-description: Here's how to check the status of an execution request.
+title: 执行状态
+description: 如何检查执行请求的状态。
 ---
 
-# [GET] Execution Status
+# [GET] 执行状态
 
-Here's how to check the status of an execution request.
+如何检查执行请求的状态。
 
-## Arguments
+## 请求参数
 
-None.
+无需参数。
 
-## Returns
+## 返回值
 
-Returns the status of a query execution along with relevant metadata of the results if the execution is completed.
+如果执行完成，则返回查询的执行状态以及相关的结果元数据。
 
-## Example Request
+## 请求示例
 
-You need to pass the `execution_id` you obtained from making a [Execute Query ID POST](execute-query-id.md) request to the complete an Execution Status API request.
+您需要传递您从 [执行查询 ID](execute-query-id.md) 请求中获得的 `execution_id` 参数，用以完成获取执行状态的 API 请求。
 
 ```
 GET v1/execution/{{execution_id}}/status
@@ -31,11 +31,11 @@ https://api.dune.com/api/v1/execution/{{execution_id}}/status
 curl -X GET "https://api.dune.com/api/v1/execution/{{execution_id}}/status" -H x-dune-api-key:{{api_key}}
 ```
 
-## Example Response
+## 返回示例
 
-!!! info "Dune API responses are delivered in JSON format."
+!!! info “Dune API 以 JSON 格式返回响应。”
 
-### Query Executing
+### 查询运行中
 
 ```json
 {
@@ -48,7 +48,7 @@ curl -X GET "https://api.dune.com/api/v1/execution/{{execution_id}}/status" -H x
 }
 ```
 
-### Execution Complete
+### 执行完成
 
 ```json
 {
@@ -73,33 +73,32 @@ curl -X GET "https://api.dune.com/api/v1/execution/{{execution_id}}/status" -H x
 }
 ```
 
- - *execution_id* : The execution ID with which this API was called.
- - *query_id* : The ID of the Dune Query being executed with this request.
- - *state* : The current state of the query's execution. Check our `FAQ` section to see what different status codes for `state` mean.
- - *submitted_at* : The timestamp at which the API for executing this query was called.
- - *expires_at* : The time upto which results from this query's execution shall be stored in our Database.
- - *execution_started_at* : The time at which execution started for this request in our servers.
- - *execution_ended_at* : The time at which the execution for this request got completed in our servers.
- - *result_metadata* : Some properties of the response data generated with this request.
-    - *column_names* : Names of the columns in the response data that is generated for this request.
-    - *result_set_bytes* : The size of the response data in bytes
-    - *total_row_count* : The number of rows in response data
-    - *datapoint_count* : Total number of datapoints returned with this request, should equal to (`total_row_count` x number of columns).
-    - *pending_time_millis* : The time (in milliseconds) it took to assign a slot in our server for this request.
-    - *execution_time_millis* : The time (in milliseconds) it took for the actual execution of the query with this request.
+ - *execution_id* : 当前 API 调用的执行 ID 。
+ - *query_id* : 当前请求所对应执行的 Dune 查询 ID 。
+ - *state* : 此查询的当前执行状态。查阅 `FAQ` 章节，了解不同状态码所对应 `state` 的具体含义。
+ - *submitted_at* : 执行该查询的 API 被调用时的时间戳。
+ - *expires_at* : 该查询的执行结果被储存在我们数据库中的过期时间。
+ - *execution_started_at* : 该请求在我们的服务器中查询执行开始的时间。
+ - *execution_ended_at* : 该请求在我们的服务器中查询执行完成的时间。
+ - *result_metadata* : 本次请求返回数据的一些属性。
+    - *column_names* : 本次请求返回数据中的列名。
+    - *result_set_bytes* : 返回数据的字节大小。
+    - *total_row_count* : 返回数据的行数。
+    - *datapoint_count* : 该请求返回的数据点（datapoints）总数，等值于（`total_row_count` x 列数）。
+    - *pending_time_millis* : 在我们的服务器中为这个请求分配一个插槽所花费的时间（以毫秒计）。
+    - *execution_time_millis* : 该请求实际执行查询所花费的时间（以毫秒计）。
 
-## Check Execution Status FAQ
+## 查询执行状态 FAQ
 
-### What is the difference between the states “Executing” and “Pending”?
+### “执行中”(Executing)和“待执行”(Pending)这两种状态有什么区别？
 
-Pending means, the execution is waiting for an available execution connection slot.
-Executing means the query is currently executing against the database.
+待执行(Pending)指的是执行正在等待一个可用的执行连接槽。执行中(Executing)意味着目前正对数据库进行查询。
 
-Here is a list of all Status Codes for reference.
+以下是所有的状态码清单，供参考。
 
-   - QUERY_STATE_PENDING  - query execution is waiting for execution slot
-   - QUERY_STATE_EXECUTING - query is executing
-   - QUERY_STATE_FAILED - execution failed
-   - QUERY_STATE_COMPLETED - execution completed successfully
-   - QUERY_STATE_CANCELLED - execution cancelled by user
-   - QUERY_STATE_EXPIRED - query execution expired, result no longer available
+   - QUERY_STATE_PENDING  - 查询执行正在等待执行插槽
+   - QUERY_STATE_EXECUTING - 查询正在运行中
+   - QUERY_STATE_FAILED - 执行失败
+   - QUERY_STATE_COMPLETED - 执行成功完成
+   - QUERY_STATE_CANCELLED - 用户取消执行
+   - QUERY_STATE_EXPIRED - 查询执行过期，结果不再可用
