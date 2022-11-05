@@ -1,21 +1,58 @@
 ---
 title: ETHSF Hacker Guide
+description: Welcome to the Dune API ETHSF Hackers! Get started here.
 ---
 
-Hello ETHSF hackers!
+Hello ETHSF hackers, welcome to the wonderful world of Dune, we're excited to see what you build with our API!
 
-Welcome to the wonderful world of Dune.
+## Getting an API Key
 
 To get started building on our API, [first create a Dune account here](https://dune.com/auth/register) (if you don't already have one 🧙).
 
 [Then fill out this form](https://forms.gle/JgToag62ZGY58nBh6) and we'll send you an API key as soon as we can (stop by our booth and bug us if you're waiting too long 🪄).
 
-Be sure to check out:
+## Important Links
 
-- Our [API Welcome page here](.) to learn about how our API works
+- Our [API Welcome page here](../api/) to learn about how our API works
 - Our Quick Start Guides (for Python and JS) to learn how to setup your environment and start executing.
 - Our Reference Section for specifics about our Endpoints
 - Our [#dune-api Discord channel](https://discord.com/channels/757637422384283659/1019910980634939433) for questions and support!
+
+## Picking a Programming Language
+While you can consume our API in the language of your choice - see the [API Reference section](../api/api-reference/authentication.md) - we currently have quick start guides for [Python](../api/quick-start/api-py.md) and [Node.js](../api/quick-start/api-js.md).
+
+## What to Build
+
+With Dune, you have access to almost all of the data from today's most popular blockchain ecosystems. There is no limit to what you can build on top of this data!
+
+With so many possibilities, it can be challenging to figure out what to work on at times, so here are some ideas to help you ideate:
+
+### ETHSF Sponsor Bounties
+
+Of course, [we have a Bounty available](https://ethglobal.com/events/ethsanfrancisco2022/prizes#dune) for you to earn cash and prizes for doing cool things with our API.
+
+You can also find inspiration from our awesome fellow sponsors.
+
+### Previous Hackathons
+
+Awesome projects from previous hackathons are also a great way to get some cool ideas:
+
+- [ETHBerlin](https://dunedigest.substack.com/p/dune-digest-48)
+
+### New Kinds of Interfaces for Blockchain Data
+
+Our community champion [@0xBoxer](https://dune.com/0xBoxer) has this [tutorial](https://youtu.be/ez3VfcfNwvc) where he walks us through creating a [dashboard](https://dune.com/0xBoxer/gas-tracker-dashboard) for personalized metrics for any wallet.
+
+With the Dune API it's possible to build a much nicer interface for this or any dashboard on Dune inside of your own super-smooth, super-cool app UX.
+
+Or Excel, Google sheets, Notion Pages, Discord Bots, Telegram Bots, there are no limits.
+With the API, the Data Can Flow anywhere!
+
+### Real World Examples from Cow Protocol
+
+[@bh2smith](https://dune.com/bh2smith) from our community (and [Cow Protocol](https://dune.com/cowprotocol)), gave a talk Thursday at [DuneCon](https://dunecon.com) where he walked us through some real-world examples of how Cow Protocol has been using the API.
+
+[Check out the replay here](https://youtu.be/VEvk-iqxXIM?t=404)!
 
 ## About Dune @ ETHSF
 
