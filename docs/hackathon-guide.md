@@ -1,5 +1,5 @@
 ---
-title: ETHSF Hacker Guide
+title: insert_hackathon_name Hacker Guide
 description: Welcome to the Dune API ETHSF Hackers! Get started here.
 ---
 
@@ -13,13 +13,13 @@ To get started building on our API, [first create a Dune account here](https://d
 
 ## Important Links
 
-- Our [API Welcome page here](../api/) to learn about how our API works
-- Our Quick Start Guides (for Python and JS) to learn how to setup your environment and start executing.
-- Our Reference Section for specifics about our Endpoints
+- Our [API Welcome page here](api/index.md) to learn about how our API works
+- Our [Quick Start Guides](api/quick-start/index.md) (for Python and JS) to learn how to setup your environment and start executing.
+- Our [API Reference](api/api-reference/index.md) section for specifics about our Endpoints
 - Our [#dune-api Discord channel](https://discord.com/channels/757637422384283659/1019910980634939433) for questions and support!
 
 ## Picking a Programming Language
-While you can consume our API in the language of your choice - see the [API Reference section](../api/api-reference/authentication.md) - we currently have quick start guides for [Python](../api/quick-start/api-py.md) and [Node.js](../api/quick-start/api-js.md).
+While you can consume our API in the language of your choice - see the [API Reference section](api/api-reference/authentication.md) - we currently have quick start guides for [Python](api/quick-start/api-py.md) and [Node.js](api/quick-start/api-js.md).
 
 ## What to Build
 

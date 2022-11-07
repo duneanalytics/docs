@@ -1,5 +1,6 @@
 title: API Reference
 nav:
+- index.md
 - authentication.md
 - Execute Query ID: execute-query-id.md
 - Execution Status: execution-status.md
