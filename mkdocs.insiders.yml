@@ -52,7 +52,7 @@ plugins:
        'features/pro.md': 'reference/pro.md'
        'features/teams.md': 'getting-started/teams.md'
        'features/dune-v2.md': 'reference/dune-v2/index.md'
-       'features/dune-v2/query-engine.md': 'reference/dune-v2/query-engine.md'
+       'features/dune-v2/query-engine.md': 'docs/reference/dune-v2/query-engine.md'
        'features/queries.md': 'getting-started/queries/index.md'
        'features/queries/data-explorer.md': 'getting-started/queries/data-explorer.md'
        'features/queries/query-results.md': 'getting-started/queries/query-results.md'
