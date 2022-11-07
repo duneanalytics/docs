@@ -1,5 +1,6 @@
 title: Quick Start
 nav:
+- index.md
 - api-py.md
 - api-js.md
 - community-clients.md
