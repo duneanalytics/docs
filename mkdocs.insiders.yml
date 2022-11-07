@@ -48,7 +48,7 @@ plugins:
        'features/index.md': 'getting-started/index.md'
        'features/dashboards.md': 'getting-started/dashboards.md'
        'features/decoded-contracts.md': 'getting-started/decoding-contracts.md'
-       'features/parameters.md': 'getting-started/parameters.md'
+       'features/parameters.md': 'getting-started/queries/parameters.md'
        'features/pro.md': 'reference/pro.md'
        'features/teams.md': 'getting-started/teams.md'
        'features/dune-v2.md': 'reference/dune-v2/index.md'

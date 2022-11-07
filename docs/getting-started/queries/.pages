@@ -3,4 +3,6 @@ nav:
 - data-explorer.md
 - query-window.md
 - query-results.md
+- parameters.md
 - tips.md
+- ...
