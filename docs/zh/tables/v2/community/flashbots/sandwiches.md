@@ -1,21 +1,21 @@
-# sandwiches
+# 三明治表
 
 ## **sandwiches**
 
-This table contains detailed information about executed sandwiches
+这个表中包含已执行的三明治中的细节信息。
 
-| **Column name**                   | **Type**  | **Description**                                                 |
+| **列名称**                   | **数据类型**  | **描述n**                                                 |
 | --------------------------------- | --------- | --------------------------------------------------------------- |
-| created\_at                       | datetime  | Time of the records creation                                    |
-| block\_number                     | bigint    | Block number                                                    |
-| backrun\_swap\_trace\_address     | string    | address of the swap in the backrun transaction                  |
-| backrun\_swap\_transaction\_hash  | string    | transaction\_hash of backrun transaction of specified sandwich  |
-| frontrun\_swap\_trace\_address    | string    | address of the swap in the frontrun transaction                 |
-| frontrun\_swap\_transaction\_hash | string    | transaction\_hash of frontrun transaction of specified sandwich |
-| id                                | string    | Internal id of the sandwich                                     |
-| profit\_amount                    | bigint    | Profit amount after the arbitrage                               |
-| profit\_token\_address            | string    | Address of the profit asset                                     |
-| sandwicher\_address               | string    | Address of the sandwicher                                       |
-| timestamp                         | timestamp | Timestamp of the latest update of the file                      |
+| created\_at                       | datetime  | 记录的时间                                    |
+| block\_number                     | bigint    | 区块号                                                    |
+| backrun\_swap\_trace\_address     | string    | 三明治中反向交易的地址                  |
+| backrun\_swap\_transaction\_hash  | string    | 具体的一个三明治中反向交易的交易哈希  |
+| frontrun\_swap\_trace\_address    | string    | 三明治中前向交易的地址                 |
+| frontrun\_swap\_transaction\_hash | string    | 具体的一个三明治中前向交易的交易哈希 |
+| id                                | string    | 三明治中的内部Id                                    |
+| profit\_amount                    | bigint    | 套利后的利润                               |
+| profit\_token\_address            | string    | 利润资产的地址                                     |
+| sandwicher\_address               | string    | 发起三明治的地址                                       |
+| timestamp                         | timestamp | 文件最后更新的时间戳                     |
 
 ## \*\*\*\*

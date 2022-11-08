@@ -7,11 +7,11 @@ description: 下面您会发现一些与查询相关的技巧，以帮助您成�
 
 如果您有一个您认为我们应该添加的技巧贴士，请[在我们的 GitHub repository 中对该文档提出修改意见](https://github.com/duneanalytics/docs/edit/master/docs/features/queries/tips.md)!
 
-## 使用 Abstractions 和魔法
+## 使用数据抽象和魔法
 
-用 Dune 做很棒的分析的最简单方法是使用您在 [Abstractions](../../tables/abstractions.md)（Dune V1）和[魔法](../../spellbook/index.md)（Dune V2）中发现的整理好的数据。
+用 Dune 做很棒的分析的最简单方法是使用您在[数据抽象](../../tables/abstractions.md)（Dune V1）和[魔法](../../spellbook/index.md)（Dune V2）中发现的整理好的数据。
 
-这些表格，如`dex.trades`，是清洗过的并包含数据/元数据（如人类可读的代币符号），让它们非常容易查询。
+这些数据表，如`dex.trades`，是清洗过的并包含数据/元数据（如人类可读的代币符号），让它们非常容易查询。
 
 ## V1 内联以太坊地址格式
 

@@ -2,11 +2,11 @@
 description: EVM chains have some differences
 ---
 
-# EVM Chains
+# EVM链
 
-EVM chains at large follow the same execution model, however there is sometimes is differences in the consensus algorithm, the gas costs or even the calculation of gas costs.
+整个 EVM 链遵循相同的执行模型，但有时在共识算法、gas花费，以及甚至gas成本的计算方面存在差异。
 
-You can find out about the individual chains in the specific sections of the documentation:
+您可以在文档的特定部分中找到有关各个链的信息：
 
 <div class="cards grid" markdown>
 - [BNB Chain (BSC)](bnb-chain-bsc/index.md)
