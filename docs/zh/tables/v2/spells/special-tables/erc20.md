@@ -4,15 +4,15 @@ description: A smart contract interface standard for fungible tokens.
 
 # ERC20
 
-### **ERC20 definition**
+### **ERC20定义**
 
-The ERC20 standard is the token standard that is used for fungible assets on all EVM blockchains. ERC20s can represent anything from magic internet points to USD to gold tokens.
+ERC20标准是用于所有EVM区块链上的同质化代币的代币标准。ERC20可以代表任何东西，从神奇的互联网积分到美元再到黄金代币。
 
-The ERC-20 standard was proposed by Fabian Vogelsteller in November 2015 and represents the first token standard that implements an API for tokens within Smart Contracts. This standardization of smart contracts solves the issue of interoperability with other applications on the blockchain. Since all tokens share the same interface, other smart contracts are easily able to interact with them.
+ERC-20标准由Fabian Vogelsteller于2015年11月提出，它代表了第一个在智能合约中实现代币API的代币标准。这种智能合约的标准化解决了与区块链上其他应用程序的互操作性问题。 由于所有代币共享相同的接口，其他智能合约可以轻松地与它们交互。
 
-A smart contract that contains the erc20 token standard is not limited to only having these functions, but it needs to contain these functions to be within the standard.
+包含ERC-20代币标准的智能合约不仅限于具有这些功能，还需要包含这些功能才能在标准范围内。
 
-For more reading check out the [initial proposal](https://eips.ethereum.org/EIPS/eip-20) or the [ethereum.org documentation](https://ethereum.org/en/developers/docs/standards/tokens/erc-20).
+想要了解更多信息，可以查看 [initial proposal](https://eips.ethereum.org/EIPS/eip-20)或者[ethereum.org documentation](https://ethereum.org/en/developers/docs/standards/tokens/erc-20).
 
 _Please note that Binance Smart Chain chose to rename ERC to BEP, this is reflected in out tables._
 
