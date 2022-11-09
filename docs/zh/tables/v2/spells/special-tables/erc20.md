@@ -57,12 +57,12 @@ event Approval(address indexed _owner, address indexed _spender, uint256 _value)
 
 这是在ERC20智能合约中成功转移代币时发出的事件。这可以通过调用 `transfer` 或 `transferFrom` 函数来触发。
 
-| from               | string      | the sender of the `ERC20` token                                                                                                                                              |
+| from               | string      | `ERC20`代币的发送者                                                                                                                                         |
 | ------------------ | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| to                 | string      | the receiver of the `ERC20` token                                                                                                                                            |
-| value              | numeric     | the amount of `ERC20` tokens sent. Notice that you have to divide this by the relevant decimals of the `ERC20` token to get to the commonly used denomination of this token. |
-| contract\_address  | string      | the contract\_address of the `ERC20` token                                                                                                                                   |
-| evt\_tx\_hash      | string      | the hash of the transaction in which this log is contained                                                                                                                   |
+| to                 | string      | `ERC20`代币的接收者                                                                                                                                              |
+| value              | numeric     | 发送的“ERC20”代币数量。 请注意，您必须将其除以“ERC20”代币的相关的精度，才能得到该代币的常用面额。 |
+| contract\_address  | string      | `ERC20`代币的智能合约地址                          |
+| evt\_tx\_hash      | string      | 包含这个转移代币事件log的 transactionhash                                                                                                                 |
 | evt\_index         | numeric     | this logs index position in the block (cumulative amount of logs ordered by execution)                                                                                       |
 | evt\_block\_time   | timestamptz | the time when the block was mined that includes this log                                                                                                                     |
 | evt\_block\_number | int8        | the block\_number of the block that includes this log                                                                                                                        |
