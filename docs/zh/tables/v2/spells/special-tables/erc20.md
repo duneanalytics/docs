@@ -69,7 +69,6 @@ event Approval(address indexed _owner, address indexed _spender, uint256 _value)
 
 **erc20\_blockchain.ERC20\_evt\_Approval**
 
-ERC20 tokens can be moved by other smart contracts. In order to allow this action, user will call the `approve` function first. Should that transaction complete successfully, the `Approval` event will get emitted.
 ERC20代币可以被其他智能合约转移。 用户需要首先调用 `approve` 函数，来批准类似的操作。事务成功执行后将发出`Approval` 事件。
 
 | owner              | string                   | the address giving the approval                                                        |
