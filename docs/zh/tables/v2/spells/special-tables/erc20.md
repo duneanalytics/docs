@@ -62,21 +62,22 @@ event Approval(address indexed _owner, address indexed _spender, uint256 _value)
 | to                 | string      | `ERC20`代币的接收者                                                                                                                                              |
 | value              | numeric     | 发送的“ERC20”代币数量。 请注意，您必须将其除以“ERC20”代币的相关的精度，才能得到该代币的常用面额。 |
 | contract\_address  | string      | `ERC20`代币的智能合约地址                          |
-| evt\_tx\_hash      | string      | 包含这个转移代币事件log的 transactionhash                                                                                                                 |
-| evt\_index         | numeric     | this logs index position in the block (cumulative amount of logs ordered by execution)                                                                                       |
-| evt\_block\_time   | timestamptz | the time when the block was mined that includes this log                                                                                                                     |
-| evt\_block\_number | int8        | the block\_number of the block that includes this log                                                                                                                        |
+| evt\_tx\_hash      | string      | 包含这个转移代币事件log的transaction哈希                                                                                                                  |
+| evt\_index         | numeric     | 在区块日志索引中的位置 (按照执行顺序累加)                                                                                       |
+| evt\_block\_time   | timestamptz | 包含这个日志的区块被挖出的时间                                                                                                                    |
+| evt\_block\_number | int8        | 包含这个日志的区块的区块高度                                                                                                                    |
 
 **erc20\_blockchain.ERC20\_evt\_Approval**
 
 ERC20 tokens can be moved by other smart contracts. In order to allow this action, user will call the `approve` function first. Should that transaction complete successfully, the `Approval` event will get emitted.
+ERC20代币可以被其他智能合约转移。 用户需要首先调用 `approve` 函数，来批准类似的操作。事务成功执行后将发出`Approval` 事件。
 
 | owner              | string                   | the address giving the approval                                                        |
 | ------------------ | ------------------------ | -------------------------------------------------------------------------------------- |
-| spender            | string                   | the address which has approval to move the tokens                                      |
-| value              | numeric                  | the spending limit                                                                     |
-| contract\_address  | string                   | the contract address of the erc20 token that can be moved                              |
-| evt\_tx\_hash      | string                   | the hash of the transaction in which this log is contained                             |
-| evt\_index         | bigint                   | this logs index position in the block (cumulative amount of logs ordered by execution) |
-| evt\_block\_time   | timestamp with time zone | the time when the block was mined that includes this log                               |
-| evt\_block\_number | bigint                   | the block\_number of the block that includes this log                                  |
+| spender            | string                   | 被批准转移代币的地址                                |
+| value              | numeric                  | 支出限额
+| contract\_address  | string                   | 可被转移的ERC20代币地址
+| evt\_tx\_hash      | string                   | 包含这个转移代币事件log的transaction哈希                                                                     
+| evt\_index         | bigint                   | t在区块日志索引中的位置 (按照执行顺序累加)   |
+| evt\_block\_time   | timestamp with time zone | 包含这个日志的区块被挖出的时间                                     |
+| evt\_block\_number | bigint                   | 包含这个日志的区块的区块高度                                             |
