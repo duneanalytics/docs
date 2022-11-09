@@ -12,7 +12,7 @@ ERC-20标准由Fabian Vogelsteller于2015年11月提出，它代表了第一个�
 
 包含ERC-20代币标准的智能合约不仅限于具有这些功能，还需要包含这些功能才能在标准范围内。
 
-想要了解更多信息，可以查看 [initial proposal](https://eips.ethereum.org/EIPS/eip-20)或者[ethereum.org documentation](https://ethereum.org/en/developers/docs/standards/tokens/erc-20).
+想要了解更多信息，可以查看 [initial proposal](https://eips.ethereum.org/EIPS/eip-20) 或者 [ethereum.org documentation](https://ethereum.org/en/developers/docs/standards/tokens/erc-20).
 
 _Please note that Binance Smart Chain chose to rename ERC to BEP, this is reflected in out tables._
 
