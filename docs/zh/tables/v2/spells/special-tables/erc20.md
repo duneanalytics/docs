@@ -50,13 +50,12 @@ event Approval(address indexed _owner, address indexed _spender, uint256 _value)
 
 ### Dune上的表
 
-In Dune, we decode all transfer events across all smart contracts that use the ERC20 token standard into the `erc20_blockchain.ERC20_evt_Transfer` table.
-
-Additionally, we parse all token approval events into the `erc20_blockchain.ERC20_evt_Approval` table.
+在Dune中，我们将使用ERC20代币标准的所有智能合约中的所有传输事件解码到 `erc20_blockchain.ERC20_evt_Transfer` 表中。
+此外，我们将所有Token授权事件解析到 `erc20_blockchain.ERC20_evt_Approval` 表中。
 
 #### erc20\_blockchain.ERC20\_evt\_Transfer
 
-This is the event that gets emitted upon successful transfer of a token within a ERC20 smart contract. This can be triggered by calling the `transfer` or `transferFrom` function.
+这是在ERC20智能合约中成功转移代币时发出的事件。这可以通过调用 `transfer` 或 `transferFrom` 函数来触发。
 
 | from               | string      | the sender of the `ERC20` token                                                                                                                                              |
 | ------------------ | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
