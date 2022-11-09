@@ -31,7 +31,7 @@ sources:
           error_after: { count: 24, period: hour }
 ```
 
-接着添加列描述和测试。 关于测试，通常您需要使主键既唯一又非空。
+接着添加列描述和测试。 通常您需要使主键值既唯一又非空。
 
 您可以在列名之前使用符号`&`，以便稍后在同一 YAML 文件中重用其描述。
 
@@ -69,6 +69,6 @@ sources:
           description: "Amount of ERC20 token transferred" 
 ```
 
-这些描述将被 dbt 渲染生成文档。 您可以在本地通过 Spellbook 目录中的 CLI 中运行 `dbt docs generate` 和 `dbt docs serve` 来打开它们。 我们的 [魔法书文档](https://spellbook-docs.dune.com/#!/overview)就是由它们自动发布的。
+这些描述将被 dbt 渲染生成文档。 您可以在本地通过 Spellbook 目录中的 CLI 中运行 `dbt docs generate` 和 `dbt docs serve` 来打开它们。 我们的 [魔法书文档](https://spellbook-docs.dune.com/#!/overview)就是由此自动发布的。
 
 ![dbt 文档页面](https://lh6.googleusercontent.com/vr9DleUs\_HcdzMZ6mWq81l-IRq1C\_utHCVB5WddOHy9Z1\_fSyz8GcB8Cyj877nKNHsXLh3K3-owFssNIl4ZaJS27clEeBppHBi8DlNjzVKGeGZdF\_AE8VxRj0pziR-2jGTA-MED7OtTq3GhuwQM)
