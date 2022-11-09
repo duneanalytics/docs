@@ -1,6 +1,5 @@
 INHERIT: ../mkdocs.yml
 site_url: https://dune.com/docs/zh
-site_dir: site/docs/zh
 theme:
   language: zh
   name: material
