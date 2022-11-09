@@ -20,32 +20,32 @@ _请注意，币安智能链选择将ERC重命名为BEP，从表名中就可以�
 
 ```solidity
 function name() public view returns (string) 
-/* returns the full name of this token */
+/* 返回Token的全称 */
 function symbol() public view returns (string) 
-/* returns the ticker of this token */
+/* 返回Token的ticker*/
 function decimals() public view returns (uint8) 
-/* returns the amount of decimals of this token */
+/* 返回Token的精度 */
 function totalSupply() public view returns (uint256) 
-/* returns the current circulating supply of this token */
+/* 返回Token当前的循环供应量 */
 function balanceOf(address _owner) public view returns (uint256 balance) 
-/* returns the balance of the specified address */ 
+/* 返回指定地址的余额 */ 
 function transfer(address _to, uint256 _value) public returns (bool success) 
-/* is used to transfer the specified quantity(_value) of tokens to the address specified*/ 
+/* 将指定数量的代币转移到指定地址*/ 
 function transferFrom(address _from, address _to, uint256 _value) public returns (bool success) 
-/* is used when a third address has permission to move tokens from the sender(_from) to the receiver(_to)*/
+/* 如果存在当除发送者接受者之外的第三个地址有权限完成转账，这个时候可以使用此方法*/
 function approve(address _spender, uint256 _value) public returns (bool success) 
-/* is used to approve a spender for a specific quantitiy(_value) of tokens*/
+/* 用于授权花费代币的数量*/
 function allowance(address _owner, address _spender) public view returns (uint256 remaining)
-/* returns the quantity(_value) of tokens that the spender is still allowed to spend from the owners address*/
+/* 返回当前代币消耗者可使用的剩余代币数量（_value）*/
 ```
 
 **事件**
 
 ```solidity
 event Transfer(address indexed _from, address indexed _to, uint256 _value)
-/* gets emitted upon successfull transfer of tokens*/
+/* 在成功转出代币时发出*/
 event Approval(address indexed _owner, address indexed _spender, uint256 _value)
-/* gets emitted upon successful approval of an owner address with an allowed quantity(_value) of tokens that can be moved*/
+/* 在给某个地址成功授权一定数量代币的时候发出*/
 ```
 
 ### Dune上的表
