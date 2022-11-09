@@ -15,6 +15,7 @@ ERC-20标准由Fabian Vogelsteller于2015年11月提出，它代表了第一个�
 想要了解更多信息，可以查看 [initial proposal](https://eips.ethereum.org/EIPS/eip-20) 或者 [ethereum.org documentation](https://ethereum.org/en/developers/docs/standards/tokens/erc-20).
 
 _Please note that Binance Smart Chain chose to rename ERC to BEP, this is reflected in out tables._
+_请注意，币安智能链选择将ERC重命名为BEP，从表名中就可以看到这个变化。_
 
 **Methods**
 
