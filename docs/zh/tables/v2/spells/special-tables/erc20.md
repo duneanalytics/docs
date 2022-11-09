@@ -77,6 +77,6 @@ ERC20代币可以被其他智能合约转移。 用户需要首先调用 `approv
 | value              | numeric                  | 支出限额
 | contract\_address  | string                   | 可被转移的ERC20代币地址
 | evt\_tx\_hash      | string                   | 包含这个转移代币事件log的transaction哈希                                                                     
-| evt\_index         | bigint                   | t在区块日志索引中的位置 (按照执行顺序累加)   |
+| evt\_index         | bigint                   | 在区块日志索引中的位置 (按照执行顺序累加)   |
 | evt\_block\_time   | timestamp with time zone | 包含这个日志的区块被挖出的时间                                     |
 | evt\_block\_number | bigint                   | 包含这个日志的区块的区块高度                                             |
