@@ -39,7 +39,7 @@ function allowance(address _owner, address _spender) public view returns (uint25
 /* returns the quantity(_value) of tokens that the spender is still allowed to spend from the owners address*/
 ```
 
-**Events**
+**事件**
 
 ```solidity
 event Transfer(address indexed _from, address indexed _to, uint256 _value)
@@ -48,7 +48,7 @@ event Approval(address indexed _owner, address indexed _spender, uint256 _value)
 /* gets emitted upon successful approval of an owner address with an allowed quantity(_value) of tokens that can be moved*/
 ```
 
-### Tables on Dune
+### Dune上的表
 
 In Dune, we decode all transfer events across all smart contracts that use the ERC20 token standard into the `erc20_blockchain.ERC20_evt_Transfer` table.
 
