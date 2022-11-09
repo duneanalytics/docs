@@ -1,12 +1,12 @@
 ---
-title: Data Sources
+title: 数据源
 ---
 
-In the Spellbook project, the source (i.e. raw and decoded tables your spell depends on) must be defined in a YAML file. Once a source has been defined it does not need to be defined again.
+在魔法书中，数据源（即构建魔法所依赖的原始数据表和解码数据表）必须在 YAML 文件中定义。 一个数据源在魔法书中只需定义一次。
 
-Defining a source can be as simple as adding its schema and name. But to harness the full power of the tool, we’ll also want to define tests, freshness checks, and add column descriptions.
+仅需添加其模式和名称就可以简单地定义数据源。 但要充分利用该工具的全部功能，我们还需要定义测试、数据更新周期，以及对每一列添加描述。
 
-Define the table name and description under the schema.
+以下是一个定义数据源的示例，我们先添加表名和该表描述。
 
 ```yaml
  sources:
@@ -16,7 +16,7 @@ Define the table name and description under the schema.
       - name: evt_transfer
 ```
 
-Add a freshness check. Freshness checks use a timestamp type field to validate when the last rows of data were loaded. Here we’ll use `evt_block_time` and use the DBT default warning and error checks.
+然后我们添加更新检查。 更新检查使用时间戳类型字段来验证最后几行数据的加载时间。 在这里，我们将使用 `evt_block_time` 并使用 DBT 默认的警告和错误检查。
 
 ```yaml
 sources:
@@ -31,11 +31,11 @@ sources:
           error_after: { count: 24, period: hour }
 ```
 
-Add column descriptions and tests. Regarding tests, generally, you’ll want to make the primary key both unique and non\_null.
+接着添加列描述和测试。 通常您需要使主键值既唯一又非空。
 
-You can use an ampersand anchor `&` before a column name to reuse its description later in the same YAML file.
+您可以在列名之前使用符号`&`，以便稍后在同一 YAML 文件中重用其描述。
 
-`*`column name will reuse the column description defined earlier.
+`*`列名将重用之前定义的列描述。
 
 ```yaml
 sources:
@@ -69,6 +69,6 @@ sources:
           description: "Amount of ERC20 token transferred" 
 ```
 
-These descriptions are rendered in the docs by dbt. Locally, you can open them by running `dbt docs generate` and `dbt docs serve` from your CLI in the Spellbook directory. They are automatically deployed as our [Spellbook docs](https://spellbook-docs.dune.com/#!/overview).
+这些描述将被 dbt 渲染生成文档。 您可以在本地通过 Spellbook 目录中的 CLI 中运行 `dbt docs generate` 和 `dbt docs serve` 来打开它们。 我们的 [魔法书文档](https://spellbook-docs.dune.com/#!/overview)就是由此自动发布的。
 
-![dbt documentation page](https://lh6.googleusercontent.com/vr9DleUs\_HcdzMZ6mWq81l-IRq1C\_utHCVB5WddOHy9Z1\_fSyz8GcB8Cyj877nKNHsXLh3K3-owFssNIl4ZaJS27clEeBppHBi8DlNjzVKGeGZdF\_AE8VxRj0pziR-2jGTA-MED7OtTq3GhuwQM)
+![dbt 文档页面](https://lh6.googleusercontent.com/vr9DleUs\_HcdzMZ6mWq81l-IRq1C\_utHCVB5WddOHy9Z1\_fSyz8GcB8Cyj877nKNHsXLh3K3-owFssNIl4ZaJS27clEeBppHBi8DlNjzVKGeGZdF\_AE8VxRj0pziR-2jGTA-MED7OtTq3GhuwQM)
