@@ -9,11 +9,6 @@ description: >-
 
 ### 去中心化交易所的交易数据
 
-Decentralized exchanges are the beating heart of the industry. You can swap any ERC20 token for any ERC20 token through the magic of smart contracts. The problem here though: there is so many decentralized exchanges out there that it is hardly possible for any single person to work with the smart contract data for all of them. That's why we created dex.trades.
-
-This table standardizes and normalizes the trading data across virtually all relevant decentralized exchanges. This in turn allows you to easily query for trading data for your favorite tokens without having to deal with all of the different dex smart contracts yourself.
-
-The scripts that generate the table dex.trades can be found in this [public github](https://github.com/duneanalytics/spellbook/tree/master/ethereum/dex) repo.
 
 去中心化交易所是该行业的脉搏。您可以通过智能合约将任何ERC20代币换成任何ERC20代币。但是这里的问题是：这里有如此多的去中心化交易所，以至于几乎任何人都不可能访问所有这些交易所的智能合约的完整数据。这就是我们创建dex.trades的原因。
 
