@@ -7,36 +7,37 @@ description: >-
 
 # dex.trades
 
-### Decentralized exchange trading data
+### 去中心化交易所的交易数据
 
-Decentralized exchanges are the beating heart of the industry. You can swap any ERC20 token for any ERC20 token through the magic of smart contracts. The problem here though: there is so many decentralized exchanges out there that it is hardly possible for any single person to work with the smart contract data for all of them. That's why we created dex.trades.
 
-This table standardizes and normalizes the trading data across virtually all relevant decentralized exchanges. This in turn allows you to easily query for trading data for your favorite tokens without having to deal with all of the different dex smart contracts yourself.
+去中心化交易所是该行业的脉搏。您可以通过智能合约将任何ERC20代币换成任何ERC20代币。但是这里的问题是：这里有太多dex了，以几乎没有人能拿到所有这些dex智能合约的完整数据。这就是我们创建dex.trades的原因。
 
-The scripts that generate the table dex.trades can be found in this [public github](https://github.com/duneanalytics/spellbook/tree/master/ethereum/dex) repo.
+该表对几乎所有的去中心化交易所的交易数据进行了标准化和规范化。这将使您可以轻松查询您喜欢的代币的交易数据，而无需自己处理所有不同的dex智能合约。
+
+生成表dex.trades的脚本可以在这个[公共github](https://github.com/duneanalytics/spellbook/tree/master/ethereum/dex) 存储库中找到。
 
 ### dex.trades
 
-| block\_time                 | timestamptz | the timestamp of the block that included this transaction                                                                |
+| block\_time                 | timestamptz | 交易的时间戳                                                                |
 | --------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------ |
-| token\_a\_symbol            | text        | the symbol of one of the two tokens that got traded                                                                      |
-| token\_b\_symbol            | text        | the symbol of one of the two tokens that got traded                                                                      |
-| token\_a\_amount            | numeric     | the amount of token A that got traded                                                                                    |
-| token\_b\_amount            | numeric     | the amount of token B that got traded                                                                                    |
-| project                     | text        | On which dex did this trade get executed?                                                                                |
-| version                     | text        | which version of the dex got used?                                                                                       |
-| category                    | text        | is this project and aggregator or a decentralized exchange?                                                              |
-| trader\_a                   | bytea       | Which contract called the dex contract?                                                                                  |
-| trader\_b                   | bytea       | in some special cases there actually is a counterparty to transactions, this party will get displayed here if applicable |
-| token\_a\_amount\_raw       | numeric     | the raw amount of token A that got traded                                                                                |
-| token\_b\_amount\_raw       | numeric     | the raw amount of token B that got traded                                                                                |
-| usd\_amount                 | numeric     | The USD value of this trade                                                                                              |
-| token\_a\_address           | bytea       | the erc20 token contract address of token A                                                                              |
-| token\_b\_address           | bytea       | the erc20 token contract address of token B                                                                              |
-| exchange\_contract\_address | bytea       | the address of the decentralized exchange contract that made this trade possible                                         |
-| tx\_hash                    | bytea       | the hash of the transaction that contained this trade                                                                    |
-| tx\_from                    | bytea       | Which address initiated this transaction?                                                                                |
-| tx\_to                      | bytea       | What was the first smart contract that got called during this tx?                                                        |
-| trace\_address              | ARRAY       | Which position in the graph tree does the execution of the trade have?                                                   |
-| evt\_index                  | integer     | this logs index position in the block (cumulative amount of logs ordered by execution)                                   |
-| trade\_id                   | integer     | just for database magic                                                                                                  |
+| token\_a\_symbol            | text        | 参与交易的2个代币中的其中1个的符号                                                                     |
+| token\_b\_symbol            | text        | 参与交易的2个代币中的其中1个的符号                                                                      |
+| token\_a\_amount            | numeric     | 被交易的代币A的数量|
+| token\_b\_amount            | numeric     | 被交易的代币B的数量|                                                                            |
+| project                     | text        | 交易是在哪个dex上发生的                                                                            |
+| version                     | text        | dex的版本                                                                                              |
+| category                    | text        | 这是一个聚合器或者是一个单纯的dex           |
+| trader\_a                   | bytea       | 哪个地址请求了dex 的智能合约                                                                                  |
+| trader\_b                   | bytea       | 在某些特殊情况下，实际上交易的对手方，如果有会显示在这里 | |
+| token\_a\_amount\_raw       | numeric     | 被交易的代币A的原始数量                                                                                |
+| token\_b\_amount\_raw       | numeric     | 被交易的代币B的原始数量                                                                          |
+| usd\_amount                 | numeric     | 该笔交易的USD价值                                                                                              |
+| token\_a\_address           | bytea       | 代币A的ERC20合约地址                                                                              |
+| token\_b\_address           | bytea       | 代币B的ERC20合约地址                                                                              |                                                                             |
+| exchange\_contract\_address | bytea       | Dex的智能合约地址                                         |
+| tx\_hash                    | bytea       | 包含着笔交易的哈希           |
+| tx\_from                    | bytea       | 交易的发起者                                                                                |
+| tx\_to                      | bytea       | 这个tx调用的第一个智能合约                                                        |
+| trace\_address              | ARRAY       | 交易执行在图树中的哪个位置？                                                  |
+| evt\_index                  | integer     | 在区块中的索引位置（按执行排序的累计日志量）                                  |
+| trade\_id                   | integer     | 出于database magic的需要                                                                                                 |
