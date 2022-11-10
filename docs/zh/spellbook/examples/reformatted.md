@@ -1,16 +1,16 @@
 ---
-title: Reformatted Transfers
+title: 重新更改格式的转账
 ---
 
-Our base table records the transfer amount to and from an account. To make it easier to sum of transfers, we munge this into a union of sent txns and received txns.
+我们的基础数据表记录了一个账户的转账进出数额。为了便于对转账数额进行汇总，我们将其合并为发送交易和接收交易的集合。
 
-Additionally, WETH requires special handling given the additional functions of deposit and withdrawal. This means we need to add `zeroex_ethereum.weth9_evt_deposit` as a source like we did for `erc20_ethereum.evt_transfer` above.
+此外，鉴于存款和提款的额外功能，WETH 需要特殊处理。这意味着我们需要添加 `zeroex_ethereum.weth9_evt_deposit`作为数据源，就像我们在上面为 `erc20_ethereum.evt_transfer` 做的那样。
 
-Similar to a source, the model is defined in a YAML file. This is where things like the description, tests, and metadata are defined. This is also where we track “contributors”. So make sure you get your clout and add your handle when writing or editing a spell. Then you’ll be credited for your contribution in the [documentation](https://spellbook-docs.dune.com/#!/overview).
+与源文件类似，模型被定义在 YAML 文件中。这是定义描述、测试和元数据等内容的地方。这也是我们追踪"贡献者"的地方。因此，为了确保您获得应有的影响力，请在编写或编辑魔法时添加您的名缀。然后您的贡献会被记入在[文档](https://spellbook-docs.dune.com/#!/overview)中。
 
-In the JINJA config block, we define that the alias for this view is `erc20`. Without this alias, the table name would default to the file name. The schema name for this view is defined in the [dbt\_project.yml](https://github.com/duneanalytics/spellbook/blob/master/spellbook/dbt\_project.yml) file in the root of the Spellbook project. Schema’s are defined there by the directory structure. The name of this view would be transfers\_ethereum.erc20 given the current structure.
+在 JINJA 配置块中，我们定义这个视图的别名是 `erc20`。如果没有这个别名，数据表名称将默认为文件名。这个视图的图式名称在魔法书项目根目录的 [dbt\_project.yml](https://github.com/duneanalytics/spellbook/blob/master/spellbook/dbt\_project.yml) 文件中定义。图式是由目录结构在那里定义的。考虑到当前的结构，这个视图的名称应该是 transfers\_ethereum.erc20。
 
-Note: we're generally against using SHOUT CASE, that’s what IDEs are for. Sue us.
+注意：我们基本上反对使用 SHOUT CASE（大写），那是 IDEs 用的。不许反对。
 
 [transfers\_ethereum\_erc20.sql](https://github.com/duneanalytics/spellbook/blob/master/spellbook/models/transfers/ethereum/erc20/transfers\_ethereum\_erc20.sql)
 
