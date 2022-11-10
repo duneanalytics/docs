@@ -1,35 +1,35 @@
 ---
-title: Dune API Billing & Pricing
-description: Information about Dune's API billing and pricing.
+title: Dune API 计费与定价
+description: Dune API 计费与定价的相关信息。
 ---
-# FAQ: Billing & Pricing
+# FAQ: 计费与定价
 
-## Is the API free?
+## API 免费吗？
     
-We are offering limited-time free trials for select users. The API will be a paid service after any trial period.
+我们正为特定用户提供有限时长的免费试用服务。在任何试用期过后，都需要付费使用 API。
     
-## How will API Billing work with the new Team plans?
+## API 计费将如何与新的团队计划(Team plans)配合？
     
-Over the next several months we’ll be rolling out new “Team Plans” which will have their own credit card associated with that billing method.
+在接下来的几个月里，我们将推出新的 “团队计划“。团队计划关联其自己的信用卡作为计费方式。
     
-API calls that come from a user who is a member of Team [X] for a query made by Team [X] are automatically billed to Team [X].
+来自团队[X]成员的用户对团队[X]的查询的 API 调用会自动向团队[X]收费。
 
-API calls that come from a user and do not belong to their team are billed to their personal accounts.
+来自用户的、不属于其团队的 API 调用将从其个人账户收费。
 
-We therefore recommend any individual users who recieved API keys during their trial consolidate their keys and usage into a single account at the end of their trial, 
+因此，我们建议任何在试用期间收到 API 密钥的个人用户，在试用结束后将他们的 API 密钥及其使用合并到单一账户中。
 
-This helps streamline Team API usage easier and avoids the need for every API key holder to keep their credit card information on file.
+这有助于简化团队 API 的使用，并避免每个 API 密钥持有者存档他们自己的信用卡信息。
 
-## How will the API be priced?
+## API 如何定价?
 
-The API will be priced based on # of executions and # of data points returned. More details on this will be shared in the coming weeks!
+API 将根据执行次数和返回数据点的数量来定价。更多细节将在未来几周内透露!
 
-## What’s a datapoint?
+## 什么是数据点（datapoint）？
 
-A datapoint can in most cases be thought of rows * columns with an additional limit of 50 avg bytes per cell in a set of results. This can be expressed as:
+通常情况下，一个数据点可以被认为是 行*列 的结果。在一组结果中每个单元格平均有50字节的额外限制。可以表示为：
 
 Datapoints = max(rows*columns, ceil(totalbytes/50))
 
-## Do I get charged datapoints for every execution?
+## 每次执行都要收取数据点费用吗？
 
-We charge the data points in the result for the 1st read result of every distinct query execution and every subsequent 100th read.
+对于每个不同的查询执行，我们对第1次读取结果和随后的第100次读取结果中的数据点进行收费。
