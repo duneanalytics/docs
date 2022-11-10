@@ -40,4 +40,4 @@ description: >-
 | tx\_to                      | bytea       | 这个tx调用的第一个智能合约                                                        |
 | trace\_address              | ARRAY       | 交易执行在图树中的哪个位置？                                                  |
 | evt\_index                  | integer     | 在区块中的索引位置（按执行排序的累计日志量）                                  |
-| trade\_id                   | integer     | 处于database magic的需要                                                                                                 |
+| trade\_id                   | integer     | 出于database magic的需要                                                                                                 |
