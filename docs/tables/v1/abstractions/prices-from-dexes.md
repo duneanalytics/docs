@@ -4,46 +4,49 @@ description: >-
   decentralized exchange somewhere.
 ---
 
-# Prices from dexes
+# 来源Dex的价格
 
-### Prices calculated from trading data
+### 根据交易数据计算的价格
 
 We created a table that creates price feeds based on decentralized exchange trading data. This table covers much more assets than `prices.usd`, since it covers all assets that are traded on any  of the decentralized exchanges that are indexed in `dex.trades`.
+我们创建了一个基于去中心化交易所交易数据的价格表。 该表涵盖的资产比“prices.usd”多得多，因为它涵盖了在“dex.trades”索引的任何去中心化交易所交易的所有资产。
 
-**Please keep in mind that this script can generate wrong prices in rare cases.**
+**请记住，此脚本在极少数情况下会产生错误的价格**
 
-This table is very resource intensive and can therefore only be updated every few hours, please keep that in mind when utilizing it. **** Also the resolution is only hourly, so if you need minutely prices do refer to [`prices.usd`](../../prices.md).
+此表非常耗费资源，因此只能每隔几个小时更新一次，使用时请记住这一点。 **** 此外，时间周期是每小时级别，所以如果您需要分钟级别价格，请参考 [`prices.usd`](../../prices.md).
 
-This table currently only exists for Ethereum on our old database architecture.
 
-### How this works
+该表目前仅存在于我们旧数据库架构上的Ethereum。
 
-The logic of how this table works can be accessed in our [public github](https://github.com/duneanalytics/spellbook/tree/master/ethereum/prices) repo.
+### 它是如何运转的
+
+可以在我们的 [公共 github](https://github.com/duneanalytics/spellbook/tree/master/ethereum/prices) 库中访问该表的运行机制。
 
 This script generates median hourly prices based on data from decentralized exchanges found in `dex.trades`. It will assign asset prices based on a trading pair which has a pricefeed in `prices.usd`.
+该脚本根据 dex.trades 中去中心化交易所的数据生成每小时价格中位数。 
 
-Let's take the $SPELL/ETH Pool for example.
 
-* $ETH price is contained in `prices.usd`
-* $SPELL price is not contained in `prices.usd`
+让我们以 $SPELL/ETH 池为例。
 
-In order to get the $SPELL price, the script will dynamically calculate the price of $SPELL based on the price of $ETH that was exchanged for it.
+* $ETH 价格包含在 `prices.usd` 中
+* `prices.usd` 中不包含 $SPELL 价格
 
-e.g. 5 $ETH were exchanged for 1,086,083 $SPELL.
+为了获得 $SPELL 价格，脚本将根据所兑换的 $ETH 价格动态计算 $SPELL 的价格。
+例如，5 $ETH were exchanged for 1,086,083 $SPELL.
 
-Dex.trades will assign a `usd_amount` to this trade based on the $ETH price data in `prices.usd`.
+Dex.trades 将根据“prices.usd”中的 $ETH 价格数据为该交易分配一个“usd_amount”。
 
-That `usd_amount` is $23,498.
+这里 `usd_amount` 是 $23,498.
 
 `5 * price of ETH (4.699,6) = $23,498`
 
-Calculating the price of $SPELL is now as simple as dividing the amount of tokens exchanged with the `usd_amount` recorded in `dex.trades`.
+计算 $SPELL 的价格现在就像用 `dex.trades` 中记录的 `usd_amount` 一样简单。
 
 `$23,498/1,086,083 ≈ $0,02163`
 
-We now have successfully calculated the price of 1 $SPELL.
+我们现在已经成功计算出 1 $SPELL 的价格。
 
-In order to correct for extreme outliers and in order for this table to be performant the script then aggregates all recorded data into one `median_price` per hour.
+为了纠正极端异常值并使该表具有性能，该脚本将每小时将所有记录的数据聚合到一个“median_price”中。
 
 ### Known issues
 
