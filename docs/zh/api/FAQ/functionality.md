@@ -1,53 +1,53 @@
 ---
-title: Dune API Functionality
-description: Answers to questions about how the Dune API works.
+title: Dune API 功能
+description: Dune API 如何工作。
 ---
-# FAQ: Functionality
+# FAQ: 功能
 
-## General
+## 通用
 
-### How many Requests Per Minute can I make?
+### 我每分钟能发出多少次请求？
 
-The API is temporarily rate-limited to ~12 requests per minute for overload protection. Please reach out if you require higher throughput!
+基于过载保护，API 暂时被限制在每分钟 12 次请求。如果您需要更高的吞吐量，请联系我们。
 
-### Are there specified SLAs?
+### 是否有具体的服务水平协议（SLAs）？
 
-SLAs will be available in the future on Enterprise pricing plans.
+SLA将在未来的企业定价计划中提供。
 
-## Executing Queries
+## 执行查询
 
-### How do I find a query id?
+### 如何找到查询 ID（Query ID）？
 
-When navigating to a query, it’s the first number after “/queries/” in the URL.
+当定位到某个查询时，"/queries/" 之后的第一个数字便是 Query ID。
 
 ![query-id-example](../images/query-id-example.jpg)
 
-### Does the API support Query Parameters?
+### API 是否支持查询参数？
 
-The API does support Query Parameters!
+API 确实支持查询参数!
 
-For Dune Queries that include Parameters, you can pass parameter data as part of the [Execute Query ID endpoint](../../api/api-reference/execute-query-id.md)!
+对于包含参数的 Dune 查询，你可以将参数作为 Dune 查询的一部分来传递 [执行查询ID的接入点](../../api/api-reference/execute-query-id.md)!
 
-Learn more about [building Dune Queries with Parameters here](../../features/parameters.md).
+更多内容请见 [创建带参数的 Dune 查询](../../features/parameters.md).
 
-And learn how to pass parameter data using [cURL here](../../api/api-reference/execute-query-id.md#curl-with-parameters) and with [Python here](../../api/quick-start/api-py.md#parameterized-queries).
+了解如何使用 [cURL](../../api/api-reference/execute-query-id.md#curl-with-parameters) 传递参数，以及 [Python](../../api/quick-start/api-py.md#parameterized-queries)。
 
-### What are the performance and overall differences between the Dune API and the Dune web app? What are the differences in what I can query?
+### Dune API 和 Dune Web 应用之间有何性能及整体上的差异？我可以查询的内容有何不同？
 
-There are no major performance differences or differences in what can be accessed between the two.
+两者之间没有太大的性能差异或可读取的内容差异。
 
-The Dune API simply gives you programmatic access to the capabilities and data sets that can already be accessed from the Dune web app.
+Dune API 只是让你以编程方式读取已经可以从 Dune Web 应用访问的功能和数据集。
 
-### What is the execution timeout limit and can I request a longer limit?
+### 执行超时的限制是多久，我能否要求延长？
 
-Initially, the query execution timeout limit will match the Dune web app - 30 minutes.
+上线之初，查询执行的超时限制将与 Dune Web 应用相同：30分钟。
 
-Later, we plan to allow overrides of this, but we’d need to adjust our query execution billing to reflect this as well.
+随后，我们计划允许修改时长，但我们也需要调整我们的查询执行收费来匹配。
 
-### When do you plan on supporting the use of sending raw SQL directly from the server?
+### 你们打算什么时候支持使用直接从服务器发送原始SQL？
 
-We don’t have a committed timeline yet, but this is tentatively planned to be a feature only available on Enterprise plans.
+我们还没有一个确切的时间表，但此功能暂定于仅限企业计划。
 
-### Can I query using both Dune v2 Engine and the original v1 databases?
+### 我可以同时使用 Dune v2 引擎和原始的 v1 数据库进行查询吗？
 
-Currently yes, but we’re slowly deprecating usage and support of the old engine, so we recommend using the new Dune v2 Engine as much as possible.
+当前没问题。但我们正在逐步废除对旧引擎的使用和支持，所以我们建议尽可能地使用新的 Dune v2 引擎。

@@ -28,7 +28,7 @@ https://api.dune.com/api/v1/query/{{query_id}}/execute
 curl -X POST -H x-dune-api-key:{{api_key}} "https://api.dune.com/api/v1/query/{{query_id}}/execute"
 ```
 
-### cURL with Parameters
+### 带参数的 cURL
 
 ```
 curl -X POST -d '{"query_parameters": { "param1":24}}' -H x-dune-api-key:{{api_key}}  "https://api.dune.com/api/v1/query/{{query_id}}/execute"
