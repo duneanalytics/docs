@@ -1,29 +1,24 @@
 ---
-title: Abstractions (V1)
+title: 数据抽象 (V1)
 ---
 
-You can check for existing abstractions in our [public github repository](https://github.com/duneanalytics/spellbook/index.md), under `deprecated-dune-v1-abstractions`.
-
+你可以在我们的 [公共 github 存储库](https://github.com/duneanalytics/abstractions) 中检查现有的数据抽象。你通常可以将它们分为 2 个不同的类别。
 You can generally divide them into 2 distinct categories:
 
-### Sector Abstractions
+### 板块数据抽象
 
-Sector Abstractions are tables like dex.trades, erc20.stablecoins, lending.borrow etc.
+板块数据抽象是指 dex.trades、erc20.stablecoins、lending.borrow 等表。
 
-These abstractions take in data from multiple contracts and projects, standardize the data across them and therefore make it very easy to query for this data and compare the metrics of different projects with each other.
+这些数据抽象从多个合约和项目中获取数据，标准化它们之间的数据，因此可以很容易地查询这些数据并比较不同项目的指标。
 
-Most of the [sector](../../../getting-started/use-cases/sector-dashboards.md) Dashboards depend on sector abstractions. This introduces an interesting dynamic in which projects can easily get their data into these dashboards by making a pull request to our public [github repo](https://github.com/duneanalytics/spellbook/index.md).
+大多数 [板块看板](../../about/usecases/sector-dashboards.md) 都依赖于板块数据抽象。这引入了一个有趣的动态，项目可以通过向我们的公共 [github 存储库](https://github.com/duneanalytics/abstractions) 发出拉取请求轻松地将其数据放入这些仪表盘。
+Dune 团队和社区一直在改进这些细分板块数据抽象，我们总是欢迎对现有数据的所有新添加。
 
-Team Dune and the community are always improving on these sector abstractions, all new additions to existing ones are always welcome.
+### 项目数据抽象
+我们往往有需求去将某个项目所需要的所有的数据汇集到一张简洁的表中。您可以在我们的数据抽象中构造视图或表来实现它
+与仅构建视图相比，这里的主要优势是您可以在我们的数据抽象中处理大量数据，因为我们可以每隔几个小时在后台自动运行它们。
 
-### Project Abstractions
+## 为数据抽象做贡献
 
-Projects can assemble their data into one neat table that has all the data they need in one place. To do this, you can construct views or tables in our abstractions.
-
-The main advantage here over just constructing a view is that you are able to deal with bigger amounts of data in our abstractions since we can run them automatically in the background every few hours.
-
-## Contributing to abstractions
-
-Our abstractions for v1 are no longer open for contributions.
-
-If you'd like to contribute to Dune abstractions, take a look at [Spellbook](../../../spellbook/index.md).
+我们不再对v1的数据抽象开放贡献。
+如果您想为沙丘抽象做出贡献，请查看 [Spellbook](../../../spellbook/index.md)。
