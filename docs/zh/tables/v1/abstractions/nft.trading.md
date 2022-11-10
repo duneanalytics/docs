@@ -1,147 +1,140 @@
 ---
-description: >-
-  nft.trades makes NFT trading data available to everyone on Dune Analytics.
-  NFT.trades aggregates data across multiple NFT platforms into one simple
-  table.
+说明: >-
+  NFT交易表 在 Dune 上向所有人提供 NFT 交易数据。
+  NFT交易表 将跨多个 NFT 平台的数据聚合到一张简单的表格中。
 ---
 
-# nft.trades
+# NFT交易表（nft.trades）
 
-## **An easy way of querying for NFT data**
+## **一种查询 NFT 数据的简单方法**
 
-`nft.trades` is an effort to make NFT trading data easily available to everyone on Dune Analytics. This table aggregates and standardizes the data between different data platforms and provides auxiliary information and metadata all in one table.
+NFT交易表（nft.trades）旨在让 Dune 上的每个人都能轻松获得 NFT 交易数据。该表将不同数据平台之间的数据聚合和标准化，并在同一张表中提供辅助信息和元数据。
 
-The culmination of this is a dataset which makes it extremely easy to query for any NFT related trading data across all indexed platforms.
+最重要的是使用该数据集，让在所有索引平台上查询任何与 NFT 相关的交易数据变得非常容易。
 
-So far we have indexed the data of the following platforms:
+到目前为止，我们已经对以下平台的数据进行了索引：
 
 * OpenSea
 * Rarible
 * SuperRare
-* CryptoPunks (They get traded in their own contracts)
+* CryptoPunks（他们在自己的合约中进行交易）
 * Foundation
 * LooksRare
 
-All of this data is easily accessible with very simple queries like these:
+所有这些数据都可以通过非常简单的查询轻松访问，例如：
 
-* [**all trades for a given NFT**](https://dune.com/queries/146090)
+* [**给定 NFT 的所有交易**](https://dune.xyz/queries/146090)
 
-![NFT](images/nft.png)
+![](<../../.gitbook/assets/image (31).png>)
 
 ```sql
 select * from nft.trades 
 
-where nft_contract_address = '\xb47e3cd837ddf8e4c57f05d70ab865de6e193bbb' --this is the cryptopunks address
+where nft_contract_address = '\xb47e3cd837ddf8e4c57f05d70ab865de6e193bbb' -- 这是 cryptopunks 的地址
 ```
 
-* [**trades in the last 24 hour on a given platform**](https://dune.com/queries/146152)
+* [**过去 24 小时内在给定平台上的交易**](https://dune.xyz/queries/146152)
 
 ```sql
-select date_trunc('day', block_time), usd_amount, nft_contract_address, token_id from nft.trades 
+select date_trunc('day', block_time), usd_amount, nft_contract_address, token_id from  
 
-where platform = 'OpenSea' --only shows trades on given Platform
+where platform = 'OpenSea' -- 仅显示给定平台上的交易
 
 and block_time > now() - interval '24hours'
 ```
 
-* [**platform volumes in the last year**](https://dune.com/queries/146160)
+* [**去年的平台交易量**](https://dune.xyz/queries/146160)
 
 ```sql
-select  sum(usd_amount), 
-        date_trunc('day', block_time) as day, 
-        platform 
-from nft.trades 
+select sum(usd_amount), date_trunc('day', block_time), platform from nft.trades 
+
 where block_time > now() - interval '365 days'
-group by platform, day
+
+group by 2,3
 ```
 
 ###
 
-### Basic Understanding
+### 基本理解
 
-#### Single Item Trade
+#### 单品交易（Single Item Trade）
 
-A trade occurs between a `buyer`and a `seller`.
+交易发生在“买方”（buyer）和“卖方”（seller）之间。
 
-They exchange an item which is uniquely identified by the combination of `nft_contract_address` and `token_id`. The Buyer will pay the Seller a given `original_amount`of tokens in any given `original_currency`. To make it easier, we have calculated the `usd_amount` that this was worth at the time of the trade for you. Most trades will be done in ETH or WETH, but especially non OpenSea trades often contain other currencies.
+他们交换一个由 `nft_contract_address` 和 `token_id` 的组合唯一标识的项目。买方将以任何给定的 `original_currency` 向卖方支付给定的 `original_amount` 代币。为方便起见，我们已经为你计算了在交易时对应价值的 `usd_amount` 。大多数交易将以 ETH 或 WETH 进行，但尤其是非 OpenSea 交易通常包含其他货币类型。
 
-The trade is committed on any of the indexed `platforms`and will be facilitated through a smart contract of those platform's `exchange_contract_address`. Each trade will have metadata like `block_time`, `tx_hash`_,_ `block_number`, `platform version`, `evt_index` etc.
+交易在任何被索引的 `platforms` 上进行，并将通过这些平台的 `exchange_contract_address` 的智能合约来促进。每笔交易都会有诸如 `block_time` ， `tx_hash` ， `block_number` ， `platform version` ， `evt_index` 等元数据。
 
+此外，我们还提供有关交易的 NFT 的元数据。`nft_project_name` 和 `erc_standard` 将帮助你更轻松地分析数据集。`nft_project_name` 数据将从 `nft.tokens` [数据表](https://github.com/duneanalytics/abstractions/blob/master/ethereum/nft/tokens.sql) 中提取，如果你的 NFT 在该表中不存在，欢迎你发PR来添加它。
 
+**捆绑交易（Bundle Trade）**
 
-Additionally, we also provide metadata about the traded NFT. `nft_project_name` and `erc_standard` will help you in analysing your dataset more easily. `nft_project_name` data gets pulled from the `nft.tokens` [table](https://github.com/duneanalytics/spellbook/blob/master/ethereum/nft/tokens.sql), if your NFT is missing in that table, you are welcome to make a PR to add it.
+单次交易也可能包含多个物品。这些物品中的每一个都通过 `nft_contract_address` 和 `token_id` 的组合来唯一标识。然而在这些交易中，没有明确的方法来确定每个物品对应的 `usd_amount` 。一种可能的解决方法是将商品数量除以捆绑商品的付款金额，但是当非实物/价值的商品捆绑出售时，这种逻辑就不成立了。我们建议从你正在使用的数据集中删除捆绑转移，因为它会严重影响任一方向的结果。请注意，如果在同一交易中转移具有不同Token ID 或 erc 类型的代币，则 `token_id` 和 `erc_standard` 将为空（Null）。
 
-**Bundle Trade**
+**聚合贸易（Aggregator Trade）**
 
-There can also be trades in which a single trade transaction contains multiple Items. Each of these Items is uniquely identified through a combination of `nft_contract_address` and `token_id`. Unfortunately, in these trades there is not a clear way to determine a corresponding `usd_amount` for each of the items. A possible workaround is to divide the number of items by the payment made for the bundle, but this logic very quickly falls apart when Items that are not one in kind/value get sold in a bundle. We recommend removing bundle transfers from the dataset that you are working with since it can heavily influence the results in either direction. Note that `token_id` and '`erc_standard` will be null if tokens with different tokens IDs or erc type are transfered within the same transaction.
+在使用 NFT 聚合器平台时，也会出现单次交易包含多个物品的情况。我们的方法是分解聚合器交易，以便每一行对应一个被交易的唯一商品，及其关联的 ID、价格、分类等。重要的是，`trade_type` 将指示为`聚合贸易` ，平台名称和地址可以在 `nft.aggregators` [数据表](https://github.com/duneanalytics/abstractions/blob/master/ethereum/nft/aggregators.sql) 中找到。如果该表中缺少你的聚合平台，欢迎你提交 PR 以添加它。
 
-**Aggregator Trade**
+**平台和版税费用**
 
-There can also be trades in which a single trade transaction contains multiple items, especially when using NFT aggregator platforms. Our approach is to unravel aggregator trades so that each row correspond to a unique item that was traded, with its associated ID, price, collection, etc. Importantly, the `trade_type` will be indicated as `Aggregator Trade`, and platform names and address can be found in the `nft.aggregators` [table](https://github.com/duneanalytics/spellbook/blob/master/ethereum/nft/aggregators.sql). If your aggregator platform is missing in that table, you are welcome to make a PR to add it.
+在最新版本的 `nft.trades` 中，如果销售许可费(royalty fees)的原始金额，美元金额以及百分比的信息在数据库中存在，那么检索时是一并提供的。版税归创作者所有，平台费用由 NFT 平台收取。请注意，版税费用并非总是能检索，所以默认设置为 null。
 
-**Platform and Royalty Fees**
+### **示例仪表盘**
 
-In the most recent version of `nft.trades`, information about the amount and percent of royalty fees in the original amount and in USD is available when this information was able to be retrieved. Royalty fees are going to the creator, and Platform fees are collected by the NFT platform. Note that royalty fees cannot always be retrieved, and are set to null by default.
+**利用参数的仪表盘**
 
-### **Sample dashboards**
+[**https://dune.xyz/0xBoxer/NFT**](https://dune.xyz/0xBoxer/NFT)
 
-**Dashboard that utilize parameters**
+[**https://dune.xyz/rantum/NFT-Sales-Overview-by-Project**](https://dune.xyz/rantum/NFT-Sales-Overview-by-Project)
 
-[**https://dune.com/0xBoxer/NFT**](https://dune.com/0xBoxer/NFT)
+**涵盖整个生态系统的仪表盘**
 
-[**https://dune.com/rantum/NFT-Sales-Overview-by-Project**](https://dune.com/rantum/NFT-Sales-Overview-by-Project)
+[**https://dune.xyz/rantum/NFT-Collection-Dashboard**](https://dune.xyz/rantum/NFT-Collection-Dashboard)
 
-**Dashboards that look across the entire Ecosystem**
+[**https://dune.xyz/masquot/NFT-Sales-Trends**](https://dune.xyz/masquot/NFT-Sales-Trends)
 
-[**https://dune.com/rantum/NFT-Collection-Dashboard**](https://dune.com/rantum/NFT-Collection-Dashboard)
+## **您好，我的平台没有被索引**
 
-[**https://dune.com/sealaunch/NFT**](https://dune.com/sealaunch/NFT)\
+处理每个市场数据的 SQL 代码是开源的，可在我们的 [github 存储库](https://github.com/duneanalytics/abstractions/tree/master/ethereum/nft/trades) 中找到。每个人都可以查看代码、提交拉取请求并提交代码以添加更多交易市场。
 
+另请阅读有关此主题的“[抽象表](abstractions.md)”部分。
 
-***
+**数据表内容**
 
-## **Ser, my platform is not indexed**
-
-The SQL code that processes the data for every market place is open source and available in our [github repository](https://github.com/duneanalytics/spellbook/tree/master/ethereum/nft/trades). Everyone can review the code, make pull requests and submit code to add more marketplaces.
-
-Also read the section "[abstractions](index.md)" about this topic.
-
-## **Table contents**
-
-| column\_name                 | data\_type               | description                                                                       |
+| 列名                | 数据类型              | 说明                                                                      |
 | ---------------------------- | ------------------------ | --------------------------------------------------------------------------------- |
-| block\_time                  | timestamp with time zone | When was this trade exectuted                                                     |
-| nft\_project\_name           | text                     | NFT project name (e.g. "the dudes")                                               |
-| nft\_token\_id               | text                     | The token\_id that got trades (e.g. 235)                                          |
-| erc\_standard                | text                     | The Token Standard of the traded token ERC721 or ERC1155                          |
-| platform                     | text                     | Which Platform was this trade executed on?                                        |
-| platform\_version            | text                     | Which version of this platform was utilized?                                      |
-| trade\_type                  | text                     | "Single Item Sale" or "Bundle Sale"?                                              |
-| number\_of\_items            | integer                  | How many NFTs were traded in this trade?                                          |
-| category                     | text                     | Was this an auction or a direct sale?                                             |
-| evt\_type                    | text                     | currently not in use, default 'Trade'                                             |
-| aggregator                   | text                     | Was this trade made using an aggregator (Yes : Name of aggregator, No : Null)     |
-| usd\_amount                  | numeric                  | USD value of the trade at time of execution                                       |
-| seller                       | bytea                    | Seller of NFTs                                                                    |
-| buyer                        | bytea                    | Buyer of NFTs                                                                     |
-| original\_amount             | numeric                  | The amount in the right format                                                    |
-| original\_amount\_raw        | numeric                  | raw amount of the currency                                                        |
-| eth\_amount                  | numeric                  | ETH value of the trade at time of execution                                       |
-| royalty\_fees\_percent       | numeric                  | Royalty fees going to the creator (in %)                                          |
-| original\_royalty\_fees      | numeric                  | Royalty fees in the currency used for this trade                                  |
-| usd\_royalty\_fees           | numeric                  | USD value of royalty fees at time of execution                                    |
-| platform\_fees\_percent      | numeric                  | Platform fees (in %)                                                              |
-| original\_platform\_fees     | numeric                  | Platform fees in the currency used for this trade                                 |
-| usd\_platform\_fees          | numeric                  | USD value of platform fees at time of execution                                   |
-| original\_currency           | text                     | The Currency used for this trade                                                  |
-| original\_currency\_contract | bytea                    | The erc20 address of the currency used in this trade (does not work with raw ETH) |
-| currency\_contract           | bytea                    | the corrected currency contract                                                   |
-| nft\_contract\_address       | bytea                    | The contract address of the NFT traded                                            |
-| exchange\_contract\_address  | bytea                    | The platform contract that facilitated this trade                                 |
-| tx\_hash                     | bytea                    | the hash of this transaction                                                      |
-| block\_number                | integer                  | the block\_number that this trade was done in                                     |
-| tx\_from                     | bytea                    | Initiated this transaction                                                        |
-| tx\_to                       | bytea                    | Received this transaction                                                         |
+| block\_time                  | timestamp with time zone | 该交易何时执行的                                                    |
+| nft\_project\_name           | text                     | NFT 项目名称（例如“the dudes”）                                              |
+| nft\_token\_id               | text                     | 交易的 token\_id（例如 235）                                         |
+| erc\_standard                | text                     | 交易代币的代币标准                                          |
+| platform                     | text                     | 该交易是在哪个平台上执行的？                                        |
+| platform\_version            | text                     | 使用了该平台的哪个版本？                                   |
+| trade\_type                  | text                     | “单品销售”还是“捆绑销售”？                                           |
+| number\_of\_items            | integer                  | 本次交易一共交易了多少个 NFT？                                        |
+| category                     | text                     | 这是拍卖（auction）还是直销（direct sale）？                                           |
+| evt\_type                    | text                     | 当前未使用，默认“Trade”                                           |
+| aggregator                   | text                     | 此交易是否使用聚合器进行（是：聚合器名称，否：NULL）     |
+| usd\_amount                  | numeric                  | 执行时交易的美元价值                                       |
+| seller                       | bytea                    | NFT 卖家地址                                                                   |
+| buyer                        | bytea                    | NFT 买家地址                                                                    |
+| original\_amount             | numeric                  | 正确格式的金额                                                    |
+| original\_amount\_raw        | numeric                  | 货币的原始金额                                                       |
+| eth\_amount                  | numeric                  | 执行时交易的 ETH 价值                                     |
+| royalty\_fees\_percent       | numeric                  | 支付给创作者的版税（百分比）                                          |
+| original\_royalty\_fees      | numeric                  | 交易所用货币的特许权使用费                                  |
+| usd\_royalty\_fees           | numeric                  | 执行时特许权使用费的美元价值                                    |
+| platform\_fees\_percent      | numeric                  | 平台费用（百分比）                                                             |
+| original\_platform\_fees     | numeric                  | 用于此交易的货币的平台费用                                 |
+| usd\_platform\_fees          | numeric                  | 执行时平台费用的美元价值                                   |
+| original\_currency           | text                     | 用于此交易的货币                                                  |
+| original\_currency\_contract | bytea                    | 本次交易所用币种的 erc20 地址（不适用于原始ETH） |
+| currency\_contract           | bytea                    | 修正后的货币合约                                                  |
+| nft\_contract\_address       | bytea                    | 交易的 NFT 合约地址                                           |
+| exchange\_contract\_address  | bytea                    | 促成此交易的平台合约                                |
+| tx\_hash                     | bytea                    | 本次交易的哈希                                                     |
+| block\_number                | integer                  | 该交易执行完成的区块编号                                    |
+| tx\_from                     | bytea                    | 发起本次交易的地址                                                       |
+| tx\_to                       | bytea                    | 接收这笔交易的地址                                                        |
 | trace\_address               | ARRAY                    | n/a                                                                               |
-| evt\_index                   | integer                  | event index                                                                       |
-| trade\_id                    | integer                  | n/a                                                                               |
+| evt\_index                   | integer                  | 事件索引                                                                      |
+| trade\_id                    | integer                  | n/a                                              
