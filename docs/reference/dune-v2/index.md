@@ -49,4 +49,4 @@ This will makes the data abstractions built as Spells more robust, scalable and 
 
 ## Feedback
 
-One final note, as the Query engine is still in in **beta** you may run into bugs or have feedback on how it can be improved, feel free to share it with us on [Discord](https://discord.com/invite/ErrzwBz) and [Canny](https://dune.canny.io).
+One final note, as the Query engine is still in in **beta** you may run into bugs or have feedback on how it can be improved, feel free to share it with us on in our [#general-feedback Discord channel](https://discord.com/channels/757637422384283659/1012706316755664926) or on our [Canny board](https://dune.canny.io).

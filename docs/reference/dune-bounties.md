@@ -178,7 +178,7 @@ Dune is an open platform on which you can build all kinds of analysis, Dashboard
 
 Going rates for Freelance Dune Wizards seem to be anywhere between \$30-\$100 per hour.
 
-And you can always ask in our [Discord](https://discord.com/channels/757637422384283659/1025371996277706792) or fill out the [Typeform](https://form.typeform.com/to/DtX4jqkd) in the "Supported approach" tab above to get some help on this! 
+And you can always ask in our [#bounty-questions Discord](https://discord.com/channels/757637422384283659/1025371996277706792) or fill out the [Typeform](https://form.typeform.com/to/DtX4jqkd) in the "Supported approach" tab above to get some help on this! 
 
 ### Does Dune take a cut of bounty payments?
 

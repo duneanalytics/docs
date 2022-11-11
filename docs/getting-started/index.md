@@ -5,7 +5,7 @@ description: Getting Started is the place to get oriented and learn how to use D
 
 Getting Started is the place to get oriented and learn how to use Dune!
 
-## Dune is made for technical and less-technical users alike.
+## Dune is made for technical and non-technical users alike.
 
 Whether you are a seasoned SQL developer, blockchain researcher, business analyst or none of the above - you can use Dune to start analyzing Blockchain data in an instant.
 
