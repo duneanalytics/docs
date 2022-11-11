@@ -1,47 +1,47 @@
 ---
-title: Support & Feedback
-description: Here's the best way to get help if you can't find the answers you're looking for in our docs!
+title: 支持和反馈
+description: 如果您在我们的文档中找不到所需的答案，这是获得帮助的最佳方式！
 ---
 
-## How to Get Support
+## 如何获得支持
 
-If you can't seem to find the help you're looking for, here's the best way to get it:
+似乎如果您找不到您想要的帮助，下面是最好的方法：
 
-### 1. Try searching using the Search bar above
+### 1. 尝试使用上方的搜索栏进行搜索
 
-We know you probably did that already but just in case :)
+我们知道您可能已经这样做了，但以防万一:)
 
 ### 2. Discord!
 
-Here are a few relevant support channels:
+以下是一些相关的支持渠道：
 
-1. [#beginners](https://discord.com/channels/757637422384283659/1016725609797402634) - if you're just getting going and have what feels like a stupid question (note: it's probably not)
-2. [#query-questions](https://discord.com/channels/757637422384283659/757641002138730588) is great for getting help on building amazing queries.
-3. [#data-tables](https://discord.com/channels/757637422384283659/757893948428517376) is the place for questions related to the data you'll find in Dune.
-4. [#decoding](https://discord.com/channels/757637422384283659/850326962152538122) is for smart contract decoding related questions.
-5. [#dashboards-visualizations](https://discord.com/channels/757637422384283659/857199333136007200) is for Dashboard and Visualization questions.
-6. [#spellbook](https://discord.com/channels/757637422384283659/999683200563564655) is for Spellbook related questions.
-7. [#dune-api](https://discord.com/channels/757637422384283659/1019910980634939433) is for API related questions.
+1. [#beginners](https://discord.com/channels/757637422384283659/1016725609797402634) - 如果您刚刚开始并且有一个自我感觉比较愚蠢的问题（注意：可能不是）。
+2. [#query-questions](https://discord.com/channels/757637422384283659/757641002138730588) 非常适合寻求创建查询（building amazing queries）方面问题的帮助。
+3. [#data-tables](https://discord.com/channels/757637422384283659/757893948428517376) 是一个您在 Dune 中寻找与数据相关的问题的地方。
+4. [#decoding](https://discord.com/channels/757637422384283659/850326962152538122) 用于智能合约解析相关问题。
+5. [#dashboards-visualizations](https://discord.com/channels/757637422384283659/857199333136007200) 用于看板和可视化问题。
+6. [#spellbook](https://discord.com/channels/757637422384283659/999683200563564655) 是针对与 Spellbook 相关的问题。 
+7. [#dune-api](https://discord.com/channels/757637422384283659/1019910980634939433) 用于 API 相关问题。
 
-### 3. Weekly Office Hours
+### 3. 每周办公时间
 
-Lastly, you can join our weekly office hours to get live help - find the next one on [our Events Calendar here](https://events.dune.com)!
+最后，您可以加入我们每周的办公时间以获得实时帮助 - 在 [我们的活动日历](https://events.dune.com) 上找到我们下一个办公时间。
 
 
-## How to Leave Feedback
+## 如何留下你的反馈
 
-For general Dune app feedback, [leave a suggestion on our Canny board here](https://feedback.dune.com/).
+对于 Dune 应用程序的一般反馈，[可以在Canny看板留下你的建议](https://feedback.dune.com/).
 
-We also have 2 feedback channels in Discord:
+我们在 Discord 中也有 2 个反馈渠道：
 
-1. [#feedback](https://discord.com/channels/757637422384283659/799689116920709170) for general feedback
-2. [#v2-feedback](https://discord.com/channels/757637422384283659/1012706316755664926) for Dune V2 specific feedback.
+1. [#feedback](https://discord.com/channels/757637422384283659/799689116920709170) 针对一般反馈。
+2. [#v2-feedback](https://discord.com/channels/757637422384283659/1012706316755664926) 针对 Dune V2 的特定反馈。
 
-If you're working with any of our public repositories (e.g. Spellbook), you can also open a Github issue.
+如果您正在使用我们的任何公共存储库（例如 Spellbook ），您还可以打开 Github 问题。
 
-For Docs feedback fixes or additions, click the pencil icon to the right of the page title and open a GitHub issue or submit a pull request:
+对于 Docs 反馈修复或添加，单击页面标题右侧的铅笔图标并打开 GitHub 问题或提交拉取请求：
 
 ![edit docs pencil](images/edit-docs-pencil.png)
 
-## Account issues
-For any issues related to your account, billing or any other administrative problems, please send an email to [support@dune.com](mailto:support@dune.com).
+## 帐户问题
+有关您的帐户、费用或任何其他管理问题，请发送电子邮件至 [support@dune.com](mailto:support@dune.com)。

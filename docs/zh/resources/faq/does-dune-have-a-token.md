@@ -1,7 +1,7 @@
 ---
-title: Does Dune have a token?
+title: Dune 有代币吗?
 ---
 
-# Does Dune have a Token?
+# Dune 有代币吗？
 
-**Dune does not have token.**
+**Dune 没有代币。**
