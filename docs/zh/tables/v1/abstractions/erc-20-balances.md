@@ -4,19 +4,19 @@ description: >-
   these tables and views will provide you with all the necessary information.
 ---
 
-# ERC-20 balances
+# ERC-20 代币余额
 
-## Easily track wallets and token balances over time.
+## 随着时间的推移轻松跟踪钱包和代币余额
 
-The following tables allow for easy tracking of wallet-balances, token allocations or supply of a token over time or in a snapshot format.
+下列表格允许随时间变化或按快照格式轻松跟踪钱包余额、代币分配或代币供应量。
 
-On a raw data level it's pretty hard to work with erc20 tokens since you need to sum all transfers for all addresses over time. This unnecessarily bloats queries and quickly leads to human errors. To prevent that from happening we have constructed several views and tables that will help you query for erc20 data with ease.
+在原始数据级别上，使用 erc20 代币非常困难，因为你需要对所有地址的所有代币转移进行汇总。这不必要地使查询膨胀并迅速导致人为错误。为了防止这种情况发生，我们构建了几个视图和表，可以帮助你轻松查询 erc20 代币数据。
 
-These tables can be used for all kinds of interesting analysis, but you still need to watch out for a few things while working with them:
+这些表可用于各种有趣的分析，但在使用它们时你仍需要注意一些事项：
 
-* the **mint/burn address** is not standardized, so you need to find out those addresses and manually apply a fix in your queries. In most cases it will be `x0000000000000000000000000000000000000000` for minting and burning, but always make sure that is indeed the case. In the example given that's exactly not the case, there is an additional burn address `x000000000000000000000000000000000000dead`.
+* **铸造/燃烧地址** 没有标准化，因此你需要找出这些地址并在查询中手动应用修复。在大多数情况下，用于铸造和燃烧的将是 `x0000000000000000000000000000000000000000` ，但请始终确保确实如此。在下面给出的示例中，情况并非如此。
 
-**example:**
+**示例:**
 
 ```sql
 Select 
@@ -30,7 +30,7 @@ and wallet_address != '\x0000000000000000000000000000000000000000' --mint addres
 and wallet_address != '\x000000000000000000000000000000000000dead' --burn address
 ```
 
-* working with these tables quickly leads to a lot of individual data points that our visualization engine is not always able to handle perfectly. Instead of trying to display every unique holder it makes sense to group them by certain criteria and display the dataset that way. This is unique for every token, you might need to experiment a bit to see what works in your queries.
+* 使用这些表格工作会很快产生很多单独的数据点，我们的可视化引擎并不总是能够完美处理这些数据点。与其尝试显示每个唯一的持有者，不如将它们按特定标准分组并以这种方式显示数据集。这对于每个代币都是唯一的，你可能需要进行一些试验以查看什么分类方式能在你的查询中有效工作。
 
 ```sql
 Select 
@@ -45,7 +45,7 @@ Select
             WHEN amount     between 100    and 1000       then 'fish(100-1,000)'
             WHEN amount     between 1000    and 10000     then 'dolphin(1,000-10,000)'
             WHEN amount     > 10000                       then 'whale (>10000)' 
-           --note that the order of case statements matters here
+           --请注意，case 表述的顺序在这里很重要
     end as classification,
 
 sum(amount) as amount,
@@ -54,67 +54,65 @@ from erc20."view_token_balances_latest"
 where token_address = '\x429881672B9AE42b8EbA0E26cD9C73711b891Ca5'
 and wallet_address != '\x0000000000000000000000000000000000000000'
 and wallet_address != '\x000000000000000000000000000000000000dead'
-and amount > 0.1 --filter out dust amounts, adjust this for different tokens based on economic value
+and amount > 0.1 --过滤掉极小的交易，可能需要根据代币的不同进行调整
 group by 1,3
 ```
 
-## Dashboard example:
+## 看板示例:
 
-This dashboard contains the most important use cases related to a single erc20 token that is used as gov token.
-
-[https://dune.com/0xBoxer/pickle-finance\_1](https://dune.com/0xBoxer/pickle-finance\_1)
+此看板包含与用作治理代币的单个 erc20 代币相关的最重要用例。
+[https://dune.xyz/0xBoxer/pickle-finance\_1](https://dune.xyz/0xBoxer/pickle-finance\_1)
 
 ## erc20.view\_token\_balances\_latest
 
-This view depends on the erc20.token\_balances table and gives you the information of the latest distribution of that token.
+此视图依赖于 erc20.token\_balances 表，并为你提供该代币的最新分布信息。
 
 | column name                   | data type   | description                                                                                |
 | ----------------------------- | ----------- | ------------------------------------------------------------------------------------------ |
-| amount                        | numeric     | the correct display format for that token                                                  |
-| amount\_raw                   | numeric     | the raw amount of that token (need to divide by decimals!)                                 |
-| amount\_usd                   | float8      | the current price (if we have data on the price)                                           |
-| last\_transfer\_\_\_timestamp | timestamptz | the date on which the balance of this token last changed in this particular wallet address |
-| token\_address                | bytea       | the address of the token                                                                   |
-| token\_symbol                 | text        | the symbol of the token                                                                    |
-| wallet\_address               | bytea       | the address of the wallet holding this token                                               |
+| amount                        | numeric     | 该代币的正确显示格式的金额                                                 |
+| amount\_raw                   | numeric     |该代币的原始金额（需要除以小数位数！）                                 |
+| amount\_usd                   | float8      | 当前价格（如果我们有价格数据）                                           |
+| last\_transfer\_\_\_timestamp | timestamptz | 此特定钱包地址中此代币余额最后更改的日期|
+| token\_address                | bytea       | 代币地址                                                                      |
+| token\_symbol                 | text        | 代币符号                                                                       |
+| wallet\_address               | bytea       | 持有该代币的钱包地址                                              |
 
 ## erc20.view\_token\_balances\_hourly
 
-This table will provide information about all token balances on an hourly basis. It also already includes decimals and prices in most cases, so they are pretty much ready to go out of the box.
+此表将按小时提供有关所有代币余额的信息。在大多数情况下，它还已经包含小数和价格，因此它们已经准备好可开箱即用。
 
-| column name     | data type   | description                                                |
+| 列名     | 数据类型   | 描述                                                |
 | --------------- | ----------- | ---------------------------------------------------------- |
-| amount          | numeric     | the correct display format for that token                  |
-| amount\_raw     | numeric     | the raw amount of that token (need to divide by decimals!) |
-| amount\_usd     | float8      | the current price (if we have data on the price)           |
-| hour            | timestamptz | the time in the resolution of hours                        |
-| token\_address  | bytea       | the address of the token                                   |
-| token\_symbol   | text        | the symbol of the token                                    |
-| wallet\_address | bytea       | the address of the wallet holding this token               |
+| amount          | numeric     | 该代币的正确显示格式的金额                 |
+| amount\_raw     | numeric     | 该代币的原始金额（需要除以精度！） |
+| amount\_usd     | float8      | 当前价格（如果我们有价格数据）            |
+| hour            | timestamptz | 以小时为单位的时间                        |
+| token\_address  | bytea       | 代币合约地址                                        |
+| token\_symbol   | text        | 代币符号                                        |
+| wallet\_address | bytea       | 持有该代币的钱包地址              |
 
 ## erc20.view\_token\_balances\_daily
 
-**This table will perform much better than `erc20.view_token_balances_hourly` since it's only querying for data on a daily basis**. If you want to make high level analysis, this is your way to go.
+**此表的性能将比 `erc20.view_token_balances_hourly` 好得多，因为它仅按天查询数据**。如果你想进行高阶分析，这是你应该选择的表。
 
-| column name     | data type   | description                                                |
+| 列名     | 数据类型   | 描述                                                |
 | --------------- | ----------- | ---------------------------------------------------------- |
-| amount          | numeric     | the correct display format for that token                  |
-| amount\_raw     | numeric     | the raw amount of that token (need to divide by decimals!) |
-| amount\_usd     | float8      | the current price (if we have data on the price)           |
-| day             | timestamptz | the time in the resolution of days                         |
-| token\_address  | bytea       | the address of the token                                   |
-| token\_symbol   | text        | the symbol of the token                                    |
-| wallet\_address | bytea       | the address of the wallet holding this token               |
+| amount          | numeric     | 该代币的正确显示格式的金额                  |
+| amount\_raw     | numeric     | 该代币的原始金额（需要除以精度！） |
+| amount\_usd     | float8      | 当前价格（如果我们有价格数据）           |
+| day             | timestamptz | 以天为单位的时间                        |
+| token\_address  | bytea       | 代币合约地址                                 |
+| token\_symbol   | text        | 代币符号                                   |
+| wallet\_address | bytea       | 持有该代币的钱包地址                |
 
 ## erc20.token\_balances
 
-This table contains the hourly balance of all erc20 tokens over the entire existence of these tokens. You can use this table as a fallback option might the views we have provided above not be sufficient for the usecase you are trying to establish.
-
-| column name     | data type   | description                                                |
+该表包含所有 erc20 代币在这些代币存在期间的每小时余额。如果我们上面提供的视图不足以满足你尝试建立的用例，你可以使用此表作为备用选项。
+| 列名     | 数据类型   | 描述                                                |
 | --------------- | ----------- | ---------------------------------------------------------- |
-| amount          | numeric     | the correct display format for that token                  |
-| amount\_raw     | numeric     | the raw amount of that token (need to divide by decimals!) |
-| timestamp       | timestamptz | the time in the resolution of hours                        |
-| token\_address  | bytea       | the address of the token                                   |
-| token\_symbol   | text        | the symbol of the token                                    |
-| wallet\_address | bytea       | the address of the wallet holding this token               |
+| amount          | numeric     | 该代币的正确显示格式的金额                  |
+| amount\_raw     | numeric     | 该代币的原始金额（需要除以精度） |
+| timestamp       | timestamptz | 以小时为单位的时间                        |
+| token\_address  | bytea       | 代币合约地址                                        |
+| token\_symbol   | text        | 代币符号                                    |
+| wallet\_address | bytea       | 持有该代币的钱包地址               |
