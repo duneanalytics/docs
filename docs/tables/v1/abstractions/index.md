@@ -12,7 +12,7 @@ Sector Abstractions are tables like dex.trades, erc20.stablecoins, lending.borro
 
 These abstractions take in data from multiple contracts and projects, standardize the data across them and therefore make it very easy to query for this data and compare the metrics of different projects with each other.
 
-Most of the [sector](../../../../getting-started/use-cases/sector-dashboards.md) Dashboards depend on sector abstractions. This introduces an interesting dynamic in which projects can easily get their data into these dashboards by making a pull request to our public [github repo](https://github.com/duneanalytics/spellbook/index.md).
+Most of the [sector](../../../getting-started/use-cases/sector-dashboards.md) Dashboards depend on sector abstractions. This introduces an interesting dynamic in which projects can easily get their data into these dashboards by making a pull request to our public [github repo](https://github.com/duneanalytics/spellbook/index.md).
 
 Team Dune and the community are always improving on these sector abstractions, all new additions to existing ones are always welcome.
 
@@ -26,4 +26,4 @@ The main advantage here over just constructing a view is that you are able to de
 
 Our abstractions for v1 are no longer open for contributions.
 
-If you'd like to contribute to Dune abstractions, take a look at [Spellbook](../../../../spellbook/index.md)).
+If you'd like to contribute to Dune abstractions, take a look at [Spellbook](../../../spellbook/index.md).
