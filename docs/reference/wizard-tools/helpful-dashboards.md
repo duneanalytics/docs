@@ -15,6 +15,7 @@ These dashboards are great for learning new Dune, Data Analytics, and Blockchain
 - [@1chioku](https://dune.com/1chioku)'s [Data Visualization Cheat Sheet](https://dune.com/1chioku/data-visualisation-cheat-sheet)
 - [@agaperste](https://dune.com/agaperste)'s [Event and Function Signature Sleuthing](https://dune.com/agaperste/event-and-function-signature-sleuthing)
 - [@dune](https://dune.com/dune)'s [Getting Started](https://dune.com/dune/get-started)
+- [@duniversity](https://dune.com/duniversity)'s  [Contract Quickstart](https://dune.com/duniversity/contract-quickstart?contract_t761b2=0x7d2768de32b0b80b7a3454c06bdac94a69ddc7a9)
 
 ## Reference Dashboards
 

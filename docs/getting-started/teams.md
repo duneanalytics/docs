@@ -64,4 +64,4 @@ We’re planning to add support for private content in Teams later this year. St
 
 **I have feedback, how do I reach out?**
 
-Come join our [#feedback Discord channel](https://discord.com/channels/757637422384283659/799689116920709170) and we'll be glad to help 🙇‍♂️
+Come join our [#general-feedback Discord channel](https://discord.com/channels/757637422384283659/1012706316755664926) and we'll be glad to help 🙇‍♂️

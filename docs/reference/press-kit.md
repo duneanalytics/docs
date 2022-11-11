@@ -5,7 +5,7 @@ description: Get the Dune brand assets and learn about the usage guidelines
 
 # Press Kit
 
-## How to Reference DUne Data!
+## How to reference Dune data!
 
 Content on Dune is first and foremost the product of the creators ("Wizards") who build the Queries, Visualizations, and Dashboards we reference and share.
 

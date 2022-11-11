@@ -39,7 +39,7 @@ This is because the parser sometimes treats words in double quotes as a string a
 
 For example, referencing a column name in the where clause using double quotes works as expected. However, the same query inside a CTE treats the column name as a string, [as can be seen here](https://dune.com/queries/1199604).
 
-If you have found any other changes that are important to note, please feel free to sumbit a PR to our docs or leave us feedback in [Discord](https://discord.com/dunecom)!
+If you have found any other changes that are important to note, please feel free to submit a PR to our docs or leave us feedback in our [#general-feedback Discord channel](https://discord.com/channels/757637422384283659/1012706316755664926)!
 
 When googling for SQL questions, instead of googling `PGSQL median`, you should now google for `Databricks SQL median`. Databricks has a well documented index of built in functions on their website.
 
