@@ -1,23 +1,23 @@
 ---
-title: Community Clients
-description: Here's a list of Dune API clients built by our magnificent community!
+title: 社区客户端
+description: 由我们超有凝聚力的社区建立的 Dune API 客户端列表！
 ---
 
-Our community once again comes through for the win with the below API clients.
+我们的社区通过打造以下 API 客户端再次大放异彩。
 
-If you've built your own let us know about it in our [#dune-api Discord Channel](https://discord.com/channels/757637422384283659/1019910980634939433)!
+如果您也创建了自己的客户端，请在我们的 [#dune-api Discord 频道](https://discord.com/channels/757637422384283659/1019910980634939433) 告知我们！
 
-## Cow Protocol Python Client
+## Cow 协议 Python 客户端
 
-Built by [@bh2smith](https://dune.com/bh2smith) and the team at [Cow Protocol](https://dune.com/cowprotocol), you can find this client on [PyPi](https://pypi.org/project/dune-client/).
+这个客户端由用户 [@bh2smith](https://dune.com/bh2smith) 和 [Cow Protocol](https://dune.com/cowprotocol) 的团队构建，您可以在 [PyPi](https://pypi.org/project/dune-client/) 上找到它。
 
-Get started quickly with a simple pip install command:
+通过一条简单的 pip 安装命令就能立马上手：
 
 ```
 pip install dune-client
 ```
 
-And if you want to learn more about how it's built and works, check out the client's [GitHub page here](https://github.com/cowprotocol/dune-client).
+如果你想了解更多用法及代码细节，请查看此客户端的 [GitHub 页面](https://github.com/cowprotocol/dune-client).
 
-!!! warning "Disclaimer"
-    While we love that our community has taken the lead, these clients are not directly maintained by the Dune team. This means we can't guarantee they're bug free and might not be able to help if they aren't.
+!!! warning "免责声明"
+    虽然我们很喜欢社区的积极主动，但这些客户端并不是由 Dune 团队直接维护的。这意味着我们不能保证它们没有错误，另外如果客户端有 bug，我们可能也无法提供帮助。
