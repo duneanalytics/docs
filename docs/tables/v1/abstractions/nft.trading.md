@@ -1,62 +1,147 @@
 ---
 description: >-
-  This table provides a pricefeed for all assets that are traded on a
-  decentralized exchange somewhere.
+  nft.trades makes NFT trading data available to everyone on Dune Analytics.
+  NFT.trades aggregates data across multiple NFT platforms into one simple
+  table.
 ---
 
-# Prices from dexes
+# nft.trades
 
-### Prices calculated from trading data
+## **An easy way of querying for NFT data**
 
-We created a table that creates price feeds based on decentralized exchange trading data. This table covers much more assets than `prices.usd`, since it covers all assets that are traded on any  of the decentralized exchanges that are indexed in `dex.trades`.
+`nft.trades` is an effort to make NFT trading data easily available to everyone on Dune Analytics. This table aggregates and standardizes the data between different data platforms and provides auxiliary information and metadata all in one table.
 
-**Please keep in mind that this script can generate wrong prices in rare cases.**
+The culmination of this is a dataset which makes it extremely easy to query for any NFT related trading data across all indexed platforms.
 
-This table is very resource intensive and can therefore only be updated every few hours, please keep that in mind when utilizing it. **** Also the resolution is only hourly, so if you need minutely prices do refer to [`prices.usd`](../../prices.md).
+So far we have indexed the data of the following platforms:
 
-This table currently only exists for Ethereum on our old database architecture.
+* OpenSea
+* Rarible
+* SuperRare
+* CryptoPunks (They get traded in their own contracts)
+* Foundation
+* LooksRare
 
-### How this works
+All of this data is easily accessible with very simple queries like these:
 
-The logic of how this table works can be accessed in our [public github](https://github.com/duneanalytics/spellbook/tree/master/ethereum/prices) repo.
+* [**all trades for a given NFT**](https://dune.com/queries/146090)
 
-This script generates median hourly prices based on data from decentralized exchanges found in `dex.trades`. It will assign asset prices based on a trading pair which has a pricefeed in `prices.usd`.
+![NFT](images/nft.png)
 
-Let's take the $SPELL/ETH Pool for example.
+```sql
+select * from nft.trades 
 
-* $ETH price is contained in `prices.usd`
-* $SPELL price is not contained in `prices.usd`
+where nft_contract_address = '\xb47e3cd837ddf8e4c57f05d70ab865de6e193bbb' --this is the cryptopunks address
+```
 
-In order to get the $SPELL price, the script will dynamically calculate the price of $SPELL based on the price of $ETH that was exchanged for it.
+* [**trades in the last 24 hour on a given platform**](https://dune.com/queries/146152)
 
-e.g. 5 $ETH were exchanged for 1,086,083 $SPELL.
+```sql
+select date_trunc('day', block_time), usd_amount, nft_contract_address, token_id from nft.trades 
 
-Dex.trades will assign a `usd_amount` to this trade based on the $ETH price data in `prices.usd`.
+where platform = 'OpenSea' --only shows trades on given Platform
 
-That `usd_amount` is $23,498.
+and block_time > now() - interval '24hours'
+```
 
-`5 * price of ETH (4.699,6) = $23,498`
+* [**platform volumes in the last year**](https://dune.com/queries/146160)
 
-Calculating the price of $SPELL is now as simple as dividing the amount of tokens exchanged with the `usd_amount` recorded in `dex.trades`.
+```sql
+select  sum(usd_amount), 
+        date_trunc('day', block_time) as day, 
+        platform 
+from nft.trades 
+where block_time > now() - interval '365 days'
+group by platform, day
+```
 
-`$23,498/1,086,083 ≈ $0,02163`
+###
 
-We now have successfully calculated the price of 1 $SPELL.
+### Basic Understanding
 
-In order to correct for extreme outliers and in order for this table to be performant the script then aggregates all recorded data into one `median_price` per hour.
+#### Single Item Trade
 
-### Known issues
+A trade occurs between a `buyer`and a `seller`.
 
-In rare cases this script will generate price feeds that are based on illiquid pairs and therefore report wrong data. This happens when all liquid trading pools of this token do not have a price feed in `prices.usd`.
+They exchange an item which is uniquely identified by the combination of `nft_contract_address` and `token_id`. The Buyer will pay the Seller a given `original_amount`of tokens in any given `original_currency`. To make it easier, we have calculated the `usd_amount` that this was worth at the time of the trade for you. Most trades will be done in ETH or WETH, but especially non OpenSea trades often contain other currencies.
 
-An example of this would be $PLAY, a metaverse index from piedao. The liquid trading pair for this asset is $PLAY/$DOUGH. The "correct" price of $PLAY is represented in this pool, but the combination of `dex.trades` and `prices.prices_from_dex_data` are not able to pick up this price.
+The trade is committed on any of the indexed `platforms`and will be facilitated through a smart contract of those platform's `exchange_contract_address`. Each trade will have metadata like `block_time`, `tx_hash`_,_ `block_number`, `platform version`, `evt_index` etc.
 
-Instead, `dex.trades` will only have a `usd_amount` for illiquid pairs of this asset. In this case, the $PLAY/$ETH pool has trades once in a while and these will have a `usd_amount` in `dex.trades`. The liquidity of the $PLAY/$ETH pool is very low and it pretty much only consists of arbitrage trades. Therefore, the resulting pricefeed in `prices.prices_from_dex_data` is faulty since it depends on the `usd_amount` in `dex.trades`.
 
-In order to check for this, you should manually verify the results of `prices.prices_from_dex_data` in order to make sure arbitrage trades do not disturb the price feed constructed. A simple way of validating that the script is working with the right pools is checking the `sample_size` column. If the number seems suspiciously low, the script probably doesn't pick up the right price.
 
-In cases like this, you have to manually construct a price feed.
+Additionally, we also provide metadata about the traded NFT. `nft_project_name` and `erc_standard` will help you in analysing your dataset more easily. `nft_project_name` data gets pulled from the `nft.tokens` [table](https://github.com/duneanalytics/spellbook/blob/master/ethereum/nft/tokens.sql), if your NFT is missing in that table, you are welcome to make a PR to add it.
 
-### Outro
+**Bundle Trade**
 
-We are always looking to improve this table, if you have any ideas or comments don't hesistate to open a PR or contact us in our Discord.
+There can also be trades in which a single trade transaction contains multiple Items. Each of these Items is uniquely identified through a combination of `nft_contract_address` and `token_id`. Unfortunately, in these trades there is not a clear way to determine a corresponding `usd_amount` for each of the items. A possible workaround is to divide the number of items by the payment made for the bundle, but this logic very quickly falls apart when Items that are not one in kind/value get sold in a bundle. We recommend removing bundle transfers from the dataset that you are working with since it can heavily influence the results in either direction. Note that `token_id` and '`erc_standard` will be null if tokens with different tokens IDs or erc type are transfered within the same transaction.
+
+**Aggregator Trade**
+
+There can also be trades in which a single trade transaction contains multiple items, especially when using NFT aggregator platforms. Our approach is to unravel aggregator trades so that each row correspond to a unique item that was traded, with its associated ID, price, collection, etc. Importantly, the `trade_type` will be indicated as `Aggregator Trade`, and platform names and address can be found in the `nft.aggregators` [table](https://github.com/duneanalytics/spellbook/blob/master/ethereum/nft/aggregators.sql). If your aggregator platform is missing in that table, you are welcome to make a PR to add it.
+
+**Platform and Royalty Fees**
+
+In the most recent version of `nft.trades`, information about the amount and percent of royalty fees in the original amount and in USD is available when this information was able to be retrieved. Royalty fees are going to the creator, and Platform fees are collected by the NFT platform. Note that royalty fees cannot always be retrieved, and are set to null by default.
+
+### **Sample dashboards**
+
+**Dashboard that utilize parameters**
+
+[**https://dune.com/0xBoxer/NFT**](https://dune.com/0xBoxer/NFT)
+
+[**https://dune.com/rantum/NFT-Sales-Overview-by-Project**](https://dune.com/rantum/NFT-Sales-Overview-by-Project)
+
+**Dashboards that look across the entire Ecosystem**
+
+[**https://dune.com/rantum/NFT-Collection-Dashboard**](https://dune.com/rantum/NFT-Collection-Dashboard)
+
+[**https://dune.com/sealaunch/NFT**](https://dune.com/sealaunch/NFT)\
+
+
+***
+
+## **Ser, my platform is not indexed**
+
+The SQL code that processes the data for every market place is open source and available in our [github repository](https://github.com/duneanalytics/spellbook/tree/master/ethereum/nft/trades). Everyone can review the code, make pull requests and submit code to add more marketplaces.
+
+Also read the section "[abstractions](index.md)" about this topic.
+
+## **Table contents**
+
+| column\_name                 | data\_type               | description                                                                       |
+| ---------------------------- | ------------------------ | --------------------------------------------------------------------------------- |
+| block\_time                  | timestamp with time zone | When was this trade exectuted                                                     |
+| nft\_project\_name           | text                     | NFT project name (e.g. "the dudes")                                               |
+| nft\_token\_id               | text                     | The token\_id that got trades (e.g. 235)                                          |
+| erc\_standard                | text                     | The Token Standard of the traded token ERC721 or ERC1155                          |
+| platform                     | text                     | Which Platform was this trade executed on?                                        |
+| platform\_version            | text                     | Which version of this platform was utilized?                                      |
+| trade\_type                  | text                     | "Single Item Sale" or "Bundle Sale"?                                              |
+| number\_of\_items            | integer                  | How many NFTs were traded in this trade?                                          |
+| category                     | text                     | Was this an auction or a direct sale?                                             |
+| evt\_type                    | text                     | currently not in use, default 'Trade'                                             |
+| aggregator                   | text                     | Was this trade made using an aggregator (Yes : Name of aggregator, No : Null)     |
+| usd\_amount                  | numeric                  | USD value of the trade at time of execution                                       |
+| seller                       | bytea                    | Seller of NFTs                                                                    |
+| buyer                        | bytea                    | Buyer of NFTs                                                                     |
+| original\_amount             | numeric                  | The amount in the right format                                                    |
+| original\_amount\_raw        | numeric                  | raw amount of the currency                                                        |
+| eth\_amount                  | numeric                  | ETH value of the trade at time of execution                                       |
+| royalty\_fees\_percent       | numeric                  | Royalty fees going to the creator (in %)                                          |
+| original\_royalty\_fees      | numeric                  | Royalty fees in the currency used for this trade                                  |
+| usd\_royalty\_fees           | numeric                  | USD value of royalty fees at time of execution                                    |
+| platform\_fees\_percent      | numeric                  | Platform fees (in %)                                                              |
+| original\_platform\_fees     | numeric                  | Platform fees in the currency used for this trade                                 |
+| usd\_platform\_fees          | numeric                  | USD value of platform fees at time of execution                                   |
+| original\_currency           | text                     | The Currency used for this trade                                                  |
+| original\_currency\_contract | bytea                    | The erc20 address of the currency used in this trade (does not work with raw ETH) |
+| currency\_contract           | bytea                    | the corrected currency contract                                                   |
+| nft\_contract\_address       | bytea                    | The contract address of the NFT traded                                            |
+| exchange\_contract\_address  | bytea                    | The platform contract that facilitated this trade                                 |
+| tx\_hash                     | bytea                    | the hash of this transaction                                                      |
+| block\_number                | integer                  | the block\_number that this trade was done in                                     |
+| tx\_from                     | bytea                    | Initiated this transaction                                                        |
+| tx\_to                       | bytea                    | Received this transaction                                                         |
+| trace\_address               | ARRAY                    | n/a                                                                               |
+| evt\_index                   | integer                  | event index                                                                       |
+| trade\_id                    | integer                  | n/a                                                                               |
