@@ -1,34 +1,34 @@
 ---
 title: Javascript
-description: Here's how to access the Dune API via JavaScript.
+description: 如何通过 JavaScript 调用 Dune API。
 ---
 
 !!! Warning
-    This guide is not yet comprehensive. If you have questions, please reach out to our team via the #[dune-api](https://discord.com/channels/757637422384283659/1019910980634939433) channel on Discord.
+    本指南尚不完善。如果您遇到其他问题，请通过 Discord 的 #[dune-api](https://discord.com/channels/757637422384283659/1019910980634939433) 频道联系我们的团队。
 
-Let's get started using the Dune API via JavaScript!
+让我们通过 JavaScript 调用 Dune API！
 
-We'll show you one of the several ways the API can be consumed via JavaScript, in this case using the `node-fetch` package.
+我们将向您展示几种通过 JavaScript 调用 API 的方式，本例中会使用 `node-fetch` 包。
 
-!!! example "Prerequisites"
-    This Quick Start Guide assumes you have some level of familiarity with Node.js (Node), Node Package Manager (NPM) and Node Version Manager (NVM).
+!!! example "前提条件"
+    本快速入门指南假定您对 Node.js（Node）、Node包管理器（NPM）和 Node版本管理器（NVM）较为熟悉。
 
-To start, make sure you're using the current LTS version of Node.js (Node 16) and the latest version of NPM:
+首先，确保您使用的是 Node.js 的 LTS 版本（Node 16）和 NPM 的最新版：
 
-## Getting Set Up
+## 着手准备
 
 ```
 nvm use lts
 npm install latest
 ```
 
-Then install the node-fetch package:
+然后安装 node-fetch 包：
 
 ```
 npm install node-fetch
 ```
 
-Next, create a project directory and initiate an ESMcompatible Node project:
+接下来，创建一个项目目录并初始化一个 ESM 兼容的 Node 项目：
 
 ```
 mkdir dune_api_js
@@ -36,15 +36,15 @@ cd dune_api_js
 npm init esm --yes
 ```
 
-This will initiate a project for you which will include a `package.json` file. Open this file and add the following line to it:
+这将为您初始化一个项目，其中包括一个 `package.json` 文件。打开这个文件并添加下面这行内容：
 
 ``` json
 "type": "module"
 ```
 
-## Example Dune API Script
+## Dune API 代码案例
 
-Replace `#! YOUR_API_KEY` with your Dune API key in the following code, then add it to the `main.js` file in your project:
+将以下代码中的 `#！YOUR_API_KEY` 替换为您自己的 Dune API 密钥，然后将其添加到您项目的 `main.js` 文件中：
 
 ``` js
 import { Headers } from 'node-fetch';
@@ -68,17 +68,18 @@ console.log(body);
 
 ```
 
-Just run this script to get a response from the Dune API:
+直接运行这个脚本从 Dune API 中获得响应：
 
 ```
 node main.js
 ```
-You should see a response being returned on your command line.
 
-For the example here, we have used a simple example Query that fetches a small set of data:`query_id: 1258228`
-You can also edit the Query URL to fetch data from any other Queries you'd like! 🪄
+您应该在命令行上看到一个返回的响应。
 
-The code here only calls the API end point that starts the execution of the query. To fetch the data generated from the execution of this query, you would need to call other API endpoints. See the [API Reference](../api-reference/authentication.md) section to learn more about various endpoints the Dune API currently offers.
+本例中，我们使用了一个简单的查询，该查询获取了一小部分数据集：`query_id: 1258228`
+您也可以编辑 Query URL，即可从任何其他查询中获取您想要的数据！ 🪄
 
-!!! Complete-Code
-    The complete code for this tutorial is available on [this link](https://github.com/SusmeetJain/dune_api_js).
+这里的代码仅调用了开启执行查询的 API 访问域名。如要获取该查询所返回的数据，您需要调用其他 API 访问域名。请参阅 [API参考](../api-reference/authentication.md) 部分的内容，以了解更多有关 Dune API 访问域名的信息。
+
+!!! 完整代码
+    本教程的完整代码可在 [这个链接](https://github.com/SusmeetJain/dune_api_js) 查阅。
