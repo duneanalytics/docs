@@ -294,4 +294,4 @@ execution_id = execute_query_with_params("638435", parameters)
 一旦您从这个 POST 访问域名获取到 `execution_id`，您就可以在API的所有 GET 访问域名上使用它，就像您使用一个无需参数的简单查询一样。
 
 !!! 完整代码
-    本教程的完整代码可在 [这个链接](https://github.com/SusmeetJain/dune_api_python) 查阅
+    本教程的完整代码可在 [这个链接](https://github.com/SusmeetJain/dune_api_python) 查阅。
