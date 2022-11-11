@@ -1,39 +1,39 @@
 ---
 title: Python
-description: Here's how to access the Dune API via Python.
+description: 如何通过 Python 调用 Dune API。
 ---
 
-Let's get started using the Dune API via Python!
+让我们通过 Python 调用 Dune API！
 
-In this example we'll be using Python3. We recommend using a virtual environment and the `pip` package manager.
+本例中，我们将使用 Python3。我们建议使用虚拟环境和`pip`包管理器。
 
-!!! example "Prerequisites"
-    This Quick Start Guide assumes you have some prior experience using Python, though we aimed to make the code here easy to follow. If you have questions, please reach out to our team via the #[dune-api](https://discord.com/channels/757637422384283659/973606737393352745) channel on Discord.
+!!! example "前提条件"
+    本快速入门指南假定您之前有过一些 Python 的开发经验，尽管我们的目的是使这些代码易于理解。如果您有其他问题，请通过 Discord 的 #[dune-api](https://discord.com/channels/757637422384283659/973606737393352745) 频道与我们的团队联系。
 
-## Getting Set Up
+## 着手准备
 
-We'll primarily be working with the `requests` library to access the API, so let's install it:
+我们将主要使用 `requests` 库来访问 API，所以先安装它：
 
 ``` bash
 pip install requests
 ```
 
-We'll also use `pandas` to load the data returned from APIs into a neat DataFrame (table), and `jupyter notebooks` to have a nice interactive interface to do all of this.
+我们还将使用 `pandas` 将从 API 返回的数据加载到一个整洁的 DataFrame（表格）中，并使用 `jupyter notebooks` 创建一个高颜值的交互界面来完成所有这些工作。
 
-So let us install these as well:
+所以，我们一并安装这些库：
 
 ``` bash
 pip install pandas
 pip install jupyter notebook
 ```
 
-We recommend following rest of the Quick Start in a jupyter notebook. You can start the interface with this simple command:
+我们建议在 jupyter 界面演示后续的快速入门指南。您可以用这条简单的命令来启动界面：
 
 ``` bash
 jupyter notebook
 ```
 
-### Import the necessary libraries
+### 导入必要的库
 
 ``` py
 from requests import get, post
@@ -42,16 +42,16 @@ import pandas as pd
 
 ### API Keys
 
-Any call you make to the Dune API will require you to pass your API key with your call's header:
+您对 Dune API 的任何调用都需要在调用头中传递 API 密钥：
 
 ``` py
 API_KEY = "YOUR_API_KEY"
 HEADER = {"x-dune-api-key" : API_KEY}
 ```
 
-### Simplifying URL generation
+### 简化URL生成
 
-Though not a necessary step, using this function will make it easier to generate URLs for different API endpoints:
+虽然并非必要，但使用此函数可以更容易为不同的 API 访问域名（endpoints）生成 URL：
 
 ``` py
 BASE_URL = "https://api.dune.com/api/v1/"
@@ -66,9 +66,9 @@ def make_api_url(module, action, ID):
     return url
 ```
 
-## Wrapping API endpoints in functions
+## 用函数包裹API访问域名（endpoints）
 
-The Dune API currently has four primary end points as documented in the [API Reference](../api-reference/authentication.md) section. We are going to wrap these up in neat functions which will make using the Dune API as easy as a flick of the 🪄:
+Dune API 目前有四个主要的访问域名，在 [API参考](.../api-reference/authentication.md) 部分有详细介绍。我们这里用一些函数进行包装，从而使得调用 Dune API 像挥动魔法棒 🪄 一样简单：
 
 ``` py
 def execute_query(query_id):
@@ -124,40 +124,41 @@ def cancel_query_execution(execution_id):
     return response
 ```
 
-## Using the Dune API
+## 使用 Dune API
 
-### Execute a Query
+### 执行查询
 
-To [Execute a Query](../api-reference/execute-query-id.md), you can pass any `query_id` from Dune that you want to fetch data from, then pass it to the `execute_query` function:
+为了 [执行查询](../api-reference/execute-query-id.md)，您可以传递任何您想要从 Dune 获取数据的 `query_id`，然后把它传递给`execute_query` 函数：
 
-#### Function Call
+#### 函数调用
 
 ``` py
 execution_id = execute_query("1258228")
 ```
 
-#### Output
+#### 返回结果
 
-This function returns an `execution_id` which will look something like the sample output shown here:
+此函数会返回一个 `execution_id`，输出结果显示类似下面这样：
 
 ``` py
 '01GCQKPC4QZ6Q8645C3JC4WBT1'
 ```
 
-This execution ID is the required input for rest of the API functions.
+这个 execution ID 是其他 API 函数所需的输入项。
 
-### Get Query Execution Status
+### 获取查询的执行状态
 
-To get the [Query Execution Status](../api-reference/execution-status.md), take the `execution_id` that was returned from the `execute_query` function in the previous section, then pass it to `get_query_status` function as shown here:
+要获取 [查询执行状态](.../api-reference/execution-status.md)，从前面 `execute_query` 函数提取返回的 `execution_id`，然后将其传递给`get_query_status` 函数，如下所示：
 
-#### Function Call
+#### 函数调用
 
 ``` py
 response = get_query_status(execution_id)
 ```
-#### Output
 
-The `response` object returned by this function will look something like the example shown here:
+#### 返回结果
+
+此函数返回的`response`对象，输出结果显示类似下面这样：
 
 ``` json
 {'execution_id': '01GCQKPC4QZ6Q8645C3JC4WBT1',
@@ -196,27 +197,27 @@ The `response` object returned by this function will look something like the exa
   'execution_time_millis': 13}}
 ```
 
-In most cases, you will primarily be concerned with accessing the `state` property in this JSON object, which in this case is `QUERY_STATE_COMPLETED`.
+大多数情况下，您主要关心这个 JSON 对象中的 `state` 属性，此例中即`QUERY_STATE_COMPLETED`。
 
-### Get Query Results
+### 获取查询结果
 
-Finally, let's load the results from the now-completed execution of our Query.
+最终，让我们从完成查询的执行中加载结果。
 
-#### Function Call
+#### 函数调用
 
 ``` py
 response = get_query_results(execution_id)
 ```
 
-Lets wrap the data received from this JSON `response` object up into a neat pandas Dataframe.
+让我们把 JSON `response` 对象中返回的数据包装成一个漂亮的pandas Dataframe。
 
 ``` py
 data = pd.DataFrame(response.json()['result']['rows'])
 ```
 
-#### Output
+#### 返回结果
 
-If everything worked smoothly, you should see your data in the `data` variable returned by this function:
+如果一切顺利的话，您应该在这个函数返回的 `data` 变量中看到您的数据：
 
 ``` py
 0	2021-05-14T15:17:39+00:00	DEX	191	\xf82d8ec196fb0d56c6b82a8b1870f09502a49f88	Uniswap	\xa2b4c0af19cc16a6cfacce81f192b024d625817d	7.819632e+11	781963170639542600000	KISHU	\xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2	...	WETH	[]	1	\x75e29a7676717b99da65c6faad2e7644d00e2053	None	\x75e29a7676717b99da65c6faad2e7644d00e2053	\x6bc05c2bc156a60c1cacfc379540ad00b7280796613b...	\x7a250d5630b4cf539739df2c5dacb4c659f2488d	10387.825000	2
@@ -231,31 +232,31 @@ If everything worked smoothly, you should see your data in the `data` variable r
 9	2022-04-06T07:24:39+00:00	DEX	234	\xaa51ea59c985a92ce881517a8896931d4a86e9e3	Uniswap	\xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2	1.127058e-01	112705776325968480	WETH	\x4846b0cce69121e4d25b6efe7738eaf27bca7e7f	...	None	[]	1	\x68b3465833fb72a70ecdf485e0e4c7bd8665fc45	None	\xa053dbafba05e307a7bddede09c7feb235dc34b1	\x8c86abc9c4eaff2b8de48351360781bc153cd16fa108...	\x68b3465833fb72a70ecdf485e0e4c7bd8665fc45	380.336913	2
 ```
 
-So you now have data from your Dune query.
+所以，您现在有了来自 Dune 查询的数据。
 
-In a table.
+以表格呈现。
 
-In Python. 
+用 Python 获取。
 
 🧙🪄
 
-### Cancel Query Execution
+### 撤销查询执行
 
-Some queries can take a long time to execute (minutes).
+某些查询可能需要很长的时间来执行（几分钟）。
 
-Depending on your workflow, you may want to interrupt execution at times. Here's how to do that:
+根据您的工作流程，您可能会想要撤销执行。做法如下：
 
 ```py
 response = cancel_query_execution(execution_id)
 ```
 
-When you have a running Query and call this function, you'll get a response object returned to you confirming the cancellation of query execution.
+当您有一个正在运行的查询并调用此函数，您会得到一个响应对象，用以确认撤销查询。
 
-## Parameterized Queries
+## 参数化查询
 
-Only one step changes when you are working with parameterized queries - you need to pass query parameters to the execution endpoint of our API. There is no change to working with rest of the endpoints after this step.
+当您使用参数化查询时，只需变动一个位置：您需要将查询参数传递给我们的 API 访问域名。在这之后，其余部分无需任何变动。
 
-So let's define a function `execute_query_with_params` to call the execute endpoint for parameterized queries:
+所以，让我们定义一个函数 `execute_query_with_params` 来调用参数化查询的访问域名：
 
 ```py
 def execute_query_with_params(query_id, param_dict):
@@ -272,23 +273,25 @@ def execute_query_with_params(query_id, param_dict):
     return execution_id
 ```
 
-#### Create a Dictionary of parameters
-For our example, we're creating a dictionary with just one key, the `wallet_address`, for use in a query that returns the total amount spent on gas from a given `wallet_address`:
+#### 创建一个参数字典
+
+在我们的例子中，我们要创建一个只有一个键的字典，即 `wallet_address`，用于查询给定 `wallet_address` 的 gas 总花费：
 
 ```py
 parameters = {"wallet_address" : "0xb10f35351ff21bb81dc02d4fd901ac5ae34e8dc4"}
 ```
 
-#### Pass the parameters dictionary to the execution endpoint
-Now let's make use of the function that we just defined to achieve this:
+#### 将参数字典传给访问域名点
+
+现在让我们用我们刚定义好的函数来实现这一目标：
 
 ```py
 execution_id = execute_query_with_params("638435", parameters)
 ```
 
-And that is it!
+搞定！
 
-Once you get the `execution_id` from this POST endpoint, you can use it with all the GET endpoints of the API, just like you would with a simple query without parameters.
+一旦您从这个 POST 访问域名获取到 `execution_id`，您就可以在API的所有 GET 访问域名上使用它，就像您使用一个无需参数的简单查询一样。
 
-!!! Complete-Code
-    The complete code for this tutorial is available on [this link](https://github.com/SusmeetJain/dune_api_python).
+!!! 完整代码
+    本教程的完整代码可在 [这个链接](https://github.com/SusmeetJain/dune_api_python) 查阅
