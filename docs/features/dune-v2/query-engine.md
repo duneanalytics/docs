@@ -1,128 +1,130 @@
 ---
-title: Query Engine
+title: 查询引擎
 ---
 
-## Welcome to DuneV2
+## 欢迎来到 DuneV2
 
-DuneV2 changes our whole database architecture. We are transitioning away from a PostgreSQL database to an Instance of [Apache Spark](https://www.databricks.com/glossary/what-is-apache-spark) hosted on [Databricks](https://docs.databricks.com/getting-started/introduction/index.html). The difference between the two systems can be summarized as follows:
+DuneV2 改变了我们整个数据库的架构。 我们正在从 PostgreSQL 数据库向托管在 Databricks 上的 [Apache Spark](https://www.databricks.com/glossary/what-is-apache-spark) hosted on [Databricks](https://docs.databricks.com/getting-started/introduction/index.html)实例。 两种系统的却别可以总结如下:
 
-* Instead of PostgreSQL, we will now use Databricks SQL. The change in SQL keywords is minimal but might be relevant for some of your querying habits.
-* Spark is a column oriented database in contrast to PostgreSQL’s row oriented approach.
-* traditional indexes are replaced by column chunk level `min/max` values
+* 我们现在使用 Databricks SQL，而不是 PostgresQL。SQL 关键字的变化很小，但可能与你的某些查询书写习惯有关。
+* 与 PostgresQL 的面向行的方法相反，Spark 是一个面向列的数据库。
+* 传统的索引被列块级别的 最小/最大 值替换。
 
-!!! note
-    Find a detailed wakthrough of the changes V2 brings to building Queries below. Or start getting your wand dirty by following along with [@springzhang](https://dune.com/springzhang/)'s [Tips and Tricks for Dune V2 Queries and Visualizations](https://dune.com/springzhang/tips-and-tricks-for-query-and-visualization-in-v2-engine)
+!!! 注意
+    下面是关于V2给构建查询带来的变化的详细介绍。 您可以从这里开始练习 [@springzhang](https://dune.com/springzhang/)'s [Tips and Tricks for Dune V2 Queries and Visualizations](https://dune.com/springzhang/tips-and-tricks-for-query-and-visualization-in-v2-engine)
 
-## Databricks SQL <> PostgresSQL operator changes
+## Databricks SQL 与 PostgresSQL 操作符的变化
 
-The changes between the 2 coding languages syntax and the keyword operators are quite minimal, however there is some differences you should be mindful of:
+两种编码语码愈发和关键字运算符之前的变化非常小，但是你应该注意下面这些差异:
 
-| Description                                                              | DuneV1                                                                                                                                                                    | DuneV2                                                                                                                      |
-| ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| **bytea2numeric does not exist in Spark.**                               | bytea2numeric(bytea)                                                                                                                                                      | bytea2numeric_v2(string)                                                                                       |
-| **0 vs 1 based indexing**                                                | 1 indexed                                                                                                                                                                 | 0 indexed                                                                                                                   |
-| **bytea vs string for address, tx hash, etc…**                           | <p><code>\x2a7d..</code><br>(bytea)</p>                                                                                                                                   | <p><code>0x2a7d...</code><br>(string)</p>                                                                                   |
-| **Addresses (strings) are lower case in dune v2**                        | <p><code>\x2A7D...</code>(bytea)<br>Works in Postgres</p>                                                                                                                 | <p><code>0x2a7d...</code> (string)<br>Has to be lowercase in Spark.<br>Can be done via <code>lower('0x2A7D...')</code>.</p> |
-| **Selecting keyword columns is is different**                            | `"from"`                                                                                                                                                                  | `` `from` ``                                                                                                                |
-| **Alias naming is different**                                            | `as "daily active users`"                                                                                                                                                 | ``as `daily active user``\`                                                                                                 |
-| **Exponentiation notation**                                              | `x/10^y`                                                                                                                                                                  | `x*power(10,y)` or `x*1e*y`                                                                                                 |
-| **Interval arguments need a space in between the number and time units** | `Interval '1day'`                                                                                                                                                         | `Interval '1 day'`                                                                                                          |
-| **Generate\_series () is now sequence ()**                               | `generate_series('2022-05-15', CURRENT_DATE, '1 day')`                                                                                                                    | `explode(sequence(to_date('2022-01-01'), to_date('2022-02-01'), interval 1 day))`                                           |
-| **Decimals are no longer in prices.usd**                                 | <p>Don’t use<br><code>prices.usd</code> decimals</p>                                                                                                                      | Replace by `blockchain.erc20_tokens.decimals`                                                                               |
-| **Define NULL array**                                                    | `NULL::integer[]`                                                                                                                                                         | `CAST(NULL AS ARRAY<int>))`                                                                                                 |
-| **encoding strings to hex**                                              | `encode(string, 'hex')`                                                                                                                                                   | `hex(string)`                                                                                                               |
-| <p><strong>Get json object</strong><br><strong>differences</strong></p>  | <p><code>("takerOutputUpdate"-></code><br><code>'deltaWei'->'value'</code>)<br><br><br><code>decode(substring(("addressSet"->'baseAsset')::TEXT, 4,40), 'hex')</code></p> | <p><code>get_json_object(get_json_object(takerOutputUpdate,'$.deltaWei'),'$.value')</code><br><br><code>'0x'</code></p>     |
+| 描述                                     | DuneV1                                                                                                                                                                    | DuneV2                                                                                                                  |
+|----------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
+| **Spark 中不存在 bytea2numeric**           | bytea2numeric(bytea)                                                                                                                                                      | bytea2numeric_v2(string)                                                                                                |
+| **基于 0 与基于 1 的索引**                     | 基于1                                                                                                                                                                       | 基于0                                                                                                                     |
+| **bytea 与 string 字符串（地址、tx哈希等…）**      | <p><code>\x2a7d..</code><br>(bytea)</p>                                                                                                                                   | <p><code>0x2a7d...</code><br>(string)</p>                                                                               |
+| **地址（string）在Dune v2 中是小写的**           | <p><code>\x2A7D...</code>(bytea)<br>Works in Postgres</p>                                                                                                                 | <p><code>0x2a7d...</code> (string)<br>在 Spark 中必须小写。<br>可以通过 <code>lower('0x2A7D...')</code>完成。</p>                     |
+| **选择关键字列的方法不同**                        | `"from"`                                                                                                                                                                  | `` `from` ``                                                                                                            |
+| **别名的命名方式不同**                          | `as "daily active users`"                                                                                                                                                 | ``as `daily active user``\`                                                                                             |
+| **指数符号**                               | `x/10^y`                                                                                                                                                                  | `x*power(10,y)` or `x*1e*y`                                                                                             |
+| **时间间隔参数在数字和时间单位之间需要一个空格**             | `Interval '1day'`                                                                                                                                                         | `Interval '1 day'`                                                                                                      |
+| **Generate_series() 现在变成了 sequence()** | `generate_series('2022-05-15', CURRENT_DATE, '1 day')`                                                                                                                    | `explode(sequence(to_date('2022-01-01'), to_date('2022-02-01'), interval 1 day))`                                       |
+| **prices.usd 表不再包含 Decimals 字段**       | <p>不要使用<br><code>prices.usd</code>的 decimals字段</p>                                                                                                                        | 用 `blockchain.erc20_tokens.decimals` 替换                                                                                 |
+| **定义 NULL 数组**                         | `NULL::integer[]`                                                                                                                                                         | `CAST(NULL AS ARRAY<int>))`                                                                                             |
+| **对字符串进行十六进制编码**                       | `encode(string, 'hex')`                                                                                                                                                   | `hex(string)`                                                                                                           |
+| **获取json对象的差异**                        | <p><code>("takerOutputUpdate"-></code><br><code>'deltaWei'->'value'</code>)<br><br><br><code>decode(substring(("addressSet"->'baseAsset')::TEXT, 4,40), 'hex')</code></p> | <p><code>get_json_object(get_json_object(takerOutputUpdate,'$.deltaWei'),'$.value')</code><br><br><code>'0x'</code></p> |
 
-Using double quotes is not recommended in DuneV2, even when the engine can run the query and does not return an error.
+在 DuneV2 中不建议使用双引号，即使引擎可以运行查询并且没有返回错误。
 
-This is because the parser sometimes treats words in double quotes as a string and sometimes it treats them as an object (column name for example).
+这是因为解析器有时将双引号中的词作为一个字符串处理，有时将其作为一个对象（例如列名）处理。
 
-For example, referencing a column name in the where clause using double quotes works as expected. However, the same query inside a CTE treats the column name as a string, [as can be seen here](https://dune.com/queries/1199604).
+例如，在 where 子句中使用双引号引用一个列名，可以正常运行。然而，在 CTE 中的同一查询将列名视为一个字符串。[就想这里一样](https://dune.com/queries/1199604).
 
-If you have found any other changes that are important to note, please feel free to sumbit a PR to our docs or leave us feedback in [Discord](https://discord.com/dunecom)!
+如果你发现有任何其他需要注意的变化， 请随时向我们的文档提交一份 PR，或在 [Discord](https://discord.com/dunecom)中向我们反馈!
 
-When googling for SQL questions, instead of googling `PGSQL median`, you should now google for `Databricks SQL median`. Databricks has a well documented index of built in functions on their website.
+在搜索 SQL 问题时，你现在应该搜索  `Databricks SQL median` 而不是搜索 `PGSQL median`. Databricks 在其网站上有一个有据可查的内置函数索引。
 
 <div class="cards grid" markdown>
 - [Databricks - Databricks SQL Language Reference](https://docs.databricks.com/sql/language-manual/sql-ref-functions-builtin.html)
 </div>
 
-## Changes in how the database works
+## 数据库工作方式的变化
 
-### How does a database work?
+### 数据库是如何工作的？
 
-On a very high level, databases read data from storage into memory in order to return your Query results. A database is often times limited by the speed of the database being able to read data into it's memory. This is a classic computer science problem that's commonly referred to as being[ I/O bound](https://en.wikipedia.org/wiki/I/O\_bound).
+在非常高的层次上，数据库将数据从存储读取到内存中，以返回你的查询结果。数据库通常会受到其将数据读入内存的速度的限制。这是一个经典的计算机科学问题，通常被称为[ I/O bound](https://en.wikipedia.org/wiki/I/O\_bound).
 
-### **Row oriented database**
+### **面向行的数据库**
 
-Databases store their data in pages. Pages traditionally contain rows of information. Multiple pages will make up one data file. A table in a database will sometimes consist of multiple data files.
+数据库将其数据存储在页（pages）中。页通常包含多行信息。 多页将组成一个数据文件。数据库中的一个表有时会包含多个数据文件。
 
-![row oriented database (PostgreSQL)](images/row-oriented.png)
 
-When retrieving data from the database, the database will read data into memory/cache in the size of pages. This is the smallest amount of data the database will read at once and is a common bottleneck while reading data from any database. After reading the data into memory, the database will either create temporary files or is able to read the data from memory again to finally arrive at the desired Query output.
+![面向行的数据库(PostgreSQL)](images/row-oriented.png)
 
-In any database system, we want to reduce the amount of pages we read when retrieving any amount of data from the database. Since traditional databases store rows in one page, they are best suited for retrieving all columns of one row in a Query. The database will always have to read the entire page in which a specific row is stored, therefore it is quite simple for the database to return the data also stored in this same page. The same is true for querying for rows which are stored closely together in the database. So querying for rows 500-600 is very efficient, querying for rows 5, 87, 789 and 1050 is not really all that efficient, but still alright.
+当从数据库检索数据时，数据库将以页的大小将数据读入内存/缓存。 这是数据库一次性读取的最小数据量，也是从任何数据库读取数据时的一个常见瓶颈。在将数据读入内存后，数据库数据库要么创建临时文件，要么能够再次从内存中读取数据，最终到达所需的查询输出。
 
-In contrast, querying for data which is stored in many different logical rows and therefore different pages is a hugely expensive operation. Most of the Queries we run on Dune today are aggregation of data points in a column over thousands if not millions of rows. In these cases, the database will read the entire pages in which this column data is stored, even though it only needs the data of one column. This means that on average, we are reading large amounts of data that is not needed to return the Query results, just because it is also contained on a page and the database is not able to read "just" the one column, but has to read the entire row in which the column is contained.
+在任何数据库系统中，我们都希望在从数据库中检索任意数量的数据时减少读取的页的数量。 由于传统数据库将多行数据存储在一页中，因此它们最适合在一个查询中检索一行的所有列的情况。数据库将始终必须读取存储特定行的整个页，因此数据库返回也存储在同一页中的其他数据非常简单。查询在数据库中紧密存储在一起的其他行也是如此。因此查询第 500-600 行是非常高效的，查询第 5、87、789 和 1050 行并不是那么高效，但仍然没问题。
 
-In PostgreSQL, we can use indexes to not force the database to read through the entire table (and therefore a lot of pages), but rather only look at a structured subset. This will lead to very fast and efficient Queries, but is limited to the columns which are indexed. Since every new index that is created for a specific table will be a new file in the database and make it harder to update and maintain that table, this is not a sustainable approach to scale a database.
+相比之下，查询存储在许多不同逻辑行中的数据，从而查询不同的页面，是一个非常昂贵的操作。今天我们在Dune上运行的大多数查询都是对数千甚至数百万行的某一列的数据点进行聚合。 在这些情况下，数据库将读取存储此列数据的整个页，即使它只需要其中一列的数据。  这意味着平均而言，我们正在读取大量返回查询结果并不需要用到的数据，只是因为它也包含在同一个页上，，并且数据库不能“仅”读取一列，而是必须读取包含该列的整行。
 
-We can't possibly create an index on every column or combination of columns in our database without running into trouble down the line. Therefore, Dune V2 will not run on row-oriented database, but rather on a column-oriented database.
+在 Postgres 中，我们可以使用索引来避免强制数据库读取整个表（因此读取了很多页），而只查看其中一个结构化的子集。这将使查询更加快速和高效, 但仅限于被索引的列。 由于为一个特定的表创建的每一个新索引都将是数据库中的一个新文件，并使更新和维护该表变得更加困难，因此这并不是一个可持续的数据库扩展方法。
 
-### **Column oriented database**
+我们不可能在数据库中的每一列或每一列的组合上都创建一个索引，而不至于在下一步遇到麻烦。因此，Dune V2不会在面向行的数据库上运行，而是在面向列的数据库上运行。
 
-Instead of storing rows in pages, we store columns in pages. In this way, we reduce the amount of pages the database needs to read while aggregating or reading through a specific column.
+### **面向列的数据库**
 
-![column oriented database (Spark)](images/column-oriented.png)
+我们不在页中存储行，而在页中存储列。通过这种方式，我们减少了数据库在聚合或读取特定列时需要读取的页数量。
 
-Specifically, in Dune V2 we are using the [parquet file format](https://github.com/apache/parquet-format) for our new database. Parquet is sometimes described as a hybrid approach between row-oriented databases and column-oriented databases since a table in the database will still consist of multiple parquet files which are partitioned by rows of the dataset. Inside of the parquet file the pages which actually contain the data will contain columns instead of rows, but are still stored within row groups which further partition the data by rows. The database is still roughly stored in a row oriented format, but the individual values are stored on pages in column orientation.
 
-![schematic view of parquet files](images/parquet.png)
+![面向列的数据库 (Spark)](images/column-oriented.png)
 
-This means, that even though the database at large is somewhat oriented in a row oriented manner, should we actually want to read data, we will always read from a page which is column oriented. In this way, we can easily aggregate data in one column over a large amounts of logical rows, as in this layout the amount of pages we have to load into memory to actually read the data is minimized.
+具体来说，在 Dune V2 中，我们将 [parquet 文件格式](https://github.com/apache/parquet-format) 用于我们的新数据库。Parquet 有时被描述为面向行的数据库和面向列的数据库之间的混合方法，因为数据库中的表仍然由多个 Parquet 文件组成，这些文件由数据集的行分区。在 parquet 文件中，实际包含数据的页将包含列而不是行，但仍存储在行组中，这些行组进一步按行划分数据。数据库仍然粗略地以面向行的格式存储，但各个值以列方向存储在页上。
 
-In contrast, should we try to query for all columns of specific logical rows, we have to access lots of different pages as the data of one logical row is no longer stored in one page, but rather distributed across lots of different pages.
+![parquet 文件示意图](images/parquet.png)
 
-This video does a pretty good job of explaining the differences in row vs column oriented database systems.
+这意味着，即使整个数据库在某种程度上是以面向行的方式定向的，但如果我们真的想要读取数据，我们总是会从面向列的页中读取。通过这种方式，我们可以轻松地将大量逻辑行中的数据聚合到一列中，因为在这种布局中，我们必须加载到内存中以实际读取数据的页的数量被最小化了。
+
+相反，如果我们尝试查询特定逻辑行的所有列，我们必须访问许多不同的页，因为一个逻辑行的数据不再存储在一个页中，而是分布在许多不同的页中。
+
+这个视频很好地向我们解释了面向行和面向列的数据库系统的差异。
 
 ![type:video](https://www.youtube.com/embed/Vw1fCeD06YI)
 
-**In essence**, storing columns in pages instead of rows minimizes the amount of not needed data that is read by the database when retrieving data for one column over a large amount of logical rows. We were sometimes able to mimic this in PostgreSQL by creating large amounts of structured subset data in the form of indexes, but this doesn't scale.
+**本质上**，将列而不是行存储在页中可以最大限度地减少数据库在从大量逻辑行中检索一列的数据时读取的不需要的数据量。我们有时能够在 Postgres 中通过以索引的形式创建大量结构化的子集数据来模仿这一点，但这并不能扩展。
 
-### Indexes or rather no Indexes
+### 索引或者说没有索引
 
-Indexes don't exist in a traditional sense in a parquet based system. However, they are basically created on the fly with each parquet file having a footer that contains `min/max` values for every column stored in that parquet file. This pattern is then repeated on a column chunk level, which stores this metadata for the columns within a specific row group within the parquet file.
+在基于 parquet 的系统中，传统意义上的索引并不存在。但是，它们基本上是动态创建的，每个 parquet 文件都有一个页脚，其中包含存储在该 parquet 文件中的每一列的 `最小/最大` 。 然后在列块级别上重复此模式，它为 parquet 文件中特定行组内的不同列存储此元数据。
 
-![schematic view of mix/max values](images/minmax-schema.jpg)
+![最小/最大值示意图](images/minmax-schema.jpg)
 
-Using these `min/max` values, both on a file level and on a column chunk level, allows the database to efficiently skip over entire parquet files or column chunks within parquet files while scanning through the table.
+在文件级别和列块级别同时使用这些 `最小/最大` 值, 允许数据库在扫描表时高效地跳过整个 parquet 文件或 parquet 文件中的列块。
 
-Unfortunately, the `min/max` values of strings are often times not very useful. Especially `tx_hash` strings and `address` strings in blockchain systems are not suited well for this kind of `min/max` data gathering since they are randomly generated. That means the database won't be able to skip files or column chunks based on these strings and Queries will therefore be quite inefficient since it requires the database to actually load all the pages into memory.
+不幸的是，字符串的 `最小/最大` 值通常不是很有用。特别是区块链系统中的 `tx_hash` 字符串 `地址` 字符串不适合这种 `最小/最大` 数据收集，因为它们是随机生成的。 这意味着数据库将无法基于这些字符串跳过文件或列块，因此查询将非常低效，因为它需要数据库实际将所有页加载到内存中。
 
-That said, since the Query engine at large is still able to read through individual columns in which these strings are stored very efficiently, most of the time this won't make a big difference in your Query execution speed.
+也就是说，由于查询引擎总体上仍然能够非常有效地读取存储这些字符串的各个列，因此在大多数情况下，这不会对你的查询执行速度产生很大影响。
 
-This is mostly relevant for base tables like `ethereum.transactions`, `bnb.logs`, `erc20_ethereum.erc20_evt_transfer`, etc. which contain very large datasets which are not pre-filtered.
+这主要与 `ethereum.transactions`, `bnb.logs`, `erc20_ethereum.erc20_evt_transfer`等基表相关，这些基表包含未经预过滤的非常大的数据集。
 
-A notable exception from this is the Solana dataset `account_activity`_,_ which instead of being ordered by `block_time` like the rest of our datasets, is ordered by `account_keys`. This allows us to actually reasonably utilize the `min/max` values for the account keys which were used and therefore run efficient Queries based on the `account_keys` values.
+一个值得注意的例外是 solana 数据集 `account_activity` 它不像我们的其他数据集那样按 `block_time` 排序，而是按 `account_keys`排序。 这使我们能够实际合理地利用所使用的帐户密钥的 `最小/最大` 值，从而基于 `account_keys` 值运行有效的查询。
 
-### Query examples
+### 查询示例
 
-Equipped with this knowledge, let's look at some Queries on the new Dune V2 engine.
+有了这些知识，我们再来看看新版 Dune V2 引擎的一些查询。
 
-**Querying for transaction hashes**
+**查询交易哈希**
 
 ```sql
 Select * from ethereum.transactions
 where hash = '0xce1f1a2dd0c10fcf9385d14bc92c686c210e4accf00a3fe7ec2b5db7a5499cff'
 ```
 
-If you think about this for second with all the knowledge we have learned earlier, you will hopefully understand that this Query is very inefficient. Our only filter condition here is a `hash` string, therefore we basically force the Query engine to read all pages which store the data of the `tx_hash` column in full. We probably can skip a few column chunks where the min/max value stored in the footer of each parquet file is `0xa0 - 0xcd`, but those will be a rare exception.
+如果你用我们之前学到的所有知识来思考一下这个问题，你就会明白这个查询的效率非常低。 我们这里唯一的过滤条件是 `hash` 字符串，因此我们基本上强制查询引擎读取所有存储在 `tx_hash` 列数据的页。 我们可能可以跳过那些存储在每个 parquet 文件的页脚中的最小/最大值是 `0xa0 - 0xcd`的部分列块，但这些只是一个罕见的例外。
 
-Given that we are basically doing a full scan over the entire history of Ethereum Mainnet (1.6B entries at time of writing) while searching for one `hash`, it's pretty impressive that this Query runs in about 6 minutes.
+鉴于我们为了查询一个 `hash` 基本上要在对以太坊主网的整个历史进行全面扫描  (在撰写本报告时有16亿条记录)，这个查询在大约 6 分钟内运行完成是相当令人印象深刻的。
 
-Given that querying for `hash` is a very common occurrence in the workflow of an analyst on Dune, let's think about how we can make this faster.
+鉴于查询 `hash` 是Dune上的分析师的工作流程中是非常常见的，让我们考虑一下如何才能更快地完成这项工作吧。
 
-We simply have to use a column that actually has useful `min/max` values in order to be able to not read all pages in full, but rather be able to skip over a lot of files and column chunks. Both `block_time` and `block_number` are useful for this purpose.
+我们只需要使用一个实际上包含有用的 `最小/最大` 值的列，以便能够不必完整读取所有页，而是能够跳过大量文件和列块。 Both `block_time` 和  `block_number` 都可用于此目的。
 
 ```sql
 Select * from ethereum.transactions
@@ -130,28 +132,28 @@ where block_number = 14854616
 and hash = '0xce1f1a2dd0c10fcf9385d14bc92c686c210e4accf00a3fe7ec2b5db7a5499cff'
 ```
 
-This Query is still not as fast as in PostgreSQL, where we can make use of B-tree indexes, but with a runtime of 13 seconds, we are getting pretty close.
+这个查询仍然不如在 Postgres 中那么快,（在Postgres中我们可以使用  B-tree 索引），但运行时间为 13 秒，我们已经非常接近了。
 
-What happens during the Query execution in this case is that the database engine is able to read the footer of the parquet files, is able to determine that the `min/max` values of a lot of parquet files is not meeting the defined criteria and skip over them efficiently. Once we have found a parquet file that actually meets our conditions, we can simply drill down into the column chunk `min/max` values, find the right column chunks, load the few pages of column data that are left into memory and find the match for the `hash` condition as well. Since we are selecting all entries from the logical row in this Query, we actually need to access a few other pages as well, but this is a reasonably efficient operation if we only do this for a few rows.
+在这种情况下，在查询执行过程中发生的事情是，数据库引擎能够读取parquet文件的页脚，能够确定很多parquet文件的`最小/最大`值不符合定义的标准，并有效地跳过它们。一旦我们找到了一个真正满足我们条件的 parquet 文件，我们可以简单地深入到列块的`最小/最大`值，找到合适的列块，并将剩下的几页列数据加载到内存中，也可以找到符合`hash`条件的列块。由于我们在这个查询中选择的是逻辑行的所有条目，实际上我们还需要访问其他几页，但是如果我们只对几行进行这样的操作，这就是一个合理有效的操作。
 
-**Lesson:** Define your conditions in a way in which the database is able to reasonably work with `min/max` values of files and columns chunks so it can efficiently find the logical row you need.
+**经验：** 以一种数据库能够合理处理文件和列块的 `最小/最大` 值的方式来定义你的条件，以便它能够有效地找到你需要的逻辑行。
 
-**Aggregating data over a large amount of logical rows**
+**在大量逻辑行上聚合数据**
 
-This is mainly a case study to illustrate how efficient DuneV2 is in aggregating data over a large set of logical rows.
+下面是一个案例研究，以说明DuneV2在聚集大量逻辑行的数据方面有多高效。
 
 ```sql
 Select avg(gas_used) from ethereum.transactions
 ```
 
-This Query runs in an **amazing** 7 seconds. This is mainly due to the fact that instead of having to read literally the entire table, we are now able to able to majorly reduce the amount of pages we have to read, since all this data is stored together in pages across parquet files. In PostgreSQL, each page that we would have to read would have contained a lot of not needed data, in Dune V2, we just read the data that we actually need.
+此查询在 **惊人的** 7 秒内运行完成。 这主要是因为我们现在不必从字面上读取整个表。 我们现在能够极大地减少我们必须阅读的页的数量，因为所有这些数据都存储在多个 parquet 文件中的页中。 在 Postgres 中，我们必须读取的每个页都包含大量不需要的数据，在 Dune V2 中，我们只读取我们实际需要的数据。
 
-**Lesson:** Querying for data across a large amount of logical rows is now much more efficient and a lot of Queries that were formerly sheer impossible due to timing out are now able to be executed.
+**经验：** 跨大量逻辑行查询数据现在更加高效，并且许多以前由于超时而完全不可能的查询现在已经可以正常执行。
 
-A good example to illustrate this is [hildobby's](https://twitter.com/hildobby\_) [Ethereum Overview](https://dune.com/hildobby/Ethereum-Overview) Dashboard. This is simply a level of data processing that was not possible before.
+ [hildobby's](https://twitter.com/hildobby\_) [Ethereum Overview](https://dune.com/hildobby/Ethereum-Overview) 仪表盘就是这一点的很好的例子， 这是一个以前不可能实现的数据处理水平。
 
-### Closing remarks
+### 结束语
 
-Some Queries that were heavily indexed on our v1 database might feel a bit awkward in DuneV2. This is especially the case for erc20 event transfer tables, `ethereum.transactions` and `ethereum.logs` and their counterparts on other blockchains. This is a tradeoff we were willing to take to enable blockchain analytics on a large scale basis. We will continue to keep innovating on these datasets and our database architecture to make every Query run as fast as possible on DuneV2, but things like Queries for `tx_hash` being slow is just in the nature of this new database system. That said, we think we have done a pretty damn good job of enabling a lot of new usecases and speeding up a large amount of already existing Queries.
+一些在我们的V1数据库上有大量索引的查询在DuneV2中可能会感到有点尴尬。对于erc20事件转移表(event transfer)、`ethereum.transactions` 和 `ethereum.logs`以及它们在其他区块链上的对应物，情况尤其如此。这是我们为了在大规模基础上实现区块链分析而采取的一种权衡。我们将继续对这些数据集和我们的数据库架构进行创新，以使每个查询在DuneV2上尽可能快地运行，但像对 `tx_hash` 的查询很慢只是这个新数据库系统的本质。尽管如此，我们认为我们已经在实现很多新的使用场景，以及加快大量现有查询的速度的方面做得非常好了，。
 
-If you have any feedback or run into trouble with the new system, we are all ears and await your feedback on [Canny](https://feedback.dune.com) and [Discord](https://discord.com/dunecom).
+如果你对新系统有任何反馈或遇到问题，我们都会倾听并等待你在 [Canny](https://feedback.dune.com) and [Discord](https://discord.com/dunecom)上的反馈。

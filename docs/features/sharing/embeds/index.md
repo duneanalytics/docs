@@ -1,40 +1,37 @@
 ---
-title: Embeds
-description: Embeds allow you to enjoy beautiful, updating dune charts across the web!
+title: 嵌入第三方平台
+description: 嵌入后，您可以在整个网络上享受漂亮的、更新的 dune 图片!
 ---
 
-**Screenshots are boring and tech of the past.**
+**截图是无趣和过时的。**
 
-Instead of using static screenshots in varying forms of quality, Dune has a native embed function that works across most platforms.
+Dune自带可以跨平台使用的嵌入功能，而不必使用形式不一的截图功能。
 
-You can generate embed links by clicking on any query title and selecting the embed function in the top right corner.
+你可以通过点击任何查询标题并选择右上角的嵌入功能来生成嵌入链接。
 
-!!! note
-    The embed button works as a stand alone link and as a way to embed your live graphs into websites/apps. If your Query has no Visualizations, the link will be to the Query Results table. If you have multiple Visualizations, the link will be for whichever Visualization you've selected when you clicked the Embed button.
+!生成一个嵌入链接](images/embed-link.gif)
 
-![generating an embed link](images/embed-link.gif)
+## 参数化嵌入
 
-## Parameterized embeds
+嵌入链接也可用于参数化查询，但是需要一些技巧：
 
-Embed links also work with parameterized queries, but it is a bit tricky to get them to work:
+生成的嵌入链接并不包含必要的参数，尽管查询已经被执行过。我们正在致力于实现自动化的生成链接，但是目前仅有这一条途径能够做到。
 
-The embed link that gets generated does not include the necessary parameters yet, even if you have ran the query with it. We are already working on automating the link generation, but for now the way described below is the only thing to make this to work:
+现在你需要在链接前手动输入参数。
 
-You need to manually prefix the parameter link with the parameters.
-
-The syntax for this is:
+输入参数的写法是这样的：
 
 `link?name_of_parameter1=xxxx&?name_of_parameter2=yyyy&...` \_\_
 
-An example of this would be:
+一个示例：
 
 `>https://dune.com/embeds/118220/238460/aa002dd3-f9e2-4d63-86c8-b765569306c6NFT?address=0xff9c1b15b16263c61d017ee9f65c50e4ae0113d7&rolling_n_trades=500`
 
 \`\`
 
-## Embeds across different platforms
+## 在不同平台上嵌入
 
-Here are a couple of exemplary use cases for Dune embeds:
+以下是几个使用Dune嵌入的示例：
 
 <div class="cards grid" markdown>
 - [Discord](discord.md)
@@ -43,9 +40,9 @@ Here are a couple of exemplary use cases for Dune embeds:
 - [Webpages](webpages.md)
 </div>
 
-## Known Issues
+## 已知问题
 
-Unfortunately, embeds do not work in a couple of fairly popular sites, including:
+不幸的是，嵌入在几个相当流行的网站中不起作用，包括：
 
 * Substack
 * Medium
