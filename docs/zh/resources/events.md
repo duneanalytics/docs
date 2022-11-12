@@ -1,14 +1,14 @@
 ---
-title: Events
-description: Dune is all about the community and communities all have get togethers!
+title: 活动
+description: Dune旨在关注社区并会有社区聚集活动。
 ---
 
-Dune is all about the community and communities all have get togethers!
+Dune旨在关注社区并会有社区聚集活动。
 
-Hang out anytime in our [Community Discord](https://discord.gg/BJBHFR6sdy) to get to know (and learn from) your fellow wizards. 🧙
+随时在我们的 [Community Discord](https://discord.gg/BJBHFR6sdy) 中闲逛，了解您的巫师伙伴 🧙（并向他们学习）。 
 
-To keep track of our live (streamed and IRL events), check out our events Google calendar @ [events.dune.com](https://events.dune.com).
+想关注我们的直播（流媒体和 IRL 活动），请查看我们的活动谷歌日历 @ [events.dune.com](https://events.dune.com)。
 
-Here's how to subscribe to that calendar and add it to yours:
+以下是订阅该日历并将其添加到您日历的方法：
 
-![how to subscribe to our events calendar](images/subscribe-to-events-calendar.gif){ loading=lazy }
+![如何订阅我们的活动日历](images/subscribe-to-events-calendar.gif){ loading=lazy }

@@ -1,13 +1,13 @@
 ---
-title: Press Kit
-description: Get the Dune brand assets and learn about the usage guidelines
+title: 新闻资料包
+description: 获取 Dune 品牌资产并了解其使用指南
 ---
 
-# Press Kit
+# 新闻资料包
 
-## Primary - Standard Logo
+## 主要 - 标准商标
 
-This is the primary Dune logo. It should be used in this format whenever possible.
+这是 Dune 的主要商标。应尽可能使用这种格式。
 
 ![Dune horizontal logo cover](images/dune-horizontal-logo-cover.png)
 
@@ -18,7 +18,7 @@ This is the primary Dune logo. It should be used in this format whenever possibl
 - [dune-standard-logo-dark@2x.png](images/dune-standard-logo-dark@2x.png)
 </div>
 
-## Vertical logo
+## 垂直商标
 
 ![Dune vertical logo cover](images/dune-vertical-logo-cover.png)
 
@@ -29,7 +29,7 @@ This is the primary Dune logo. It should be used in this format whenever possibl
 - [dune-vertical-logo-dark@2x.png](images/dune-vertical-logo-dark@2x.png)
 </div>
 
-## Icon only
+## 仅图标
 
 ![Dune icon only](images/dune-icon-only.svg)
 
@@ -38,7 +38,7 @@ This is the primary Dune logo. It should be used in this format whenever possibl
 - [dune-icon-only@2x.png](images/dune-icon-only@2x.png)
 </div>
 
-## Complete set of all logos
+## 整套商标集合
 
 <div class="cards grid" markdown>
 - [Dune-logo-Full.zip](images/Dune-logo-Full.zip)

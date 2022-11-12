@@ -1,9 +1,9 @@
 ---
-title: How does Dune get data?
+title: Dune 是如何获取数据的？
 ---
 
-# How does Dune get its data ?
+# Dune 是如何获取数据的？
 
-We are working together with node providers across the Industry to ingest data into our database. This includes all raw historical data from these blockchains. It does not include state data.
+我们正在与整个行业的节点提供商合作，将数据提取到我们的数据库中。 这包括来自这些区块链的所有原始历史数据。 它不包括状态数据。
 
-We don't discriminate against any smart contract, you can submit any contract via our [decoding page](../../tables/decoded.md) and work with it in a matter of hours. The only prerequisite for this is an ABI so we can actually decode the contract (usually the ABI is already on Etherscan, but there are edge cases).
+我们不歧视任何智能合约，您可以通过我们的 [解析页面](../../tables/decoded.md) 提交任何合约，并在几个小时内完成处理。 唯一的先决条件是 ABI，来让我们可以实际解析合约（通常 ABI 已经在 Etherscan 上，但存在边缘案例）。

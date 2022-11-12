@@ -1,47 +1,47 @@
 ---
-title: Wizard Request Program
+title: 巫师请求计划
 ---
 
-# Wizard Request Program
+# 巫师请求计划
 
-## For projects looking for Wizards
+## 对于寻找巫师的项目
 
-If you're a project looking to have more/better dashboards on Dune, we've created this program for you. This is how it works:
+如果您的项目希望在 Dune 上拥有更多/更好的看板，我们已经为您创建了这个计划。这是它的工作流程：
 
-1. Project fills out [this form](https://bounties.dune.com) explaining what they're all about and the kind of insights they'd like to see surfaced on Dune and how much they're willing to pay for it.
+1.项目方填写 [此表格](https://bounties.dune.com) 说明项目内容并且阐述期望在 Dune 上看到的见解，以及愿意支付多少费用。
 
-2. We share this with our community and interested wizards get in touch with you.
+2. 我们与社区分享此信息，感兴趣的巫师将与您联系。
 
-3. Project screens wizards and chooses who to work with.
+3. 项目筛选巫师并选择与谁合作。
 
-4. The data flows.
+4. 数据流。
 
-As opposed to more traditional bounty programs, the Wizard Request program is meant to unlock long-lasting relationships/collaborations between the analysts and the projects at large.
+与更传统的赏金计划相反，巫师请求计划旨在解锁分析师与整个项目之间的长期关系/合作。
 
-For help with smaller projects, post your request in our [#query-dash-requests](https://discord.com/channels/757637422384283659/786952850034262066) Discord channel.
+如需小型项目的帮助，请在我们的 Discord [#query-dash-requests](https://discord.com/channels/757637422384283659/786952850034262066) 频道中发布您的请求。
 
-## For Wizards looking for :moneybag::moneybag::moneybag:
+## 针对寻求赏金（:moneybag::moneybag::moneybag:）的巫师
 
-If you are a wizard looking for bounties, make sure to join [our Discord](https://discord.gg/ErrzwBz), go to our “freelancer-listing” channel and click on the flying dollar bill emoji there. 
+如果您是寻找赏金的巫师，请务必加入 [我们 Discord](https://discord.gg/ErrzwBz), 进入我们的 “freelancer-listing” 频道，然后单击那里的飞行美元钞票表情符号。
 
-You also might find projects in [#query-dash-requests](https://discord.com/channels/757637422384283659/786952850034262066) and [#new-bounties](https://discord.com/channels/757637422384283659/1024301019074674688).
+您还可以在 [#query-dash-requests](https://discord.com/channels/757637422384283659/786952850034262066) 和 [#new-bounties](https://discord.com/channels/757637422384283659/1024301019074674688) 中寻找项目。
 
-Also follow the [bounty bot](https://twitter.com/Dune\_Bounties) on Twitter.
+也可以在 Twitter 上关注 [赏金机器人](https://twitter.com/Dune\_Bounties) 。
 
-### FAQs about the program
+### 关于计划的常见问题解答
 
-#### I need a lot of data, how many requests should I post?
+#### 我需要大量数据，我应该发布多少请求？
 
-Think of every request as a dashboard. If you’d like to see all of your information in just one dashboard, then just one request. If, on the other hand, you’d like to see three different dashboards we recommend you create three requests. Creating three requests doesn’t necessarily mean working with three different analysts, that will be up to you to decide.
+将每个请求都看作一个看板。如果您想在一个看板中查看所有信息，那么只需一个请求。另一方面，如果您希望看到三个不同的看板，我们建议您创建三个请求。创建三个请求并不一定意味着与三个不同的分析师合作，这将由您决定。
 
-#### I’m an analyst. How do I enroll?
+#### 我是一名分析师。我如何注册？
 
-For the moment the only thing you need to do is join [our Discord](https://discord.gg/dunecom), go to our “freelancer-listing” channel and click on the flying dollar bill emoji there, this way you’ll get notified when new requests arrive. Oh and you should definitely follow the [bounty bot](https://twitter.com/Dune_Bounties) on Twitter.
+目前，您唯一需要做的就是加入 [我们 Discord](https://discord.gg/dunecom)， 进入我们的 “freelancer-listing” 频道并点击那里的飞行美元钞票表情符号，这样你会在新请求到达时收到通知。哦，你绝对应该在 Twitter 上关注 [赏金机器人](https://twitter.com/Dune_Bounties) 。
 
-#### I want to create a requests but I don’t know how much should I pay/offer for it
+#### 我想创建一个请求，但我不知道应该为此支付/报价多少？
 
-Well, that really depends on how much work/complexity your request entails but to the extent that you can, we encourage you to be generous. If you ain’t sure you can always ask on our Discord!
+好吧，这实际上取决于您的请求需要多少工作/复杂性，但在您可以的范围内，我们鼓励您慷慨大方。如果您不确定您可以随时在我们的 Discord 上提问！
 
-#### Does Dune take a cut?
+#### Dune 会收取佣金吗?
 
-No we don’t. In fact, Dune does not take part in closing the deal or following up over time, this is strictly between the wizard and the project.
+不，我们没有。事实上，Dune 并不参与交易的完成或后续行动，这完全是巫师和项目方之间的事。

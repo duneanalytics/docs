@@ -1,12 +1,12 @@
 ---
-title: How do results get refreshed?
+title: 如何刷新查询结果？
 ---
 
 
-# How do results get refreshed?
+# 如何刷新查询结果？
 
-When a Visualization is viewed, either on a query page or on a dashboard, the Dune backend will inspect the age of the most recent result. If the result is stale (currently defined as >3 hours old), Dune will automatically queue an execution for this query and run it in the background.
+当在查询页面或看板上查看可视化内容时，Dune 后端将自动检查距离上次查询结果的时间。如果结果已过时（目前为>3 小时），Dune 将自动在后台排队运行此查询。
 
-This means that dashboards will always be kept up to date when they are being viewed and the query creator does not need to set a refresh schedule.
+这意味着在查看看板时，看板将始终保持最新状态，查询创建者不需要为看板设定刷新计划。
 
-Note that the query execution queue is separate from each individual user's queue when they create and run queries in the query editor.
+请注意，当在查询编辑器中创建和运行查询时，每一个人的查询执行队列都是是独立分开的。
