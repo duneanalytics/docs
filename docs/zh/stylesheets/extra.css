@@ -16,6 +16,7 @@
     --dune-orange-200: #FFECEB;
 
         /* Grey */
+        --grey-100: #FFF;
         --grey-200: #F2F2F2;
         --grey-300: #E6E6E6;
         --grey-400: #BFBFBF;
@@ -171,16 +172,17 @@ h1, h2, h3, h4, h5, h6{
 }
 
 
-
+/*Dark blue bckgrnd w/radius */
 .fk-btn-1 {
     background-color: var(--dune-blue-500);
     border-color: var(--dune-blue-500);
-    color: #fff;
+    color: var(--grey-100);
     padding: 4px 14px;
     border-radius: 5px;
     white-space: nowrap;
 }
 
+/*Light blue bckgrnd w/o radius */
 .fk-btn-2 {
     background-color: var(--dune-blue-200);
     border-color: var(--dune-blue-200);
@@ -189,6 +191,7 @@ h1, h2, h3, h4, h5, h6{
     white-space: nowrap;
 }
 
+/*Light blue bckgrnd w/radius */
 .fk-btn-3 {
     background-color: var(--dune-blue-200);
     border-color: var(--dune-blue-200);
@@ -197,6 +200,25 @@ h1, h2, h3, h4, h5, h6{
     border-radius: 5px;
     white-space: nowrap;
 }
+
+/* Dark blue bckgrnd, w/o radius */
+.fk-btn-4 {
+    background-color: var(--dune-blue-500);
+    border-color: var(--dune-blue-500);
+    color: var(--grey-100);
+    padding: 4px 16px;
+    white-space: nowrap;
+}
+
+/* Button inside Query Window */
+.fk-btn-5 {
+    background-color: var(--grey-800);
+    border-color: var(--grey-800);
+    color: var(--grey-100);
+    padding: 4px 16px;
+    white-space: nowrap;
+}
+
 
 /* Admonitions */
 
@@ -243,3 +265,16 @@ h1, h2, h3, h4, h5, h6{
     .md-typeset :is(.example)>:is(.admonition-title,summary) {
         background-color: rgba(255, 136, 27, .1);
     }
+
+/* Horizontally Centers Images */
+.hoz-cent {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Vertically Centering; for inline text/images */
+
+.vrt-cent {
+    vertical-align: middle !important;
+}
