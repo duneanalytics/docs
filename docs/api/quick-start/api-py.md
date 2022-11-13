@@ -8,7 +8,7 @@ Let's get started using the Dune API via Python!
 In this example we'll be using Python3. We recommend using a virtual environment and the `pip` package manager.
 
 !!! example "Prerequisites"
-    This Quick Start Guide assumes you have some prior experience using Python, though we aimed to make the code here easy to follow. If you have questions, please reach out to our team via the #[dune-api](https://discord.com/channels/757637422384283659/973606737393352745) channel on Discord.
+    This Quick Start Guide assumes you have some prior experience using Python, though we aimed to make the code here easy to follow. If you have questions, please reach out to our team via the #[dune-api](https://discord.com/channels/757637422384283659/1019910980634939433) channel on Discord.
 
 ## Getting Set Up
 

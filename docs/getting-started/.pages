@@ -1,11 +1,12 @@
 nav:
 - index.md
-- dune-guides.md
 - Query Quick Start: query-quick-start
-- dune-explorer.md
-- our-network-course.md
-- sql-guides.md
-- video-series.md
-- helpful-dashboards.md
-- utility-queries.md
+- queries
+- visualizations
+- dashboards.md
+- embeds.md
+- decoding-contracts.md
+- teams.md
+- guides
 - Use Cases: use-cases
+- ...

@@ -8,7 +8,7 @@ description: Answers to questions about how the Dune API works.
 
 ### How many Requests Per Minute can I make?
 
-The API is temporarily rate-limited to ~12 requests per minute for overload protection. Please reach out if you require higher throughput!
+The API is currently set to a rate limit of 40 requests per minute. This will ultimately vary with the introduction of our API plans of varying tiers. Please reach out to our API team if you require higher throughput in the interim!
 
 ### Are there specified SLAs?
 
@@ -28,7 +28,7 @@ The API does support Query Parameters!
 
 For Dune Queries that include Parameters, you can pass parameter data as part of the [Execute Query ID endpoint](../../api/api-reference/execute-query-id.md)!
 
-Learn more about [building Dune Queries with Parameters here](../../features/parameters.md).
+Learn more about [building Dune Queries with Parameters here](../../getting-started/queries/parameters.md).
 
 And learn how to pass parameter data using [cURL here](../../api/api-reference/execute-query-id.md#curl-with-parameters) and with [Python here](../../api/quick-start/api-py.md#parameterized-queries).
 
