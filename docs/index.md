@@ -163,7 +163,7 @@ Queries return rows and columns of data (just like traditional SQL queries) that
 
 There are a few ways that a blockchain analyst (i.e. Wizard i.e. you!) can get started running Queries:
 
-1. The simplest way is to use Dune [_Spells_](reference/tables/spells.md)) to query commonly used data tables. Some popular Spells include `dex.trades`, `lending.borrow`, and `stablecoin.transfer`.
+1. The simplest way is to use Dune [_Spells_](reference/tables/spells/index.md)) to query commonly used data tables. Some popular Spells include `dex.trades`, `lending.borrow`, and `stablecoin.transfer`.
 2. Query the raw Ethereum data like blocks, logs, and transactions.
 3. It is also possible to query centralized exchange data. For example, you can use `prices.usd` to quickly return the price of almost any cryptoasset.
 

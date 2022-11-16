@@ -13,3 +13,4 @@ Here are some of the awesome non-Dune tools our wizards use to make 🎇.
   - [His Chaininsight tool](https://twitter.com/zk7hao/status/1361948073300164609?cxt=HHwWgoCs-dCjzuYlAAAA) is pretty cool too, could help you build the next trending dashboard before someone else does 🧙
 - [Our Recommended Reading List](../recommended-reading.md) for a bunch of guides on crypto data topics and projects to check out.
 - [DeepDAO](https://deepdao.io/organizations) - stats on DAOs and their treasuries.
+- [DethCode](https://etherscan.deth.net) lets you go into an Ethereum smart contract's code to read the comments or the actual logic can help to understand the smart contract's emitted data.
