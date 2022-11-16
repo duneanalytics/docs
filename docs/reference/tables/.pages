@@ -1,11 +1,9 @@
 nav:
 - index.md
-- raw.md
-- decoded.md
-- spells.md
-- community.md
-- prices.md
+- available-chains.md
+- raw
+- decoded
+- spells
+- community
 - user-generated.md
-- v1
-- v2
 - ...

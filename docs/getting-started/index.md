@@ -69,7 +69,7 @@ Thus, understanding how the Ethereum Virtual Machine and smart contracts work as
 
 If you are able to read most of the data in Etherscan, you're already well on your way to being able to create insightful Queries and Visualizations with Dune.
 
-Unfortunately we haven't yet found one great resource we can point you to currently as each smart contract has it's own rules. We have written up a few words on this in our section on [Decoded Data](../reference/tables/decoded.md).
+Unfortunately we haven't yet found one great resource we can point you to currently as each smart contract has it's own rules. We have written up a few words on this in our section on [Decoded Data](../reference/tables/decoded/index.md).
 
 ### What communities, protocols, and businesses care about
 

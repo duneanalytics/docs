@@ -71,7 +71,7 @@ Here we find an [`opensea_trades` table](https://dune.com/spellbook#!/model/mode
 
 Scrolling through the columns section we can see all the different data columns it has.
 
-Since this is a [Decoded Table](../../reference/tables/decoded.md), a lot of the labels - like `amount_usd` - make sense just by reading them.
+Since this is a [Decoded Table](../../reference/tables/decoded/index.md), a lot of the labels - like `amount_usd` - make sense just by reading them.
 
 For those that aren't so obvious - like `trade_type` - we can click to get a description:
 

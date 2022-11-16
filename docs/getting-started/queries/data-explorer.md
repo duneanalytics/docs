@@ -42,10 +42,10 @@ Learn about the [differences between V1 and V2 data sets here](../../dune-v2/).
 
     Here you'll find a search bar that searches all the data inside Dune V2 and 4 different categories of dataset:
 
-    1. [**Raw**](../../reference/tables/raw.md) - just like it sounds, raw data straight from the blockchain
-    2. [**Decoded Projects**](../../reference/tables/decoded.md) - contract calls and events from projects the Dune Team and Community have organized into nice human-readable tables.
-    3. [**Spells**](../../reference/tables/spells.md) - standardized project and sector data (dex.trades, nft.trades, erc20.stablecoins, etc)
-    4. [**Community**](../../reference/tables/community.md) - off-chain data supplied by the web3 community.
+    1. [**Raw**](../../reference/tables/raw/index.md) - just like it sounds, raw data straight from the blockchain
+    2. [**Decoded Projects**](../../reference/tables/decoded/index.md) - contract calls and events from projects the Dune Team and Community have organized into nice human-readable tables.
+    3. [**Spells**](../../reference/tables/spells/index.md) - standardized project and sector data (dex.trades, nft.trades, erc20.stablecoins, etc)
+    4. [**Community**](../../reference/tables/community/index.md) - off-chain data supplied by the web3 community.
 
     ![v2 search dataset categories](images/v2-data-categories.png)
     
@@ -140,62 +140,11 @@ Learn about the [differences between V1 and V2 data sets here](../../dune-v2/).
     4. Whether a Spell set is for a Project or Sector.
     5. What type a piece of data is.
 
-    Here's what it all means:
+    [Find descriptions of what all the icons and labels mean here](../../reference/types-labels.md)!
 
-    #### Blockchain Icons
+    In cases where the icon is different than a blockchain name next to a contract/data set, the icon is the blockchain that data is on. EG these are Polygon bridge contracts on the Ethereum Chain:
 
-    Some data sets will have multiple blockchain icons - meaning data from each of those blockchains is available within that data set!
-
-
-    | Icon      | Description                          |
-    | ----------- | ---------------------------------------- |
-    |    ![ethereum icon](images/ethereum-icon.png)    | Ethereum blockchain Raw Data, Decoded Project, or Spell |
-    |![gnosis chain icon](images/gnosis-chain-icon.png)| Gnosis Chain Raw Data, Decoded Project, or Spell |
-    | ![polygon icon](images/polygon-icon.png) | Polygon blockchain Raw Data, Decoded Project, or Spell |
-    | ![optimism icon](images/optimism-icon.png) | Optimism blockchain Raw Data, Decoded Project, or Spell |
-    | ![optimism legacy icon](images/optimism-legacy-icon.png) | Optimism (legacy) blockchain Raw Data, Decoded Project, or Spell |
-    | ![bnb chain icon](images/bnb-chain-icon.png) | BNB Chain Raw Data, Decoded Project, or Spell |
-    | ![solana icon](images/solana-icon.png) | Solana blockchain Raw Data, Decoded Project, or Spell |
-    | ![arbitrum icon](images/arbitrum-icon.png) | Arbitrum blockchain Raw Data, Decoded Project, or Spell |
-    | ![avalanche icon](images/avalanche-icon.png) | Avalanche C-Chain Raw Data, Decoded Project, or Spell |
-
-     In cases where the icon is different than a blockchain name next to a contract/data set, the icon is the blockchain that data is on. EG these are Polygon bridge contracts on the Ethereum Chain:
-
-     ![polygon bridge contracts on ethereum](images/polygon-bridge-contracts-on-ethereum.png)
-
-    #### Dataset Icons
-
-    | Icon      | Description                          |
-    | ----------- | ---------------------------------------- |
-    | ![table icon 1](images/table-icon-1.png)![table icon 2](images/table-icon-2.png) | Data Table (Raw Data, Spell, or smart contract Event or Function) |
-    | ![decoded project icon](images/decoded-project-icon.png) | Decoded Project (protocol or protocol version eg "opensea" or "aave_v2") |
-    | ![spell icon](images/spell-icon.png) | Spell set (eg cow_protocol contains "batches" and "solvers" Spells) |
-    | ![community data icon](images/community-data-icon.png) | Community Data Set |
-
-    #### Dataset Labels
-
-    | Label      | Description                          |
-    | ----------- | ---------------------------------------- |
-    | `project` | A Spell set for a specific project eg `aave` |
-    | `sector` | A Spell set for a sector eg `dex` |
-    | `event` | A smart contract event dataset |
-    | `function` | A smart contract function dataset |
-
-    #### Data Type Labels
-
-    You can find the full [Databricks SQL data types documentation here](https://docs.databricks.com/sql/language-manual/sql-ref-datatypes.html). For types not found there, see [Apache Spark SQL data types here](https://spark.apache.org/docs/latest/sql-ref-datatypes.html).
-
-    | Label      | Description                          |
-    | ----------- | ---------------------------------------- |
-    | `string` | Character sequences of any length greater or equal to 0. |
-    | `long` | Represents 8-byte signed integer numbers. The range of numbers is from -9223372036854775808 to 9223372036854775807. |
-    | `integer` | Represents 4-byte signed integer numbers. The range of numbers is from -2147483648 to 2147483647. |
-    | `double` | Represents 8-byte double-precision floating point numbers. |
-    | `boolean` | Represents boolean values. (TRUE|FALSE) |
-    | `date` | Represents values comprising values of fields year, month and day, without a time-zone. |
-    | `timestamp` | Represents values comprising values of fields year, month, day, hour, minute, and second, with the session local time-zone. The timestamp value represents an absolute point in time. |
-    | `decimal({{p}},{{s}})` | Represents numbers with a specified maximum precision (p, 1 - 38) and fixed scale (s, the number of digits to the right of the decimal, 0 to p). |
-    | `array<{{xx}}>` | An array of `{{xx}}` data. (`long`, `string`, etc) |
+    ![polygon bridge contracts on ethereum](images/polygon-bridge-contracts-on-ethereum.png)
 
 === "V1"
 

@@ -9,10 +9,10 @@ It leverages **[Apache Spark SQL](https://spark.apache.org/docs/latest/sql-progr
 
 All of the data sources contained in this section are available for querying with the new Query engine today. We currently have the following data available in V2:
 
-- [**Raw tables**](../../reference/tables/v2/raw/index.md)
-- [**Decoded projects**](../../reference/tables/decoded.md)
-- [**Spells**](../../reference/tables/spells.md)
-- [**Community Tables**](../../reference/tables/community.md)
+- [**Raw tables**](../tables/raw/index.md)
+- [**Decoded projects**](../tables/decoded/index.md)
+- [**Spells**](../tables/spells/index.md)
+- [**Community Tables**](../tables/community/index.md)
 
 ## New Query engine
 
