@@ -21,17 +21,6 @@ If the token you desire is not listed in here, please make a pull request to our
 
 Note that `WETH` can be used for ETH price as it trades at virtually the same price.
 
-### prices.layer_usd
-
-This table supports layer 1 assets on other blockchains.
-
-| contract_address | The contract address of the erc20 token |
-| :---------------: | --------------------------------------------- |
-| `symbol` | The identifier of the asset (ticker, cashtag) |
-| `price` | The price of the asset in any given minute |
-| `minute` | The resolution for this table is by minute |
-
-
 ## How we get prices from DEXs
 
 We created a table that creates price feeds based on decentralized exchange trading data. This table covers much more assets than `prices.usd`, since it covers all assets that are traded on any  of the decentralized exchanges that are indexed in `dex.trades`.
