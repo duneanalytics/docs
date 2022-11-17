@@ -34,7 +34,7 @@ After running your Query at least once, you'll see the <span class="fk-btn-1">Sa
 
 ![a wild save button appears](images/a-wild-save-button-appears.png)
 
-Click it to see a pop up that asks you to give your Query a name, with the option to make this Query private (*~if~* you're a [Dune Pro](../../reference/pro.md) user):
+Click it to see a pop up that asks you to give your Query a name, with the option to make this Query private (*~if~* you're a [Dune Premium](../../reference/pricing.md) user):
 
 ![first time saving query example](images/first-time-saving-query-popup.png)
 
