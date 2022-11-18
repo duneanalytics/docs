@@ -5,7 +5,7 @@ description: Below you'll find a selection of Query related tips to help you bec
 
 Below you'll find a selection of Query related tips to help you become a more powerful 🧙.
 
-If you have a tip you think we should add, [propose a change on this doc in our GitHub repository](https://github.com/duneanalytics/docs/edit/master/docs/features/queries/tips.md)!
+If you have a tip you think we should add, [propose a change on this doc in our GitHub repository](https://github.com/duneanalytics/docs/blob/master/docs/getting-started/queries/tips.md)!
 
 ## Use Spells
 

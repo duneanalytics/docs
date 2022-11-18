@@ -28,7 +28,7 @@ Learn about the [differences between V1 and V2 data sets here](../../dune-v2/).
     ## V2
 
     !!! warning
-        Like all of Dune V2, the V2 Data Explorer is still in beta. So it might function slightly differently than described here as we're actively testing and iterating ways to make it even better! If you have a suggestion for how to make the V2 Explorer work better, [add it on our Feedback board](https://feedback.dune.com/)! If you have a suggestion for how to make these docs better, make an edit and submit a Pull Request on [this page's Github](https://github.com/duneanalytics/docs/edit/master/docs/features/queries/data-explorer.md)!
+        Like all of Dune V2, the V2 Data Explorer is still in beta. So it might function slightly differently than described here as we're actively testing and iterating ways to make it even better! If you have a suggestion for how to make the V2 Explorer work better, [add it on our Feedback board](https://feedback.dune.com/)! If you have a suggestion for how to make these docs better, make an edit and submit a Pull Request on [this page's Github](https://github.com/duneanalytics/docs/blob/master/docs/getting-started/queries/data-explorer.md)!
 
     One of the biggest changes in [Dune V2](../../dune-v2/) lies in our data structure - instead of having data siloed into separate databases by blockchain, everything is accessible in one data lake.
 

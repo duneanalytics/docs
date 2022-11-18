@@ -338,7 +338,7 @@ Then we'll update our title and x/y axis labels to make a nice, easy to understa
 
 ![type:video](https://dune.com/embeds/1424158/2432690/f66ae186-8d90-426b-bf80-b8fac9763343)
 
-Learn more about [formatting Visualizations here](../../features/queries/query-results/#formatting-results-tables)!
+Learn more about [formatting Visualizations here](../../getting-started/queries/query-results/#formatting-results-tables)!
 
 ### Sharing Queries and Visualizations
 
@@ -384,4 +384,4 @@ And with that, we're ready to hit the share button to get a sharable Dashboard l
 
 To go deeper as you're getting started, check out the other pages in our Getting Started section using the left side bar. 👈
 
-Check out the Features section above to learn more about how Dune works or the Tables section to learn more about the data you can query and use with Dune. 👆
+Check out the other pages in our Getting Started section to learn more about how Dune works or the Tables section to learn more about the data you can query and use with Dune. 👆
