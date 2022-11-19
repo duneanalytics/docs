@@ -1,17 +1,16 @@
 ---
-title: Abstractions
-description: >-
-  We construct customs tables which cover the entirety of a type of activity on
-  the blockchain and thereby enable you to effortlessly aggregate lots of data
-  with as little friction as possible.
+标题: 抽象表
+描述: >-
+  我们构建了涵盖了区块链同类型活动的定制表，从而使您能够轻松地聚合大量数据，
+  并让该过程尽可能丝滑。
 ---
 
-**Abstractions are custom tables that are built and maintained by Dune and our community.**
+**抽象表是由Dune和我们的社区构建和维护的自定义表**
 
-Our abstractions layer is managed in this public [GitHub repository](https://github.com/duneanalytics/spellbook/index.md). We welcome pull requests.
+我们的抽象表是在这个公共[GitHub存储库]中管理的(https://github.com/duneanalytics/spellbook/index.md)。 我们欢迎提交pull requests。
 
-For our **V1 Engine** (PostgreSQL), abstractions are snippets of SQL executed the data platform. You can check for existing abstractions on [GitHub](https://github.com/duneanalytics/spellbook/tree/main/deprecated-dune-v1-abstractions), and view [documentation](v1/abstractions/index.md) on our most popular abstractions.
+对于我们的**V1引擎**（PostgreSQL），抽象表是由数据平台执行的SQL片段。您可以在[GitHub]上浏览现有的抽象表(https://github.com/duneanalytics/spellbook/tree/main/deprecated-dune-v1-abstractions)，并查看我们最受欢迎的的抽象表[文档]（v1/abstracts/index.md）。
 
-For our **V2 Engine** (Databricks SQL), abstractions are now upgraded to **spells** and live in [Spellbook](../spellbook/index.md). Spellbook is built with DBT, an open-source framework that injects more classical software engineering practices into writing SQL by mixing SQL with JINJA templating.
+对于我们的**V2引擎**（Databricks SQL），抽象表现在升级为**魔法**，并在[魔法书]（../Spellbook/index.md）中运行。Spellbook是用DBT构建的，DBT是一个开源框架，通过将SQL与JINJA模板混合，为编写SQL注入了更多经典的软件工程实践。
 
-To view available spells, take a look at our Spellbook [documentation](https://spellbook-docs.dune.com) and learn how to contribute new spells [here](../spellbook/index.md).
+要查看可用的魔法，请查看我们的魔法书[文档](https://spellbook-docs.dune.com)并学习如何贡献新的法术[此处]（../spellbook/index.md）。
