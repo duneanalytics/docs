@@ -1,44 +1,44 @@
 ---
-title: Spellbook Model Docs
-description: Spellbook comes with dedicated dbt documentation to help you navigate the data within!
+标题：魔法书（Spellbook）模型文档
+描述：魔法书配有专门的dbt文档，以帮助您浏览其中的数据!
 ---
 
-Spellbook comes with dedicated dbt documentation to help you navigate the data within! Find it here:
+Spellbook配有专门的dbt文档，以帮助您浏览其中的数据! 可以在这里找到它：
 
 <div class="grid cards" markdown>
-- [Spellbook Model Docs](https://dune.com/spellbook)
+- [魔法书模型文档](https://dune.com/spellbook)
 </div>
 
-These work similarly to the [V2 table documentation you can find here](../../tables/v2/raw/), with a couple of special features.
+这些内容和 [V2的表数据文档](../../tables/v2/raw/)很类似，不过有一些特殊的功能。
 
-!!! warning
-    These Spellbook Table Docs and the Spellbook data lake are a work in progress. If you're not able to find  a specific V2 table/column, it likely isn't ready for use in Spells yet. If you do find it but it's not yet fully labeled in the Spellbook Model docs, please check our [V2 table documentation here](../../tables/v2/raw/). If you still have questions drop them in the [#data-tables Discord channel](https://discord.com/channels/757637422384283659/757893948428517376)!
+!!! 注意
+  这些魔法书文档和魔法书数据湖（lake）是一项正在进行的工作。如果你无法找到一个特定的V2表/列，它很可能还没有准备好在魔法书中使用。如果你找到了它，但它在魔法书模型文档中还没有完整的标签，请查看我们的[V2数据表文档](../../tables/v2/raw/)。 。如果你仍然有问题，请在 [#data-tables Discord 频道](https://discord.com/channels/757637422384283659/757893948428517376)提出来。
 
 ![dune spellbook docs homepage](images/dune-spellbook-docs-homepage.png)
 
-## General Navigation
+## 导航
 
-![spellbook docs navigation](images/spellbook-docs-navigation.png)
+![魔法书文档导航](images/spellbook-docs-navigation.png)
 
-You can use the Project and Database navigation tabs on the left side of the window to explore Spellbook models, as well as the search bar up top.
+你可以使用窗口左侧的项目和数据库导航标签来探索魔法书模型，也可以使用顶部的搜索栏。
 
-## Project Tab
+## 项目窗口
 
 ![project tab](images/project-tab.png)
 
-The Project tab is where you'll find the Sources and Spellbook models.
+项目标签是你可以找到数据源（sources）和魔法书模型的地方。
 
-### Sources models
+### 数据源模型
 
-[Sources](../spellbook/getting-started/data-sources.md) are dbt data models built from data tables contained in the main Dune V2 data lake.
+[数据源](../spellbook/getting-started/data-sources.md) 是由Dune V2数据湖中的数据表建立的dbt数据模型。
 
-Data must first be pulled into Spellbook Source models before it can be used in Spells, so using this list you can get an idea of what data is ready for use in your Spells, as well as what data might need to be added first as a Source model.
+在使用魔法书之前，数据必须首先被拉入魔法书的数据源模型，所以通过这个列表，你可以了解哪些数据可以在你的魔法书中使用，以及哪些数据可能需要先作为数据源模型被添加。
 
-For example, [Arbitrum blocks](../../tables/v2/raw/arbitrum/blocks/) data is available for Spells, but [Arbitrum event logs](../../tables/v2/raw/arbitrum/event-logs/) are not.
+比如， [Arbitrum blocks](../../tables/v2/raw/arbitrum/blocks/) 数据在魔法书中可用，但是 [Arbitrum event logs](../../tables/v2/raw/arbitrum/event-logs/) 则不行。
 
-### Spellbook models
+### 魔法书模型
 
-Below Sources you'll find a "Projects" heading, the only important thing here is the Spellbook folder which contains documentation on the various Spell-related code and data tables.
+在Sources下面，你会发现一个项目（Projects）目录，这里唯一重要的是Spellbook文件夹，它包含了与莫发表有关的各种代码和数据表的文档。
 
 ![spellbook models folder](images/spellbook-models-folder.png)
 
