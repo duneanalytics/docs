@@ -1,17 +1,17 @@
----
-title: Community Tables
-description: >-
-  This section contains data that has been submitted and hosted on Dune by 3rd
-  party data providers
+标题: 社区表
+描述: >-
+  这部分包含第三方提交和维护的数据。
 ---
 
-!!! note
-    Community is only available on V2 Engine.
+!!! 注意
+    社区数据仅在V2引擎提供。
 
-While Blockchain data is cool on it's own and we do our best to prepare, standardize and work with that data, sometimes a bit of off-chain data or augmented on-chain data is needed as well. Therefore, we are starting to partner with selected organizations that stream their data directly to Dune.
+虽然区块链数据本身很酷，我们尽最大努力准备、标准化和处理这些数据，但有时也需要一些链下数据或链上数据的增强。因此，我们选定了一些组织合作方，将数据直接传输到Dune。
 
-We are still building out the infrastructure for this endeavor and can therefore not support more datasets at the current moment.
+我们仍在为此努力构建基础设施，因此目前无法支持更多的数据集。
+
 
 <div class="cards grid" markdown>
 - [Flashbots](v2/community/flashbots/index.md)
+- [Reservoir](v2/community/reservoir/index.md)
 </div>
