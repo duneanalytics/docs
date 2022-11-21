@@ -1,22 +1,21 @@
 ---
-title: Spellbook Workshop Prerequisites
-description: A list of prerequisites strongly recommended before you go to a spellbook workshop!
+标题: 魔法书研讨会的前提
+描述: 强烈推荐你在去参加魔法书研讨会之前完成的清单!
 ---
 
-This is list of prerequisites strongly recommended before you go to a spellbook workshop!
+这是你在去参加魔法书研讨会之前预先完成的清单!
 
-- Have [Python 3.9](https://realpython.com/installing-python/) installed on your computer.
+- 在你的电脑上装好 [Python 3.9](https://realpython.com/installing-python/)。
+- 安装一个IDE来编辑你的代码[VSCode](https://code.visualstudio.com/)是一个不错的免费IDE。
 
-- Install an IDE to edit your code. [VSCode](https://code.visualstudio.com/) is a nice free one.
+- 确保已经安装了[pip](https://pip.pypa.io/en/stable/installation/)。
 
-- Ensure that [pip](https://pip.pypa.io/en/stable/installation/) is installed.
+- 安装[pipenv](https://pypi.org/project/pipenv/)这将允许我们用dbt创建一个虚拟环境。
 
-- Install [pipenv](https://pypi.org/project/pipenv/), this will allow us to create a virtualenv with dbt.
+- 设置[git 和 github](https://docs.github.com/en/get-started/quickstart/set-up-git)，包括认证。
 
-- Set up [git and github](https://docs.github.com/en/get-started/quickstart/set-up-git) including authentication.
+-  [fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo)一个[spellbook repo](https://github.com/duneanalytics/spellbook)。包括在本地克隆和添加一个上游。
 
-- Make a [fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) of the [spellbook repo](https://github.com/duneanalytics/spellbook). Including cloning locally and adding an upstream.
+- 查看Github的[说明](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork)，了解如何从分叉中提出拉取请求。
 
-- Review Github’s [instructions](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork) on how to make a pull request from a fork.
-
-P.S. If you have trouble with these prerequisites, please join our 🧙[Community Discord](https://discord.gg/BJBHFR6sdy) and reach out for help in the [#📜spellbook](https://discord.com/channels/757637422384283659/999683200563564655) channel!
+P.S. 如果你对这些先决条件有困难，请加入我们的 🧙[社区 Discord](https://discord.gg/BJBHFR6sdy) 并在 [#📜spellbook](https://discord.com/channels/757637422384283659/999683200563564655) 寻求帮助！
