@@ -52,11 +52,11 @@
 
 ![lineage graph button](images/lineage-graph-button.png)
 
-In the lineage graph, you'll see the immediate parents and children of the model you're exploring. 
+在脉络图中，你会看到当前模型的直系父系和子系模型。
 
 ![lineage graph example](images/lineage-graph-example.png)
 
-在脉络图中，你会看到当前模型的直系父系和子系模型。
+点击这个脉络图右上方的 "扩展 "按钮，可以看到所有用于建立或从当前的模型中衍生的模型。
 
 ![expand lineage graph](images/expand-lineage-graph.gif)
 
