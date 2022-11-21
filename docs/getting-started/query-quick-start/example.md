@@ -100,7 +100,7 @@ And in this example, to make it easy on you, we've already decided to:
 
 As a beginner, if you don't already have an idea of what you want to build, exploring Dune data from the Query builder is a fun way to dive in.
 
-You can also use the [Dune Explorer](../../reference/dune-explorer.md) to see what others are building as well!
+You can also use the [Dune Explorer](../dune-explorer.md) to see what others are building as well!
 
 Though this might not lead you to building the next [DeFi users over time](https://dune.com/rchen8/defi-users-over-time) (created by [@richardchen](https://dune.com/rchen8)), it's a great way to learn more about using Dune as you can see what's possible and even fork existing Queries to modify further!
 

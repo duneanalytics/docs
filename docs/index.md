@@ -127,9 +127,9 @@ For example one of the most popular Spells, [nft.trades](https://dune.com/spellb
 
 ### <img alt="wizards make magic" src="images/wizards-make-magic.png" class="vrt-cent"><span class="vrt-cent"> 6. Dune Wizards make magic</span>
 
-From all this data, Wizards build [Queries](../docs/getting-started/queries/index.md) using SQL, a widely-used language for storing, manipulating and retrieving data in databases.
+From all this data, Wizards build [Queries](getting-started/queries/index.md) using SQL, a widely-used language for storing, manipulating and retrieving data in databases.
 
-From these Queries they build the [Visualizations](../docs/getting-started/visualizations/index.md) and [Dashboards](../docs/getting-started/dashboards.md) we all know and love!
+From these Queries they build the [Visualizations](getting-started/visualizations/index.md) and [Dashboards](getting-started/dashboards.md) we all know and love!
 
 Eg [@rchen8](https://dune.com/rchen8)'s OpenSea daily volume: 
 
