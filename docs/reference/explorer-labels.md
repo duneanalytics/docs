@@ -1,5 +1,5 @@
 ---
-title: Data Types and Labels
+title: Data Explorer Labels
 description: While using the Data Explorer and these docs, you'll encounter a variety of labels. Here's what they all mean.
 ---
 
