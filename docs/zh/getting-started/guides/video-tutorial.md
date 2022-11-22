@@ -1,29 +1,29 @@
 ---
-title: Video Tutorials
+title: 视频教程
 ---
 
 !!! note
-    These videos all reference our Dune V1 Engine. While the general concepts are still applicable, some specifics related to Query execution are different in Dune Engine V2.
+    以下这些视频使用的都是我们的 Dune V1 引擎。虽然一般性的概念均适用，但在 Dune V2 引擎中，某些查询执行的具体细节会有所不同。
 
-We have produced a video tutorial series which you can follow below or on our [Youtube Channel](https://www.youtube.com/playlist?list=PLK3b5d4iK10ext4v-GBySekaA8-GP8quD).
+我们已经制作了一个视频教程系列，请参阅以下系列，或关注我们的 [Youtube 频道](https://www.youtube.com/playlist?list=PLK3b5d4iK10ext4v-GBySekaA8-GP8quD).
 
-## The ⚡ Quick 5-minute Dune Overview
+## ⚡ Dune 5 分钟极速概述
 
 ![type:video](https://www.youtube.com/embed/S-cctFmR828)
 
-## Intro to the tutorial series
+## 系列教程概述
 
 ![type:video](https://www.youtube.com/embed/USTIesVPk68)
 
-## Episode 1: Dune Use cases and applications
+## 第 1 集：Dune 的使用案例和应用
 
 ![type:video](https://www.youtube.com/embed/IHC8HAZvw_Q)
 
-## Episode 2: How the Dune database works
+## 第 2 集：Dune 数据库是如何运作的
 
 ![type:video](https://www.youtube.com/embed/UDu23Eyvo_Y)
 
-## Episode 3.1: How to use Dune Queries to recreate Fees.wtf
+## 第 3.1 集：如何使用 Dune 查询来重现 Fees.wtf
 
 ![type:video](https://www.youtube.com/embed/ez3VfcfNwvc)
 
