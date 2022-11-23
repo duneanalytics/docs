@@ -38,7 +38,7 @@ You can use Dune's embed links to add live Visualizations to any web page using 
 
 Here is a code snippet example:
 
-`<iframe src="https://dune.com/embeds/208941/391702/2cbe40da-a0e4-43ac-896b-fef6d4d9fda7" height="500" width="500" title="chart 1"></iframe>`
+`<iframe src="[your-query's-embed-link]" height="500" width="500" title="[name-of-your-query]"></iframe>`
 
 A great showcase for this is the [cryptoart.io](https://cryptoart.io/data) website.
 
