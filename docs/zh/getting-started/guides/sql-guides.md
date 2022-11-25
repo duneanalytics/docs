@@ -10,8 +10,8 @@ title: SQL 指南
 
     ### [Andrew Hong](https://dune.com/ilemi) [:material-twitter:](https://twitter.com/andrewhong5297) [:material-youtube:](https://www.youtube.com/channel/UCYG9WSr8G4khYLaxP9tLCkQ)
 
-    * [学习以太坊同时的初级 SQL 指南](https://towardsdatascience.com/your-guide-to-basic-sql-while-learning-ethereum-at-the-same-time-9eac17a05929) (第一部分)
-    * [学习以太坊同时的中级 SQL 指南](https://towardsdatascience.com/your-guide-to-intermediate-sql-while-learning-ethereum-at-the-same-time-7b25119ef1e2?source=user\_profile---------6----------------------------) (第二部分)
+    * [学习以太坊及初级 SQL 指南](https://towardsdatascience.com/your-guide-to-basic-sql-while-learning-ethereum-at-the-same-time-9eac17a05929) (第一部分)
+    * [学习以太坊及中级 SQL 指南](https://towardsdatascience.com/your-guide-to-intermediate-sql-while-learning-ethereum-at-the-same-time-7b25119ef1e2?source=user\_profile---------6----------------------------) (第二部分)
     * [学习 SQL 和以太坊](https://towardsdatascience.com/learning-sql-and-ethereum-part-3-5422f080ad36) (第三部分)
     * [以太坊上的SQL：如何处理交易中的所有数据](https://ath.mirror.xyz/mbR1n\_CvflL1KIKCTG42bnM4HpfGBqDPNndH8mu2eJw)
 

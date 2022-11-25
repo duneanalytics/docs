@@ -1,43 +1,43 @@
 ---
-title: Dune Guides
+title: Dune 指南
 ---
 
-Some of our best Wizard Community Members have produced outstanding written tutorials for Dune.
+我们有一批最赞的 Dune 社区成员为 Dune 制作了超棒的书面教程。
 
-These guides are all great and we recommend reading all of them, **BIG THANK YOU** to the Wizards who created them.
+这些教程都很棒，我们建议大家阅读所有内容，**超级感谢**创作这些指南的巫师们。
 
-You are amazing! 🪄
+你们太棒了！🪄
 
-## The general process for surfacing data with Dune
+## 用 Dune 呈现数据的一般流程
 
-1. **Compile a List of all relevant contracts and submit them for** [**decoding**](../decoding-contracts.md)**.**
-2. **Surface the data using SQL queries**
-3. **Visualize the results**
-4. **Assemble Visualizations on a Dashboard.**
-5. **Make the Dashboard pretty**
-6. **Enjoy your data**
+1. **编制一份所有相关合约的清单，并提交给**[**decoding**](./decoding-contracts.md)**.**
+2. **使用 SQ L查询呈现数据**
+3. **可视化结果**
+4. **在仪表盘上组装可视化结果**
+5. **美化仪表盘**
+6. **尽情享用您的数据**
 
 
 === "PostgreSQL"
 
     ### [Andrew Hong](https://dune.com/ilemi) [:material-twitter:](https://twitter.com/andrewhong5297) [:material-youtube:](https://www.youtube.com/channel/UCYG9WSr8G4khYLaxP9tLCkQ)
 
-    * [Your guide to basic SQL while learning Ethereum at the same time](https://towardsdatascience.com/your-guide-to-basic-sql-while-learning-ethereum-at-the-same-time-9eac17a05929) (Part 1)
-    * [Your guide to intermediate SQL while learning Ethereum at the same time](https://towardsdatascience.com/your-guide-to-intermediate-sql-while-learning-ethereum-at-the-same-time-7b25119ef1e2?source=user\_profile---------6----------------------------) (Part 2)
-    * [Learning SQL and Ethereum](https://towardsdatascience.com/learning-sql-and-ethereum-part-3-5422f080ad36) (Part 3)
-    * [SQL on Ethereum: How to Work With All the Data from a Transaction](https://ath.mirror.xyz/mbR1n\_CvflL1KIKCTG42bnM4HpfGBqDPNndH8mu2eJw)
+    * [学习以太坊及初级 SQL 指南](https://towardsdatascience.com/your-guide-to-basic-sql-while-learning-ethereum-at-the-same-time-9eac17a05929) (第一部分)
+    * [学习以太坊及中级 SQL 指南](https://towardsdatascience.com/your-guide-to-intermediate-sql-while-learning-ethereum-at-the-same-time-7b25119ef1e2?source=user\_profile---------6----------------------------) (第二部分)
+    * [学习 SQL 和以太坊](https://towardsdatascience.com/learning-sql-and-ethereum-part-3-5422f080ad36) (第三部分)
+    * [以太坊上的SQL：如何处理交易中的所有数据](https://ath.mirror.xyz/mbR1n\_CvflL1KIKCTG42bnM4HpfGBqDPNndH8mu2eJw)
 
     ### [Alex Manuskin](https://dune.com/ksunama) [:material-twitter:](https://twitter.com/amanusk\_)
 
-    * [How to get started with querying on Dune Analytics](https://dune.com/blog/get-started-guide)
+    * [如何开始在 Dune Analytics 上进行查询](https://dune.com/blog/get-started-guide)
 
     ### [Paul Pivat](https://dune.com/paulapivat) [:material-twitter:](https://twitter.com/paulapivat)
 
-    * [Lean foundational Ethereum topics with SQL](https://ethereum.org/en/developers/tutorials/learn-foundational-ethereum-topics-with-sql)
+    * [通过 SQL 学习以太坊的基础主题](https://ethereum.org/en/developers/tutorials/learn-foundational-ethereum-topics-with-sql)
 
     ### [Alex Kroeger](https://dune.com/kroeger0x) [:material-twitter:](https://twitter.com/alex\_kroeger)
 
-    * [How to use Dune Analytics like a degen](https://mirror.xyz/0x7B542178633f16940a131F8F6d670ffdbBe6b2Ab/0C3EQBtFqAK4k2TAGPZhg0JMY-upfTAxuTD-o91vBPc)
+    * [如何像高手一般使用 Dune Analytics](https://mirror.xyz/0x7B542178633f16940a131F8F6d670ffdbBe6b2Ab/0C3EQBtFqAK4k2TAGPZhg0JMY-upfTAxuTD-o91vBPc)
 
     ### [Chuxin](https://dune.com/chuxin) [:material-twitter:](https://twitter.com/chuxin\_h)
 
@@ -45,46 +45,46 @@ You are amazing! 🪄
 
     ### Gracelily [:material-twitter:](https://twitter.com/\_grace\_lily)
 
-    * [PostgreSQL Query Optimization Tricks - How to Make Queries Faster in Dune Analytics](https://gracelily.medium.com/postgresql-query-optimization-tricks-6d5b7358d7fa)
+    * [PostgreSQL 查询优化技巧 - 如何在 Dune 分析中给查询加速](https://gracelily.medium.com/postgresql-query-optimization-tricks-6d5b7358d7fa)
 
     ### Twigblock
 
-    * [Build an Ethereum Metrics Dashboard](https://www.twigblock.com/projects/eth-intro-dune/t/eit-overview)
-    * [Learn to Analyze Ethereum Gas Prices](https://www.twigblock.com/projects/eth-gas-analysis/t/eg-overview)
+    * [构建一个以太坊指标仪表盘](https://www.twigblock.com/projects/eth-intro-dune/t/eit-overview)
+    * [学习分析以太坊 Gas 价格](https://www.twigblock.com/projects/eth-gas-analysis/t/eg-overview)
 
 === "Databricks SQL"
 
     ### [0xPhilan](https://dune.com/phillan) [:material-twitter:](https://twitter.com/0xPhillan)
 
-    * [Dune Analytics: A Guide for Complete Beginners](https://mirror.xyz/phillan.eth/17VAXsMPpwJg4OQNBHKTYAQTWfJMwFuXZQDAxPStf0o)
+    * [Dune Analytics：新手入门指南](https://mirror.xyz/phillan.eth/17VAXsMPpwJg4OQNBHKTYAQTWfJMwFuXZQDAxPStf0o)
 
     ### [James Bachini](https://dune.com/jamesbachini) [:material-twitter:](https://twitter.com/james_bachini)
 
-    * [Dune Analytics Tutorial | How To Create A Dune Analytics Dashboard](https://jamesbachini.com/dune-analytics-tutorial/)
+    * [Dune Analytics 教程｜如何创建 Dune 仪表盘](https://jamesbachini.com/dune-analytics-tutorial/)
 
     ### [Kirubakumaresh](https://twitter.com/kirubakumaresh)
 
-    * [Buid Ethereum Metrics Dashboard](https://www.twigblock.com/projects/eth-intro-dune/t/eit-overview)
+    * [建立以太坊指标仪表盘](https://www.twigblock.com/projects/eth-intro-dune/t/eit-overview)
 
-## OurNetwork Course
+## OurNetwork 课程
 
 !!! note
-    This course is based on Dune's V1 engine. Much of the content is still applicable, but the SQL dialect and some table names have changed in Dune V2.
+    本课程基于Dune V1引擎。虽然大多数内容都适用，但在 Dune V2 中，某些 SQL 语法和一些表名称有所变化。
 
-In collaboration with the Dune Team and Community, our friends at OurNetwork created a course with an ambitious goal: teach 30 people web3 data analytics in 30 days.
+在与 Dune 团队和社区的合作过程中，我们在 OurNetwork 的朋友创建了一个课程。这个课程还有一个雄心勃勃的目标：在 30 天内教会 30 个人进行 Web3 数据分析。
 
-Hosted by some of our community's top Wizards, you can now access the presentations for free!
+在我们社区的某些顶级魔法师的慷慨支持下，您现在可以免费获取这些演示文稿了！
 
-As it covers all of the important topics you'll need to know to effectively analyze blockchain data and become a full-fledged Dune Wizard, it's one of the best places to start your Dune Journey.
+鉴于它涵盖了所有您需要了解的重要主题，从而有效地分析区块链数据并成为一个熟练的 Dune Wizard，它是开启您 Dune 之旅的最佳起点。
 
-More details and all of the course materials can be found here:
+更多细节及所有课程材料均呈现如下：
 
 <div class="cards grid" markdown>
-- [OurNetwork Course](https://ournetwork.mirror.xyz/gP16wLY-9BA1E_ZuOSv1EUAgYGfK9mELNza8cfgMWPQ)
+- [OurNetwork 课程](https://ournetwork.mirror.xyz/gP16wLY-9BA1E_ZuOSv1EUAgYGfK9mELNza8cfgMWPQ)
 </div>
 
-Please consider buying an edition of the Mirror post to support the teachers of this course.
+请考虑购买一版 Mirror 文章以支持本课程的老师们。
 
-Videos are also available on YouTube:
+在 YouTube 上还有视频版：
 
 ![type:video](https://www.youtube.com/embed/yDSmTUrpdoQ)
