@@ -9,7 +9,7 @@ Read more [here](https://medium.com/chainalysis/ethereum-traces-not-transactions
 
 ## Tables
 
-=== "V2 Engine (Databricks SQL)"
+=== "V2 Engine (Spark SQL)"
 
     |   Chain           |   Table               | Notes |
     | ----------------  | --------------------- | ----- |

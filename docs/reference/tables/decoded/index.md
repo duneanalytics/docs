@@ -9,7 +9,7 @@ We create tables for each event and function defined in the smart contract's ABI
 
 The tables are named accordingly:
 
-=== "V2 Engine (Databricks SQL)"
+=== "V2 Engine (Spark SQL)"
 
     **events:** `[projectname_blockchain].contractName_evt_eventName`
 
@@ -42,7 +42,7 @@ Since all chain's data resides in one database, but the multichain world is a re
 
 ## Which contracts have decoded data?
 
-=== "V2 Engine (Databricks SQL)"
+=== "V2 Engine (Spark SQL)"
 
     You can check if contracts are already decoded by querying `[blockchain].contracts` tables through our database or use [this dashboard](https://dune.com/0xBoxer/Is-my-Contract-decoded-yet).
 
@@ -112,7 +112,7 @@ On [Etherscan](https://etherscan.io/tx/0x2bb7c8283b782355875fa37d05e4bd962519ea2
 
 If we query for this transaction in the `ethereum.logs` table in the dune database, we will receive the same encoded bytecode as our result dataset.
 
-=== "V2 Engine (Databricks SQL)"
+=== "V2 Engine (Spark SQL)"
 
     ```sql
      Select *
@@ -143,7 +143,7 @@ The event log we are looking at here is from the $PICKLE ERC20 token `transfer` 
 
 Since this table is decoded on Dune, we can query the table in Dune to receive the decoded information: 
 
-=== "V2 Engine (Databricks SQL)"
+=== "V2 Engine (Spark SQL)"
 
     ```sql
     SELECT *
@@ -226,7 +226,7 @@ Cases where no event gets emitted get rarer over time as developers now mostly u
 
 ### See all projects we have decoded data for
 
-=== "V2 Engine (Databricks SQL)"
+=== "V2 Engine (Spark SQL)"
 
     ```sql
     SELECT DISTINCT namespace FROM [blockchain].contracts; --change [blockchain] the chain you're interested in e.g. ethereum.contracts
@@ -250,7 +250,7 @@ Cases where no event gets emitted get rarer over time as developers now mostly u
 
 If you are working with an event or call table directly you can see if there are several instances of that contract with this query.
 
-=== "V2 Engine (Databricks SQL)"
+=== "V2 Engine (Spark SQL)"
 
     ```sql
     SELECT DISTINCT contract_address 

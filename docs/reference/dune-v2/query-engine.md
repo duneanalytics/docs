@@ -6,14 +6,14 @@ title: Query Engine
 
 DuneV2 changes our whole database architecture. We are transitioning away from a PostgreSQL database to an Instance of [Apache Spark](https://www.databricks.com/glossary/what-is-apache-spark) hosted on [Databricks](https://docs.databricks.com/getting-started/introduction/index.html). The difference between the two systems can be summarized as follows:
 
-* Instead of PostgreSQL, we will now use Databricks SQL. The change in SQL keywords is minimal but might be relevant for some of your querying habits.
+* Instead of PostgreSQL, we will now use Spark SQL. The change in SQL keywords is minimal but might be relevant for some of your querying habits.
 * Spark is a column oriented database in contrast to PostgreSQL’s row oriented approach.
 * traditional indexes are replaced by column chunk level `min/max` values
 
 !!! note
     Find a detailed wakthrough of the changes V2 brings to building Queries below. Or start getting your wand dirty by following along with [@springzhang](https://dune.com/springzhang/)'s [Tips and Tricks for Dune V2 Queries and Visualizations](https://dune.com/springzhang/tips-and-tricks-for-query-and-visualization-in-v2-engine)
 
-## Databricks SQL <> PostgresSQL operator changes
+## Spark SQL <> PostgresSQL operator changes
 
 The changes between the 2 coding languages syntax and the keyword operators are quite minimal, however there is some differences you should be mindful of:
 
@@ -41,10 +41,10 @@ For example, referencing a column name in the where clause using double quotes w
 
 If you have found any other changes that are important to note, please feel free to submit a PR to our docs or leave us feedback in our [#general-feedback Discord channel](https://discord.com/channels/757637422384283659/1012706316755664926)!
 
-When googling for SQL questions, instead of googling `PGSQL median`, you should now google for `Databricks SQL median`. Databricks has a well documented index of built in functions on their website.
+When googling for SQL questions, instead of googling `PGSQL median`, you should now google for `Spark SQL median`. Spark has a well documented index of built in functions on their website.
 
 <div class="cards grid" markdown>
-- [Databricks - Databricks SQL Language Reference](https://docs.databricks.com/sql/language-manual/sql-ref-functions-builtin.html)
+- [Spark - Spark SQL Language Reference](https://docs.databricks.com/sql/language-manual/sql-ref-functions-builtin.html)
 </div>
 
 ## Changes in how the database works

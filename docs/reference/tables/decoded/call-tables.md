@@ -7,7 +7,7 @@ Smart contracts generally have functions that are able to be called by either an
 
 On Dune, we parse all message calls and transactions made to smart contracts in their own tables. The tables are then accordingly named:
 
-=== "V2 Engine (Databricks SQL)"
+=== "V2 Engine (Spark SQL)"
 
     `[projectname_blockchain].contractName_call_functionName`
 
@@ -19,7 +19,7 @@ This is either done on an individual contract level like for the uniswap v3 fact
 
 For example, when a uniswap v3 pool gets created via the [uniswap v3 factory](https://etherscan.io/address/0x1f98431c8ad98523631ae4a59f267346ea31f984#code) (on Ethereum) function `createPool`, Dune will record that transaction in the table:
 
-=== "V2 Engine (Databricks SQL)"
+=== "V2 Engine (Spark SQL)"
 
     `uniswap_v3_ethereum.Factory_call_createPool`
 
@@ -37,7 +37,7 @@ This will happen whether this was done by an externally owned account (EOA) thro
 
 For a contract where multiple instances exist, we will decode all calls to all instances of this smart contract into one table. If there is a transaction calling the `swap` function of any instance of a [Uniswap v3 pair](https://etherscan.io/address/0x8f8ef111b67c04eb1641f5ff19ee54cda062f163#writeContract) contract, we will collect this data in the table:
 
-=== "V2 Engine (Databricks SQL)"
+=== "V2 Engine (Spark SQL)"
     
     `uniswap_v3_ethereum.Pair_call_swap`
 

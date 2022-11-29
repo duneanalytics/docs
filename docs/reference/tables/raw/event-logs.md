@@ -16,7 +16,7 @@ For more on this topic read [this article](https://medium.com/mycrypto/understan
 
 ## Tables
 
-=== "V2 Engine (Databricks SQL)"
+=== "V2 Engine (Spark SQL)"
 
     |   Chain           |   Table             | Notes |
     | ----------------  | ------------------- | ----- |

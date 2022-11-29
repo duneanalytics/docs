@@ -33,13 +33,13 @@ If you'd like to contribute to Dune spells, take a look at [Spellbook](../../../
 
 These enable you to effortlessly aggregate lots of data with as little friction as possible.
 
-To view available Spells, take a look at our [Spellbook model documentation](https://dune.com/spellbook) and learn how to contribute new spells [here](../../../../spellbook/index.md
+To view available Spells, take a look at our [Spellbook model documentation](https://dune.com/spellbook) and learn how to contribute new spells [here](../../../spellbook/index.md)
 
 Our Spells are managed via the public [Spellbook GitHub repository](https://github.com/duneanalytics/spellbook/index.md). We welcome pull requests!
 
 ## Abstractions (Dune V1 PostgreSQL)
 
-For our **V1 Engine** (PostgreSQL), abstractions are snippets of SQL executed the data platform. You can check for existing abstractions on [GitHub](https://github.com/duneanalytics/spellbook/tree/main/deprecated-dune-v1-abstractions), and view [documentation](v1/../v1/abstractions/index.mdn our most popular abstractions.
+For our **V1 Engine** (PostgreSQL), abstractions are snippets of SQL executed the data platform. You can check for existing abstractions on [GitHub](https://github.com/duneanalytics/spellbook/tree/main/deprecated-dune-v1-abstractions).
 
 You can check for existing abstractions in our [public github repository](https://github.com/duneanalytics/spellbook/index.md), under `deprecated-dune-v1-abstractions`.
 
