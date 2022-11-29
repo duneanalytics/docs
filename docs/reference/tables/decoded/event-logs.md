@@ -9,7 +9,7 @@ Logs are useful for monitoring, alerting and in general keeping track of what ha
 
 We will decode all event logs for smart contracts into tables named accordingly to this schema: 
 
-=== "V2 Engine (Databricks SQL)"
+=== "V2 Engine (Spark SQL)"
 
     `[projectname_blockchain].[contractName]_evt_[eventName]`
 
@@ -19,7 +19,7 @@ We will decode all event logs for smart contracts into tables named accordingly 
 
 Let's stay in the context of the [uniswap v3 factory](https://etherscan.io/address/0x1f98431c8ad98523631ae4a59f267346ea31f984#code) and look at the event that gets emitted upon the creation of a new pool. The event is called `PoolCreated` and gets emitted every time somebody successfully deployed a new Uniswap V3 pool by calling the function `createPool`. The event will readily give us information like the tokens in the pool, the fee tier of this pool and the tick spacing. In Etherscan, you can easily look at the event logs of transaction by opening the [logs tab](https://etherscan.io/tx/0xdeb368592f3de0f2840754bce61d2c3f29cdb3407c63c699052e68a854c71eaa#eventlog). In Dune, this particular event will be stored in the table:
 
-=== "V2 Engine (Databricks SQL)"
+=== "V2 Engine (Spark SQL)"
 
     `uniswap_v3_ethereum.Factory_evt_PoolCreated`
 
@@ -35,7 +35,7 @@ Let's stay in the context of the [uniswap v3 factory](https://etherscan.io/addre
 
 If there is multiple instances of a contract we will collect all event logs across all instances of this smart contract in one table. For example, all uniswap v3 pool `swap` events (on ethereum) are stored in the table:
 
-=== "V2 Engine (Databricks SQL)"
+=== "V2 Engine (Spark SQL)"
     
     `uniswap_v3_ethereum.Pair_evt_Swap`
 

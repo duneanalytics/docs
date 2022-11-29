@@ -11,7 +11,7 @@ Read more in the official Ethereum documentation [here](https://ethereum.org/en/
 
 ## Tables
 
-=== "V2 Engine (Databricks SQL)"
+=== "V2 Engine (Spark SQL)"
 
     |   Chain           |   Table               | Notes |
     | ----------------  | --------------------- | ----- |

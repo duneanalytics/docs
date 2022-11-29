@@ -58,7 +58,7 @@ event Approval(address indexed _owner, address indexed _spender, uint256 _value)
 
 In Dune, we decode all transfer events across all smart contracts that use the ERC20 token standard into these tables:
 
-=== "V2 Engine (Databricks SQL)"
+=== "V2 Engine (Spark SQL)"
    
     **`erc20_blockchain.ERC20_evt_Transfer`**
 

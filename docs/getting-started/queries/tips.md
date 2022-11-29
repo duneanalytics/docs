@@ -70,7 +70,7 @@ To transmute these into a more human-friendly form, use the `erc20.tokens` table
     transfer_value / 10^erc20.tokens.decimals
     ```
 
-=== "Databricks SQL"
+=== "Spark SQL"
 
     ```sql
     transfer_value / x*power(10,y)` or `transfer_value / x*1e*y
@@ -112,7 +112,7 @@ To do this, `JOIN` the table `erc20.tokens` with your event table where `asset` 
 
     **NB** The `erc20.tokens` table contains a selection of popular tokens. If you are working with more obscure tokens you should be careful with joining with this table because tokens that are not in the coincap table might be excluded from your results.
 
-=== "Databricks SQL"
+=== "Spark SQL"
 
     **NB** The `tokens_blockchain.erc20` table contains a selection of popular tokens. If you are working with more obscure tokens you should be careful with joining with this table because tokens that are not in the coincap table might be excluded from your results.
 

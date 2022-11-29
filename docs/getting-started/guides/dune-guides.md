@@ -52,7 +52,7 @@ You are amazing! 🪄
     * [Build an Ethereum Metrics Dashboard](https://www.twigblock.com/projects/eth-intro-dune/t/eit-overview)
     * [Learn to Analyze Ethereum Gas Prices](https://www.twigblock.com/projects/eth-gas-analysis/t/eg-overview)
 
-=== "Databricks SQL"
+=== "Spark SQL"
 
     ### [0xPhilan](https://dune.com/phillan) [:material-twitter:](https://twitter.com/0xPhillan)
 

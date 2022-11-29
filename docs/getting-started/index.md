@@ -50,7 +50,7 @@ A fundamental understanding of SQL is needed to be able to successfully query fo
 
 !!! note
     By default, this documentation shows information for our Dune V1 Engine, which runs on a PostgreSQL database.
-    Our new data platform, [Dune Engine V2](https://dune.com/blog/dune-engine-v2) is currently in beta with a Databricks SQL query engine. It offers exciting features like better scaling, cross chain Queries and [Spellbook](../spellbook/index.md). Dune Engine V2 will become the default over the next few months, so we recommend you try it out!
+    Our new data platform, [Dune Engine V2](https://dune.com/blog/dune-engine-v2) is currently in beta with a Spark SQL query engine. It offers exciting features like better scaling, cross chain Queries and [Spellbook](../spellbook/index.md). Dune Engine V2 will become the default over the next few months, so we recommend you try it out!
 
 === "Basic SQL"
     If you're not very familiar with SQL in general, we recommend starting with our [SQL Guides](guides/sql-guides.md).
@@ -58,8 +58,8 @@ A fundamental understanding of SQL is needed to be able to successfully query fo
 === "PostgreSQL"
     The official [PostgreSQL documentation](https://www.postgresql.org/docs/12/index.html) is great. Dune runs on PostgreSQL 12.2.
 
-=== "Databricks SQL"
-    The official [Databricks SQL ](https://docs.databricks.com/sql/language-manual/index.html) documentation is super helpful.
+=== "Spark SQL"
+    The official [Spark SQL](https://docs.databricks.com/sql/language-manual/index.html) documentation is super helpful.
 
 ### How to parse Ethereum Virtual Machine data
 

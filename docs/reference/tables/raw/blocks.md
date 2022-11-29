@@ -9,7 +9,7 @@ These tables are useful for identifying block activity and transaction changes o
 
 ## Tables
 
-=== "V2 Engine (Databricks SQL)"
+=== "V2 Engine (Spark SQL)"
 
     | Chain             | Table                | Notes                                                 |
     | ----------------  | -------------------- | ----------------------------------------------------- |

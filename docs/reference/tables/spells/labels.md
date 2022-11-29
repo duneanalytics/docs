@@ -17,7 +17,7 @@ Browse addresses and and labels at the [**labels page**](https://dune.com/labels
 
 Check out [this dashboard](https://dune.com/hagaetc/labels) for examples on what can be created with labels.
 
-The address [0xD551234Ae421e3BCBA99A0Da6d736074f22192FF](https://dune.com/ethereum/address/0xD551234Ae421e3BCBA99A0Da6d736074f22192FF) can be labeled like this:
+The address `0xD551234Ae421e3BCBA99A0Da6d736074f22192FF` can be labeled like this:
 
 | Type | Name |
 | ----------- | -------- |
@@ -26,7 +26,7 @@ The address [0xD551234Ae421e3BCBA99A0Da6d736074f22192FF](https://dune.com/ethere
 
 The address is controlled by the exchange Binance.
 
-The address [0xe65040f61701940b62e18da7a53126a58525588b](https://dune.com/ethereum/address/0xe65040f61701940b62e18da7a53126a58525588b) can be labeled like this:
+The address `0xe65040f61701940b62e18da7a53126a58525588b` can be labeled like this:
 
 | Type | Name |
 | ---------- | ------------ |
@@ -77,10 +77,6 @@ Note that this table holds multiple rows per address, and therefore joins agains
 which we anticipate will be the primary way to use labels. See examples below.
 
 Typically if you do a query that returns `address` you can use `labels.get(address)` to get all labels for that address independent of label type. If you want to see labels of the type `owner` you can do `labels.get(address, 'owner')`. You can also pass this function several label types you want included like: `labels.get(address, 'owner', 'project')`.
-
-We’ve also added the function `labels.url(address bytea)`. Pass that function an address from your query and your results table will contain a clickable link to for instance:
-
-[https://dune.com/ethereum/address/0xD551234Ae421e3BCBA99A0Da6d736074f22192FF](https://dune.com/ethereum/address/0xD551234Ae421e3BCBA99A0Da6d736074f22192FF)
 
 ### Usecase 1: I want to display labels for a list of addresses
 
@@ -140,20 +136,6 @@ Of course you can also show the address, and filter for multiple label types
     ORDER BY 2 DESC
     LIMIT 100;
 ```
-
-You can also use `labels.url` to make the addresses clickable:
-
-```sql
-SELECT labels.url(trader_a), labels.get(trader_a, 'activity') as labels, SUM(token_a_amount)
-    FROM dex.trades
-    WHERE token_a_symbol = 'DAI'
-    AND block_time > now() - interval '24 hours'
-GROUP BY 1, 2
-    ORDER BY 3 DESC
-    LIMIT 10;
-```
-
-This way people who look at your dashboard can easily contribute even better labels to it!
 
 ### Usecase 2: I want to filter my query by labels that exist.
 

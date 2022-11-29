@@ -44,7 +44,7 @@ Some data sets will have multiple blockchain icons - meaning data from each of t
 
 ## Data Type Labels
 
-You can find the full [Databricks SQL data types documentation here](https://docs.databricks.com/sql/language-manual/sql-ref-datatypes.html). For types not found there, see [Apache Spark SQL data types here](https://spark.apache.org/docs/latest/sql-ref-datatypes.html).
+You can find the full [Spark SQL data types documentation here](https://docs.databricks.com/sql/language-manual/sql-ref-datatypes.html). For types not found there, see [Apache Spark SQL data types here](https://spark.apache.org/docs/latest/sql-ref-datatypes.html).
 
 For V1 Data here are the [official PostgreSQL data types](https://www.postgresql.org/docs/current/datatype.html).
 
