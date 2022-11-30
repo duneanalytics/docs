@@ -7,7 +7,7 @@ With our file structure setup, let’s complete our `_sources.yml` file.
 
 Here’s how these files are formatted:
 
-```yml
+```sls
 
 version: 2 # spells all have “version: 2” as that’s the version of our engine they use.
 
@@ -40,7 +40,7 @@ In our Keep3r example, doing that for our main abstraction and its dependencies:
 
 We end up with a `keep3r_network_ethereum_sources.yml` file that looks like this:
 
-```yml
+```sls
 
 version: 2
 
