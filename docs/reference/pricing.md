@@ -84,9 +84,15 @@ Overall, the higher the tier, the faster your queries will run!
 
 When your monthly execution quota drops to 0, additional queries will be charged at your plan's Additional Execution rate and charged the next time you're billed.
 
-#### Can I execute from the Community tier when my quota is exhausted?
+#### Can I limit premium Query usage when I've reached my limit to avoid paying extra fees?
 
-You can't execute on the Community tier once your paid plan quota is exhausted.
+You can limit premium Query usage once you reach your monthly limit!
+
+[Head to Settings -> Subscription](https://dune.com/settings/subscription) while logged in and turn on the "Limit extra query executions" toggle.
+
+When turned on, extra query executions will run on the Community tier and you will not be charged additional fees.
+
+![limit extra query executions toggle](images/limit-extra-query-executions-toggle.png)
 
 ### Features
 
