@@ -5,6 +5,9 @@ plugins:
   - awesome-pages
   - mkdocs-video
   - social
+  - privacy:
+      external_links_attr_map:
+        target: _blank
   - redirects:
       redirect_maps:
        'dune-engine-v2-beta/abstractions-in-dunev2/getting-started-contribute-a-spell/README.md': 'spellbook/getting-started/submissions.md'
