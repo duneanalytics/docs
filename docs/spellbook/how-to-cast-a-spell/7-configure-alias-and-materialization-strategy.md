@@ -108,7 +108,7 @@ Coming into the final stretch, we need to add our new models to the `dbt_project
 
 First, find these lines:
 
-```yml
+```sls
 
 # Configuring models
 
@@ -124,7 +124,7 @@ Underneath, we specify the project name, schema, and materialization strategy fo
 
 For Keep3r, our entry looks like this:
 
-```yml
+```sls
 
    keep3r_network:
 

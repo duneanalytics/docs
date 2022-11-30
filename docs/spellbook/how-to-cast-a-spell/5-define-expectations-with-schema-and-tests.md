@@ -14,7 +14,7 @@ First, we start by defining our model’s schema - what columns should be output
 
 Our `_schema.yml` files are structured like this:
 
-```yml
+```sls
 
 version: 2
 
@@ -42,7 +42,7 @@ models:
 
         name: [column_name]
 
-        description: "[description"
+        description: "[description]"
 
         tests:
 
