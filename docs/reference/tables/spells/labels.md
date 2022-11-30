@@ -41,7 +41,7 @@ You are free to come up with both new types and label names, as labels on Dune a
 
 Use Dune queries to label addresses. A very powerful and scalable way to add labels like “all these addresses used Uniswap”, and much much more.
 
-Please see our [GitHub](https://github.com/duneanalytics/spellbook/tree/master/labels) for examples of labels created with queries and PR in your own!
+Please see our [GitHub](https://github.com/duneanalytics/spellbook/tree/main/models/labels) for examples of labels created with queries and PR in your own!
 
 Examples of what you can do:
 
