@@ -42,7 +42,7 @@ models:
 
         name: [column_name]
 
-        description: "[description"
+        description: "[description]"
 
         tests:
 
