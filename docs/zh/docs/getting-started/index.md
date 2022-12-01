@@ -18,20 +18,20 @@ title: 入门
 === "预备学习"
     预备学习是学校式的——先阅读和观看大量内容以获得大致的理解，然后开始尝试动手。
 
-    如果这是您喜欢的学习方式，我们的长篇[《Dune 指南》](dune-guides.md)比我们的视频要深入得多，同时仍然通过简单的项目引导您，让您对如何用 Dune 进行创作有一个大致的了解。
+    如果这是您喜欢的学习方式，我们的长篇[《Dune 指南》](guides/dune-guides.md)比我们的视频要深入得多，同时仍然通过简单的项目引导您，让您对如何用 Dune 进行创作有一个大致的了解。
 
-    [OurNetwork 课程](our-network-course.md)也提供了一个详尽的、广泛的概述。
+    [OurNetwork 课程](dune-guides/#ournetwork-course)也提供了一个详尽的、广泛的概述。
 
 === "适时学习"
-    适时学习是为那些在实践中学习的人准备的。如果您已经对您想用 Dune 做什么有了想法，只是需要通过寻找一些具体的策略知识来释放自己的想法，那么[核心功能](../features/queries/index.md)很可能包含您需要的信息。
+    适时学习是为那些在实践中学习的人准备的。如果您已经对您想用 Dune 做什么有了想法，只是需要通过寻找一些具体的策略知识来释放自己的想法，那么[核心功能](queries/index.md)很可能包含您需要的信息。
 
-    [数据表](../tables/index.md)和[魔法书](../spellbook/index.md)是更高级的功能，一旦您理解了基础知识，就值得去尝试。
+    [数据表](../reference/tables/index.md)和[魔法书](../spellbook/index.md)是更高级的功能，一旦您理解了基础知识，就值得去尝试。
 
     请务必在[#beginners Discord channel](https://discord.com/channels/757637422384283659/1016725609797402634)中提出您的任何问题！
 
 
 === "不了解 SQL？"
-    如果您对 SQL 不是很熟悉，可以从这里开始探索我们的 [SQL Guides 指南](sql-guides.md)。
+    如果您对 SQL 不是很熟悉，可以从这里开始探索我们的 [SQL Guides 指南](guides/sql-guides.md)。
 
 
 ## 要成为一名伟大的巫师，您需要知道什么？
@@ -50,7 +50,7 @@ title: 入门
     我们的新数据平台，[Dune 引擎 V2](https://dune.com/blog/dune-engine-v2) 目前处于测试阶段，其采用的是 Databricks SQL 的查询引擎。它提供了令人兴奋的功能，如更好的扩容，跨链查询和[魔法书](../spellbook/index.md)。Dune 引擎 V2 在接下来的几个月里，将成为默认引擎，所以我们建议您尝试一下！
 
 === "基础 SQL"
-    如果您对 SQL 不是特别熟悉，我们建议从我们的 [SQL 指南](sql-guides.md)开始。
+    如果您对 SQL 不是特别熟悉，我们建议从我们的 [SQL 指南](guides/sql-guides.md)开始。
 
 === "PostgreSQL"
     官方 [PostgreSQL 文档](https://www.postgresql.org/docs/12/index.html)很棒。Dune 在 PostgreSQL 12.2 上运行。
@@ -66,7 +66,7 @@ title: 入门
 
 如果您能够读取 Etherscan 中的大部分数据，那么您已经在用 Dune 创建有洞察力的查询和可视化的路上走得很远了。
 
-不幸的是，我们目前还没有找到一个很好的资源可以指给您看，因为每个智能合约都有它自己的规则。我们已经在我们的[解码数据](../tables/decoded.md)部分写了一些关于这个问题的文字。
+不幸的是，我们目前还没有找到一个很好的资源可以指给您看，因为每个智能合约都有它自己的规则。我们已经在我们的[解码数据](../reference/tables/decoded.md)部分写了一些关于这个问题的文字。
 
 ### 社区、协议和企业关心什么
 
@@ -90,6 +90,6 @@ title: 入门
 
 ## 额外的工具和支持
 
-查看我们的[帮助](../resources/support-feedback.md)页面，了解如果您在我们的文档中找不到您想要的答案，可以通过什么方式获得帮助。
+查看我们的[帮助](../reference/support-feedback.md)页面，了解如果您在我们的文档中找不到您想要的答案，可以通过什么方式获得帮助。
 
-也可以看看我们的[巫师工具](../resources/wizard-tools.md)页面，了解更多关于我们的巫师用来制作 🎇 的所有很棒的非 Dune 工具。
+也可以看看我们的[巫师工具](../reference/wizard-tools/index.md)页面，了解更多关于我们的巫师用来制作 🎇 的所有很棒的非 Dune 工具。

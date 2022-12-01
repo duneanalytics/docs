@@ -1,8 +1,20 @@
 nav:
 - index.md
-- our-network-course.md
-- dune-guides.md
-- sql-guides.md
-- video-series.md
-- helpful-dashboards.md
+- Query Quick Start: query-quick-start
+- queries
+- visualizations
+- dashboards.md
+- embeds.md
+- decoding-contracts.md
+- teams.md
+- guides
 - 用例: use-cases
+- ...
+
+
+
+
+
+
+
+

@@ -1,22 +1,21 @@
 ---
-title: Dune Guides
+title: Dune 指南
 ---
 
-Some of our best Wizard Community Members have produced outstanding written tutorials for Dune.
+我们一些最好的巫师社区成员为 Dune 制作了出色的书面教程。
 
-These guides are all great and we recommend reading all of them, **BIG THANK YOU** to the Wizards who created them.
+这些指南都很好，我们推荐您阅读所有的指南，**十分感谢**创建这些指南的巫师们。
 
-You are amazing! 🪄
+你们真了不起！🪄
 
-## The general process for surfacing data with Dune
+## 用 Dune 调取数据的一般流程
 
-1. **Compile a List of all relevant contracts and submit them for** [**decoding**](../decoding-contracts.md)**.**
-2. **Surface the data using SQL queries**
-3. **Visualize the results**
-4. **Assemble Visualizations on a Dashboard.**
-5. **Make the Dashboard pretty**
-6. **Enjoy your data**
-
+1. **整理一份所有相关合约的清单，并提交进行**[**解码**](../decoding-contracts.md)**。**
+2. **使用 SQL 查询调取数据**
+3. **将结果可视化**
+4. **在看板上组装可视化内容**
+5. **修饰看板**
+6. **享用您的数据**
 
 === "PostgreSQL"
 
@@ -66,25 +65,25 @@ You are amazing! 🪄
 
     * [Buid Ethereum Metrics Dashboard](https://www.twigblock.com/projects/eth-intro-dune/t/eit-overview)
 
-## OurNetwork Course
+## OurNetwork 课程
 
 !!! note
-    This course is based on Dune's V1 engine. Much of the content is still applicable, but the SQL dialect and some table names have changed in Dune V2.
+    本课程是基于 Dune V1 引擎的。大部分内容仍然适用，但在 Dune V2 中，SQL 用语和一些数据表的名称已经改变。
 
-In collaboration with the Dune Team and Community, our friends at OurNetwork created a course with an ambitious goal: teach 30 people web3 data analytics in 30 days.
+在与 Dune 团队和社区的合作中，我们在 OurNetwork 的朋友创建了一个课程，有一个雄心勃勃的目标：在 30 天内教会 30 个人 web3 数据分析。
 
-Hosted by some of our community's top Wizards, you can now access the presentations for free!
+由我们社区的一些顶级巫师主理，您现在可以免费获得这些演示文稿了！
 
-As it covers all of the important topics you'll need to know to effectively analyze blockchain data and become a full-fledged Dune Wizard, it's one of the best places to start your Dune Journey.
+由于它涵盖了您需要知道的所有重要主题，以有效地分析区块链数据并成为一个成熟的 Dune 巫师，它是开始您的 Dune 之旅的最佳地点之一。
 
-More details and all of the course materials can be found here:
+更多细节和所有的课程材料可以在此找到：
 
 <div class="cards grid" markdown>
-- [OurNetwork Course](https://ournetwork.mirror.xyz/gP16wLY-9BA1E_ZuOSv1EUAgYGfK9mELNza8cfgMWPQ)
+- [OurNetwork 课程](https://ournetwork.mirror.xyz/gP16wLY-9BA1E_ZuOSv1EUAgYGfK9mELNza8cfgMWPQ)
 </div>
 
-Please consider buying an edition of the Mirror post to support the teachers of this course.
+请考虑购买一版 Mirror 以支持本课程的导师。
 
-Videos are also available on YouTube:
+视频也可在 YouTube 上看到：
 
 ![type:video](https://www.youtube.com/embed/yDSmTUrpdoQ)

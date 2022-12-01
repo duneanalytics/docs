@@ -70,7 +70,7 @@ Dune.com 应用程序的基本构成部分是：
 
 Dune 将区块链数据汇总到一个可以轻松查询的 SQL 数据库中。
 
-[查询](features/queries/index.md)是用来指定在我们的数据库中找到区块链的哪些数据并返回。
+[查询](getting-started/queries/index.md)是用来指定在我们的数据库中找到区块链的哪些数据并返回。
 
 也许您想知道 _今天发生的所有 Dex 交易_，或者 _今年铸造的稳定币的总价值_。不管是什么问题，探索答案都要从 Dune 查询开始！
 
@@ -80,13 +80,13 @@ Dune 将区块链数据汇总到一个可以轻松查询的 SQL 数据库中。
 
 区块链分析师（即 巫师 即你！）有几种方法可以开始运行查询：
 
-1. 最简单的方法是使用 Dune [_数据抽象（Abstractions）_](tables/abstractions.md) 来查询常用的数据表格。一些流行的数据抽象包括 `dex.trades`, `lending.borrow`，和 `stablecoin.transfer`。
+1. 最简单的方法是使用 Dune [_魔法_](reference/tables/spells.md)) 来查询常用的数据表格。一些流行的魔法包括 `dex.trades`, `lending.borrow`，和 `stablecoin.transfer`。
 2. 查询原始以太坊数据，如区块、日志和交易。
 3. 也可以查询中心化交易所的数据。如，您可以使用 `prices.usd` 来快速返回几乎所有加密资产的价格。
 
 ### 可视化
 
-以表格形式呈现的数据（行和列）可能难以阅读。[可视化](features/visualizations/index.md) 将查询的结果以一种清晰、精确和 _可视化_ 的方式呈现出来。
+以表格形式呈现的数据（行和列）可能难以阅读。[可视化](getting-started/visualizations/index.md) 将查询的结果以一种清晰、精确和 _可视化_ 的方式呈现出来。
 
 通过 Dune 可视化，您可以很容易地开始用您的数据讲述一个故事，通过这样的转换：
 
@@ -110,7 +110,7 @@ Dune 提供了各种可视化，您可以用它来直观地展示数据，包括
 
 ### 数据看板
 
-使用精心策划的可视化内容，聪明的区块链分析师（巫师！）可以通过 [Dune 数据看板](features/dashboards.md)讲述不同数据集合的故事。
+使用精心策划的可视化内容，聪明的区块链分析师（巫师！）可以通过 [Dune 数据看板](getting-started/dashboards.md)讲述不同数据集合的故事。
 
 例如，在下面看板中，[@hagaetc](https://dune.com/hagaetc) 创建的 [Dex Metrics](https://dune.com/hagaetc/dex-metrics)，在顶部可以清楚地看到 "DEX"（去中心化交易所）作为一个类别正在增长。在下面，访问者可以看到哪些 DEX 在交易量上最受欢迎，最后还可以看到一个堆叠的柱状图，显示随时间的变化。
 
@@ -130,6 +130,6 @@ Dune 提供了各种可视化，您可以用它来直观地展示数据，包括
 
 加入我们的[社区 Discord](https://discord.gg/BJBHFR6sdy)，从我们的团队和社区获得世界级的支持。
 
-查看我们的[活动日历](resources/events.md)，加入有趣的**现场活动**。
+查看我们的[活动日历](reference/events.md)，加入有趣的**现场活动**。
 
 如果您有任何反馈，无论是功能要求还是错误报告，请[在此](https://feedback.dune.com)提交。

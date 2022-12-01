@@ -104,7 +104,7 @@ Dune 包含了大量的已解析合约目录，这些合约是通过巫师提交
 
 如果合约已经被链上的区块浏览器验证过，您应该能在那里找到这些信息。
 
-[在此找到每个链的主要区块浏览器的列表](../resources/wizard-tools/blockchain-explorers.md)！
+[在此找到每个链的主要区块浏览器的列表](../reference/wizard-tools/blockchain-explorers.md)！
 
 #### 我如何提交代理合约？
 
@@ -119,7 +119,7 @@ Dune 包含了大量的已解析合约目录，这些合约是通过巫师提交
 
 当您提交代理合约的地址时，我们将尝试获取代理的合约名称和它所指向的实现地址，以获取实现合约的 ABI。
 
-如果我们找不到执行合约的 ABI，您需要使用[相关链的区块链浏览器](../resources/wizard-tools/blockchain-explorers.md)来找到它并且手动输入。
+如果我们找不到执行合约的 ABI，您需要使用[相关链的区块链浏览器](../reference/wizard-tools/blockchain-explorers.md)来找到它并且手动输入。
 
 #### 我如何重新提交一个合约？
 
