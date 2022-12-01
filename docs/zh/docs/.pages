@@ -1,0 +1,6 @@
+nav:
+- index.md
+- 入门: getting-started
+- 参考: reference
+- 魔法书: spellbook
+- API: api
