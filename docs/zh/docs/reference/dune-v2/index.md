@@ -11,7 +11,6 @@ description: Dune Engine V2 is an update to our Query engine that brings a new l
 
 - [**原始数据表**](../../reference/tables/v2/raw/index.md)
 - [**已解码数据表**](../../reference/tables/decoded.md)
-- [**Flashbots**](../../tables/v2/community/flashbots/index.md)
 - [**魔法**](../../reference/tables/spells.md)
 - [**社区数据表**](../../reference/tables/community.md)
 

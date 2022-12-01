@@ -97,7 +97,7 @@ group by 2,3
 
 处理每个市场数据的 SQL 代码是开源的，可在我们的 [github 存储库](https://github.com/duneanalytics/abstractions/tree/master/ethereum/nft/trades) 中找到。每个人都可以查看代码、提交拉取请求并提交代码以添加更多交易市场。
 
-另请阅读有关此主题的“[数据抽象](abstractions.md)”部分。
+另请阅读有关此主题的“[数据抽象](index.md)”部分。
 
 **数据表内容**
 
