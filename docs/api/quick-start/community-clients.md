@@ -22,7 +22,7 @@ pip install dune-client
 
 And if you want to learn more about how it's built and works, check out the client's [GitHub page here](https://github.com/cowprotocol/dune-client).
 
-## Cow Protocol Node.js Client
+## Cow Protocol Typescript Client
 
 [@bh2smith](https://dune.com/bh2smith) also built a [Node.js client you can find here](https://www.npmjs.com/package/@cowprotocol/ts-dune-client).
 
@@ -32,4 +32,8 @@ Install it like this:
 yarn add @cowprotocol/ts-dune-client
 ```
 
+## Dune Go Client
 
+Dune team member [@theedgeofrage](https://dune.com/theedgeofrage) built [a Go client you can find on GitHub here](https://github.com/duneanalytics/duneapi-client-go/).
+
+[There's also more advanced documentation here](https://pkg.go.dev/github.com/duneanalytics/duneapi-client-go).
