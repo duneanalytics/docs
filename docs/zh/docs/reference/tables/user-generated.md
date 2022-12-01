@@ -4,8 +4,8 @@
   dune_user_generated架构是是在我们的数据库中构建自己的视图、函数或表的简单方法。
 ---
 
-!!! 注意
-    V2现在尚未支持用户自制表。
+!!! note
+    V2 现在尚未支持用户自制表。
 
 **请注意，这些表不能保证数据的准确性，如果不是由您自己创建，请谨慎使用。**
 
@@ -15,9 +15,9 @@
 
 有几种方法可以利用Dune内部的视图和表，使在Dune上处理数据更加容易。
 
-您自己的表、视图和函数在Dune上创建内容时都起着重要作用，如果正确使用，可以使仪表盘和查询的维护更容易。
+您自己的表、视图和函数在Dune上创建内容时都起着重要作用，如果正确使用，可以使看板和查询的维护更容易。
 
-如果您不熟悉表、视图、物化视图和函数，请参阅 [pgSQL文档](https://www.postgresqltutorial.com/postgresql-views) 或查看我们的[入门指南](../getting-started/index.md).
+如果您不熟悉表、视图、物化视图和函数，请参阅 [pgSQL 文档](https://www.postgresqltutorial.com/postgresql-views) 或查看我们的[入门指南](../../getting-started/index.md).
 
 ### 存储信息
 
@@ -51,7 +51,7 @@ CREATE OR REPLACE VIEW dune_user_generated.view_test (symbol, contract_address, 
 
 利用这一点将使仪表板的维护变得更加容易，因为您只需更改 **dune\_user\_generated** 视图，而不必逐一查看所有查询。
 
-这方面的一个很好的例子是[这个仪表板](https://dune.com/keeganead/cryptoart\_1)。创建者在**dune\_user\_generated**模式中创建了一个基本数据集，并使用该数据集作为所有查询的基础。
+这方面的一个很好的例子是[这个看板](https://dune.com/keeganead/cryptoart\_1)。创建者在**dune\_user\_generated**模式中创建了一个基本数据集，并使用该数据集作为所有查询的基础。
 
 请注意，虽然这种方法适用于大多数情况，但视图的计算成本可能非常高，您最好在我们的 [Spells](spells.md) 中构造一个具体的视图或数据表。
 

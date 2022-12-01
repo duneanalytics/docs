@@ -150,7 +150,7 @@ Select avg(gas_used) from ethereum.transactions
 
 **经验：** 跨大量逻辑行查询数据现在更加高效，并且许多以前由于超时而完全不可能的查询现在已经可以正常执行。
 
- [hildobby's](https://twitter.com/hildobby\_) [Ethereum Overview](https://dune.com/hildobby/Ethereum-Overview) 仪表盘就是这一点的很好的例子， 这是一个以前不可能实现的数据处理水平。
+ [hildobby's](https://twitter.com/hildobby\_) [Ethereum Overview](https://dune.com/hildobby/Ethereum-Overview) 看板就是这一点的很好的例子， 这是一个以前不可能实现的数据处理水平。
 
 ### 结束语
 

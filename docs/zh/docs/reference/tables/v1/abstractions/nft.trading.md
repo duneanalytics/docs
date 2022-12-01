@@ -4,11 +4,11 @@
   NFT交易表 将跨多个 NFT 平台的数据聚合到一张简单的表格中。
 ---
 
-# NFT交易表（nft.trades）
+# NFT 交易表（nft.trades）
 
 ## **一种查询 NFT 数据的简单方法**
 
-NFT交易表（nft.trades）旨在让 Dune 上的每个人都能轻松获得 NFT 交易数据。该表将不同数据平台之间的数据聚合和标准化，并在同一张表中提供辅助信息和元数据。
+NFT 交易表（`nft.trades`）旨在让 Dune 上的每个人都能轻松获得 NFT 交易数据。该表将不同数据平台之间的数据聚合和标准化，并在同一张表中提供辅助信息和元数据。
 
 最重要的是使用该数据集，让在所有索引平台上查询任何与 NFT 相关的交易数据变得非常容易。
 
@@ -25,7 +25,7 @@ NFT交易表（nft.trades）旨在让 Dune 上的每个人都能轻松获得 NFT
 
 * [**给定 NFT 的所有交易**](https://dune.xyz/queries/146090)
 
-![](<../../.gitbook/assets/image (31).png>)
+![NFT](images/nft.png)
 
 ```sql
 select * from nft.trades 
@@ -79,15 +79,15 @@ group by 2,3
 
 在最新版本的 `nft.trades` 中，如果销售许可费(royalty fees)的原始金额，美元金额以及百分比的信息在数据库中存在，那么检索时是一并提供的。版税归创作者所有，平台费用由 NFT 平台收取。请注意，版税费用并非总是能检索，所以默认设置为 null。
 
-### **示例仪表盘**
+### **示例看板**
 
-**利用参数的仪表盘**
+**利用参数的看板**
 
 [**https://dune.xyz/0xBoxer/NFT**](https://dune.xyz/0xBoxer/NFT)
 
 [**https://dune.xyz/rantum/NFT-Sales-Overview-by-Project**](https://dune.xyz/rantum/NFT-Sales-Overview-by-Project)
 
-**涵盖整个生态系统的仪表盘**
+**涵盖整个生态系统的看板**
 
 [**https://dune.xyz/rantum/NFT-Collection-Dashboard**](https://dune.xyz/rantum/NFT-Collection-Dashboard)
 
@@ -97,7 +97,7 @@ group by 2,3
 
 处理每个市场数据的 SQL 代码是开源的，可在我们的 [github 存储库](https://github.com/duneanalytics/abstractions/tree/master/ethereum/nft/trades) 中找到。每个人都可以查看代码、提交拉取请求并提交代码以添加更多交易市场。
 
-另请阅读有关此主题的“[抽象表](abstractions.md)”部分。
+另请阅读有关此主题的“[数据抽象](abstractions.md)”部分。
 
 **数据表内容**
 

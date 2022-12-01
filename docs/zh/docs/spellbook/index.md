@@ -1,15 +1,15 @@
 ---
-title: 魔法书（Spellbook）
+title: 魔法书
 ---
 
-**魔法书（Spellbook）是一个由Dune社区共同建设的数据转换层项目。**
+**[魔法书](http://github.com/duneanalytics/spellbook)（Spellbook）是一个由 Dune 社区共同建设的数据转换层。**
 
 魔法（Spell）可以用来构建高级抽象表格，魔法可以用来查询诸如 NFT 交易表等常用概念数据。您可以用 SQL 来编写魔法，并使用 [Jinja2](https://jinja.palletsprojects.com/)（一种 Python 模板语言）进行包装。
 
 魔法书项目可自动构建并维护这些表格，且对其数据质量进行检测。 我们社区中的任何人都可以贡献魔法书中的魔法，无论是添加新的交易数据查询或是编写全新的魔法。
 
-!!! 请注意
-    魔法书目前仅在我们的 Dune V2 引擎上可用。有关 Dune V1 引擎中的数据抽象，请参阅[数据抽象](../tables/v1/abstractions/index.md)。
+!!! note
+    魔法书目前仅在我们的 Dune V2 引擎上可用。有关 Dune V1 引擎中的数据抽象，请参阅[数据抽象](../reference/tables/v1/abstractions/index.md)。
 
 ## 新功能解锁
 
@@ -36,3 +36,23 @@ dbt 原生支持对模型依赖关系的理解。在我们旧的数据抽象中�
 ![Dependency graph created by dbt showing erc20 daily balances dependency tree](images/dbt-erc20-dependency-graph.jpg)
 
 希望您和我们一样对这个新工具（魔法书）感到兴奋。魔法书现已在生产环境中上线，我们欢迎大家一起来共同编写魔法书。
+
+## Getting Started
+
+To get a better sense of what Spells are already available to you, check out our Spellbook Model Docs:
+
+<div class="cards grid" markdown>
+- [Spellbook Model Docs](spellbook-model-docs.md)
+</div>
+
+To take a look under the hood, check out Spellbook on GitHub:
+
+<div class="cards grid" markdown>
+- [Spellbook on GitHub](https://github.com/duneanalytics/spellbook)
+</div>
+
+To learn how to build your own Spells, check out our Getting Started section here:
+
+<div class="cards grid" markdown>
+- [Spellbook Getting Started Guide](getting-started/index.md)
+</div>
