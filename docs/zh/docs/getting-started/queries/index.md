@@ -17,9 +17,9 @@ description: 查询是 Dune 魔法的核心。让我们来探索它们是如何�
 
 这将带您进入查询编辑器，在那里您可以创建 Dune 查询。查询编辑器是由三个部分组成的：
 
-- 左侧的[**数据浏览器**](../../features/queries/data-explorer.md)
-- 右侧的[**查询窗口**](../../features/queries/query-window.md)
-- 底部的[**查询结果**](../../features/queries/query-results.md)
+- 左侧的[**数据浏览器**](data-explorer.md)
+- 右侧的[**查询窗口**](query-window.md)
+- 底部的[**查询结果**](query-results.md)
 
 ![Query editor](images/query-editor.png)
 
@@ -29,7 +29,7 @@ description: 查询是 Dune 魔法的核心。让我们来探索它们是如何�
 
 让我们在下方的页面中更详细地了解查询编辑器的每一部分：
 <div class="cards grid" markdown>
-- [1. 数据浏览器](../../features/queries/data-explorer.md)
-- [2. 查询窗口](../../features/queries/query-window.md)
-- [3. 查询结果](../../features/queries/query-results.md)
+- [1. 数据浏览器](data-explorer.md)
+- [2. 查询窗口](query-window.md)
+- [3. 查询结果](query-results.md)
 </div>

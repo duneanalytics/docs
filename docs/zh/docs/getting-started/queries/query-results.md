@@ -16,7 +16,7 @@ description: The Query Results section is where you can see the data your Query 
 在您的结果表上方，您会发现：
   
   1. "Query Results"【查询结果】标签页；如果您做了更多的可视化内容，它们会作为标签页出现在这个标签页旁。
-  2. <span class="fk-btn-2">New Visualization</span>【新可视化】按钮，使您通过查询数据制作新的[可视化](../../features/visualizations/) 内容。
+  2. <span class="fk-btn-2">New Visualization</span>【新可视化】按钮，使您通过查询数据制作新的[可视化](../visualizations) 内容。
   3. "Last run"【上次运行】和 "Last run took"【上次运行时长】让您知道您的结果数据有多新鲜，以及您再次运行可能需要的时间的参考点（可能更多或更少，取决于您如何修改您的查询）。
   4. <span class="fk-btn-1">Run</span>【运行】按钮（让您在修改查询后重新运行您的查询）。
 
@@ -28,7 +28,7 @@ description: The Query Results section is where you can see the data your Query 
 
 ![a wild save button appears](images/a-wild-save-button-appears.png)
 
-点击它可以看到一个弹出窗口，要求您给您的查询命名，并可以选择将这个查询设为私人查询（*~如果~*您是 [Dune Pro](../../features/pro.md) 的用户）：
+点击它可以看到一个弹出窗口，要求您给您的查询命名，并可以选择将这个查询设为私人查询（*~如果~*您是 [Dune Pro](../../reference/pro.md) 的用户）：
 
 ![first time saving query example](images/first-time-saving-query-popup.png)
 
@@ -67,7 +67,7 @@ description: The Query Results section is where you can see the data your Query 
 
 我们这有什么？👀
 
-1. <span class="fk-btn-3">Add to dashboard</span>【添加到看板】按钮在您[保存您的查询](#saving-your-query)之前不会起作用。在这里了解更多关于[制作看板](../../features/dashboards.md)的信息。
+1. <span class="fk-btn-3">Add to dashboard</span>【添加到看板】按钮在您[保存您的查询](#saving-your-query)之前不会起作用。在这里了解更多关于[制作看板](../dashboards.md)的信息。
 2. 一个改变您数据表标题的栏目。
 3. 针对您每一栏的设置。
 
@@ -95,4 +95,4 @@ description: The Query Results section is where you can see the data your Query 
 
 要把查询结果做成可视化，首先要做的是，您猜对了，就是猛按下 <span class="fk-btn-2">New Visualization</span>  按钮 (如果您愿意，正常的点击也是可以的）。
 
-然后查看我们的[可视化](../../features/visualizations/)文档，学习如何创造 📊 奇迹！
+然后查看我们的[可视化](../visualizations)文档，学习如何创造 📊 奇迹！

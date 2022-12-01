@@ -15,7 +15,7 @@ title: 行业看板
 
 它们一起使您很容易比较不同的 DEX 的表现，并评估整个行业的表现。
 
-所有这些统计数据和图表都是实时更新的，并由社区维护；如果一个新的 DEX 想被添加到这个看板中，他们所要做的就是把他们的代码提交到我们的公共 GitHub 上。更多内容请见 [Abstractions](../../tables/abstractions.md)。
+所有这些统计数据和图表都是实时更新的，并由社区维护；如果一个新的 DEX 想被添加到这个看板中，他们所要做的就是把他们的代码提交到我们的公共 GitHub 上。更多内容请见[魔法](../../reference/tables/spells.md)。
 
 ![DEX weekly](images/dex-weekly.png)
 

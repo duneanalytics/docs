@@ -3,7 +3,7 @@ title: 数据浏览器
 description: 数据浏览器允许您搜索区块链和其他数据，以便在您的查询中使用。下面是它的工作原理。
 ---
 
-数据浏览器使您能够搜索区块链和其他数据，以便在您的查询中使用（在[数据表部分](../../tables/index.md)了解 Dune 提供的所有数据）。
+数据浏览器使您能够搜索区块链和其他数据，以便在您的查询中使用（在[数据表部分](../../reference/tables/index.md)了解 Dune 提供的所有数据）。
 
 ![the dune data explorer](images/dune-data-explorer-close-up.png)
 
@@ -13,7 +13,7 @@ description: 数据浏览器允许您搜索区块链和其他数据，以便在�
 
 然后只需在顶部的搜索栏中输入任何关键词、协议名称、合约名称或事件名称。
 
-这将带来一个包含区块链数据的[数据表](../../tables/index.md)列表，您可以将其用于您的查询！🧙
+这将带来一个包含区块链数据的[数据表](../../reference/tables/index.md)列表，您可以将其用于您的查询！🧙
 
 ## 使用数据浏览器搜索
 
@@ -42,10 +42,10 @@ description: 数据浏览器允许您搜索区块链和其他数据，以便在�
 
     在这里您会发现一个搜索栏，可以搜索 Dune V2 里面的所有数据和 4 个不同类别的数据集：
 
-    1. [**原始**](../../tables/raw.md) —— 就像它听起来那样，直接来自区块链的原始数据
-    2. [**已解析项目**](../../tables/decoded.md) —— Dune 团队和社区的项目的合约调用和事件已被整理成不错的人类可读的数据表
-    3. [**魔法**](../../tables/abstractions.md) —— 标准化的项目和行业数据 (dex.trades, nft.trades, erc20.stablecoins, 等)
-    4. [**社区**](../../tables/community.md) —— 由 web3 社区提供的链下数据
+    1. [**原始**](../../reference/tables/raw.md) —— 就像它听起来那样，直接来自区块链的原始数据
+    2. [**已解析项目**](../../reference/tables/decoded.md) —— Dune 团队和社区的项目的合约调用和事件已被整理成不错的人类可读的数据表
+    3. [**魔法**](../../reference/tables/spells.md) —— 标准化的项目和行业数据 (dex.trades, nft.trades, erc20.stablecoins, 等)
+    4. [**社区**](../../reference/tables/community.md) —— 由 web3 社区提供的链下数据
 
     ![v2 search dataset categories](images/v2-data-categories.png)
     

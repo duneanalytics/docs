@@ -28,7 +28,7 @@ API 确实支持查询参数!
 
 对于包含参数的 Dune 查询，你可以将参数作为 Dune 查询的一部分来传递 [执行查询ID的接入点](../../api/api-reference/execute-query-id.md)!
 
-更多内容请见 [创建带参数的 Dune 查询](../../features/parameters.md).
+更多内容请见 [创建带参数的 Dune 查询](../../getting-started/queries/parameters.md).
 
 了解如何使用 [cURL](../../api/api-reference/execute-query-id.md#curl-with-parameters) 传递参数，以及 [Python](../../api/quick-start/api-py.md#parameterized-queries)。
 

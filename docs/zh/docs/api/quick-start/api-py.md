@@ -68,7 +68,7 @@ def make_api_url(module, action, ID):
 
 ## 用函数包裹API访问域名（endpoints）
 
-Dune API 目前有四个主要的访问域名，在 [API参考](.../api-reference/authentication.md) 部分有详细介绍。我们这里用一些函数进行包装，从而使得调用 Dune API 像挥动魔法棒 🪄 一样简单：
+Dune API 目前有四个主要的访问域名，在 [API参考](../api-reference/authentication.md) 部分有详细介绍。我们这里用一些函数进行包装，从而使得调用 Dune API 像挥动魔法棒 🪄 一样简单：
 
 ``` py
 def execute_query(query_id):
@@ -148,7 +148,7 @@ execution_id = execute_query("1258228")
 
 ### 获取查询的执行状态
 
-要获取 [查询执行状态](.../api-reference/execution-status.md)，从前面 `execute_query` 函数提取返回的 `execution_id`，然后将其传递给`get_query_status` 函数，如下所示：
+要获取 [查询执行状态](../api-reference/execution-status.md)，从前面 `execute_query` 函数提取返回的 `execution_id`，然后将其传递给`get_query_status` 函数，如下所示：
 
 #### 函数调用
 
