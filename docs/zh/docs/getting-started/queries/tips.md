@@ -55,7 +55,7 @@ FROM projectname.”contratName_evt_eventName”
 WHERE contract_address = '\x6B175474E89094C44Da98b954EedeAC495271d0F'
 LIMIT 10
 ```
-图式在 Dune 中总是小写的。
+架构在 Dune 中总是小写的。
 
 ## 移除小数
 

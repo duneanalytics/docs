@@ -1,4 +1,8 @@
 nav:
-- 魔法书（Spellbook）: index.md
-- 魔法书入门: getting-started
-- 魔法书示例: examples
+- index.md
+- spellbook-model-docs.md
+- 入门: getting-started
+- 如何施法: how-to-cast-a-spell
+- 教程: how-to-guides
+- 示例: examples
+- ...
