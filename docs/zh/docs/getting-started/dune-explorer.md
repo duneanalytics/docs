@@ -1,5 +1,5 @@
 ---
-title: Dune 探索者
+title: Dune 浏览器
 description: Here's a quick overview of the Dune Explorer!
 ---
 
@@ -13,7 +13,7 @@ You'll also see tabs at the top for Queries, Wizards, and Teams.
 
 ## Dashboards
 
-![dune explorer home](images/dune-explorer-home.png)
+![dune explorer home](../reference/images/dune-explorer-home.png)
 
 By default, [Dashboard Explorer](https://dune.com/browse/dashboards) shows Dashboards that have been Trending (getting a lot of stars) in the last 4 hours.
 
@@ -28,11 +28,11 @@ And we can filter this list by:
 1. Using the "Search for dashboards" text field to find dashboards by keyword.
 2. Click on one of the "Popular dashboard tags" to see dashboards with that tag.
 
-Learn how to [build your own Dashboards here](../getting-started/dashboards.md).
+Learn how to [build your own Dashboards here](dashboards.md).
 
 ## Queries
 
-![queries explorer](images/queries-explorer.png)
+![queries explorer](../reference/images/queries-explorer.png)
 
 By default, [Queries Explorer](https://dune.com/browse/queries) shows Queries that have gotten the most stars in the last 7 days.
 
@@ -46,27 +46,27 @@ And we can filter this list by:
 1. Using the "Search for queries" text field to find dashboards by keyword.
 2. Click on one of the "Popular query tags" to see dashboards with that tag.
 
-[Learn more about making Queries here](../getting-started/query-quick-start/index.md).
+[Learn more about making Queries here](query-quick-start/index.md).
 
 ## Wizards
 
-![wizards explorer](images/wizards-explorer.png)
+![wizards explorer](../reference/images/wizards-explorer.png)
 
 By default, [Wizards Explorer](https://dune.com/browse/users) shows Wizards that have the most stars.
 
 Use the right sidebar to search for a specific Wizard.
 
-And become a Wizard yourself with our [Query Quick Start here](../getting-started/query-quick-start/index.md)! 🧙
+And become a Wizard yourself with our [Query Quick Start here](query-quick-start/index.md)! 🧙
 
 ## Teams
 
-![teams explorer](images/teams-explorer.png)
+![teams explorer](../reference/images/teams-explorer.png)
 
 By default, [Teams Explorer](https://dune.com/browse/users) shows Teams that have the most stars.
 
 Use the right sidebar to search for a specific Team.
 
-[Learn more about Teams here](../getting-started/teams.md)!
+[Learn more about Teams here](teams.md)!
 
 
 

@@ -13,6 +13,11 @@ description: The Query Results section is where you can see the data your Query 
 
 ![query results example](images/query-results.png)
 
+!!! warning
+    Queries run on the database you've currently selected in the Data Explorer dropdown. EG if you run a Query that uses Dune V1 Ethereum data, it will fail to run if you select another V1 Blockchain dataset or Dune V2:
+    
+    ![query failed when switching data sets](images/query-failed-switching-datasets.gif)
+
 在您的结果表上方，您会发现：
   
   1. "Query Results"【查询结果】标签页；如果您做了更多的可视化内容，它们会作为标签页出现在这个标签页旁。

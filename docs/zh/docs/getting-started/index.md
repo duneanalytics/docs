@@ -1,5 +1,6 @@
 ---
 title: 入门
+description: Getting Started is the place to get oriented and learn how to use Dune!
 ---
 
 ## Dune 是为技术性和非技术性用户制作的。
@@ -8,7 +9,7 @@ title: 入门
 
 在我们社区的帮助下，我们已经创建了很多有用的指南和工具，以帮助您成为一位成熟的 Dune 巫师。
 
-开始使用 Dune 的绝对最快的方法是跟随我们的[入门视频系列](video-series.md)，并在这里查看我们的[入门看板](https://dune.com/dune/get-started)。
+开始使用 Dune 的绝对最快的方法是跟随我们的[入门视频系列](guides/video-tutorial.md)，并在这里查看我们的[入门看板](https://dune.com/dune/get-started)。
 
 接下来是否要深入取决于您是否：
 

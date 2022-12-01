@@ -1,20 +1,13 @@
 nav:
 - index.md
-- Query Quick Start: query-quick-start
-- queries
-- visualizations
+- 查询入门: query-quick-start
+- 查询: queries
+- 可视化: visualizations
 - dashboards.md
 - embeds.md
+- dune-explorer.md
 - decoding-contracts.md
 - teams.md
-- guides
+- 教程: guides
 - 用例: use-cases
 - ...
-
-
-
-
-
-
-
-

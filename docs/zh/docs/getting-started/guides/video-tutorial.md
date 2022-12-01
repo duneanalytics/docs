@@ -7,11 +7,11 @@ title: 视频教程
 
 我们已经制作了一个视频教程系列，请参阅以下系列，或关注我们的 [Youtube 频道](https://www.youtube.com/playlist?list=PLK3b5d4iK10ext4v-GBySekaA8-GP8quD).
 
-## ⚡ Dune 5 分钟极速概述
+## Dune 5 分钟 ⚡ 极速介绍
 
 ![type:video](https://www.youtube.com/embed/S-cctFmR828)
 
-## 系列教程概述
+## 系列教程介绍
 
 ![type:video](https://www.youtube.com/embed/USTIesVPk68)
 
@@ -19,7 +19,7 @@ title: 视频教程
 
 ![type:video](https://www.youtube.com/embed/IHC8HAZvw_Q)
 
-## 第 2 集：Dune 数据库是如何运作的
+## 第 2 集：Dune 数据库如何运作
 
 ![type:video](https://www.youtube.com/embed/UDu23Eyvo_Y)
 
