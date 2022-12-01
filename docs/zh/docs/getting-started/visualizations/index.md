@@ -3,7 +3,7 @@ title: 可视化
 description: 可视化让您的数据变得生动起来！以下是您需要知道的创造 ✨ 的方法
 ---
 
-随着您通过[查询](../../features/queries/)收集和组织区块链数据，现在是时候用可视化增加一点 ✨ 了。
+随着您通过[查询](../../getting-started/queries)收集和组织区块链数据，现在是时候用可视化增加一点 ✨ 了。
 
 有了 Dune，您有多种方法可以将您的查询数据转化为可视化数据：
 
@@ -20,7 +20,7 @@ description: 可视化让您的数据变得生动起来！以下是您需要知�
 * 计数器
 * 数据表
 
-以一种周到的方式将这些结合起来，使您能够将您的数据通过[数据看板](../../features/dashboards.md)和[嵌入](../sharing/embeds/index.md)以最好的方式传达给您的受众。
+以一种周到的方式将这些结合起来，使您能够将您的数据通过[数据看板](../dashboards.md)和[嵌入](../embeds.md)以最好的方式传达给您的受众。
 
 ## 创建可视化内容
 
@@ -47,7 +47,7 @@ description: 可视化让您的数据变得生动起来！以下是您需要知�
 
 ## 分享可视化
 
-当您创建了一个满意的可视化，您可以在[数据看板](../dashboards.md)上与他人分享，或使用[嵌入](../sharing/embeds/index.md)功能将其嵌入另一个网站上。
+当您创建了一个满意的可视化，您可以在[数据看板](../dashboards.md)上与他人分享，或使用[嵌入](../embeds.md)功能将其嵌入另一个网站上。
 
 ### 将可视化添加至看板
 
@@ -82,6 +82,6 @@ description: 可视化让您的数据变得生动起来！以下是您需要知�
 
 ### 创建可视化嵌入
 
-要从您的可视化中创建一个[嵌入](../sharing/embeds/index.md)，首先选择您希望嵌入的可视化内容，然后点击[数据浏览器](../../features/queries/data-explorer.md)上方的 <span class="fk-btn-3">Embed</span> 按钮：
+要从您的可视化中创建一个[嵌入](../embeds.md)，首先选择您希望嵌入的可视化内容，然后点击[数据浏览器](../../getting-started/queries/data-explorer.md)上方的 <span class="fk-btn-3">Embed</span> 按钮：
 
 ![embed visualization demo](images/embed-visualization-demo.gif)

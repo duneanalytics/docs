@@ -10,7 +10,7 @@ Dune 是一个区块链数据分析平台，为几个不同的群体服务：
 
 - **Dune 旁观者** 可以通过 Dune.com 上的看板查看各种链上数据，使其变得有趣和可理解。
 
-- **Dune 巫师** 是魔术师，他们利用 Dune 平台获取的原始数据，通过[数据看板](../../features/dashboards.md)、[可视化](../../features/visualizations/index.md)和[查询](../../features/queries/index.md)来讲述故事。
+- **Dune 巫师** 是魔术师，他们利用 Dune 平台获取的原始数据，通过[数据看板](../dashboards.md)、[可视化](../visualizations/index.md)和[查询](../queries/index.md)来讲述故事。
 
 - **Dune 赞助者** 包括加密社区、协议和公司，他们在 Dune 巫师的帮助下，利用 Dune 的力量来解决问题，并在其组织内分享见解。
 
