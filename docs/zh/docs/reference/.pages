@@ -1,11 +1,14 @@
 nav:
 - index.md
-- events.md
+- v1-sunsetting.md
 - support-feedback.md
-- wizard-tools.md
-- wizard-request-program.md
 - Dune V2: dune-v2
-- 常问问题: faq
 - 数据表: tables
+- explorer-labels.md
+- 常问问题: faq
 - 巫师工具: wizard-tools
+- dune-bounties.md
+- events.md
+- pricing.md
+- recommended-reading.md
 - ...
