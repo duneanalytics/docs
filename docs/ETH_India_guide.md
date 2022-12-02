@@ -1,5 +1,5 @@
 ---
-title: Eth India Hacker Guide
+title: ETHIndia Hacker Guide
 description: Welcome to the Dune API ETH-India Hackers! Get started here.
 ---
 
@@ -9,7 +9,7 @@ Hello hackers, welcome to the wonderful world of Dune, we're excited to see what
 
 To get started building on our API, [first create a Dune account here](https://dune.com/auth/register) (if you don't already have one 🧙).
 
-[Then fill out this form](https://forms.gle/JgToag62ZGY58nBh6) and we'll send you an API key as soon as we can (stop by our booth and bug us if you're waiting too long 🪄).
+[Then fill out this form](https://docs.google.com/forms/d/e/1FAIpQLScsUu7GHAyWYYwlUMULcS4RZbYnY7FmwMoNu_KA4sde61utSQ/viewform) and we'll send you an API key as soon as we can (stop by our booth and bug us if you're waiting too long 🪄).
 
 ## Important Links
 
