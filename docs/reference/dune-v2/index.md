@@ -9,16 +9,16 @@ It leverages **[Apache Spark SQL](https://spark.apache.org/docs/latest/sql-progr
 
 All of the data sources contained in this section are available for querying with the new Query engine today. We currently have the following data available in V2:
 
-- [**Raw tables**](../../reference/tables/v2/raw/index.md)
-- [**Decoded projects**](../../reference/tables/decoded.md)
-- [**Spells**](../../reference/tables/spells.md)
-- [**Community Tables**](../../reference/tables/community.md)
+- [**Raw tables**](../tables/raw/index.md)
+- [**Decoded projects**](../tables/decoded/index.md)
+- [**Spells**](../tables/spells/index.md)
+- [**Community Tables**](../tables/community/index.md)
 
 ## New Query engine
 
 Dune V2 changes our entire database architecture. We are transitioning away from a PostgresQL database to an Instance of Apache Spark hosted on Databricks. The difference between the two systems can be summarized as follows:
 
-* Instead of PostgresQL, we will now use Databricks SQL. The change in SQL keywords is minimal but might be relevant for some of your querying habits.
+* Instead of PostgresQL, we will now use Spark SQL. The change in SQL keywords is minimal but might be relevant for some of your querying habits.
 * Spark is a column oriented database in contrast to PostgresQL’s row oriented approach.
 * traditional indexes are replaced by column chunk level `min/max` values
 

@@ -209,17 +209,17 @@ description: 数据浏览器允许您搜索区块链和其他数据，以便在�
 
     ![multi keyword search](images/multi-keyword-search.gif)
 
-    ### 寻找特定图式
+    ### 寻找特定架构
 
-    搜索 `uniswap_v2.` 就会出现所有特定与 `uniswap_v2` 图式相关的数据表。
+    搜索 `uniswap_v2.` 就会出现所有特定与 `uniswap_v2` 架构相关的数据表。
 
-    在 Dune 的 V1 引擎中，在末端添加 "."，说明您在寻找这个确切的数据表的图式中的数据。如果没有 "."，您也会找到很多数据，包括引用，在这个例子中，`uniswap_v2.`。    
+    在 Dune 的 V1 引擎中，在末端添加 "."，说明您在寻找这个确切的数据表的架构中的数据。如果没有 "."，您也会找到很多数据，包括引用，在这个例子中，`uniswap_v2.`。    
 
     ![data explorer specific schema example](images/data-explorer-search-example-1.gif)
 
     ### 寻找事件、调用或合约
 
-    搜索 `uniswap_v2. evt` 就只会出现所有与 `uniswap_v2` 图式相关的事件表。
+    搜索 `uniswap_v2. evt` 就只会出现所有与 `uniswap_v2` 架构相关的事件表。
 
     同理，`call` 会调取调用，并且搜索一个特定的 `{{contractName}}` 会带出该合约的所有数据。
 

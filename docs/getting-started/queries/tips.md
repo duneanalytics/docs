@@ -5,11 +5,11 @@ description: Below you'll find a selection of Query related tips to help you bec
 
 Below you'll find a selection of Query related tips to help you become a more powerful 🧙.
 
-If you have a tip you think we should add, [propose a change on this doc in our GitHub repository](https://github.com/duneanalytics/docs/edit/master/docs/features/queries/tips.md)!
+If you have a tip you think we should add, [propose a change on this doc in our GitHub repository](https://github.com/duneanalytics/docs/blob/master/docs/getting-started/queries/tips.md)!
 
 ## Use Spells
 
-The easiest way to do great analysis with Dune is to use the well-organized data you'll find in [Spells](../../reference/tables/spells.md) (Dune V2) and [Abstractions](../../reference/tables/v1/abstractions/index.md) (Dune V1).
+The easiest way to do great analysis with Dune is to use the well-organized data you'll find in [Spells](../../reference/tables/spells/index.md) (Dune V2) and [Abstractions](../../reference/tables/spells/index.md) (Dune V1).
 
 Theses tables, like `dex.trades`, are cleaned and contain data/metadata (like human readable token symbols) that make them very straight forward to query.
 
@@ -70,7 +70,7 @@ To transmute these into a more human-friendly form, use the `erc20.tokens` table
     transfer_value / 10^erc20.tokens.decimals
     ```
 
-=== "Databricks SQL"
+=== "Spark SQL"
 
     ```sql
     transfer_value / x*power(10,y)` or `transfer_value / x*1e*y
@@ -78,7 +78,7 @@ To transmute these into a more human-friendly form, use the `erc20.tokens` table
 
 ## Get time with `date_trunc`
 
-We’ve added `evt_block_time` to [decoded event tables](../../reference/tables/decoded.md) for your convenience. 
+We’ve added `evt_block_time` to [decoded event tables](../../reference/tables/decoded/index.md) for your convenience. 
 
 A neat way to use it is with the `date_trunc` function like this:
 
@@ -112,7 +112,7 @@ To do this, `JOIN` the table `erc20.tokens` with your event table where `asset` 
 
     **NB** The `erc20.tokens` table contains a selection of popular tokens. If you are working with more obscure tokens you should be careful with joining with this table because tokens that are not in the coincap table might be excluded from your results.
 
-=== "Databricks SQL"
+=== "Spark SQL"
 
     **NB** The `tokens_blockchain.erc20` table contains a selection of popular tokens. If you are working with more obscure tokens you should be careful with joining with this table because tokens that are not in the coincap table might be excluded from your results.
 

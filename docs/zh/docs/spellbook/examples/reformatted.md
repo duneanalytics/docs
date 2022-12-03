@@ -8,7 +8,7 @@ title: 重新更改格式的转账
 
 与源文件类似，模型被定义在 YAML 文件中。这是定义描述、测试和元数据等内容的地方。这也是我们追踪"贡献者"的地方。因此，为了确保您获得应有的影响力，请在编写或编辑魔法时添加您的名缀。然后您的贡献会被记入在[文档](https://spellbook-docs.dune.com/#!/overview)中。
 
-在 JINJA 配置块中，我们定义这个视图的别名是 `erc20`。如果没有这个别名，数据表名称将默认为文件名。这个视图的图式名称在魔法书项目根目录的 [dbt\_project.yml](https://github.com/duneanalytics/spellbook/blob/master/spellbook/dbt\_project.yml) 文件中定义。图式是由目录结构在那里定义的。考虑到当前的结构，这个视图的名称应该是 transfers\_ethereum.erc20。
+在 JINJA 配置块中，我们定义这个视图的别名是 `erc20`。如果没有这个别名，数据表名称将默认为文件名。这个视图的架构名称在魔法书项目根目录的 [dbt\_project.yml](https://github.com/duneanalytics/spellbook/blob/master/spellbook/dbt\_project.yml) 文件中定义。架构是由目录结构在那里定义的。考虑到当前的结构，这个视图的名称应该是 transfers\_ethereum.erc20。
 
 注意：我们基本上反对使用 SHOUT CASE（大写），那是 IDEs 用的。不许反对。
 

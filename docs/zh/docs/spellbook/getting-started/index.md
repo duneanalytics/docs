@@ -15,7 +15,7 @@ title: 魔法书入门
 - 引用您的[数据源](data-sources.md)，包括测试和新鲜度检查
 - 为您的魔法定义一个单元[测试](tests.md)
 - 用 Jinja templating 的 SQL select 语句[写下您的魔法](spells.md)
-- 在单独的一个 YAML 文件中写下一个图式
+- 在单独的一个 YAML 文件中写下一个架构
 
 要了解更多关于 DBT 的所有功能，请看他们的[文档](https://docs.getdbt.com/docs/introduction)。我们已经写了一些指南[例子](../examples/index.md)，用于创建 ERC20 的魔法。
 

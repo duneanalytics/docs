@@ -1,5 +1,5 @@
 ---
-title: Query Quick Start
+title: 查询入门
 description: Here's a short five-step guide to getting familiar with a protocol and figuring out how to query around it using Dune.
 ---
 

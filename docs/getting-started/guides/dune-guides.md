@@ -33,7 +33,7 @@ You are amazing! 🪄
 
     ### [Paul Pivat](https://dune.com/paulapivat) [:material-twitter:](https://twitter.com/paulapivat)
 
-    * [Lean foundational Ethereum topics with SQL](https://ethereum.org/en/developers/tutorials/learn-foundational-ethereum-topics-with-sql)
+    * [Learn foundational Ethereum topics with SQL](https://ethereum.org/en/developers/tutorials/learn-foundational-ethereum-topics-with-sql)
 
     ### [Alex Kroeger](https://dune.com/kroeger0x) [:material-twitter:](https://twitter.com/alex\_kroeger)
 
@@ -52,7 +52,7 @@ You are amazing! 🪄
     * [Build an Ethereum Metrics Dashboard](https://www.twigblock.com/projects/eth-intro-dune/t/eit-overview)
     * [Learn to Analyze Ethereum Gas Prices](https://www.twigblock.com/projects/eth-gas-analysis/t/eg-overview)
 
-=== "Databricks SQL"
+=== "Spark SQL"
 
     ### [0xPhilan](https://dune.com/phillan) [:material-twitter:](https://twitter.com/0xPhillan)
 
@@ -64,7 +64,7 @@ You are amazing! 🪄
 
     ### [Kirubakumaresh](https://twitter.com/kirubakumaresh)
 
-    * [Buid Ethereum Metrics Dashboard](https://www.twigblock.com/projects/eth-intro-dune/t/eit-overview)
+    * [Build Ethereum Metrics Dashboard](https://www.twigblock.com/projects/eth-intro-dune/t/eit-overview)
 
 ## OurNetwork Course
 

@@ -1,10 +1,10 @@
 ---
-title: Dune 指南
+title: Dune 教程
 ---
 
 我们一些最好的巫师社区成员为 Dune 制作了出色的书面教程。
 
-这些指南都很好，我们推荐您阅读所有的指南，**十分感谢**创建这些指南的巫师们。
+这些教程都很好，我们推荐您阅读所有的教程，**十分感谢**创建这些教程的巫师们。
 
 你们真了不起！🪄
 
@@ -70,7 +70,7 @@ title: Dune 指南
 !!! note
     本课程是基于 Dune V1 引擎的。大部分内容仍然适用，但在 Dune V2 中，SQL 用语和一些数据表的名称已经改变。
 
-在与 Dune 团队和社区的合作中，我们在 OurNetwork 的朋友创建了一个课程，有一个雄心勃勃的目标：在 30 天内教会 30 个人 web3 数据分析。
+在与 Dune 团队和社区的合作中，我们在 OurNetwork 的朋友创建了一个课程，且有一个雄心勃勃的目标：在 30 天内教会 30 个人 web3 数据分析。
 
 由我们社区的一些顶级巫师主理，您现在可以免费获得这些演示文稿了！
 
@@ -82,8 +82,8 @@ title: Dune 指南
 - [OurNetwork 课程](https://ournetwork.mirror.xyz/gP16wLY-9BA1E_ZuOSv1EUAgYGfK9mELNza8cfgMWPQ)
 </div>
 
-请考虑购买一版 Mirror 以支持本课程的导师。
+请考虑购买一版 Mirror 文章以支持本课程的教师。
 
-视频也可在 YouTube 上看到：
+视频也可以在 YouTube 上看到：
 
 ![type:video](https://www.youtube.com/embed/yDSmTUrpdoQ)

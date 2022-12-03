@@ -3,4 +3,6 @@ nav:
 - 数据浏览器: data-explorer.md
 - 查询窗口: query-window.md
 - 查询结果: query-results.md
+- 参数: parameters.md
 - 查询技巧: tips.md
+- ...

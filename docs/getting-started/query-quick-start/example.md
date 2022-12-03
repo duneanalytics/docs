@@ -71,7 +71,7 @@ Here we find an [`opensea_trades` table](https://dune.com/spellbook#!/model/mode
 
 Scrolling through the columns section we can see all the different data columns it has.
 
-Since this is a [Decoded Table](../../reference/tables/decoded.md), a lot of the labels - like `amount_usd` - make sense just by reading them.
+Since this is a [Decoded Table](../../reference/tables/decoded/index.md), a lot of the labels - like `amount_usd` - make sense just by reading them.
 
 For those that aren't so obvious - like `trade_type` - we can click to get a description:
 
@@ -100,7 +100,7 @@ And in this example, to make it easy on you, we've already decided to:
 
 As a beginner, if you don't already have an idea of what you want to build, exploring Dune data from the Query builder is a fun way to dive in.
 
-You can also use the [Dune Explorer](../../reference/dune-explorer.md) to see what others are building as well!
+You can also use the [Dune Explorer](../dune-explorer.md) to see what others are building as well!
 
 Though this might not lead you to building the next [DeFi users over time](https://dune.com/rchen8/defi-users-over-time) (created by [@richardchen](https://dune.com/rchen8)), it's a great way to learn more about using Dune as you can see what's possible and even fork existing Queries to modify further!
 
@@ -338,7 +338,7 @@ Then we'll update our title and x/y axis labels to make a nice, easy to understa
 
 ![type:video](https://dune.com/embeds/1424158/2432690/f66ae186-8d90-426b-bf80-b8fac9763343)
 
-Learn more about [formatting Visualizations here](../../features/queries/query-results/#formatting-results-tables)!
+Learn more about [formatting Visualizations here](../../getting-started/queries/query-results/#formatting-results-tables)!
 
 ### Sharing Queries and Visualizations
 
@@ -384,4 +384,4 @@ And with that, we're ready to hit the share button to get a sharable Dashboard l
 
 To go deeper as you're getting started, check out the other pages in our Getting Started section using the left side bar. 👈
 
-Check out the Features section above to learn more about how Dune works or the Tables section to learn more about the data you can query and use with Dune. 👆
+Check out the other pages in our Getting Started section to learn more about how Dune works or the Tables section to learn more about the data you can query and use with Dune. 👆

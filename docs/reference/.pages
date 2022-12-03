@@ -1,13 +1,14 @@
 nav:
 - index.md
+- v1-sunsetting.md
 - support-feedback.md
 - dune-v2
 - tables
+- explorer-labels.md
 - faq
 - wizard-tools
 - dune-bounties.md
-- dune-explorer.md
 - events.md
-- pro.md
+- pricing.md
 - recommended-reading.md
 - ...
