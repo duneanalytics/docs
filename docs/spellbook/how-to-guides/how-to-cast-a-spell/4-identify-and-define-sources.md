@@ -9,7 +9,7 @@ Here’s how these files are formatted:
 
 ```sls
 
-version: 2 # spells all have “version: 2” as that’s the version of our engine they use.
+version: 2 # Spells all have “version: 2” as that’s the version of our engine they use.
 
 sources:
 

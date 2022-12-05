@@ -5,7 +5,7 @@ description: Let’s learn how to cast a Spell in no time flat - it’s like �
 
 Let’s learn how to cast a Spell in no time flat - it’s like 💫!
 
-By the end of this guide, you’ll have your local environment set up and the knowledge you need to cast spells for yourself or to claim bounties.
+By the end of this guide, you’ll have your local environment set up and the knowledge you need to cast Spells for yourself or to claim bounties.
 
 Let’s do some open-source blockchain data analytics. 🧙
 
@@ -15,7 +15,7 @@ Spellbook is an open-source [dbt repository](https://docs.getdbt.com/docs/introd
 
 It enables the community to build toward a standardized way to transform data into meaningful abstraction layers.
 
-With web3 data, we have a foundational layer of [Raw Data](../../reference/tables/raw/index.md) - blockchain transactions, traces, and logs.
+With web3 data, we have a foundational layer of [Raw Data](../../../reference/tables/raw/index.md) - blockchain transactions, traces, and logs.
 
 Spellbook lets us create abstracted data sets, like [dex.trades](https://dune.com/spellbook#!/model/model.spellbook.dex_trades) and [nft.trades](https://dune.com/spellbook#!/model/model.spellbook.nft_trades), which aggregate and organize raw data from multiple sources to make it much easier to query.
 
@@ -81,7 +81,7 @@ Which gets us:
 
 Some more interesting info here like `gas_price` and `gas_used` but the juicy stuff is in the `data` column - but to understand that we’d need to reference the contract’s [Application Binary Interface](https://www.quicknode.com/guides/smart-contract-development/what-is-an-abi) ABI.
 
-Thankfully, Dune has [Decoded Data](../../reference/tables/decoded/index.md), which contains contract data that’s been automatically decoded from the transaction’s raw data using the ABI - the machines save us time.
+Thankfully, Dune has [Decoded Data](../../../reference/tables/decoded/index.md), which contains contract data that’s been automatically decoded from the transaction’s raw data using the ABI - the machines save us time.
 
 With Decoded Data, we can make a Query like this:
 

@@ -2,7 +2,7 @@
 title: Final Daily Balance
 ---
 
-This is our final daily Ethereum ERC20 token balances spell. We expand our spell to cover all days, not just the days with transfer activity. We add price data, we remove known rebase tokens and any tokens that resulted in large negative balances.
+This is our final daily Ethereum ERC20 token balances spell. We expand our Spell to cover all days, not just the days with transfer activity. We add price data, we remove known rebase tokens and any tokens that resulted in large negative balances.
 
 The ref tokens\_ethereum\_rebase is a static list of known rebase tokens that we manage. Whereas, the ref `'balances_ethereum_erc20_noncompliant'` is a table we derive from transfers\_ethereum\_erc20\_rolling\_day. That table looks for unique token\_addresses with larger negative balances which indicate the contract may not be compliant with ERC20.
 

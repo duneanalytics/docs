@@ -12,7 +12,7 @@ This step is non-specific to Spellbook. So I will farm out the explanation to Ja
 
 Once you’ve opened your pull request, fill out the [pull request template](https://github.com/duneanalytics/spellbook/blob/master/pull\_request\_template.md) and tag the duneanalytics/team-data-experience team-data-experience.
 
-We will review your code and run your tests. Our goal is to eliminate this step and provide a sandbox where you can run your spells and tests directly. Unfortunately (fortunately?) GitHub rightfully blocks secrets from pull requests from forks which is why we can’t run DBT from your original pull requests.
+We will review your code and run your tests. Our goal is to eliminate this step and provide a sandbox where you can run your Spells and tests directly. Unfortunately (fortunately?) GitHub rightfully blocks secrets from pull requests from forks which is why we can’t run DBT from your original pull requests.
 
 ## Dune will merge and deploy
 

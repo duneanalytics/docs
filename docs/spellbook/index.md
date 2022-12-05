@@ -39,6 +39,12 @@ We hope you are as excited as we are about this new tool. Spellbook is now live 
 
 ## Getting Started
 
+If you're a learn by doing type of person, check out our How to Cast a Spell guide here:
+
+<div class="cards grid" markdown>
+- [How to Cast a Spell](../spellbook/how-to-guides/how-to-cast-a-spell/index.md)
+</div>
+
 To get a better sense of what Spells are already available to you, check out our Spellbook Model Docs:
 
 <div class="cards grid" markdown>
@@ -51,7 +57,7 @@ To take a look under the hood, check out Spellbook on GitHub:
 - [Spellbook on GitHub](https://github.com/duneanalytics/spellbook)
 </div>
 
-To learn how to build your own Spells, check out our Getting Started section here:
+To get the full scoop on Spell casting, check out our Getting Started section here:
 
 <div class="cards grid" markdown>
 - [Spellbook Getting Started Guide](getting-started/index.md)

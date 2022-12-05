@@ -5,7 +5,7 @@ description: Next, let’s check for an existing folder for our project and crea
 
 Next, let’s check for an existing folder for our project and create one if it doesn’t exist.
 
-All spells are stored in the `/spellbook/models` directory by project name, then blockchain network.
+All Spells are stored in the `/spellbook/models` directory by project name, then blockchain network.
 
 Names are all lower case and words are separated by `_`
 
@@ -15,7 +15,7 @@ So in our Keep3r network example, the folder will be `/spellbook/models/keep3r_n
 
 Since this folder already exists (because we’ve done this before :), in this case, we’ll just build in there.
 
-If the project didn’t exist, we’d create that folder with the name of the blockchain it’s on; if the project folder exists but we’re creating a spell for a new blockchain (e.g. that project just added Polygon support), then we’d create a folder for the new blockchain.
+If the project didn’t exist, we’d create that folder with the name of the blockchain it’s on; if the project folder exists but we’re creating a Spell for a new blockchain (e.g. that project just added Polygon support), then we’d create a folder for the new blockchain.
 
 With our folder structure in place, we’ll need to create 3 files:
 
@@ -63,9 +63,9 @@ We also need to do a recursive check to see if those abstractions depend on any 
 
 To do this, we open those two abstractions and search for `FROM` statements.
 
-Here we find a couple of tables referenced that include “_evt_”, which is a naming convention for [Decoded Event tables](../../reference/tables/decoded/event-logs.md).
+Here we find a couple of tables referenced that include “_evt_”, which is a naming convention for [Decoded Event tables](../../../reference/tables/decoded/event-logs.md).
 
-You’ll find other Raw and Decoded data table naming conventions in our [Tables documentation here](../../reference/tables/index.md). 
+You’ll find other Raw and Decoded data table naming conventions in our [Tables documentation here](../../../reference/tables/index.md). 
 
 V1 abstractions are named like so:
 

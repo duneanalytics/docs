@@ -200,3 +200,4 @@ plugins:
        'tables/v2/spells/special-tables/erc1155.md': 'reference/tables/spells/token-standards/erc-1155.md'
        'tables/v2/spells/special-tables/erc20.md': 'reference/tables/spells/token-standards/erc-20.md'
        'tables/v2/spells/special-tables/erc721.md': 'reference/tables/spells/token-standards/erc-721.md'
+       'docs/spellbook/how-to-cast-a-spell': 'docs/spellbook/how-to-guides/how-to-cast-a-spell'

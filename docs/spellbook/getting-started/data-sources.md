@@ -2,7 +2,7 @@
 title: Data Sources
 ---
 
-In the Spellbook project, the source (i.e. raw and decoded tables your spell depends on) must be defined in a YAML file. Once a source has been defined it does not need to be defined again.
+In the Spellbook project, the source (i.e. raw and decoded tables your Spell depends on) must be defined in a YAML file. Once a source has been defined it does not need to be defined again.
 
 Defining a source can be as simple as adding its schema and name. But to harness the full power of the tool, we’ll also want to define tests, freshness checks, and add column descriptions.
 
