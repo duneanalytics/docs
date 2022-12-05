@@ -1,5 +1,7 @@
 nav:
 - index.md
+- prerequisites.md
+- types-of-contribution.md
 - data-modelling.md
 - data-sources.md
 - tests.md

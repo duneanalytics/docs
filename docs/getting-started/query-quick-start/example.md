@@ -19,7 +19,7 @@ The easiest place to start your query exploration is the [Dune Data Explorer](..
 
 So, let's get started by switching to the Dune V2 data set and searching for "opensea" to see what we find.
 
-By using Dune V2, we get access to [Spells](../../spellbook/) which can let us access data from multiple blockchains in one Query - assuming the spell for OpenSea exists (Dune V2 is still in beta so not all data has been migrated yet).
+By using Dune V2, we get access to [Spells](../../spellbook/) which can let us access data from multiple blockchains in one Query - assuming the Spell for OpenSea exists (Dune V2 is still in beta so not all data has been migrated yet).
 
 ![dune v2 search opensea](images/dune-v2-search-opensea.gif)
 

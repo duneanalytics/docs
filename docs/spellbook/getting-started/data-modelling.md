@@ -2,11 +2,11 @@
 title: Data Modelling
 ---
 
-This is the most important part of spell building.
+This is the most important part of Spell building.
 
-A spell should be a view (ideally) or table you or others can use to do great analysis.
+A Spell should be a view (ideally) or table you or others can use to do great analysis.
 
-The benefits of building a spell are:
+The benefits of building a Spell are:
 
 * **Consistency and maintainability.** Forking and copying queries to remix for ad-hoc analysis is fantastic but ngmi for the long run. Imagine finding a bug in your query or something simply changing in a contract. You can update _your_ query but everyone who forked or copy pasta’d the query won’t get the update.
 
