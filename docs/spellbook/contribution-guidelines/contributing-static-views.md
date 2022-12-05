@@ -19,10 +19,10 @@ Before submitting your PR, please make sure that:
 
 In case you need a new model to host token metadata (e.g. for a new blockchain), you should ensure that:
 
-  - New directory created in models/tokens/\<blockchain\>
+  - New directory created in models/tokens/[blockchain]
   - Add directory to `dbt_project.yml` file
     - Ensure default schema & materialization applied following the naming standards
-  - Follow model naming standard `tokens_\<blockchain\>_\<sector\>`
+  - Follow model naming standard `tokens_[blockchain]_[sector]`
   - Config block provides
     - alias name for view, to avoid model name being used
     - post-hook to ensure visibility in Dune UI table explorer

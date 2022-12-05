@@ -36,8 +36,8 @@ Spellbook is a repository where many people contribute and collaborate, so to ke
 
 Spells are organized under `models` (all Spells are just dbt models) using the following structure:
 
-- Sectors (DEX, NFT, etc.) have their own Spells under `/models/\<sector\>`
-- Project Spells `/models/\<project\>/\<blockchain\>`
+- Sectors (DEX, NFT, etc.) have their own Spells under `/models/[sector]`
+- Project Spells `/models/[project]/[blockchain]`
 - Most Spells are built bottom-up, starting from a single project version in a single chain and merging all the way up to a sector, with there being four total levels of the hierarchy
   - Project version on one blockchain
   - Project on one blockchain
@@ -46,6 +46,6 @@ Spells are organized under `models` (all Spells are just dbt models) using the f
 
 We have a few special cases for storing static datasets, they are:
 
-- Token metadata views live under `/models/tokens/\<blockchain\>`
-  - Files follow the convention `tokens_\<blockchain\>_\<subset\>.sql` and contain metadata for tokens of a subset of tokens (e.g. erc20, NFTs, Rebasing tokens)
+- Token metadata views live under `/models/tokens/[blockchain]>`
+  - Files follow the convention `tokens_[blockchain]_[subset].sql` and contain metadata for tokens of a subset of tokens (e.g. erc20, NFTs, Rebasing tokens)
 - Price feeds metadata live on `/models/prices/prices_tokens.sql`
