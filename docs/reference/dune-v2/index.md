@@ -1,52 +1,72 @@
 ---
 title: Dune V2
-description: Dune Engine V2 is an update to our Query engine that brings a new level of performance, scalability and functionality to the core tools that enable Wizards to query, extract, and visualize blockchain data.
+description: Dune Engine V2 is an update to our Query Engine and Database that brings a new level of performance, scalability and functionality to the core tools that enable Wizards to query, extract, and visualize blockchain data.
 ---
 
-**Dune Engine V2** is an update to our Query engine that brings a new level of performance, scalability and functionality to the core tools that enable Wizards to query, extract, and visualize blockchain data.
+Dune V2 brings a new level of performance, scalability and functionality to the core tools that let Wizards query, extract, and visualize the vast amounts of blockchain data available.
 
-It leverages **[Apache Spark SQL](https://spark.apache.org/docs/latest/sql-programming-guide.html)** to  increase performance for complex Queries, handle data scale, and enable cross-chain Queries all within the [Query Editing UI](../../getting-started/queries/index.md) you're used to.
+Dune V2 is an update to our database and query engine that includes:
 
-All of the data sources contained in this section are available for querying with the new Query engine today. We currently have the following data available in V2:
+1. A scalable column oriented database (in contrast to PostgreSQL’s row oriented approach)
+2. Dune’s new query engines, Dune SQL and [Spark SQL](https://spark.apache.org/docs/latest/sql-programming-guide.html).
 
-- [**Raw tables**](../tables/raw/index.md)
-- [**Decoded projects**](../tables/decoded/index.md)
-- [**Spells**](../tables/spells/index.md)
-- [**Community Tables**](../tables/community/index.md)
+For more on the why behind Dune V2, be sure to read the post from our CTO (to be published in the coming weeks)!
 
-## New Query engine
+## New Database
 
-Dune V2 changes our entire database architecture. We are transitioning away from a PostgresQL database to an Instance of Apache Spark hosted on Databricks. The difference between the two systems can be summarized as follows:
+DuneV2 changes our entire database architecture. We are transitioning away from a PostgreSQL database to a scalable columnar database.The difference between the two systems can be summarized as follows:
 
-* Instead of PostgresQL, we will now use Spark SQL. The change in SQL keywords is minimal but might be relevant for some of your querying habits.
-* Spark is a column oriented database in contrast to PostgresQL’s row oriented approach.
-* traditional indexes are replaced by column chunk level `min/max` values
+* V2 uses a columnar storage format in contrast to PostgreSQL’s row oriented approach.
+* Traditional indexes are replaced by [block range indexes](https://en.wikipedia.org/wiki/Block_Range_Index), which are chunk level min/max values
 
-**You can read more about the changes here:**
+Read more about how the Dune V2 database works here:
 
 <div class="cards grid" markdown>
-- [Query Engine](query-engine.md)
+- [V2 Database](database.md)
 </div>
 
-**Or start getting your wand dirty by following along here:**
+## New Query Engines
+
+DuneV2 leverages two different query engines as we transition away from a PostgreSQL database to a data lake house.
+
+* Spark SQL, powered by [Spark SQL](https://spark.apache.org/docs/latest/sql-programming-guide.html)
+* Dune SQL, powered by [Trino](https://trino.io/)
+
+Spark SQL was our initial choice for a V2 Query engine, but after gathering data and feedback from our Beta release we realized it won’t allow us to continue to have the best blockchain data querying experience as we scale.
+
+We believe the solution is Dune SQL powered by Trino, and we’re excited to have it live in *alpha*.
+
+Once we’ve work with the community to revise and refine Dune SQL into a polished release state, we’ll phase out Spark SQL as we have Postgres.
+
+You can read more about how the new query engines work here:
 
 <div class="cards grid" markdown>
-- [@springzhang](https://dune.com/springzhang/)'s [Tips and Tricks for Dune V2 Queries and Visualizations](https://dune.com/springzhang/tips-and-tricks-for-query-and-visualization-in-v2-engine)
+- [V2 Query Engines](query-engine.md)
 </div>
- 
 
-## Spellbook
+## Spells
 
-Abstractions have been upgraded to Spells stored in the [Spellbook](../../spellbook/index.md) in Dune V2.
+Abstractions in DuneV2 run on [dbt](https://docs.getdbt.com/docs/introduction) (data build tool). dbt enables analytics engineers to transform data in their warehouses by simply writing select statements, then dbt handles turning these select statements into [tables](https://docs.getdbt.com/terms/table) and [views](https://docs.getdbt.com/terms/view).
 
-They run on [data build tool (dbt)](https://docs.getdbt.com/docs/introduction). dbt enables analytics engineers to transform data in their warehouses by simply writing select statements. dbt handles turning these select statements into [tables](https://docs.getdbt.com/terms/table) and [views](https://docs.getdbt.com/terms/view).
+Spells currently run on Spark SQL in Dune v2. Certain Spells will need some slight modifications to be used as queries on Dune SQL. Our team will help you with this during the submission process!
 
-This will makes the data abstractions built as Spells more robust, scalable and easier to work with.
+Learn more about Spells here:
 
 <div class="cards grid" markdown>
-- [Spells](../../spellbook/index.md)
+- [Spells in Dune V2](https://dune.com/docs/spellbook/)
 </div>
 
-## Feedback
+## Other questions and feedback
 
-One final note, as the Query engine is still in in **beta** you may run into bugs or have feedback on how it can be improved, feel free to share it with us on in our [#general-feedback Discord channel](https://discord.com/channels/757637422384283659/1012706316755664926) or on our [Canny board](https://dune.canny.io).
+As ever, Google is a great friend in answering your SQL questions.
+
+With Dune V2, instead of googling “PGSQL median”, you should now google “Spark SQL median” (for Spark SQL) or “Trino SQL median” (for Dune SQL). 
+
+Both also have well documented index of built in functions on their website:
+
+* [Spark - Spark SQL Language Reference](https://spark.apache.org/docs/latest/sql-programming-guide.html)
+* [Trino - Functions and Operators](https://trino.io/docs/current/functions.html)
+
+Our #dune-sql Discord channel is the best place to get help from our team and Wizard community when Google fails you.
+
+As you come across issues or identify areas of improvement, please send us an email at [dunesql-feedback@dune.com](mailto:dunesql-feedback@dune.com) and we’ll work with you to update and optimize!
