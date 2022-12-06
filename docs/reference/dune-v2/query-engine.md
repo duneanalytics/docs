@@ -38,7 +38,7 @@ And as a step toward resolving some of the communication errors we made with the
 This means:
 
 * While we strongly believe Dune SQL/Trino is the long term solution for creating the best blockchain data querying experience in the world, it isn’t there yet - with your help we’ll break lots of things and use what we learn to continuously build a better system.
-* While we have a timeline for Sunsetting Dune V1 (PostgreSQL), we do not have one for fully transitioning from Spark to Dune SQL and will work with the community to decide when and how that transition will take place to move forward with [Speed](https://www.notion.so/Values-and-working-at-Dune-7efdcec2298a4913aaef8067b25820df#ffc480bf5c5e4e38a1c53d2fb9926e3e) and transparency.
+* While we have a timeline for [Sunsetting Dune V1 (PostgreSQL)](../v1-sunsetting.md), we do not have one for fully transitioning from Spark to Dune SQL and will work with the community to decide when and how that transition will take place to move forward with [Speed](https://www.notion.so/Values-and-working-at-Dune-7efdcec2298a4913aaef8067b25820df#ffc480bf5c5e4e38a1c53d2fb9926e3e) and transparency.
 
 ## Joining the SQL revolution
 
