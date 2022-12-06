@@ -287,3 +287,9 @@ h1, h2, h3, h4, h5, h6{
 .vrt-cent {
     vertical-align: middle !important;
 }
+
+/* Update dune sql syntax table */
+div.syntax_table + table .md-typeset table:not([class]) td {
+    word-break: break-word;
+    max-width: 200px;
+}
