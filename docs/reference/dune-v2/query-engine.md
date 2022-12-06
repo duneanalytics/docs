@@ -5,9 +5,8 @@ description: Dune V2 uses Spark and Dune SQL query engines. Learn how they work 
 
 With Dune V2 we’re moving away from a [PostgreSQL](https://www.postgresql.org/) query engine to:
 
-1. [Apache Spark](https://www.databricks.com/glossary/what-is-apache-spark) hosted on [Databricks](https://docs.databricks.com/getting-started/introduction/index.html).
-2. A self hosted instance of [Trino](https://trino.io/). 
-
+1. Spark SQL - [Apache Spark](https://www.databricks.com/glossary/what-is-apache-spark) hosted on [Databricks](https://docs.databricks.com/getting-started/introduction/index.html).
+2. Dune SQL - A self hosted instance of [Trino](https://trino.io/)(**currently in alpha**). 
 
 ## Syntax and operator differences
 
@@ -39,3 +38,18 @@ The syntax and keyword operator differences between Postgres, Spark, and Dune SQ
 | **Explode** | SELECT unnest(array) FROM table | SELECT vals.val FROM table1, unnest(arrayFromTable1) as vals(val)<br><br>you have to use \`unnest\` with a \`cross join\`, as described in this [blog post](https://theleftjoin.com/how-to-explode-arrays-with-presto/). | SELECT explode(array) FROM table |
 | **Median** | PERCENTILE_CONT(0.5) WITHIN GROUP(ORDER BY x) | approx_percentile(x, 0.5) | PERCENTILE_CONT(0.5) WITHIN GROUP(ORDER BY x) |
 | **Using “is True/False”** | X is true | X = true | X is true |
+
+## Other questions and feedback
+
+As ever, Google is a great friend in answering your SQL questions.
+
+With Dune V2, instead of googling “PGSQL median”, you should now google “Spark SQL median” (for Spark SQL) or “Trino SQL median” (for Dune SQL). 
+
+Both also have well documented index of built in functions on their website:
+
+* [Spark - Spark SQL Language Reference](https://spark.apache.org/docs/latest/sql-programming-guide.html)
+* [Trino - Functions and Operators](https://trino.io/docs/current/functions.html)
+
+Our #dune-sql Discord channel is the best place to get help from our team and Wizard community when Google fails you.
+
+As you come across issues or identify areas of improvement, please send us an email at [dunesql-feedback@dune.com](mailto:dunesql-feedback@dune.com) and we’ll work with you to update and optimize!
