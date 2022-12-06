@@ -48,7 +48,7 @@ You can read more about how the new query engines work here:
 
 Abstractions in DuneV2 run on [dbt](https://docs.getdbt.com/docs/introduction) (data build tool). dbt enables analytics engineers to transform data in their warehouses by simply writing select statements, then dbt handles turning these select statements into [tables](https://docs.getdbt.com/terms/table) and [views](https://docs.getdbt.com/terms/view).
 
-Spells currently run on Spark SQL in Dune v2. Certain Spells will need some slight modifications to be used as queries on Dune SQL. Our team will help you with this during the submission process!
+Spells currently run on Spark SQL in Dune v2 but can also be queried on Dune SQL. Certain Spells will need some slight modifications to be used as queries on Dune SQL. Our team will help you with this during the submission process!
 
 Learn more about Spells here:
 
