@@ -1,0 +1,6 @@
+title: V2 引擎 (Databricks SQL)
+nav:
+- 原始数据表: raw
+- 解析表: decoded
+- 魔法表: spells
+- 社区来源表: community

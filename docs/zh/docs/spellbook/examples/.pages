@@ -1,0 +1,8 @@
+title: 示例
+nav:
+- 魔法书示例: index.md
+- 重新更改格式的转账: reformatted.md
+- 每日汇总的转账: daily-aggregation.md
+- 滚动总和的每日转账: rolling-sum.md
+- 最终每日余额: final-day-balance.md
+- ...
