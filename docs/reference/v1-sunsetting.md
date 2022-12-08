@@ -37,7 +37,7 @@ For Polygon and BNB the kickoff date was November 2nd, 2022, we will use that as
 - Removal of the blockchain from the blockchain selection dropdown
 - Existing queries are still editable on V1
 
-### Week 6 (December 14th, 2022)
+### Week 6 (Was:December 14th, 2022 Now: Jan 4th, 2023)
 
 - V1 queries for the given blockchain will become read only, forking and updating on V2 will be required
 - Data will continue to update and refreshed for the queries on V1
