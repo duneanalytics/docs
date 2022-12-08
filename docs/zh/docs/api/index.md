@@ -63,4 +63,4 @@ Dune API 目前尚处于内部测试阶段，有小一批内测用户，但会�
 
  - API 文档 - 您已经在这儿了，查看侧边栏以了解更多信息！
  - [#dune-api Discord 频道](https://discord.com/channels/757637422384283659/1019910980634939433)
- - [API 客户端 (来自社区构建)](https://dune.com/docs/api/quick-start/community-clients/)
+ - [API 客户端 (来自社区构建)](../api/quick-start/community-clients.md)
