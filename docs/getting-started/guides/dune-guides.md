@@ -66,6 +66,10 @@ You are amazing! 🪄
 
     * [Build Ethereum Metrics Dashboard](https://www.twigblock.com/projects/eth-intro-dune/t/eit-overview)
 
+    ### [Jamesin Seidel](https://twitter.com/seidtweets)
+
+    * [Blockchain Analytics 101 — Dune Queries for On-Chain NFT Analysis](https://medium.com/@jseid212/blockchian-analytics-101-queries-for-on-chain-nft-analysis-fe08cbfa9ec2)
+
 ## OurNetwork Course
 
 !!! note

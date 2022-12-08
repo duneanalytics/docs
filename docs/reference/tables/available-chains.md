@@ -180,3 +180,9 @@ C-Chain is an instance of the Ethereum Virtual Machine powered by the Avalanche 
 You can read more about Avalanche Network and C-Chain [in this article](https://learn.figment.io/protocols/avalanche).
 
 Working with the C-Chain on Dune works exactly like querying Ethereum mainnet data. Only `avalanche_c.blocks` has slightly different properties as Avalanche C-Chain is already in a proof of stake(POS) consensus algorithm.
+
+## Ethereum's Goerli Testnet
+
+Created in September 2018 during ETHBerlin, [Goerli Testnet](https://goerli.net/) was the first proof-of-authority cross-client testnet, synching Parity Ethereum, Geth, Nethermind, Hyperledger Besu (formerly Pantheon), and EthereumJS.
+
+This is the perfect solution for dapp developers looking to get stats before you launch on mainnet!
