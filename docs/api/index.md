@@ -61,4 +61,4 @@ With the API, the Data Can Flow anywhere!
 ## Important Links
  - API Documentation - you're already here, check out the sidebar to learn more!
  - [#dune-api Discord Channel](https://discord.com/channels/757637422384283659/1019910980634939433)
- - [API Client (Community Sourced)](https://dune.com/docs/api/quick-start/community-clients/)
+ - [API Client (Community Sourced)](../api/quick-start/community-clients.md)
