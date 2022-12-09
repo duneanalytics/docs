@@ -17,6 +17,27 @@ You are amazing! 🪄
 5. **Make the Dashboard pretty**
 6. **Enjoy your data**
 
+=== "Spark SQL"
+
+    ### [0xPhilan](https://dune.com/phillan) [:material-twitter:](https://twitter.com/0xPhillan)
+
+    * [Dune Analytics: A Guide for Complete Beginners](https://mirror.xyz/phillan.eth/17VAXsMPpwJg4OQNBHKTYAQTWfJMwFuXZQDAxPStf0o)
+
+    ### [James Bachini](https://dune.com/jamesbachini) [:material-twitter:](https://twitter.com/james_bachini)
+
+    * [Dune Analytics Tutorial | How To Create A Dune Analytics Dashboard](https://jamesbachini.com/dune-analytics-tutorial/)
+
+    ### [Kirubakumaresh](https://twitter.com/kirubakumaresh)
+
+    * [Build Ethereum Metrics Dashboard](https://www.twigblock.com/projects/eth-intro-dune/t/eit-overview)
+
+    ### [Jamesin Seidel](https://twitter.com/seidtweets)
+
+    * [Blockchain Analytics 101 — Dune Queries for On-Chain NFT Analysis](https://medium.com/@jseid212/blockchian-analytics-101-queries-for-on-chain-nft-analysis-fe08cbfa9ec2)
+
+    ### [@1chioku](https://dune.com/1chioku)
+
+    * [Journey to the Centre of Arakis](https://1chioku.substack.com/p/preface)
 
 === "PostgreSQL"
 
@@ -52,23 +73,7 @@ You are amazing! 🪄
     * [Build an Ethereum Metrics Dashboard](https://www.twigblock.com/projects/eth-intro-dune/t/eit-overview)
     * [Learn to Analyze Ethereum Gas Prices](https://www.twigblock.com/projects/eth-gas-analysis/t/eg-overview)
 
-=== "Spark SQL"
 
-    ### [0xPhilan](https://dune.com/phillan) [:material-twitter:](https://twitter.com/0xPhillan)
-
-    * [Dune Analytics: A Guide for Complete Beginners](https://mirror.xyz/phillan.eth/17VAXsMPpwJg4OQNBHKTYAQTWfJMwFuXZQDAxPStf0o)
-
-    ### [James Bachini](https://dune.com/jamesbachini) [:material-twitter:](https://twitter.com/james_bachini)
-
-    * [Dune Analytics Tutorial | How To Create A Dune Analytics Dashboard](https://jamesbachini.com/dune-analytics-tutorial/)
-
-    ### [Kirubakumaresh](https://twitter.com/kirubakumaresh)
-
-    * [Build Ethereum Metrics Dashboard](https://www.twigblock.com/projects/eth-intro-dune/t/eit-overview)
-
-    ### [Jamesin Seidel](https://twitter.com/seidtweets)
-
-    * [Blockchain Analytics 101 — Dune Queries for On-Chain NFT Analysis](https://medium.com/@jseid212/blockchian-analytics-101-queries-for-on-chain-nft-analysis-fe08cbfa9ec2)
 
 ## OurNetwork Course
 
