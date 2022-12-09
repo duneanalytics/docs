@@ -9,7 +9,7 @@ Spells are recipes to build high level tables that support common use cases, lik
 Spellbook automates the build, maintenance and data quality of these tables. Anyone in our community can contribute to our spells, whether that is adding a new exchange or writing an entirely new spell.
 
 !!! note
-    Spellbook Spells are available on Dune V2, queryable from both Spark SQL and Dune SQL [V2 Query Engines](../reference/dune-v2/query-engine.md). For now, Spells will continue to be written in Spark SQL and querying them with Dune SQL will require small syntax changes. While the changes needed to make Spells Dune SQL native are small, we want to make sure Dune SQL is rock solid before we implement them!
+    Spellbook Spells are available on Dune V2, queryable from both Spark SQL and Dune SQL [V2 Query Engines](../reference/dune-v2/query-engine.md). For now, Spells will continue to be run against Spark and querying them with Dune SQL will require small syntax changes to ensure compatability. 
 
 ## New level unlocked
 
