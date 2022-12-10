@@ -29,3 +29,14 @@ mkdocs serve
 ## Notes
 
 Remember to use relative paths to markdown files for internal links (e.g. `[link](../../relative/path/to/index.md)`), otherwise the mkdocs compiler will not detect broken internal links - [read more](/index.md).
+
+## Upgrades
+
+To upgrade `mkdocs-material`, you need to pin a new version of `mkdocs-material` and update the hard-coded value for stylesheets in `overrides/main.html`.
+
+- Update `requirements.txt` with new version of `mkdocs-material`
+- Upgrade your local environment
+- Find the auto-generated stylesheet file name, see [example](https://github.com/squidfunk/mkdocs-material/tree/8.5.11/material/assets/stylesheets)
+- Update in `overrides/main.html`
+- Do the same for the `mkdocs-material-insiders`
+- Update the `mkdocs-material` version on Vercel
