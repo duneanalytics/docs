@@ -6,5 +6,5 @@ plugins:
   - mkdocs-video
   - social
   - privacy:
-    external_links_attr_map:
-      target: _blank
+      external_links_attr_map:
+        target: _blank
