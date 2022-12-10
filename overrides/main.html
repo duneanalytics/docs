@@ -10,7 +10,7 @@
         }
     </script>
     <!-- Manually add the stylesheet, for hard-coded mkdocs-material and mkdocs-material-insiders -->
-    <link rel="stylesheet" href="/docs/assets/stylesheets/main.{% if config.insiders %}e9638a90{% else %}975780f9{% endif %}.min.css">
+    <link rel="stylesheet" href="/docs/{% if config.theme.language == 'zh' %}zh/{% endif %}assets/stylesheets/main.{% if config.insiders %}e9638a90{% else %}975780f9{% endif %}.min.css">
     {% include "partials/icons.html" %}
 {% endblock %}
 

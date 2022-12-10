@@ -1,9 +1,9 @@
-INHERIT: ../../mkdocs.yml
+INHERIT: ../mkdocs.yml
 site_url: https://dune.com/docs/zh
 theme:
   language: zh
   name: material
-  custom_dir: overrides
+  custom_dir: ../overrides
   logo: images/dune-icon-only.png
   favicon: images/dune-icon-only.png
   font:
