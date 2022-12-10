@@ -30,6 +30,16 @@ mkdocs serve
 
 Remember to use relative paths to markdown files for internal links (e.g. `[link](../../relative/path/to/index.md)`), otherwise the mkdocs compiler will not detect broken internal links - [read more](/index.md).
 
+## Translations
+
+Dune docs are kindly translated by members of our community.
+
+Currently they are available in English and Chinese.
+
+Each translation is run as a separate `mkdocs-material` project. For example, with the Chinese docs navigate to `zh` and run `mkdocs serve`. The build process automatically merges together translations into a single docs site with language switcher.
+
+To propose a new language, open an issue or reach out to us on Discord!
+
 ## Upgrades
 
 To upgrade `mkdocs-material`, you need to pin a new version of `mkdocs-material` and update the hard-coded value for stylesheets in `overrides/main.html`.
