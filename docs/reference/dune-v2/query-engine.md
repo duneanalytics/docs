@@ -61,6 +61,4 @@ Both also have well documented index of built in functions on their website:
 * [Spark - Spark SQL Language Reference](https://spark.apache.org/docs/latest/sql-programming-guide.html)
 * [Trino - Functions and Operators](https://trino.io/docs/current/functions.html)
 
-Our #dune-sql Discord channel is the best place to get help from our team and Wizard community when Google fails you.
-
 As you come across issues or identify areas of improvement, please send us an email at [dunesql-feedback@dune.com](mailto:dunesql-feedback@dune.com) and we’ll work with you to update and optimize!
