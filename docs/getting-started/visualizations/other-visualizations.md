@@ -41,7 +41,7 @@ You can configure the following options for each column in your Table
 
     The Title appears at the top of your Table.
 
-    Leaving this blank makes your column title the same as your its Dune database name.
+    Leaving this blank makes your column title the same as its Dune database name.
 
 === "Align"
 
