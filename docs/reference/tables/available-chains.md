@@ -186,3 +186,9 @@ Working with the C-Chain on Dune works exactly like querying Ethereum mainnet da
 Created in September 2018 during ETHBerlin, [Goerli Testnet](https://goerli.net/) was the first proof-of-authority cross-client testnet, synching Parity Ethereum, Geth, Nethermind, Hyperledger Besu (formerly Pantheon), and EthereumJS.
 
 This is the perfect solution for dapp developers looking to get stats before you launch on mainnet!
+
+## Fantom
+
+[Fantom](https://fantom.foundation/) is a layer 1 blockchain offering smart contract functionality.
+
+It uses a Directed Acyclic Graph, which involves the seamless interaction of nodes in the network to ensure fast and secure transactions.

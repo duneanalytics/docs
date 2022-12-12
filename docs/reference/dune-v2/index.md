@@ -10,7 +10,7 @@ Dune V2 is an update to our database and query engine that includes:
 1. A scalable column oriented database (in contrast to PostgreSQL’s row oriented approach)
 2. Dune’s new query engines, Dune SQL and [Spark SQL](https://spark.apache.org/docs/latest/sql-programming-guide.html).
 
-For more on the why behind Dune V2, be sure to read the post from our CTO (to be published in the coming weeks)!
+For more on the why behind Dune V2, be sure to [read the post from our CTO](https://dune.com/blog/introducing-dune-sql)!
 
 ## New Database
 
@@ -67,6 +67,6 @@ Both also have well documented index of built in functions on their website:
 * [Spark - Spark SQL Language Reference](https://spark.apache.org/docs/latest/sql-programming-guide.html)
 * [Trino - Functions and Operators](https://trino.io/docs/current/functions.html)
 
-Our #dune-sql Discord channel is the best place to get help from our team and Wizard community when Google fails you.
+Our [#dune-sql Discord channel](https://discord.com/channels/757637422384283659/1051871389432422491) is the best place to get help from our team and Wizard community when Google fails you.
 
 As you come across issues or identify areas of improvement, please send us an email at [dunesql-feedback@dune.com](mailto:dunesql-feedback@dune.com) and we’ll work with you to update and optimize!
