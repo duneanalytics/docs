@@ -3,6 +3,8 @@ title: 入门
 description: Getting Started is the place to get oriented and learn how to use Dune!
 ---
 
+入门是了解方向和学习如何使用 Dune 的地方！
+
 ## Dune 是为技术性和非技术性用户制作的。
 
 无论您是一位经验丰富的 SQL 开发人员，区块链研究者，商业分析师或以上都不是——您可以使用 Dune 在瞬间开始分析区块链数据。
@@ -46,7 +48,7 @@ description: Getting Started is the place to get oriented and learn how to use D
 [SQL](https://www.w3schools.com/sql/sql_intro.asp) 在软件开发行业中被广泛使用，您可以找到很多关于它的非 Dune 特定文档。这往往有助于回答与查询有关的问题，因为大多数答案可以在互联网上很容易找到。
 
 
-!!! 注
+!!! note
     默认情况下，该文档显示了我们的 Dune V1 引擎的信息，该引擎在 PostgreSQL 数据库上运行。
     我们的新数据平台，[Dune 引擎 V2](https://dune.com/blog/dune-engine-v2) 目前处于测试阶段，其采用的是 Databricks SQL 的查询引擎。它提供了令人兴奋的功能，如更好的扩容，跨链查询和[魔法书](../spellbook/index.md)。Dune 引擎 V2 在接下来的几个月里，将成为默认引擎，所以我们建议您尝试一下！
 
@@ -67,7 +69,7 @@ description: Getting Started is the place to get oriented and learn how to use D
 
 如果您能够读取 Etherscan 中的大部分数据，那么您已经在用 Dune 创建有洞察力的查询和可视化的路上走得很远了。
 
-不幸的是，我们目前还没有找到一个很好的资源可以指给您看，因为每个智能合约都有它自己的规则。我们已经在我们的[解码数据](../reference/tables/decoded.md)部分写了一些关于这个问题的文字。
+不幸的是，我们目前还没有找到一个很好的资源可以指给您看，因为每个智能合约都有它自己的规则。我们已经在我们的[已解析数据](../reference/tables/decoded.md)部分写了一些关于这个问题的文字。
 
 ### 社区、协议和企业关心什么
 

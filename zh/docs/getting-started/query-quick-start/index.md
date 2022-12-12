@@ -3,66 +3,65 @@ title: 查询入门
 description: Here's a short five-step guide to getting familiar with a protocol and figuring out how to query around it using Dune.
 ---
 
-Here's a short five-step guide to getting familiar with a protocol and figuring out how to query around it using Dune.
+这里有一个简短的五步指南，以熟悉一个协议并弄清楚如何使用 Dune 进行查询。
 
-Thanks to [@ilemi](https://dune.com/ilemi) for putting this together!
+感谢 [@ilemi](https://dune.com/ilemi) 整理此版内容！
 
-[Learn more about how Queries work here](../queries/index.md).
+[在此了解更多关于查询的内容](../queries/index.md)。
 
-## 1. Find the main point of entry
+## 1. 找到主要切入点
 
-Using the [Dune Data Explorer](../queries/data-explorer.md) and the protocol app page/docs and try to figure out what the main user entry point function is.
+使用 [Dune 数据浏览器](../queries/data-explorer.md)和协议应用界面/文档，并试着找出主要的用户入口点功能是什么。
 
-Sometimes this is straightforward, but different contract patterns on more complex protocols will make this confusing. 
+有时这很直接，但在更复杂的协议上，不同的合约模式会让人感到困惑。
 
-For most of decentralized finance (DeFi), the primary entry point for users is just some variation of `Deposit`.
+对于大多数去中心化金融（DeFi）来说，用户的主要入口只是 `Deposit`（存款）的一些变化。
 
-If the contract isn't [Decoded](../decoding-contracts.md) yet, you can start with some raw queries for finding the most common function and event signatures here: [Dune Utility Queries](../../reference/wizard-tools/utility-queries.md)
+如果合约还没有[解析](.../decoding-contracts.md)，你可以从一些原始查询开始，在这里找到最常见的函数和事件签名：[Dune Utility Queries](././reference/wizard-tools/utility-queries.md)。
+
+如果你在理解数据表方面有困难，[请见我们的数据表文档](.../.../reference/tables)。  
     
-If you're having trouble figuring out the tables, [see our Table docs here](../../reference/tables).    
-    
-## 2. Explore the contract flow
+## 2. 探索合约流程
 
-Typically a function call is not as simple as an ETH/token transfer that only involves one contract.
+通常情况下，一个函数调用并不像 ETH/代币 转移那样简单，只涉及一个合约。
 
-Once you figure out the entry point, run a basic LIMIT query on it and look at some example transactions in [the relevant blockchain explorer](../../reference/wizard-tools/blockchain-explorers.md) for data hints (i.e. what protocols did the tx interact with besides the main one).
+一旦你弄清楚了入口点，对它运行一个基础的 LIMIT 查询，并在[相关区块链浏览器](.../.../reference/wizard-tools/blockchain-explorers.md)中查看一些示例交易以获得一些数据提示（即除了主协议之外，tx 还与哪些协议互动）。
     
 ```sql
 SELECT * FROM protocol_name."Contractname_evt_EventEmitted"
 LIMIT 10
 ```
-   
-Look at `evt_tx_hash` and plop it into the blockchain explorer to start getting a sense of what contracts and interactions are involved.
+查看 `evt_tx_hash` 并把它放到区块链浏览器中，开始了解所涉及的合约和交互。
   
-## 3. Decide what question you want to answer
+## 3. 决定你要回答什么问题
 
-If you already have a question in mind, then skip this step. If you don't have a question yet, think through the flow chart of contract interactions.
+如果你心里已经有了问题，那就跳过这一步。如果你还没有问题，就通过合约互动的流程图来思考。
 
-Here are some starter questions to help you find something interesting to look into: 
+这里有一些启发问题，可以帮助你找到有趣的东西来研究：
 
-1. What other protocols did the entry function touch?
-2. If there is yield/interest being generated, where and when did the tokens get swapped? 
-3. How many tokens went in and how many were burned/minted by the end? 
-4. Is it possible that anything from the last three questions would lead to some sort of imbalance or accumulation? i.e. a DEX pool ending in low liquidity, or depositing so much into one pool that the yield/interest rate falls from supply imbalance. Or if this involves NFTs, what were the effects on future bid/sale behavior (or were there behaviors in bid/sale that led up to this transaction)?
+1. 入口功能还触及哪些协议？
+2. 如果有收益率/利息产生，代币是在什么地方和什么时候交易的？
+3. 有多少代币进入，到最后有多少被烧毁/铸造了？
+4. 有没有可能后三个问题中的任何内容都会导致某种不平衡或积累？即 DEX 池以低流动性结束，或向一个池中存入如此多的存款，以至于收益率/利息因供应不平衡而下降。或者，如果这涉及到 NFT，对未来的买卖行为有什么影响（或者有导致这一交易的买卖行为）？
 
-## 4. Build your Query
+## 4. 创建你的查询
 
-Now that you have settled on a question, the real fun begins. 🧙
+现在你已经确定了一个问题，真正的乐趣开始了。🧙
 
-You'll quickly notice that the function call data and event log data don't always have all the parameters you're looking for.
+你会很快发现，函数调用数据和事件日志数据并不总是有你要找的所有参数。
 
-The usual culprits that are missing are the transaction signer (found in `ethereum."transactions"` ) and the ETH value transferred (found in `ethereum."traces"`).
+通常缺少的罪魁祸首是交易签名者（在 `ethereum. "transactions"` 中找到）和转移的 ETH 值（在 `ethereum. "traces"` 中找到）。
 
-Typically you'll have to work with the base tables (transactions, traces, logs) and possibly tables from other protocols (like DEX/exchange protocols) to complete the data you need for your query.
+通常情况下，你必须与基础表（交易、内部合约、日志）以及可能来自其他协议（如 DEX/交易所 协议）的数据表合作，以完成你的查询所需的数据。
 
-Figuring out which tables to pull what data from takes a while to learn, and the best way to get started is usually to search for existing dashboards or queries that have attempted something similar.
+要想知道从哪些表中提取什么数据，需要学习一段时间，而开始的最好方法通常是搜索现有的看板或尝试过类似东西的查询。
 
-Dune has been around long enough that most query patterns aren't too hard to find somewhere else. ✨
+Dune 已经存在了很长时间，大多数查询模式在其他地方并不难找到。✨
 
-## 5. Make your Visualization
+## 5. 创建你的可视化
 
-Lastly, you should visualize the query in a chart by clicking "New visualization" next to "Query Results".  
+最后，你应该通过点击 "Query Results" 旁边的 "New visualization"，在图表中对查询进行可视化。 
     
     ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8dbf893c-33f5-47cb-8d4f-41ff4b2df8d6/Untitled.png)
     
-If you're showing token amounts, you likely have to [fix for decimals](https://dune.xyz/queries/85746) or multiply by token price (in `prices.usd` or `dex.trades`) to get to a USD value which is more interpretable.
+如果你显示的是代币数额，你可能需要[调整小数](https://dune.xyz/queries/85746)或乘以代币价格（在 `prices.usd` 或 `dex.trades` 中），以获得更可读的美元值。
