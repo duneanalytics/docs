@@ -17,13 +17,7 @@ The syntax and keyword operator differences between Postgres, Spark, and Dune SQ
 !!! warning
     **Dune SQL is still in alpha!** If you find any other changes in Spark or Dune SQL that are important to note, please feel free to [submit a PR to this docs page on GitHub](https://github.com/duneanalytics/docs/edit/master/docs/reference/dune-v2/query-engine.md) or let us know in #dune-sql.
 
-### Double quotes are not recommended
 
-Using double quotes is not recommended in DuneV2, even when the engine runs your query without returning an error.
-
-This is because the parser sometimes treats words in double quotes as a string and sometimes it treats them as an object like a column name.
-
-For example, referencing a column name in the `WHERE` clause using double quotes works as expected. However, the same query inside a CTE treats the column name as a string, [as can be seen here](https://dune.com/queries/1199604).
 
 ### Syntax Comparison
 
@@ -32,8 +26,7 @@ For example, referencing a column name in the `WHERE` clause using double quotes
 | **`bytea2numeric` does not exist in Spark.** | `bytea2numeric` (bytea) | `bytea2numeric_v2` (string) | `bytea2numeric` (string) |
 | **0 vs 1 array based indexing** | 1 indexed | 0 indexed | 1 indexed |
 | **Implicit type conversions between character and numeric types** | Available | Available | [Not available](https://trino.io/docs/current/functions/conversion.html) |
-| **bytea vs string for address, tx hash, etc…** | `\x2a7d...` (bytea) | `0x2a7d...` (string) | depending on [bytearray outcome](https://docs.google.com/document/d/1X47-aJs6Yw0h-HZD9O2q1Hs6H1yGZZfOM2E47sPh05M/edit#heading=h.wz929gyolmil) |
-| **Addresses (strings) are lower case in dune v2** | `\x2A7D...`(bytea)<br><br>Works in Postgres | `0x2a7d...` (string)<br><br>Has to be lowercase in Spark.<br><br>Can be done via `lower('0x2A7D...')` | depending on [bytearray outcome](https://docs.google.com/document/d/1X47-aJs6Yw0h-HZD9O2q1Hs6H1yGZZfOM2E47sPh05M/edit#heading=h.wz929gyolmil) |
+| **Addresses** | `\x2A7D...`(bytea)<br><br>Works in Postgres | `0x2a7d...` (string)<br><br>Has to be lowercase in Spark.<br><br>Can be done via `lower('0x2A7D...')` | `0x2a7d` <br><br> (no escape quotes needed) |
 | **Selecting keyword columns is different** | `from` | `'from'` | `from` |
 | **Alias naming is different** | as `daily active users` | as `'daily active user'` | as `daily active users` |
 | **Exponentiation notation** | `x/10^y` or `x * 1e123` | `x*power(10,y)` or `x*1e123` | `x*power(10,y)` or `x * 1e123` |
@@ -49,6 +42,14 @@ For example, referencing a column name in the `WHERE` clause using double quotes
 | **Explode** | `SELECT unnest(array) FROM table` | `SELECT explode(array) FROM table` | `SELECT vals.val FROM table1, unnest(arrayFromTable1) as vals(val)`<br><br>you have to use `unnest` with a `cross join`, as described in this [blog post](https://theleftjoin.com/how-to-explode-arrays-with-presto/). |
 | **Median** | `PERCENTILE_CONT(0.5) WITHIN GROUP(ORDER BY x)` | `PERCENTILE_CONT(0.5) WITHIN GROUP(ORDER BY x)` | `approx_percentile(x, 0.5)` |
 | **Using “is True/False”** | `X is true` | `X is true` | `X = true` |
+
+### Double quotes are not recommended
+
+Using double quotes is not recommended in DuneV2, even when the engine runs your query without returning an error.
+
+This is because the parser sometimes treats words in double quotes as a string and sometimes it treats them as an object like a column name.
+
+For example, referencing a column name in the `WHERE` clause using double quotes works as expected. However, the same query inside a CTE treats the column name as a string, [as can be seen here](https://dune.com/queries/1199604).
 
 ## Other questions and feedback
 
