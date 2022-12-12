@@ -8,7 +8,7 @@ description: 如何执行（运行）一个带或不带参数的查询来检索�
 
 ## 请求参数
 
-无需参数。你也可以选择添加查询参数（[参见此案例](#curl-with-parameters)）。
+无需参数。您也可以选择添加查询参数（[参见此案例](#curl-with-parameters)）。
 
 ## 返回值
 
@@ -45,5 +45,5 @@ curl -X POST -d '{"query_parameters": { "param1":24}}' -H x-dune-api-key:{{api_k
 }
 ```
 
- - *execution_id* : 每次调用此 API 时都会生成的一个唯一 ID。你可能想要保存这个值，用以稍后传递给其他 API 接入点。
+ - *execution_id* : 每次调用此 API 时都会生成的一个唯一 ID。您可能想要保存这个值，用以稍后传递给其他 API 接入点。
  - *state* : 查询的当前执行状态。查阅 `FAQ` 章节，了解不同状态码的具体含义。

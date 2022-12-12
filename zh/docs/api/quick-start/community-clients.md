@@ -17,7 +17,7 @@ description: 由我们超有凝聚力的社区建立的 Dune API 客户端列表
 pip install dune-client
 ```
 
-如果你想了解更多用法及代码细节，请查看此客户端的 [GitHub 页面](https://github.com/cowprotocol/dune-client).
+如果您想了解更多用法及代码细节，请查看此客户端的 [GitHub 页面](https://github.com/cowprotocol/dune-client).
 
 !!! warning "免责声明"
     虽然我们很喜欢社区的积极主动，但这些客户端并不是由 Dune 团队直接维护的。这意味着我们不能保证它们没有错误，另外如果客户端有 bug，我们可能也无法提供帮助。

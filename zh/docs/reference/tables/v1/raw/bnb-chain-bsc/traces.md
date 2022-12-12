@@ -36,6 +36,6 @@ Traces是交易中可以改变以太坊虚拟机状态的最小原子操作，�
 
 * 一个trace中的`gas_used`包括该trace和它所有的子trace所消耗的gas。
 * 最初调用的`gas_used`不包括首先进行调用的费用。
-  * 你需要把21000个gas单位+发送0的费用+非零字节的费用加到顶部trace的`gas_used`值中，以得出"真正的"`gas_used`值。
+  * 您需要把21000个gas单位+发送0的费用+非零字节的费用加到顶部trace的`gas_used`值中，以得出"真正的"`gas_used`值。
   * 关于这个问题的更多阅读请参考这个[stackexchange条目](https://ethereum.stackexchange.com/questions/31443/what-do-the-response-values-of-a-parity-trace-transaction-call-actually-repres)
   * 在dune中做的一个查询。[https://dune.com/queries/895857](https://dune.com/queries/895857)

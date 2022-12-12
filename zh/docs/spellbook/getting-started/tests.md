@@ -6,7 +6,7 @@ title: 测试
 
 在构筑魔法前先为其编写[测试](https://docs.getdbt.com/docs/building-a-dbt-project/tests)？这是什么软件工程？这种语言甚至是图灵完备的吗？！
 
-我们正在努力实践测试驱动开发（[test-driven development](https://en.wikipedia.org/wiki/Test-driven_development)）。 这意味着，我们在编写魔法之前就需要考虑我们想要从魔法中得到什么结果。 之后，我们编写一个测试，如果这些结果与我们的输出匹配，则测试通过。 如果你无法想象你的魔法输出应该是什么样子，你需要重新回到数据建模。
+我们正在努力实践测试驱动开发（[test-driven development](https://en.wikipedia.org/wiki/Test-driven_development)）。 这意味着，我们在编写魔法之前就需要考虑我们想要从魔法中得到什么结果。 之后，我们编写一个测试，如果这些结果与我们的输出匹配，则测试通过。 如果您无法想象您的魔法输出应该是什么样子，您需要重新回到数据建模。
 
 编写一个好的单元测试需要创造力和一些勇气。 您需要找到一种方式来验证某些可能需要手动计算的输出。
 
