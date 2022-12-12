@@ -22,11 +22,11 @@ On a dashboard you can either click `apply all` at the top or change the paramet
 
 Parameters in a Dashboard can be shared between different Queries, just make sure to use the same name, type and default value between all of them.
 
-![Parameters overview 1](images/parameters-overview-1.png
+![Parameters overview 1](images/parameters-overview-1.png)
 
-![Parameters overview 2](images/parameters-overview-2.png
+![Parameters overview 2](images/parameters-overview-2.png)
 
-![Parameters overview 3](images/parameters-overview-3.png
+![Parameters overview 3](images/parameters-overview-3.png)
 
 ## How do I use Parameters?
 
@@ -34,7 +34,7 @@ You can simply add a parameter to your Queries by writing `{{parametername}}` or
 
 You can edit the properties of single parameters by clicking on the gear wheel next to the parameter in the Query editor. This allows you to set a default value, define a list of possible parameters or change the type of of the parameter. If you want to share parameters between different Queries on a dashboard make sure they exactly match in regards to name, type and default value.
 
-![Parameters how to use](images/parameters-how-to-use.gif
+![Parameters how to use](images/parameters-how-to-use.gif)
 
 ## Example Query
 

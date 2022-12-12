@@ -41,7 +41,7 @@ You can configure the following options for each column in your Table
 
     The Title appears at the top of your Table.
 
-    Leaving this blank makes your column title the same as your it's Dune database name.
+    Leaving this blank makes your column title the same as its Dune database name.
 
 === "Align"
 
@@ -64,7 +64,7 @@ Columns that return numerical data have these additional options:
 === "Type"
 
     - `Normal` simply displays the column's numerical data.
-    - `Progress bar` shows the column's numerical data with a progress bar visual that is "full" for the columns highest value and "nearly empty" for the columns lowest value, with the rest of the data ranging in between:
+    - `Progress bar` shows the column's numerical data with a progress bar visual that is "full" for the column's highest value and "nearly empty" for the column's lowest value, with the rest of the data ranging in between:
 
     ![progress bar example](images/progress-bar-example.gif)
 
