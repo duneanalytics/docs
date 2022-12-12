@@ -26,7 +26,7 @@ The syntax and keyword operator differences between Postgres, Spark, and Dune SQ
 | **`bytea2numeric` does not exist in Spark.** | `bytea2numeric` (bytea) | `bytea2numeric_v2` (string) | `bytea2numeric` (string) |
 | **0 vs 1 array based indexing** | 1 indexed | 0 indexed | 1 indexed |
 | **Implicit type conversions between character and numeric types** | Available | Available | [Not available](https://trino.io/docs/current/functions/conversion.html) |
-| **Addresses** | `\x2A7D...`(bytea)<br><br>Works in Postgres | `0x2a7d...` (string)<br><br>Has to be lowercase in Spark.<br><br>Can be done via `lower('0x2A7D...')` | `0x2a7d` <br><br> (no escape quotes needed) |
+| **Addresses** | `\x2A7D...`(bytea)<br><br>Works in Postgres | `0x2a7d...` (string)<br><br>Has to be lowercase in Spark.<br><br>Can be done via `lower('0x2A7D...')` | `0x2a7d...` (Byte array literal) <br><br> No escape quotes needed |
 | **Selecting keyword columns is different** | `from` | `'from'` | `from` |
 | **Alias naming is different** | as `daily active users` | as `'daily active user'` | as `daily active users` |
 | **Exponentiation notation** | `x/10^y` or `x * 1e123` | `x*power(10,y)` or `x*1e123` | `x*power(10,y)` or `x * 1e123` |
