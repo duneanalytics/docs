@@ -27,8 +27,8 @@ The syntax and keyword operator differences between Postgres, Spark, and Dune SQ
 | **0 vs 1 array based indexing** | 1 indexed | 0 indexed | 1 indexed |
 | **Implicit type conversions between character and numeric types** | Available | Available | [Not available](https://trino.io/docs/current/functions/conversion.html) |
 | **Addresses** | `\x2A7D...`(bytea)<br><br>Works in Postgres | `0x2a7d...` (string)<br><br>Has to be lowercase in Spark.<br><br>Can be done via `lower('0x2A7D...')` | `0x2a7d...` (Byte array) <br><br> No escape quotes should be used, and the literal does __not__ need to be lowercased. |
-| **Selecting keyword columns is different** | `from` | `'from'` | `from` |
-| **Alias naming is different** | as `daily active users` | as `'daily active user'` | as `daily active users` |
+| **Selecting keyword columns is different** | "from" | \`from\` | "from" |
+| **Alias naming is different** | as "daily active users" | as \`daily active user\` | as "daily active users" |
 | **Exponentiation notation** | `x/10^y` or `x * 1e123` | `x*power(10,y)` or `x*1e123` | `x*power(10,y)` or `x * 1e123` |
 | **Interval argument has different syntax** | `Interval '1day'` | `Interval '1 day'` | `Interval '1' day` |
 | **Generate_series () is now sequence ()** | `generate_series('2022-05-15', CURRENT_DATE, '1 day')` | `explode(sequence(to_date('2022-01-01'), to_date('2022-02-01'), interval 1 day))` | `values(sequence(cast('2022-01-01' as date) - interval '7' day,cast('2022-02-01' as date),interval '1' day))`<br><br>Has a 10000 values limit. |
