@@ -6,7 +6,7 @@ description: Raw data tables are the basic building blocks of our database.
 
 Gnosis Chain的前生是xDAI，这是一个独特的系统，其中原生收费货币是稳定币$DAI的桥接版本。该链采用独特的双代币模式；xDai是用于交易、支付和收费的稳定代币；POS由$GNO与共识层Gnosis Beacon Chain提供。
 
-Gnosis Chain还没有完成向POS系统的过渡，与此同时，该链由POSDAO维护。你可以阅读更多关于这个过渡状态的信息[这里](https://developers.gnosischain.com/for-validators/consensus)。
+Gnosis Chain还没有完成向POS系统的过渡，与此同时，该链由POSDAO维护。您可以阅读更多关于这个过渡状态的信息[这里](https://developers.gnosischain.com/for-validators/consensus)。
 
 Gnosis Chain将继续推进xDai的规划，尽可能地遵循Ethereum的路线图，未来的目标包括：
 

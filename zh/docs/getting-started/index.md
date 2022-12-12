@@ -77,7 +77,7 @@ description: Getting Started is the place to get oriented and learn how to use D
 
 有些数据是有趣和有价值的，有些数据则不是。知道如何将有趣的部分挑选出来，使其清晰易懂，是成为一个伟大的数据分析巫师的基本。
 
-问你自己：
+问您自己：
 
 !!! quote "什么数据是我的受众/社区/项目/公司感兴趣和需要的，以便做出更好的决定？"
 

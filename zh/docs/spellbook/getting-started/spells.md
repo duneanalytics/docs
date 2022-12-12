@@ -18,6 +18,6 @@ title: 魔法
 
 我们正在努力开发一个可以直接从 DBT 中安全运行魔法的沙盒。 但与此同时，在本地检查您的工作的最佳方法是“编译”您的魔法。
 
-在您用 \`dbt init\` 完成[DBT初始化](https://github.com/duneanalytics/spellbook/blob/master/README.md)之后，您可以尝试运行 \`dbt compile\` 。这将创建一个名为“target”的新文件夹。 在目标文件夹内将是编译成普通 SQL 的所有魔法。您可以复制你的魔法并直接在 dune.com 上运行。
+在您用 \`dbt init\` 完成[DBT初始化](https://github.com/duneanalytics/spellbook/blob/master/README.md)之后，您可以尝试运行 \`dbt compile\` 。这将创建一个名为“target”的新文件夹。 在目标文件夹内将是编译成普通 SQL 的所有魔法。您可以复制您的魔法并直接在 dune.com 上运行。
 
 ![type:video](https://www.youtube.com/embed/9sut8560oUE)

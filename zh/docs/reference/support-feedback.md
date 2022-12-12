@@ -28,9 +28,9 @@ description: 如果您在我们的文档中找不到所需的答案，这是获�
 最后，您可以加入我们每周的办公时间以获得实时帮助 - 在 [我们的活动日历](https://events.dune.com) 上找到我们下一个办公时间。
 
 
-## 如何留下你的反馈
+## 如何留下您的反馈
 
-对于 Dune 应用程序的一般反馈，[可以在Canny看板留下你的建议](https://feedback.dune.com/).
+对于 Dune 应用程序的一般反馈，[可以在Canny看板留下您的建议](https://feedback.dune.com/).
 
 我们在 Discord 中也有 2 个反馈渠道：
 

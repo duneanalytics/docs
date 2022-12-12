@@ -6,7 +6,7 @@
 
 您可以从已接入的区块链原始表开始，例如像 `blocks` 和 `transactions` 数据表。这些原始表有着最原始的链上数据，可用于灵活的数据分析。
 
-与此同时，为了更轻松地分析智能合约，Dune还提供了具有可读性的解码数据表。我们使用智能合约的 ABI (Application Binary Interface) 和标准化代币智能合约的接口标准（ERC20、ERC721 等）用于解码数据。截止撰写此文档时，我们已经索引了超过超过 28 万份智能合约。你可以[在此提交新的合约](../../getting-started/decoding-contracts.md)与Dune进行解码。
+与此同时，为了更轻松地分析智能合约，Dune还提供了具有可读性的解码数据表。我们使用智能合约的 ABI (Application Binary Interface) 和标准化代币智能合约的接口标准（ERC20、ERC721 等）用于解码数据。截止撰写此文档时，我们已经索引了超过超过 28 万份智能合约。您可以[在此提交新的合约](../../getting-started/decoding-contracts.md)与Dune进行解码。
 
 此外，我们正在将常用链上数据（如 NFT 与 DEX 数据）和第三方数据集共同构建组成一系列[魔法](spells.md)。
 

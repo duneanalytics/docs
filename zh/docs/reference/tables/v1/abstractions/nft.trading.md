@@ -61,19 +61,19 @@ group by 2,3
 
 交易发生在“买方”（buyer）和“卖方”（seller）之间。
 
-他们交换一个由 `nft_contract_address` 和 `token_id` 的组合唯一标识的项目。买方将以任何给定的 `original_currency` 向卖方支付给定的 `original_amount` 代币。为方便起见，我们已经为你计算了在交易时对应价值的 `usd_amount` 。大多数交易将以 ETH 或 WETH 进行，但尤其是非 OpenSea 交易通常包含其他货币类型。
+他们交换一个由 `nft_contract_address` 和 `token_id` 的组合唯一标识的项目。买方将以任何给定的 `original_currency` 向卖方支付给定的 `original_amount` 代币。为方便起见，我们已经为您计算了在交易时对应价值的 `usd_amount` 。大多数交易将以 ETH 或 WETH 进行，但尤其是非 OpenSea 交易通常包含其他货币类型。
 
 交易在任何被索引的 `platforms` 上进行，并将通过这些平台的 `exchange_contract_address` 的智能合约来促进。每笔交易都会有诸如 `block_time` ， `tx_hash` ， `block_number` ， `platform version` ， `evt_index` 等元数据。
 
-此外，我们还提供有关交易的 NFT 的元数据。`nft_project_name` 和 `erc_standard` 将帮助你更轻松地分析数据集。`nft_project_name` 数据将从 `nft.tokens` [数据表](https://github.com/duneanalytics/abstractions/blob/master/ethereum/nft/tokens.sql) 中提取，如果你的 NFT 在该表中不存在，欢迎你发PR来添加它。
+此外，我们还提供有关交易的 NFT 的元数据。`nft_project_name` 和 `erc_standard` 将帮助您更轻松地分析数据集。`nft_project_name` 数据将从 `nft.tokens` [数据表](https://github.com/duneanalytics/abstractions/blob/master/ethereum/nft/tokens.sql) 中提取，如果您的 NFT 在该表中不存在，欢迎您发PR来添加它。
 
 **捆绑交易（Bundle Trade）**
 
-单次交易也可能包含多个物品。这些物品中的每一个都通过 `nft_contract_address` 和 `token_id` 的组合来唯一标识。然而在这些交易中，没有明确的方法来确定每个物品对应的 `usd_amount` 。一种可能的解决方法是将商品数量除以捆绑商品的付款金额，但是当非实物/价值的商品捆绑出售时，这种逻辑就不成立了。我们建议从你正在使用的数据集中删除捆绑转移，因为它会严重影响任一方向的结果。请注意，如果在同一交易中转移具有不同Token ID 或 erc 类型的代币，则 `token_id` 和 `erc_standard` 将为空（Null）。
+单次交易也可能包含多个物品。这些物品中的每一个都通过 `nft_contract_address` 和 `token_id` 的组合来唯一标识。然而在这些交易中，没有明确的方法来确定每个物品对应的 `usd_amount` 。一种可能的解决方法是将商品数量除以捆绑商品的付款金额，但是当非实物/价值的商品捆绑出售时，这种逻辑就不成立了。我们建议从您正在使用的数据集中删除捆绑转移，因为它会严重影响任一方向的结果。请注意，如果在同一交易中转移具有不同Token ID 或 erc 类型的代币，则 `token_id` 和 `erc_standard` 将为空（Null）。
 
 **聚合贸易（Aggregator Trade）**
 
-在使用 NFT 聚合器平台时，也会出现单次交易包含多个物品的情况。我们的方法是分解聚合器交易，以便每一行对应一个被交易的唯一商品，及其关联的 ID、价格、分类等。重要的是，`trade_type` 将指示为`聚合贸易` ，平台名称和地址可以在 `nft.aggregators` [数据表](https://github.com/duneanalytics/abstractions/blob/master/ethereum/nft/aggregators.sql) 中找到。如果该表中缺少你的聚合平台，欢迎你提交 PR 以添加它。
+在使用 NFT 聚合器平台时，也会出现单次交易包含多个物品的情况。我们的方法是分解聚合器交易，以便每一行对应一个被交易的唯一商品，及其关联的 ID、价格、分类等。重要的是，`trade_type` 将指示为`聚合贸易` ，平台名称和地址可以在 `nft.aggregators` [数据表](https://github.com/duneanalytics/abstractions/blob/master/ethereum/nft/aggregators.sql) 中找到。如果该表中缺少您的聚合平台，欢迎您提交 PR 以添加它。
 
 **平台和版税费用**
 

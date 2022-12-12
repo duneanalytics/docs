@@ -116,7 +116,7 @@ curl -X GET "https://api.dune.com/api/v1/execution/{{execution_id}}/results" -H 
 
 ### 我能否通过直连数据库来提取数据？
 
-目前还不行。在过渡时期，我们建议定期从 "max(latestBlockNumber) - 2" 到 "lastFetchedBlockNumber" 之间获取数据。从最新区块编号往前2位开始获取，可以确保你从每次新请求中获取到完整数据集。
+目前还不行。在过渡时期，我们建议定期从 "max(latestBlockNumber) - 2" 到 "lastFetchedBlockNumber" 之间获取数据。从最新区块编号往前2位开始获取，可以确保您从每次新请求中获取到完整数据集。
 
 ### 查询结果数据是否会被存档以便快速检索？
 

@@ -31,7 +31,7 @@ description: >-
 
 这对使用`solana.transactions`的现有查询有什么影响：
 
-* 你无需再检查交易是否为投票交易，这通常使用`WHERE ARRAY_CONTAINS(account_keys, "Vote111111111111111111111111111111111111111") = false`来完成。
+* 您无需再检查交易是否为投票交易，这通常使用`WHERE ARRAY_CONTAINS(account_keys, "Vote111111111111111111111111111111111111111") = false`来完成。
 * `error_index`和`error_message`列已被删除，并已合并到`error`列（这是一个结构）。所以现在查询应该用`WHERE error is not null`而不是用`WHERE error_index is not null`。
 * 包含`account_keys`索引的结构现在直接包含帐户地址，因此无需再使用`account_keys`列来查找帐户地址：
 
