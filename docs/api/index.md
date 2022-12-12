@@ -37,26 +37,10 @@ If you're a startup founder, researcher, or protocol who would like access now, 
 ### Picking a Programming Language
 While you can consume our API in the language of your choice - see the [API Reference](api-reference/authentication.md) section - we currently have quick start guides for [Python](quick-start/api-py.md) and [Node.js](quick-start/api-js.md).
 
-### What can I build with the Dune API?
-With Dune, you have access to almost all of the data from today's most popular blockchain ecosystems. There is no limit to what you can build on top of this data!
+### What are some Use Cases for the Dune API?
+The Dune API can be a replacement to the heavy investment you make on building your Data Engineering Teams and the countless hours those teams spend on indexing nodes or engineering data pipelines through multiple providers.
 
-With so many possibilities, it can be challenging to figure out what to work on at times, so here are some ideas to help you ideate:
-
-#### New Kinds of Interfaces for Blockchain Data
-
-Our community champion [@0xBoxer](https://dune.com/0xBoxer) has this [tutorial](https://youtu.be/ez3VfcfNwvc) where he walks us through creating a [dashboard](https://dune.com/0xBoxer/gas-tracker-dashboard) for personalized metrics for any wallet.
-
-With the Dune API it's possible to build a much nicer interface for this or any dashboard on Dune inside of your own super-smooth, super-cool app UX.
-
-Or Excel, Google sheets, Notion Pages, Discord Bots, Telegram Bots, there are no limits.
-
-With the API, the Data Can Flow anywhere!
-
-#### Real World Examples from Cow Protocol
-
-[@bh2smith](https://dune.com/bh2smith) from our community (and [Cow Protocol](https://dune.com/cowprotocol)), gave a talk Thursday at [DuneCon](https://dunecon.com) where he walked us through some real-world examples of how Cow Protocol has been using the API.
-
-[Check out the replay here](https://youtu.be/VEvk-iqxXIM?t=404)!
+With Dune, you have access to almost all of the data from today's most popular blockchain ecosystems. We have specailly curated [this page](quick-start/api-use-cases.md) with examples of how our early adopters have already using the Dune API to efficiently meet their data requirements and/ or their data infrastucure needs.
 
 ## Important Links
  - API Documentation - you're already here, check out the sidebar to learn more!
