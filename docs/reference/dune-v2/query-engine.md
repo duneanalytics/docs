@@ -10,46 +10,6 @@ With Dune V2 we’re moving away from a [PostgreSQL](https://www.postgresql.org/
 1. Spark SQL - [Apache Spark](https://www.databricks.com/glossary/what-is-apache-spark) hosted on [Databricks](https://docs.databricks.com/getting-started/introduction/index.html).
 2. Dune SQL - A self hosted instance of [Trino](https://trino.io/)(**currently in alpha**). 
 
-As Dune usage has increased, our data access pattern has become quite clear: Dune writes data Once and wizard query it millions of times.
-
-In order to scale Dune to meet the demand for query execution, we need to decouple data storage from the computation of queries - something that can’t be done in PostgreSQL.
-
-As we experimented with solutions internally, we built a new system around the [Delta framework](https://delta.io/) and used Spark for parallel processing of that data.
-
-During experimentation, we began ingesting Solana data. Since solana.transactions is about 100x the size of ethereum.transactions, it was both a primary reason we needed to upgrade our systems (there’s no way Postgres could handle this) and the perfect test candidate.
-
-We saw some great wins in how quickly and flexibly we could write and store data but when it came time to start sharing access to Solana data we faced a dilemma.
-
-As we were focused on optimizing the ingesting and storing of this data, we did not spend a lot of time upgrading our infrastructure for querying that data.
-
-When we asked ourselves whether we should spend months figuring out how to improve our querying infrastructure or get Solana data in the hands of our community ASAP, we chose the latter - which meant shipping Dune V2 in beta with Spark SQL as our query engine.
-
-Now that we have a massive amount of usage data (compared to our internal testing), cracks have appeared that weren’t evident to us pre-launch.
-
-As things stand:
-
-* A range of queries that performed super well on v1, now take minutes on V2 (looking at you WHERE tx_hash = y). Part of this is clearly the tradeoff we’ve made in laying out our data in columnar form, as opposed to in rows, but that doesn’t fully explain the latency.
-* V2 (Beta) lacks support for user defined functions, views, tables, and it’s not easy for Dune to enable that functionality in a way that’s safe and helpful to users in Spark.
-* Because the Spark clusters are outsourced, we have trouble scaling them, and tuning them. It’s also not possible for us to improve performance or fix bugs without waiting for months for someone to [merge them](https://github.com/delta-io/delta/pull/1210).
-* We oftentimes find ourselves without visibility into the health of the query engine, which has lead to us being unable to resolve confusion for ourselves or the community when some queries have failed.
-
-As a result of these challenges, we’ve been internally researching how to fundamentally improve our V2 query experience and after a few breakthroughs, we’ve developed what Dune SQL, powered by a self-hosted instance of [Trino](https://trino.io/). 
-
-And as a step toward resolving some of the communication errors we made with the initial Spark SQL launch, we’re emphasizing that **Dune SQL is currently in alpha**.
-
-This means:
-
-* While we strongly believe Dune SQL/Trino is the long term solution for creating the best blockchain data querying experience in the world, it isn’t there yet - with your help we’ll break lots of things and use what we learn to continuously build a better system.
-* While we have a timeline for [Sunsetting Dune V1 (PostgreSQL)](../v1-sunsetting.md), we do not have one for fully transitioning from Spark to Dune SQL and will work with the community to decide when and how that transition will take place to move forward with [Speed](https://www.notion.so/Values-and-working-at-Dune-7efdcec2298a4913aaef8067b25820df#ffc480bf5c5e4e38a1c53d2fb9926e3e) and transparency.
-
-## Joining the SQL revolution
-
-We’re excited to have you join the SQL revolution with us as we make Dune SQL the absolute best blockchain querying experience around.
-
-To help out as an alpha tester, you’ll first need to create a separate account at [https://dev.dune.com/](https://dev.dune.com/).
-
-There you’ll find Dune SQL as an option in the Query Explorer, and right off the bat you should see some improvements over Spark SQL ([incomplete & cryptic error messages](https://dev.dune.com/queries/59553) or [0x strings](https://dev.dune.com/queries/59390), we’re looking at you).
-
 ## Syntax and operator differences
 
 The syntax and keyword operator differences between Postgres, Spark, and Dune SQL are quite minimal, however there are a few to be aware of.
@@ -65,7 +25,7 @@ The syntax and keyword operator differences between Postgres, Spark, and Dune SQ
 | **0 vs 1 array based indexing** | 1 indexed | 0 indexed | 1 indexed |
 | **Implicit type conversions between character and numeric types** | Available | Available | [Not available](https://trino.io/docs/current/functions/conversion.html) |
 | **Addresses** | `\x2A7D...`(bytea)<br><br>Works in Postgres | `0x2a7d...` (string)<br><br>Has to be lowercase in Spark.<br><br>Can be done via `lower('0x2A7D...')` | `0x2a7d...` (Byte array) <br><br> No escape quotes should be used, and the literal does __not__ need to be lowercased. |
-| **Selecting keyword columns is different** | "from" | \`from\` | "from" |
+| **Selecting keyword columns is different** | "from" | 'from' | "from" |
 | **Alias naming is different** | as "daily active users" | as \`daily active user\` | as "daily active users" |
 | **Exponentiation notation** | `x/10^y` or `x * 1e123` | `x*power(10,y)` or `x*1e123` | `x*power(10,y)` or `x * 1e123` |
 | **Interval argument has different syntax** | `Interval '1day'` | `Interval '1 day'` | `Interval '1' day` |
