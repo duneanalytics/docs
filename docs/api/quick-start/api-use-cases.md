@@ -29,10 +29,10 @@ Using the Dune API to make the data flow to non-technical power users and decisi
 
 Again, using the Dune API to empower a much wider range of users with Open Data.
 
-Our beta users have been so promising that we might in fact launch a special program for Startups to build with the Dune API. Stay tuned on our [socials](dune.com/community) for any updates.
+Our beta users have been so promising that we might in fact launch a special program for Startups to build with the Dune API. Stay tuned on our [socials](https://dune.com/community) for any updates.
 
 ### Hackathon Projects
 
 The Dune API got used by hackers at EthBerlin, EthSF and EthIndia in 2022. We had 63 submissions across these events. If you are a builder or a wizard and want to start tinkering with the API. Checkout some of the work our bounty winners from these hackathons have worked on.
- - [Eth Berlin](https://twitter.com/DuneAnalytics/status/1571564677968105472)
- - [Eth SF](https://twitter.com/dvdkll/status/1599385593892347905)
+ * [Eth Berlin](https://twitter.com/DuneAnalytics/status/1571564677968105472)
+ * [Eth India](https://twitter.com/dvdkll/status/1599385593892347905)
