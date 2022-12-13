@@ -26,7 +26,7 @@ SLA将在未来的企业定价计划中提供。
 
 API 确实支持查询参数!
 
-对于包含参数的 Dune 查询，你可以将参数作为 Dune 查询的一部分来传递 [执行查询ID的接入点](../../api/api-reference/execute-query-id.md)!
+对于包含参数的 Dune 查询，您可以将参数作为 Dune 查询的一部分来传递 [执行查询ID的接入点](../../api/api-reference/execute-query-id.md)!
 
 更多内容请见 [创建带参数的 Dune 查询](../../getting-started/queries/parameters.md).
 
@@ -36,7 +36,7 @@ API 确实支持查询参数!
 
 两者之间没有太大的性能差异或可读取的内容差异。
 
-Dune API 只是让你以编程方式读取已经可以从 Dune Web 应用访问的功能和数据集。
+Dune API 只是让您以编程方式读取已经可以从 Dune Web 应用访问的功能和数据集。
 
 ### 执行超时的限制是多久，我能否要求延长？
 

@@ -19,4 +19,4 @@
 
 [了解以太坊上的事件日志](https://medium.com/mycrypto/understanding-event-logs-on-the-ethereum-blockchain-f4ae7ba50378)
 
-[关于以太坊上的事件和日志你想知道的一切](https://medium.com/linum-labs/everything-you-ever-wanted-to-know-about-events-and-logs-on-ethereum -fec84ea7d0a5)
+[关于以太坊上的事件和日志您想知道的一切](https://medium.com/linum-labs/everything-you-ever-wanted-to-know-about-events-and-logs-on-ethereum -fec84ea7d0a5)

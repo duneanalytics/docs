@@ -24,6 +24,7 @@ Some data sets will have multiple blockchain icons - meaning data from each of t
 | ![arbitrum icon](images/arbitrum-icon.png) | Arbitrum blockchain Raw Data, Decoded Project, or Spell |
 | ![avalanche icon](images/avalanche-icon.png) | Avalanche C-Chain Raw Data, Decoded Project, or Spell |
 | ![goerli testnet icon](images/goerli-testnet-icon.png) | Ethereum Goerli Testnet Raw Data, Decoded Project, or Spell |
+| ![fantom icon](images/fantom-icon.png) | Fantom Raw Data, Decoded Project, or Spell |
 
 ## Dataset Icons
 

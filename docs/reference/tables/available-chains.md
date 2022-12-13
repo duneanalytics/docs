@@ -52,6 +52,9 @@ Polygon follows all the rules of ETH mainnet and querying on Dune works exactly 
     
     ![optimism icon](../images/optimism-icon.png)
 
+!!! warning
+    Due to an error with the current version of the Optimism client, we're missing about 235k Optimism blocks with no current timeline for a fix. [See the list of the exact missing blocks here](optimism-missing-blocks.csv).
+
 Optimism is a Layer 2 Optimistic Rollup network designed to utilize the strong security guarantees of Ethereum while reducing its cost and latency. Optimism processes transactions outside of Ethereum Mainnet, reducing congestion on the base layer and improving scalability. For a Deep Dive into Optimism, we recommend reading through their [Documentation](https://community.optimism.io/docs/how-optimism-works).
 
 Optimism differs in it's EVM implementation in the calculation of gas costs, since it also needs to pay for L1 resources.
@@ -186,3 +189,9 @@ Working with the C-Chain on Dune works exactly like querying Ethereum mainnet da
 Created in September 2018 during ETHBerlin, [Goerli Testnet](https://goerli.net/) was the first proof-of-authority cross-client testnet, synching Parity Ethereum, Geth, Nethermind, Hyperledger Besu (formerly Pantheon), and EthereumJS.
 
 This is the perfect solution for dapp developers looking to get stats before you launch on mainnet!
+
+## Fantom
+
+[Fantom](https://fantom.foundation/) is a layer 1 blockchain offering smart contract functionality.
+
+It uses a Directed Acyclic Graph, which involves the seamless interaction of nodes in the network to ensure fast and secure transactions.

@@ -6,7 +6,7 @@ description: Dune Premium accounts let you access a host of additional features,
 
 Whether you're a basement degen or Blackrock VP, Dune has you covered with our Premium plans!
 
-Dune pro 让你获得大量的高级功能，包括：
+Dune pro 让您获得大量的高级功能，包括：
 
 - 私人查询和看板
 - 导出 CSV 文件
