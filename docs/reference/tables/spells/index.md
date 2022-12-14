@@ -42,7 +42,7 @@ Our Spells are managed via the public [Spellbook GitHub repository](https://gith
 
 ## Abstractions (Dune V1 PostgreSQL)
 
-For our **V1 Engine** (PostgreSQL), abstractions are snippets of SQL executed the data platform. You can check for existing abstractions on [GitHub](https://github.com/duneanalytics/spellbook/tree/main/deprecated-dune-v1-abstractions).
+For our **V1 Engine** (PostgreSQL), abstractions are snippets of SQL executed the data platform. You can check for existing abstractions on [GitHub](https://github.com/duneanalytics/dune-v1-abstractions).
 
 You can check for existing abstractions in our [public github repository](https://github.com/duneanalytics/spellbook/index.md), under `deprecated-dune-v1-abstractions`.
 
