@@ -15,6 +15,9 @@ For this guide, we’re going to make a migration Spell - translating the Keep3r
 
 Inside VSCode, find the “deprecated-dune-v1-abstractions” folder then dig down to find the “view_job_log.sql” file.
 
+!!! note
+    [Dune V1 Abstractions have been moved to this repository](https://github.com/duneanalytics/dune-v1-abstractions), which you'll now need to clone in order to access the code for migrating a V1 Abstraction to a Spell.
+
 This should be the full path: 
 
 `[folder you cloned spellbook to]/deprecated-dune-v1-abstractions/ethereum/keep3r_network/view_job_log.sql`

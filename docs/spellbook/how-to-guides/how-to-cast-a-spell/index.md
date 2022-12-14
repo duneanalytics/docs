@@ -188,6 +188,9 @@ Now that you know the what and why, let’s look at the how.
 
 By the end of this guide, you’ll be an Archwizard ready to make a massive contribution to the web3 data community and able to claim some lucrative Spellbook bounties.
 
+!!! note
+    [Dune V1 Abstractions have been moved to this repository](https://github.com/duneanalytics/dune-v1-abstractions), which you'll now need to clone in order to access the code for migrating a V1 Abstraction to a Spell like we do in the following steps.
+
 8 steps to go:
 
 <div class="cards grid" markdown>
