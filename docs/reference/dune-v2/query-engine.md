@@ -40,6 +40,7 @@ The syntax and keyword operator differences between Postgres, Spark, and Dune SQ
 | **Explode** | `SELECT unnest(array) FROM table` | `SELECT explode(array) FROM table` | `SELECT vals.val FROM table1, unnest(arrayFromTable1) as vals(val)`<br><br>you have to use `unnest` with a `cross join`, as described in this [blog post](https://theleftjoin.com/how-to-explode-arrays-with-presto/). |
 | **Median** | `PERCENTILE_CONT(0.5) WITHIN GROUP(ORDER BY x)` | `PERCENTILE_CONT(0.5) WITHIN GROUP(ORDER BY x)` | `approx_percentile(x, 0.5)` |
 | **Using “is True/False”** | `X is true` | `X is true` | `X = true` |
+| **String Data Type** | `varchar` | `string` | `varchar` |
 
 ### Double quotes are not recommended
 
