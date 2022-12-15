@@ -37,3 +37,15 @@ yarn add @cowprotocol/ts-dune-client
 Dune team member [@theedgeofrage](https://dune.com/theedgeofrage) built [a Go client you can find on GitHub here](https://github.com/duneanalytics/duneapi-client-go/).
 
 [There's also more advanced documentation here](https://pkg.go.dev/github.com/duneanalytics/duneapi-client-go).
+
+## Dune Ruby client
+
+[@shellandbull](https://github.com/shellandbull) built the Ruby client, available in [RubyGems](https://rubygems.org/gems/dune)
+
+To install add the following line to your `Gemfile`
+
+```ruby
+gem "dune"
+```
+
+Then run `$ bundle install` from your terminal
