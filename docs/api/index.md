@@ -37,11 +37,6 @@ If you're a startup founder, researcher, or protocol who would like access now, 
 ### Picking a Programming Language
 While you can consume our API in the language of your choice - see the [API Reference](api-reference/authentication.md) section - we currently have quick start guides for [Python](quick-start/api-py.md) and [Node.js](quick-start/api-js.md).
 
-### What are some Use Cases for the Dune API?
-The Dune API is a great alternative to heavily investing in building your own Data Engineering team that saves countless hours spent indexing nodes and engineering data pipelines through multiple providers.
-
-With Dune, you have access to almost all data from today's most popular blockchain ecosystems. We have specailly curated [this page](quick-start/api-use-cases.md) with examples of how our early adopters are already using the Dune API to efficiently meet their data requirements and/or their data infrastucure needs.
-
 ## Important Links
  - API Documentation - you're already here, check out the sidebar to learn more!
  - [#dune-api Discord Channel](https://discord.com/channels/757637422384283659/1019910980634939433)
