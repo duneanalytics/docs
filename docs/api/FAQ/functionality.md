@@ -8,7 +8,7 @@ description: Answers to questions about how the Dune API works.
 
 ### How many Requests Per Minute can I make?
 
-The API is currently set to a rate limit of 40 requests per minute. This will ultimately vary with the introduction of our API plans of varying tiers. Please reach out to our API team if you require higher throughput in the interim!
+The API is currently set to a rate limit of 60 requests per minute. This will ultimately vary with the introduction of our API plans of varying tiers. Please reach out to our API team if you require higher throughput in the interim!
 
 ### Are there specified SLAs?
 
@@ -34,9 +34,9 @@ And learn how to pass parameter data using [cURL here](../../api/api-reference/e
 
 ### What are the performance and overall differences between the Dune API and the Dune web app? What are the differences in what I can query?
 
-There are no major performance differences or differences in what can be accessed between the two.
+There are no major performance differences or differences in what can be accessed between the two if both are using the same app plan tier.
 
-The Dune API simply gives you programmatic access to the capabilities and data sets that can already be accessed from the Dune web app.
+The Dune API gives you programmatic access to the capabilities and data sets that can already be accessed from the Dune web app.
 
 ### What is the execution timeout limit and can I request a longer limit?
 
@@ -50,7 +50,9 @@ We don’t have a committed timeline yet, but this is tentatively planned to be 
 
 ### Can I query using both Dune v2 Engine and the original v1 databases?
 
-Currently yes, but we’re slowly deprecating usage and support of the old engine, so we recommend using the new Dune v2 Engine as much as possible.
+Currently yes, but we’re slowly deprecating usage and support of the old v2 engine, so we recommend using the new Dune Engine v2 (Spark SQL) as much as possible.
+
+Dune Engine v2 (Dune SQL) is still in alpha and it's recommended to postpone using this query engine for critical API use cases until mid Feb 2023.
 
 ## Check Execution Status
 
@@ -76,4 +78,4 @@ Currently set to 2 years but we may reduce this to something closer to 90 days i
 
 ### How much data can I retrieve in a single API result call?
     
-There is currently a 500MB limit, but there is a chance we increase this for certain paid plans. The API does not currently return an explicit error upon hitting this limit but will instead fail (timeout) when attempting to retrieve the results.
+There is currently a 250MB limit, but there is a chance we increase this for certain paid plans. The API does not currently return an explicit error upon hitting this limit but will instead fail (timeout) when attempting to retrieve the results.
