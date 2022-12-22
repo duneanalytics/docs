@@ -17,8 +17,8 @@ This table contains information from the transactions table focused on account u
 | signed                     | boolean     | This account signed this transaction                             |
 | writeable                  | boolean     | This account was granted read-write access in this transaction   |
 | pre\_balance               | bigint      | The balance of this account before the transaction was processed |
-| pre\_token\_\_\_balance    | decimal     | The token balance before the transaction was processed           |
+| pre\_token\_balance    | decimal     | The token balance before the transaction was processed           |
 | post\_balance              | bigint      | The balance of this account after the transaction was processed  |
-| post\_token\_\_\_balance   | decimal     | The token balance after the transaction was processed            |
+| post\_token\_balance   | decimal     | The token balance after the transaction was processed            |
 | balance\_change            | bigint      | The balance change that occurred as part of the transaction      |
-| token\_balance\_\_\_change | decimal     | The balance change that occurred as part of the transaction      |
+| token\_balance\_change | decimal     | The balance change that occurred as part of the transaction      |

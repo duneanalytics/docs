@@ -21,7 +21,6 @@ Read more in the official Ethereum documentation [here](https://ethereum.org/en/
     | Optimism          | `optimism.transactions`     | No EIP1559 so does not contain  `access_list`, `max_fee_per_gas`,`max_priority_fee_per_gas`, `priority_fee_per_gas` and `type` is always `Legacy` |
     | Optimism (legacy) | `optimism_legacy_ovm1.transactions` | No EIP1559 so does not contain  `access_list`, `max_fee_per_gas`,`max_priority_fee_per_gas`, `priority_fee_per_gas` and `type` is always `Legacy` |
     | BNB Chain         | `bnb.transactions`          | No EIP1559 so does not contain  `access_list`, `max_fee_per_gas`,`max_priority_fee_per_gas`, `priority_fee_per_gas` and `type` is always `Legacy` |
-    | Solana            | `solana.transactions`       |  |
     | Arbitrum          | `arbitrum.transactions`     | No EIP1559 so does not contain  `access_list`, `max_fee_per_gas`,`max_priority_fee_per_gas`, `priority_fee_per_gas` and `type` is always `Legacy`. Gas is measured in `ArbGas` instead of `wei` |
     | Avalanche C-Chain  | `avalanche_c.transactions` | Does not contain. Gas is measured in `nanoavax` instead of `wei` |
 

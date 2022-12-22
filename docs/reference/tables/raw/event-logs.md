@@ -26,7 +26,6 @@ For more on this topic read [this article](https://medium.com/mycrypto/understan
     | Optimism          | `optimism.logs`     |       |
     | Optimism (legacy) | `optimism_legacy_ovm1.logs` |       |
     | BNB Chain         | `bnb.logs`          |       |
-    | Solana            | `solana.logs`       |       |
     | Arbitrum          | `arbitrum.logs`     |       |
     | Avalanche C-Chain  | `avalanche_c.logs` |       |
     

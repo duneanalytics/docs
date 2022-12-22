@@ -19,7 +19,6 @@ These tables are useful for identifying block activity and transaction changes o
     | Optimism          | `optimism.blocks`    | Does not contain `miner` `nonce` `base_fee_per_gas`   |
     | Optimism (legacy) | `optimism_legacy_ovm1.blocks` | Does not contain `miner` `nonce` `base_fee_per_gas` |
     | BNB Chain         | `bnb.blocks`         | Does not contain `base_fee_per_gas`                   |
-    | Solana            | `solana.blocks`      | [Find details here](../raw/solana/blocks.md)
     | Arbitrum          | `arbitrum.blocks`    | Does not contain `miner` `difficulty` `total_difficulty` `nonce` `size` `base_fee_per_gas` |
     | Avalanche C-Chain  | `avalanche_c.blocks` | Does not contain `miner` `difficulty`                 |
     
