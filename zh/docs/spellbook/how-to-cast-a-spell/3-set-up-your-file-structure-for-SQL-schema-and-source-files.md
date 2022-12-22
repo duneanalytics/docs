@@ -21,14 +21,14 @@ description: 接下来，让我们检查项目的现有文件夹，如果不存�
 
 1. 我们的 Spell 逻辑所在的 `.sql` 文件。
 2. 一个 `_schema.yml`文件，我在其中定义我的魔法表的目的并添加通用测试、描述、元数据等。
-3. 包括任何特定于项目的表依赖项的 `_sources.yml` 文件。
+3. 包括任何特定于项目的表依赖源的 `_sources.yml` 文件。
 
 ![spell folder file structure](images/spell-folder-file-structure.jpg)
 
 魔法表文件命名如下：
 
 * 对于模式文件：`[project_name]_[blockchain]_schema.yml`
-* 对于依赖项文件：`[project_name]_[blockchain]_sources.yml`
+* 对于依赖源文件：`[project_name]_[blockchain]_sources.yml`
 * 对于魔法表的SQL文件：`[project_name]_[blockchain]_[spell_name].sql`
 
 在这个特定的从 v1 迁移示例中，我们还需要创建 3 个额外的 `.sql` 文件，`keep3r_network_ethereum_view_job_log.sql` 依赖于这些文件。
