@@ -1,18 +1,18 @@
 ---
-title: 5. 🧪 Define Expectations with Schema and Tests
-description: Next, we define what success means for our Spell in two ways.
+title: 5. 🧪 使用模式和测试定义期望输出
+description: 接下来，我们通过两种方式定义成功的魔法表需要输出什么。
 ---
 
-Next, we define what success means for our Spell in two ways:
+接下来，我们通过两种方式定义成功的魔法表需要输出什么：
 
-1. A schema of columns to output.
-2. A unit test to ensure accurate data is being outputted to those columns.
+1. 要输出的列模式。
+2. 确保将准确数据输出到这些列的单元测试。
 
-## Defining schema
+## 定义模式（schema）
 
-First, we start by defining our model’s schema - what columns should be outputted for each of the .sql files in our Spell.
+首先，我们从定义模型的模式开始——应该为我们的魔法表中的每个 .sql 文件输出哪些列。
 
-Our `_schema.yml` files are structured like this:
+我们的 `_schema.yml` 文件结构如下：
 
 ```sls
 
@@ -70,52 +70,52 @@ models:
 
 ```
 
-!!! note
-    “&” is used for the first definition of a column and “*” thereafter will lead to a column with the same name in a different model inheriting the same name, description, and generic tests.
+!!! 注意
+    “&”用于某个列的第一个定义，之后的“*”将导致在不同模型中具有相同名称的列继承相同的名称、描述和通用测试。
 
-Each of the SQL files we created in our fourth step is a model here, with each of the columns we want to output named and described along with a mention of any generic tests that they should be checked against.
+我们在第四步中创建的每个 SQL 文件在这里都是一个模型，我们要输出的每个列都被命名和描述，并相应地提及应该用于检查它们的任何通用测试。
 
-[Check out the Keep3r Spell schema here for what that looks like when finished in our example](https://github.com/duneanalytics/spellbook/blob/b9260a03351e562448c5c9e62529da7b2d94ca59/models/keep3r_network/ethereum/keep3r_network_ethereum_schema.yml).
+[在此处查看 Keep3r 魔法表的模式，了解我们的示例完成后的样子](https://github.com/duneanalytics/spellbook/blob/b9260a03351e562448c5c9e62529da7b2d94ca59/models/keep3r_network/ethereum/keep3r_network_ethereum_schema.yml).
 
-## Set up unit test seed file structure
+## 设置单元测试种子文件结构
 
-With our schema set up, we’re ready to define our [Unit Tests](https://en.wikipedia.org/wiki/Unit_testing) - which will help us ensure our Spells work as intended.
+设置模式后，我们就可以定义我们的[单元测试](https://en.wikipedia.org/wiki/Unit_testing) - 这将帮助我们确保魔法表按预期工作。
 
-This starts with setting up a seed file structure.
+从设置种子文件结构开始。
 
-In dbt, [seed files are CSVs](https://docs.getdbt.com/docs/build/seeds) that we use to store reference data we can use in our Spells and unit tests; in this case, we’ll use it to store some data we can use to validate our Spell is WAI.
+在 dbt 中，[种子文件是 CSV](https://docs.getdbt.com/docs/build/seeds)，我们用来存储我们可以在魔法表和单元测试中使用的参考数据；在这种情况下，我们将使用它来存储一些数据，我们可以使用这些数据来验证我们的魔法表是否符合网络无障碍倡议（WAI）。
 
-Navigating to the `/seeds` folder, just like we do for new projects, we’ll create a `/[project_name]/[blockchain]` subfolder.
+导航到 `/seeds` 文件夹，就像我们对新项目所做的那样，我们在这里创建一个 `/[project_name]/[blockchain]` 子文件夹。
 
-So in our Keep3r example `/seeds/keep3r_network/ethereum`
+在我们的 Keep3r 示例中，文件夹路径是`/seeds/keep3r_network/ethereum`
 
-With that in place, we need to create a CSV file with a descriptive name using this format:
+有了它，我们需要使用以下格式创建一个具有描述性名称的 CSV 文件：
 
 `[project_name]_[blockchain]_[spell_name]_test_data.csv`
 
-So in our example:
+在我们的例子中则是：
 
 `keep3r_network_ethereum_view_job_log_test_data.csv`
 
-## Finding expected values for unit tests
+## 查找单元测试的预期值
 
-Our unit tests will be run against a list of expected values, essentially we want to check to make sure our Spell delivers the results it should.
+我们的单元测试将针对预期值列表运行，本质上我们要检查以确保我们的魔法表提供应有的结果。
 
-What results should we expect?
+我们应该期待什么结果？
 
-To figure that out we’ll need to learn a bit more about Keep3r network by reading through their website, docs, Medium blog, asking in their discord, etc.
+为了弄清楚这一点，我们需要通过阅读 Keep3r 的网站、文档、Medium 博客、在他们的 discord 中提问等来更多地了解 Keep3r 网络。
 
-For our example, the important thing to know is that Keep3r network is a marketplace for posting and accepting jobs to help run decentralized infrastructure.
+对于我们的例子，重要的是要知道 Keep3r 网络是一个发布和接受工作以帮助运行去中心化基础设施的市场。
 
-Jobs on the Keep3r network are smart contracts that need Keepers to do something outside of their internal logic. Doing these tasks results in the Keeper being rewarded.
+Keep3r 网络上的工作是智能合约，需要 Keepers 在其内部逻辑之外做一些事情。 完成这些任务会使 Keeper 获得奖励。
 
-Based on this understanding we can write a test where, given a transaction hash, we can see the amount that was awarded for the job, the keeper who received it, and which token they were paid in.
+基于此理解，我们可以编写一个测试。在其中，给定一个交易哈希，我们可以看到为该工作支付的奖励金额、收到奖励的Keeper是谁以及他们收到的代币是什么。
 
-So in our CSV file, we start by defining the columns we’ll have test data to validate against, in this case: `tx_hash`, `amount`, ` keeper`, and `token`.
+因此，在我们的 CSV 文件中，我们首先定义要验证的测试数据列，在本例中为：`tx_hash`、`amount`、`keeper` 和 `token`。
 
-Next, we’ll find a few specific transactions, 3 is enough, and add the actual data that should be in each of those columns.
+接下来，我们将找到一些特定的交易，3 个就足够了，然后添加应该在每一列中的实际数据。
 
-The result is something like this:
+结果如下：
 
 ```csv
 
@@ -129,33 +129,34 @@ tx_hash,amount,keeper,token
 
 ```
 
-## Writing unit tests
+## 编写单元测试
 
-Now that we have expected results to test against, we can write our unit test!
+现在我们已经有了要测试的预期结果，我们可以编写单元测试了！
 
-First, as you might expect, we create a folder structure in the `/tests` folder, as well as a SQL file for our test.
+首先，如您所料，我们在 `/tests` 文件夹中创建一个文件夹结构，以及一个用于测试的 SQL 文件。
 
 Same naming conventions as before for the folders, for our SQL file we’ll name it `[project_name]_[spell_name]_test.sql`
+文件夹的命名约定与之前相同。对于我们的 SQL 文件，我们将其命名为 `[project_name]_[spell_name]_test.sql`。
 
-So:
+即:
 
 `/keep3r_network/ethereum/keep3r_network_view_job_log_test.sql`
 
 ![keep3r test file](images/keep3r-test-file.jpg)
 
-To write our unit test, we’re going to check to ensure the results from the Spell we’ll (finally) define in the next step matches the real-world results we added to our expected values seed file.
+为了编写单元测试，我们将检查以确保我们将（最终）在下一步中定义的魔法表的结果与我们添加到预期值种子文件中的真实结果相匹配。
 
-To do this, we’ll define a [Common Table Expression](https://learnsql.com/blog/cte-with-examples/) (CTE) called `unit_test`, joining our test and actual results data, and comparing that data returning errors if they don’t match.
+为此，我们将定义一个名为 `unit_test` 的[通用表表达式（CTE）](https://learnsql.com/blog/cte-with-examples/)，连接我们的测试和实际结果数据，并进行比较。如果不匹配，该数据将返回错误。
 
-Here’s what the unit test for this example looks like, with comments explaining what’s going on:
+下面是这个例子的单元测试的样子，注释解释了详情：
 
 ```sql
 
--- CTEs are created using WITH statements
+-- CTEs 使用 WITH 语句创建
 
 WITH unit_test AS (
 
-    -- Here we compare test data to actual data, returning TRUE if it matches and FALSE if not; ROUND and LOWER ensure we don’t get false errors due to formatting differences.
+    -- 这里我们将测试数据与实际数据进行比较，匹配则返回TRUE，不匹配则返回FALSE。ROUND 和 LOWER 确保我们不会因格式差异而出现错误。
 
     SELECT
 
@@ -205,7 +206,7 @@ WITH unit_test AS (
 
         END AS token_test
 
-   /* Here we JOIN our actual and test data on tx_hash. Note for “actual” we reference our actual Spell model file, and our test data file for “test.” The {{}} is JINJA templating we’ll cover later. */
+   /* 在这里，我们使用 tx_hash 值来连接实际数据和测试数据。 注意“actual”我们引用我们实际的魔法表模型文件，以及我们的“test”测试数据文件。 {{}} 是 JINJA 模板，我们稍后会介绍。*/
 
     FROM
 
@@ -225,7 +226,7 @@ WITH unit_test AS (
 
 )
 
--- Loading all columns from unit_test, we return any FALSE results
+-- 从 unit_test 加载所有列，我们返回任何 FALSE 结果
 
 SELECT
 

@@ -1,60 +1,60 @@
 ---
-title: 7. 🎨 Configure Alias and Materialization Strategy
-description: With our Spell’s SQL defined, it’s time to configure our aliases.
+title: 7. 🎨 配置别名和物化策略
+description: 定义了魔法表的 SQL 后，就该配置我们的别名了。
 ---
 
-With our Spell’s SQL defined, it’s time to configure our aliases so we can refer to these files in other Spells and Queries and how we want dbt to materialize our work.
+定义了魔法表的 SQL 后，就可以配置我们的别名了。这样我们就可以在其他魔法表和查询中引用这些文件，以及我们希望 dbt 如何物化我们的工作。
 
-## dbt materialization
+## dbt 物化（materialization）
 
-In dbt, [materializations](https://docs.getdbt.com/docs/build/materializations) are strategies for persisting our data inside of our data lake house.
+在 dbt 中，[物化](https://docs.getdbt.com/docs/build/materializations) 是将数据保存在我们的数据湖仓库的策略。
 
-There are 4 materialization strategies in dbt:
+dbt中有4种物化策略：
 
 * `table`
 * `ephemeral`
 * `view`
 * `incremental`
 
-For Spellbook, we just use `view` and `incremental`.
+对于魔法书，我们只使用 `view` 和 `incremental`策略。
 
-### `view`
+### `view` 视图
 
-`view` is the default materialization strategy in Spellbook - so we don’t need to specify it as our strategy in the Spells that use it.
+`view` 是魔法书中的默认物化策略 - 因此不需要在使用它的魔法表中将其指定为我们的策略。
 
-These Spells are rebuilt each time they are run, meaning every time someone queries a `view` Spell, the SQL is run meaning fresh data is gathered according to our Spell’s SQL logic.
+这些魔法表每次运行时都会重建，这意味着每次有人查询 `view` 魔法表时，都会运行 SQL，这意味着根据我们魔法表的 SQL 逻辑收集最新数据。
 
-Basically, `view` Spells are just stored SQL logic, no additional data is stored as part of the Spell.
+基本上，`view` 魔法表只是存储的 SQL 逻辑，没有额外的数据作为魔法表的一部分存储。
 
-The Pro is that `view` Spells always have fresh data, the Con is that they can take a long time to run if there’s a lot of data involved.
+优点是 `view` 魔法表总是有新鲜数据，缺点是如果涉及大量数据，它们可能需要很长时间才能运行完成。
 
-### `incremental`
+### `incremental` 增量
 
-`incremental` Spells allow dbt to insert or update records in a table according to the logic we define.
+`incremental` 魔法表允许 dbt 根据我们定义的逻辑在表中插入或更新记录。
 
-The benefit is that these Spells can run faster, though their data won’t be as fresh as `view` Spells.
+好处是这些魔法表可以运行得更快，尽管它们的数据不会像 `view` 魔法表那样新鲜。
 
-To create an `incremental` Spell, in the Config section of our file we need to include
+要创建 `incremental` 魔法表，我们需要在文件的配置部分中添加一些内容：
 
 ```sql
 
--- a statement of which column we should join new data to our existing data each time we increment; in this example, we use block_date and that’s often the best to use
+-- 每次递增时我们应该将新数据连接到现有数据中的哪一列的声明； 在此示例中，我们使用 block_date，这通常是最好的使用方式
 
 partition_by = ['block_date'],
 
--- here we specify that this is an incremental Spell
+-- 这里我们指定这是一个增量（incremental）魔法表
 
 materialized = 'incremental',
 
--- an instruction for how dbt should combine new/old data; use ‘merge’
+-- 有关 dbt 应如何组合新/旧数据的说明；这里我们使用“merge”
 
 incremental_strategy = 'merge',
 
 ```
 
-We also need to add `if` statements to any `FROM` for which we want to increment data.
+我们还需要将 `if` 语句添加到我们想要为其递增数据的任何 `FROM` 中。
 
-In this example, where we `partition_by = ['block_date']`, we’ve added ifs that will refresh data that’s more than a week old:
+在这个例子中，我们在 `partition_by = ['block_date']` 中添加了if语句来刷新一周以内的数据：
 
 ```sql
 {% if is_incremental() %}
@@ -64,37 +64,37 @@ In this example, where we `partition_by = ['block_date']`, we’ve added ifs tha
 {% endif %}
 ```
 
-## Configuring aliases and materialization
+## 配置别名和物化
 
-To configure your Spell’s alias and materialization, you’ll add this configuration to the top of each of your SQL files.
+要配置魔法表的别名和物化，您需要将这些配置项添加到每个 SQL 文件的顶部。
 
-Note, this assumes we’re using a `view` materialization strategy; see above for how to implement `incremental` strategies.
+请注意，这里假设我们正在使用 `view` 物化策略；有关如何实施 `incremental` 策略的信息，请参见上文。
 
 ```sql
 {{ config (
 
-    -- create an alias for your Spell file that will appear in the dune.com UI
+    -- 为将出现在 dune.com 用户界面中的魔法表文件创建一个别名
 
     alias = 'job_log',
 
-    -- this further defines how this file is stored and categorized in the UI, starting with what blockchain it’s associated with
+    -- 这进一步定义了该文件如何存储和在 UI 中被分类，首先是它与哪个区块链相关联
 
     post_hook = '{{ expose_spells(\'["ethereum"]\',
 
 
-         -- then we define whether this is a Spell for a specific project or a whole sector
+         -- 然后我们定义这是针对特定项目还是整个行业的魔法表
 
 
         "project", 
 
 
-         -- next, we name the project/sector
+         -- 接下来，我们命名项目/行业
 
 
             "Keep3r",
 
 
-         -- lastly, we name the contributors, including ourselves and in this case the creator of the V1 abstraction!
+         -- 最后，我们命名贡献者，包括我们自己，在本例中是 V1 抽象的创建者！
 
 
              \'["wei3erHase", "agaperste"]\') }}'
@@ -102,11 +102,11 @@ Note, this assumes we’re using a `view` materialization strategy; see above fo
 ) }}
 ```
 
-## Add new models to dbt_project.yml
+## 将新模型添加到 dbt_project.yml 文件
 
-Coming into the final stretch, we need to add our new models to the `dbt_project.yml` file in the Spellbook root folder.
+进入最后阶段，我们需要将新模型添加到魔法书根文件夹中的 `dbt_project.yml` 文件中。
 
-First, find these lines:
+首先找到这些行：
 
 ```sls
 
@@ -120,9 +120,9 @@ models:
 
 ```
 
-Underneath, we specify the project name, schema, and materialization strategy for the project as a whole as well as the specific blockchain(s) that we’ve created Spells for.
+在下面，我们为整个项目指定项目名称、模式和物化策略，以及我们为其创建魔法表的特定区块链。
 
-For Keep3r, our entry looks like this:
+对于 Keep3r，添加后的条目如下所示：
 
 ```sls
 
