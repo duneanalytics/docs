@@ -1,24 +1,24 @@
 ---
-title: 2. 🤔 Decide on a Spell to Cast 
-description: Next, you’ll need to decide on a Spell to cast.
+title: 2. 🤔 决定要创建为魔法表的目标
+description: 接下来，您需要决定要创建为魔法表的目标。
 ---
 
-Next, you’ll need to decide on a Spell to cast.
+接下来，您需要决定要创建为魔法表的目标。
 
-There are a few ways to do this:
+有几种方法可以做到这一点：
 
-1. You might already have an idea if you’ve used Dune enough to know where you’ve wanted more abstract data than you’ve been able to find.
-2. [You can also take a look at our Spellbook bounties in Dework](https://app.dework.xyz/dune/spellbook-86233/overview).
-3. Feel free to ask in our [#spellbook Discord channel](https://discord.com/channels/757637422384283659/999683200563564655) to see what people need help with/suggest you work on!
+1. 如果您对 Dune 的使用足够多，知道您在哪里需要比您能够找到的更多的抽象数据，您可能已经有了一个想法。
+2. [您还可以查看我们在 Dework 中的 Spellbook 赏金项目](https://app.dework.xyz/dune/spellbook-86233/overview).
+3. 欢迎在我们的 [#spellbook Discord 频道](https://discord.com/channels/757637422384283659/999683200563564655) 中提问，看看人们需要什么帮助或者建议您做什么！
 
-For this guide, we’re going to make a migration Spell - translating the Keep3r network `view_job_log` abstraction from Dune’s v1 database into a V2 Spell.
+对于本指南，我们将制作一个迁移魔法表——将 Keep3r 网络 `view_job_log` 抽象从 Dune 的 v1 数据库转换为 V2 魔法表。
 
-Inside VSCode, find the “deprecated-dune-v1-abstractions” folder then dig down to find the “view_job_log.sql” file.
+在 VSCode 中，找到“deprecated-dune-v1-abstractions”文件夹，然后向下展开目录以找到“view_job_log.sql”文件。
 
-This should be the full path: 
+完整路径是：
 
-`[folder you cloned spellbook to]/deprecated-dune-v1-abstractions/ethereum/keep3r_network/view_job_log.sql`
+`[你克隆spellbook的文件夹]/deprecated-dune-v1-abstractions/ethereum/keep3r_network/view_job_log.sql`
 
 ![keep34 v1 abstraction location](images/keep3r-v1-abstraction-location.jpg)
 
-Now we’re ready to set up the file structure for our Spell’s SQL schema and source files.
+现在我们已经准备好为我们的魔法表的SQL模式和依赖源文件设置文件结构。

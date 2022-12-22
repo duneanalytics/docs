@@ -1,21 +1,21 @@
 ---
-title: 4. 📙 Identify and Define Sources
-description: With our file structure setup, let’s complete our `_sources.yml` file.
+title: 4. 📙 识别和定义依赖源
+description: 通过我们的文件结构设置，让我们完成我们的 `_sources.yml` 文件。
 ---
 
-With our file structure setup, let’s complete our `_sources.yml` file.
+通过我们的文件结构设置，让我们完成我们的 `_sources.yml` 文件。
 
-Here’s how these files are formatted:
+这些文件的格式如下：
 
 ```sls
 
-version: 2 # spells all have “version: 2” as that’s the version of our engine they use.
+version: 2 # 魔法表都使用“version: 2”，因为这是他们使用的我们数据库引擎的版本。
 
 sources:
 
   - name: [project_name]_[blockchain]
 
-    description: [one line description] # right arrow > allows us to make a multi-line description
+    description: [one line description] # 右箭头 > 允许我们添加多行描述
 
     tables:
 
@@ -27,18 +27,18 @@ sources:
 
 ```
 
-What sources do we need to name?
+我们需要命名哪些依赖源？
 
-To find this, we again go through each of the V1 abstractions that we’re migrating, search for `FROM` statements, and this time we’re looking for all tables mentioned that *are not* abstractions.
+为了找到这个，我们再次遍历我们正在迁移的每个 V1 抽象，搜索 `FROM` 语句，这次我们正在寻找所有提到的*不是*抽象的表。
 
-In our Keep3r example, doing that for our main abstraction and its dependencies:
+在我们的 Keep3r 示例中，为我们的主要抽象表和它的依赖项分别执行上述操作：
 
 * `keep3r_network.view_job_log`
 * `keep3r_network.view_job_liquidity_log`
 * `keep3r_network.view_job_credits_log`
 * `keep3r_network_ethereum_view_job_migrations`
 
-We end up with a `keep3r_network_ethereum_sources.yml` file that looks like this:
+我们最终得到一个如下所示的 `keep3r_network_ethereum_sources.yml` 文件：
 
 ```sls
 

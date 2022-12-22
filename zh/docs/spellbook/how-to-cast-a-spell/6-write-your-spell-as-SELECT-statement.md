@@ -1,21 +1,21 @@
 ---
-title: 6. 🖋️ Write Your Spell as a SELECT Statement
-description: Now we’re ready to *officially* start casting our Spell!
+title: 6. 🖋️ 将您的魔法表写成 SELECT 语句
+description: 现在我们准备好*正式*开始创建我们的魔法表了！
 ---
 
-Now we’re ready to *officially* start casting our Spell!
+现在我们准备好*正式*开始创建我们的魔法表了！
 
-While our endpoint is `_view_job_log.sql`, we need to start with `_view_job_migrations.sql`.
+虽然我们的终点是 `_view_job_log.sql`，但我们需要从 `_view_job_migrations.sql` 开始。
 
 ## `_view_job_migrations.sql`
 
-Why start here? Because it’s our lowest-level dependency!
+为什么从这里开始？ 因为它是我们最低层级的依赖表！
 
-Remember `keep3r_network_ethereum_view_job_log.sql` depends on `keep3r_network_ethereum_view_job_liquidity_log.sql` and `keep3r_network_ethereum_view_job_credits_log.sql` - both of which rely on `keep3r_network_ethereum_view_job_migrations.sql`
+记住 `keep3r_network_ethereum_view_job_log.sql` 依赖于 `keep3r_network_ethereum_view_job_liquidity_log.sql` 和 `keep3r_network_ethereum_view_job_credits_log.sql`，而它们都依赖于 `keep3r_network_ethereum_view_job_migrations.sql`。
 
-So by starting with `_migrations.sql`, we’ll be able to test as we cast our Spell without having anything break because the dependencies aren’t built.
+因此，通过从 `_migrations.sql` 开始，我们将能够在创建魔法表时进行测试，而不会因为没有构建依赖关系而出现任何中断。
 
-To migrate from our V1 abstraction, we’ll start by copying the contents of the V1 file (`/spellbook/deprecated-dune-v1-abstractions/ethereum/keep3r_network/view_job_migrations.sql`) to our `keep3r_network_ethereum_view_job_migrations.sql` file:
+要从 V1 的抽象迁移，我们首先将 V1 文件的内容（`/spellbook/deprecated-dune-v1-abstractions/ethereum/keep3r_network/view_job_migrations.sql`）复制到我们的`keep3r_network_ethereum_view_job_migrations.sql` 文件中：
 
 ```sql
 
@@ -85,13 +85,13 @@ CREATE OR REPLACE VIEW keep3r_network.view_job_migrations AS (
 
 ```
 
-We don’t need the `CREATE` or `REPLACE` definition statement, so we’ll just need everything from the first `SELECT` to the last `TRUE`
+我们不需要 `CREATE` 或 `REPLACE` 定义语句，所以我们只需要从第一个 `SELECT` 到最后一个 `TRUE` 之间的所有内容。
 
-Then for our FROM statements, we need to replace the old references with the new syntax and double check we mention these in our  `_sources.yml` file.
+然后对于我们的 FROM 语句，我们需要用新语法替换旧的表引用，并仔细检查我们在 `_sources.yml` 文件中提到的这些依赖源。
 
 ```sql
 
--- Removed CREATE/REPLACE statement
+-- 移除了 CREATE/REPLACE 语句
 
 SELECT
 
@@ -133,7 +133,7 @@ FROM (
 
     SELECT *
 
-    -- Updated the two tables we reference with our new syntax, confirming they’re both in our sources file.
+    -- 用我们的新语法更新了我们引用的两个表，确认它们都在我们的源文件中。
 
     FROM
 
@@ -145,19 +145,22 @@ FROM (
 
     FROM
 
-        'keep3r_network_ethereum.Keep3r_v2_evt_JobMigrationSuccessful) AS m
+            keep3r_network_ethereum.Keep3r_v2_evt_JobMigrationSuccessful
+    
+    ) AS m
 
     INNER JOIN (
 
         SELECT
 
-            generate_series(0, 1) AS step) AS s ON TRUE
+            generate_series(0, 1) AS step
+    ) AS s ON TRUE
 
 ```
 
-Notice how the old abstraction had a `SELECT *` statement; it’s best practice to only `SELECT` the actual columns we need when performing a `UNION` so that our Spell doesn’t break should one of our reference tables be updated.
+注意旧的抽象有一个“SELECT *”语句。最好的做法是在执行 `UNION` 时只 `SELECT` 我们需要的实际列，这样我们的魔法表就不会在我们的引用表之一被更新时被中断。
 
-Looking above our first `SELECT *` statement we’ll find the specific columns we need, both of our final statements look like this:
+在我们的第一个 `SELECT *` 语句上方，我们将找到我们需要的特定列，我们的两个SELECT语句最终如下所示：
 
 ```sql
 
@@ -177,30 +180,30 @@ SELECT
 
 ```
 
-Next, we need to change our syntax from V1 abstraction style to V2 Spell style, which means a couple of things in this case:
+接下来，我们需要将语法从 V1 抽象风格更改为 V2 魔法表风格，这意味着要做几件事：
 
-1. We don’t need to `encode` contract addresses (in V1 they were `bytea` format and in V2 they’re `string`)
-2. Column references no longer need double quotes so `m. "_fromJob"` -> `m._fromJob`
+1. 我们不需要对合约地址进行 `encode`（在 V1 中它们是 `bytea` 格式，在 V2 中它们是 `string`）
+2. 列引用不再需要双引号所以 `m.“_fromJob”` -> `m._fromJob`
 
-After we’ve done that, let’s copy our SQL to a new Query in dune.com to see if it works.
+完成后，让我们将 SQL 复制到 dune.com 的一个新查询中，看看它是否有效。
 
-If you get any errors, fix them with the help of the error code; while building this example, we got an Undefined function error as `generate_series`, a function used in the V1 abstraction that does not exist in V2.
+如果遇到任何错误，请借助错误代码修复它们； 在构建此示例时，我们遇到了一个 `generate_series` 未定义的函数错误，V1 抽象中使用的这个函数在 V2 中不存在。
 
-Knowing that Dune V1 is PostgreSQL and V2 is Spark SQL, in this case by googling “generate series Spark SQL” we were able to find this [StackExchange answer](https://stackoverflow.com/questions/43141671/sparksql-on-pyspark-how-to-generate-time-series) to perform the same transformation using Spark functionality.
+我们知道 Dune V1 是 PostgreSQL，V2 是 Spark SQL。在这种情况下，通过谷歌搜索“generate series Spark SQL”，我们能够找到这个 [StackExchange 答案](https://stackoverflow.com/questions/43141671/sparksql-on- pyspark-how-to-generate-time-series) ，用于使用 Spark 功能执行相同的转换。
 
-If you’re not so lucky with Google, then ask for help in our [#spellbook Discord channel](https://discord.com/channels/757637422384283659/999683200563564655)!
+如果您在 Google 上不是那么幸运，请在我们的 [#spellbook Discord 频道](https://discord.com/channels/757637422384283659/999683200563564655) 中寻求帮助！
 
-## `_liquidity_log.sql`, `_credit_log.sql`, and `_log.sql`
+## `_liquidity_log.sql` ， `_credit_log.sql` ，和 `_log.sql`
 
-The process is essentially just the same for our other files (modifying the syntax to V2/Spark SQL).
+该过程与我们的其他文件基本相同（将语法修改为 V2 Spark SQL的格式）。
 
-Since `_liquidity_log.sql` and `_credits_log.sql` both depend on `_migrations.sql`, which we just created and haven’t added to the in-production Spellbook yet, we need to copy/paste the logic that we just created as a `WITH` statement.
+由于 `_liquidity_log.sql` 和 `_credits_log.sql` 都依赖于我们刚刚创建但尚未添加到生产环境中的魔法表的 `_migrations.sql` ，我们需要复制/粘贴刚刚创建的逻辑，定义为一个 `WITH` 语句。
 
-So in `_liquidity_log.sql`, we have this reference: `keep3r_network.view_job_migrations migs`
+所以在 `_liquidity_log.sql` 中，我们有这个参考： `keep3r_network.view_job_migrations migs`
 
-Let’s update that to `keep3r_network.view_job_migrations_temp migs`
+让我们将其更新为 `keep3r_network.view_job_migrations_temp migs`
 
-Then define `_temp` at the top of our SQL file:
+然后在我们的 SQL 文件的顶部定义 `_temp` CTE ：
 
 ```sql
 
@@ -208,36 +211,36 @@ WITH
 
 keep3r_network.view_job_migrations_temp as (
 
--- [insert the _migrations code we just created here]
+-- [在此处插入我们刚刚创建的 _migrations 代码]
 
 )
 
 ```
 
-Then we can copy/paste our new SQL into dune.com and fix errors just like we did above.
+然后我们可以将我们的新 SQL 复制/粘贴到 dune.com 并像上面那样测试修复可能遇到的错误。
 
-## Replace hard-coded references with JINJA templating
+## 用 JINJA 模板替换硬编码引用
 
-With our SQL translated from PostgreSQL to Spark and tested individually, we need to add our JINJA templating so that this will all work in production!
+将我们的 SQL 从 PostgreSQL 翻译成 Spark 并单独测试后，我们需要添加我们的 JINJA 模板，以便这一切都可以在生产环境中使用！
 
-First, let’s clarify a couple of terms:
+首先，让我们澄清几个术语：
 
-* **Sources** are data that’s been added by the Dune team - raw blockchain data, Decoded data, prices, and Community tables - basically anything that’s not a Spell.
-    * With JINJA, references to models are formatted as `{{ source() }}`
-* **Models **are the `SELECT` statements the community have defined in the `.sql` files stored inside of our `spellbook/models` directory.
-    * With JINJA, references models are formatted as `{{ ref() }}`
+* **Sources** 是 Dune 团队添加的数据——原始区块链数据表、已解析数据表、价格和社区表——基本上是任何不是魔法表的数据表。
+    * 使用 JINJA，对模型的引用被格式化为 `{{ source() }}`
+* **Models** 是社区用户在我们的 `spellbook/models` 目录中存储的 `.sql` 文件中定义的 `SELECT` 语句。
+    * 使用 JINJA，引用模型被格式化为 `{{ ref() }}`
 
-For `sources()` references, we first need to pass the name of our `_sources.yml` file, then the name of the source.
+对于 `sources()` 引用，我们首先需要传递 `_sources.yml` 文件的名称，然后是依赖源的名称。
 
-So our V1 abstraction reference `keep3r_network. "Keep3r_evt_JobMigrationSuccessful"` becomes `{{ source('keep3r_network_ethereum','Keep3r_evt_JobMigrationSuccessful') }}` where:
+所以我们的 V1 抽象引用的 `keep3r_network.“Keep3r_evt_JobMigrationSuccessful”` 变为 `{{ source('keep3r_network_ethereum','Keep3r_evt_JobMigrationSuccessful') }}`。其中：
 
-* `keep3r_network_ethereum` is the name of our `_sources.yml` *without* the `_sources.yml` part, and
-* 'Keep3r_evt_JobMigrationSuccessful' is the name of a Decoded table that we included in `keep3r_network_ethereum_sources.yml`
+* `keep3r_network_ethereum` 是我们的 `_sources.yml` *不包括* `_sources.yml` 部分的名称，并且
+* `Keep3r_evt_JobMigrationSuccessful` 是我们包含在 `keep3r_network_ethereum_sources.yml` 中的已解析数据表的名称
 
-For our `ref()` references, we just need to name the SQL files we created without `.sql`.
+对于我们的 `ref()` 引用，我们只需要在不包括 `.sql` 的情况下命名我们创建的 SQL 文件。
 
-So our V1 abstraction reference `keep3r_network.view_job_liquidity_log` becomes `{{ ref('keep3r_network_ethereum_view_job_liquidity_log') }}`.
+所以我们的 V1 抽象引用 `keep3r_network.view_job_liquidity_log` 变成了 `{{ ref('keep3r_network_ethereum_view_job_liquidity_log') }}`。
 
-Once you’ve added the JINJA formatting to your references, run `dbt compile` and fix any errors!
+将 JINJA 格式添加到引用后，运行 `dbt compile` 并修复所有错误！
 
-Again, googling “xxx error dbt” or “JINJA” or “Spark SQL” can help with a lot; if our Google overlords fail you hit up the community in our [#spellbook Discord channel](https://discord.com/channels/757637422384283659/999683200563564655)!
+同样，谷歌搜索“xxx error dbt”或“JINJA”或“Spark SQL”可以提供很多帮助。如果我们的 Google 霸主搜索失败了，请在我们的 [#spellbook Discord 频道](https://discord.com/channels/757637422384283659/999683200563564655) 中提问！
