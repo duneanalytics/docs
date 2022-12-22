@@ -1,102 +1,104 @@
 ---
-title: V2 Database
-description: Learn more about the differences and thinking behind our V2 database structure.
+标题: V2 数据库
+描述: 了解更多关于我们V2数据库结构背后的差异和思考。
 ---
 
-On a very high level, databases read data from storage into memory in order to allow that data to be operated on, in our case to transform and return blockchain data according to your Dune query’s logic. 
+高度概括地来说，数据库从存储中读取数据到内存中，以便对该数据进行操作，在Dune中，就是根据你的Dune查询的逻辑，转换和返回区块链数据。
 
-Read speed, the time it takes to load data from storage to memory, is an essential constraint of databases. In computer science this is referred to as [I/O bound](https://en.wikipedia.org/wiki/I/O_bound), and it’s one of the main challenges we are looking to tackle with our transition to a data lake in Dune V2 and separating storage and compute.
+读取速度，即把数据从存储空间加载到内存所需的时间，是数据库的一个基本制约因素。在计算机科学中，这被称为 [I/O 约束](https://en.wikipedia.org/wiki/I/O_bound), 这也是我们在Dune V2中过渡到数据湖并将存储和计算分离的主要挑战之一。
 
-Let’s see how this happens.
+让我们看看这是如何发生的。
 
-## Row oriented databases
+## 面向行的数据库
 
-Databases store data in pages, which traditionally contain rows of information.
+数据库将数据存储在页面中，传统上，这些页面包含信息的行。
 
-Multiple pages make one data file and a table will consist of one or more data files.
+多个页面组成一个数据文件，一个表将由一个或多个数据文件组成。
 
-![row oriented database (PostgreSQL)](images/row-oriented.png)
+![面向行的数据库 (PostgreSQL)](images/row-oriented.png)
 
-When retrieving data from storage in order to operate on said data, a database will read data into memory by the page. Page size and the number of pages loaded are key bottlenecks for query speed as the number and size of pages loaded means longer read times and more waiting for your query results to be returned.
+当从存储器中检索数据以对数据进行操作时，数据库将按页将数据读入内存。页面大小和加载的页面数量是查询速度的关键瓶颈，因为加载的页面数量和大小意味着更长的读取时间和等待查询结果的时间。
 
-Since traditional databases store pages by row, they are best suited for retrieving all columns of one row or data from multiple sequential rows.
+由于传统的数据库按行存储页面，它们最适合于检索一行的所有列或多个连续行的数据。
 
-Whether we are looking to retrieve all columns from row 10 or column 3 from rows 11-25, our queries will be fast as only one page will need to be read into memory.
+无论我们是想检索第10行的所有列还是第11-25行的第3列，我们的查询都会很快，因为只需要将一个页面读入内存。
 
-In contrast, querying for data which is stored in many different logical rows and therefore different physical pages is an expensive operation, as all the pages must be read from disk.
+相比之下，查询存储在许多不同逻辑行中的数据，也就是不同的物理页，是一个昂贵的操作，因为所有的页面都必须从磁盘中读取。
 
-Most of the queries we run on Dune today are aggregation of data points in a column over thousands if not millions of rows.
+今天，我们在Dune上运行的大多数查询都是对数千甚至数百万行的某一列的数据点进行聚合。
 
-This is because each of our rows is based on one transaction or trace from the blockchains we’re querying.
+这是因为我们的每一行都是基于我们所查询的区块链的一个交易或跟踪。
 
-So for example, if we want to see all the swaps between ETH and USDC in the last month, transactions will be spread across thousands of transactions and thus thousands of rows - but the data will all be within one column of each of these rows.
+所以例如我们想看到上个月ETH和USDC之间的所有互换，交易将分布在成千上万的交易中，因此有成千上万的行 - 但数据将全部在这些行的一个列中。
 
-Thus, in a row-oriented database, we end up loading many pages with unneeded data as we query for one column across thousands or millions of rows.
+因此，在面向行的数据库中，我们最终会用不需要的数据加载许多页面，因为我们在数千或数百万行中查询一个列。
 
-In PostgreSQL, we use indexes to look for specific subsets of data rather than reading entire pages/tables filled with extraneous data.
+在PostgreSQL中，我们使用索引来寻找特定的数据子集，而不是读取充满不相干数据的整个页面/表。
 
-This leads to very fast and efficient Queries, but is limited to indexed columns.
+这使得查询非常快速和高效，但仅限于有索引的列。
 
-Since every new index created for a table is a new database file, it is harder to update and maintain the table at scale.
+由于为一个表创建的每一个新的索引都是一个新的数据库文件，所以在规模上更难更新和维护该表。
 
-Therefore, Dune V2 runs on column-oriented, rather than row-oriented tables.
+因此，Dune V2运行于面向列的表，而不是面向行的表。
 
 
-## Column oriented database
+## 面向列的数据库
 
-![column oriented database (Spark)](images/column-oriented.png)
+![面向列的数据库 (Spark)](images/column-oriented.png)
 
-In Dune V2, we store our data on AWS S3 using the [parquet file format](https://github.com/apache/parquet-format).
+在Dune V2中, 我们用 [parquet 文件格式](https://github.com/apache/parquet-format)在AWS S3上存储我们的数据。
 
-Parquet is sometimes described as a hybrid approach between row-oriented databases and column-oriented databases since a table still consists of multiple parquet files which are themselves partitioned by rows.
+Parquet有时被描述为面向行的数据库和面向列的数据库之间的一种混合方法，因为一个表仍然由多个parquet文件组成，而这些文件本身是按行划分的。
 
-Inside of the parquet files, though, the pages themselves contain columns instead of rows.
+不过，在parquet文件内部，页面本身包含列而不是行。
 
-Pages are stored within row groups which partition the data by rows inside the parquet files.
+页面被存储在行组中，而行组在parquet文件中是按行来划分数据的。
 
-Thus, the database is still roughly stored in a row oriented format but the individual values are stored in column orientation inside pages.
+因此，数据库仍然大致以面向行的格式存储，但各个数值是以列的方式存储在页面内。
 
-![schematic view of parquet files](images/parquet.png)
+![parquet示意图](images/parquet.png)
 
-Even though the database at large is somewhat row-oriented, when we actually want to read data we are reading from column-oriented pages and thus are reading pages into memory by column.
+尽管整个数据库在某种程度上是面向行的，但当我们真正想要读取数据时，我们是从面向列的页面读取的，因此是按列将页面读入内存。
 
-In contrast, should we try to query for all columns of specific logical rows, we have to access lots of different pages as the data of one logical row is no longer stored in one page, but rather distributed across lots of different pages.
 
-To better understand rows vs columns, check out this video on the differences:
+相反，如果我们试图查询特定逻辑行的所有列，我们必须访问很多不同的页面，因为一个逻辑行的数据不再存储在一个页面中，而是分布在很多不同的页面中。
+
+为了更好地理解行与列的区别，请看这个视频。
 
 ![type:video]([https://youtu.be/Vw1fCeD06YI](https://youtu.be/Vw1fCeD06YI))
 
 
-### To index, or not to index?
+### 索引，还是不索引？
 
-We were sometimes able to mimic the efficiency of column-based data in V1’s PostgreSQL by creating large amounts of structured subset data in the form of indexes, but for now this doesn't scale.
+我们有时能够模仿V1的PostgreSQL中基于列的数据的效率，以索引的形式创建大量的结构化子集数据，但目前这还不能扩展。
 
-Each parquet file has a footer that contains `min/max` values for every column stored within.
+每个parquet文件都有一个页脚，包含存储在其中的每一列的 `最小/最大` 值。
 
-This pattern is repeated on a column chunk level, which stores this metadata for the columns within a specific row group within the parquet file.
+这种模式在列块层面上重复，它为parquet文件中特定行组内的列存储这种元数据。
 
-![schematic view of mix/max values](images/minmax-schema.jpg)
+![混合 最大/最小值的示意图](images/minmax-schema.jpg)
 
-Using these `min/max` values, both on a file level and on a column chunk level allows the database to efficiently skip over entire parquet files or column chunks within parquet files while scanning through a table. For the min/max values to be useful, and the chunk skipping to work, the column must be correlated with the sorting of the file.
+在文件层面和列块层面使用这些 `最小/最大` 值，允许数据库在扫描表时有效地跳过整个parquet文件或parquet文件中的列块。为了使最小/最大值发挥作用，并使列块跳过发挥作用，列必须与文件的排序相关联。
 
-Unfortunately, the `min/max` values of strings are oftentimes not very useful.
+不幸的是，字符串的 `最小/最大` 值往往不是很有用。
 
-For example, `tx_hash` strings and `address` strings in blockchain systems are not suited well for this kind of `min/max` data gathering since they are randomly generated.
+例如，区块链系统中的 `tx_hash` 字符串和 `address` 字符串不适合这种 `min/max` 数据收集，因为它们是随机生成的。
 
-So if we sort tables by `block_time` (which we do in almost all circumstances), we can’t effectively `min/max` by `tx_hash` or `address` strings as these data won’t be sequentially ordered.
+因此，如果我们按 `block_time` 对表进行排序（几乎在所有情况下都是这样做的），我们就不能有效地按 `tx_hash` 或 `address` 字符串进行 `min/max` ，因为这些数据不会按顺序排列。
 
-That means the database won't be able to skip files or column chunks based on these strings, and Queries that reference them will therefore be quite inefficient since all related pages will need to be read into memory.
+这意味着数据库无法根据这些字符串跳过文件或列块，因此引用这些字符串的查询将是相当低效的，因为所有相关的页面都需要被读入内存。
 
-That said, since the Query engine at large is still able to read through individual columns in which these strings are stored very efficiently, most of the time this won't make a big difference in your Query execution speed.
+也就是说，由于查询引擎仍然能够非常有效地读取存储这些字符串的各个列，因此在大多数情况下，这不会对查询的执行速度产生很大影响
 
-The performance cost is mostly relevant for base tables like `ethereum.transactions`, `bnb.logs`, `erc20_ethereum.erc20_evt_transfer`, etc. which contain very large datasets that aren’t pre-filtered.
+性能成本主要与基础表有关，如`ethereum.transactions`，`bnb.logs`，`erc20_ethereum.erc20_evt_transfer`，等等，这些表包含非常大的数据集，没有预先过滤。
 
-A notable exception to this is the Solana dataset `account_activity`_,_ which is ordered by `account_keys` rather than `block_time` like the EVM-based datasets.
+一个明显的例外是Solana数据集`account_activity`_，_ 它是按`account_keys`而不是像基于EVM的数据集那样按`block_time`排序。
 
-This allows us to utilize the `min/max` values for the `account_keys` when building Queries based on [raw Solana data](../tables/raw/solana/index.md).
+这使得我们在建立基于 [raw Solana data](../tables/raw/solana/index.md)的查询时，可以利用`account_keys`的`min/max`值。
 
 
-## Dune V2 Query examples
+
+## Dune V2 查询示例
 
 Equipped with the above knowledge, let's look at how some Queries on Dune V2 work.
 
