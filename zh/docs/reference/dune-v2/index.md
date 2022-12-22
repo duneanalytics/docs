@@ -37,14 +37,14 @@ DuneV2 改变了我们的整个数据库架构。 我们正在从 PostgresQL 数
 
 ## 魔法书
 
-数据抽象已被升级成为魔法，储存于 Dune V2 的[魔法书](../spellbook/index.md)中。
+数据抽象已被升级成为魔法，储存于 Dune V2 的[魔法书](../../spellbook/index.md)中。
 
 它们在[数据构建工具 （dbt）](https://docs.getdbt.com/docs/introduction)上运行。dbt 使分析工程师能够过通过简单地编写选择语句来转换期数据仓库中的数据，并将这些选择语句处理转换为[数据表](https://docs.getdbt.com/terms/table)和[视图](https://docs.getdbt.com/terms/view).
 
 这将使数据抽象更加健全、可扩展且更易用。
 
 <div class="cards grid" markdown>
-- [Dune V2 中的数据抽象/魔法](../spellbook/index.md)
+- [Dune V2 中的数据抽象/魔法](../../spellbook/index.md)
 </div>
 
 ## 反馈

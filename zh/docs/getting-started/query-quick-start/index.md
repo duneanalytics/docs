@@ -17,15 +17,15 @@ description: Here's a short five-step guide to getting familiar with a protocol 
 
 对于大多数去中心化金融（DeFi）来说，用户的主要入口只是 `Deposit`（存款）的一些变化。
 
-如果合约还没有[解析](.../decoding-contracts.md)，您可以从一些原始查询开始，在这里找到最常见的函数和事件签名：[Dune Utility Queries](././reference/wizard-tools/utility-queries.md)。
+如果合约还没有[解析](../decoding-contracts.md)，您可以从一些原始查询开始，在这里找到最常见的函数和事件签名：[Dune Utility Queries](../../reference/wizard-tools/utility-queries.md)。
 
-如果您在理解数据表方面有困难，[请见我们的数据表文档](.../.../reference/tables)。  
+如果您在理解数据表方面有困难，[请见我们的数据表文档](../../reference/tables)。  
     
 ## 2. 探索合约流程
 
 通常情况下，一个函数调用并不像 ETH/代币 转移那样简单，只涉及一个合约。
 
-一旦您弄清楚了入口点，对它运行一个基础的 LIMIT 查询，并在[相关区块链浏览器](.../.../reference/wizard-tools/blockchain-explorers.md)中查看一些示例交易以获得一些数据提示（即除了主协议之外，tx 还与哪些协议互动）。
+一旦您弄清楚了入口点，对它运行一个基础的 LIMIT 查询，并在[相关区块链浏览器](../../reference/wizard-tools/blockchain-explorers.md)中查看一些示例交易以获得一些数据提示（即除了主协议之外，tx 还与哪些协议互动）。
     
 ```sql
 SELECT * FROM protocol_name."Contractname_evt_EventEmitted"
