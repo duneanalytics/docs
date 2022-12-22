@@ -1,6 +1,6 @@
 ---
-title: 1. 💻 准备一些先决条件并且设置好 Spellbook dbt
-description: 以下是设置计算机以在 Spellbook 上工作所需执行的操作。
+title: 1. 💻 准备一些先决条件并且设置好魔法书 dbt
+description: 以下是设置计算机以在魔法书上工作所需执行的操作。
 ---
 
 你需要安装下述软件来开始：
@@ -13,8 +13,8 @@ description: 以下是设置计算机以在 Spellbook 上工作所需执行的�
 
 安装了上述软件之后，你还需要：
 
-* 为[spellbook repo](https://github.com/duneanalytics/spellbook)这个库做一个[分叉（Fork）](https://docs.github.com/en/get-started/quickstart/fork-a-repo)。包括克隆到本地和添加上游库链接。
-* 查看Gitbut上关于如何从分叉中发出拉取请求的[说明](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork)。
+* 为[魔法书仓库](https://github.com/duneanalytics/spellbook)这个库做一个[分叉（Fork）](https://docs.github.com/en/get-started/quickstart/fork-a-repo)。包括克隆到本地和添加上游库链接。
+* 查看Gitbut上关于如何从分叉中发出合并请求的[说明](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork)。
 
 这是一个展示如何创建 Spellbook 存储库的分支的快速视频：
 
@@ -73,4 +73,4 @@ description: 以下是设置计算机以在 Spellbook 上工作所需执行的�
 
 然后，运行 `git checkout -b workshop` 创建一个名为“workshop”的新本地存储分支，用于执行本指南中的练习工作。
 
-最后，运行 `git push -u origin workshop` 将您的本地“workshop”分支添加或“推送”到您的远程 GitHub 存储库，以便我们最终可以发出我们的 Spellbook 拉取请求。
+最后，运行 `git push -u origin workshop` 将您的本地“workshop”分支添加或“推送”到您的远程 GitHub 存储库，以便我们最终可以发出我们的魔法书合并请求。
