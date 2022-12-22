@@ -100,12 +100,12 @@ Parquet有时被描述为面向行的数据库和面向列的数据库之间的�
 
 ## Dune V2 查询示例
 
-Equipped with the above knowledge, let's look at how some Queries on Dune V2 work.
+掌握了上述知识，让我们来看看Dune V2的一些查询是如何工作的。
 
 !!! note
-    These examples are written in Spark SQL.
+    这些例子是用Spark SQL写的。
 
-### Querying for transaction hashes
+### 查询交易哈希
 
 ```sql
 
@@ -115,19 +115,20 @@ where hash = '0xce1f1a2dd0c10fcf9385d14bc92c686c210e4accf00a3fe7ec2b5db7a5499cff
 
 ```
 
-Based on the way our parquet file system works, this Query is very inefficient.
+基于我们的parquet文件系统的工作方式，这个查询是非常低效的。
 
-Our only filter condition here is a `hash` string so we’re asking the query engine to read all pages that store `tx_hash` column data.
+我们这里唯一的过滤条件是一个`hash`字符串，所以我们要求查询引擎读取所有存储`tx_hash`列数据的页面。
 
-The engine can skip a few column chunks where the `min/max` value stored in the parquet file footer is `0xa0 - 0xcd`, but those will be a rare exception.
 
-Given we’re doing a full scan over the entire history of Ethereum Mainnet (billions of rows) to search for one `hash`, it's pretty impressive that this Query only takes about 6 minutes to run.
+引擎可以跳过一些列块，其中存储在parquet文件页脚的 `最小/最大`值是 `0xa0 - 0xcd`，但这些将是罕见的例外。
 
-Since querying for ‘hash’ is a very common part of a Wizard’s workflow, let's think about how we can make this faster.
+鉴于我们正在对Ethereum Mainnet的整个历史（数十亿行）进行全面扫描，以搜索一个`hash`，这个查询只需要大约6分钟就可以运行，这是相当令人印象深刻的。
 
-To do that, we just have to search based on a column that has sequential ‘min/max’ values so our query engine can skip over most pages/column chunks.
+由于查询`hash`是Wizard工作流程中非常常见的一部分，让我们想想如何能让它更快。
 
-Both ‘block_time’ and ‘block_number’ are useful for this purpose.
+要做到这一点，我们只需要根据一个有顺序的`最小/最大`值的列进行搜索，这样我们的查询引擎就可以跳过大多数页面/列块。
+
+这对`block_time`和`block_number`都很有用。
 
 ```sql
 
@@ -139,20 +140,20 @@ and hash = '0xce1f1a2dd0c10fcf9385d14bc92c686c210e4accf00a3fe7ec2b5db7a5499cff'
 
 ```
 
-This Query is still not as fast as in PostgreSQL, where we can make use of [B-tree indexes](https://en.wikipedia.org/wiki/B-tree), but with a runtime of 13 seconds, we’re pretty close.
+这个查询仍然没有PostgreSQL的速度快，在PostgreSQL中我们可以利用[B-tree indexes](https://en.wikipedia.org/wiki/B-tree)，但运行时间为13秒，我们已经很接近。 
 
-Again, by using our `where` clause to filter by block number, we’re leveraging the V2 engine’s ability to read the parquet file footers’ ‘min/max’ values and skip those that are out of bounds.
+同样，通过使用我们的`where`子句来过滤块数，我们利用V2引擎的能力来读取parquet文件页脚的`最小/最大`值，并跳过那些超出范围的值。
 
-Once a parquet file that meets our condition is found, the engine simply loads into memory the relatively few pages from the column chunk with a `min` lower and a `max` greater than our specified `block_number` before finding a match to our ‘hash’ condition.
+一旦找到符合我们条件的parquet文件，引擎就会简单地从列块中加载相对较少的页面，这些页面的`最小值`比我们指定的`块数`低，`最大值 `比我们指定的 `块数`大，然后找到与我们的`hash`条件相匹配。
 
-Since we are selecting all entries from the logical row in this Query, we actually need to access a few other pages as well, but this is a reasonably efficient operation if we only do this for a few rows.
+由于我们在这个查询中选择了逻辑行中的所有条目，我们实际上也需要访问其他一些页面，但是如果我们只对几条行进行这样的操作，这是一个合理有效的操作。
 
-**Lesson:** Define your conditions in a way in which the database is able to work with ‘min/max’ values of files and columns chunks so it can efficiently find the logical row(s) you need.
+**经验:** 以一种数据库能够处理文件和列块的`最小/最大`值的方式来定义你的条件，以便它能够有效地找到你需要的逻辑行。
 
 
-### Aggregating data over a large amount of logical rows
+### 对大量的逻辑行进行数据汇总
 
-This is mainly a case study to illustrate how efficient DuneV2 is in aggregating data over a large set of logical rows.
+这主要是一个案例研究，以说明DuneV2在聚集大量逻辑行的数据方面有多高效。
 
 ```sql
 
@@ -160,29 +161,29 @@ Select avg(gas_used) from ethereum.transactions
 
 ```
 
-This Query runs in an **amazing** 7 seconds.
+这个查询只花了 **惊人的** 7 秒钟。
 
-This is mainly due to the fact that V2 doesn’t have to read the entire table since all this data is stored together in column-oriented pages across parquet files.
+这主要是由于V2不需要读取整个表，因为所有这些数据都被存储在跨parquet文件的面向列的页面中。
 
-In V1’s PostgreSQL, each page we read into memory would have contained a lot of unneeded data.
+在V1的PostgreSQL中，我们读入内存的每一页都会包含很多不需要的数据。
 
-In Dune V2, we can just read the data that we actually need.
+在Dune V2中，我们可以只读取我们真正需要的数据。
 
-**Lesson:** Querying for data across a large amount of logical rows is now much more efficient and a lot of Queries that were formerly sheer impossible due to timing out are now able to be executed.
+**经验:** 对大量逻辑行的数据查询现在变得更加高效，很多以前由于超时而不可能执行的查询现在都可以执行。
 
-Another good example to illustrate this is [@hildobby's](https://twitter.com/hildobby_) [Ethereum Overview](https://dune.com/hildobby/Ethereum-Overview) Dashboard.
+另一个展示这一特点的例子是 [@hildobby's](https://twitter.com/hildobby_) [Ethereum Overview](https://dune.com/hildobby/Ethereum-Overview) 看板.
 
 
-## We’ll keep innovating
+## 我们会继续创新
 
-Some Queries that were heavily indexed on our V1 database might feel a bit awkward in Dune V2.
+一些在我们的V1数据库上有大量索引的查询在Dune V2中可能会有点尴尬。
 
-This is especially the case for `erc20` event transfer tables, `ethereum.transactions`, `ethereum.logs` and their counterparts on other blockchains.
+对于`erc20`事件转移表、`ethereum.transactions`、`ethereum.logs`以及它们在其他区块链上的对应尤其如此。
 
-This is a tradeoff we made to enable blockchain analytics on a large scale basis.
+这是我们为了在大规模的基础上实现区块链分析而做出的权衡。
 
-We will continue to keep innovating on these datasets and our database architecture to make every Query run as fast as possible on V2. Hopefully now you understand why Queries for data like `tx_hash` will be slow due to the tradeoffs we’ve made.
+我们将继续对这些数据集和我们的数据库架构进行创新，以使每个查询在V2上尽可能快地运行。希望你现在明白为什么像`tx_hash`这样的数据查询会因为我们的权衡而变得缓慢。
 
-If you have any feedback or run into trouble with the new system, our #dune-sql Discord channel is the best place to get help from our team and Wizard community when Google fails you.
+如果你在使用新系统时遇到困难或有任何反馈，Google解决不了时，来我们的#dun-sql Discord频道从我们团队和Wizard社区获得帮助。
 
-As you come across issues or identify areas of improvement, please send us an email at [dunesql-feedback@dune.com](mailto:dunesql-feedback@dune.com) and we’ll work with you to update and optimize!
+当你遇到问题或发现需要改进的地方时，请给我们发邮件： [dunesql-feedback@dune.com](mailto:dunesql-feedback@dune.com) ，我们将与你一起更新和优化！
