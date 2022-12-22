@@ -148,15 +148,15 @@ description: 数据浏览器允许您搜索区块链和其他数据，以便在�
 
     | 图标      | 说明                          |
     | ----------- | ---------------------------------------- |
-    |    ![ethereum icon](images/ethereum-icon.png)    | Ethereum 区块链原始数据、已解析项目或魔法|
-    |![gnosis chain icon](images/gnosis-chain-icon.png)| Gnosis 链原始数据、已解析项目或魔法|
-    | ![polygon icon](images/polygon-icon.png) | Polygon 区块链原始数据、已解析项目或魔法|
-    | ![optimism icon](images/optimism-icon.png) | Optimism 区块链原始数据、已解析项目或魔法|
-    | ![optimism legacy icon](images/optimism-legacy-icon.png) | Optimism (legacy) 区块链 原始数据、已解析项目或魔法|
-    | ![bnb chain icon](images/bnb-chain-icon.png) | BNB 链原始数据、已解析项目或魔法|
-    | ![solana icon](images/solana-icon.png) | Solana 区块链原始数据、已解析项目或魔法|
-    | ![arbitrum icon](images/arbitrum-icon.png) | Arbitrum 区块链原始数据、已解析项目或魔法|
-    | ![avalanche icon](images/avalanche-icon.png) | Avalanche C-链原始数据、已解析项目或魔法|
+    |    ![ethereum icon](../../reference/images/ethereum-icon.png)    | Ethereum 区块链原始数据、已解析项目或魔法|
+    |![gnosis chain icon](../../reference/images/gnosis-chain-icon.png)| Gnosis 链原始数据、已解析项目或魔法|
+    | ![polygon icon](../../reference/images/polygon-icon.png) | Polygon 区块链原始数据、已解析项目或魔法|
+    | ![optimism icon](../../reference/images/optimism-icon.png) | Optimism 区块链原始数据、已解析项目或魔法|
+    | ![optimism legacy icon](../../reference/images/optimism-legacy-icon.png) | Optimism (legacy) 区块链 原始数据、已解析项目或魔法|
+    | ![bnb chain icon](../../reference/images/bnb-chain-icon.png) | BNB 链原始数据、已解析项目或魔法|
+    | ![solana icon](../../reference/images/solana-icon.png) | Solana 区块链原始数据、已解析项目或魔法|
+    | ![arbitrum icon](../../reference/images/arbitrum-icon.png) | Arbitrum 区块链原始数据、已解析项目或魔法|
+    | ![avalanche icon](../../reference/images/avalanche-icon.png) | Avalanche C-链原始数据、已解析项目或魔法|
     
     在合约/数据集旁边的图标与区块链名称不同的情况下，图标是该数据所处的区块链。例如，这些是 Ethereum 链上的 Polygon 桥合约。
 
@@ -166,10 +166,10 @@ description: 数据浏览器允许您搜索区块链和其他数据，以便在�
 
     | 图标      | 说明                          |
     | ----------- | ---------------------------------------- |
-    | ![table icon 1](images/table-icon-1.png)![table icon 2](images/table-icon-2.png) | 数据表（原始数据、魔法或智能合约事件或函数）|
-    | ![decoded project icon](images/decoded-project-icon.png) | 已解析项目（协议或协议版本，如 "opensea" 或 "aave_v2"） |
-    | ![spell icon](images/spell-icon.png) | 魔法集（例如 cow_protocol 包含 "batches" 和 "solvers" 魔法） |
-    | ![community data icon](images/community-data-icon.png) | 社区数据集 |
+    | ![table icon 1](../../reference/images/table-icon-1.png)![table icon 2](../../reference/images/table-icon-2.png) | 数据表（原始数据、魔法或智能合约事件或函数）|
+    | ![decoded project icon](../../reference/images/decoded-project-icon.png) | 已解析项目（协议或协议版本，如 "opensea" 或 "aave_v2"） |
+    | ![spell icon](../../reference/images/spell-icon.png) | 魔法集（例如 cow_protocol 包含 "batches" 和 "solvers" 魔法） |
+    | ![community data icon](../../reference/images/community-data-icon.png) | 社区数据集 |
 
     #### 数据集标签
 

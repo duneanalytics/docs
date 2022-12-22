@@ -33,7 +33,7 @@ description: >-
 
 您可以通过点击查询编辑器中参数旁边的齿轮来编辑单个参数的属性。这允许您设置一个默认值，定义一个可选用的参数列表或改变参数的类型。如果您想在一个看板上的不同查询之间共享参数，请确保它们在名称、类型和默认值方面完全匹配。
 
-![Parameters how to use](images/parameters-how-to-use.gif)
+![Parameters how to use](../images/parameters-how-to-use.gif)
 
 ## 查询示例
 

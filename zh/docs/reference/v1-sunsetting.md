@@ -3,7 +3,7 @@ title: Sunsetting Dune V1
 description: It's been real, but now it's time to say goodbye to our V1 platform.
 ---
 
-With the release of the Polygon decoded tables on Dune Engine V2, we now have all [Raw](../reference/tables/raw/index.md) and [Decoded](../reference/tables/decoded/index.md) data that was on V1 on V2! 
+With the release of the Polygon decoded tables on Dune Engine V2, we now have all [Raw](../reference/tables/v2/raw/index.md) and [Decoded](../reference/tables/v2/decoded) data that was on V1 on V2! 
 
 As a result we have started decommissioning blockchains on V1 as we transition to V2 as our primary platform.
 
