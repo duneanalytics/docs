@@ -15,7 +15,7 @@ description: 让我们学习如何在短时间内创建魔法表 - 就像 💫�
 
 它使社区能够建立一种标准化的方式，将数据转换为有意义的抽象层。
 
-对于 web3 数据，我们有一个基础层 [原始数据](../../reference/tables/raw/index.md) - 区块链交易、内部交易表和日志表。
+对于 web3 数据，我们有一个基础层 [原始数据](../../reference/tables/raw.md) - 区块链交易、内部交易表和日志表。
 
 魔法书让我们可以创建抽象的数据集，例如 [dex.trades](https://dune.com/spellbook#!/model/model.spellbook.dex_trades) 和 [nft.trades](https://dune.com/ spellbook#!/model/model.spellbook.nft_trades)，它们聚合和组织了来自多个来源的原始数据，使其更容易查询。
 
@@ -81,7 +81,7 @@ WHERE where block_number = 15661624 AND hash = '0x96f158d75379057d95c1c562b99086
 
 这里有一些更有趣的信息，比如 `gas_price` 和 `gas_used`，但最有趣的东西在 `data` 列中。但是，为了理解这些，我们需要引用合约的 [应用程序二进制接口（ABI）](https://www.quicknode .com/guides/smart-contract-development/what-is-an-abi)。
 
-值得庆幸的是，Dune 有[已解析数据表](../../reference/tables/decoded/index.md)，其中包含使用 ABI 从交易的原始数据自动解析的合约数据——机器为我们节省了时间。
+值得庆幸的是，Dune 有[已解析数据表](../../reference/tables/decoded.md)，其中包含使用 ABI 从交易的原始数据自动解析的合约数据——机器为我们节省了时间。
 
 使用已解析数据表，我们可以像这样进行查询：
 

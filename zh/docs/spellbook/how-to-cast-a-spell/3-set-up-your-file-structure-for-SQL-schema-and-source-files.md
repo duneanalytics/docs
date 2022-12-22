@@ -63,7 +63,7 @@ FROM
 
 为此，我们打开这两个抽象并搜索 `FROM` 语句。
 
-在这里，我们找到了几个引用的表，其中包括“_evt_”，这是 [已解析事件表](../../reference/tables/decoded/event-logs.md) 的命名约定。
+在这里，我们找到了几个引用的表，其中包括“_evt_”，这是 [已解析事件表](../../reference/tables/v2/decoded/event-logs.md) 的命名约定。
 
 You’ll find other Raw and Decoded data table naming conventions in our [Tables documentation here](../../reference/tables/index.md). 
 您可以在我们的 [表格文档](../../reference/tables/index.md)中找到其他原始和已解析数据表的命名约定。
