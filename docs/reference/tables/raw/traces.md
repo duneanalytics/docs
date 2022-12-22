@@ -19,7 +19,6 @@ Read more [here](https://medium.com/chainalysis/ethereum-traces-not-transactions
     | Optimism          | `optimism.traces`     | `value` measured in `wei` |
     | Optimism (legacy) | `optimism_legacy_ovm1.traces` | `value` measured in `wei` |
     | BNB Chain         | `bnb.traces`          | `value` measured in `wei` |
-    | Solana            | `solana.traces`       | `value` measured in `wei` |
     | Arbitrum          | `arbitrum.traces`     | `value` measured in `ArbGas`, does not contain `gas` |
     | Avalanche C-Chain  | `avalanche_c.traces` | `value` measured in `nanoavax` |
 
