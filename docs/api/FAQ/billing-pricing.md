@@ -3,13 +3,9 @@ title: Dune API Billing & Pricing
 description: Information about Dune's API billing and pricing.
 ---
 # FAQ: Billing & Pricing
-
-## Is the API free?
-    
-We currently only offer paid tiers of the API but will be launching a free tier in early 2023!
     
 ## How will API Billing work with the new Team plans?
-We'll be supporting API keys on a team level. So any usage associated with those keys will be billed to their respective team.
+We'll be shortly supporting API keys on a team level in first few months of 2023. Any usage associated with a team api key will be billed to their respective team.
 
 ## What’s a datapoint?
 
