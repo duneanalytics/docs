@@ -11,8 +11,6 @@ The Dune API gives you full access to the queries and data you can see on the Du
 
 This documentation describes all of the available API calls and properties of the returned objects. If you have any questions or feedback, please reach out to [api-feedback@dune.com](mailto:api-feedback@dune.com) or our #[dune-api](https://discord.com/channels/757637422384283659/1019910980634939433) Discord channel!
 
-!!! warning 
-    At this time, the Dune API is in private beta. This means that the way it works and the data it returns may change with advanced notice. 
 
 ## How does the API work?
 
