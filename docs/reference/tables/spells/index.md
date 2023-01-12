@@ -6,7 +6,7 @@ description: With the help of the community we construct customs tables which co
 **Spells are custom tables that are built and maintained by Dune and our community.**
 
 !!! note
-       Spellbook Spells are available on Dune V2, queryable from both Spark SQL and Dune SQL [V2 Query Engines](../reference/dune-v2/query-engine.md). For now, Spells will continue to be written in Spark SQL and querying them with Dune SQL will require small syntax changes. While the changes needed to make Spells Dune SQL native are small, we want to make sure Dune SQL is rock solid before we implement them! [Learn more about casting a Spell here](../../../spellbook/index.md).
+       Spellbook Spells are available on Dune V2, queryable from both Spark SQL and Dune SQL [V2 Query Engines](../../dune-v2/query-engine.md). For now, Spells will continue to be written in Spark SQL and querying them with Dune SQL will require small syntax changes. While the changes needed to make Spells Dune SQL native are small, we want to make sure Dune SQL is rock solid before we implement them! [Learn more about casting a Spell here](../../../spellbook/index.md).
 
 To learn more about what Spells are see [Spellbook](../../../spellbook/index.md).
 
