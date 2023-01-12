@@ -42,7 +42,7 @@ The syntax and keyword operator differences between Postgres, Spark, and Dune SQ
 | **Using “is True/False”** | `X is true` | `X is true` | `X = true` |
 | **String Data Type** | `varchar` | `string` | `varchar` |
 | **Casting as Strings** | `cast([xxx] as string)` | `cast([xxx] as string)` | `cast([xxx] as varchar)` |
-| **Left is no longer a method available for returning Substrings** | left([string],[length]) | left([string],[length]) | substr([string], [start], [length]) <br><br> [Returns varchar; Positions start with 1, so use `1` for length if you want to replicate left() functionality](https://trino.io/docs/current/functions/string.html?highlight=substr#substring)|
+| **`left()` is no longer a method available for returning substrings** | `left([string],[length])` | `left([string],[length])` | `substr([string], [start], [length])` <br><br> [Returns varchar; Positions start with 1, so use `1` for length if you want to replicate left() functionality](https://trino.io/docs/current/functions/string.html?highlight=substr#substring)|
 
 left(somestring, somenumber) -> substr(somestring, 0, somenumber)
 
