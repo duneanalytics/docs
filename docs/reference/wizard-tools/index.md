@@ -14,3 +14,7 @@ Here are some of the awesome non-Dune tools our wizards use to make 🎇.
 - [Our Recommended Reading List](../recommended-reading.md) for a bunch of guides on crypto data topics and projects to check out.
 - [DeepDAO](https://deepdao.io/organizations) - stats on DAOs and their treasuries.
 - [DethCode](https://etherscan.deth.net) lets you go into an Ethereum smart contract's code to read the comments or the actual logic can help to understand the smart contract's emitted data.
+- [freeCodeCamp's Learn Solidity Handbook](https://www.freecodecamp.org/news/learn-solidity-handbook/)
+- [Sidekik](https://sidekik.xyz/) - useful for digging into smart contracts to understand how they operate and their data structure
+- [Ethernaut](https://ethernaut.openzeppelin.com/) - a wargame where you "hack" a set of smart contracts, uesfull for learning how smart contracts work.
+- [Advanced Ethereum Mini Courses](https://ethereum-blockchain-developer.com/100-advanced-ethereum/) - while they assume you have an understanding of Solidity, React, Truffle and Web3, these courses are a good resource for understanding how theory applies to practice.

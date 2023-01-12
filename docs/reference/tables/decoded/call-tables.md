@@ -66,4 +66,5 @@ This is in contrast to anyone calling this function locally using web3.py/web3.j
 <div class="cards grid" markdown>
 - [What is the difference between a transaction and a call?](https://ethereum.stackexchange.com/questions/765/what-is-the-difference-between-a-transaction-and-a-call)
 - [Soliditylang.org documentation](https://docs.soliditylang.org/en/v0.8.13/contracts.html#function-visibility)
+- [How Calldata is Encoded](https://degatchi.com/articles/reading-raw-evm-calldata)
 </div>
