@@ -53,7 +53,7 @@ Spells currently run on Spark SQL in Dune v2 but can also be queried on Dune SQL
 Learn more about Spells here:
 
 <div class="cards grid" markdown>
-- [Spells in Dune V2](../spellbook/index.md)
+- [Spells in Dune V2](../../spellbook/index.md)
 </div>
 
 ## Other questions and feedback
