@@ -27,7 +27,7 @@ Similarly, results from API executions are not currently reflected on Dune’s w
 ## API Getting Started
 
 ### Obtaining an API Key
-After purchasing an an app plan and API package, you can find the API key in your [settings page](https://dune.com/settings/api)) 
+After [purchasing an an app plan and API package](https://dune.com/pricing), you can find the API key in your [settings page](https://dune.com/settings/api). 
 
 ### Picking a Programming Language
 While you can consume our API in the language of your choice - see the [API Reference](api-reference/authentication.md) section - we currently have quick start guides for [Python](quick-start/api-py.md) and [Node.js](quick-start/api-js.md).
