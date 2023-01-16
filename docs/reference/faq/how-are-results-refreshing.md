@@ -1,7 +1,8 @@
 ---
-title: How do results get refreshed?
+title: How often do results get refreshed?
 ---
 
+To see the current time it takes for new data to be added to Dune, [check out the Meta Monitoring dashboard here](https://dune.com/dune/Meta-Monitoring).
 
 # How do results get refreshed?
 
