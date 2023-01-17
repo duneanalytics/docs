@@ -32,6 +32,8 @@ After [purchasing an an app plan and API package](https://dune.com/pricing), you
 ### Picking a Programming Language
 While you can consume our API in the language of your choice - see the [API Reference](api-reference/authentication.md) section - we currently have quick start guides for [Python](quick-start/api-py.md) and [Node.js](quick-start/api-js.md).
 
+We also have a variety of community clients available, [learn more about them on this page](../api/quick-start/community-clients.md)!
+
 ## Important Links
  - API Documentation - you're already here, check out the sidebar to learn more!
  - [#dune-api Discord Channel](https://discord.com/channels/757637422384283659/1019910980634939433)
