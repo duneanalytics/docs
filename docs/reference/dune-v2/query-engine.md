@@ -69,6 +69,24 @@ The byte array conversion functions throw an overflow exception if the byte arra
 [Here is an example query](https://dune.com/queries/1847704?d=11) that covers all of the above functions.
 
 
+## Byte Array Functions in Dune SQL
+
+Dune SQL currently represents byte arrays as `0x`-prefixed strings. In the future we will represent byte arrays using the `varbinary`. To make it simpler to work with byte arrays we have the following helper functions. They simplify interactions with byte arrays, as they automatically account for the `0x`-prefix and use byte index instead of characther index. For instance, the `bytearray_substring` methods take indexes by byte, not by characther (twice the byte array length). If there is an operation you need to do on byte arrays which is not covered by a function in the list below you should reach out to the Dune team.
+
+| Function | Return Type | Argument Types | Description |
+| --- | --- | --- | --- |
+| bytearray_concat | varchar | varchar, varchar | Concatenates two byte arrays |
+| bytearray_length | bigint | varchar | Returns the length of a byte array |
+| bytearray_ltrim | varchar | varchar | Removes zero bytes from the beginning of a byte array |
+| bytearray_position | bigint | varchar, varchar | Returns the index of a given bytearray (or 0 if not found) |
+| bytearray_replace | varchar | varchar, varchar, varchar | Greedily replaces occurrences of a pattern within a byte array |
+| bytearray_reverse | varchar | varchar | Reverse a given byte array |
+| bytearray_rtrim | varchar | varchar | Removes zero bytes from the end of a byte array |
+| bytearray_starts_with | boolean | varchar, varchar | Determines whether a byte array starts with a prefix |
+| bytearray_substring | varchar | varchar, integer | Suffix byte array starting at a given index |
+| bytearray_substring | varchar | varchar, integer, integer | Sub byte array of given length starting at an index |
+
+
 ## Query queries as views in Dune SQL
 
 All queries written using Dune SQL can be queried as views in other queries using the identifier `query_<queryId>`. For instance:
