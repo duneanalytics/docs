@@ -16,7 +16,7 @@ The syntax and keyword operator differences between Postgres, Spark, and Dune SQ
 
 !!! warning
     **Dune SQL is still in alpha!** If you find any other changes in Spark or Dune SQL that are important to note, please feel free to [submit a PR to this docs page on GitHub](https://github.com/duneanalytics/docs/edit/master/docs/reference/dune-v2/query-engine.md) or let us know in #dune-sql. 
-    **If you're running into errors using `||`, `concat()`, `replace()`, `trim()`, `length()`, or other operators on bytearrays (things like addresses, transactions, etc)** then check out the [Byte Array Functions](#byte-array-functions-in-dune-SQL) section.
+    **If you're running into errors using `||`, `concat()`, `replace()`, `trim()`, `length()`, or other operators on bytearrays (things like addresses, transactions, etc)** then check out the [Byte Array Functions](#byte-array-functions-in-dune-sql) section.
 
 ### Syntax Comparison
 
