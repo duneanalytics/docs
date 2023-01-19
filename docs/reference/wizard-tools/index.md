@@ -18,3 +18,4 @@ Here are some of the awesome non-Dune tools our wizards use to make 🎇.
 - [Sidekik](https://sidekik.xyz/) - useful for digging into smart contracts to understand how they operate and their data structure
 - [Ethernaut](https://ethernaut.openzeppelin.com/) - a wargame where you "hack" a set of smart contracts, uesfull for learning how smart contracts work.
 - [Advanced Ethereum Mini Courses](https://ethereum-blockchain-developer.com/100-advanced-ethereum/) - while they assume you have an understanding of Solidity, React, Truffle and Web3, these courses are a good resource for understanding how theory applies to practice.
+- [Online Ethereum Transaction Decoder](https://www.ethereumdecoder.com/)

@@ -1,6 +1,6 @@
-# mev\_summary
+# mev_summary
 
-## **flashbots.mev\_summary**
+## **flashbots.mev_summary**
 
 This table contains summary of all the classified transactions
 
