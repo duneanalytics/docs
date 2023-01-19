@@ -7,12 +7,14 @@ With the release of the Polygon decoded tables on Dune Engine V2, we now have al
 
 As a result we have started decommissioning blockchains on V1 as we transition to V2 as our primary platform.
 
-Here's the order in which we plan to decommission chains on V1: 
+Once a chain is commissioned, queries referncing the V1 version won't be editable anymore until you log in and select DuneV2 from the data explorer drop down to re-run them as V2 queries.
+
+Here's an estimate of the **order** and **dates** by which we plan to **decommission chains** on V1: 
 
 - BSC (decommission by Jan 31st 2023, extended from Dec 14th due to community feedback)
 - Polygon (decommission by Jan 31st 2023, extended from Dec 21st due to community feedback) 
-- Optimism (decommission TBD - estimate kickoff Q1 2023) 
-- xDai (decommission TBD - estimated kickoff Q1 2023) 
+- Optimism (decommission completion date TBD, decomission process started Jan 2023) 
+- xDai (decommission completion date TBD, decomission process started Jan 2023)
 - Ethereum (decommission TBD - estimate kickoff Q1 2023)  
 
 Please also note:
