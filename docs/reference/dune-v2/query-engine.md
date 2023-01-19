@@ -15,7 +15,8 @@ With Dune V2 we’re moving away from a [PostgreSQL](https://www.postgresql.org/
 The syntax and keyword operator differences between Postgres, Spark, and Dune SQL are quite minimal, however there are a few to be aware of.
 
 !!! warning
-    **Dune SQL is still in alpha!** If you find any other changes in Spark or Dune SQL that are important to note, please feel free to [submit a PR to this docs page on GitHub](https://github.com/duneanalytics/docs/edit/master/docs/reference/dune-v2/query-engine.md) or let us know in #dune-sql.
+    **Dune SQL is still in alpha!** If you find any other changes in Spark or Dune SQL that are important to note, please feel free to [submit a PR to this docs page on GitHub](https://github.com/duneanalytics/docs/edit/master/docs/reference/dune-v2/query-engine.md) or let us know in #dune-sql. 
+    **If you're running into errors using `||`, `concat()`, `replace()`, `trim()`, `length()`, or other operators on bytearrays (things like addresses, transactions, etc)** then check out the [Byte Array Functions](#byte-array-functions-in-dune-SQL) section.
 
 ### Syntax Comparison
 
@@ -71,7 +72,9 @@ The byte array conversion functions throw an overflow exception if the byte arra
 
 ## Byte Array Functions in Dune SQL
 
-Dune SQL currently represents byte arrays as `0x`-prefixed strings. In the future we will represent byte arrays using the `varbinary`. To make it simpler to work with byte arrays we have the following helper functions. They simplify interactions with byte arrays, as they automatically account for the `0x`-prefix and use byte index instead of characther index. For instance, the `bytearray_substring` methods take indexes by byte, not by characther (twice the byte array length). If there is an operation you need to do on byte arrays which is not covered by a function in the list below you should reach out to the Dune team.
+Dune SQL currently represents byte arrays as `0x`-prefixed strings. In the future we will represent byte arrays using the `varbinary`. To make it simpler to work with byte arrays we have the following helper functions. They simplify interactions with byte arrays, as they automatically account for the `0x`-prefix and use byte index instead of characther index. For instance, the `bytearray_substring` methods take indexes by byte, not by characther (twice the byte array length). If there is an operation you need to do on byte arrays which is not covered by a function in the list below you should reach out to the Dune team. 
+
+*Operators like `||` and functions like `concat()` will no longer work with bytearrays, you will need to `cast(some_bytearray as varchar)` first.*
 
 | Function | Return Type | Argument Types | Description |
 | --- | --- | --- | --- |
