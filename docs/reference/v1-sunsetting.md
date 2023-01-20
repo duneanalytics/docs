@@ -24,27 +24,38 @@ Please also note:
  
 *special cases can be individually reviewed 
 
-## How Decommissioning will work
+## Decommissioning Schedule for Optimism and xDai (Updated Jan 19 2023)
+
+- Week 0 (Jan 19th)
+  - Kickoff of the decommissioning, no changes to V1 queries 
+- Week 3 (Feb 9)
+  - Removal of the blockchain from the blockchain selection dropdown
+  - Existing queries are still editable on V1
+- Week 6 (March 1st) 
+  - V1 queries for the given blockchain will become read only, forking and updating on V2 will be required
+  - Data will continue to update and refreshed for the queries on V1
+- Week 10 (March 31st)
+  - No new data will power queries for the chain on V1, decommission complete
+
+## How Decommissioning will work **in General**
 
 The process below is the same for all blockchains, and will be completed by the above decommissioning dates.
 
-For Polygon and BNB the kickoff date was November 2nd, 2022, we will use that as an example here to give you a general sense of timelines: 
-
-### Week 0 -  (Nov 2nd, 2022)
+### Week 0
 
 - Kickoff of the decommissioning, no changes to V1 queries
 
-### Week 3 (Nov 23rd, 2022)
+### Week 3
 
 - Removal of the blockchain from the blockchain selection dropdown
 - Existing queries are still editable on V1
 
-### Week 6 (Was:December 14th, 2022 Now: Jan 4th, 2023)
+### Week 6
 
 - V1 queries for the given blockchain will become read only, forking and updating on V2 will be required
 - Data will continue to update and refreshed for the queries on V1
 
-### Week 13 (January 31st, 2023)
+### Week 13 
 - No new data will power queries for the chain on V1, decommission complete
 
 ## To learn more and ask questions
