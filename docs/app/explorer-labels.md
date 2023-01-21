@@ -3,7 +3,7 @@ title: Data Explorer Labels
 description: While using the Data Explorer and these docs, you'll encounter a variety of labels. Here's what they all mean.
 ---
 
-While using the [Data Explorer](../getting-started/queries/data-explorer.md) (and in reading these docs), you'll encounter a variety of labels.
+While using the [Data Explorer](queries/data-explorer.md) (and in reading these docs), you'll encounter a variety of labels.
 
 Here's what they all mean.
 
@@ -14,26 +14,26 @@ Some data sets will have multiple blockchain icons - meaning data from each of t
 
 | Icon      | Description                          |
 | ----------- | ---------------------------------------- |
-|    ![ethereum icon](images/ethereum-icon.png)    | Ethereum blockchain Raw Data, Decoded Project, or Spell |
-|![gnosis chain icon](images/gnosis-chain-icon.png)| Gnosis Chain Raw Data, Decoded Project, or Spell |
-| ![polygon icon](images/polygon-icon.png) | Polygon blockchain Raw Data, Decoded Project, or Spell |
-| ![optimism icon](images/optimism-icon.png) | Optimism blockchain Raw Data, Decoded Project, or Spell |
-| ![optimism legacy icon](images/optimism-legacy-icon.png) | Optimism (legacy) blockchain Raw Data, Decoded Project, or Spell |
-| ![bnb chain icon](images/bnb-chain-icon.png) | BNB Chain Raw Data, Decoded Project, or Spell |
-| ![solana icon](images/solana-icon.png) | Solana blockchain Raw Data, Decoded Project, or Spell |
-| ![arbitrum icon](images/arbitrum-icon.png) | Arbitrum blockchain Raw Data, Decoded Project, or Spell |
-| ![avalanche icon](images/avalanche-icon.png) | Avalanche C-Chain Raw Data, Decoded Project, or Spell |
-| ![goerli testnet icon](images/goerli-testnet-icon.png) | Ethereum Goerli Testnet Raw Data, Decoded Project, or Spell |
-| ![fantom icon](images/fantom-icon.png) | Fantom Raw Data, Decoded Project, or Spell |
+|    ![ethereum icon](images/explorer-labels/ethereum-icon.png)    | Ethereum blockchain Raw Data, Decoded Project, or Spell |
+|![gnosis chain icon](images/explorer-labels/gnosis-chain-icon.png)| Gnosis Chain Raw Data, Decoded Project, or Spell |
+| ![polygon icon](images/explorer-labels/polygon-icon.png) | Polygon blockchain Raw Data, Decoded Project, or Spell |
+| ![optimism icon](images/explorer-labels/optimism-icon.png) | Optimism blockchain Raw Data, Decoded Project, or Spell |
+| ![optimism legacy icon](images/explorer-labels/optimism-legacy-icon.png) | Optimism (legacy) blockchain Raw Data, Decoded Project, or Spell |
+| ![bnb chain icon](images/explorer-labels/bnb-chain-icon.png) | BNB Chain Raw Data, Decoded Project, or Spell |
+| ![solana icon](images/explorer-labels/solana-icon.png) | Solana blockchain Raw Data, Decoded Project, or Spell |
+| ![arbitrum icon](images/explorer-labels/arbitrum-icon.png) | Arbitrum blockchain Raw Data, Decoded Project, or Spell |
+| ![avalanche icon](images/explorer-labels/avalanche-icon.png) | Avalanche C-Chain Raw Data, Decoded Project, or Spell |
+| ![goerli testnet icon](images/explorer-labels/goerli-testnet-icon.png) | Ethereum Goerli Testnet Raw Data, Decoded Project, or Spell |
+| ![fantom icon](images/explorer-labels/fantom-icon.png) | Fantom Raw Data, Decoded Project, or Spell |
 
 ## Dataset Icons
 
 | Icon      | Description                          |
 | ----------- | ---------------------------------------- |
-| ![table icon 1](images/table-icon-1.png)![table icon 2](images/table-icon-2.png) | Data Table (Raw Data, Spell, or smart contract Event or Function) |
-| ![decoded project icon](images/decoded-project-icon.png) | Decoded Project (protocol or protocol version eg "opensea" or "aave_v2") |
-| ![spell icon](images/spell-icon.png) | Spell set (eg cow_protocol contains "batches" and "solvers" Spells) |
-| ![community data icon](images/community-data-icon.png) | Community Data Set |
+| ![table icon 1](images/explorer-labels/table-icon-1.png)![table icon 2](images/explorer-labels/table-icon-2.png) | Data Table (Raw Data, Spell, or smart contract Event or Function) |
+| ![decoded project icon](images/explorer-labels/decoded-project-icon.png) | Decoded Project (protocol or protocol version eg "opensea" or "aave_v2") |
+| ![spell icon](images/explorer-labels/spell-icon.png) | Spell set (eg cow_protocol contains "batches" and "solvers" Spells) |
+| ![community data icon](images/explorer-labels/community-data-icon.png) | Community Data Set |
 
 ## Dataset Labels
 

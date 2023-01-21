@@ -1,13 +1,11 @@
 nav:
 - index.md
-- Query Quick Start: query-quick-start
-- queries
-- visualizations
+- dune-explorer.md
+- queries.md
+- visualizations.md
 - dashboards.md
 - embeds.md
-- dune-explorer.md
+- query-quick-start.md
 - decoding-contracts.md
 - teams.md
-- guides
-- Use Cases: use-cases
 - ...

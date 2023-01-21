@@ -65,7 +65,7 @@ Labels are stored in the new `labels.labels` table which has the following schem
 | `name` | _text_ | label name |
 | `type` | _text_ | label type |
 | `author` | _text_ | The username of the user who created this label |
-| `source` | _text_ | The source of this label, autopopulated by dune |
+| `source` | _text_ | The source of this label, autopopulated by Dune |
 | `updated_at` | _timestamptz_ | The last time this label was changed |
 
 ## Using labels

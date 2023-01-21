@@ -16,7 +16,7 @@ We will review your code and run your tests. Our goal is to eliminate this step 
 
 ## Dune will merge and deploy
 
-If everything looks good, Dune will merge your changes and deploy them to production. Your Spells will be visible on [Dune V2 Data Explorer](../../getting-started/queries/data-explorer.md) under Spells.
+If everything looks good, Dune will merge your changes and deploy them to production. Your Spells will be visible on [Dune V2 Data Explorer](../../app/queries/data-explorer.md) under Spells.
 
 And ta-da! You are a Spell casting wizard.
 

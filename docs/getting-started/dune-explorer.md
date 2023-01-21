@@ -46,7 +46,7 @@ And we can filter this list by:
 1. Using the "Search for queries" text field to find dashboards by keyword.
 2. Click on one of the "Popular query tags" to see dashboards with that tag.
 
-[Learn more about making Queries here](query-quick-start/index.md).
+[Learn more about making Queries here](query-quick-start.md).
 
 ## Wizards
 
@@ -56,7 +56,7 @@ By default, [Wizards Explorer](https://dune.com/browse/users) shows Wizards that
 
 Use the right sidebar to search for a specific Wizard.
 
-And become a Wizard yourself with our [Query Quick Start here](query-quick-start/index.md)! 🧙
+And become a Wizard yourself with our [Query Quick Start here](query-quick-start.md)! 🧙
 
 ## Teams
 

@@ -28,7 +28,7 @@ The API does support Query Parameters!
 
 For Dune Queries that include Parameters, you can pass parameter data as part of the [Execute Query ID endpoint](../../api/api-reference/execute-query-id.md)!
 
-Learn more about [building Dune Queries with Parameters here](../../getting-started/queries/parameters.md).
+Learn more about [building Dune Queries with Parameters here](../../app/queries/parameters.md).
 
 And learn how to pass parameter data using [cURL here](../../api/api-reference/execute-query-id.md#curl-with-parameters) and with [Python here](../../api/quick-start/api-py.md#parameterized-queries).
 
