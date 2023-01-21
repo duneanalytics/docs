@@ -19,7 +19,7 @@ For most of decentralized finance (DeFi), the primary entry point for users is j
 
 If the contract isn't [Decoded](../decoding-contracts.md) yet, you can start with some raw queries for finding the most common function and event signatures here: [Dune Utility Queries](../../reference/wizard-tools/utility-queries.md)
     
-If you're having trouble figuring out the tables, [see our Table docs here](../../reference/tables).    
+If you're having trouble figuring out the tables, [see our Table docs here](../../tables).    
     
 ## 2. Explore the contract flow
 

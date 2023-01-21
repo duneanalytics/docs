@@ -3,16 +3,16 @@ title: Spellbook Model Docs
 description: Spellbook comes with dedicated dbt documentation to help you navigate the data within!
 ---
 
-Spellbook comes with dedicated dbt documentation to help you navigate the data within! Find it here:
+Spellbook comes with dedicated dbt documentation to help you navigate the data tables within! Find it here:
 
 <div class="grid cards" markdown>
 - [Spellbook Model Docs](https://dune.com/spellbook)
 </div>
 
-These work similarly to the [V2 table documentation you can find here](../../tables/v2/raw/), with a couple of special features.
+These work similarly to the [V2 table documentation you can find here](../tables/v2/raw/), with a couple of special features.
 
 !!! warning
-    These Spellbook Table Docs and the Spellbook data lake are a work in progress. If you're not able to find  a specific V2 table/column, it likely isn't ready for use in Spells yet. If you do find it but it's not yet fully labeled in the Spellbook Model docs, please check our [V2 table documentation here](../../tables/v2/raw/). If you still have questions drop them in the [#data-tables Discord channel](https://discord.com/channels/757637422384283659/757893948428517376)!
+    These Spellbook Table Docs and the Spellbook data lake are a work in progress. If you're not able to find  a specific V2 table/column, it likely isn't ready for use in Spells yet. If you do find it but it's not yet fully labeled in the Spellbook Model docs, please check our [V2 table documentation here](../tables/v2/raw/). If you still have questions drop them in the [#data-tables Discord channel](https://discord.com/channels/757637422384283659/757893948428517376)!
 
 ![dune spellbook docs homepage](images/dune-spellbook-docs-homepage.png)
 
@@ -30,11 +30,11 @@ The Project tab is where you'll find the Sources and Spellbook models.
 
 ### Sources models
 
-[Sources](../spellbook/getting-started/data-sources.md) are dbt data models built from data tables contained in the main Dune V2 data lake.
+[Sources](../../spellbook/getting-started/data-sources.md) are dbt data models built from data tables contained in the main Dune V2 data lake.
 
 Data must first be pulled into Spellbook Source models before it can be used in Spells, so using this list you can get an idea of what data is ready for use in your Spells, as well as what data might need to be added first as a Source model.
 
-For example, [Arbitrum blocks](../../tables/v2/raw/arbitrum/blocks/) data is available for Spells, but [Arbitrum event logs](../../tables/v2/raw/arbitrum/event-logs/) are not.
+For example, [Arbitrum blocks](../tables/v2/raw/arbitrum/blocks/) data is available for Spells, but [Arbitrum event logs](../tables/v2/raw/arbitrum/event-logs/) are not.
 
 ### Spellbook models
 
@@ -43,9 +43,9 @@ Below Sources you'll find a "Projects" heading, the only important thing here is
 ![spellbook models folder](images/spellbook-models-folder.png)
 
 - **Macros** contains functions that make Spellbook work
-- **Models** contains [Spells](../spellbook/getting-started/spells.md)
+- **Models** contains [Spells](../../spellbook/getting-started/spells.md)
 - **Seeds** contains static data used for testing
-- **Tests** contains the [unit tests](../spellbook/getting-started/tests.md) that ensure Spells work as intended.
+- **Tests** contains the [unit tests](../../spellbook/getting-started/tests.md) that ensure Spells work as intended.
 
 ## The Lineage Graph
 You can click the blue icon on the bottom-right corner of a page to view the lineage graph of the model you're looking at:

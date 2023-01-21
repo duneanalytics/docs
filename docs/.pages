@@ -1,6 +1,7 @@
 nav:
 - index.md
 - getting-started
-- reference
+- tables
 - spellbook
 - API: api
+- reference

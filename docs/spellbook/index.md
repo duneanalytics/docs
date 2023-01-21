@@ -48,7 +48,7 @@ If you're a learn by doing type of person, check out our How to Cast a Spell gui
 To get a better sense of what Spells are already available to you, check out our Spellbook Model Docs:
 
 <div class="cards grid" markdown>
-- [Spellbook Model Docs](spellbook-model-docs.md)
+- [Spellbook Model Docs](../tables/spells/spellbook-model-docs.md)
 </div>
 
 To take a look under the hood, check out Spellbook on GitHub:

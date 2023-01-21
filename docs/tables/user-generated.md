@@ -18,7 +18,7 @@ There is several ways in which you can utilize your own views and tables inside 
 
 Your own tables, views and function all have an important part to play in creating content on Dune and make maintenance of your dashboards and queries easier if used correctly.
 
-If you are unfamiliar with tables, views, materialized views and functions please consult the [pgSQL documentation](https://www.postgresqltutorial.com/postgresql-views) or check out our [getting started guide](../../getting-started/index.md).
+If you are unfamiliar with tables, views, materialized views and functions please consult the [pgSQL documentation](https://www.postgresqltutorial.com/postgresql-views) or check out our [getting started guide](../getting-started/index.md).
 
 ### Storing Information
 
