@@ -122,7 +122,7 @@ Parameters can turn your Query or Dashboard into an app for blockchain data.
 
 Click `Add parameter` in the bottom right of the SQL editor on the Query editor page
 
-![Add parameter](images/add-parameter.png)
+![Add parameter](images/tips/add-parameter.png)
 
 Double curly brackets will appear in your Query `{{}}`. Put the name of your parameter inside, e.g. `{{token symbol}}` or `{{holder address}}`.
 

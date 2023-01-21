@@ -9,33 +9,33 @@ With Dune, you can create the following types of graphs:
 
 === "Bar charts"
 
-    ![bar chart example](images/bar-chart-example.png)
+    ![bar chart example](images/charts-graphs/bar-chart-example.png)
 
 === "Area charts"
 
-    ![area chart example](images/area-chart.png)
+    ![area chart example](images/charts-graphs/area-chart.png)
 
 === "Scatter charts"
 
-    ![scatter chart example](images/scatter-chart-example.png)
+    ![scatter chart example](images/charts-graphs/scatter-chart-example.png)
 
 === "Line charts"
 
-    ![line chart example](images/line-chart-example.png)
+    ![line chart example](images/charts-graphs/line-chart-example.png)
 
 === "Pie charts"
 
-    ![pie chart example](images/pie-chart-example.png)
+    ![pie chart example](images/charts-graphs/pie-chart-example.png)
 
 === "Mixed graphs"
 
     You can mix all of these graph types together in one Visualization, as long as your base graph isn't a Pie chart:
 
-    ![mixed graph example](images/mixed-graph-example.png)
+    ![mixed graph example](images/charts-graphs/mixed-graph-example.png)
 
 All graph Visualizations share a common set of editing options, see the tabs below for how to configure each.
 
-![all visualization configuration options](images/all-visualization-configuration-options.png)
+![all visualization configuration options](images/charts-graphs/all-visualization-configuration-options.png)
 
 ## Visualization Configuration Options
 
@@ -43,7 +43,7 @@ All graph Visualizations share a common set of editing options, see the tabs bel
 
     This section allows you to define how to display your data.
 
-    ![see explanations below](images/graphs-4.png)
+    ![see explanations below](images/charts-graphs/graphs-4.png)
 
     **Title**
 
@@ -74,7 +74,7 @@ All graph Visualizations share a common set of editing options, see the tabs bel
 
     Here you can pick the data points that are to be displayed.
 
-    ![see explanations below](images/graphs-5.png)
+    ![see explanations below](images/charts-graphs/graphs-5.png)
 
     You can choose one **x-axis** and multiple **y-axis.**
 
@@ -84,7 +84,7 @@ All graph Visualizations share a common set of editing options, see the tabs bel
 
     Using these options you can influence how your x-axis data gets displayed.
 
-    ![see explanations below](images/graphs-6.png)
+    ![see explanations below](images/charts-graphs/graphs-6.png)
 
     **Axis title**
 
@@ -107,7 +107,7 @@ All graph Visualizations share a common set of editing options, see the tabs bel
 
     With these options you can influence how your x-axis data gets displayed.
 
-    ![see explanations below](images/graphs-7.png)
+    ![see explanations below](images/charts-graphs/graphs-7.png)
 
     **Axis title**
 
@@ -124,7 +124,7 @@ All graph Visualizations share a common set of editing options, see the tabs bel
 
 === "Series options"
 
-    ![](images/graphs-9.png)
+    ![](images/charts-graphs/graphs-9.png)
 
     In this section of the Visualization editor you can finalize your graph.
 
@@ -139,11 +139,11 @@ All graph Visualizations share a common set of editing options, see the tabs bel
 
     This might look slightly different for you depending on which browser you use.
 
-    ![Choose any color you want!](images/graphs-color.gif)
+    ![Choose any color you want!](images/charts-graphs/graphs-color.gif)
 
 === "Pie options"
     
-    ![pie options](images/pie-options.png)
+    ![pie options](images/charts-graphs/pie-options.png)
     
     **Label format**
 
@@ -153,7 +153,7 @@ All graph Visualizations share a common set of editing options, see the tabs bel
 
 ## X/Y-axis Tick and Label formats
 
-![](images/graphs-8.png)
+![](images/charts-graphs/graphs-8.png)
 
 Tick formats change how numeric values and axis labels in your graphs are displayed.
 

@@ -5,17 +5,17 @@ description: The Query window is where you work your Dune 🪄 by inputting SQL 
 
 The Query window is where you work your Dune 🪄 by inputting SQL code and running it.
 
-![Query window](images/query-window.png)
+![Query window](images/query-window/query-window.png)
 
 ## Autocomplete
 
 You can enable/disable the autocomplete function of the Query editor using the gear wheel in the top right corner:
 
-![turn on autocomplete example](images/turn-on-autocomplete-example.png)
+![turn on autocomplete example](images/query-window/turn-on-autocomplete-example.png)
 
 The autocomplete feature will bring up PostgreSQL keywords, as well as tables and aliases you've already included in your Query.
 
-![query editor autocomplete example](images/query-editor-autocomplete-example.gif)
+![query editor autocomplete example](images/query-window/query-editor-autocomplete-example.gif)
 
 ## Run Selection
 
@@ -25,11 +25,11 @@ To do this, highlight a part of your Query. You'll then see the <span class="fk-
 
 Click and 🪄
 
-![run selection example gif](images/run-selection.gif)
+![run selection example gif](images/query-window/run-selection.gif)
 
 You'll need to highlight a syntactically complete and correct piece of SQL otherwise you'll get an error:
 
-![run selection syntax error](images/run-selection-syntax-error.gif)
+![run selection syntax error](images/query-window/run-selection-syntax-error.gif)
 
 ## Shortcuts
 

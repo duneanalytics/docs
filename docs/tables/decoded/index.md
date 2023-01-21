@@ -110,7 +110,7 @@ On [Etherscan](https://etherscan.io/tx/0x2bb7c8283b782355875fa37d05e4bd962519ea2
 
 ![](../images/etherscan.png)
 
-If we query for this transaction in the `ethereum.logs` table in the dune database, we will receive the same encoded bytecode as our result dataset.
+If we query for this transaction in the `ethereum.logs` table in the Dune database, we will receive the same encoded bytecode as our result dataset.
 
 === "V2 Engine (Spark SQL)"
 

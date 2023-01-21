@@ -9,15 +9,15 @@ Here are a few non-graph visualizations you can make with Dune!
 
 Tables are the default Visualization you'll find labeled <span class="fk-btn-4">Query results</span> whenever you create and run a Query:
 
-![query results table example](images/query-results-table-example.png)
+![query results table example](images/other-visualizations/query-results-table-example.png)
 
 You can also make more Tables to display your data differently using the <span class="fk-btn-2">New visualization</span> button and drop down menu:
 
-![new table visualization](images/new-table-visualization.png)
+![new table visualization](images/other-visualizations/new-table-visualization.png)
 
 ### Configuring your Table
 
-![table configuration options](images/table-configuration-options.png)
+![table configuration options](images/other-visualizations/table-configuration-options.png)
 
 #### Table options
 
@@ -29,7 +29,7 @@ Leaving default value (`Table`) or making this blank makes your Table title the 
 
 Adding any other value to this field will add that value first, followed by your Query Name:
 
-![table title example](images/table-title-example.png)
+![table title example](images/other-visualizations/table-title-example.png)
 
 Note: the default value for "Query Results" is treated like an added value.
 
@@ -49,7 +49,7 @@ You can configure the following options for each column in your Table
 
 === "Format"
 
-    Allows you to adjust the numerical format of your data following the [X/Y-axis Tick and Label formats here](../visualizations/charts-graphs.md#xy-axis-tick-and-label-formats).
+    Allows you to adjust the numerical format of your data following the [X/Y-axis Tick and Label formats here](charts-graphs.md#xy-axis-tick-and-label-formats).
 
 === "Hide Column"
 
@@ -66,7 +66,7 @@ Columns that return numerical data have these additional options:
     - `Normal` simply displays the column's numerical data.
     - `Progress bar` shows the column's numerical data with a progress bar visual that is "full" for the column's highest value and "nearly empty" for the column's lowest value, with the rest of the data ranging in between:
 
-    ![progress bar example](images/progress-bar-example.gif)
+    ![progress bar example](images/other-visualizations/progress-bar-example.gif)
 
 === "Colored Values"
 
@@ -78,11 +78,11 @@ Columns that return numerical data have these additional options:
 
 Counters are a great way to provide your audience with immediate "on a glance" stats.
 
-!["on a glance" stats in https://dune.com/0xBoxer/NFT](images/counters-1.png)
+!["on a glance" stats in https://dune.com/0xBoxer/NFT](images/other-visualizations/counters-1.png)
 
 ### Configuring your Counter
 
-![Counters 2](images/counters-2.png)
+![Counters 2](images/other-visualizations/counters-2.png)
 
 #### Counter options
 
@@ -129,6 +129,6 @@ This section is where you can adjust how your numerical data is displayed.
 
 ***
 
-![label](images/counters-label-1.png)
+![label](images/other-visualizations/counters-label-1.png)
 
-![label configuration](images/counters-label-2.png)
+![label configuration](images/other-visualizations/counters-label-2.png)

@@ -7,36 +7,36 @@ The Query Results section is where you can see the data your Query returns after
 
 To get the results of your Query the first time, smash that <span class="fk-btn-1">Run</span> button in the orange box below the Query Window:
 
-![first time run query example](images/first-time-run-query-example.png)
+![first time run query example](images/query-results/first-time-run-query-example.png)
 
 After a short time, your Query Results will appear 🪄 as a table:
 
-![query results example](images/query-results.png)
+![query results example](images/query-results/query-results.png)
 
 
 !!! warning
     Queries run on the database you've currently selected in the Data Explorer dropdown. EG if you run a Query that uses Dune V1 Ethereum data, it will fail to run if you select another V1 Blockchain dataset or Dune V2:
     
-    ![query failed when switching data sets](images/query-failed-switching-datasets.gif)
+    ![query failed when switching data sets](images/query-results/query-failed-switching-datasets.gif)
 
 Above your Results table you'll find:
   
   1. The "Query Results" tab; if you make more Visualizations they'll appear as tabs next to this one.
-  2. The <span class="fk-btn-2">New Visualization</span> button which lets you make [Visualizations](../visualizations) out of your Query data.
+  2. The <span class="fk-btn-2">New Visualization</span> button which lets you make [Visualizations](../../getting-started/visualizations) out of your Query data.
   3. "Last run" and "Last run took" times so you can know how fresh your Results data is as well as a reference point for how long it might take you to Run again (could be more or less time depending on how you've modified your Query).
   4. The <span class="fk-btn-1">Run</span> button (to re-run your Query as you change it or to).
 
-![elements above query results](images/elements-above-query-results.png)
+![elements above query results](images/query-results/elements-above-query-results.png)
 
 ### Saving Your Query
 
 After running your Query at least once, you'll see the <span class="fk-btn-1">Save</span> button appear above the Query Window:
 
-![a wild save button appears](images/a-wild-save-button-appears.png)
+![a wild save button appears](images/query-results/a-wild-save-button-appears.png)
 
 Click it to see a pop up that asks you to give your Query a name, with the option to make this Query private (*~if~* you're a [Dune Premium](../../reference/pricing.md) user):
 
-![first time saving query example](images/first-time-saving-query-popup.png)
+![first time saving query example](images/query-results/first-time-saving-query-popup.png)
 
 After your first Save, above the Query Window you'll find:
 
@@ -44,11 +44,11 @@ After your first Save, above the Query Window you'll find:
 2. The <span class="fk-btn-3">Embed</span> button for you and others to embed this Query on other web pages.
 3. The <span class="fk-btn-3">Fork</span> button for you and others to create a copy of this Query to modify to your hearts content 💖 
 
-![star embed and fork buttons](images/star-embed-fork-buttons.png)
+![star embed and fork buttons](images/query-results/star-embed-fork-buttons.png)
 
 Anytime you make further changes the <span class="fk-btn-1">Run</span> button will become a <span class="fk-btn-1">Save and run</span> button:
 
-![save and run button](images/save-and-run-button.png)
+![save and run button](images/query-results/save-and-run-button.png)
 
 This does what you might expect (saves your changes and re-runs your Query).
 
@@ -56,24 +56,24 @@ This does what you might expect (saves your changes and re-runs your Query).
 
 When you re-run your Query, your Results table will be blank until the new data is ready and loaded:
 
-![table results clear while running](images/table-clear-while-running.png)
+![table results clear while running](images/query-results/table-clear-while-running.png)
 
 The <span class="fk-btn-1">Run</span> button will change to show:
 
 1. How long your Query has been running
 2. A <span class="fk-btn-3">Cancel</span> button (in case you're tired of waiting!)
 
-![run time counter buttons](images/run-time-counter-buttons.png)
+![run time counter buttons](images/query-results/run-time-counter-buttons.png)
 
 ### Formatting Results Tables
 
 You can change the formatting and appearance of your Query Results tables with the options below the table. 
 
-![query results table options](images/query-results-table-options.png)
+![query results table options](images/query-results/query-results-table-options.png)
 
 What do we have here? 👀
 
-1. The <span class="fk-btn-3">Add to dashboard</span> button which won't work until you've [saved your Query](#saving-your-query). Learn more about [making Dashboards here](../dashboards.md).
+1. The <span class="fk-btn-3">Add to dashboard</span> button which won't work until you've [saved your Query](#saving-your-query). Learn more about [making Dashboards here](../../getting-started/dashboards.md)
 2. A field to change your table's Title.
 3. Settings for each of your columns.
 
@@ -101,4 +101,4 @@ Column number formatting follow this logic:
 
 To make Visualizations out of your Query Results, start by, you guessed it, smashing that <span class="fk-btn-2">New Visualization</span> button (a normal click will also work if you really prefer).
 
-Then check out our [Visualizations](../visualizations) docs to learn how to make 📊 magic!
+Then check out our [Visualizations](../../getting-started/visualizations) docs to learn how to make 📊 magic!

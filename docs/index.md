@@ -127,9 +127,9 @@ For example one of the most popular Spells, [nft.trades](https://dune.com/spellb
 
 ### <img alt="wizards make magic" src="images/wizards-make-magic.png" class="vrt-cent"><span class="vrt-cent"> 6. Dune Wizards make magic</span>
 
-From all this data, Wizards build [Queries](getting-started/queries/index.md) using SQL, a widely-used language for storing, manipulating and retrieving data in databases.
+From all this data, Wizards build [Queries](getting-started/queries.md) using SQL, a widely-used language for storing, manipulating and retrieving data in databases.
 
-From these Queries they build the [Visualizations](getting-started/visualizations/index.md) and [Dashboards](getting-started/dashboards.md) we all know and love!
+From these Queries they build the [Visualizations](getting-started/visualizations.md) and [Dashboards](getting-started/dashboards.md) we all know and love!
 
 Eg [@rchen8](https://dune.com/rchen8)'s OpenSea daily volume: 
 
@@ -153,7 +153,7 @@ As a Dune Wizard (what we call "blockchain analysts" because it's way cooler), y
 
 Dune aggregates blockchain data into an SQL database that can be easily queried. 
 
-[Queries](getting-started/queries/index.md) are used to specify what data from the blockchain should be found in the our database and returned.
+[Queries](getting-started/queries.md) are used to specify what data from the blockchain should be found in the our database and returned.
 
 Maybe you want to know _all the Dex trades that happened today_, or the _total value of stablecoins minted this year_. Whatever the question, discovering the answer starts with a Dune Query!
 
@@ -169,7 +169,7 @@ There are a few ways that a blockchain analyst (i.e. Wizard i.e. you!) can get s
 
 ### Visualizations
 
-Data presented in table form (rows and columns) can be difficult to read. [Visualizations](getting-started/visualizations/index.md) take the results of a Query and present the information in a clear, precise, and _visual_ way.
+Data presented in table form (rows and columns) can be difficult to read. [Visualizations](getting-started/visualizations.md) take the results of a Query and present the information in a clear, precise, and _visual_ way.
 
 With Dune Visualizations, it's easy to begin to tell a story with your data by transforming something like this:
 
@@ -212,7 +212,7 @@ Here's a quick run down of each of the sections:
 - [Spellbook](spellbook/index.md) is where you'll find everything you need to build and use Spells.
 - [API](api/index.md) is where you'll find everything you need to integrate our API into your project.
 
-If you're itching to get your wand working, jump over to our [Query Quick Start](getting-started/query-quick-start/index.md) for a walkthrough that will help you build your first Dune Query!
+If you're itching to get your wand working, jump over to our [Query Quick Start](getting-started/query-quick-start.md) for a walkthrough that will help you build your first Dune Query!
 
 ## Dune is a community effort
 

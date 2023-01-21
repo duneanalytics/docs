@@ -1,6 +1,6 @@
 ---
 title: Embeds
-description: Embeds allow you to enjoy beautiful, updating dune charts across the web!
+description: Embeds allow you to enjoy beautiful, updating Dune charts across the web!
 ---
 
 **Screenshots are boring tech of the past.**

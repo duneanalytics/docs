@@ -1,7 +1,13 @@
 ---
-title: Example 
-description: Let's walk through an example of building a query using PoolTogether data! 🪄
+title: How to Create Query
+description: Here's a short five-step guide for creating a query on Dune!
 ---
+
+Here's a short five-step guide to getting familiar with a protocol and figuring out how to query around it using Dune.
+
+Thanks to [@ilemi](https://dune.com/ilemi) for putting this together!
+
+[Learn more about how Queries work here](queries.md).
 
 Let's walk through an example of building a query using [OpenSea](https://opensea.io/) data to:
 
@@ -12,16 +18,16 @@ If you get stuck, [fork and test out the demo query here](https://dune.com/queri
 
 ## 1. Find the main point of entry
 
-The easiest place to start your query exploration is the [Dune Data Explorer](../queries/data-explorer.md), for two reasons:
+The easiest place to start your query exploration is the [Dune Data Explorer](../app/queries/data-explorer.md), for two reasons:
 
 1. Searching here will let us discover whether the contracts we'll need have already been decoded; if so we'll have a lot less work to do.
-2. If our data is already [Decoded](../decoding-contracts.md), the contracts, calls, events, and data points will probably have obvious labels - eg `amount_usd` is the US dollar amount an NFT was bought/sold for. So we might not need to dig through the project docs to understand which contracts and data we need to build our Query.
+2. If our data is already [Decoded](decoding-contracts.md), the contracts, calls, events, and data points will probably have obvious labels - eg `amount_usd` is the US dollar amount an NFT was bought/sold for. So we might not need to dig through the project docs to understand which contracts and data we need to build our Query.
 
 So, let's get started by switching to the Dune V2 data set and searching for "opensea" to see what we find.
 
-By using Dune V2, we get access to [Spells](../../spellbook/) which can let us access data from multiple blockchains in one Query - assuming the Spell for OpenSea exists (Dune V2 is still in beta so not all data has been migrated yet).
+By using Dune V2, we get access to [Spells](../spellbook which can let us access data from multiple blockchains in one Query - assuming the Spell for OpenSea exists (Dune V2 is still in beta so not all data has been migrated yet).
 
-![dune v2 search opensea](images/dune-v2-search-opensea.gif)
+![dune v2 search opensea](images/query-quick-start/dune-v2-search-opensea.gif)
 
 Awesome! Looks like we have an "opesea trades" Spell (Spells are marked by the 🪄 icon in the data explorer).
 
@@ -38,12 +44,12 @@ The first way is to run a `SELECT *` + `LIMIT` search to see what comes up.
 
 `LIMIT` limits the number of rows returned so we don't try to return the whole table (this would take forever to load).
 
-![opensea trades limit query](images/opensea-trades-limit-query.gif)
+![opensea trades limit query](images/query-quick-start/opensea-trades-limit-query.gif)
 
 Note a couple of things here:
 
-1. Dune has a nice auto complete feature - just start typing to see options and hit enter to paste ([learn more about how the Query Window works here](../queries/query-window.md))
-2. You can click the >> next to a table name in the Data Explorer to automatically paste that into your query ([learn more about the Data Explorer here](../queries/data-explorer.md))
+1. Dune has a nice auto complete feature - just start typing to see options and hit enter to paste ([learn more about how the Query Window works here](../app/queries/query-window.md))
+2. You can click the >> next to a table name in the Data Explorer to automatically paste that into your query ([learn more about the Data Explorer here](../app/queries/data-explorer.md))
 
 Also since this is a pre-made how to guide you can just be lazy and copy this code:
 
@@ -65,27 +71,27 @@ These can help us quickly figure out what data exists inside of V2 tables AND se
 
 Let's head over to [https://dune.com/spellbook](https://dune.com/spellbook) and search for `opensea` using the top search bar:
 
-![opensea spellbook docs search](images/opensea-spellbook-docs-search.gif)
+![opensea spellbook docs search](images/query-quick-start/opensea-spellbook-docs-search.gif)
 
 Here we find an [`opensea_trades` table](https://dune.com/spellbook#!/model/model.spellbook.opensea_trades) that probably has some interesting data!
 
 Scrolling through the columns section we can see all the different data columns it has.
 
-Since this is a [Decoded Table](../../tables/decoded/index.md), a lot of the labels - like `amount_usd` - make sense just by reading them.
+Since this is a [Decoded Table](../tables/decoded/index.md), a lot of the labels - like `amount_usd` - make sense just by reading them.
 
 For those that aren't so obvious - like `trade_type` - we can click to get a description:
 
-![searching spellbook docs columns](images/searching-spellbook-docs-columns.gif)
+![searching spellbook docs columns](images/query-quick-start/searching-spellbook-docs-columns.gif)
 
 The Spellbook Docs also have a Lineage Graph which lets us view the tables that were used to build, as well as the tables built from `opensea_trades`:
 
-![viewing lineage graph](images/viewing-lineage-graph.gif)
+![viewing lineage graph](images/query-quick-start/viewing-lineage-graph.gif)
 
 We can also click the expand button in the right hand corner to see the complete flow of parent and child tables, then right click on any of them to view their documentation as well:
 
-![explore full lineage graph](images/explore-full-lineage-graph.gif)
+![explore full lineage graph](images/query-quick-start/explore-full-lineage-graph.gif)
 
-For a complete list of things you can do with the [Spellbook Docs see this page](../../tables/spells/spellbook-model-docs.md).
+For a complete list of things you can do with the [Spellbook Docs see this page](../tables/spells/spellbook-model-docs.md).
 
 ## 3. Decide what question you want to answer
 
@@ -100,13 +106,13 @@ And in this example, to make it easy on you, we've already decided to:
 
 As a beginner, if you don't already have an idea of what you want to build, exploring Dune data from the Query builder is a fun way to dive in.
 
-You can also use the [Dune Explorer](../dune-explorer.md) to see what others are building as well!
+You can also use the [Dune Explorer](dune-explorer.md) to see what others are building as well!
 
 Though this might not lead you to building the next [DeFi users over time](https://dune.com/rchen8/defi-users-over-time) (created by [@richardchen](https://dune.com/rchen8)), it's a great way to learn more about using Dune as you can see what's possible and even fork existing Queries to modify further!
 
 As a quick example of this, let's head over to [dune.com](https://dune.com/browse/dashboards) which will take us to right to the Dashboard Explorer page.
 
-![dashboard explorer example](images/dashboard-explorer-example.png)
+![dashboard explorer example](images/query-quick-start/dashboard-explorer-example.png)
 
 By default, the Explorer lists dashboards trending in the last 4 hours.
 
@@ -116,19 +122,19 @@ Using the right sidebar, we can also search by:
 - Dashboards with the most stars (Favorites)
 - By Tags like DeFi and NFT
 
-![dashboard search features](images/dashboard-search-features.png)
+![dashboard search features](images/query-quick-start/dashboard-search-features.png)
 
 At the time of writing, [@niftytable's](https://dune.com/niftytable) [Trending Contracts](https://dune.com/niftytable/trending-contracts) dashboard is trending in Dune so let's take a look:
 
-![trending contracts dashboard example](images/Trending-Contracts-dashboard-example.png)
+![trending contracts dashboard example](images/query-quick-start/Trending-Contracts-dashboard-example.png)
 
 Hmm, looks like this shows us top contracts by number of transactions, active wallets, and gas spent.
 
 But what about by USD value of transactions?
 
-To fork these Queries and add that data we just click the [Visualization name](../visualizations) (in this case a [Table Visualization](../visualizations/other-visualizations.md)), then click the <span class="fk-btn-3">Fork</span> button at the top left:
+To fork these Queries and add that data we just click the [Visualization name](visualizations) (in this case a [Table Visualization](../app/visualizations/other-visualizations.md)), then click the <span class="fk-btn-3">Fork</span> button at the top left:
 
-![fork query example](images/fork-query-example.gif)
+![fork query example](images/query-quick-start/fork-query-example.gif)
 
 From there we could explore, test, and expand on [@niftytable's](https://dune.com/niftytable) original Query to make it our own!
 
@@ -183,7 +189,7 @@ Here's the before and after of how to do that:
     ;
     ``` 
 
-![query example v2](images/query-example-v2.png)
+![query example v2](images/query-quick-start/query-example-v2.png)
 
 ### `JOIN`ing `buyer` and `seller` data 🤝
 
@@ -273,19 +279,19 @@ We'll wrap this basic query in a `WITH` statement, so we can return two separate
     ;
     ``` 
 
-![query quick start example v3](images/Query-Quick-Start-Example-v3.png)
+![query quick start example v3](images/query-quick-start/Query-Quick-Start-Example-v3.png)
 
 ### Adding Parameters
 
-Now for extra points, let's add a [Parameter](../queries/parameters.md) so people who view our Visualizations can filter by 1 day, 1 week, and 1 month time periods.
+Now for extra points, let's add a [Parameter](../app/queries/parameters.md) so people who view our Visualizations can filter by 1 day, 1 week, and 1 month time periods.
 
 To do that, let's highlight our `24 hour` interval measure, then click the <span class="fk-btn-5">Add parameter</span> button
 
-![add parameter to query](images/add-parameter-to-query.gif)
+![add parameter to query](images/query-quick-start/add-parameter-to-query.gif)
 
 Then click the Gear icon in the field that appears below the Query Window to modify our parameter:
 
-![modify parameter](images/modify-parameter.gif)
+![modify parameter](images/query-quick-start/modify-parameter.gif)
 
 Here we'll:
 
@@ -294,7 +300,7 @@ Here we'll:
 3. Add the values "1 day, 1 week, 1 month"
 4. And save!
 
-![parameter settings modified](images/parameter-settings-modified.png)
+![parameter settings modified](images/query-quick-start/parameter-settings-modified.png)
 
 Lastly, we'll update our other `WHERE` statements with the parameter.
 
@@ -316,23 +322,23 @@ So for {{time period}} let's look at our top 10 wallets by total volume, as well
 
 ### Creating and Formatting Bar Charts
 
-To do that we'll use a Bar Chart [Visualization](../visualizations/index.md):
+To do that we'll use a Bar Chart [Visualization](visualizations.md):
 
-![select bar chart visualization](images/select-bar-chart-visualization.gif)
+![select bar chart visualization](images/query-quick-start/select-bar-chart-visualization.gif)
 
 Scrolling down we see Visualization options, it looks like the "Results Data" defaulted to making the x column `wallet` and y column 1 `buy_vol`, which is a good start.
 
 Let's add `sell volume` to y column 2 and then in the "Chart options" Enable Stacking so the values are layered on top of each other:
 
-![stacking buy and sell vol](images/stacking-buy-sell-vol.gif)
+![stacking buy and sell vol](images/query-quick-start/stacking-buy-sell-vol.gif)
 
 By default, Dune sorted our x-axis alphabetically. Let's uncheck "Sort Values" to get it back to being sorted by volume, then "Reverse Order" so that our graph is lowest number to highest (the opposite of our data table but the way we're love to see graphs - up and to the right):
 
-![up and to the right](images/up-and-to-the-right-graph.gif)
+![up and to the right](images/query-quick-start/up-and-to-the-right-graph.gif)
 
 Our USD amounts are also a bit confusing, so let's update the "Label Format" in Y-axis options to `$0.0a` which will turn a number like 12345.6789 into "$12.3k":
 
-![fixing y axis numbers](images/fixing-y-axis-numbers.gif)
+![fixing y axis numbers](images/query-quick-start/fixing-y-axis-numbers.gif)
 
 Then we'll update our title and x/y axis labels to make a nice, easy to understand chart:
 
@@ -342,9 +348,9 @@ Learn more about [formatting Visualizations here](../../getting-started/queries/
 
 ### Sharing Queries and Visualizations
 
-[To share your Queries](../embeds.md) (either embedding them like the above or just to share a lin), click the <span class="fk-btn-3">Embed</span> button above the Query window:
+[To share your Queries](embeds.md) (either embedding them like the above or just to share a lin), click the <span class="fk-btn-3">Embed</span> button above the Query window:
 
-![embed button location](images/embed-button-location.png)
+![embed button location](images/query-quick-start/embed-button-location.png)
 
 !!! note
     The embed button works as a stand alone link and as a way to embed your live graphs into websites/apps. If your Query has no Visualizations, the link will be to the Query Results table. If you have multiple Visualizations, the link will be for whichever Visualization you've selected when you clicked the Embed button.
@@ -355,7 +361,7 @@ With a lot of copy/paste (literally and figuratively), we can make this same gra
 
 ### Making a Dashboard
 
-Finally, let's add our two visualizations to a starter [Dashboard](../dashboards.md).
+Finally, let's add our two visualizations to a starter [Dashboard](dashboards.md).
 
 To do that we:
 
@@ -364,19 +370,19 @@ To do that we:
 3. Give our Dashboard a name and save it.
 4. Click the <span class="fk-btn-2">Add</span> button.
 
-![add visualization to dashboard example](images/add-visualization-to-dashboard-example.gif)
+![add visualization to dashboard example](images/query-quick-start/add-visualization-to-dashboard-example.gif)
 
 Then we just add our other visualizations to the Dashboard we created and:
 
-![dashboard example](images/dashboard-example.png)
+![dashboard example](images/query-quick-start/dashboard-example.png)
 
 To make our Dashboard look nice, we hit the edit button and can drag and resize our Visualizations:
 
-![rearranging our dashboard](images/rearranging-dashboard.gif)
+![rearranging our dashboard](images/query-quick-start/rearranging-dashboard.gif)
 
 And we can add text widgets to explain our dashboards and how they work!
 
-![add text widget explainer](images/add-text-widget-explainer.gif)
+![add text widget explainer](images/query-quick-start/add-text-widget-explainer.gif)
 
 And with that, we're ready to hit the share button to get a sharable Dashboard link like this one: [https://dune.com/cryptofreedman/query-quick-start](https://dune.com/cryptofreedman/query-quick-start)
 
