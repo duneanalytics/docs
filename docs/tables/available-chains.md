@@ -44,13 +44,13 @@ Polygon follows all the rules of ETH mainnet and querying on Dune works exactly 
 !!! note
     We've included Optimism's OVM 1.0 base tables (blocks, logs, traces, transactions) in Dune V2, which can be found in the `optimism_legacy_ovm1` database. Data from these tables are labeled "Optimism (Legacy)" in the dropdown menu and use this icon: 
     
-    ![optimism legacy icon](../images/optimism-legacy-icon.png)
+    ![optimism legacy icon](../reference/images/optimism-legacy-icon.png)
 
     These tables are no longer updated as Optimism made significant changes with their [OVM 2.0 update](https://twitter.com/optimismFND/status/1458953238867165192).
 
     Data for the current version of Optimism's blockchain (November 11th, 2021 to present), is contained in the `optimism` database, are labeled "Optimism" in the dropdown menu, and use this icon:
     
-    ![optimism icon](../images/optimism-icon.png)
+    ![optimism icon](../reference/images/optimism-icon.png)
 
 !!! warning
     Due to an error with the current version of the Optimism client, we're missing about 235k Optimism blocks with no current timeline for a fix. [See the list of the exact missing blocks in this CSV](optimism-missing-blocks.csv) or [get the ranges of missing blocks from this Query](https://dune.com/queries/1328475?d=11).

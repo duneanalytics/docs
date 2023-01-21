@@ -28,7 +28,7 @@ The next steps to dive deeper depend on whether you:
 === "Just-in-Time"
     Just-in-Time learning is for those who learn by doing. If you already have an idea of what you want to do with Dune and just need to unblock yourself by finding some specific tactical knowledge, [Core Features](queries/index.md) likely contains the information you need.
 
-    [Tables](../reference/tables/index.md) and [Spellbook](../spellbook/index.md) are more advanced features worth experimenting with once you've understood the basics.
+    [Tables](../tables/index.md) and [Spellbook](../spellbook/index.md) are more advanced features worth experimenting with once you've understood the basics.
 
     Be sure to ask whatever questions you have in the [#beginners Discord channel](https://discord.com/channels/757637422384283659/1016725609797402634)!
 
@@ -69,7 +69,7 @@ Thus, understanding how the Ethereum Virtual Machine and smart contracts work as
 
 If you are able to read most of the data in Etherscan, you're already well on your way to being able to create insightful Queries and Visualizations with Dune.
 
-Unfortunately we haven't yet found one great resource we can point you to currently as each smart contract has it's own rules. We have written up a few words on this in our section on [Decoded Data](../reference/tables/decoded/index.md).
+Unfortunately we haven't yet found one great resource we can point you to currently as each smart contract has it's own rules. We have written up a few words on this in our section on [Decoded Data](../tables/decoded/index.md).
 
 ### What communities, protocols, and businesses care about
 

@@ -71,7 +71,7 @@ Here we find an [`opensea_trades` table](https://dune.com/spellbook#!/model/mode
 
 Scrolling through the columns section we can see all the different data columns it has.
 
-Since this is a [Decoded Table](../../reference/tables/decoded/index.md), a lot of the labels - like `amount_usd` - make sense just by reading them.
+Since this is a [Decoded Table](../../tables/decoded/index.md), a lot of the labels - like `amount_usd` - make sense just by reading them.
 
 For those that aren't so obvious - like `trade_type` - we can click to get a description:
 
@@ -85,7 +85,7 @@ We can also click the expand button in the right hand corner to see the complete
 
 ![explore full lineage graph](images/explore-full-lineage-graph.gif)
 
-For a complete list of things you can do with the [Spellbook Docs see this page](../../spellbook/spellbook-model-docs.md).
+For a complete list of things you can do with the [Spellbook Docs see this page](../../tables/spells/spellbook-model-docs.md).
 
 ## 3. Decide what question you want to answer
 

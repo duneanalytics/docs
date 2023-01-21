@@ -12,7 +12,7 @@ We have a several [SQL functions](https://github.com/duneanalytics/spellbook/tre
 
 However, queries that have been written using raw data tables are notoriously hard to understand and audit due to the nature of the the encoded data commonly found in these tables. Furthermore, the raw data tables have a very large number of rows and hence can be slow to query.
 
-Most of the time you are better off [submitting contracts for decoding](../../../getting-started/decoding-contracts.md) and working with [decoded data](../decoded/index.md).
+Most of the time you are better off [submitting contracts for decoding](../../getting-started/decoding-contracts.md) and working with [decoded data](../decoded/index.md).
 
 !!! note
 
