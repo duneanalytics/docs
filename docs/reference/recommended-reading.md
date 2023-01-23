@@ -26,6 +26,7 @@ A few members of our Wizard community are also amazing content creators, check o
 ## DAOs
 
 - [DAOs: Absorbing the Internet](https://www.generalist.com/briefing/dao)
+- [DAO Central - Learn about DAOs](https://daocentral.com/)
 
 ## Bridges/L2
 

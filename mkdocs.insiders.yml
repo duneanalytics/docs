@@ -86,7 +86,6 @@ plugins:
        'resources/faq/how-does-dune-get-its-data.md': 'reference/faq/how-does-dune-get-its-data.md'
        'resources/wizard-tools.md': 'reference/wizard-tools/index.md'
        'resources/wizard-tools/blockchain-explorers.md': 'reference/wizard-tools/blockchain-explorers.md'
-       'tables/spells/prices.md': 'tables/spells/prices.md'
        'tables/v1/abstractions.md': 'tables/spells/index.md'
        'tables/v1/abstractions/dex.trades.md': 'tables/spells/dex.trades.md'
        'tables/v1/abstractions/erc-20-balances.md': 'tables/spells/erc-20-balances.md'
