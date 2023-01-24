@@ -66,7 +66,7 @@ By default, [Teams Explorer](https://dune.com/browse/users) shows Teams that hav
 
 Use the right sidebar to search for a specific Team.
 
-[Learn more about Teams here](teams.md)!
+[Learn more about Teams here](../app/teams.md)!
 
 
 

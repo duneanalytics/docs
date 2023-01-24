@@ -85,7 +85,7 @@ Once a contract has been added to our Decoded Contracts system, you can check th
 Read more about submitting contracts for decoding in this section:
 
 <div class="cards grid" markdown>
-- [Adding new contracts](../../getting-started/decoding-contracts.md)
+- [Adding new contracts](../../app/decoding-contracts.md)
 </div>
 
 ## How does decoding work?

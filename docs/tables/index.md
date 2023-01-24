@@ -6,7 +6,7 @@ title: Tables
 
 To start with, you have access to the raw tables for each supported blockchain, with tables like `blocks` and `transactions`. This is the most flexible option.
 
-To make it easier to work with smart contracts, Dune also provides decoded data as individual, human readable tables. We use the ABI for smart contracts and the interface standard for standardized token smart contracts (ERC20, ERC721 etc.). We've indexed over 280k contracts as of writing, and you can [submit new contracts](../getting-started/decoding-contracts.md).
+To make it easier to work with smart contracts, Dune also provides decoded data as individual, human readable tables. We use the ABI for smart contracts and the interface standard for standardized token smart contracts (ERC20, ERC721 etc.). We've indexed over 280k contracts as of writing, and you can [submit new contracts](../app/decoding-contracts.md).
 
 On top of that, we're building a set of [Spells](spells/index.md) for common use cases (e.g. NFTs or DEX) and third party datasets.
 

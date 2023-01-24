@@ -36,7 +36,7 @@ Your billing history can be found under “Billing”.
 
 #### How do I upgrade, downgrade, or cancel my subscription?
 
-Individuals with paid plans or [Team](../getting-started/teams.md) admins can upgrade, downgrade, or cancel subscriptions.
+Individuals with paid plans or [Team](../app/teams.md) admins can upgrade, downgrade, or cancel subscriptions.
 
 To upgrade or downgrade, follow these steps:
 
