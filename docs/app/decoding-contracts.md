@@ -19,7 +19,7 @@ Contracts can be submitted for decoding through:
 - The [My Creations > Contracts Tab](https://dune.com/browse/contracts/authored)
 - Within the dataset explorer in the Query editor's sidebar:
 
-![Add a new contract](images/add-new-contract-link.png)
+![Add a new contract](images/decoding-contracts/add-new-contract-link.png)
 
 The contract submission form, which consists of 2 steps:
 
@@ -34,7 +34,7 @@ The latter is usually accomplished by fetching potentially useful metadata from 
 
 For instance, below here's an example of submitting the USDT contract (`0x94b008aA00579c1307B0EF2c499aD98a8ce58e58`) in Optimism:
 
-![Submit smart contract](images/submit-smart-contract.png)
+![Submit smart contract](images/decoding-contracts/submit-smart-contract.png)
 
 If we can find the contract through a third party source, we will show a green check mark next to the address field.
 
@@ -44,7 +44,7 @@ This means we were able to fetch information such as the contract's name and ABI
 
 After pressing Next, we ask for other information about the contract that we need in order to decode it:
 
-![Submit smart contract 2](images/submit-smart-contract-2.png)
+![Submit smart contract 2](images/decoding-contracts/submit-smart-contract-2.png)
 
 If we found the contract through other third party sources, you will only have to fill in the project name.
 
@@ -79,7 +79,7 @@ If you want us to index more than one contract, toggle on Advanced options and s
 
 Then, to the second question - "Is it created by a factory contract?" - select "No" to index all other contracts with the same bytecode or "Yes" to index all other contracts originating from the same creator:
 
-![new-contract-advanced-options](images/new-contract-advanced-options.png)
+![new-contract-advanced-options](images/decoding-contracts/new-contract-advanced-options.png)
 
 !!! warning
 
@@ -89,7 +89,7 @@ Then, to the second question - "Is it created by a factory contract?" - select "
 
 You can view your submissions and their processing status at any time by navigating to [My Creations > Contracts](https://dune.com/browse/contracts/authored):
 
-![Track your submission](images/track-your-submission.png)
+![Track your submission](images/decoding-contracts/track-your-submission.png)
 
 ### Frequently Asked Questions
 
@@ -133,11 +133,11 @@ This has a couple potential dangerous side effects:
 
 If you attempt to submit a contract that already exists, we'll first present a warning note and ask you to confirm you want to proceed:
 
-![new contract resubmission warning](images/new-contract-resubmission%20warning.png)
+![new contract resubmission warning](images/decoding-contracts/new-contract-resubmission-warning.png)
 
 Then, at the bottom of the Details page, we'll ask you to explain why you're resubmitting the contract so we can assess whether it's worth overriding the contract's data:
 
-![new contract resubmission reason](images/new-contract-resubmission-reason.png)
+![new contract resubmission reason](images/decoding-contracts/new-contract-resubmission-reason.png)
 
 If we believe the risk of accepting a re-submission is higher than the added value, we'll reject your resubmission.
 

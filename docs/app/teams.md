@@ -39,13 +39,13 @@ You'll also need to assign them one of the following **Roles**:
 
 Team Queries and Dashboards are created the same way they are for individual accounts. When you’re prompted to save them for the first time, you can pick your Team as the Owner so your teammates can also access your new Query/Dashboard:
 
-![Team content](images/teams-1.png)
+![Team content](images/teams/teams-1.png)
 
 ### Transferring content to your Team
 
 You can transfer any Query or a Dashboard you own to your Team by going to the Query's or Dashboard’s settings and changing the owner there:
 
-![Transferring content](images/teams-2.png)
+![Transferring content](images/teams/teams-2.png)
 
 !!! warning
     Once you transfer content to a Team, you will only be able to transfer it out of the Team if you are an Admin. If you accidentally transfer content to a Team you will have to ask your Team's Admin to transfer it back to you.
@@ -54,7 +54,7 @@ You can transfer any Query or a Dashboard you own to your Team by going to the Q
 
 Go to My Creations. Here you can see all of your personal content as well as your Team’s. You can filter by owner to narrow down your search:
 
-![Finding your Team's content](images/teams-3.png)
+![Finding your Team's content](images/teams/teams-3.png)
 
 ### FAQ
 

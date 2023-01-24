@@ -21,7 +21,7 @@ If you get stuck, [fork and test out the demo query here](https://dune.com/queri
 The easiest place to start your query exploration is the [Dune Data Explorer](../app/queries/data-explorer.md), for two reasons:
 
 1. Searching here will let us discover whether the contracts we'll need have already been decoded; if so we'll have a lot less work to do.
-2. If our data is already [Decoded](decoding-contracts.md), the contracts, calls, events, and data points will probably have obvious labels - eg `amount_usd` is the US dollar amount an NFT was bought/sold for. So we might not need to dig through the project docs to understand which contracts and data we need to build our Query.
+2. If our data is already [Decoded](../app/decoding-contracts.md), the contracts, calls, events, and data points will probably have obvious labels - eg `amount_usd` is the US dollar amount an NFT was bought/sold for. So we might not need to dig through the project docs to understand which contracts and data we need to build our Query.
 
 So, let's get started by switching to the Dune V2 data set and searching for "opensea" to see what we find.
 
