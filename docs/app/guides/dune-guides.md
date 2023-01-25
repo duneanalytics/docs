@@ -18,7 +18,7 @@ You are amazing! 🪄
 6. **Enjoy your data**
 
 === "Spark SQL"
-
+    
     ### [0xPhilan](https://dune.com/phillan) [:material-twitter:](https://twitter.com/0xPhillan)
 
     * [Dune Analytics: A Guide for Complete Beginners](https://mirror.xyz/phillan.eth/17VAXsMPpwJg4OQNBHKTYAQTWfJMwFuXZQDAxPStf0o)
@@ -38,6 +38,10 @@ You are amazing! 🪄
     ### [@1chioku](https://dune.com/1chioku)
 
     * [Journey to the Centre of Arakis](https://1chioku.substack.com/p/preface)
+
+    ### [cryptofreedman](https://dune.com/cryptofreedman) [:material-twitter:](https://twitter.com/cryptofreedman)
+
+    * [How to Learn SQL and Create a Dune Dashboard in 3 Hours](https://cryptofreedman.substack.com/p/how-to-learn-sql-and-create-a-dune)
 
 === "PostgreSQL"
 
