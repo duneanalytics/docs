@@ -42,6 +42,7 @@ You are amazing! 🪄
     ### [cryptofreedman](https://dune.com/cryptofreedman) [:material-twitter:](https://twitter.com/cryptofreedman)
 
     * [How to Learn SQL and Create a Dune Dashboard in 3 Hours](https://cryptofreedman.substack.com/p/how-to-learn-sql-and-create-a-dune)
+    * [Beginners Guide to Blockchain Data on Dune](https://cryptofreedman.substack.com/p/beginners-guide-to-blockchain-data)
 
 === "PostgreSQL"
 
