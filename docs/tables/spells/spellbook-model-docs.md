@@ -9,7 +9,7 @@ Spellbook comes with dedicated dbt documentation to help you navigate the data t
 - [Spellbook Model Docs](https://dune.com/spellbook)
 </div>
 
-These work similarly to the [V2 table documentation you can find here](../tables/v2/raw/), with a couple of special features.
+These work similarly to the [V2 table documentation you can find here](../raw/index.md), with a couple of special features.
 
 !!! warning
     These Spellbook Table Docs and the Spellbook data lake are a work in progress. If you're not able to find  a specific V2 table/column, it likely isn't ready for use in Spells yet. If you do find it but it's not yet fully labeled in the Spellbook Model docs, please check our [V2 table documentation here](../tables/v2/raw/). If you still have questions drop them in the [#data-tables Discord channel](https://discord.com/channels/757637422384283659/757893948428517376)!
