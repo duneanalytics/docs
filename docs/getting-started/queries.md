@@ -5,7 +5,7 @@ description: Queries are at the heart of Dune's magic. Let's explore how they wo
 
 ## Queries are the heart of Dune's magic 💖
 
- Queries the primary building blocks Wizards use to pull blockchain data from Dune's database, transform it into something interesting with SQL functions, then and either make visualizations and dashboards to share using [dune.com](https://dune.com) or just about anything imaginable via the [Dune AP../api/index.md.md).
+ Queries the primary building blocks Wizards use to pull blockchain data from Dune's database, transform it into something interesting with SQL functions, then and either make visualizations and dashboards to share using [dune.com](https://dune.com) or just about anything imaginable via the [Dune API](../api/index.md).
 
  Through the ✨ of Dune, Queries let Wizards answer any question!
 
