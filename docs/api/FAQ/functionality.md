@@ -44,7 +44,7 @@ The query execution timeout limit matches the Dune web app - 30 minutes.
 
 ### Can I query using both Dune v2 Engine and the original v1 databases?
 
-Currently yes, but we’re slowly deprecating usage and support of the old v2 engine, so we recommend using the new Dune Engine v2 (Spark SQL) as much as possible.
+Currently yes, but we’re slowly deprecating usage and support of the old v1 engine, so we recommend using the new Dune Engine v2 (Spark SQL) as much as possible.
 
 Dune Engine v2 (Dune SQL) is still in alpha and it's recommended to postpone using this query engine for critical API use cases until mid Feb 2023.
 
