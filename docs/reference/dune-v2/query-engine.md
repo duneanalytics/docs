@@ -22,7 +22,7 @@ The syntax and keyword operator differences between Postgres, Spark, and Dune SQ
 
 | <div style="width:290px">**Description**</div> | **V1 - PostgreSQL** | **V2 - Spark SQL** | **V2 - Dune SQL** |
 | --- | --- | --- | --- |
-| **`bytea2numeric`, or casting hex/bytea to a number** | `bytea2numeric` (bytea) | `bytea2numeric_v2` (string) | `bytearray_to_integer` (hex) <br> `bytearray_to_bigint` (hex) <br> `bytearray_to_decimal` (hex) <br> `bytearray_to_uint256` (hex) <br> More details on [Byte Array to Numeric Functions](#byte-array-to-numeric-functions)|
+| **`bytea2numeric`, or casting hex/bytea to a number** | `bytea2numeric` (bytea) | `bytea2numeric_v3` (string) | `bytearray_to_integer` (hex) <br> `bytearray_to_bigint` (hex) <br> `bytearray_to_decimal` (hex) <br> `bytearray_to_uint256` (hex) <br> More details on [Byte Array to Numeric Functions](#byte-array-to-numeric-functions)|
 | **Doing math or numeric operations on a column, like value in ethereum.transactions** | sum(value) | sum(value) | sum(cast(value as double)) *soon this won't be needed as UINT and INT columns are added automatically.* |
 | **0 vs 1 array based indexing** | 1 indexed | 0 indexed | 1 indexed |
 | **Implicit type conversions between character and numeric types** | Available | Available | [Not available](https://trino.io/docs/current/functions/conversion.html) |
