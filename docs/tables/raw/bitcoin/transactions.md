@@ -28,6 +28,8 @@
 
 Within several of these columns is a data type of STRUCT which allows for representing nested hierarchical data and has key-value pairs. It's similar to a dictionary in python and can be used to group fields together to make them more accessible.
 
+Note that you can work with these columns with the syntax `input[1].witness_data[2]` or `input[3].script_pub_key.address` depending on lengths of arrays within each value. It is an `array(row(map))` type, and while it looks like just an array in the returned table - it is more than that!
+
 **input**
 
 | Field   | Data type | Description  |

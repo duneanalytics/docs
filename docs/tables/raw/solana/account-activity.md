@@ -22,3 +22,5 @@ This table contains information from the transactions table focused on account u
 | post\_token\_balance   | decimal     | The token balance after the transaction was processed            |
 | balance\_change            | bigint      | The balance change that occurred as part of the transaction      |
 | token\_balance\_change | decimal     | The balance change that occurred as part of the transaction      |
+| token\_mint\_address | string     | The address the associated token address is minting from (i.e. the actual token address)    |
+| token\_owner\_address | string     | The address that owns this token address    |
