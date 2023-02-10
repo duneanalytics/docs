@@ -52,9 +52,6 @@ Polygon follows all the rules of ETH mainnet and querying on Dune works exactly 
     
     ![optimism icon](../app/images/explorer-labels/optimism-icon.png)
 
-!!! warning
-    Due to an error with the current version of the Optimism client, we're missing about 235k Optimism blocks with no current timeline for a fix. [See the list of the exact missing blocks in this CSV](optimism-missing-blocks.csv) or [get the ranges of missing blocks from this Query](https://dune.com/queries/1328475?d=11).
-
 Optimism is a Layer 2 Optimistic Rollup network designed to utilize the strong security guarantees of Ethereum while reducing its cost and latency. Optimism processes transactions outside of Ethereum Mainnet, reducing congestion on the base layer and improving scalability. For a Deep Dive into Optimism, we recommend reading through their [Documentation](https://community.optimism.io/docs/how-optimism-works).
 
 Optimism differs in it's EVM implementation in the calculation of gas costs, since it also needs to pay for L1 resources.
