@@ -47,6 +47,7 @@ Note that you can work with these columns with the syntax `input[1].witness_data
 ***
 
 **input.script_signature**
+
 | Field   | Data type | Description  |
 |---------|-----------|--------------|
 |hex|string|The transaction's script operations, in hex                                                                                              |
@@ -77,6 +78,7 @@ Note that you can work with these columns with the syntax `input[1].witness_data
 ***
 
 **output.script_pub_key**
+
 | Field   | Data type | Description  |
 | ------- | --------- | -------------|
 |asm|string|The transaction's script operations, in symbolic representation                                                                          |
