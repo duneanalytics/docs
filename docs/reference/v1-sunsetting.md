@@ -11,41 +11,41 @@ Once a chain is commissioned, queries referncing the V1 version won't be editabl
 
 Please also note:
 
-- No new contracts that are submitted for decoding (on all blockchains) will be decoded on V1, they will only be decoded on V2* (already decoded contracts will continue to work as normal) 
-- No new Abstraction PRs will be merged on V1* (please use [Spellbook](../spellbook/index.md) on V2)
+- No new contracts that are submitted for decoding (on all blockchains) will be decoded on V1, they will only be decoded on V2 (already decoded contracts will continue to work as normal) 
+- No new Abstraction PRs will be merged on V1 (please use [Spellbook](../spellbook/index.md) on V2)
  
-*special cases can be individually reviewed 
+_special cases can be individually reviewed_ 
 
-## Decommissioning Schedule for Optimism and xDai (Updated Jan 19 2023)
+## Decommissioning details:
 
-| Blockchain | Step 0 (Decommission Kickoff) | Step 1     | Step 2     | Step 3 (Decommission Completed) |
+The process below is the same for all blockchains based on when the kickoff date is announced for decommissioning. 
+
+**1. Step (Start)**  
+Kicking of the decommissioning, no changes to V1 queries.   
+A fair warning that the blockchain will be decommissioned in the future.    
+
+**2. Step**    
+Removal of the blockchain from the blockchain selection dropdown.  
+Existing queries are still editable on V1.  
+No new queries can be created.  
+
+**3. Step**    
+V1 queries for the given blockchain will become read only, forking and updating is no longer possible.  
+Queries can still be run, but no changes can be made.
+
+**4. Step(End)**    
+No new data will be ingested into the V1 databases, decommission complete.
+Queries have to be forked and adjusted to V2.  
+
+## Decommissioning Schedule for Dune V1 Databases
+
+| Blockchain | 1. Step  (Decommission Kickoff) | 2. Step      | 3. Step     | 4. Step (Decommission Completed) |
 |------------|-------------------------------|------------|------------|---------------------------------|
 | BNB        | 02/11/2022                    | 23/11/2022 | 19/01/2023 | 31/01/2023                      |
 | Polygon    | 02/11/2022                    | 23/11/2022 | 19/01/2023 | 31/01/2023                      |
 | xDAI       | 19/01/2023                    | 09/02/2023 | 02/03/2023 | 31/03/2023                      |
 | Optimism   | 19/01/2023                    | 09/02/2023 | 02/03/2023 | 31/03/2023                      |
 | Ethereum   | TBD                           | TBD        | TBD        | TBD                             |
-
-## How Decommissioning will work **in General**
-
-The process below is the same for all blockchains, and will be completed by the above decommissioning dates.
-
-### Week 0
-
-- Kickoff of the decommissioning, no changes to V1 queries
-
-### Week 3
-
-- Removal of the blockchain from the blockchain selection dropdown
-- Existing queries are still editable on V1
-
-### Week 6
-
-- V1 queries for the given blockchain will become read only, forking and updating on V2 will be required
-- Data will continue to update and refreshed for the queries on V1
-
-### Week 13 
-- No new data will power queries for the chain on V1, decommission complete
 
 ## To learn more and ask questions
 
