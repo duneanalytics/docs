@@ -9,14 +9,6 @@ As a result we have started decommissioning blockchains on V1 as we transition t
 
 Once a chain is commissioned, queries referncing the V1 version won't be editable anymore until you log in and select DuneV2 from the data explorer drop down to re-run them as V2 queries.
 
-Here's an estimate of the **order** and **dates** by which we plan to **decommission chains** on V1: 
-
-- BSC (decommission by Jan 31st 2023, extended from Dec 14th due to community feedback)
-- Polygon (decommission by Jan 31st 2023, extended from Dec 21st due to community feedback) 
-- Optimism (decommission completion date TBD, decomission process started Jan 2023) 
-- xDai (decommission completion date TBD, decomission process started Jan 2023)
-- Ethereum (decommission TBD - estimate kickoff Q1 2023)  
-
 Please also note:
 
 - No new contracts that are submitted for decoding (on all blockchains) will be decoded on V1, they will only be decoded on V2* (already decoded contracts will continue to work as normal) 
@@ -26,16 +18,13 @@ Please also note:
 
 ## Decommissioning Schedule for Optimism and xDai (Updated Jan 19 2023)
 
-- Week 0 (Jan 19th)
-  - Kickoff of the decommissioning, no changes to V1 queries 
-- Week 3 (Feb 9)
-  - Removal of the blockchain from the blockchain selection dropdown
-  - Existing queries are still editable on V1
-- Week 6 (March 1st) 
-  - V1 queries for the given blockchain will become read only, forking and updating on V2 will be required
-  - Data will continue to update and refreshed for the queries on V1
-- Week 10 (March 31st)
-  - No new data will power queries for the chain on V1, decommission complete
+| Blockchain | Step 0 (Decommission Kickoff) | Step 1     | Step 2     | Step 3 (Decommission Completed) |
+|------------|-------------------------------|------------|------------|---------------------------------|
+| BNB        | 02/11/2022                    | 23/11/2022 | 19/01/2023 | 31/01/2023                      |
+| Polygon    | 02/11/2022                    | 23/11/2022 | 19/01/2023 | 31/01/2023                      |
+| xDAI       | 19/01/2023                    | 09/02/2023 | 02/03/2023 | 31/03/2023                      |
+| Optimism   | 19/01/2023                    | 09/02/2023 | 02/03/2023 | 31/03/2023                      |
+| Ethereum   | TBD                           | TBD        | TBD        | TBD                             |
 
 ## How Decommissioning will work **in General**
 
