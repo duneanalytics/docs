@@ -16,7 +16,7 @@ Most of the time you are better off [submitting contracts for decoding](../../ap
 
 !!! note
 
-    EVM chains at large follow the same execution model, however there is sometimes is differences in the consensus algorithm, the gas costs or even the calculation of gas costs. Solana has an entirely different methodology and thus it's data is entirely different than our EVM based data tables.
+    EVM chains at large follow the same execution model, however there are sometimes differences in the consensus algorithms, the gas costs or even the calculation of gas costs. Solana has an entirely different methodology and thus it's data is entirely different than our EVM based data tables.
 
 ## Available Data
 
