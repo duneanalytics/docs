@@ -74,22 +74,26 @@ The byte array conversion functions throw an overflow exception if the byte arra
 
 ## Byte Array Functions in Dune SQL
 
-Dune SQL currently represents byte arrays as `0x`-prefixed strings. In the future we will represent byte arrays using the `varbinary`. To make it simpler to work with byte arrays we have the following helper functions. They simplify interactions with byte arrays, as they automatically account for the `0x`-prefix and use byte index instead of characther index. For instance, the `bytearray_substring` methods take indexes by byte, not by characther (twice the byte array length). If there is an operation you need to do on byte arrays which is not covered by a function in the list below you should reach out to the Dune team. 
+Dune SQL currently represents byte arrays using the `varbinary` type. Byte arrays can also be represented using `0x`-prefixed strings. 
+
+To make it simpler to work with byte arrays we have the following helper functions, which work with these two kinds of representation. They simplify interactions with byte arrays, as they automatically account for the `0x`-prefix and use byte index instead of characther index. For instance, the `bytearray_substring` methods take indexes by byte, not by characther (twice the byte array length). 
+
+If there is an operation you need to do on byte arrays which is not covered by a function in the list below you should reach out to the Dune team. 
 
 *Operators like `||` and functions like `concat()` will no longer work with bytearrays, you will need to `cast(some_bytearray as varchar)` first.*
 
 | Function | Return Type | Argument Types | Description |
 | --- | --- | --- | --- |
-| bytearray_concat | varchar | varchar, varchar | Concatenates two byte arrays |
-| bytearray_length | bigint | varchar | Returns the length of a byte array |
-| bytearray_ltrim | varchar | varchar | Removes zero bytes from the beginning of a byte array |
-| bytearray_position | bigint | varchar, varchar | Returns the index of a given bytearray (or 0 if not found) |
-| bytearray_replace | varchar | varchar, varchar, varchar | Greedily replaces occurrences of a pattern within a byte array |
-| bytearray_reverse | varchar | varchar | Reverse a given byte array |
-| bytearray_rtrim | varchar | varchar | Removes zero bytes from the end of a byte array |
-| bytearray_starts_with | boolean | varchar, varchar | Determines whether a byte array starts with a prefix |
-| bytearray_substring | varchar | varchar, integer | Suffix byte array starting at a given index |
-| bytearray_substring | varchar | varchar, integer, integer | Sub byte array of given length starting at an index |
+| `bytearray_concat` | `varbinary` or `varchar` | `varbinary, varbinary` or `varchar, varchar` | Concatenates two byte arrays |
+| `bytearray_length` | `bigint` | `varbinary` or `varchar` | Returns the length of a byte array |
+| `bytearray_ltrim` | `varbinary` or `varchar` | `varbinary` or `varchar` | Removes zero bytes from the beginning of a byte array |
+| `bytearray_position` | `bigint` | `varbinary, varbinary` or `varchar, varchar` | Returns the index of a given bytearray (or 0 if not found) |
+| `bytearray_replace` | `varbinary` or `varchar` | `varbinary, varbinary, varbinary` or `varchar, varchar, varchar` | Greedily replaces occurrences of a pattern within a byte array |
+| `bytearray_reverse` | `varbinary` or `varchar` | `varbinary` or `varchar` | Reverse a given byte array |
+| `bytearray_rtrim` | `varbinary` or `varchar` | `varbinary` or `varchar` | Removes zero bytes from the end of a byte array |
+| `bytearray_starts_with` | `boolean` | `varbinary, varbinary` or `varchar, varchar` | Determines whether a byte array starts with a prefix |
+| `bytearray_substring` | `varbinary` or `varchar` | `varbinary, integer` or `varchar, integer` | Suffix byte array starting at a given index |
+| `bytearray_substring` | `varbinary` or `varchar` | `varbinary, integer, integer` or `varchar, integer, integer` | Sub byte array of given length starting at an index |
 
 
 ## Query queries as views in Dune SQL
