@@ -73,6 +73,9 @@ The byte array conversion functions throw an overflow exception if the byte arra
 
 
 ## Byte Array Functions in Dune SQL
+!!! warning
+    **Operators like `||` and functions like `concat()` will soon stop working with bytearrays when Dune SQL leaves alpha at the end of Feburary and you will need to `cast(some_bytearray as varchar)` first.** These changes will improve performance on byte array queries by up to 50% by reducing the amount of data stored
+
 
 Dune SQL currently represents byte arrays using the `varbinary` type. Byte arrays can also be represented using `0x`-prefixed strings. 
 
@@ -80,7 +83,6 @@ To make it simpler to work with byte arrays we have the following helper functio
 
 If there is an operation you need to do on byte arrays which is not covered by a function in the list below you should reach out to the Dune team. 
 
-*Operators like `||` and functions like `concat()` will no longer work with bytearrays, you will need to `cast(some_bytearray as varchar)` first.*
 
 | Function | Return Type | Argument Types | Description |
 | --- | --- | --- | --- |
