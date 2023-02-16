@@ -22,7 +22,7 @@ The syntax and keyword operator differences between Postgres, Spark, and Dune SQ
 
 | <div style="width:290px">**Description**</div> | **V1 - PostgreSQL** | **V2 - Spark SQL** | **V2 - Dune SQL** |
 | --- | --- | --- | --- |
-| **`bytea2numeric`, or casting hex/bytea to a number** | `bytea2numeric` (bytea) | `bytea2numeric_v3` (string) | `bytearray_to_integer` (hex) <br> `bytearray_to_bigint` (hex) <br> `bytearray_to_decimal` (hex) <br> `bytearray_to_uint256` (hex) <br> More details on [Byte Array to Numeric Functions](#byte-array-to-numeric-functions)|
+| **`bytea2numeric`, or casting hex/bytea to a number** | `bytea2numeric` (bytea) | `bytea2numeric_v3` (string) | `bytearray_to_integer` (hex) <br> `bytearray_to_bigint` (hex) <br> `bytearray_to_decimal` (hex) <br> `bytearray_to_uint256` (hex) <br> `bytearray_to_int256` (hex) <br> More details on [Byte Array to Numeric Functions](#byte-array-to-numeric-functions)|
 | **Doing math or numeric operations on a column, like value in ethereum.transactions** | sum(value) | sum(value) | sum(cast(value as double)) *soon this won't be needed as UINT and INT columns are added automatically.* |
 | **0 vs 1 array based indexing** | 1 indexed | 0 indexed | 1 indexed |
 | **Implicit type conversions between character and numeric types** | Available | Available | [Not available](https://trino.io/docs/current/functions/conversion.html) |
@@ -58,13 +58,14 @@ This is because the parser sometimes treats words in double quotes as a string a
 For example, referencing a column name in the `WHERE` clause using double quotes works as expected. However, the same query inside a CTE treats the column name as a string, [as can be seen here](https://dune.com/queries/1199604).
 
 ## Numerical types
-We support the [numerical types](https://trino.io/docs/current/language/types.html) `INTEGER`, `BIGINT`, `DOUBLE`, and fixed precision `DECIMAL` with precision up to 38 digits (i..e, `DECIMAL(38, 0)`). Additionally, we support `UINT256` for representing unsigned 256 bit integers.
+We support the [numerical types](https://trino.io/docs/current/language/types.html) `INTEGER`, `BIGINT`, `DOUBLE`, and fixed precision `DECIMAL` with precision up to 38 digits (i..e, `DECIMAL(38, 0)`). Additionally, we support `UINT256` for representing unsigned 256 bit integers and `INT256` for signed 256 bit integers, using two's complement.
 
 ## Byte Array to Numeric Functions
 - `bytearray_to_integer`, returns the `INTEGER` value of a big-endian byte array of length <= 4 representing the integer in two's complement. If the byte array has length < 4 it is padded with zero bytes.
 - `bytearray_to_bigint`, returns the `BIGINT` value of a big-endian byte array of length <= 8 representing the bigint in two's complement. If the byte array has length < 8 it is padded with zero bytes.
 - `bytearray_to_decimal`, returns the `DECIMAL(38,0)` value of a big-endian byte array of length <= 16 representing the decimal(38,0) in two's complement. If the byte array has length < 16 it is padded with zero bytes.
 - `bytearray_to_uint256`, returns the `UINT256` of a big-endian byte array of length <= 32 representing the unsigned integer. If the byte array has length < 32 it is padded with zero bytes.
+- `bytearray_to_int256`, returns the `INT256` of a big-endian byte array of length <= 32 representing the signed integer. If the byte array has length < 32 it is padded with zero bytes.
 - `bytea2numeric` has been deprecated. It is an alias for `bytearray_to_bigint`.
 
 The byte array conversion functions throw an overflow exception if the byte array is larger than the number of bytes supported of the type, even if the most significant bytes are all zero. It is possible to use `bytearray_ltrim` in order to trim the zero bytes from the left.
