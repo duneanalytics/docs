@@ -47,7 +47,7 @@ The syntax and keyword operator differences between Postgres, Spark, and Dune SQ
 | **`left()` is no longer a method available for returning substrings** | `left([string],[length])` | `left([string],[length])` | `substr([string], [start], [length])` <br><br> [Returns varchar; Positions start with 1, so use `1` for length if you want to replicate left() functionality](https://trino.io/docs/current/functions/string.html?highlight=substr#substring) `left(somestring, somenumber) -> substr(somestring, 0, somenumber)`|
 | **Aggregate Functions** | `array_agg(col)`, `array_agg(distinct(col))` | `array_agg(col)` or `collect_list(col)`, `collect_set(col)` or `array_agg(distinct(col))` | `array_agg(col)`, `array_agg(distinct(col))` |
 | **user generated views** | create view dune_user_generated.table | none | each query is a view, like [query_1747157](https://dune.com/queries/1747157) |
-
+| **event logs topic indexing** | topic 1,2,3,4 | topic 1,2,3,4 | topic 0,1,2,3 |
 
 ### Double quotes are not recommended
 
