@@ -23,10 +23,6 @@ Here are a few relevant support channels:
 6. [#spellbook](https://discord.com/channels/757637422384283659/999683200563564655) is for Spellbook related questions.
 7. [#dune-api](https://discord.com/channels/757637422384283659/1019910980634939433) is for API related questions.
 
-### 3. Weekly Office Hours
-
-Lastly, you can join our weekly office hours to get live help - find the next one on [our Events Calendar here](https://events.dune.com)!
-
 
 ## How to Leave Feedback
 
