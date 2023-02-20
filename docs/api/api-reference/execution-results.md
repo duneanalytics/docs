@@ -32,8 +32,7 @@ curl -X GET "https://api.dune.com/api/v1/execution/{{execution_id}}/results" -H 
 ```
 
 ## Example Response
-
-!!! info "Dune API responses are delivered in JSON format."
+### JSON Format
 
 ```json
 {
@@ -111,6 +110,26 @@ curl -X GET "https://api.dune.com/api/v1/execution/{{execution_id}}/results" -H 
         - *pending_time_millis* : The time (in milliseconds) it took to assign a slot in our server for this request.
         - *execution_time_millis* : The time (in milliseconds) it took for the actual execution of the query with this request.
 
+### CSV Format
+In order to get the results in CSV format, use the same URL pattern with "/csv" appended. The results will be returned in CSV format without additional metadata details like the JSON response.
+
+```
+GET v1/execution/{{execution_id}}/results/csv
+
+https://api.dune.com/api/v1/execution/{{execution_id}}/results/csv
+```
+
+```
+ct,TableName
+6296,eth_blocks
+4.474223e+06,eth_traces
+10155,eth_creation_traces
+2.137508e+06,eth_logs
+1.03989e+06,eth_transactions
+3.7185158e+07,sol_transactions
+2.942005e+06,bnb_transactions
+120973,optimism_transactions
+```
 
 ## Reading Results Data FAQ
 
