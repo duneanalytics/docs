@@ -111,13 +111,6 @@ curl -X GET "https://api.dune.com/api/v1/execution/{{execution_id}}/results" -H 
         - *execution_time_millis* : The time (in milliseconds) it took for the actual execution of the query with this request.
 
 ### CSV Format
-In order to get the results in CSV format, use the same URL pattern with "/csv" appended. The results will be returned in CSV format without additional metadata details like the JSON response.
-
-```
-GET v1/execution/{{execution_id}}/results/csv
-
-https://api.dune.com/api/v1/execution/{{execution_id}}/results/csv
-```
 
 ```
 ct,TableName
@@ -130,6 +123,17 @@ ct,TableName
 2.942005e+06,bnb_transactions
 120973,optimism_transactions
 ```
+In order to get the results in CSV format, use the same URL pattern with "/csv" appended. The results will be returned in CSV format without additional metadata details like the JSON response.
+
+```
+GET v1/execution/{{execution_id}}/results/csv
+
+https://api.dune.com/api/v1/execution/{{execution_id}}/results/csv
+```
+Additionally you can use "api_key" as a param to enable use cases such as importing results into a google sheet. (We advise against doing this any public document where your API key can be viewed and compromised.)
+
+![image (7)](https://user-images.githubusercontent.com/105652677/220012986-aaf6f372-8f4c-4e30-8da3-25e87a5271ab.png)
+
 
 ## Reading Results Data FAQ
 
