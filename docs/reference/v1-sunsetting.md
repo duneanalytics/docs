@@ -34,8 +34,8 @@ V1 queries for the given blockchain will become read only, forking and updating 
 Queries can still be run, but no changes can be made.
 
 **4. Step(End)**    
-No new data will be ingested into the V1 databases, decommission complete.
-Queries have to be forked and adjusted to V2.  
+No new data will be ingested and no new query executions on V1 databases, decommission complete. 
+Queries have to be forked and adjusted to V2.
 
 ## Decommissioning Schedule for Dune V1 Databases
 
