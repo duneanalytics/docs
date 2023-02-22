@@ -27,15 +27,15 @@ A fair warning that the blockchain will be decommissioned in the future.
 **2. Step**    
 Removal of the blockchain from the blockchain selection dropdown.  
 Existing queries are still editable on V1.  
-No new queries can be created.  
+No new queries can be created on V1 dataset.  
 
 **3. Step**    
-V1 queries for the given blockchain will become read only, forking and updating is no longer possible.  
+V1 queries for the given blockchain will become read only, forking and updating to DuneSQL is required.  
 Queries can still be run, but no changes can be made.
 
 **4. Step(End)**    
-No new data will be ingested into the V1 databases, decommission complete.
-Queries have to be forked and adjusted to V2.  
+No new data will be ingested and no new query executions on V1 databases, decommission complete. 
+Queries have to be forked and adjusted to V2.
 
 ## Decommissioning Schedule for Dune V1 Databases
 
