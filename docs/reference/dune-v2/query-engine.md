@@ -65,7 +65,7 @@ We support the [numerical types](https://trino.io/docs/current/language/types.ht
 
 ## Byte Array Functions in Dune SQL
 !!! warning
-    Operators such as ||, concat(), replace(), trim(), length() being performed on addresses and transaciton hashes will stop working when Dune SQL exits Alpha. We are changing the data type of these from varchar to bytearrays in order to reduce data stored and improve performance by up to 50%. Please use the functions below to remain compatible with future changes.
+    Operators such as ||, concat(), replace(), trim(), length() being performed on addresses and transaction hashes will stop working when Dune SQL exits Alpha. We are changing the data type of these bytearrays from varchar to varbinary in order to reduce data stored and improve querying speed by up to 50%. Please use the functions below when interacting with bytearrays to remain compatible with future changes.
 
 
 Dune SQL currently represents byte arrays using the `varbinary` type. Byte arrays can also be represented using `0x`-prefixed strings. 
@@ -88,7 +88,7 @@ If there is an operation you need to do on byte arrays which is not covered by a
 | `bytearray_substring` | `varbinary` or `varchar` | `varbinary, integer` or `varchar, integer` | Suffix byte array starting at a given index |
 | `bytearray_substring` | `varbinary` or `varchar` | `varbinary, integer, integer` or `varchar, integer, integer` | Sub byte array of given length starting at an index |
 
-### Byte Array to Numeric Functions
+#### Byte Array to Numeric Functions
 |  Function | Description  |
 |---|---|
 | `bytearray_to_integer` | Returns the `INTEGER` value of a big-endian byte array of length <= 4 representing the integer in two's complement. If the byte array has length < 4 it is padded with zero bytes.  |
