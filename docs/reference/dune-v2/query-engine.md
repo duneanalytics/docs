@@ -16,7 +16,7 @@ The syntax and keyword operator differences between Postgres, Spark, and Dune SQ
 
 !!! warning
     **Dune SQL is still in alpha!** If you find any other changes in Spark or Dune SQL that are important to note, please feel free to [submit a PR to this docs page on GitHub](https://github.com/duneanalytics/docs/edit/master/docs/reference/dune-v2/query-engine.md) or let us know in #dune-sql. 
-    **If you're running into errors using `||`, `concat()`, `replace()`, `trim()`, `length()`, or other operators on bytearrays (things like addresses, transactions, etc)** then check out the [Byte Array Functions](#byte-array-functions-in-dune-sql) section.
+   Dune SQL is exiting alpha on March 1st at 10am UTC. We'll be making enhancements to datatypes and certain queries using incompatible functions on bytearrays will stop working. [See below](#byte-array-functions-in-dune-sql) for more.
 
 ### Syntax Comparison
 
@@ -60,22 +60,12 @@ For example, referencing a column name in the `WHERE` clause using double quotes
 ## Numerical types
 We support the [numerical types](https://trino.io/docs/current/language/types.html) `INTEGER`, `BIGINT`, `DOUBLE`, and fixed precision `DECIMAL` with precision up to 38 digits (i..e, `DECIMAL(38, 0)`). Additionally, we support `UINT256` for representing unsigned 256 bit integers and `INT256` for signed 256 bit integers, using two's complement.
 
-## Byte Array to Numeric Functions
-- `bytearray_to_integer`, returns the `INTEGER` value of a big-endian byte array of length <= 4 representing the integer in two's complement. If the byte array has length < 4 it is padded with zero bytes.
-- `bytearray_to_bigint`, returns the `BIGINT` value of a big-endian byte array of length <= 8 representing the bigint in two's complement. If the byte array has length < 8 it is padded with zero bytes.
-- `bytearray_to_decimal`, returns the `DECIMAL(38,0)` value of a big-endian byte array of length <= 16 representing the decimal(38,0) in two's complement. If the byte array has length < 16 it is padded with zero bytes.
-- `bytearray_to_uint256`, returns the `UINT256` of a big-endian byte array of length <= 32 representing the unsigned integer. If the byte array has length < 32 it is padded with zero bytes.
-- `bytearray_to_int256`, returns the `INT256` of a big-endian byte array of length <= 32 representing the signed integer. If the byte array has length < 32 it is padded with zero bytes.
-- `bytea2numeric` has been deprecated. It is an alias for `bytearray_to_bigint`.
 
-The byte array conversion functions throw an overflow exception if the byte array is larger than the number of bytes supported of the type, even if the most significant bytes are all zero. It is possible to use `bytearray_ltrim` in order to trim the zero bytes from the left.
-
-[Here is an example query](https://dune.com/queries/1847704?d=11) that covers all of the above functions.
 
 
 ## Byte Array Functions in Dune SQL
 !!! warning
-    **Operators like `||` and functions like `concat()` will soon stop working with bytearrays when Dune SQL leaves alpha at the end of Feburary and you will need to `cast(some_bytearray as varchar)` first.** These changes will improve performance on byte array queries by up to 50% by reducing the amount of data stored
+    Operators such as ||, concat(), replace(), trim(), length() being performed on addresses and transaciton hashes will stop working when Dune SQL exits Alpha. We are changing the data type of these from varchar to bytearrays in order to reduce data stored and improve performance by up to 50%. Please use the functions below to remain compatible with future changes.
 
 
 Dune SQL currently represents byte arrays using the `varbinary` type. Byte arrays can also be represented using `0x`-prefixed strings. 
@@ -97,6 +87,20 @@ If there is an operation you need to do on byte arrays which is not covered by a
 | `bytearray_starts_with` | `boolean` | `varbinary, varbinary` or `varchar, varchar` | Determines whether a byte array starts with a prefix |
 | `bytearray_substring` | `varbinary` or `varchar` | `varbinary, integer` or `varchar, integer` | Suffix byte array starting at a given index |
 | `bytearray_substring` | `varbinary` or `varchar` | `varbinary, integer, integer` or `varchar, integer, integer` | Sub byte array of given length starting at an index |
+
+### Byte Array to Numeric Functions
+|  Function | Description  |
+|---|---|
+| `bytearray_to_integer` | Returns the `INTEGER` value of a big-endian byte array of length <= 4 representing the integer in two's complement. If the byte array has length < 4 it is padded with zero bytes.  |
+| `bytearray_to_bigint`  | Returns the `BIGINT` value of a big-endian byte array of length <= 8 representing the bigint in two's complement. If the byte array has length < 8 it is padded with zero bytes.  |
+| `bytearray_to_decimal` | Returns the `DECIMAL(38,0)` value of a big-endian byte array of length <= 16 representing the decimal(38,0) in two's complement. If the byte array has length < 16 it is padded with zero bytes.  |
+| `bytearray_to_uint256` | Returns the `UINT256` of a big-endian byte array of length <= 32 representing the unsigned integer. If the byte array has length < 32 it is padded with zero bytes.  |
+| `bytearray_to_int256` | Returns the `INT256` of a big-endian byte array of length <= 32 representing the signed integer. If the byte array has length < 32 it is padded with zero bytes.  |
+| `bytea2numeric` |  This function has been deprecated. It is an alias for `bytearray_to_bigint` |
+
+The byte array conversion functions throw an overflow exception if the byte array is larger than the number of bytes supported of the type, even if the most significant bytes are all zero. It is possible to use `bytearray_ltrim` in order to trim the zero bytes from the left.
+
+[Here is an example query](https://dune.com/queries/1847704?d=11) that covers all of the above functions.
 
 
 ## Query queries as views in Dune SQL
