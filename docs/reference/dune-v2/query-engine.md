@@ -15,8 +15,7 @@ With Dune V2 we’re moving away from a [PostgreSQL](https://www.postgresql.org/
 The syntax and keyword operator differences between Postgres, Spark, and Dune SQL are quite minimal, however there are a few to be aware of.
 
 !!! warning
-    **Dune SQL is still in alpha!** If you find any other changes in Spark or Dune SQL that are important to note, please feel free to [submit a PR to this docs page on GitHub](https://github.com/duneanalytics/docs/edit/master/docs/reference/dune-v2/query-engine.md) or let us know in #dune-sql. 
-   Dune SQL is exiting alpha on March 1st at 10am UTC. We'll be making enhancements to datatypes and certain queries using incompatible functions on bytearrays will stop working. [See below](#byte-array-functions-in-dune-sql) for more.
+    **Dune SQL is exiting alpha on March 1st at 10am UTC. We'll be making enhancements to datatypes and certain queries using incompatible functions on bytearrays will stop working.** [See below](#byte-array-functions-in-dune-sql) for more. If you find any other changes in Spark or Dune SQL that are important to note, please feel free to [submit a PR to this docs page on GitHub](https://github.com/duneanalytics/docs/edit/master/docs/reference/dune-v2/query-engine.md) or let us know in #dune-sql.
 
 ### Syntax Comparison
 
@@ -57,10 +56,8 @@ This is because the parser sometimes treats words in double quotes as a string a
 
 For example, referencing a column name in the `WHERE` clause using double quotes works as expected. However, the same query inside a CTE treats the column name as a string, [as can be seen here](https://dune.com/queries/1199604).
 
-## Numerical types
+## Numerical types in Dune SQL
 We support the [numerical types](https://trino.io/docs/current/language/types.html) `INTEGER`, `BIGINT`, `DOUBLE`, and fixed precision `DECIMAL` with precision up to 38 digits (i..e, `DECIMAL(38, 0)`). Additionally, we support `UINT256` for representing unsigned 256 bit integers and `INT256` for signed 256 bit integers, using two's complement.
-
-
 
 
 ## Byte Array Functions in Dune SQL
@@ -100,7 +97,7 @@ If there is an operation you need to do on byte arrays which is not covered by a
 
 The byte array conversion functions throw an overflow exception if the byte array is larger than the number of bytes supported of the type, even if the most significant bytes are all zero. It is possible to use `bytearray_ltrim` in order to trim the zero bytes from the left.
 
-[Here is an example query](https://dune.com/queries/1847704?d=11) that covers all of the above functions.
+[Here is an dashboard](https://dune.com/dune/dune-sql-byte-array-functions-uint256-int256-support) with examples covering all of the above functions.
 
 
 ## Query queries as views in Dune SQL
