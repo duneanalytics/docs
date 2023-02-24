@@ -15,7 +15,7 @@ With Dune V2 we’re moving away from a [PostgreSQL](https://www.postgresql.org/
 The syntax and keyword operator differences between Postgres, Spark, and Dune SQL are quite minimal, however there are a few to be aware of.
 
 !!! warning
-    **Dune SQL is exiting alpha on March 1st at 10am UTC. We'll be making enhancements to datatypes and certain queries using incompatible functions on bytearrays will stop working.** [See below](#byte-array-functions-in-dune-sql) for more. If you find any other changes in Spark or Dune SQL that are important to note, please feel free to [submit a PR to this docs page on GitHub](https://github.com/duneanalytics/docs/edit/master/docs/reference/dune-v2/query-engine.md) or let us know in #dune-sql.
+    **Dune SQL is exiting alpha on March 1st at 10am UTC. We'll be making enhancements to datatypes and certain queries using incompatible functions on bytearrays will stop working.** [See below](#byte-array-functions-in-dune-sql) for more. If you find any other changes in Spark or Dune SQL that are important to note, please feel free to [submit a PR to this docs page on GitHub](https://github.com/duneanalytics/docs/edit/master/docs/reference/dune-v2/query-engine.md) or let us know in [#dune-sql](https://discord.com/channels/757637422384283659/1051871389432422491) Discord.
 
 ### Syntax Comparison
 
