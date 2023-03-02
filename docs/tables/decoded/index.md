@@ -44,7 +44,7 @@ Since all chain's data resides in one database, but the multichain world is a re
 
 === "V2 Engine (Spark SQL)"
 
-    You can check if contracts are already decoded by querying `[blockchain].contracts` tables through our database or use [this dashboard](https://dune.com/0xBoxer/Is-my-Contract-decoded-yet).
+    You can check if contracts are already decoded by querying `[blockchain].contracts` tables through our database or use [this dashboard](https://dune.com/dune/is-my-contract-decoded-yet-v2).
 
     ```sql
     Select * from ethereum.contracts --you can change ethereum.contracts to the e.g. optimism.contracts
@@ -69,6 +69,8 @@ If the contract is not in our database yet, you can submit them here:
 <div class="cards grid" markdown>
 - [dune.com/contracts/new](https://dune.com/contracts/new).
 </div>
+
+If you want to submit several contracts at the same time, there is also the possibility of submitting a batch of contracts. To do so, please use [this CSV](https://gist.github.com/antonio-mendes/c6a43c22862581674c11462cae230e23) as a template and fill it in with the appropriate information for the contracts you want to decode. Afterwards send the CSV to decoding@dune.com.
 
 It usually takes about 24 hours to initially decode smart contracts, and you can check to see if your contract has been decoded yet here:
 
