@@ -1,4 +1,4 @@
-mkdocs-material==8.5.11
+mkdocs-material==9.*
 mkdocs-awesome-pages-plugin
 mkdocs-video
 mkdocs-redirects
