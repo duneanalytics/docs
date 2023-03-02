@@ -11,6 +11,7 @@ plugins:
         target: _blank
   - redirects:
       redirect_maps:
+       'docs': 'getting-started/index.md'
        'dune-engine-v2-beta/abstractions-in-dunev2/getting-started-contribute-a-spell/README.md': 'spellbook/getting-started/submissions.md'
        'bounties/wizard-request-program.md': 'reference/dune-bounties.md'
        'data-tables/data-tables/raw-data/ethereum-data.md': 'tables/raw/index.md'

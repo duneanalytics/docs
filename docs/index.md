@@ -1,231 +1,98 @@
 ---
-title: Welcome
-description: Welcome to Dune Docs
-hide:
-  - navigation
+title: Getting Started
+description: Getting Started is the place to get oriented and learn how to use Dune!
 ---
 
-<style>
-  .md-typeset h1,
-  .md-content__button {
-    display: none;
-  }
-  .md-header__topic{
-    font-weight: bold;
-  }
-</style>
+Getting Started is the place to get oriented and learn how to use Dune!
 
-![Dune Docs cover](images/dune-docs-cover.jpg)
+## Dune is made for technical and non-technical users alike.
 
-Dune is a powerful tool for blockchain research, complete with all the tools you need to discover, explore, and visualize vast amounts of blockchain data.
+Whether you are a seasoned SQL developer, blockchain researcher, business analyst or none of the above - you can use Dune to start analyzing Blockchain data in an instant.
 
+With the help of our community, we've created a lot of helpful guides and tools to aid you in your journey of becoming a full-fledged Dune Wizard.
 
- Dune is your key to answering questions like:
+The absolute quickest way to get started with Dune is to follow along with our [Getting Started Video Series here](../app/guides/video-tutorial.md) and to check out our [Getting Started Dashboard here](https://dune.com/dune/get-started).
 
-- [How much volume flows through Uniswap each day?](https://dune.com/queries/3)
-- [Which Dex has the highest volume?](https://dune.com/queries/1847)
-- [How are important Stablecoins behaving today?](https://dune.com/hagaetc/stablecoins)
+The next steps to dive deeper depend on whether you:
 
-## Dune in 5-minutes ⚡
+1. Already know SQL
+2. Are more of a just-in-case or just-in-time learner.
 
-![type:video](https://www.youtube.com/embed/S-cctFmR828)
+=== "Just-in-Case"
+    Just-in-Case learning is school-style - read and watch a lot of content up front to get a general understanding, then start experimenting with doing.
 
-## How the data flows
+    If this is your preferred learning style, our long form [Dune Guides](../app/guides/dune-guides.md) go a lot deeper than our videos while still guiding you through simple projects to give you a general understanding of how to create with Dune.
 
-<img alt="how the data flows" class="hoz-cent" src="images/how-the-data-flows.jpg">
+    [OurNetwork Course](dune-guides/#ournetwork-course) is also provides a thorough, broad overview.
 
-Public blockchains are [open and free](https://dune.com/blog/revolution-not-quarterly), so getting data from them shouldn’t be that hard right?
+=== "Just-in-Time"
+    Just-in-Time learning is for those who learn by doing. If you already have an idea of what you want to do with Dune and just need to unblock yourself by finding some specific tactical knowledge, [Core Features](queries.md) likely contains the information you need.
 
-Yes and no.
+    [Tables](../tables/index.md) and [Spellbook](../spellbook/index.md) are more advanced features worth experimenting with once you've understood the basics.
 
-Compared to getting siloed data from traditional businesses to, say, analyze how international shipping speeds affect consumer demand for the latest Parisian couture…
+    Be sure to ask whatever questions you have in the [#beginners Discord channel](https://discord.com/channels/757637422384283659/1016725609797402634)!
 
-Yes viewing and analyzing blockchain data is “easier.”
 
-But there’s a lot going on under Dune’s proverbial hood. Let’s pop it open and take a look to better understand how state changes on a public blockchain like Ethereum turn into data you query to build charts and graphs.
+=== "Don't Know SQL?"
+    If you're not very familiar with SQL, start by exploring our [SQL Guides here](../app/guides/sql-guides.md).
 
-### <img alt="chain adds a block" src="images/chain-adds-a-block.png" class="vrt-cent"> <span class="vrt-cent"> 1. A chain adds a block</span>
 
-While the technical details vary, at the core of every blockchain a set of transactions is proposed, agreed upon, then appended to the end of a chain of blocks containing transactions previously agreed upon.
+## What do you need to know to Become a Great Wizard?
 
-There are a variety of [consensus mechanisms](https://crypto.com/university/consensus-mechanisms-in-blockchain), methods of determining which block is the next block, but once consensus is reached information about the latest block is broadcasted across the blockchain’s network to let its participants (“Nodes”) know about this new block and add it to their records.
+![it's easy for Hermione](images/wingardium.gif)
 
-[Check out this awesome Blockchain 101 demo](https://andersbrownworth.com/blockchain/) for more details about how blockchains work!
+### How to Use SQL
 
-### <img alt="nodes transmit to dune" src="images/nodes-transmit-to-dune.png" class="vrt-cent"><span class="vrt-cent"> 2. Node providers transmit data to Dune</span>
+A fundamental understanding of SQL is needed to be able to successfully query for data on Dune.
 
-To receive this “new block created” message, someone has to run a [blockchain node](https://www.alchemy.com/overviews/what-is-an-ethereum-node) - a computer running “client” software that connects them to a blockchain’s network, allows them to send information back and forth between other nodes, and in some cases validate transactions and store data.
+[SQL](https://www.w3schools.com/sql/sql_intro.asp) is widely used in the Software Development industry and you can find a lot of non-Dune specific documentation about it. This often times helps with answering Query related questions since most answers can easily be found in the internet.
 
-With a bit of technical know-how, anyone can run a node - that’s a big part of what makes a blockchain _public_!
 
-Because almost anyone can run a node, there’s a lot of transparency in the system to keep participants honest. 
+!!! note
+    By default, this documentation shows information for our Dune V1 Engine, which runs on a PostgreSQL database.
+    Our new data platform, [Dune Engine V2](https://dune.com/blog/dune-engine-v2) is currently in beta with a Spark SQL query engine. It offers exciting features like better scaling, cross chain Queries and [Spellbook](../spellbook/index.md). Dune Engine V2 will become the default over the next few months, so we recommend you try it out!
 
-This transparency also makes it possible to leverage the hive mind by allowing data analysts to access a complete picture of “what’s happening” and do any sort of analysis they want.
+=== "Basic SQL"
+    If you're not very familiar with SQL in general, we recommend starting with our [SQL Guides](../app/guides/sql-guides.md).
 
-No struggling to access raw data required.
+=== "PostgreSQL"
+    The official [PostgreSQL documentation](https://www.postgresql.org/docs/12/index.html) is great. Dune runs on PostgreSQL 12.2.
 
-To help projects like Dune operate at scale, [node providers](https://www.alchemy.com/overviews/blockchain-node-providers) build and operate node infrastructure that captures blockchain data and makes it accessible to us via an Application Programming Interface (API).
+=== "Spark SQL"
+    The official [Spark SQL](https://docs.databricks.com/sql/language-manual/index.html) documentation is super helpful.
 
-In this way we can focus on making the best possible data-accessibilty experience while the node providers can focus on running nodes as efficiently as possible.
+### How to parse Ethereum Virtual Machine data
 
-### <img alt="dune adds to sql tables" src="images/dune-adds-to-sql-tables.png" class="vrt-cent"><span class="vrt-cent"> 3. Dune adds raw data to SQL tables</span>
+The data you will find on chain and in Dune's database is almost all pulled from Ethereum Virtual Machine based environments.
 
-Our node providers send blockchain transaction data to us as hashed bytecode (for instance, Ethereum data is hashed using [the keccak256 algorithm](https://medium.com/0xcode/hashing-functions-in-solidity-using-keccak256-70779ea55bb0)).
+Thus, understanding how the Ethereum Virtual Machine and smart contracts work as a whole is an important foundation for being able to find, understand, and use much of the data available in Dune.
 
-The Dune Data Engine takes this bytecode and extracts it into a set of Tables we call “[Raw Data](tables/raw/index.md).”
+If you are able to read most of the data in Etherscan, you're already well on your way to being able to create insightful Queries and Visualizations with Dune.
 
-These can vary slightly from chain to chain, but as an example, most [Ethereum Virtual Machine (EVM)](tables/raw/traces.md) based chains include:
+Unfortunately we haven't yet found one great resource we can point you to currently as each smart contract has it's own rules. We have written up a few words on this in our section on [Decoded Data](../tables/decoded/index.md).
 
+### What communities, protocols, and businesses care about
 
+This is something that might come as a surprise to you but a key component of being an effective data-analyzing Wizard is understanding how to separate "signal from noise."
 
-* [[chain].blocks](tables/raw/blocks.md) - groups of transactions appended to the chain.
-* [[chain].creation_traces](tables/raw/traces.md) - transactions that contain [`create` traces](https://medium.com/coinmonks/ethereum-data-evm-traces-simplified-5e297e4f40a4) (sometimes these are in internal transactions)
-* [[chain].logs](tables/raw/event-logs.md) -  [event logs](https://medium.com/mycrypto/understanding-event-logs-on-the-ethereum-blockchain-f4ae7ba50378) created by smart contracts
-* [[chain].traces](tables/raw/traces.md) - [trace data](https://medium.com/coinmonks/ethereum-data-evm-traces-simplified-5e297e4f40a4) generated by transactions in a block
-* [[chain].transactions](tables/raw/transactions.md) - cryptographically signed instructions sent from one address to another.
+Some data is interesting and valuable, some data isn't. Knowing how to surface the interesting bits by making them clear and easy to understand is a fundamental part of becoming a great data-analyzing Wizard.
 
-Data in these tables are human readable (whereas bytecode is not), but requires extensive blockchain knowledge to understand and interpret.
+Ask yourself: 
 
-This Raw Data can also take a lot more work to manipulate into interesting insights, which is why Dune [decodes](tables/decoded/index.md) this data.
+!!! quote "What Data is interesting and needed for my audience/community/project/company to make better decisions?"
 
-### <img alt="dune decodes data" src="images/dune-decodes-data.png" class="vrt-cent"><span class="vrt-cent"> 4. Dune decodes raw data</span>
+There are thousands of ways to go about finding metrics that are interesting, though talking with the community or founders is usually the best starting place.
 
-Raw `.log` tables return data that looks like this:
+## How to find a freelancer to help you build Dune Dashboards
 
-| Field   | Data                                                                 |
-| ------- | -------------------------------------------------------------------- |
-| tx_hash | `0x2bb7c8283b782355875fa37d05e4bd962519ea294678a3dcf2fdffbbd0761bc5` |
-| topic1  | `0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef` |
-| topic2  | `0x00000000000000000000000075e89d5979e4f6fba9f97c104c2f0afb3f1dcb88` |
-| topic3  | `0x00000000000000000000000087d9da48db6e1f925cb67d3b7d2a292846c24cf7` |
-| data    | `0x00000000000000000000000000000000000000000000001a894d51f85cb08000` |
+There are quite a few people in the crypto industry who either specialize in building on Dune or have the necessary skills to quickly get up to speed on the particulars.
 
-Data in this form has some fairly limited data analysis use cases.
+To reach out to this pool of freelancers, you can [**fill out this questionnaire**](http://bounties.dune.com) and hopefully freelancers will get back to you in little to no time. If that yields no results, posting the bounty on relevant social channels and spreading it in your networks may help.
 
-To transform this data into something a lot more usable, [Wizards submit smart contracts for decoding here](https://dune.com/contracts/new).
+If hiring a freelancer for the first time, please be sure to review their past work and Dashboards to verify that they are indeed capable of the kind of problem solving you need.
 
-When that happens, we use the smart contract’s [Application Binary Interface (ABI)](https://www.alchemy.com/overviews/what-is-an-abi-of-a-smart-contract-examples-and-usage), which is similar to a Web 2.0 API, to understand what’s happening inside the transactions that interact with the contract.
+## Additional Tools and Support
 
-We then create [Decoded Tables](tables/decoded/index.md) that are a lot easier to do analysis with.
+Check out our [Support](../reference/support-feedback.md) page to learn the best way to get help if you can't find the answers you're looking for in our docs.
 
-For example, the above transaction, once decoded, looks like this:
-
-| Field       | Data                                                                 |
-| ----------- | -------------------------------------------------------------------- |
-| evt_tx_hash | `0x2bb7c8283b782355875fa37d05e4bd962519ea294678a3dcf2fdffbbd0761bc5` |
-| "from"      | `0x75e89d5979e4f6fba9f97c104c2f0afb3f1dcb88`                         |
-| "to"        | `0x87d9da48db6e1f925cb67d3b7d2a292846c24cf7`                         |
-| value       | `489509000000000000000`                                              |
-
-### <img alt="community casts spells" src="images/community-casts-spells.png" class="vrt-cent"><span class="vrt-cent"> 5. The Dune community casts Spells</span>
-
-With the help of our amazing community of Wizards, Dune goes a step beyond just decoding data with [Spells](tables/spells/index.md).
-
-Spells are custom tables, built and maintained by Dune and our community, that make it easy to aggregate lots of data with as little friction as possible.
-
-For example one of the most popular Spells, [nft.trades](https://dune.com/spellbook#!/model/model.spellbook.nft_trades), makes it easy to explore and transform NFT trading data across protocols and blockchains without having to compile trades from Magic Eden on Solana, LooksRare on Ethereum, etc yourself.
-
-### <img alt="wizards make magic" src="images/wizards-make-magic.png" class="vrt-cent"><span class="vrt-cent"> 6. Dune Wizards make magic</span>
-
-From all this data, Wizards build [Queries](getting-started/queries.md) using SQL, a widely-used language for storing, manipulating and retrieving data in databases.
-
-From these Queries they build the [Visualizations](getting-started/visualizations.md) and [Dashboards](getting-started/dashboards.md) we all know and love!
-
-Eg [@rchen8](https://dune.com/rchen8)'s OpenSea daily volume: 
-
-![type:video](https://dune.com/embeds/11385/22601/a9fc0859-cac6-4111-b21d-6104e71b16b5)
-
-## Making 🪄 with dune.com
-
-Dune.com is the first killer app built on top of the Dune Data Platform, designed to make it as easy as possible for anyone with at least a little bit of SQL, Ethereum Virtual Machine, and Business knowledge to analyze blockchain data in interesting ways.
-
-The basic building blocks of the Dune.com app are:
-
-- **Dashboards:** A set of widgets containing Visualizations and text that tell a story about a particular group of blockchain data.
-- **Visualizations:** Charts and Graphs that turn data in harder-to-understand table-form into easier-to-understand visual form.
-- **Queries:** Commands that extract data from Dune's database so it can be displayed in Dune Dashboards via Tables and Visualizations.
-
-As a Dune.com visitor, you view Dashboards containing text, Table, and Visualization widgets built from Queries.
-
-As a Dune Wizard (what we call "blockchain analysts" because it's way cooler), you'll create custom Queries to fetch data, visualize the results of these Queries, and then tell stories with your data using Dashboards.
-
-### Queries
-
-Dune aggregates blockchain data into an SQL database that can be easily queried. 
-
-[Queries](getting-started/queries.md) are used to specify what data from the blockchain should be found in the our database and returned.
-
-Maybe you want to know _all the Dex trades that happened today_, or the _total value of stablecoins minted this year_. Whatever the question, discovering the answer starts with a Dune Query!
-
-Queries return rows and columns of data (just like traditional SQL queries) that can then be used to create Visualizations that you present in Dashboards.
-
-![SQL Query - Uniswap USD volume](images/sql-query-uniswap-usd-volume.png)
-
-There are a few ways that a blockchain analyst (i.e. Wizard i.e. you!) can get started running Queries:
-
-1. The simplest way is to use Dune [_Spells_](tables/spells/index.md)) to query commonly used data tables. Some popular Spells include `dex.trades`, `lending.borrow`, and `stablecoin.transfer`.
-2. Query the raw Ethereum data like blocks, logs, and transactions.
-3. It is also possible to query centralized exchange data. For example, you can use `prices.usd` to quickly return the price of almost any cryptoasset.
-
-### Visualizations
-
-Data presented in table form (rows and columns) can be difficult to read. [Visualizations](getting-started/visualizations.md) take the results of a Query and present the information in a clear, precise, and _visual_ way.
-
-With Dune Visualizations, it's easy to begin to tell a story with your data by transforming something like this:
-
-![Table chart](images/table-chart.png)
-
-Into something like this:
-
-![Bar chart](images/bar-chart.png)
-
-The Bar Chart Visualization makes it clear that April 19th had the highest transfer volume to help you and others see the trend over time.
-
-Dune offers a variety of Visualizations you can use to visually present data including:
-
-- **Bar Charts**
-- **Area Charts**
-- **Scatter Charts**
-- **Line Charts**
-- **Pie Charts**
-- **Counters**
-- **Tables**
-
-### Dashboards
-
-Using carefully planned visuals, a clever blockchain analyst (Wizard!) can tell a story about different collections of data through [Dune Dashboards](getting-started/dashboards.md).
-
-For example, in the below Dashboard, [Dex Metrics](https://dune.com/hagaetc/dex-metrics) by [@hagaetc](https://dune.com/hagaetc), it's clear at the top that 'DEX' as a category is growing. Below, the audience sees which DEX's are the most popular by volume, and finally can view a stacked bar chart that shows changes over time.
-
-Just by looking at this single Dashboard, anyone can get a clear picture of the entire DEX market.
-
-![Dashboard](images/dashboard.png)
-
-## How to navigate these docs
-
-We've built these docs to answer all your who, what, when, where, why, and how questions for anything/everything Dune!
-
-Here's a quick run down of each of the sections:
-
-- [Getting Started](getting-started/index.md) is where you'll get oriented and learn how to use Dune!
-- [Reference](reference/index.md) is where you'll get answers to your "who, what, where" questions and find a few supplemental resources we've put together.
-- [Spellbook](spellbook/index.md) is where you'll find everything you need to build and use Spells.
-- [API](api/index.md) is where you'll find everything you need to integrate our API into your project.
-
-If you're itching to get your wand working, jump over to our [Query Quick Start](getting-started/query-quick-start.md) for a walkthrough that will help you build your first Dune Query!
-
-## Dune is a community effort
-
-On Dune.com, all Queries and datasets are public by default (if you need Privacy for your Queries, our [Pro Plan](https://dune.com/pricing) has got you covered).
-
-This makes it a snap for you, the Wizard, to fork and remix other creators' Queries to build on top of their knowledge and insights.
-
-On the flip side, every new Query, you create helps other people learn new things about blockchains and cryptoassets through Dune.
-
-This positive feedback loop is how the Dune Community Succeeds together through an ever growing range of Queries that allow us all to learn more!
-
-Join our [Community Discord](https://discord.gg/BJBHFR6sdy) to get world class support from our team and the community.
-
-Check out our [events calendar](https://events.dune.com) to join in the fun LIVE.
-
-And if you have any feedback, whether feature requests or bug reports, please submit it [here](https://feedback.dune.com).
+And give our [Wizard Tools](../reference/wizard-tools/index.md) page a gander to learn more about all the awesome non-Dune tools our wizards use to make 🎇.
