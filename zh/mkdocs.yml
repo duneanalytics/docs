@@ -14,4 +14,5 @@ theme:
     - toc.integrate
     - toc.follow
     - navigation.path
-  
+    - search.highlight
+    - search.share
