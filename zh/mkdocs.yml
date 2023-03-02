@@ -10,8 +10,8 @@ theme:
     text: IBM Plex Sans
     code: IBM Plex Mono
   features:
-    - toc.integrate
-    - toc.follow
+    # - toc.integrate
+    # - toc.follow
     - navigation.tracking
     - navigation.path
     - search.highlight
