@@ -12,7 +12,7 @@ description: Documentation regarding the changes to DuneSQL on March 2nd, 2023
     - ``reservoir.*``  
     - ``snapshot.*`` 
 
-    You can temporarily cast the columns which are incorrectly still `varchar` to `varbinary` with  `from_hex(substring( x from 3))` 
+    You can temporarily cast the columns which are incorrectly still `varchar` to `varbinary` with  `from_hex(substring( x from 3))`. If you deploy this workaround, you will have to change it back once the issue is resolved. Sorry about the inconvenience! 
     
 
 ## DuneSQL Alpha Deprecation and Data Type Changes
@@ -45,7 +45,7 @@ More specifically, you will need to:
 If you used any other operator on string columns, you will need to adjust them to the new approaches of working with `varbinary` columns. They are documented in the [DuneSQL documentation](https://dune.com/docs/reference/dune-v2/query-engine/#byte-array-functions-in-dune-sql). 
 3. If you used any `varchar -> double`, `varchar -> decimals` or `varchar -> bigint` casts, you can now remove them. This is not strictly necessary, but it will make your query more readable and easier to maintain.
 4. If your query used any columns from logs tables, you will need to adjust the indexing of topics. `Topic1` changed to `Topic0`, `Topic2` changed to `Topic1`, etc.
-5. If you used the [query a query function](https://dune.com/docs/reference/dune-v2/query-engine/#query-a-query), you will need to remove all `--dunesql_alpha_deprecated` comments from all involved queries.
+5. If you used the [query a query functionality](https://dune.com/docs/reference/dune-v2/query-engine/#query-a-query), you will need to remove all `--dunesql_alpha_deprecated` comments from all involved queries.
 
 #### What if I don't do anything?
 
@@ -69,3 +69,4 @@ If you don't remove the `-- dunesql_alpha_deprecated` comment from your query, i
 | Numeric columns with potentially larger numbers are stored as UINT256 or INT256. | Numeric columns with potentially large  numbers were stored as strings. They would need to be cast to bigint or double before they could be used for arithmetic. | Numeric columns are stored as UINT256 or INT256. They show up as UINT256 or INT256 in the data explorer instead of VARCHAR. | select sum(cast(amount as double)) from aave_ethereum.AToken_call_transfer where call_success = true | select sum(amount) from aave_ethereum.AToken_call_transfer where call_success = true -- no longer required to cast to double |
 | The logs.topicX columns are renamed to be topic0, topic1, topic2, topic3 | The topic columns of logs tables were named topic1, topic2, topic3, topic4. | The topic columns of logs tables are renamed to topic0, topic1, topic2, topic3. | select topic1, topic2, topic3, topic4 from ethereum.logs limit 10 | select topic0, topic1, topic2, topic3 from ethereum.logs limit 10 |
 | Decoded tables no longer automatically coerce breaking type changes on contract updates. It is very rare for contract updates to do breaking type changes. | We would automatically convert values with different data types to the same, either implicitly using Spark, or with a couple of explicit rules. | We no longer automatically coerce breaking type changes of contract updates. These need to be handled manually. |  |  |
+
