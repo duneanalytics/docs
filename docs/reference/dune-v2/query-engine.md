@@ -98,12 +98,10 @@ If there is an operation you need to do on byte arrays which is not covered by a
 
 The byte array conversion functions throw an overflow exception if the byte array is larger than the number of bytes supported of the type, even if the most significant bytes are all zero. It is possible to use `bytearray_ltrim` in order to trim the zero bytes from the left.
 
-[Here is an dashboard](https://dune.com/dune/dune-sql-byte-array-functions-uint256-int256-support) with examples covering all of the above functions.
-
-
+[Here is a dashboard](https://dune.com/dune/dune-sql-byte-array-functions-uint256-int256-support) with examples covering all of the above functions.
 ## Query queries as views in Dune SQL
 
-All queries written using Dune SQL can be queried as views in other queries using the identifier `query_<queryId>`. For instance:
+All non-paramterized queries written using Dune SQL can be queried as views in other queries using the identifier `query_<queryId>`. For instance:
 ```
 select * from query_1234
 ```
