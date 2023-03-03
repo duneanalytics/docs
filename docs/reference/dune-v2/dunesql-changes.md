@@ -4,10 +4,16 @@ description: Documentation regarding the changes to DuneSQL on March 2nd, 2023
 ---
 
 !!! Warning
-    We are still experiencing issues with datatypes some tables in DuneSQL. We are working on fixing them and will update this page once they are resolved.
+    We are still experiencing issues with datatypes in some tables in DuneSQL. We are working on fixing them and will update this page once they are resolved.
     Currently affected tables are:  
     - ``prices.usd``  
-    - some Spellbook tables
+    - some Spellbook tables    
+    - ``flashbots.*``  
+    - ``reservoir.*``  
+    - ``snapshot.*`` 
+
+    You can temporarily cast the columns which are incorrectly still `varchar` to `varbinary` with  `from_hex(substring( x from 3))` 
+    
 
 ## DuneSQL Alpha Deprecation and Data Type Changes
 DuneSQL officially exited its alpha stage on March 2nd, 2023.
@@ -48,10 +54,10 @@ If you don't remove the `-- dunesql_alpha_deprecated` comment from your query, i
 #### Common Errors and Fixes
 | Error | Example | Solution |
 |---|---|---|
-| Needing to cast varchar to varbinary | `Cannot apply operator: varbinary = varchar(X)` or `Cannot apply operator: varchar = varbinary at` | `cast(address as varbinary)` |
+| Needing to cast varchar to varbinary | `Cannot apply operator: varbinary = varchar(X)` or `Cannot apply operator: varchar = varbinary at` | `from_hex(substring( x from 3)` |
 | Casting to uint256 | `Cannot apply operator: UINT256 = varchar(7) at`  | `cast(xxx as uint256)` |
-| Use bytearray_subtring |`Unexpected parameters (varbinary, integer, integer) for function substring. Expected: substring(varchar(x), bigint), substring(varchar(x), bigint, bigint), substring(char(x), bigint), substring(char(x), bigint, bigint) at`  | substring(data, 3, 16) would be bytearray_substring(data, 1, 8) |
-| Use bytearray_substring and bytearray_starts_with instead of LIKE expression | `Left side of LIKE expression must evaluate to a varchar (actual: varbinary) at` | `bytearray_starts_with(varbinary, expression)` |
+| Use bytearray_subtring |`Unexpected parameters (varbinary, integer, integer) for function substring. Expected: substring(varchar(x), bigint), substring(varchar(x), bigint, bigint), substring(char(x), bigint), substring(char(x), bigint, bigint) at`  | `substring(data, 3, 16)` would be `bytearray_substring(data, 1, 8)` |
+| Use `bytearray_substring` and `bytearray_starts_with` instead of LIKE expression | `Left side of LIKE expression must evaluate to a varchar (actual: varbinary) at` | `bytearray_starts_with(varbinary, expression)` |
  
 #### Changes
 
