@@ -113,8 +113,8 @@ Following is a list of data type changes taking effect on March 2, 2023.
 | Use bytearray_subtring |`Unexpected parameters (varbinary, integer, integer) for function substring. Expected: substring(varchar(x), bigint), substring(varchar(x), bigint, bigint), substring(char(x), bigint), substring(char(x), bigint, bigint) at`  | substring(data, 3, 16) would be bytearray_substring(data, 1, 8) |
 | Use bytearray_substring and bytearray_starts_with instead of LIKE expression | `Left side of LIKE expression must evaluate to a varchar (actual: varbinary) at` | `bytearray_starts_with(varbinary, expression)` |
  
- #### Changes
- | Description | Previous behavior | New behavior | Breaking query/anti-pattern | Fixed query |
+#### Changes
+| Description | Previous behavior | New behavior | Breaking query/anti-pattern | Fixed query |
 |---|---|---|---|---|
 | 0x-literals change type to varbinary | 0x-literals had type varchar. I.e., 0xabCD = ‘0xabcd’, and typeof(0xabcd) = ‘varchar’ | 0x-literals have type varbinary. I.e. 0xabCD = X’abcd’, and typeof(0xabcd) = ‘varbinary’ | select * from ethereum.logs where tx_hash = ‘0xabcdef’ | select * from ethereum.logs where tx_hash = 0xabcdef |
 | Byte array type columns of base tables and decoded tables now have varbinary type. Example byte array columns are hash, to, from, block_hash, tx_hash, evt_tx_hash, contract_address, call_tx_hash, data, topic0, topic1. This changes the way byte arrays are indexed, as you now index by bytes, instead of by hexadecimal digits. | Byte array type columns had type varchar and were represented as 0x-prefixed hex strings. Byte arrays are indexed by hexadecimal digits instead of by the natural byte position, after accounting for the 0x-prefix. | Byte array type columns have type varbinary. Bytes are indexed with their natural position. | select substring(data, 3, 16) from ethereum.transactions limit 10 -- start at characther 3 to skip 0x-prefix, and read 16 hex characters to get 8 bytes | select bytearray_substring(data, 1, 8) from ethereum.transactions limit 10 -- read 8 bytes |
