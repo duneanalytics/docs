@@ -102,8 +102,8 @@ The byte array conversion functions throw an overflow exception if the byte arra
 ## Dune SQL Alpha Deprecation and Data Type Changes
 Following is a list of data type changes taking effect on March 2, 2023.
  
- !!! warning
-    As DuneSQL excited alpha and started using new data types, we appended a comment `-- dunesql_alpha_deprecated` to any query which had incompatible functions. This comment allows the query to be ran against the old data types until March 23, 2023. We recommend removing the comment and converting your query to use compatible functions before the deprecation date if you'd like continued usage, better usability, and up to 40% faster query performance. 
+!!! warning
+    **As DuneSQL excited alpha and started using new data types, we appended a comment `-- dunesql_alpha_deprecated` to any query which had incompatible functions. This comment allows the query to be ran against the old data types until March 23, 2023. We recommend removing the comment and converting your query to use compatible functions before the deprecation date if you'd like continued usage, better usability, and up to 40% faster query performance. 
 
 #### Common Errors and Fixes
 | Error | Example | Solution |
