@@ -72,7 +72,6 @@ To make it simpler to work with byte arrays we have the following helper functio
 
 If there is an operation you need to do on byte arrays which is not covered by a function in the list below you should reach out to the Dune team. 
 
-
 | Function | Return Type | Argument Types | Description |
 | --- | --- | --- | --- |
 | `bytearray_concat` | `varbinary` or `varchar` | `varbinary, varbinary` or `varchar, varchar` | Concatenates two byte arrays |
@@ -106,7 +105,15 @@ Following is a list of data type changes taking effect on March 2, 2023.
  !!! warning
     As DuneSQL excited alpha and started using new data types, we appended a comment `-- dunesql_alpha_deprecated` to any query which had incompatible functions. This comment allows the query to be ran against the old data types until March 23, 2023. We recommend removing the comment and converting your query to use compatible functions before the deprecation date if you'd like continued usage, better usability, and up to 40% faster query performance. 
 
+#### Common Errors and Fixes
+| Error | Example | Solution |
+|---|---|---|
+| Needing to cast varchar to varbinary | `Cannot apply operator: varbinary = varchar(X)` or `Cannot apply operator: varchar = varbinary at` | `cast(address as varbinary)` |
+| Casting to uint256 | `Cannot apply operator: UINT256 = varchar(7) at`  | `cast(xxx as uint256)` |
+| Use bytearray_subtring |`Unexpected parameters (varbinary, integer, integer) for function substring. Expected: substring(varchar(x), bigint), substring(varchar(x), bigint, bigint), substring(char(x), bigint), substring(char(x), bigint, bigint) at`  | substring(data, 3, 16) would be bytearray_substring(data, 1, 8) |
+| Use bytearray_substring and bytearray_starts_with instead of LIKE expression | `Left side of LIKE expression must evaluate to a varchar (actual: varbinary) at` | `bytearray_starts_with(varbinary, expression)` |
  
+ #### Changes
  | Description | Previous behavior | New behavior | Breaking query/anti-pattern | Fixed query |
 |---|---|---|---|---|
 | 0x-literals change type to varbinary | 0x-literals had type varchar. I.e., 0xabCD = ‘0xabcd’, and typeof(0xabcd) = ‘varchar’ | 0x-literals have type varbinary. I.e. 0xabCD = X’abcd’, and typeof(0xabcd) = ‘varbinary’ | select * from ethereum.logs where tx_hash = ‘0xabcdef’ | select * from ethereum.logs where tx_hash = 0xabcdef |
