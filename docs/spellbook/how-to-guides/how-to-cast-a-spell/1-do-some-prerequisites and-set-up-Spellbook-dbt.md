@@ -45,7 +45,7 @@ Enter these values in each of the prompts that follow:
 
 ```
 
-1. Enter a number: 2 [choose databricks]
+1. Enter a number: 1 [choose databricks]
 2. host (yourorg.databricks.com): . [enter “.”]
 3. http_path (HTTP Path): .
 4. token (dapiXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX): [just hit enter at first]
