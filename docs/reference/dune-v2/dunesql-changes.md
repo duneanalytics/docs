@@ -12,7 +12,7 @@ description: Documentation regarding the changes to DuneSQL on March 2nd, 2023
     - ``reservoir.*`` (fix by March 10th, 2023)  
     - ``snapshot.*`` and ``cowswap.*`` (still tbd)  
 
-    You can temporarily cast the columns which are incorrectly still `varchar` to `varbinary` with  `from_hex(x))`. If you deploy this workaround, you will have to change it back once the issue is resolved. Sorry about the inconvenience! 
+    You can temporarily cast the columns which are incorrectly still `varchar` to `varbinary` with  `from_hex(substring( x from 3))`. If you deploy this workaround, you will have to change it back once the issue is resolved. Sorry about the inconvenience! 
     
 
 ## DuneSQL Alpha Deprecation and Data Type Changes
@@ -24,9 +24,6 @@ DuneSQL now uses the same data types as the underlying EVM blockchain. This mean
 Additionally, we now support `uint256` and `int256` allowing full wei-level precision calculations.  
 
 Furthermore, we have corrected an ancient mistake in our database -  we now store logs with the correct topic indexing. This means that columns in `<blockchain>.logs` table are now indexed from 0 instead of 1. `Topic1` changed to `Topic0`, `Topic2` changed to `Topic1`, etc.
-
-Last, we have modified the `from_hex` native function so that it will transform varchar to varbinary, base58 decoding it if the string starts with `0x`.
-
 #### What does this mean for me?
 
 First of all, switching to the `varbinary` datatype should significantly(≈30%) improve the speed of your queries!
@@ -57,7 +54,7 @@ If you don't remove the `-- dunesql_alpha_deprecated` comment from your query, i
 #### Common Errors and Fixes
 | Error | Example | Solution |
 |---|---|---|
-| Needing to cast varchar to varbinary | `Cannot apply operator: varbinary = varchar(X)` or `Cannot apply operator: varchar = varbinary at` | `from_hex(x))` |
+| Needing to cast varchar to varbinary | `Cannot apply operator: varbinary = varchar(X)` or `Cannot apply operator: varchar = varbinary at` | `from_hex(substring( x from 3))` |
 | Casting to uint256 | `Cannot apply operator: UINT256 = varchar(7) at`  | `cast(xxx as uint256)` |
 | Use bytearray_subtring |`Unexpected parameters (varbinary, integer, integer) for function substring. Expected: substring(varchar(x), bigint), substring(varchar(x), bigint, bigint), substring(char(x), bigint), substring(char(x), bigint, bigint) at`  | `substring(data, 3, 16)` would be `bytearray_substring(data, 1, 8)` |
 | Use `bytearray_substring` and `bytearray_starts_with` instead of LIKE expression | `Left side of LIKE expression must evaluate to a varchar (actual: varbinary) at` | `bytearray_starts_with(varbinary, expression)` |
