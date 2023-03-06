@@ -38,8 +38,7 @@
         --soft-orange: #FAE6DC;
         --sky-blue: #31C7ED;
         --soft-blue: #DCF4FA;
-
-
+        --link-blue: #0645AD;
 
     /* Default color shades */
     --md-default-fg-color:               hsla(0, 0%, 0%, 0.87);
@@ -141,6 +140,11 @@ h1, h2, h3, h4, h5, h6{
 }
 
 /* Custom CSS selectors */
+
+/* change the color of links with <p> components to link-blue */
+.md-typeset a {
+    color: var(--link-blue);
+}
 
 .md-header__title{
     font-weight: 600;
