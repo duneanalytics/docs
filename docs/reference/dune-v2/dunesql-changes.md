@@ -44,8 +44,8 @@ More specifically, you will need to:
 2. Adjust all occurences of `0x`strings to fit the new data types. For example, `'0x1234...'` should be changed to `0x1234...` and all `lower()` casts should be removed.  
 If you used any other operator on string columns, you will need to adjust them to the new approaches of working with `varbinary` columns. They are documented in the [DuneSQL documentation](https://dune.com/docs/reference/dune-v2/query-engine/#byte-array-functions-in-dune-sql). 
 3. If you used any `varchar -> double`, `varchar -> decimals` or `varchar -> bigint` casts, you can now remove them. This is not strictly necessary, but it will make your query more readable and easier to maintain.
-4. If your query used any columns from logs tables, you will need to adjust the indexing of topics. `Topic1` changed to `Topic0`, `Topic2` changed to `Topic1`, etc.
-5. If you used the [query a query functionality](https://dune.com/docs/reference/dune-v2/query-engine/#query-a-query), you will need to remove all `--dunesql_alpha_deprecated` comments from all involved queries.
+4. If your query used any columns from logs tables, you will need to adjust the indexing of topics. `Topic1` changed to `Topic0`, `Topic2` changed to `Topic1`, etc. (Note: These should have been automatically converted in your previous DuneSQL queries.)
+5. If you used the [query a query functionality](https://dune.com/docs/reference/dune-v2/query-engine/#query-a-query), you will need to remove all `--dunesql_alpha_deprecated` comments from all involved queries and ensure they can all run properly, starting at the lowest level and working your way up. 
 
 #### What if I don't do anything?
 
