@@ -38,4 +38,4 @@ You should also read about Dune SQL specific concepts like custom types and func
 
 There are quite a few people in the crypto industry who either specialize in building on Dune or have the necessary skills to quickly get up to speed on the particulars.
 
-To reach out to this pool of freelancers, you can [**fill out this questionnaire**](http://bounties.dune.com) and hopefully freelancers will get back to you in little to no time. If that yields no results, posting the bounty on relevant social channels and spreading it in your networks may help.
+To reach out to this pool of freelancers, you can [fill out this questionnaire](http://bounties.dune.com) and hopefully freelancers will get back to you in little to no time. If that yields no results, posting the bounty on relevant social channels and spreading it in your networks may help.

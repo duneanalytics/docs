@@ -1,5 +1,5 @@
 ---
-title: Advanced Quickstart
+title: Advanced Protocol Analysis
 description: End to End tutorials on how to analyze specfic protocols
 ---
 
@@ -7,7 +7,7 @@ description: End to End tutorials on how to analyze specfic protocols
 
 Once you've learned basic SQL and blockchain concepts, you're ready to start doing your own end-to-end analysis. It's easy to get lost in an ever-expanding web of tables and analysis - so here are some top tips on scoping your work. 
 
-If you're looking into a protocol, you'll need to understand the contract architecture and context. That starts with functions, events, and wallet. There is a [quickstart dashboard](https://dune.com/duniversity/contract-quickstart) built just for this, you can see a walkthrough analyzing Opensea [here](https://web3datadegens.substack.com/p/how-to-start-analyzing-any-web3-protocol). 
+When looking into a protocol, you'll need to understand the contract architecture and context. That starts with functions, events, and wallets overviews. There is a [quickstart dashboard](https://dune.com/duniversity/contract-quickstart) built just for this, you can see a walkthrough analyzing Opensea [here](https://web3datadegens.substack.com/p/how-to-start-analyzing-any-web3-protocol). 
 
 Once you have a solid understanding of protocol history in usage, user, and integration trends, you're ready to start building some metrics.
 
