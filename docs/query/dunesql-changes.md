@@ -1,5 +1,5 @@
 ---
-title: DuneSQL changes
+title: DuneSQL migration
 description: Documentation regarding the changes to DuneSQL on March 2nd, 2023
 ---
 

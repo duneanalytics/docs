@@ -1,6 +1,6 @@
 nav:
-- Dune V2: index.md
-- database.md
-- query-engine.md
+- Querying overview: index.md
+- Querying with DuneSQL: DuneSQL.md
+- Data storage: storage.md 
 - dunesql-changes.md
-- ...
+- migrating-queries.md
