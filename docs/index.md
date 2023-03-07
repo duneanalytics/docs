@@ -1,5 +1,5 @@
 ---
-title: Beginners Analysis Quickstart
+title: Beginners Quickstart
 description: Get started on Dune in five minutes!
 ---
 

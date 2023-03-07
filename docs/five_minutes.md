@@ -1,5 +1,5 @@
 ---
-title: Advanced Analysis Quickstart
+title: Advanced Quickstart
 description: End to End tutorials on how to analyze specfic protocols
 ---
 
