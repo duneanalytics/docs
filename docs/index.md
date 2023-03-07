@@ -15,7 +15,7 @@ You're probably here because you've realized that:
 
 4. You're an analyst that wants to **showcase your work to tens of thousands of users**, and earn stars to climb the Wizard Leaderboard to find freelance or full-time roles.
 
-You're in luck! Dune and the community of thousands of wizards are here to bring you powerful analysis of all onchain data. If you just go and search for anything Web3 related, I'm sure you'll find [at least one dashboard on that topic](https://dune.com/browse/dashboards?q=dex&order=favorites&time_range=all)
+You're in luck! Dune and the community of thousands of wizards are here to bring you powerful analysis of all onchain data. If you just go and search for anything Web3 related, I'm sure **you'll find [at least one dashboard on that topic](https://dune.com/browse/dashboards?q=dex&order=favorites&time_range=all)**. This goes for every chain we have, including EVMs like **Ethereum, Polygon, Goerli, and Optimism** and non-EVM chains like **Solana and Bitcoin.**
 
 Enough chatting, let's show you some magic. ✨
 
@@ -55,4 +55,4 @@ You should also read about Dune SQL specific concepts like custom types and func
 
 There are quite a few people in the crypto industry who either specialize in building on Dune or have the necessary skills to quickly get up to speed on the particulars.
 
-To reach out to this pool of freelancers, you can [fill out this questionnaire](http://bounties.dune.com) and hopefully freelancers will get back to you in little to no time. If that yields no results, posting the bounty on relevant social channels and spreading it in your networks may help.
+To reach out to this pool of expert freelancers, you can [fill out this questionnaire](http://bounties.dune.com) and wait for freelancers to get back to you in little to no time. If that yields no results, posting the bounty on relevant social channels and spreading it in your networks may help.
