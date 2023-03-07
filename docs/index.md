@@ -3,7 +3,7 @@ title: Dune Beginners Quickstart
 description: Get started on Dune in five minutes!
 ---
 
-## Analyze Web3 Data In Three Easy Steps
+### Analyze Web3 Data In Three Easy Steps
 
 In this short guide, we'll walk you through how to get the weekly USD volume traded by DEXs in the last six months on Ethereum. You'll learn how to write a basic SQL query and create a visualization in Dune. 
 
