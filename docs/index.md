@@ -3,7 +3,9 @@ title: Dune Quickstart
 description: Get started on Dune in five minutes!
 ---
 
-### Why learn to use Dune?
+### Why Learn to Use Dune?
+
+https://docs.google.com/presentation/d/1u__kMnKyzOYdm-TSZItdnNDRQBR4RVIhrvkDoLBFwh4/edit#slide=id.g17f39b0181c_1_0
 
 get hired, don't deal with raw data, learn from hundreds of other analysts, don't build an infra pipeline
 
@@ -13,17 +15,19 @@ get hired, don't deal with raw data, learn from hundreds of other analysts, don'
 
 ### Analyze Web3 Data: DEX Volumes
 
-In this short guide, we'll walk you through how to get the weekly USD volume traded by DEXs in the last six months on Ethereum. You'll learn how to write a basic SQL query and create a visualization in Dune. 
+In this short guide, we'll walk you through how to get the weekly USD volume traded by DEXs in the last six months on Ethereum. Click through the interactive walkthrough below to understand how we use the `dex.trades` table to:
 
-Click through the interactive walkthrough below to understand how to leverage the `dex.trades` table for this basic analysis.
+- Find and preview data for tables we're interested in
+
+- Write and run a basic query on the Dune SQL engine
+
+- Create and format a stacked bar chart visualization
 
 <div style="position: relative; padding-bottom: calc(67.14527027027027% + 41px); height: 0;"><iframe src="https://demo.arcade.software/gNuUxSbr6NZi4aXBURWu?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;" title="Dashboards"></iframe></div>
 
-Once we have this query, you can leverage it in future queries by tracking the query id (see the URL).
+Now, `dex.trades` is a spellbook table, meaning that it's an abstracted table that's been put together by hundreds of star analysts in the community, supported by the Dune team. You can find any spellbook table's column descriptions [defined here](https://spellbook-docs.dune.com/#!/model/model.spellbook.dex_trades). The lower level tables you'll often work with are `raw` and `decoded` tables. Raw tables are defined [here](../tables/raw/index.md), but for decoded tables you'll need to find the protocol's documentation such as [this one for Uniswap V3](https://docs.uniswap.org/contracts/v3/reference/core/UniswapV3Factory). You'll find out how to work with these in the guides mentioned in the [advanced section](five_minutes.md).
 
-...insert Query-a-Query recording...
-
-Now, `dex.trades` is a spellbook table, meaning that it's an abstracted table that's been put together by hundreds of star analysts in the community, supported by the Dune team. You can find spellbook table columns [defined here](https://spellbook-docs.dune.com/#!/model/model.spellbook.dex_trades). The lower level tables you'll often work with are `raw` and `decoded` tables. You'll find out how to work with these in the guides mentioned in the [advanced section](five_minutes.md).
+Once we have this query running, anyone can leverage it in future queries by tracking the query id (link to our query-a-query guide later).
 
 ### Learning SQL and Blockchain Basics
 

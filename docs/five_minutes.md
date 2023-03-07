@@ -7,7 +7,7 @@ Analyzing protocols in web3 is both really easy and really hard. It's really eas
 
 To build your reputation as an expert wizard, you must stay centered on what you want to analyze and what metrics you want to present.
 
-### Choosing What To Analyze
+### Finding What To Analyze
 
 Once you've learned [basic SQL and blockchain concepts](https://web3datadegens.substack.com/p/a-basic-wizard-guide-to-dune-sql), you're ready to start doing your own end-to-end analysis. It's easy to get lost in an ever-expanding web of tables and analysis - so here are some top tips on scoping your work. 
 
