@@ -1,0 +1,6 @@
+nav:
+- Querying overview: index.md
+- Querying with DuneSQL: DuneSQL.md
+- Data storage: storage.md 
+- dunesql-changes.md
+- migrating-queries.md

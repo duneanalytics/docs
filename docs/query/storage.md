@@ -1,5 +1,5 @@
 ---
-title: V2 Database
+title: Storage
 description: Learn more about the differences and thinking behind our V2 database structure.
 ---
 
