@@ -1,5 +1,5 @@
 ---
-title: Dune Beginners Quickstart
+title: Beginners Analysis Quickstart
 description: Get started on Dune in five minutes!
 ---
 
@@ -15,24 +15,27 @@ In this short guide, we'll walk you through how to get the weekly USD volume tra
 
 - mention what the other table types are that are abstracted away but still accessible if you would like (show off all the tables in spellbook doc screenshot)
 
-- must be some way of showing off query-a-query?
-- show off labels in some way in the future?
+- ?must be some way of showing off query-a-query?
+- ?show off labels in some way in the future?
 
----
-The data section should contain explainers on how EVM and data pipelines work
+### Continuing Your Learning
 
-### How to Use SQL
+Here are a few other resources to get started with:
 
-[Getting Started Video Series here](../app/guides/video-tutorial.md)
+- [Dune Official Getting Started Video Series](../app/guides/video-tutorial.md) to learn how the data flows and how to navigate the Dune app to create queries, visualizations, and dashboards. 
 
-web3 sql weekly
+- [Weekly Web3 SQL problems](https://daodatadesign.notion.site/Web3-SQL-Weekly-0bababb5e59a412bb73594c512db8cc1) to learn wizard tips and tricks in byte-sized bits. Covers things like token balances, protocol integrations, product metrics, and much more.
 
-basic written guide
+- [All Ethereum and SQL Basics](https://web3datadegens.substack.com/p/a-basic-wizard-guide-to-dune-sql) to learn all the basic SQL concepts and Ethereum tables you'll need in your analysis.
 
-discord #beginners and #query-questions channels
+Join the community and learn together [in Discord](https://discord.com/invite/ErrzwBz) by participating in the `#🐥︱beginners` and `#🙋︱query-questions` channels
 
-A fundamental understanding of SQL is needed to be able to successfully query for data on Dune.
+And when you feel ready to do advanced analysis, check out the [next guide](../docs/five_minutes.md)
 
-[SQL](https://www.w3schools.com/sql/sql_intro.asp) is widely used in the Software Development industry and you can find a lot of non-Dune specific documentation about it. This often times helps with answering Query related questions since most answers can easily be found in the internet.
+You should also read about Dune SQL specific concepts like custom types and functions, and different kinds of tables in our database.
 
-This should link to our engine docs and trino SQL function docs
+### Stuck, or want to hire someone else to help?
+
+There are quite a few people in the crypto industry who either specialize in building on Dune or have the necessary skills to quickly get up to speed on the particulars.
+
+To reach out to this pool of freelancers, you can [**fill out this questionnaire**](http://bounties.dune.com) and hopefully freelancers will get back to you in little to no time. If that yields no results, posting the bounty on relevant social channels and spreading it in your networks may help.
