@@ -3,7 +3,7 @@ title: Dune Quickstart
 description: Get started on Dune in five minutes!
 ---
 
-### What are you learning Dune for?
+### What learn to use Dune?
 
 - call out key use cases here like Dave mentioned? https://docs.argyle.com/ 
 - mention if they want API then go to API quickstart instead
@@ -23,6 +23,8 @@ In this short guide, we'll walk you through how to get the weekly USD volume tra
 
 - ?must be some way of showing off query-a-query?
 - ?show off labels in some way in the future?
+
+<div style="position: relative; padding-bottom: calc(67.14527027027027% + 41px); height: 0;"><iframe src="https://demo.arcade.software/gNuUxSbr6NZi4aXBURWu?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;" title="Dashboards"></iframe></div>
 
 ### Continuing Your Learning
 
