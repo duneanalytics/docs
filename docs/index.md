@@ -5,17 +5,23 @@ description: Get started on Dune in five minutes!
 
 ### Why Learn to Use Dune?
 
-https://docs.google.com/presentation/d/1u__kMnKyzOYdm-TSZItdnNDRQBR4RVIhrvkDoLBFwh4/edit#slide=id.g17f39b0181c_1_0
+You're probably here because you've realized that:
 
-get hired, don't deal with raw data, learn from hundreds of other analysts, don't build an infra pipeline
+1. While blockchain data is open and transparent, **it isn't easy to understand, ingest, and aggregate.** Each chain has different nuances, decoding contract functions and events is not as straightforward as it seems.
 
-- call out key use cases here, aligned with product marketing materials
-- mention if they want API then go to API quickstart instead
-- call out what values/time Dune is saving for you quickly
+2. Either your own protocol or someone else's protocol was not built with a data engineer/analyst in mind. **You've reached the limits of how you can keep up with just contract read functions and most recent events.**
+
+3. You want to do heavy cross context analysis, combining tokens, wallets, and protocols across chains. This requires an end-to-end data warehouse that can scale on demand - and a full team to maintain it. **That's hundreds of terabytes of data to store, and exponential amounts of compute ($$$$).**
+
+4. You're an analyst that wants to **showcase your work to tens of thousands of users**, and earn stars to climb the Wizard Leaderboard to find freelance or full-time roles.
+
+You're in luck! Dune and the community of thousands of wizards are here to bring you powerful analysis of all onchain data. If you just go and search for anything Web3 related, I'm sure you'll find [at least one dashboard on that topic](https://dune.com/browse/dashboards?q=dex&order=favorites&time_range=all)
+
+Enough chatting, let's show you some magic. ✨
 
 ### Analyze Web3 Data: DEX Volumes
 
-In this short guide, we'll walk you through how to get the weekly USD volume traded by DEXs in the last six months on Ethereum. Click through the interactive walkthrough below to understand how we use the `dex.trades` table to:
+In this short section, we'll walk you through how to get the weekly USD volume traded by DEXs in the last six months on Ethereum. Click through the interactive walkthrough below to understand how we use the `dex.trades` table to:
 
 - Find and preview data for tables we're interested in
 
