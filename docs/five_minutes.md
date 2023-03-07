@@ -1,7 +1,11 @@
 ---
-title: Advanced Analysis Guide
+title: Web3 Analytics Guidelines
 description: End to End tutorials on how to analyze specfic protocols
 ---
+
+Analyzing protocols in web3 is both really easy and really hard. It's really easy because everything is transparent and standardized - a deployed contract has a set of functions and events that are pretty much immutable. However, it's an ever expanding data battlefield as new protocols, tokens, and wallets join the fray and add to the chaos. 
+
+To build your reputation as an expert wizard, you must stay centered on what you want to analyze and what metrics you want to present.
 
 ### Choosing What To Analyze
 
@@ -9,7 +13,7 @@ Once you've learned [basic SQL and blockchain concepts](https://web3datadegens.s
 
 When looking into a protocol, you'll need to understand the contract architecture and context. That starts with functions, events, and wallets overviews. There is a [quickstart dashboard](https://dune.com/duniversity/contract-quickstart) built just for this, you can see a walkthrough analyzing Opensea [here](https://web3datadegens.substack.com/p/how-to-start-analyzing-any-web3-protocol). 
 
-Once you have a solid understanding of protocol history in usage, user, and integration trends, you're ready to start building some metrics.
+Remember that no protocol lives in isolation - there is always some mix of onchain events happening. That could be some new airdrop, a new upstream/downstream protocol integration, large whales making moves, governance changes in protocol parameters, and more. Once you have a solid understanding of protocol history in usage, user, and integration trends, you're ready to start building some metrics.
 
 ### Metrics Driven Analysis
 
@@ -29,4 +33,4 @@ Once you have metrics and also understand the underlying tokens and users, it wi
 
 ### Share your work with the Community
 
-When you're done, be sure to share your work in the Discord `#📺︱show-your-work` channel and on Twitter tagging [@duneanalytics](https://twitter.com/DuneAnalytics). We'll be sure to give great analysts a boost! Web3 is all about connecting with communities - your queries and dashboards will do nothing if you don't share it around.
+When you're done, be sure to share your work [in the Discord](https://discord.com/invite/ErrzwBz) `#📺︱show-your-work` channel and on Twitter tagging [@duneanalytics](https://twitter.com/DuneAnalytics). We'll be sure to give great analysts a boost! Web3 is all about connecting with communities - your queries and dashboards will do nothing if you don't share it around.
