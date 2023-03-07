@@ -1,11 +1,11 @@
 ---
-title: Advanced Protocol Analysis
+title: Advanced Analysis Guide
 description: End to End tutorials on how to analyze specfic protocols
 ---
 
 ### Choosing What To Analyze
 
-Once you've learned basic SQL and blockchain concepts, you're ready to start doing your own end-to-end analysis. It's easy to get lost in an ever-expanding web of tables and analysis - so here are some top tips on scoping your work. 
+Once you've learned [basic SQL and blockchain concepts](https://web3datadegens.substack.com/p/a-basic-wizard-guide-to-dune-sql), you're ready to start doing your own end-to-end analysis. It's easy to get lost in an ever-expanding web of tables and analysis - so here are some top tips on scoping your work. 
 
 When looking into a protocol, you'll need to understand the contract architecture and context. That starts with functions, events, and wallets overviews. There is a [quickstart dashboard](https://dune.com/duniversity/contract-quickstart) built just for this, you can see a walkthrough analyzing Opensea [here](https://web3datadegens.substack.com/p/how-to-start-analyzing-any-web3-protocol). 
 
@@ -13,7 +13,7 @@ Once you have a solid understanding of protocol history in usage, user, and inte
 
 ### Metrics Driven Analysis
 
-There are two great end-to-end guides for metrics analysis we've created:
+There are two great end-to-end video series for metrics analysis we've created:
 
 - [Uniswap in 12 Days](https://www.youtube.com/watch?v=FtnGiI9MGgA&list=PLK3b5d4iK10cIrN8c_au9RrC0_eBCOyR2&index=1&t=149s) (includes metrics like price impact, TVL, MEV volume, liquidity stability)
 

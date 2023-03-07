@@ -1,7 +1,13 @@
 ---
-title: Beginners Quickstart
+title: Dune Quickstart
 description: Get started on Dune in five minutes!
 ---
+
+### What are you learning Dune for?
+
+- call out key use cases here like Dave mentioned? https://docs.argyle.com/ 
+- mention if they want API then go to API quickstart instead
+- call out what values/time Dune is saving for you quickly
 
 ### Analyze Web3 Data In Three Easy Steps
 
