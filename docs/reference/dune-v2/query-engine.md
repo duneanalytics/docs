@@ -64,7 +64,7 @@ We support the [numerical types](https://trino.io/docs/current/language/types.ht
 
 ### Byte Array Functions in Dune SQL
 !!! warning
-    Operators such as ||, concat(), trim() being performed on addresses and transaction hashes will stop working when Dune SQL exits Alpha. We are changing the data type of these bytearrays from `varchar` to `varbinary` in order to reduce data stored and improve querying speed by up to 50%. Please use the functions below when interacting with bytearrays to remain compatible with future changes.
+    Operators such as ||, concat(), trim() being performed on addresses and transaction hashes will stop working when Dune SQL exits Alpha. We are changing the data type of these bytearrays from `varchar` to `varbinary` in order to reduce data stored and improve querying speed by up to 50%. Please use the functions below when interacting with bytearrays to remain compatible with future changes.
 
 
 Dune SQL currently represents byte arrays using the `varbinary` type. Byte arrays can also be represented using `0x`-prefixed strings. 

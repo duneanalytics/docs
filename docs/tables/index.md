@@ -29,9 +29,6 @@ Learn about the chains we have available for Querying here:
 
 ## How Tables are Generated from Raw Ethereum Data
 
-!!! note
-    Table generation is similar to this for all EVM based blockchains. The labels below follow Dune V1 naming conventions and are slightly different in Dune V2 Tables. Learn about the [differences in V2's data structure here](../reference/dune-v2/index.md). And learn [how to search V2 data here](../getting-started/queries/data-explorer/#v2).
-
 There are three main tables in Dune generated from raw Ethereum data, which are the source truth for everything else on the platform.
 
 ![token data to dune tables graph](images/token-data-to-dune-tables-graph.jpg)

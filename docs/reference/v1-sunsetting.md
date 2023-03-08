@@ -49,7 +49,7 @@ Queries have to be forked and adjusted to V2.
 
 ## To learn more and ask questions
 
-- Check out our [V2 reference doc](../reference/dune-v2/index.md) to learn more about how V2 works.
+- Check out our [DuneSQL](../query/index.md) to learn more about how V2 works.
 - Check out our [Data Explorer guide](../app/queries/data-explorer.md) to learn more about how searching in V2 works.
 - Watch our [Dune Arcana](https://dune.com/watch) videos for general insights - they all use Dune V2!
 - [Join our live Office Hours](https://events.dune.com/) or ask in our [#query-questions Discord channel](https://discord.com/channels/757637422384283659/757641002138730588).
