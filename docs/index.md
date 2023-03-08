@@ -17,6 +17,8 @@ You're probably here because you've realized that:
 
 You're in luck! Dune and the community of thousands of wizards are here to bring you powerful analysis of all onchain data. If you just go and search for anything Web3 related, I'm sure **you'll find [at least one dashboard on that topic](https://dune.com/browse/dashboards?q=dex&order=favorites&time_range=all)**. This goes for every chain we have, including EVMs like **Ethereum, Polygon, Goerli, and Optimism** and non-EVM chains like **Solana and Bitcoin.**
 
+You can quickly explore [NFT marketplaces](https://dune.com/hildobby/NFTs), [DEX metrics](https://dune.com/hagaetc/dex-metrics), [Bridges](https://dune.com/eliasimos/Bridge-Away-(from-Ethereum)), [DAO Accounting (Maker)](https://dune.com/SebVentures/maker---accounting_1), [Base Chain Metrics](https://dune.com/optimismfnd/Optimism), and much more!
+
 Enough chatting, let's show you some magic. ✨
 
 ### Analyze Web3 Data: DEX Volumes
