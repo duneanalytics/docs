@@ -1,5 +1,5 @@
 ---
-title: Tables Overview
+title: Tables and Chains Overview
 ---
 
 ## The Four Kinds of Tables
@@ -24,6 +24,18 @@ In each section below, you'll find details on how the tables are created and som
 ## Available Chains
 
 Here are the chains we have available to Query in Dune.
+
+- Ethereum 
+- Gnosis (previously xDai)
+- Polygon (POS)
+- Optimism
+- BNB (Binance Smart Chain)
+- Arbitrum
+- Avalanche (c-chain)
+- Goerli (Ethereum)
+- Fantom
+- Solana
+- Bitcoin
 
 ### Ethereum Mainnet
 
