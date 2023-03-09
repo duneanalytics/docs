@@ -39,8 +39,8 @@ The syntax and keyword operator differences between Postgres, Spark, and Dune SQ
 | **user generated views** | create view dune_user_generated.table | none | each query is a view, like [query_1747157](https://dune.com/queries/1747157) |
 | **event logs topic indexing** | topic 1,2,3,4 | topic 1,2,3,4 | topic 0,1,2,3 |
 
-#### Double quotes are not recommended
+#### Double quotes are not recommended for SparkSQL
 
-Using double quotes is not recommended in DuneV2, even when the engine runs your query without returning an error. This is because the parser sometimes treats words in double quotes as a string and sometimes it treats them as an object like a column name.
+Using double quotes is not recommended in DuneV2 SparkSQL, even when the engine runs your query without returning an error. This is because the parser sometimes treats words in double quotes as a string and sometimes it treats them as an object like a column name.
 
 For example, referencing a column name in the `WHERE` clause using double quotes works as expected. However, the same query inside a CTE treats the column name as a string, [as can be seen here](https://dune.com/queries/1199604).
