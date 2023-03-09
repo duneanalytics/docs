@@ -37,67 +37,69 @@ When you're done, be sure to share your work [in the Discord](https://discord.co
 
 ### More Community Guides
 
+Don't forget to start with the Dune official guides [here](https://dune.com/docs/#learning-sql-and-blockchain-basics)
+
 !!! suggestion
     If you've created a guide and want to feature it here, be sure to dm us on Twitter at @duneanalytics!
 
 
 === "Spark SQL"
     
-    ### [0xPhilan](https://dune.com/phillan) [:material-twitter:](https://twitter.com/0xPhillan)
+    **[0xPhilan](https://dune.com/phillan) [:material-twitter:](https://twitter.com/0xPhillan)**
 
     * [Dune Analytics: A Guide for Complete Beginners](https://mirror.xyz/phillan.eth/17VAXsMPpwJg4OQNBHKTYAQTWfJMwFuXZQDAxPStf0o)
 
-    ### [James Bachini](https://dune.com/jamesbachini) [:material-twitter:](https://twitter.com/james_bachini)
+    **[James Bachini](https://dune.com/jamesbachini) [:material-twitter:](https://twitter.com/james_bachini)**
 
     * [Dune Analytics Tutorial | How To Create A Dune Analytics Dashboard](https://jamesbachini.com/dune-analytics-tutorial/)
 
-    ### [Kirubakumaresh](https://twitter.com/kirubakumaresh)
+    **[Kirubakumaresh](https://twitter.com/kirubakumaresh)**
 
     * [Build Ethereum Metrics Dashboard](https://www.twigblock.com/projects/eth-intro-dune/t/eit-overview)
 
-    ### [Jamesin Seidel](https://twitter.com/seidtweets)
+    **[Jamesin Seidel](https://twitter.com/seidtweets)**
 
     * [Blockchain Analytics 101 — Dune Queries for On-Chain NFT Analysis](https://medium.com/@jseid212/blockchian-analytics-101-queries-for-on-chain-nft-analysis-fe08cbfa9ec2)
 
-    ### [@1chioku](https://dune.com/1chioku)
+    **[@1chioku](https://dune.com/1chioku)**
 
     * [Journey to the Centre of Arakis](https://1chioku.substack.com/p/preface)
 
-    ### [cryptofreedman](https://dune.com/cryptofreedman) [:material-twitter:](https://twitter.com/cryptofreedman)
+    **[cryptofreedman](https://dune.com/cryptofreedman) [:material-twitter:](https://twitter.com/cryptofreedman)**
 
     * [How to Learn SQL and Create a Dune Dashboard in 3 Hours](https://cryptofreedman.substack.com/p/how-to-learn-sql-and-create-a-dune)
     * [Beginners Guide to Blockchain Data on Dune](https://cryptofreedman.substack.com/p/beginners-guide-to-blockchain-data)
 
 === "PostgreSQL"
 
-    ### [Andrew Hong](https://dune.com/ilemi) [:material-twitter:](https://twitter.com/andrewhong5297) [:material-youtube:](https://www.youtube.com/channel/UCYG9WSr8G4khYLaxP9tLCkQ)
+    **[Andrew Hong](https://dune.com/ilemi) [:material-twitter:](https://twitter.com/andrewhong5297) [:material-youtube:](https://www.youtube.com/channel/UCYG9WSr8G4khYLaxP9tLCkQ)**
 
     * [Your guide to basic SQL while learning Ethereum at the same time](https://towardsdatascience.com/your-guide-to-basic-sql-while-learning-ethereum-at-the-same-time-9eac17a05929) (Part 1)
     * [Your guide to intermediate SQL while learning Ethereum at the same time](https://towardsdatascience.com/your-guide-to-intermediate-sql-while-learning-ethereum-at-the-same-time-7b25119ef1e2?source=user\_profile---------6----------------------------) (Part 2)
     * [Learning SQL and Ethereum](https://towardsdatascience.com/learning-sql-and-ethereum-part-3-5422f080ad36) (Part 3)
     * [SQL on Ethereum: How to Work With All the Data from a Transaction](https://ath.mirror.xyz/mbR1n\_CvflL1KIKCTG42bnM4HpfGBqDPNndH8mu2eJw)
 
-    ### [Alex Manuskin](https://dune.com/ksunama) [:material-twitter:](https://twitter.com/amanusk\_)
+    **[Alex Manuskin](https://dune.com/ksunama) [:material-twitter:](https://twitter.com/amanusk\_)**
 
     * [How to get started with querying on Dune Analytics](https://dune.com/blog/get-started-guide)
 
-    ### [Paul Pivat](https://dune.com/paulapivat) [:material-twitter:](https://twitter.com/paulapivat)
+    **[Paul Pivat](https://dune.com/paulapivat) [:material-twitter:](https://twitter.com/paulapivat)**
 
     * [Learn foundational Ethereum topics with SQL](https://ethereum.org/en/developers/tutorials/learn-foundational-ethereum-topics-with-sql)
 
-    ### [Alex Kroeger](https://dune.com/kroeger0x) [:material-twitter:](https://twitter.com/alex\_kroeger)
+    **[Alex Kroeger](https://dune.com/kroeger0x) [:material-twitter:](https://twitter.com/alex\_kroeger)**
 
     * [How to use Dune Analytics like a degen](https://mirror.xyz/0x7B542178633f16940a131F8F6d670ffdbBe6b2Ab/0C3EQBtFqAK4k2TAGPZhg0JMY-upfTAxuTD-o91vBPc)
 
-    ### [Chuxin](https://dune.com/chuxin) [:material-twitter:](https://twitter.com/chuxin\_h)
+    **[Chuxin](https://dune.com/chuxin) [:material-twitter:](https://twitter.com/chuxin\_h)**
 
     * [Select \* from web3](https://www.chuxinhuang.com/blog/select-from-web3)
 
-    ### Gracelily [:material-twitter:](https://twitter.com/\_grace\_lily)
+    **Gracelily [:material-twitter:](https://twitter.com/\_grace\_lily)**
 
     * [PostgreSQL Query Optimization Tricks - How to Make Queries Faster in Dune Analytics](https://gracelily.medium.com/postgresql-query-optimization-tricks-6d5b7358d7fa)
 
-    ### Twigblock
+    **Twigblock**
 
     * [Build an Ethereum Metrics Dashboard](https://www.twigblock.com/projects/eth-intro-dune/t/eit-overview)
     * [Learn to Analyze Ethereum Gas Prices](https://www.twigblock.com/projects/eth-gas-analysis/t/eg-overview)
