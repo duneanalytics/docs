@@ -6,19 +6,11 @@ title: Raw Tables
 
 This allows you to query for any transaction, block, event log or trace across the blockchains Dune supports.  Raw data tables are very useful to get meta information about the blockchain, a transaction, traces or certain events.
 
-Additionally, with a few tricks and a few tricks, you can actually gain substantial insights into systems of smart contracts using the encoded data. [Alex Kroeger](https://twitter.com/alex\_kroeger) wrote [a great article](https://alexkroeger.mirror.xyz/0C3EQBtFqAK4k2TAGPZhg0JMY-upfTAxuTD-o91vBPc) about this exact topic.
+However, queries that have been written using raw data tables are notoriously hard to understand and audit due to the nature of the the encoded data commonly found in these tables. Furthermore, the raw data tables have a very large number of rows and hence can be slow to query. Most of the time you are better off [submitting contracts for decoding](../../app/decoding-contracts.md) and working with [decoded data](../decoded/index.md).
 
-We have a several [SQL functions](https://github.com/duneanalytics/spellbook/tree/master/ethereum/public) in our database that allow you to more easily work with encoded data.
+## EVM Raw Table Data
 
-However, queries that have been written using raw data tables are notoriously hard to understand and audit due to the nature of the the encoded data commonly found in these tables. Furthermore, the raw data tables have a very large number of rows and hence can be slow to query.
-
-Most of the time you are better off [submitting contracts for decoding](../../app/decoding-contracts.md) and working with [decoded data](../decoded/index.md).
-
-!!! note
-
-    EVM chains at large follow the same execution model, however there are sometimes differences in the consensus algorithms, the gas costs or even the calculation of gas costs. Solana has an entirely different methodology and thus it's data is entirely different than our EVM based data tables.
-
-## Available Data
+Ethereum Virtual Machine (EVM) powers all chains in Dune except Solana and Bitcoin - meaning they share the base structure for underlying data.
 
 <div class="cards grid" markdown>
 - [Blocks](blocks.md): Blocks are the building blocks of blockchains and rollups.
