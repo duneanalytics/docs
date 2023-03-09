@@ -3,7 +3,7 @@ title: Sunsetting Dune V1
 description: It's been real, but now it's time to say goodbye to our V1 platform.
 ---
 
-With the release of the Polygon decoded tables on Dune Engine V2, we now have all [Raw](../tables/raw/index.md) and [Decoded](../tables/decoded/index.md) data that was on V1 on V2! 
+With the release of the Polygon decoded tables on Dune Engine V2, we now have all Raw and Decoded data that was on V1 on V2! 
 
 As a result we have started decommissioning blockchains on V1 as we transition to V2 as our primary platform.
 
@@ -12,7 +12,7 @@ Once a chain is commissioned, queries referncing the V1 version won't be editabl
 Please also note:
 
 - No new contracts that are submitted for decoding (on all blockchains) will be decoded on V1, they will only be decoded on V2 (already decoded contracts will continue to work as normal) 
-- No new Abstraction PRs will be merged on V1 (please use [Spellbook](../spellbook/index.md) on V2)
+- No new Abstraction PRs will be merged on V1 (please use Spellbook on V2)
  
 _special cases can be individually reviewed_ 
 

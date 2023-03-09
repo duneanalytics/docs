@@ -3,7 +3,7 @@ title: The Data Explorer
 description: The Data Explorer allows you to search for blockchain and other data to use in your Queries. Here's how it works.
 ---
 
-The Data Explorer empowers you to search for blockchain and other data to use in your Queries (learn about all the data Dune offers in the [Tables section](../../tables/index.md)).
+The Data Explorer empowers you to search for blockchain and other data to use in your Queries (learn about all the data Dune offers in the [Tables section](../../data%20tables/index.md)).
 
 To find the data you're looking for, first select which database you want to search in:
 
@@ -11,7 +11,7 @@ To find the data you're looking for, first select which database you want to sea
 
 Then simply enter any keywords, protocol names, contract names, or event names into the search bar at the top.
 
-This will bring up a list of [Tables](../../tables/index.md) containing blockchain data you can use to your Queries! 🧙
+This will bring up a list of [Tables](../../data%20tables/index.md) containing blockchain data you can use to your Queries! 🧙
 
 ## Advanced Searching in Dune V2 and V1
 
@@ -40,13 +40,8 @@ Learn about the [differences between V1 and V2 data sets here](../../dune-v2/).
 
     ![select dune V2 from dropdown](images/data-explorer/select-dune-v2-from-dropdown.gif)
 
-    Here you'll find a search bar that searches all the data inside Dune V2 and 4 different categories of dataset:
-
-    1. [**Raw**](../../tables/raw/index.md) - just like it sounds, raw data straight from the blockchain
-    2. [**Decoded Projects**](../../tables/decoded/index.md) - contract calls and events from projects the Dune Team and Community have organized into nice human-readable tables.
-    3. [**Spells**](../../tables/spells/index.md) - standardized project and sector data (dex.trades, nft.trades, erc20.stablecoins, etc)
-    4. [**Community**](../../tables/community/index.md) - off-chain data supplied by the web3 community.
-
+    Here you'll find a search bar that searches all the data inside Dune V2 and 4 different categories of dataset
+    
     ![v2 search dataset categories](images/data-explorer/v2-data-categories.png)
     
     ### Searching Dune V2

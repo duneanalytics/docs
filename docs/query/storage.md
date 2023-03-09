@@ -93,8 +93,7 @@ The performance cost is mostly relevant for base tables like `ethereum.transacti
 
 A notable exception to this is the Solana dataset `account_activity`_,_ which is ordered by `account_keys` rather than `block_time` like the EVM-based datasets.
 
-This allows us to utilize the `min/max` values for the `account_keys` when building Queries based on [raw Solana data](../tables/raw/solana/index.md).
-
+This allows us to utilize the `min/max` values for the `account_keys` when building Queries based on [raw Solana data](../data%20tables/raw/solana/index.md).
 
 ## Dune V2 Query examples
 

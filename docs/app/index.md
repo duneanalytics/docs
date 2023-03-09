@@ -5,7 +5,7 @@ description: Learn more about how the dune.com app works in this section!
 
 The [dune.com app](https://dune.com) is your key to making magic with blockchain data! 🪄
 
-Once you've read through our [Getting Started guide](../getting-started/index.md) and are familiar with the basics, you'll find more in-depth explanations and how-to guides for becoming a master wizard here.
+Once you've read through our [Getting Started guide](../) and are familiar with the basics, you'll find more in-depth explanations and how-to guides for becoming a master wizard here.
 
 - [**Data Explorer Labels**](explorer-labels.md) explains the different labels inside of the Data Explorer mean.
 - [**Queries**](queries/index.md) is where you'll find guides and explanations for your query-creation questions. 

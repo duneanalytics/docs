@@ -15,7 +15,7 @@ Spellbook is an open-source [dbt repository](https://docs.getdbt.com/docs/introd
 
 It enables the community to build toward a standardized way to transform data into meaningful abstraction layers.
 
-With web3 data, we have a foundational layer of [Raw Data](../../../tables/raw/index.md) - blockchain transactions, traces, and logs.
+With web3 data, we have a foundational layer of [Raw Data](../../../raw/index.md) - blockchain transactions, traces, and logs.
 
 Spellbook lets us create abstracted data sets, like [dex.trades](https://dune.com/spellbook#!/model/model.spellbook.dex_trades) and [nft.trades](https://dune.com/spellbook#!/model/model.spellbook.nft_trades), which aggregate and organize raw data from multiple sources to make it much easier to query.
 
@@ -81,7 +81,7 @@ Which gets us:
 
 Some more interesting info here like `gas_price` and `gas_used` but the juicy stuff is in the `data` column - but to understand that we’d need to reference the contract’s [Application Binary Interface](https://www.quicknode.com/guides/smart-contract-development/what-is-an-abi) ABI.
 
-Thankfully, Dune has [Decoded Data](../../../tables/decoded/index.md), which contains contract data that’s been automatically decoded from the transaction’s raw data using the ABI - the machines save us time.
+Thankfully, Dune has [Decoded Data](../../../decoded/index.md), which contains contract data that’s been automatically decoded from the transaction’s raw data using the ABI - the machines save us time.
 
 With Decoded Data, we can make a Query like this:
 

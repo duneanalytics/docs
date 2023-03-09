@@ -3,7 +3,7 @@ title: dex.trades
 description: dex.trades aggregates data across multiple DEX platforms into one simple table.
 ---
 
-Decentralized exchanges are the beating heart of the DeFi industry. You can swap any [ERC-20](token-standards/erc-20.md) token for any ERC-20 token through the magic of smart contracts.
+Decentralized exchanges are the beating heart of the DeFi industry. You can swap any native (ETH) or ERC-20 token for any ERC-20 token through the magic of smart contracts.
 
 The problem here: there are so many decentralized exchanges out there that it's hardly possible for any single person to work with the smart contract data for all of them.
 

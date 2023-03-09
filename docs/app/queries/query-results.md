@@ -73,7 +73,7 @@ You can change the formatting and appearance of your Query Results tables with t
 
 What do we have here? 👀
 
-1. The <span class="fk-btn-3">Add to dashboard</span> button which won't work until you've [saved your Query](#saving-your-query). Learn more about [making Dashboards here](../../getting-started/dashboards.md)
+1. The <span class="fk-btn-3">Add to dashboard</span> button which won't work until you've [saved your Query](#saving-your-query). 
 2. A field to change your table's Title.
 3. Settings for each of your columns.
 

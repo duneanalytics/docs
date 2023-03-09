@@ -11,7 +11,7 @@ Dune is a blockchain data analytics platform that serves a few different groups:
 
 - **Dune Spectators** can view a variety of on-chain data made interesting and understandable via Dashboards on Dune.com.
 
-- **Dune Wizards** are the magicians who take the raw data the Dune Platform ingests and use it to tell stories via [Dashboards](../../getting-started/dashboards.md), [Visualizations](../../getting-started/visualizations.md) and [Queries](../../getting-started/queries.md).
+- **Dune Wizards** are the magicians who take the raw data the Dune Platform ingests and use it to tell stories via Dashboards, [Visualizations](../../app/visualizations/index.md) and [Queries](../../app/queries/index.md).
 
 - **Dune Patrons** including the crypto communities, protocols, and companies who, with the help of Dune Wizards, leverage Dune's powers to solve problems and share insights within their organizations.
 
@@ -22,9 +22,9 @@ Nearly the entire world of blockchain data analytics can be explored with Dune -
 That being said, to help you get a clearer picture of the type of problems you can explore and solve with done, we can establish a few broad Use Cases:
 
 <div class="cards grid" markdown>
-- [Project Dashboards](project-dashboards.md)
-- [Sector Dashbaords](sector-dashboards.md)
-- [Ecosystem Dashboards](ecosystem-dashboards.md)
+- [Project Dashboards](project-dashboards)
+- [Sector Dashbaords](sector-dashboards)
+- [Ecosystem Dashboards](ecosystem-dashboards)
 </div>
 
 What type of content is generated on Dune?

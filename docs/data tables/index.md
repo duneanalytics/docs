@@ -17,7 +17,7 @@ In each section below, you'll find details on how the tables are created and som
 
 - [**Decoded data**](decoded/index.md): view the decoded calls and events made to smart contracts. This data is still unedited.
 
-- [**Spellbook**](spells/index.md): Easy to work with aggregated tables that are maintained by Dune and our community.
+- [**Spellbook**](spellbook/index.md): Easy to work with aggregated tables that are maintained by Dune and our community.
 
 - [**Community**](community/index.md): Enhanced tables that combine onchain and offchain data together.
 

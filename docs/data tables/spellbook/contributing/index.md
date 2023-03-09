@@ -2,12 +2,12 @@
 title: Spellbook
 ---
 
-## Getting Started
+## Casting a Spell from scratch
 
 If you're a learn by doing type of person, check out our How to Cast a Spell guide here:
 
 <div class="cards grid" markdown>
-- [How to Cast a Spell](../spellbook/how-to-guides/how-to-cast-a-spell/index.md)
+- [How to Add a Spell](../contributing/Adding%20A%20Spell/index.md)
 </div>
 
 To take a look under the hood, check out Spellbook on GitHub:
@@ -18,15 +18,9 @@ To take a look under the hood, check out Spellbook on GitHub:
 
 Here you'll find a variety of how-to guides for making ✨ with Spellbook!
 
-## Casting a Spell from scratch
+## Video Guides
 
 In collaboration with [MetricsDAO](https://metricsdao.xyz/), [@agaperste](https://dune.com/agaperste) showed us how to cast a Spell from scratch!
-
-Check out the step by step guide:
-
-<div class="cards grid" markdown>
-- [How to Cast a Spell](how-to-cast-a-spell/index.md)
-</div>
 
 In this [DuneCon workshop](https://www.youtube.com/playlist?list=PLK3b5d4iK10eVQejE7O1JEwcBMA4uwdSC), Dune Team member Megan Heintz (who came up with the name "Spellbook") walks us through Spellbook's infrastructure and how to migrate data to a Spell:
 

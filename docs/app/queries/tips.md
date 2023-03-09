@@ -9,7 +9,7 @@ If you have a tip you think we should add, [propose a change on this doc in our 
 
 ## Use Spells
 
-The easiest way to do great analysis with Dune is to use the well-organized data you'll find in [Spells](../../tables/spells/index.md) (Dune V2) and [Abstractions](../../tables/spells/index.md) (Dune V1).
+The easiest way to do great analysis with Dune is to use the well-organized data you'll find in [Spells](../../data%20tables/spellbook/index.md).
 
 Theses tables, like `dex.trades`, are cleaned and contain data/metadata (like human readable token symbols) that make them very straight forward to query.
 
@@ -78,7 +78,7 @@ To transmute these into a more human-friendly form, use the `erc20.tokens` table
 
 ## Get time with `date_trunc`
 
-We’ve added `evt_block_time` to [decoded event tables](../../tables/decoded/index.md) for your convenience. 
+We’ve added `evt_block_time` to [decoded event tables](../../data%20tables/decoded/index.md) for your convenience. 
 
 A neat way to use it is with the `date_trunc` function like this:
 
