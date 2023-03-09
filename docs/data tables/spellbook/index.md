@@ -32,11 +32,11 @@ The main advantage here over just constructing a view is that you are able to de
 
 ## Contributing to Spellbook
 
-If you'd like to contribute to Dune spells, take a look at [Spellbook](../../spellbook/index.md).
+If you'd like to contribute to Dune spells, take a look at [Spellbook](../contributing/index.md).
 
 These enable you to effortlessly aggregate lots of data with as little friction as possible.
 
-To view available Spells, take a look at our [Spellbook model documentation](https://dune.com/spellbook) and learn how to contribute new Spells [here](../../spellbook/index.md)
+To view available Spells, take a look at our [Spellbook model documentation](https://dune.com/spellbook) and learn how to contribute new Spells [here](../contributing/index.md)
 
 Our Spells are managed via the public [Spellbook GitHub repository](https://github.com/duneanalytics/spellbook/index.md). We welcome pull requests!
 

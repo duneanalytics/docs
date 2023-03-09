@@ -3,6 +3,8 @@ title: Decoded Tables
 description: Instead of working with the transactions, logs, and traces in their raw states, on Dune we decode smart contract activity into nice human-readable tables.
 ---
 
+To make it easier to work with smart contracts, Dune also provides decoded data as individual, human readable tables. We use the ABI for smart contracts and the interface standard for standardized token smart contracts (ERC20, ERC721 etc.). We've indexed over 280k contracts as of writing, and you can [submit new contracts](../app/decoding-contracts.md).
+
 Instead of working with the transactions, logs, and traces in their raw states, on Dune we decode smart contract activity into nice human-readable tables.
 
 We create tables for each event and function defined in the smart contract's ABI(Application Binary Interface). Subsequently, every event, message call or transaction made to that contract is decoded and inserted as a row into these tables.
