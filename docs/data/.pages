@@ -1,6 +1,7 @@
 nav:
 - index.md
 - available-chains.md
+- spellbook
 - raw
 - decoded
 - spells

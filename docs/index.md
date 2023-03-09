@@ -39,7 +39,7 @@ Once we have this query running, anyone can leverage it in future queries by tra
 
 ### Learning SQL and Blockchain Basics
 
-The query above might be confusing to you if you aren't familiar with SQL or Blockchain basics. Here are a few beginner resources to get you started:
+The query above might be confusing to you if you aren't familiar with SQL or Blockchain basics. Here are a few beginner resources and guides ~~to~~ get you started:
 
 - [Dune Official Getting Started Video Series](../app/guides/video-tutorial.md) to learn how the data flows and how to navigate the Dune app to create queries, visualizations, and dashboards. 
 

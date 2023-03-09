@@ -17,7 +17,7 @@ Remember that no protocol lives in isolation - there is always some mix of oncha
 
 ### Metrics Driven Analysis
 
-There are two great end-to-end video series for metrics analysis we've created:
+There are two great end-to-end video series guides for metrics analysis we've created:
 
 - [Uniswap in 12 Days](https://www.youtube.com/watch?v=FtnGiI9MGgA&list=PLK3b5d4iK10cIrN8c_au9RrC0_eBCOyR2&index=1&t=149s) (includes metrics like price impact, TVL, MEV volume, liquidity stability)
 
