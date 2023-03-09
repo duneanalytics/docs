@@ -6,17 +6,19 @@ We pull price data from the [coinpaprika](https://coinpaprika.com) API.
 
 The Price is the volume-weighted price based on real-time market data, translated to USD.
 
-### prices.usd
+## prices.usd
 
 This table supports a range of erc20.tokens.
+
+### adding a token to price tracking
 
 If the token you desire is not listed in here, please make a pull request to our [GitHub repository](https://github.com/duneanalytics/spellbook/blob/main/models/prices/prices_tokens.sql). (For V1 Engine, you can also use the decentralized price feed **dex.view_token_prices.**)
 
 | Column name | Data type | Description |
 | - | :-: | - |
-| `contract_address`| _bytea_ |string the contract address of the erc20 token |
-| `symbol` | _string_ |the identifier of the asset (ticker, cashtag) |
-| `price` | _numeric_ | The price of the asset in any given minute |
+| `contract_address`| _varbinary_ |string the contract address of the erc20 token |
+| `symbol` | _varchar_ |the identifier of the asset (ticker, cashtag) |
+| `price` | _bigint_ | The price of the asset in any given minute |
 | `minute` | _timestampz_ | The resolution for this table is by minute |
 
 Note that `WETH` can be used for ETH price as it trades at virtually the same price.

@@ -124,19 +124,19 @@ group by platform, day
 | Column name | Data type | Description |
 | - | :-: | - |
 | `block_time` | _timestamp with time zone_ | When was this trade executed |
-| `block_time` | _text_ | NFT project name (e.g. "the dudes") |
-| `nft_token_id` | _text_ | The token_id that was traded (e.g. 235) |
-| `erc_standard` | _text_ | The Token Standard of the traded token `ERC-721` or `ERC-1155` |
-| `platform` | _text_ | Which Platform the trade was executed on |
-| `platform_version` | _text_ | Which version of this platform was utilized? |
-| `trade_type` | _text_ | "Single Item Sale" or "Bundle Sale" |
+| `block_time` | _varchar_ | NFT project name (e.g. "the dudes") |
+| `nft_token_id` | _varchar_ | The token_id that was traded (e.g. 235) |
+| `erc_standard` | _varchar_ | The Token Standard of the traded token `ERC-721` or `ERC-1155` |
+| `platform` | _varchar_ | Which Platform the trade was executed on |
+| `platform_version` | _varchar_ | Which version of this platform was utilized? |
+| `trade_type` | _varchar_ | "Single Item Sale" or "Bundle Sale" |
 | `number_of_items` | _integer_ | How many NFTs were included in this trade |
-| `category` | _text_ | Was this an auction or a direct sale |
-| `evt_type` | _text_ | Currently not in use, default 'Trade' |
-| `aggregator` | _text_ | Was this trade made using an aggregator (Yes : Name of aggregator, No : Null) |
+| `category` | _varchar_ | Was this an auction or a direct sale |
+| `evt_type` | _varchar_ | Currently not in use, default 'Trade' |
+| `aggregator` | _varchar_ | Was this trade made using an aggregator (Yes : Name of aggregator, No : Null) |
 | `usd_amount` | _numeric_ | USD value of the trade at time of execution |
-| `seller` | _bytea_ | Seller of NFTs |
-| `buyer` | _bytea_ | Buyer of NFTs |
+| `seller` | _varbinary_ | Seller of NFTs |
+| `buyer` | _varbinary_ | Buyer of NFTs |
 | `original_amount` | _numeric_ | The amount in the right format |
 | `original_amount_raw` | _numeric_ | Raw amount of the currency |
 | `eth_amount` | _numeric_ | ETH value of the trade at time of execution |
@@ -146,15 +146,15 @@ group by platform, day
 | `platform_fees_percent` | _numeric_ | Platform fees (in %) |
 | `original_platform_fees` | _numeric_ | Platform fees in the currency used for this trade |
 | `usd_platform_fees` | _numeric_ | USD value of platform fees at time of execution |
-| `original_currency` | _text_ | The Currency used for this trade |
-| `original_currency_contract` | _bytea_ | The ERC-20 address of the currency used in this trade (does not work with raw ETH) |
-| `currency_contract` | _bytea_ | The corrected currency contract |
-| `nft_contract_address` | _bytea_ | The contract address of the NFT traded |
-| `exchange_contract_address` | _bytea_ | The platform contract that facilitated this trade |
-| `tx_hash` | _bytea_ | The hash of this transaction |
+| `original_currency` | _varchar_ | The Currency used for this trade |
+| `original_currency_contract` | _varbinary_ | The ERC-20 address of the currency used in this trade (does not work with raw ETH) |
+| `currency_contract` | _varbinary_ | The corrected currency contract |
+| `nft_contract_address` | _varbinary_ | The contract address of the NFT traded |
+| `exchange_contract_address` | _varbinary_ | The platform contract that facilitated this trade |
+| `tx_hash` | _varbinary_ | The hash of this transaction |
 | `block_number` | _integer_ | The block_number that this trade was done in |
-| `tx_from` | _bytea_ | Initiated this transaction |
-| `tx_to` | _bytea_ | Received this transaction |
+| `tx_from` | _varbinary_ | Initiated this transaction |
+| `tx_to` | _varbinary_ | Received this transaction |
 | `trace_address` | _ARRAY_ | n/a |
 | `evt_index` | _integer_ | Event index |
 | `trade_id` | _integer_ | n/a |

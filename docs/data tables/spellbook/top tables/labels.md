@@ -60,14 +60,14 @@ Labels are stored in the new `labels.labels` table which has the following schem
 | Column name | Data type | Description |
 | - | :-: | - |
 | `id` | _int_ | incrementing integer |
-| `address` | _bytea_ | The address of a contract or wallet this label describes |
-| `name` | _text_ | label name |
-| `blockchain` | _text_ | the blockchain the label is meant for |
-| `author` | _text_ | The username of the user who created this label |
-| `source` | _text_ | The source of this label, autopopulated by Dune |
+| `address` | _varbinary_ | The address of a contract or wallet this label describes |
+| `name` | _varchar_ | label name |
+| `blockchain` | _varchar_ | the blockchain the label is meant for |
+| `author` | _varchar_ | The username of the user who created this label |
+| `source` | _varchar_ | The source of this label, autopopulated by Dune |
 | `updated_at` | _timestamptz_ | The last time this label was changed |
-| `label_type` | _text_ | The type of label, defined in the readme |
-| `model_name` | _text_ | The name of the label model (filename) |
+| `label_type` | _varchar_ | The type of label, defined in the readme |
+| `model_name` | _varchar_ | The name of the label model (filename) |
 
 ## Using labels
 

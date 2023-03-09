@@ -40,11 +40,11 @@ To view available Spells, take a look at our [Spellbook model documentation](htt
 
 Our Spells are managed via the public [Spellbook GitHub repository](https://github.com/duneanalytics/spellbook/index.md). We welcome pull requests!
 
-## Abstractions (Dune V1 PostgreSQL)
+## Abstractions (Dune V1)
+
+!!! warning
+       Our abstractions for v1 are no longer open for contributions, and will be [sunsetted with the v1 engine](../../reference/v1-sunsetting.md) soon.
 
 For our **V1 Engine** (PostgreSQL), abstractions are snippets of SQL executed the data platform. You can check for existing abstractions on [GitHub](https://github.com/duneanalytics/dune-v1-abstractions).
 
 You can check for existing abstractions in our [public github repository](https://github.com/duneanalytics/spellbook/index.md), under `deprecated-dune-v1-abstractions`.
-
-Our abstractions for v1 are no longer open for contributions.
-
