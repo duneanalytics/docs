@@ -135,7 +135,7 @@ Learn about the [differences between V1 and V2 data sets here](../../dune-v2/).
     4. Whether a Spell set is for a Project or Sector.
     5. What type a piece of data is.
 
-    [Find descriptions of what all the icons and labels mean here](../explorer-labels.md)!
+    [Find descriptions of what all the icons and labels mean here](explorer-labels.md)!
 
     In cases where the icon is different than a blockchain name next to a contract/data set, the icon is the blockchain that data is on. EG these are Polygon bridge contracts on the Ethereum Chain:
 

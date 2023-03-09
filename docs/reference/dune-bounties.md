@@ -139,7 +139,7 @@ Dune can roughly be separated into two parts:
 - The **App Layer**
 - The **Data Layer**. 
 
-In the **App Layer**, you can find [Queries](../getting-started/queries.md), [Visualizations](../getting-started/visualizations.md) and [Dashboards](../getting-started/dashboards.md). 
+In the **App Layer**, you can find [Queries](../app/queries/index.md), [Visualizations](../app/visualizations/index.md) and [Dashboards](../app/dashboards/dashboards.md). 
 
 Everything in the App Layer is public by default and can be utilized by other Wizards, but the work produced in the App Layer is not very persistent and most importantly doesn't enable other Wizard analysts to easily build on top of this work.
 
