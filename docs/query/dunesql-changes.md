@@ -9,7 +9,7 @@ description: Documentation regarding the changes to DuneSQL on March 2nd, 2023
     - ``prices.usd`` (fixed on March 6th, 2023)  
     - some Spellbook tables  
     - ``flashbots.*`` (fix by March 10th, 2023)  
-    - ``reservoir.*`` (fix by March 10th, 2023)  
+    - ~~reservoir.*~~ (fixed on March 10th, 2023)  
     - ``snapshot.*`` and ``cowswap.*`` (still tbd)  
 
     You can temporarily cast the columns which are incorrectly still `varchar` to `varbinary` with  `from_hex(x)`. If you deploy this workaround, you will have to change it back once the issue is resolved. Sorry about the inconvenience! 
