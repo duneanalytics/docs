@@ -8,89 +8,88 @@ role="ref"}.
 
 # Date and time operators
 
-  Operator   Example                                               Result
-  ---------- ----------------------------------------------------- ---------------------------
-  `+`        `date '2012-08-08' + interval '2' day`                `2012-08-10`
-  `+`        `time '01:00' + interval '3' hour`                    `04:00:00.000`
-  `+`        `timestamp '2012-08-08 01:00' + interval '29' hour`   `2012-08-09 06:00:00.000`
-  `+`        `timestamp '2012-10-31 01:00' + interval '1' month`   `2012-11-30 01:00:00.000`
-  `+`        `interval '2' day + interval '3' hour`                `2 03:00:00.000`
-  `+`        `interval '3' year + interval '5' month`              `3-5`
-  `-`        `date '2012-08-08' - interval '2' day`                `2012-08-06`
-  `-`        `time '01:00' - interval '3' hour`                    `22:00:00.000`
-  `-`        `timestamp '2012-08-08 01:00' - interval '29' hour`   `2012-08-06 20:00:00.000`
-  `-`        `timestamp '2012-10-31 01:00' - interval '1' month`   `2012-09-30 01:00:00.000`
-  `-`        `interval '2' day - interval '3' hour`                `1 21:00:00.000`
-  `-`        `interval '3' year - interval '5' month`              `2-7`
+| Operator | Example | Result |
+| -------- | ------- | ------ |
+| `+` | `date '2012-08-08' + interval '2' day` | `2012-08-10` |
+| `+` | `time '01:00' + interval '3' hour` | `04:00:00.000` |
+| `+` | `timestamp '2012-08-08 01:00' + interval '29' hour` | `2012-08-09 06:00:00.000` |
+| `+` | `timestamp '2012-10-31 01:00' + interval '1' month` | `2012-11-30 01:00:00.000` |
+| `+` | `interval '2' day + interval '3' hour` | `2 03:00:00.000` |
+| `+` | `interval '3' year + interval '5' month` | `3-5` |
+| `-` | `date '2012-08-08' - interval '2' day` | `2012-08-06` |
+| `-` | `time '01:00' - interval '3' hour` | `22:00:00.000` |
+| `-` | `timestamp '2012-08-08 01:00' - interval '29' hour` | `2012-08-06 20:00:00.000` |
+| `-` | `timestamp '2012-10-31 01:00' - interval '1' month` | `2012-09-30 01:00:00.000` |
+| `-` | `interval '2' day - interval '3' hour` | `1 21:00:00.000` |
+| `-` | `interval '3' year - interval '5' month` | `2-7` |
 
-# Time zone conversion {#at_time_zone_operator}
+
+## Time zone conversion {#at_time_zone_operator}
 
 The `AT TIME ZONE` operator sets the time zone of a timestamp:
-
+```sql
     SELECT timestamp '2012-10-31 01:00 UTC';
     -- 2012-10-31 01:00:00.000 UTC
 
     SELECT timestamp '2012-10-31 01:00 UTC' AT TIME ZONE 'America/Los_Angeles';
     -- 2012-10-30 18:00:00.000 America/Los_Angeles
+```
+## Date and time functions
 
-# Date and time functions
 
-::: data
-current_date
+**current_date**
 
 Returns the current date as of the start of the query.
-:::
 
-::: data
-current_time
+
+
+**current_time**
 
 Returns the current time with time zone as of the start of the query.
-:::
 
-::: data
-current_timestamp
+
+
+**current_timestamp**
 
 Returns the current timestamp with time zone as of the start of the
 query, with `3` digits of subsecond precision,
-:::
 
-::: {.data noindex=""}
-current_timestamp(p)
+
+
+**current_timestamp(p)**
 
 Returns the current `timestamp with time zone
-<timestamp-with-time-zone-data-type>`{.interpreted-text role="ref"} as
-of the start of the query, with `p` digits of subsecond precision:
-
+as `timestamp-with-time-zone-data-type` of the start of the query, with `p` digits of subsecond precision:
+```sql
     SELECT current_timestamp(6);
     -- 2020-06-24 08:25:31.759993 America/Los_Angeles
-:::
+```
 
-::: function
-current_timezone() -\> varchar
+**current_timezone()** → varchar
 
 Returns the current time zone in the format defined by IANA (e.g.,
 `America/Los_Angeles`) or as fixed offset from UTC (e.g., `+08:35`)
-:::
 
-::: function
-date(x) -\> date
+
+
+**date(x)** → date
 
 This is an alias for `CAST(x AS date)`.
-:::
 
-::: function
-last_day_of_month(x) -\> date
+
+
+**last_day_of_month(x)** → date
 
 Returns the last day of the month.
-:::
 
-::: function
-from_iso8601_timestamp(string) -\> timestamp(3) with time zone
+
+
+**from_iso8601_timestamp(string)** → timestamp(3) with time zone
 
 Parses the ISO 8601 formatted date `string`, optionally with time and
 time zone, into a `timestamp(3) with time zone`. The time defaults to
 `00:00:00.000`, and the time zone defaults to the session time zone:
-
+```sql
     SELECT from_iso8601_timestamp('2020-05-11');
     -- 2020-05-11 00:00:00.000 America/Vancouver
 
@@ -99,28 +98,28 @@ time zone, into a `timestamp(3) with time zone`. The time defaults to
 
     SELECT from_iso8601_timestamp('2020-05-11T11:15:05.055+01:00');
     -- 2020-05-11 11:15:05.055 +01:00
-:::
+```
 
-::: function
-from_iso8601_timestamp_nanos(string) -\> timestamp(9) with time zone
+
+**from_iso8601_timestamp_nanos(string)** → timestamp(9) with time zone
 
 Parses the ISO 8601 formatted date and time `string`. The time zone
 defaults to the session time zone:
-
+```sql
     SELECT from_iso8601_timestamp_nanos('2020-05-11T11:15:05');
     -- 2020-05-11 11:15:05.000000000 America/Vancouver
 
     SELECT from_iso8601_timestamp_nanos('2020-05-11T11:15:05.123456789+01:00');
     -- 2020-05-11 11:15:05.123456789 +01:00
-:::
+```
 
-::: function
-from_iso8601_date(string) -\> date
+
+**from_iso8601_date(string)** → date
 
 Parses the ISO 8601 formatted date `string` into a `date`. The date can
 be a calendar date, a week date using ISO week numbering, or year and
 day of year combined:
-
+```sql
     SELECT from_iso8601_date('2020-05-11');
     -- 2020-05-11
 
@@ -129,52 +128,49 @@ day of year combined:
 
     SELECT from_iso8601_date('2020-123');
     -- 2020-05-02
-:::
+```
 
-::: function
-at_timezone(timestamp, zone) -\> timestamp(p) with time zone
+
+**at_timezone(timestamp, zone)** → timestamp(p) with time zone
 
 Change the time zone component of `timestamp` with precision `p` to
 `zone` while preserving the instant in time.
-:::
 
-::: function
-with_timezone(timestamp, zone) -\> timestamp(p) with time zone
+
+
+**with_timezone(timestamp, zone)** → timestamp(p) with time zone
 
 Returns a timestamp with time zone from `timestamp` with precision `p`
 and `zone`.
-:::
 
-::: function
-from_unixtime(unixtime) -\> timestamp(3) with time zone
+
+**from_unixtime(unixtime)** → timestamp(3) with time zone
 
 Returns the UNIX timestamp `unixtime` as a timestamp with time zone.
 `unixtime` is the number of seconds since `1970-01-01 00:00:00 UTC`.
-:::
 
-::: {.function noindex=""}
-from_unixtime(unixtime, zone) -\> timestamp(3) with time zone
+
+
+**from_unixtime(unixtime, zone)** → timestamp(3) with time zone
 
 Returns the UNIX timestamp `unixtime` as a timestamp with time zone
 using `zone` for the time zone. `unixtime` is the number of seconds
 since `1970-01-01 00:00:00 UTC`.
-:::
 
-::: {.function noindex=""}
-from_unixtime(unixtime, hours, minutes) -\> timestamp(3) with time zone
+
+**from_unixtime(unixtime, hours, minutes)** → timestamp(3) with time zone
 
 Returns the UNIX timestamp `unixtime` as a timestamp with time zone
 using `hours` and `minutes` for the time zone offset. `unixtime` is the
 number of seconds since `1970-01-01 00:00:00` in `double` data type.
-:::
 
-::: function
-from_unixtime_nanos(unixtime) -\> timestamp(9) with time zone
+
+**from_unixtime_nanos(unixtime)** → timestamp(9) with time zone
 
 Returns the UNIX timestamp `unixtime` as a timestamp with time zone.
 `unixtime` is the number of nanoseconds since
 `1970-01-01 00:00:00.000000000 UTC`:
-
+```sql
     SELECT from_unixtime_nanos(100);
     -- 1970-01-01 00:00:00.000000100 UTC
 
@@ -186,94 +182,58 @@ Returns the UNIX timestamp `unixtime` as a timestamp with time zone.
 
     SELECT from_unixtime_nanos(DECIMAL '-1234');
     -- 1969-12-31 23:59:59.999998766 UTC
-:::
+```
 
-::: data
-localtime
 
-Returns the current time as of the start of the query.
-:::
 
-::: data
-localtimestamp
-
-Returns the current timestamp as of the start of the query, with `3`
-digits of subsecond precision.
-:::
-
-::: {.data noindex=""}
-localtimestamp(p)
-
-Returns the current `timestamp <timestamp-data-type>`{.interpreted-text
-role="ref"} as of the start of the query, with `p` digits of subsecond
-precision:
-
-    SELECT localtimestamp(6);
-    -- 2020-06-10 15:55:23.383628
-:::
-
-::: function
-now() -\> timestamp(3) with time zone
+**now()** → timestamp(3) with time zone
 
 This is an alias for `current_timestamp`.
-:::
 
-::: function
-to_iso8601(x) -\> varchar
+
+**to_iso8601(x)** → varchar
 
 Formats `x` as an ISO 8601 string. `x` can be date, timestamp, or
 timestamp with time zone.
-:::
 
-::: function
-to_milliseconds(interval) -\> bigint
+
+
+**to_milliseconds(interval)** → bigint
 
 Returns the day-to-second `interval` as milliseconds.
-:::
 
-::: function
-to_unixtime(timestamp) -\> double
+
+
+**to_unixtime(timestamp)** → double
 
 Returns `timestamp` as a UNIX timestamp.
-:::
 
-::: note
-::: title
-Note
-:::
 
 The following SQL-standard functions do not use parenthesis:
 
--   `current_date`
--   `current_time`
--   `current_timestamp`
--   `localtime`
--   `localtimestamp`
-:::
-
-# Truncation function
+## Truncation function
 
 The `date_trunc` function supports the following units:
 
-  Unit        Example Truncated Value
-  ----------- ---------------------------
-  `second`    `2001-08-22 03:04:05.000`
-  `minute`    `2001-08-22 03:04:00.000`
-  `hour`      `2001-08-22 03:00:00.000`
-  `day`       `2001-08-22 00:00:00.000`
-  `week`      `2001-08-20 00:00:00.000`
-  `month`     `2001-08-01 00:00:00.000`
-  `quarter`   `2001-07-01 00:00:00.000`
-  `year`      `2001-01-01 00:00:00.000`
+  | Unit      | Example                          | Truncated Value             |
+| --------- | -------------------------------- | --------------------------- |
+| `second`  | `2001-08-22 03:04:05.000`        | `2001-08-22 03:04:05.000`   |
+| `minute`  | `2001-08-22 03:04:00.000`        | `2001-08-22 03:04:00.000`   |
+| `hour`    | `2001-08-22 03:00:00.000`        | `2001-08-22 03:00:00.000`   |
+| `day`     | `2001-08-22 00:00:00.000`        | `2001-08-22 00:00:00.000`   |
+| `week`    | `2001-08-20 00:00:00.000`        | `2001-08-20 00:00:00.000`   |
+| `month`   | `2001-08-01 00:00:00.000`        | `2001-08-01 00:00:00.000`   |
+| `quarter` | `2001-07-01 00:00:00.000`        | `2001-07-01 00:00:00.000`   |
+| `year`    | `2001-01-01 00:00:00.000`        | `2001-01-01 00:00:00.000`   |
 
 The above examples use the timestamp `2001-08-22 03:04:05.321` as the
 input.
 
-::: function
-date_trunc(unit, x) -\> \[same as input\]
+
+**date_trunc(unit, x)** → \[same as input\]
 
 Returns `x` truncated to `unit`:
-
+```sql
     SELECT date_trunc('day' , TIMESTAMP '2022-10-20 05:10:00');
     -- 2022-10-20 00:00:00.000
 
@@ -282,30 +242,30 @@ Returns `x` truncated to `unit`:
 
     SELECT date_trunc('year', TIMESTAMP '2022-10-20 05:10:00');
     -- 2022-01-01 00:00:00.000
-:::
+```
 
-# Interval functions {#datetime-interval-functions}
+## Interval functions
 
 The functions in this section support the following interval units:
 
-  Unit            Description
-  --------------- --------------------
-  `millisecond`   Milliseconds
-  `second`        Seconds
-  `minute`        Minutes
-  `hour`          Hours
-  `day`           Days
-  `week`          Weeks
-  `month`         Months
-  `quarter`       Quarters of a year
-  `year`          Years
+| Unit          | Description             |
+| ------------- | ----------------------- |
+| `millisecond` | Milliseconds            |
+| `second`      | Seconds                 |
+| `minute`      | Minutes                 |
+| `hour`        | Hours                   |
+| `day`         | Days                    |
+| `week`        | Weeks                   |
+| `month`       | Months                  |
+| `quarter`     | Quarters of a year      |
+| `year`        | Years                   |
 
-::: function
-date_add(unit, value, timestamp) -\> \[same as input\]
+
+**date_add(unit, value, timestamp)** → \[same as input\]
 
 Adds an interval `value` of type `unit` to `timestamp`. Subtraction can
 be performed by using a negative value:
-
+```sql
     SELECT date_add('second', 86, TIMESTAMP '2020-03-01 00:00:00');
     -- 2020-03-01 00:01:26.000
 
@@ -314,13 +274,13 @@ be performed by using a negative value:
 
     SELECT date_add('day', -1, TIMESTAMP '2020-03-01 00:00:00 UTC');
     -- 2020-02-29 00:00:00.000 UTC
-:::
+```
 
-::: function
-date_diff(unit, timestamp1, timestamp2) -\> bigint
+
+**date_diff(unit, timestamp1, timestamp2)** → bigint
 
 Returns `timestamp2 - timestamp1` expressed in terms of `unit`:
-
+```sql
     SELECT date_diff('second', TIMESTAMP '2020-03-01 00:00:00', TIMESTAMP '2020-03-02 00:00:00');
     -- 86400
 
@@ -335,28 +295,29 @@ Returns `timestamp2 - timestamp1` expressed in terms of `unit`:
 
     SELECT date_diff('millisecond', TIMESTAMP '2020-06-01 12:30:45.000000000', TIMESTAMP '2020-06-02 12:30:45.123456789');
     -- 86400123
-:::
+```
 
-# Duration function
+## Duration function
 
 The `parse_duration` function supports the following units:
 
-  Unit   Description
-  ------ --------------
-  `ns`   Nanoseconds
-  `us`   Microseconds
-  `ms`   Milliseconds
-  `s`    Seconds
-  `m`    Minutes
-  `h`    Hours
-  `d`    Days
+| Unit | Description   |
+| ---- | ------------- |
+| `ns` | Nanoseconds   |
+| `us` | Microseconds  |
+| `ms` | Milliseconds  |
+| `s`  | Seconds       |
+| `m`  | Minutes       |
+| `h`  | Hours         |
+| `d`  | Days          |
 
-::: function
-parse_duration(string) -\> interval
+
+
+**parse_duration(string)** → interval
 
 Parses `string` of format `value unit` into an interval, where `value`
 is fractional number of `unit` values:
-
+```sql
     SELECT parse_duration('42.8ms');
     -- 0 00:00:00.043
 
@@ -365,14 +326,15 @@ is fractional number of `unit` values:
 
     SELECT parse_duration('5m');
     -- 0 00:05:00.000
-:::
+```
 
-::: function
-human_readable_seconds(double) -\> varchar
+
+
+**human_readable_seconds(double)** → varchar
 
 Formats the double value of `seconds` into a human readable string
 containing `weeks`, `days`, `hours`, `minutes`, and `seconds`:
-
+```sql
     SELECT human_readable_seconds(96);
     -- 1 minute, 36 seconds
 
@@ -381,7 +343,7 @@ containing `weeks`, `days`, `hours`, `minutes`, and `seconds`:
 
     SELECT human_readable_seconds(56363463);
     -- 93 weeks, 1 day, 8 hours, 31 minutes, 3 seconds
-:::
+```
 
 # MySQL date functions
 
@@ -389,69 +351,65 @@ The functions in this section use a format string that is compatible
 with the MySQL `date_parse` and `str_to_date` functions. The following
 table, based on the MySQL manual, describes the format specifiers:
 
-  Specifier   Description
-  ----------- --------------------------------------------------------------------------------------------------------------------
-  `%a`        Abbreviated weekday name (`Sun` .. `Sat`)
-  `%b`        Abbreviated month name (`Jan` .. `Dec`)
-  `%c`        Month, numeric (`1` .. `12`)[^1]
-  `%D`        Day of the month with English suffix (`0th`, `1st`, `2nd`, `3rd`, \...)
-  `%d`        Day of the month, numeric (`01` .. `31`)[^2]
-  `%e`        Day of the month, numeric (`1` .. `31`)[^3]
-  `%f`        Fraction of second (6 digits for printing: `000000` .. `999000`; 1 - 9 digits for parsing: `0` .. `999999999`)[^4]
-  `%H`        Hour (`00` .. `23`)
-  `%h`        Hour (`01` .. `12`)
-  `%I`        Hour (`01` .. `12`)
-  `%i`        Minutes, numeric (`00` .. `59`)
-  `%j`        Day of year (`001` .. `366`)
-  `%k`        Hour (`0` .. `23`)
-  `%l`        Hour (`1` .. `12`)
-  `%M`        Month name (`January` .. `December`)
-  `%m`        Month, numeric (`01` .. `12`)[^5]
-  `%p`        `AM` or `PM`
-  `%r`        Time of day, 12-hour (equivalent to `%h:%i:%s %p`)
-  `%S`        Seconds (`00` .. `59`)
-  `%s`        Seconds (`00` .. `59`)
-  `%T`        Time of day, 24-hour (equivalent to `%H:%i:%s`)
-  `%U`        Week (`00` .. `53`), where Sunday is the f day of the week
-  `%u`        Week (`00` .. `53`), where Monday is the f day of the week
-  `%V`        Week (`01` .. `53`), where Sunday is the f day of the week; used with `%X`
-  `%v`        Week (`01` .. `53`), where Monday is the f day of the week; used with `%x`
-  `%W`        Weekday name (`Sunday` .. `Saturday`)
-  `%w`        Day of the week (`0` .. `6`), where Sunday is the f day of the week[^6]
-  `%X`        Year for the week where Sunday is the f day of the week, numeric, four digits; used with `%V`
-  `%x`        Year for the week, where Monday is the f day of the week, numeric, four digits; used with `%v`
-  `%Y`        Year, numeric, four digits
-  `%y`        Year, numeric (two digits)[^7]
-  `%%`        A literal `%` character
-  `%x`        `x`, for any `x` not listed above
+ | Specifier | Description                                                                                                     |
+|-----------|-----------------------------------------------------------------------------------------------------------------|
+| `%a`      | Abbreviated weekday name (`Sun` .. `Sat`)                                                                        |
+| `%b`      | Abbreviated month name (`Jan` .. `Dec`)                                                                          |
+| `%c`      | Month, numeric (`1` .. `12`)[^1]                                                                                 |
+| `%D`      | Day of the month with English suffix (`0th`, `1st`, `2nd`, `3rd`, ...)                                           |
+| `%d`      | Day of the month, numeric (`01` .. `31`)[^2]                                                                     |
+| `%e`      | Day of the month, numeric (`1` .. `31`)[^3]                                                                      |
+| `%f`      | Fraction of second (6 digits for printing: `000000` .. `999000`; 1 - 9 digits for parsing: `0` .. `999999999`)[^4] |
+| `%H`      | Hour (`00` .. `23`)                                                                                             |
+| `%h`      | Hour (`01` .. `12`)                                                                                             |
+| `%I`      | Hour (`01` .. `12`)                                                                                             |
+| `%i`      | Minutes, numeric (`00` .. `59`)                                                                                 |
+| `%j`      | Day of year (`001` .. `366`)                                                                                     |
+| `%k`      | Hour (`0` .. `23`)                                                                                              |
+| `%l`      | Hour (`1` .. `12`)                                                                                              |
+| `%M`      | Month name (`January` .. `December`)                                                                             |
+| `%m`      | Month, numeric (`01` .. `12`)[^5]                                                                                |
+| `%p`      | `AM` or `PM`                                                                                                    |
+| `%r`      | Time of day, 12-hour (equivalent to `%h:%i:%s %p`)                                                               |
+| `%S`      | Seconds (`00` .. `59`)                                                                                          |
+| `%s`      | Seconds (`00` .. `59`)                                                                                          |
+| `%T`      | Time of day, 24-hour (equivalent to `%H:%i:%s`)                                                                   |
+| `%U`      | Week (`00` .. `53`), where Sunday is the first day of the week                                                    |
+| `%u`      | Week (`00` .. `53`), where Monday is the first day of the week                                                    |
+| `%V`      | Week (`01` .. `53`), where Sunday is the first day of the week; used with `%X`                                    |
+| `%v`      | Week (`01` .. `53`), where Monday is the first day of the week; used with `%x`                                    |
+| `%W`      | Weekday name (`Sunday` .. `Saturday`)                                                                           |
+| `%w`      | Day of the week (`0` .. `6`), where Sunday is the first day of the week[^6]                                        |
+| `%X`      | Year for the week where Sunday is the first day of the week, numeric, four digits; used with `%V`                |
+| `%x`      | Year for the week, where Monday is the first day of the week, numeric, four digits; used with `%v`                |
+| `%Y`      | Year, numeric, four digits                                                                                       |
+| `%y`      | Year, numeric (two digits)[^7]                                                                                   |
+| `%%`      | A literal `%` character                                                                                          |
+| `%x`      | `x`, for any `x` not
 
-::: warning
-::: title
-Warning
-:::
+
+
 
 The following specifiers are not currently supported:
 `%D %U %u %V %w %X`
-:::
 
-::: function
-date_format(timestamp, format) -\> varchar
+
+
+**date_format(timestamp, format)** → varchar
 
 Formats `timestamp` as a string using `format`:
-
+```sql
     SELECT date_format(TIMESTAMP '2022-10-20 05:10:00', '%m-%d-%Y %H');
     -- 10-20-2022 05
-:::
+```
 
-::: function
-date_parse(string, format) -\> timestamp(3)
+**date_parse(string, format)** → timestamp
 
 Parses `string` into a timestamp using `format`:
-
+```sql
     SELECT date_parse('2022/10/20/05', '%Y/%m/%d/%H');
     -- 2022-10-20 05:00:00.000
-:::
-
+```
 # Java date functions
 
 The functions in this section use a format string that is compatible

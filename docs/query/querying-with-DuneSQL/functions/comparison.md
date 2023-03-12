@@ -1,5 +1,5 @@
 ---
-title: Comparison functions and operators
+title: Comparisons
 ---
 
 # Comparison operators {#comparison_operators}

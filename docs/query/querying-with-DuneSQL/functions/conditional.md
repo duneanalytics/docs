@@ -2,9 +2,9 @@
 title: Conditional expressions
 ---
 
-# CASE {#case_expression}
+## CASE {#case_expression}
 
-The standard SQL `CASE` expression has two forms. The \"simple\" form
+The standard SQL `CASE` expression has two forms. The "simple" form
 searches each `value` expression from left to right until it finds one
 that equals `expression`:
 
@@ -19,15 +19,15 @@ END
 The `result` for the matching `value` is returned. If no match is found,
 the `result` from the `ELSE` clause is returned if it exists, otherwise
 null is returned. Example:
-
+```sql
     SELECT a,
            CASE a
                WHEN 1 THEN 'one'
                WHEN 2 THEN 'two'
                ELSE 'many'
            END
-
-The \"searched\" form evaluates each boolean `condition` from left to
+```
+The "searched" form evaluates each boolean `condition` from left to
 right until one is true and returns the matching `result`:
 
 ``` text
@@ -40,32 +40,30 @@ END
 
 If no conditions are true, the `result` from the `ELSE` clause is
 returned if it exists, otherwise null is returned. Example:
-
+```sql
     SELECT a, b,
            CASE
                WHEN a = 1 THEN 'aaa'
                WHEN b = 2 THEN 'bbb'
                ELSE 'ccc'
            END
-
-# IF {#if_function}
+```
+## IF {#if_function}
 
 The `IF` expression has two forms, one supplying only a `true_value` and
 the other supplying both a `true_value` and a `false_value`:
 
-::: function
-if(condition, true_value)
+
+**if(condition, true_value)**
 
 Evaluates and returns `true_value` if `condition` is true, otherwise
 null is returned and `true_value` is not evaluated.
-:::
 
-::: {.function noindex=""}
-if(condition, true_value, false_value)
+
+**if(condition, true_value, false_value)**
 
 Evaluates and returns `true_value` if `condition` is true, otherwise
 evaluates and returns `false_value`.
-:::
 
 The following `IF` and `CASE` expressions are equivalent:
 
@@ -88,31 +86,28 @@ SELECT
 FROM tpch.sf1.orders;
 ```
 
-# COALESCE {#coalesce_function}
+## COALESCE {#coalesce_function}
 
-::: function
-coalesce(value1, value2\[, \...\])
+
+**coalesce(value1, value2\[, \...\])**
 
 Returns the f non-null `value` in the argument list. Like a `CASE`
 expression, arguments are only evaluated if necessary.
-:::
 
-# NULLIF {#nullif_function}
+## NULLIF
 
-::: function
-nullif(value1, value2)
+
+**nullif(value1, value2)**
 
 Returns null if `value1` equals `value2`, otherwise returns `value1`.
-:::
 
-# TRY {#try_function}
+## TRY
 
-::: function
-try(expression)
+
+**try(expression)**
 
 Evaluate an expression and handle certain types of errors by returning
 `NULL`.
-:::
 
 In cases where it is preferable that queries produce `NULL` or default
 values instead of failing when corrupt or invalid data is encountered,
@@ -125,7 +120,7 @@ The following errors are handled by `TRY`:
 -   Invalid cast or function argument
 -   Numeric value out of range
 
-## Examples
+### Examples
 
 Source table with some invalid data:
 
@@ -163,7 +158,7 @@ SELECT TRY(CAST(origin_zip AS BIGINT)) FROM shipping;
 origin_zip
 ------------
      94131
-NULL
+     NULL
      94025
      08544
 (4 rows)

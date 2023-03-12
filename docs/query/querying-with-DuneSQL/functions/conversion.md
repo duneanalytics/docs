@@ -1,5 +1,5 @@
 ---
-title: Conversion functions
+title: Conversions
 ---
 
 Trino will implicitly convert numeric and character values to the
@@ -10,31 +10,28 @@ varchar.
 
 When necessary, values can be explicitly cast to a particular type.
 
-# Conversion functions {#conversion-functions-1}
+## Conversion functions {#conversion-functions-1}
 
-::: function
-cast(value AS type) -\> type
+
+**cast(value AS type)** → type
 
 Explicitly cast a value as a type. This can be used to cast a varchar to
 a numeric value type and vice versa.
-:::
 
-::: function
-try_cast(value AS type) -\> type
+
+**try_cast(value AS type)** → type
 
 Like `cast`{.interpreted-text role="func"}, but returns null if the cast
 fails.
-:::
 
-# Formatting
+## Formatting
 
-::: function
-format(format, args\...) -\> varchar
+**format(format, args\...)** → varchar
 
 Returns a formatted string using the specified [format
 string](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Formatter.html#syntax)
 and arguments:
-
+```sql
     SELECT format('%s%%', 123);
     -- '123%'
 
@@ -55,53 +52,25 @@ and arguments:
 
     SELECT format('%1$tA, %1$tB %1$te, %1$tY', date '2006-07-04');
     -- 'Tuesday, July 4, 2006'
-:::
+```
 
-::: function
-format_number(number) -\> varchar
 
+**format_number(number, decimal_places)** → varchar
 Returns a formatted string using a unit symbol:
 
     SELECT format_number(123456); -- '123K'
     SELECT format_number(1000000); -- '1M'
-:::
 
-# Data size
 
-The `parse_data_size` function supports the following units:
 
-  Unit   Description   Value
-  ------ ------------- ---------
-  `B`    Bytes         1
-  `kB`   Kilobytes     1024
-  `MB`   Megabytes     1024^2^
-  `GB`   Gigabytes     1024^3^
-  `TB`   Terabytes     1024^4^
-  `PB`   Petabytes     1024^5^
-  `EB`   Exabytes      1024^6^
-  `ZB`   Zettabytes    1024^7^
-  `YB`   Yottabytes    1024^8^
+## Miscellaneous
 
-::: function
-parse_data_size(string) -\> decimal(38)
-
-Parses `string` of format `value unit` into a number, where `value` is
-the fractional number of `unit` values:
-
-    SELECT parse_data_size('1B'); -- 1
-    SELECT parse_data_size('1kB'); -- 1024
-    SELECT parse_data_size('1MB'); -- 1048576
-    SELECT parse_data_size('2.3MB'); -- 2411724
-:::
-
-# Miscellaneous
-
-::: function
-typeof(expr) -\> varchar
+**typeof(expr)** → varchar
 
 Returns the name of the type of the provided expression:
-
+```sql
     SELECT typeof(123); -- integer
     SELECT typeof('cat'); -- varchar(3)
     SELECT typeof(cos(2) + 1.5); -- double
-:::
+```
+
