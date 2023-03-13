@@ -8,7 +8,7 @@ description: Documentation regarding the changes to DuneSQL on March 2nd, 2023
     Currently affected tables are:  
     - ``prices.usd`` (fixed on March 6th, 2023)  
     - some Spellbook tables  
-    - ``flashbots.*`` (fix by March 10th, 2023)  
+    - ~~flashbots.*~~ (fixed on March 12th, 2023)  
     - ~~reservoir.*~~ (fixed on March 10th, 2023)  
     - ``snapshot.*`` and ``cowswap.*`` (still tbd)  
 
