@@ -62,6 +62,10 @@ Go to My Creations. Here you can see all of your personal content as well as you
 
 We’re planning to add support for private content in Teams later this year. Stay tuned!
 
+**How do I edit my role?**
+
+You have to ask one of your team admins. If you're an admin, you will still have to ask another admin or upgrade someone else to the admin role. That's to ensure every team always has at least an admin.
+
 **I have feedback, how do I reach out?**
 
 Come join our [#general-feedback Discord channel](https://discord.com/channels/757637422384283659/1012706316755664926) and we'll be glad to help 🙇‍♂️
