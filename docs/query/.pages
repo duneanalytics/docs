@@ -4,3 +4,4 @@ nav:
 - Data storage: storage.md 
 - dunesql-changes.md
 - Syntax differences: syntax-differences.md
+- querying-with-DuneSQL
