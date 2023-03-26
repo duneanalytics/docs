@@ -1,0 +1,22 @@
+[View code on GitHub](https://dune.com/blob/master/data tables\raw\blocks.md)
+
+# Blocks
+
+This section of the app technical guide covers the concept of blocks in blockchains and rollups. A block is a collection of transactions that incrementally alter the state of an EVM system. Transactions within a block can only be executed one after the other, not in parallel. 
+
+The guide provides tables that are useful for identifying block activity and transaction changes over time. These tables are divided into two sections: V2 Engine (Spark SQL) and V1 Engine (PosgreSQL). Each table contains information about different chains, such as Ethereum Mainnet, Gnosis Chain, Polygon, Optimism, BNB Chain, Arbitrum, and Avalanche C-Chain. The tables also provide notes on what information is not included in each chain. 
+
+The guide also includes a section on column data, which provides a description of each column in the tables. The columns include `time`, `number`, `hash`, `parent hash`, `gas_limit`, `gas_used`, `miner`, `difficulty`, `total_difficulty`, `nonce`, `size`, and `base_fee_per_gas`. Each column has a data type and a description of what it represents. 
+
+The guide provides an example of the column data in the form of a video. The video shows how to use the tables to identify block activity and transaction changes over time. 
+
+Overall, this section of the app technical guide provides a comprehensive overview of blocks in blockchains and rollups. It also provides useful tables and column data that can be used to analyze block activity and transaction changes over time.
+## Questions: 
+ 1. What is the purpose of the Dune Docs app in relation to blockchain SQL analysis?
+- The app technical guide provides information on tables and column data that can be used for identifying block activity and transaction changes over time in various chains.
+
+2. What is the difference between the V2 Engine (Spark SQL) and V1 Engine (PosgreSQL) tables?
+- The V2 Engine tables contain more chains and additional columns such as `miner`, `nonce`, and `base_fee_per_gas`, while the V1 Engine tables have fewer chains and do not contain `nonce` or `base_fee_per_gas`.
+
+3. How can the Dune Docs app be used to analyze blockchains and rollups?
+- The app provides tables and column data that can be queried using Spark SQL or PostgreSQL to analyze block activity and transaction changes over time in various chains.

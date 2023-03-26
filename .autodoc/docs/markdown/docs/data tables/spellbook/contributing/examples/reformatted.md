@@ -1,0 +1,21 @@
+[View code on GitHub](https://dune.com/blob/master/data tables\spellbook\contributing\examples\reformatted.md)
+
+The app technical guide is focused on the Reformatted Transfers feature of the Dune Docs project. The guide explains how the base table records the transfer amount to and from an account, and how it is munged into a union of sent transactions and received transactions to make it easier to sum up transfers. The guide also explains how WETH requires special handling, and how `zeroex_ethereum.weth9_evt_deposit` is added as a source to the model. 
+
+The guide further explains that the model is defined in a YAML file, where things like the description, tests, and metadata are defined. The guide also highlights that the JINJA config block defines that the alias for this view is `erc20`, and without this alias, the table name would default to the file name. The schema name for this view is defined in the `dbt_project.yml` file in the root of the Spellbook project. 
+
+The guide provides examples of the SQL code for the `transfers_ethereum_erc20` model, the YAML file for the model, and the `dbt_project.yml` file. The SQL code shows how the sent transfers, received transfers, deposited WETH, and withdrawn WETH are selected and unioned to create the `transfers_ethereum_erc20` model. The YAML file shows the metadata, description, and columns for the `transfers_ethereum_erc20` model. The `dbt_project.yml` file shows the schema and materialized view for the `transfers` and `ethereum` models. 
+
+Overall, the app technical guide provides a detailed explanation of the Reformatted Transfers feature of the Dune Docs project, including how it works, how it is defined, and how it is implemented. The guide is useful for developers who want to understand how the feature works and how to use it in their own projects.
+## Questions: 
+ 1. What is the purpose of the `unique_tx_id` field in the SQL query?
+   
+   The `unique_tx_id` field is used to identify unique transactions and avoid duplicates in the table.
+
+2. How are contributors tracked in the YAML file?
+   
+   Contributors are tracked in the YAML file using the `contributors` field, where they can add their handle when writing or editing a spell.
+
+3. How is the schema name for this view defined in the project?
+   
+   The schema name for this view is defined in the `dbt_project.yml` file in the root of the Spellbook project, where schemas are defined by the directory structure.
