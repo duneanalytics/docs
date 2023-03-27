@@ -2,7 +2,7 @@
 title: Conditional expressions
 ---
 
-## CASE {#case_expression}
+### CASE 
 
 The standard SQL `CASE` expression has two forms. The "simple" form
 searches each `value` expression from left to right until it finds one
@@ -48,11 +48,10 @@ returned if it exists, otherwise null is returned. Example:
                ELSE 'ccc'
            END
 ```
-## IF {#if_function}
+### IF 
 
 The `IF` expression has two forms, one supplying only a `true_value` and
 the other supplying both a `true_value` and a `false_value`:
-
 
 **if(condition, true_value)**
 
@@ -86,23 +85,21 @@ SELECT
 FROM tpch.sf1.orders;
 ```
 
-## COALESCE {#coalesce_function}
 
+### COALESCE {#coalesce_function}
 
 **coalesce(value1, value2\[, \...\])**
 
 Returns the f non-null `value` in the argument list. Like a `CASE`
 expression, arguments are only evaluated if necessary.
 
-## NULLIF
-
+### NULLIF
 
 **nullif(value1, value2)**
 
 Returns null if `value1` equals `value2`, otherwise returns `value1`.
 
-## TRY
-
+### TRY
 
 **try(expression)**
 
@@ -120,7 +117,7 @@ The following errors are handled by `TRY`:
 -   Invalid cast or function argument
 -   Numeric value out of range
 
-### Examples
+**Examples**
 
 Source table with some invalid data:
 

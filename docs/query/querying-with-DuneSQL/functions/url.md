@@ -2,7 +2,7 @@
 title: URL functions
 ---
 
-# Extraction functions
+## Extraction functions
 
 The URL extraction functions extract components from HTTP URLs (or any
 valid URIs conforming to `2396`{.interpreted-text role="rfc"}). The
@@ -15,78 +15,49 @@ following syntax is supported:
 The extracted components do not contain URI syntax separators such as
 `:` or `?`.
 
-::: function
-url_extract_fragment(url) -\> varchar
+#### url_extract_fragment()
+**url_extract_fragment(url)** → varchar
 
 Returns the fragment identifier from `url`.
-:::
 
-::: function
-url_extract_host(url) -\> varchar
+#### url_extract_host()
+**url_extract_host(url)** → varchar
 
 Returns the host from `url`.
-:::
 
-::: function
-url_extract_parameter(url, name) -\> varchar
+#### url_extract_parameter()
+**url_extract_parameter(url, name)** → varchar
 
-Returns the value of the f query string parameter named `name` from
-`url`. Parameter extraction is handled in the typical manner as
-specified by `1866#section-8.2.1`{.interpreted-text role="rfc"}.
-:::
+Returns the value of the f query string parameter named `name` from `url`. Parameter extraction is handled in the typical manner as specified by RFC 1866#section-8.2.1.
 
-::: function
-url_extract_path(url) -\> varchar
+#### url_extract_path()
+**url_extract_path(url)** → varchar
 
 Returns the path from `url`.
-:::
 
-::: function
-url_extract_port(url) -\> bigint
+#### url_extract_port()
+**url_extract_port(url)** → bigint
 
 Returns the port number from `url`.
-:::
 
-::: function
-url_extract_protocol(url) -\> varchar
+#### url_extract_protocol()
+**url_extract_protocol(url)** → varchar
 
-Returns the protocol from `url`:
+Returns the protocol from `url`.
 
-    SELECT url_extract_protocol('http://localhost:8080/req_path');
-    -- http
-
-    SELECT url_extract_protocol('https://127.0.0.1:8080/req_path');
-    -- https
-
-    SELECT url_extract_protocol('ftp://path/file');
-    -- ftp
-:::
-
-::: function
-url_extract_query(url) -\> varchar
+#### url_extract_query()
+**url_extract_query(url)** → varchar
 
 Returns the query string from `url`.
-:::
 
-# Encoding functions
+## Encoding functions
 
-::: function
-url_encode(value) -\> varchar
+#### url_encode()
+**url_encode(value)** → varchar
 
-Escapes `value` by encoding it so that it can be safely included in URL
-query parameter names and values:
+Escapes `value` by encoding it so that it can be safely included in URL query parameter names and values.
 
--   Alphanumeric characters are not encoded.
--   The characters `.`, `-`, `*` and `_` are not encoded.
--   The ASCII space character is encoded as `+`.
--   All other characters are converted to UTF-8 and the bytes are
-    encoded as the string `%XX` where `XX` is the uppercase hexadecimal
-    value of the UTF-8 byte.
-:::
+#### url_decode()
+**url_decode(value)** → varchar
 
-::: function
-url_decode(value) -\> varchar
-
-Unescapes the URL encoded `value`. This function is the inverse of
-`url_encode`{.interpreted-text role="func"}.
-:::
+Unescapes the URL encoded `value`. This function is the inverse of `url_encode`.

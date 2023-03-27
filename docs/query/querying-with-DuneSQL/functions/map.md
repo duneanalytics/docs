@@ -2,92 +2,88 @@
 title: Map functions and operators
 ---
 
-# Subscript operator: \[\]
+## Subscript operator: \[\]
 
 The `[]` operator is used to retrieve the value corresponding to a given
 key from a map:
-
+```sql
     SELECT name_to_age_map['Bob'] AS bob_age;
+```
+## Map functions
 
-# Map functions
-
-::: {.function noindex=""}
-cardinality(x) -\> bigint
+#### cardinality()
+**cardinality(x)** → bigint
 
 Returns the cardinality (size) of the map `x`.
-:::
 
-::: {.function noindex=""}
-element_at(map(K,V), key) -\> V
+#### element_at()
+**element_at(map(K,V), key)** → V
 
 Returns value for given `key`, or `NULL` if the key is not contained in
 the map.
-:::
 
-::: function
-map() -\> map\<unknown, unknown\>
+#### map()
+**map()** → map(unknown, unknown)
 
-Returns an empty map. :
-
+Returns an empty map:
+```sql
     SELECT map();
     -- {}
-:::
+```
 
-::: {.function noindex=""}
-map(array(K), array(V)) -\> map(K,V)
+**map(array(K), array(V))** → map(K,V)
 
-Returns a map created using the given key/value arrays. :
 
+Returns a map created using the given key/value arrays:
+```sql
     SELECT map(ARRAY[1,3], ARRAY[2,4]);
     -- {1 -> 2, 3 -> 4}
+```
+See also `map_agg` and `multimap_agg` for creating a map as an aggregation.
 
-See also `map_agg`{.interpreted-text role="func"} and
-`multimap_agg`{.interpreted-text role="func"} for creating a map as an
-aggregation.
-:::
 
-::: function
-map_from_entries(array(row(K,V))) -\> map(K,V)
+#### map_from_entries()
+**map_from_entries(array(row(K,V)))** → map(K,V)
 
-Returns a map created from the given array of entries. :
-
+Returns a map created from the given array of entries:
+```sql
     SELECT map_from_entries(ARRAY[(1, 'x'), (2, 'y')]);
     -- {1 -> 'x', 2 -> 'y'}
-:::
+```
 
-::: function
-multimap_from_entries(array(row(K,V))) -\> map(K,array(V))
+#### multimap_from_entries()
+**multimap_from_entries(array(row(K,V)))** → map(K,array(V))
 
 Returns a multimap created from the given array of entries. Each key can
-be associated with multiple values. :
-
+be associated with multiple values:
+```sql
     SELECT multimap_from_entries(ARRAY[(1, 'x'), (2, 'y'), (1, 'z')]);
     -- {1 -> ['x', 'z'], 2 -> ['y']}
-:::
+```
 
-::: function
-map_entries(map(K,V)) -\> array(row(K,V))
+#### map_entries()
+**map_entries(map(K,V))** → array(row(K,V))
 
-Returns an array of all entries in the given map. :
-
+Returns an array of all entries in the given map:
+```sql
     SELECT map_entries(MAP(ARRAY[1, 2], ARRAY['x', 'y']));
     -- [ROW(1, 'x'), ROW(2, 'y')]
-:::
+```
 
-::: function
-map_concat(map1(K,V), map2(K,V), \..., mapN(K,V)) -\> map(K,V)
+#### map_concat()
+**map_concat(map1(K,V), map2(K,V), ..., mapN(K,V))** → map(K,V)
 
 Returns the union of all the given maps. If a key is found in multiple
 given maps, that key\'s value in the resulting map comes from the last
 one of those maps.
-:::
 
-::: function
-map_filter(map(K,V), function(K,V,boolean)) -\> map(K,V)
+
+#### map_filter()
+**map_filter(map(K,V), function(K,V,boolean))** → map(K,V)
 
 Constructs a map from those entries of `map` for which `function`
 returns true:
-
+```sql
     SELECT map_filter(MAP(ARRAY[], ARRAY[]), (k, v) -> true);
     -- {}
 
@@ -98,27 +94,25 @@ returns true:
     SELECT map_filter(MAP(ARRAY['k1', 'k2', 'k3'], ARRAY[20, 3, 15]),
                       (k, v) -> v > 10);
     -- {k1 -> 20, k3 -> 15}
-:::
+```
 
-::: function
-map_keys(x(K,V)) -\> array(K)
+#### map_keys()
+**map_keys(x(K,V))** → array(K)
 
 Returns all the keys in the map `x`.
-:::
 
-::: function
-map_values(x(K,V)) -\> array(V)
+#### map_values()
+**map_values(x(K,V))** → array(V)
 
 Returns all the values in the map `x`.
-:::
 
-::: function
-map_zip_with(map(K,V1), map(K,V2), function(K,V1,V2,V3)) -\> map(K,V3)
+#### map_zip_with()
+**map_zip_with(map(K,V1), map(K,V2), function(K,V1,V2,V3))** → map(K,V3)
 
 Merges the two given maps into a single map by applying `function` to
 the pair of values with the same key. For keys only presented in one
-map, NULL will be passed as the value for the missing key. :
-
+map, NULL will be passed as the value for the missing key:
+```sql
     SELECT map_zip_with(MAP(ARRAY[1, 2, 3], ARRAY['a', 'b', 'c']),
                         MAP(ARRAY[1, 2, 3], ARRAY['d', 'e', 'f']),
                         (k, v1, v2) -> concat(v1, v2));
@@ -133,14 +127,15 @@ map, NULL will be passed as the value for the missing key. :
                         MAP(ARRAY['a', 'b', 'c'], ARRAY[1, 2, 3]),
                         (k, v1, v2) -> k || CAST(v1 / v2 AS VARCHAR));
     -- {a -> a1, b -> b4, c -> c9}
-:::
+```
 
-::: function
-transform_keys(map(K1,V), function(K1,V,K2)) -\> map(K2,V)
+#### transform_keys()
+**transform_keys(map(K1,V), function(K1,V,K2))** → map(K2,V)
+
 
 Returns a map that applies `function` to each entry of `map` and
 transforms the keys:
-
+```sql
     SELECT transform_keys(MAP(ARRAY[], ARRAY[]), (k, v) -> k + 1);
     -- {}
 
@@ -159,14 +154,14 @@ transforms the keys:
     SELECT transform_keys(MAP(ARRAY [1, 2], ARRAY [1.0, 1.4]),
                           (k, v) -> MAP(ARRAY[1, 2], ARRAY['one', 'two'])[k]);
     -- {one -> 1.0, two -> 1.4}
-:::
+```
 
-::: function
-transform_values(map(K,V1), function(K,V1,V2)) -\> map(K,V2)
+#### transform_values()
+**transform_values(map(K,V1), function(K,V1,V2))** → map(K,V2)
 
 Returns a map that applies `function` to each entry of `map` and
 transforms the values:
-
+```sql
     SELECT transform_values(MAP(ARRAY[], ARRAY[]), (k, v) -> v + 1);
     -- {}
 
@@ -186,4 +181,4 @@ transforms the values:
                             (k, v) -> MAP(ARRAY[1, 2], ARRAY['one', 'two'])[k]
                               || '_' || CAST(v AS VARCHAR));
     -- {1 -> one_1.0, 2 -> two_1.4}
-:::
+```

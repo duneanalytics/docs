@@ -6,7 +6,7 @@ These functions and operators operate on
 `date and time data types <date-time-data-types>`{.interpreted-text
 role="ref"}.
 
-# Date and time operators
+### Date and time operators
 
 | Operator | Example | Result |
 | -------- | ------- | ------ |
@@ -24,7 +24,7 @@ role="ref"}.
 | `-` | `interval '3' year - interval '5' month` | `2-7` |
 
 
-## Time zone conversion {#at_time_zone_operator}
+### Time zone conversion
 
 The `AT TIME ZONE` operator sets the time zone of a timestamp:
 ```sql
@@ -34,28 +34,26 @@ The `AT TIME ZONE` operator sets the time zone of a timestamp:
     SELECT timestamp '2012-10-31 01:00 UTC' AT TIME ZONE 'America/Los_Angeles';
     -- 2012-10-30 18:00:00.000 America/Los_Angeles
 ```
-## Date and time functions
+### Date and time functions
 
-
+#### current_date
 **current_date**
 
 Returns the current date as of the start of the query.
-
-
-
+#### current_time
 **current_time**
 
 Returns the current time with time zone as of the start of the query.
 
 
-
+#### current_timestamp
 **current_timestamp**
 
 Returns the current timestamp with time zone as of the start of the
 query, with `3` digits of subsecond precision,
 
 
-
+#### current_timestamp()
 **current_timestamp(p)**
 
 Returns the current `timestamp with time zone
@@ -65,25 +63,26 @@ as `timestamp-with-time-zone-data-type` of the start of the query, with `p` digi
     -- 2020-06-24 08:25:31.759993 America/Los_Angeles
 ```
 
+#### current_timezone()
 **current_timezone()** → varchar
 
 Returns the current time zone in the format defined by IANA (e.g.,
 `America/Los_Angeles`) or as fixed offset from UTC (e.g., `+08:35`)
 
 
-
+#### date()
 **date(x)** → date
 
 This is an alias for `CAST(x AS date)`.
 
 
-
+#### last_day_of_month()
 **last_day_of_month(x)** → date
 
 Returns the last day of the month.
 
 
-
+#### from_iso8601_timestamp()
 **from_iso8601_timestamp(string)** → timestamp(3) with time zone
 
 Parses the ISO 8601 formatted date `string`, optionally with time and
@@ -100,7 +99,7 @@ time zone, into a `timestamp(3) with time zone`. The time defaults to
     -- 2020-05-11 11:15:05.055 +01:00
 ```
 
-
+#### from_iso8601_timestamp_nanos()
 **from_iso8601_timestamp_nanos(string)** → timestamp(9) with time zone
 
 Parses the ISO 8601 formatted date and time `string`. The time zone
@@ -113,7 +112,7 @@ defaults to the session time zone:
     -- 2020-05-11 11:15:05.123456789 +01:00
 ```
 
-
+#### from_iso8601_date()
 **from_iso8601_date(string)** → date
 
 Parses the ISO 8601 formatted date `string` into a `date`. The date can
@@ -130,41 +129,41 @@ day of year combined:
     -- 2020-05-02
 ```
 
-
+#### at_timezone()
 **at_timezone(timestamp, zone)** → timestamp(p) with time zone
 
 Change the time zone component of `timestamp` with precision `p` to
 `zone` while preserving the instant in time.
 
 
-
+#### with_timezone()
 **with_timezone(timestamp, zone)** → timestamp(p) with time zone
 
 Returns a timestamp with time zone from `timestamp` with precision `p`
 and `zone`.
 
-
+#### from_unixtime()
 **from_unixtime(unixtime)** → timestamp(3) with time zone
 
 Returns the UNIX timestamp `unixtime` as a timestamp with time zone.
 `unixtime` is the number of seconds since `1970-01-01 00:00:00 UTC`.
 
 
-
+#### from_unixtime()
 **from_unixtime(unixtime, zone)** → timestamp(3) with time zone
 
 Returns the UNIX timestamp `unixtime` as a timestamp with time zone
 using `zone` for the time zone. `unixtime` is the number of seconds
 since `1970-01-01 00:00:00 UTC`.
 
-
+#### from_unixtime()
 **from_unixtime(unixtime, hours, minutes)** → timestamp(3) with time zone
 
 Returns the UNIX timestamp `unixtime` as a timestamp with time zone
 using `hours` and `minutes` for the time zone offset. `unixtime` is the
 number of seconds since `1970-01-01 00:00:00` in `double` data type.
 
-
+#### from_unixtime_nanos()
 **from_unixtime_nanos(unixtime)** → timestamp(9) with time zone
 
 Returns the UNIX timestamp `unixtime` as a timestamp with time zone.
@@ -185,37 +184,35 @@ Returns the UNIX timestamp `unixtime` as a timestamp with time zone.
 ```
 
 
-
+#### now()
 **now()** → timestamp(3) with time zone
 
 This is an alias for `current_timestamp`.
 
-
+#### to_iso8601()
 **to_iso8601(x)** → varchar
 
 Formats `x` as an ISO 8601 string. `x` can be date, timestamp, or
 timestamp with time zone.
 
 
-
+#### to_milliseconds()
 **to_milliseconds(interval)** → bigint
 
 Returns the day-to-second `interval` as milliseconds.
 
 
-
+#### to_unixtime()
 **to_unixtime(timestamp)** → double
 
 Returns `timestamp` as a UNIX timestamp.
 
 
-The following SQL-standard functions do not use parenthesis:
-
-## Truncation function
+### Truncation function
 
 The `date_trunc` function supports the following units:
 
-  | Unit      | Example                          | Truncated Value             |
+| Unit      | Example                          | Truncated Value             |
 | --------- | -------------------------------- | --------------------------- |
 | `second`  | `2001-08-22 03:04:05.000`        | `2001-08-22 03:04:05.000`   |
 | `minute`  | `2001-08-22 03:04:00.000`        | `2001-08-22 03:04:00.000`   |
@@ -229,7 +226,7 @@ The `date_trunc` function supports the following units:
 The above examples use the timestamp `2001-08-22 03:04:05.321` as the
 input.
 
-
+#### date_trunc()
 **date_trunc(unit, x)** → \[same as input\]
 
 Returns `x` truncated to `unit`:
@@ -244,7 +241,7 @@ Returns `x` truncated to `unit`:
     -- 2022-01-01 00:00:00.000
 ```
 
-## Interval functions
+### Interval functions
 
 The functions in this section support the following interval units:
 
@@ -260,8 +257,8 @@ The functions in this section support the following interval units:
 | `quarter`     | Quarters of a year      |
 | `year`        | Years                   |
 
-
-**date_add(unit, value, timestamp)** → \[same as input\]
+#### date_add()
+**date_add(unit, value, timestamp)** → same as input
 
 Adds an interval `value` of type `unit` to `timestamp`. Subtraction can
 be performed by using a negative value:
@@ -276,7 +273,7 @@ be performed by using a negative value:
     -- 2020-02-29 00:00:00.000 UTC
 ```
 
-
+#### date_diff()
 **date_diff(unit, timestamp1, timestamp2)** → bigint
 
 Returns `timestamp2 - timestamp1` expressed in terms of `unit`:
@@ -297,7 +294,7 @@ Returns `timestamp2 - timestamp1` expressed in terms of `unit`:
     -- 86400123
 ```
 
-## Duration function
+### Duration function
 
 The `parse_duration` function supports the following units:
 
@@ -312,7 +309,7 @@ The `parse_duration` function supports the following units:
 | `d`  | Days          |
 
 
-
+#### parse_duration()
 **parse_duration(string)** → interval
 
 Parses `string` of format `value unit` into an interval, where `value`
@@ -329,7 +326,7 @@ is fractional number of `unit` values:
 ```
 
 
-
+#### human_readable_seconds()
 **human_readable_seconds(double)** → varchar
 
 Formats the double value of `seconds` into a human readable string
@@ -345,7 +342,7 @@ containing `weeks`, `days`, `hours`, `minutes`, and `seconds`:
     -- 93 weeks, 1 day, 8 hours, 31 minutes, 3 seconds
 ```
 
-# MySQL date functions
+### MySQL date functions
 
 The functions in this section use a format string that is compatible
 with the MySQL `date_parse` and `str_to_date` functions. The following
@@ -410,204 +407,164 @@ Parses `string` into a timestamp using `format`:
     SELECT date_parse('2022/10/20/05', '%Y/%m/%d/%H');
     -- 2022-10-20 05:00:00.000
 ```
-# Java date functions
+### Java date functions
 
 The functions in this section use a format string that is compatible
 with JodaTime\'s
 [DateTimeFormat](http://joda-time.sourceforge.net/apidocs/org/joda/time/format/DateTimeFormat.html)
 pattern format.
 
-::: function
-format_datetime(timestamp, format) -\> varchar
+#### format_datetime()
+**format_datetime(timestamp, format)** → varchar
 
 Formats `timestamp` as a string using `format`.
-:::
 
-::: function
-parse_datetime(string, format) -\> timestamp with time zone
+#### parse_datetime()
+**parse_datetime(string, format)** → timestamp
 
 Parses `string` into a timestamp with time zone using `format`.
-:::
 
-# Extraction function
+### Extraction function
 
 The `extract` function supports the following fields:
 
-  Field               Description
-  ------------------- --------------------------------------------------
-  `YEAR`              `year`{.interpreted-text role="func"}
-  `QUARTER`           `quarter`{.interpreted-text role="func"}
-  `MONTH`             `month`{.interpreted-text role="func"}
-  `WEEK`              `week`{.interpreted-text role="func"}
-  `DAY`               `day`{.interpreted-text role="func"}
-  `DAY_OF_MONTH`      `day`{.interpreted-text role="func"}
-  `DAY_OF_WEEK`       `day_of_week`{.interpreted-text role="func"}
-  `DOW`               `day_of_week`{.interpreted-text role="func"}
-  `DAY_OF_YEAR`       `day_of_year`{.interpreted-text role="func"}
-  `DOY`               `day_of_year`{.interpreted-text role="func"}
-  `YEAR_OF_WEEK`      `year_of_week`{.interpreted-text role="func"}
-  `YOW`               `year_of_week`{.interpreted-text role="func"}
-  `HOUR`              `hour`{.interpreted-text role="func"}
-  `MINUTE`            `minute`{.interpreted-text role="func"}
-  `SECOND`            `second`{.interpreted-text role="func"}
-  `TIMEZONE_HOUR`     `timezone_hour`{.interpreted-text role="func"}
-  `TIMEZONE_MINUTE`   `timezone_minute`{.interpreted-text role="func"}
+| Field             | Description         |
+| ----------------- | ------------------- |
+| `YEAR`            | `year`              |
+| `QUARTER`         | `quarter`           |
+| `MONTH`           | `month`             |
+| `WEEK`            | `week`              |
+| `DAY`             | `day`               |
+| `DAY_OF_MONTH`    | `day`               |
+| `DAY_OF_WEEK`     | `day_of_week`       |
+| `DOW`             | `day_of_week`       |
+| `DAY_OF_YEAR`     | `day_of_year`       |
+| `DOY`             | `day_of_year`       |
+| `YEAR_OF_WEEK`    | `year_of_week`      |
+| `YOW`             | `year_of_week`      |
+| `HOUR`            | `hour`              |
+| `MINUTE`          | `minute`            |
+| `SECOND`          | `second`            |
+| `TIMEZONE_HOUR`   | `timezone_hour`     |
+| `TIMEZONE_MINUTE` | `timezone_minute`   |
+
 
 The types supported by the `extract` function vary depending on the
 field to be extracted. Most fields support all date and time types.
 
-::: function
-extract(field FROM x) -\> bigint
+**extract(field FROM x)** → bigint
 
 Returns `field` from `x`:
-
+```sql
     SELECT extract(YEAR FROM TIMESTAMP '2022-10-20 05:10:00');
     -- 2022
+```
+!!!note
+    This SQL-standard function uses special syntax for specifying the
+    arguments.
 
-::: note
-::: title
-Note
-:::
+### Convenience extraction functions
 
-This SQL-standard function uses special syntax for specifying the
-arguments.
-:::
-:::
+#### day()
+**day(x)** → bigint
 
-# Convenience extraction functions
-
-::: function
-day(x) -\> bigint
 
 Returns the day of the month from `x`.
-:::
 
-::: function
-day_of_month(x) -\> bigint
+#### day_of_month()
+**day_of_month(x)** → bigint
 
-This is an alias for `day`{.interpreted-text role="func"}.
-:::
+This is an alias for `day`.
 
-::: function
-day_of_week(x) -\> bigint
+#### day_of_week()
+**day_of_week(x)** → bigint
 
-Returns the ISO day of the week from `x`. The value ranges from `1`
-(Monday) to `7` (Sunday).
-:::
+Returns the ISO day of the week from `x`. The value ranges from `1` (Monday) to `7` (Sunday).
 
-::: function
-day_of_year(x) -\> bigint
+#### day_of_year()
+**day_of_year(x)** → bigint
 
-Returns the day of the year from `x`. The value ranges from `1` to
-`366`.
-:::
+Returns the day of the year from `x`. The value ranges from `1` to `366`.
 
-::: function
-dow(x) -\> bigint
+#### dow()
+**dow(x)** → bigint
 
-This is an alias for `day_of_week`{.interpreted-text role="func"}.
-:::
+This is an alias for `day_of_week`.
 
-::: function
-doy(x) -\> bigint
+#### doy()
+**doy(x)** → bigint
 
-This is an alias for `day_of_year`{.interpreted-text role="func"}.
-:::
+This is an alias for `day_of_year`.
 
-::: function
-hour(x) -\> bigint
+#### hour()
+**hour(x)** → bigint
 
 Returns the hour of the day from `x`. The value ranges from `0` to `23`.
-:::
 
-::: function
-millisecond(x) -\> bigint
+#### millisecond()
+**millisecond(x)** → bigint
 
 Returns the millisecond of the second from `x`.
-:::
 
-::: function
-minute(x) -\> bigint
+#### minute()
+**minute(x)** → bigint
 
 Returns the minute of the hour from `x`.
-:::
 
-::: function
-month(x) -\> bigint
+#### month()
+**month(x)** → bigint
 
 Returns the month of the year from `x`.
-:::
 
-::: function
-quarter(x) -\> bigint
+#### quarter()
+**quarter(x)** → bigint
 
-Returns the quarter of the year from `x`. The value ranges from `1` to
-`4`.
-:::
+Returns the quarter of the year from `x`. The value ranges from `1` to `4`.
 
-::: function
-second(x) -\> bigint
+#### second()
+**second(x)** → bigint
 
 Returns the second of the minute from `x`.
-:::
 
-::: function
-timezone_hour(timestamp) -\> bigint
+#### timezone_hour()
+**timezone_hour(timestamp)** → bigint
 
 Returns the hour of the time zone offset from `timestamp`.
-:::
 
-::: function
-timezone_minute(timestamp) -\> bigint
+#### timezone_minute()
+**timezone_minute(timestamp)** → bigint
 
 Returns the minute of the time zone offset from `timestamp`.
-:::
 
-::: function
-week(x) -\> bigint
+#### week()
+**week(x)** → bigint
 
-Returns the [ISO week]() of the year from `x`. The value ranges from `1`
-to `53`.
-:::
+Returns the [ISO week]() of the year from `x`. The value ranges from `1` to `53`.
 
-::: function
-week_of_year(x) -\> bigint
+#### week_of_year()
+**week_of_year(x)** → bigint
 
-This is an alias for `week`{.interpreted-text role="func"}.
-:::
+This is an alias for `week`.
 
-::: function
-year(x) -\> bigint
+#### year()
+**year(x)** → bigint
 
 Returns the year from `x`.
-:::
 
-::: function
-year_of_week(x) -\> bigint
+#### year_of_week()
+**year_of_week(x)** → bigint
 
 Returns the year of the [ISO week]() from `x`.
-:::
 
-::: function
-yow(x) -\> bigint
+#### yow()
+**yow(x)** → bigint
 
-This is an alias for `year_of_week`{.interpreted-text role="func"}.
-:::
+This is an alias for `year_of_week`.
 
 [^1]: This specifier does not support `0` as a month or day.
-
 [^2]: This specifier does not support `0` as a month or day.
-
 [^3]: This specifier does not support `0` as a month or day.
-
 [^4]: Timestamp is truncated to milliseconds.
-
 [^5]: This specifier does not support `0` as a month or day.
-
-[^6]: This specifier is not supported yet. Consider using
-    `day_of_week`{.interpreted-text role="func"} (it uses `1-7` instead
-    of `0-6`).
-
-[^7]: When parsing, two-digit year format assumes range `1970` ..
-    `2069`, so \"70\" will result in year `1970` but \"69\" will produce
-    `2069`.
+[^6]: This specifier is not supported yet. Consider using `day_of_week` (it uses `1-7` instead of `0-6`).
+[^7]: When parsing, two-digit year format assumes range `1970` .. `2069`, so "70" will result in year `1970` but "69" will produce `2069`.

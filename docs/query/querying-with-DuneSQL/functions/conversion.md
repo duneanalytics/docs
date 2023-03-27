@@ -10,22 +10,25 @@ varchar.
 
 When necessary, values can be explicitly cast to a particular type.
 
-## Conversion functions {#conversion-functions-1}
+### Conversion functions
 
 
+#### cast() 
 **cast(value AS type)** → type
 
 Explicitly cast a value as a type. This can be used to cast a varchar to
 a numeric value type and vice versa.
 
 
+#### try_cast()
 **try_cast(value AS type)** → type
 
 Like `cast`{.interpreted-text role="func"}, but returns null if the cast
 fails.
 
-## Formatting
+### Formatting
 
+#### format()
 **format(format, args\...)** → varchar
 
 Returns a formatted string using the specified [format
@@ -54,7 +57,7 @@ and arguments:
     -- 'Tuesday, July 4, 2006'
 ```
 
-
+#### format_number()
 **format_number(number, decimal_places)** → varchar
 Returns a formatted string using a unit symbol:
 
@@ -63,8 +66,9 @@ Returns a formatted string using a unit symbol:
 
 
 
-## Miscellaneous
+### Miscellaneous
 
+#### typeof()
 **typeof(expr)** → varchar
 
 Returns the name of the type of the provided expression:

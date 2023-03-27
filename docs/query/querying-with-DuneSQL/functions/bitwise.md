@@ -2,6 +2,7 @@
 title: Bitwise
 ---
 
+#### bit_count()
 **bit_count(x, bits)** → bigint
 Count the number of bits set in x (treated as bits-bit signed integer) in 2’s complement representation:
 ```sql
@@ -10,7 +11,7 @@ SELECT bit_count(9, 8); -- 2
 SELECT bit_count(-7, 64); -- 62
 SELECT bit_count(-7, 8); -- 6
 ```
-
+#### bitwise_and()
 **bitwise_and(x, y)** → bigint
 Returns the bitwise AND of x and y in 2’s complement representation.
 
@@ -27,6 +28,7 @@ SELECT bitwise_not(-12); --  11
 SELECT bitwise_not(19);  -- -20
 SELECT bitwise_not(25);  -- -26
 ```
+#### bitwise_or()
 **bitwise_or(x, y)** → bigint
 
 Returns the bitwise OR of x and y in 2’s complement representation.
@@ -36,6 +38,7 @@ Bitwise OR of 19 (binary: 10011) and 25 (binary: 11001) results in 27 (binary: 1
 SELECT bitwise_or(19,25); -- 27
 ```
 
+#### bitwise_xor()
 **bitwise_xor(x, y)** → bigint
 
 Returns the bitwise XOR of x and y in 2’s complement representation.
@@ -43,25 +46,32 @@ Returns the bitwise XOR of x and y in 2’s complement representation.
 Bitwise XOR of 19 (binary: 10011) and 25 (binary: 11001) results in 10 (binary: 01010):
 ```sql
 SELECT bitwise_xor(19,25); -- 10
-bitwise_left_shift(value, shift) → [same as value]
+```
+
+#### bitwise_left_shift()
+**bitwise_left_shift(value, shift)** → [same as value]
 Returns the left shifted value of value.
 
 Shifting 1 (binary: 001) by two bits results in 4 (binary: 00100):
-
+```sql
 SELECT bitwise_left_shift(1, 2); -- 4
+```
 Shifting 5 (binary: 0101) by two bits results in 20 (binary: 010100):
-
+```sql
 SELECT bitwise_left_shift(5, 2); -- 20
+```
 Shifting a value by 0 always results in the original value:
-
+```sql
 SELECT bitwise_left_shift(20, 0); -- 20
 SELECT bitwise_left_shift(42, 0); -- 42
+```
 Shifting 0 by a shift always results in 0:
-
+```sql
 SELECT bitwise_left_shift(0, 1); -- 0
 SELECT bitwise_left_shift(0, 2); -- 0
 ```
 
+#### bitwise_right_shift()
 **bitwise_right_shift(value, shift)** → [same as value]
 
 Returns the logical right shifted value of value.
@@ -95,6 +105,7 @@ SELECT bitwise_right_shift(0, 1); -- 0
 SELECT bitwise_right_shift(0, 2); -- 0
 ```
 
+#### bitwise_right_shift_arithmetic()
 **bitwise_right_shift_arithmetic(value, shift)** → [same as value]
 
 Returns the arithmetic right shifted value of value.

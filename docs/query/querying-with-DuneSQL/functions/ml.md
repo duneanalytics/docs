@@ -7,15 +7,9 @@ an aggregation function. It enables you to train Support Vector Machine
 (SVM) based classifiers and regressors for the supervised learning
 problems.
 
-::: note
-::: title
-Note
-:::
-
-The machine learning functions are not optimized for distributed
+> Note: The machine learning functions are not optimized for distributed
 processing. The capability to train large data sets is limited by this
 execution of the final training on a single instance.
-:::
 
 # Feature vector
 
@@ -28,18 +22,19 @@ Trino, a feature vector is represented as a map-type value, whose key is
 an index of each feature, so that it can express a sparse vector. Since
 classifiers and regressors can recognize the map-type feature vector,
 there is a function to construct the feature from the existing numerical
-values, `features`{.interpreted-text role="func"}:
+values, `features`:
 
-    SELECT features(1.0, 2.0, 3.0) AS features;
-
-``` text
-features
------------------------
-{0=1.0, 1=2.0, 2=3.0}
+```sql
+SELECT features(1.0, 2.0, 3.0) AS features;
 ```
+Result:  
 
-The output from `features`{.interpreted-text role="func"} can be
-directly passed to ML functions.
+| Features         |
+|------------------|
+| {0=1.0, 1=2.0, 2=3.0} |
+
+
+The output from `features` can be directly passed to ML functions.
 
 # Classification
 
@@ -49,7 +44,7 @@ similar to the construction of the SVM model from the sequence of pairs
 of labels and features implemented in Teradata Aster or [BigQuery
 ML](https://cloud.google.com/bigquery-ml/docs/bigqueryml-intro). The
 function to train a classification model looks like as follows:
-
+```sql
     SELECT
       learn_classifier(
         species,
@@ -57,7 +52,7 @@ function to train a classification model looks like as follows:
       ) AS model
     FROM
       iris
-
+```
 It returns the trained model in a serialized format.
 
 ``` text
@@ -67,10 +62,9 @@ model
 68 61 72 29 3e
 ```
 
-`classify`{.interpreted-text role="func"} returns the predicted label by
-using the trained model. The trained model can not be saved natively,
+`classify` returns the predicted label by using the trained model. The trained model can not be saved natively,
 and needs to be passed in the format of a nested query:
-
+```sql
     SELECT
       classify(features(5.9, 3, 5.1, 1.8), model) AS predicted_label
     FROM (
@@ -79,6 +73,7 @@ and needs to be passed in the format of a nested query:
       FROM
         iris
     ) t
+```
 
 ``` text
 predicted_label
@@ -89,7 +84,7 @@ Iris-virginica
 As a result you need to run the training process at the same time when
 predicting values. Internally, the model is trained by
 [libsvm](https://www.csie.ntu.edu.tw/~cjlin/libsvm/). You can use
-`learn_libsvm_classifier`{.interpreted-text role="func"} to control the
+`learn_libsvm_classifier` to control the
 internal parameters of the model.
 
 # Regression
@@ -100,14 +95,14 @@ numerical values that can be described as `double`.
 
 The following code shows the creation of the model predicting
 `sepal_length` from the other 3 features:
-
+```sql
     SELECT
       learn_regressor(sepal_length, features(sepal_width, petal_length, petal_width)) AS model
     FROM
       iris
-
+```
 The way to use the model is similar to the classification case:
-
+```sql
     SELECT
       regress(features(3, 5.1, 1.8), model) AS predicted_target
     FROM (
@@ -115,7 +110,7 @@ The way to use the model is similar to the classification case:
         learn_regressor(sepal_length, features(sepal_width, petal_length, petal_width)) AS model
       FROM iris
     ) t;
-
+```
 ``` text
 predicted_target
 -------------------
@@ -124,55 +119,48 @@ predicted_target
 
 Internally, the model is trained by
 [libsvm](https://www.csie.ntu.edu.tw/~cjlin/libsvm/).
-`learn_libsvm_regressor`{.interpreted-text role="func"} provides you a
+`learn_libsvm_regressor` provides you a
 way to control the training process.
 
 # Machine learning functions {#machine-learning-functions-1}
 
-::: function
-features(double, \...) -\> map(bigint, double)
-
+#### features()
+**features(double, ...)** → map(bigint, double)  
 Returns the map representing the feature vector.
-:::
 
-::: function
-learn_classifier(label, features) -\> Classifier
+#### learn_classifier()
+**learn_classifier(label, features)** → Classifier
 
 Returns an SVM-based classifier model, trained with the given label and
 feature data sets.
-:::
 
-::: function
-learn_libsvm_classifier(label, features, params) -\> Classifier
+#### learn_libsvm_classifier()
+**learn_libsvm_classifier(label, features, params)** → Classifier
 
 Returns an SVM-based classifier model, trained with the given label and
 feature data sets. You can control the training process by libsvm
 parameters.
-:::
 
-::: function
-classify(features, model) -\> label
+#### classify()
+**classify(features, model)** → label
 
 Returns a label predicted by the given classifier SVM model.
-:::
 
-::: function
-learn_regressor(target, features) -\> Regressor
+#### learn_regressor()
+**learn_regressor(target, features)** → Regressor
 
 Returns an SVM-based regressor model, trained with the given target and
 feature data sets.
-:::
 
-::: function
-learn_libsvm_regressor(target, features, params) -\> Regressor
+#### learn_libsvm_regressor()
+**learn_libsvm_regressor(target, features, params)** → Regressor
 
 Returns an SVM-based regressor model, trained with the given target and
 feature data sets. You can control the training process by libsvm
 parameters.
-:::
 
-::: function
-regress(features, model) -\> target
+#### regress()
+**regress(features, model)** → target
 
 Returns a predicted target value by the given regressor SVM model.
-:::
+

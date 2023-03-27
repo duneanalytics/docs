@@ -5,27 +5,17 @@ title: Aggregate functions
 Aggregate functions operate on a set of values to compute a single
 result.
 
-Except for `count`{.interpreted-text role="func"},
-`count_if`{.interpreted-text role="func"}, `max_by`{.interpreted-text
-role="func"}, `min_by`{.interpreted-text role="func"} and
-`approx_distinct`{.interpreted-text role="func"}, all of these aggregate
-functions ignore null values and return null for no input rows or when
-all values are null. For example, `sum`{.interpreted-text role="func"}
-returns null rather than zero and `avg`{.interpreted-text role="func"}
-does not include null values in the count. The `coalesce` function can
-be used to convert null into zero.
+Except for `count`, `count_if`, `max_by`, `min_by` and `approx_distinct`, all of these aggregate functions ignore null values and return null for no input rows or when all values are null. For example, `sum` returns null rather than zero and `avg` does not include null values in the count. The `coalesce` function can be used to convert null into zero.
+
 
 # Ordering during aggregation {#aggregate-function-ordering-during-aggregation}
 
-Some aggregate functions such as `array_agg`{.interpreted-text
-role="func"} produce different results depending on the order of input
-values. This ordering can be specified by writing an
-`order-by-clause`{.interpreted-text role="ref"} within the aggregate
-function:
+Some aggregate functions such as `array_agg` produce different results depending on the order of input values. This ordering can be specified by writing an `order-by-clause` within the aggregate function:
 
+```sql
     array_agg(x ORDER BY y DESC)
     array_agg(x ORDER BY x, y, z)
-
+```
 # Filtering during aggregation {#aggregate-function-filtering-during-aggregation}
 
 The `FILTER` keyword can be used to remove rows from aggregation
@@ -33,24 +23,24 @@ processing with a condition expressed using a `WHERE` clause. This is
 evaluated for each row before it is used in the aggregation and is
 supported for all aggregate functions.
 
-``` text
+```sql
 aggregate_function(...) FILTER (WHERE <condition>)
 ```
 
 A common and very useful example is to use `FILTER` to remove nulls from
 consideration when using `array_agg`:
-
+```sql
     SELECT array_agg(name) FILTER (WHERE name IS NOT NULL)
     FROM region;
-
+```
 As another example, imagine you want to add a condition on the count for
 Iris flowers, modifying the following query:
-
+```sql
     SELECT species,
            count(*) AS count
     FROM iris
     GROUP BY species;
-
+```
 ``` text
 species    | count
 -----------+-------
@@ -146,56 +136,54 @@ Returns the concatenated input values, separated by the `separator`
 string.
 
 Synopsis:
-
+```sql
     LISTAGG( expression [, separator] [ON OVERFLOW overflow_behaviour])
         WITHIN GROUP (ORDER BY sort_item, [...])
-
+```
 If `separator` is not specified, the empty string will be used as
 `separator`.
 
 In its simplest form the function looks like:
-
+```sql
     SELECT listagg(value, ',') WITHIN GROUP (ORDER BY value) csv_value
     FROM (VALUES 'a', 'c', 'b') t(value);
-
+```
 and results in:
-
+```text
     csv_value
     -----------
     'a,b,c'
-
+```
 The overflow behaviour is by default to throw an error in case that the
 length of the output of the function exceeds `1048576` bytes:
-
+```sql
     SELECT listagg(value, ',' ON OVERFLOW ERROR) WITHIN GROUP (ORDER
     BY value) csv_value
     FROM (VALUES 'a', 'c', 'b') t(value);
-
+```
 and results in:
-
+```text
     csv_value
     -----------
     'a,c,b'
-
+```
 The overflow behaviour can also be to truncate the output:
-
+```sql
     SELECT listagg(value, ',' ON OVERFLOW TRUNCATE) WITHIN GROUP (ORDER
     BY value) csv_value
     FROM (VALUES 'a', 'c', 'b') t(value);
-
+```
 and results in:
-
+```text
     csv_value
     -----------
     'a,b'
-
+```
 The overflow behaviour can also be to skip the overflowed values:
-
+```sql
     SELECT listagg(value, ',' ON OVERFLOW SKIP) WITHIN GROUP (ORDER
     BY value) csv_value
-
-
-
+```
 The current implementation of `LISTAGG` function does not support window
 frames.
 
@@ -436,9 +424,7 @@ Returns linear regression slope of input values. `y` is the dependent value and 
 Returns the skewness of all input values. Unbiased estimate using the following expression:
 
 ``` text
-
 skewness(x) = n/((n-1)(n-2))sum[(x_i-mean)^3]/stddev(x)^3
-
 ```
 
 **stddev(x)** &#8594 double
@@ -478,7 +464,7 @@ value, `inputFunction` takes the current state, initially
 `initialState`, and returns the new state. `combineFunction` will be
 invoked to combine two states into a new state. The final state is
 returned:
-
+```sql
     SELECT id, reduce_agg(value, 0, (a, b) -> a + b, (a, b) -> a + b)
     FROM (
         VALUES
@@ -491,7 +477,8 @@ returned:
     GROUP BY id;
     -- (1, 12)
     -- (2, 13)
-
+```
+```sql
     SELECT id, reduce_agg(value, 1, (a, b) -> a * b, (a, b) -> a * b)
     FROM (
         VALUES
@@ -504,6 +491,7 @@ returned:
     GROUP BY id;
     -- (1, 60)
     -- (2, 42)
+```
 
 The state type must be a boolean, integer, floating-point, or
 date/time/interval.

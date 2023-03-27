@@ -31,52 +31,49 @@ with a few notable exceptions:
     -   Binary properties must be specified directly, without the `Is`.
         Example: `\p{NoncharacterCodePoint}`
 
-::: function
-regexp_count(string, pattern) -\> bigint
+#### regexp_count()
+**regexp_count(string, pattern)** → bigint
 
 Returns the number of occurrence of `pattern` in `string`:
-
+```sql
     SELECT regexp_count('1a 2b 14m', '\s*[a-z]+\s*'); -- 3
-:::
-
-::: function
-regexp_extract_all(string, pattern) -\> array(varchar)
+```
+#### regexp_extract_all()
+**regexp_extract_all(string, pattern)** → array(varchar)
 
 Returns the substring(s) matched by the regular expression `pattern` in
 `string`:
-
+```sql
     SELECT regexp_extract_all('1a 2b 14m', '\d+'); -- [1, 2, 14]
-:::
+```
 
-::: {.function noindex=""}
-regexp_extract_all(string, pattern, group) -\> array(varchar)
+**regexp_extract_all(string, pattern, group)** → array(varchar)
 
 Finds all occurrences of the regular expression `pattern` in `string`
 and returns the [capturing group number]() `group`:
-
+```sql
     SELECT regexp_extract_all('1a 2b 14m', '(\d+)([a-z]+)', 2); -- ['a', 'b', 'm']
-:::
+```
 
-::: function
-regexp_extract(string, pattern) -\> varchar
+#### regexp_extract()
+**regexp_extract(string, pattern)** → varchar
 
 Returns the f substring matched by the regular expression `pattern`
 in `string`:
-
+```sql
     SELECT regexp_extract('1a 2b 14m', '\d+'); -- 1
-:::
+```
 
-::: {.function noindex=""}
-regexp_extract(string, pattern, group) -\> varchar
+**regexp_extract(string, pattern, group)** → varchar
 
 Finds the f occurrence of the regular expression `pattern` in
 `string` and returns the [capturing group number]() `group`:
-
+```sql
     SELECT regexp_extract('1a 2b 14m', '(\d+)([a-z]+)', 2); -- 'a'
-:::
+```
 
-::: function
-regexp_like(string, pattern) -\> boolean
+#### regexp_like()
+**regexp_like(string, pattern)** → boolean
 
 Evaluates the regular expression `pattern` and determines if it is
 contained within `string`.
@@ -85,63 +82,61 @@ The `pattern` only needs to be contained within `string`, rather than
 needing to match all of `string`. In other words, this performs a
 *contains* operation rather than a *match* operation. You can match the
 entire string by anchoring the pattern using `^` and `$`:
-
+```sql
     SELECT regexp_like('1a 2b 14m', '\d+b'); -- true
-:::
+```  
 
-::: function
-regexp_position(string, pattern) -\> integer
+#### regexp_position()
+**regexp_position(string, pattern)** → integer
 
 Returns the index of the f occurrence (counting from 1) of `pattern`
 in `string`. Returns -1 if not found:
-
+```sql
     SELECT regexp_position('I have 23 apples, 5 pears and 13 oranges', '\b\d+\b'); -- 8
-:::
+```
 
-::: {.function noindex=""}
-regexp_position(string, pattern, start) -\> integer
+**regexp_position(string, pattern, start)** → integer
 
 Returns the index of the f occurrence of `pattern` in `string`,
 starting from `start` (include `start`). Returns -1 if not found:
-
+```sql
     SELECT regexp_position('I have 23 apples, 5 pears and 13 oranges', '\b\d+\b', 5); -- 8
     SELECT regexp_position('I have 23 apples, 5 pears and 13 oranges', '\b\d+\b', 12); -- 19
-:::
+```
 
-::: {.function noindex=""}
-regexp_position(string, pattern, start, occurrence) -\> integer
+
+**regexp_position(string, pattern, start, occurrence)** → integer
 
 Returns the index of the nth `occurrence` of `pattern` in `string`,
 starting from `start` (include `start`). Returns -1 if not found:
-
+```sql
     SELECT regexp_position('I have 23 apples, 5 pears and 13 oranges', '\b\d+\b', 12, 1); -- 19
     SELECT regexp_position('I have 23 apples, 5 pears and 13 oranges', '\b\d+\b', 12, 2); -- 31
-    SELECT regexp_position('I have 23 apples, 5 pears and 13 oranges', '\b\d+\b', 12, 3); -- -1
-:::
+    SELECT regexp_position('I have 23 apples, 5 pears and 13 oranges', '\b\d+\b', 12, 3);
+```
 
-::: function
-regexp_replace(string, pattern) -\> varchar
+#### regexp_replace()
+**regexp_replace(string, pattern)** → varchar
 
 Removes every instance of the substring matched by the regular
 expression `pattern` from `string`:
 
     SELECT regexp_replace('1a 2b 14m', '\d+[ab] '); -- '14m'
-:::
 
-::: {.function noindex=""}
-regexp_replace(string, pattern, replacement) -\> varchar
+
+**regexp_replace(string, pattern, replacement)** → varchar
 
 Replaces every instance of the substring matched by the regular
 expression `pattern` in `string` with `replacement`. [Capturing
 groups]() can be referenced in `replacement` using `$g` for a numbered
 group or `${name}` for a named group. A dollar sign (`$`) may be
 included in the replacement by escaping it with a backslash (`\$`):
-
+```sql
     SELECT regexp_replace('1a 2b 14m', '(\d+)([ab]) ', '3c$2 '); -- '3ca 3cb 14m'
-:::
+```
 
-::: {.function noindex=""}
-regexp_replace(string, pattern, function) -\> varchar
+
+**regexp_replace(string, pattern, function)** → varchar
 
 Replaces every instance of the substring matched by the regular
 expression `pattern` in `string` using `function`. The
@@ -152,13 +147,12 @@ match (if you need this, surround the entire expression with
 parenthesis). :
 
     SELECT regexp_replace('new york', '(\w)(\w*)', x -> upper(x[1]) || lower(x[2])); --'New York'
-:::
 
-::: function
-regexp_split(string, pattern) -\> array(varchar)
+#### regexp_split()
+**regexp_split(string, pattern)** → array(varchar)
 
 Splits `string` using the regular expression `pattern` and returns an
 array. Trailing empty strings are preserved:
-
+```sql
     SELECT regexp_split('1a 2b 14m', '\s*[a-z]+\s*'); -- [1, 2, 14, ]
-:::
+```

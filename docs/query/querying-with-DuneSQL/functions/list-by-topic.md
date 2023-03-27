@@ -2,7 +2,7 @@
 title: List of functions by topic
 ---
 
-# Aggregate
+## Aggregate
 
 For more details, see `aggregate`{.interpreted-text role="doc"}
 
@@ -49,7 +49,7 @@ For more details, see `aggregate`{.interpreted-text role="doc"}
 -   `var_pop`{.interpreted-text role="func"}
 -   `var_samp`{.interpreted-text role="func"}
 
-# Array
+## Array
 
 For more details, see `array`{.interpreted-text role="doc"}
 
@@ -86,7 +86,7 @@ For more details, see `array`{.interpreted-text role="doc"}
 -   `zip`{.interpreted-text role="func"}
 -   `zip_with`{.interpreted-text role="func"}
 
-# Binary
+## Binary
 
 For more details, see `binary`{.interpreted-text role="doc"}
 
@@ -126,7 +126,7 @@ For more details, see `binary`{.interpreted-text role="doc"}
 -   `to_ieee754_64`{.interpreted-text role="func"}
 -   `xxhash64`{.interpreted-text role="func"}
 
-# Bitwise
+## Bitwise
 
 For more details, see `bitwise`{.interpreted-text role="doc"}
 
@@ -139,7 +139,7 @@ For more details, see `bitwise`{.interpreted-text role="doc"}
 -   `bitwise_right_shift_arithmetic`{.interpreted-text role="func"}
 -   `bitwise_xor`{.interpreted-text role="func"}
 
-# Color
+## Color
 
 For more details, see `color`{.interpreted-text role="doc"}
 

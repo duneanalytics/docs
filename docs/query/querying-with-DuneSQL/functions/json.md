@@ -34,7 +34,7 @@ JSON path language is case-sensitive for keywords and identifiers.
 ## JSON path syntax and semantics {#json_path_syntax_and_semantics}
 
 JSON path expressions are recursive structures. Although the name
-\"path\" suggests a linear sequence of operations going step by step
+"path" suggests a linear sequence of operations going step by step
 deeper into the JSON structure, a JSON path expression is in fact a
 tree. It can access the input JSON item multiple times, in multiple
 ways, and combine the results. Moreover, the result of a JSON path
@@ -42,16 +42,12 @@ expression is not a single item, but an ordered sequence of items. Each
 of the sub-expressions takes one or more input sequences, and returns a
 sequence as the result.
 
-::: note
-::: title
-Note
-:::
+!!! note
+    In the lax mode, most path operations f unnest all JSON arrays in
+    the input sequence. Any divergence from this rule is mentioned in the
+    following listing. Path modes are explained in
+    `json_path_modes`. (TODO: add link)
 
-In the lax mode, most path operations f unnest all JSON arrays in
-the input sequence. Any divergence from this rule is mentioned in the
-following listing. Path modes are explained in
-`json_path_modes`{.interpreted-text role="ref"}.
-:::
 
 The JSON path language features are divided into: literals, variables,
 arithmetic binary expressions, arithmetic unary expressions, and a group
@@ -85,7 +81,7 @@ true, false
 -   null literal
 
     It has the semantics of the JSON null, not of SQL null. See
-    `json_comparison_rules`{.interpreted-text role="ref"}.
+    `json_comparison_rules`.
 
 ``` text
 null
@@ -189,13 +185,9 @@ skipped, and the resulting sequence is `100, 300`.
 
 All items in the input sequence must be JSON objects.
 
-::: note
-::: title
-Note
-:::
+!!! note
+    Trino does not support JSON objects with duplicate keys.
 
-Trino does not support JSON objects with duplicate keys.
-:::
 
 ### wildcard member accessor
 
@@ -576,40 +568,12 @@ input JSON data can diverge from the expected schema.
 
 The following table shows the differences between the two modes.
 
-+---------------------------+-------------+---------------------------+
-| Condition                 | strict mode | lax mode                  |
-+===========================+=============+===========================+
-| Performing an operation   | ERROR       | The array is              |
-| which requires a          |             | automatically unnested,   |
-| non-array on an array,    |             | and the operation is      |
-| e.g.:                     |             | performed on each array   |
-|                           |             | element.                  |
-| `$.key` requires a JSON   |             |                           |
-| object                    |             |                           |
-|                           |             |                           |
-| `$.floor()` requires a    |             |                           |
-| numeric value             |             |                           |
-+---------------------------+-------------+---------------------------+
-| Performing an operation   | ERROR       | The non-array item is     |
-| which requires an array   |             | automatically wrapped in  |
-| on an non-array, e.g.:    |             | a singleton array, and    |
-|                           |             | the operation is          |
-| `$[0]`, `$[*]`,           |             | performed on the array.   |
-| `$.size()`                |             |                           |
-+---------------------------+-------------+---------------------------+
-| A structural error:       | ERROR       | The error is suppressed,  |
-| accessing a non-existent  |             | and the operation results |
-| element of an array or a  |             | in an empty sequence.     |
-| non-existent member of a  |             |                           |
-| JSON object, e.g.:        |             |                           |
-|                           |             |                           |
-| `$[-1]` (array index out  |             |                           |
-| of bounds)                |             |                           |
-|                           |             |                           |
-| `$.key`, where the input  |             |                           |
-| JSON object does not have |             |                           |
-| a member `key`            |             |                           |
-+---------------------------+-------------+---------------------------+
+| Condition                                 | strict mode                                                | lax mode                                                   |
+| ----------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------------- |
+| Performing an operation which requires a non-array on an array, e.g.: | ERROR | The array is automatically unnested, and the operation is performed on each array element. `$.key` requires a JSON object  `$.floor()` requires a numeric value |
+| Performing an operation which requires an array on a non-array, e.g.: | ERROR | The non-array item is automatically wrapped in a singleton array, and the operation is performed on the array. `$[0]`, `$[*]`, `$.size()` |
+| A structural error: accessing a non-existent element of an array or a non-existent member of a JSON object, e.g.: | ERROR | The error is suppressed, and the operation results in an empty sequence. `$[-1]` (array index out of bounds) `$.key`, where the input JSON object does not have a member `key
+
 
 ### Examples of the lax mode behavior
 
@@ -644,7 +608,7 @@ example, even though the JSON array is unwrapped prior to calling the
 <path>.floor() --> ERROR
 ```
 
-# json_exists
+## json_exists
 
 The `json_exists` function determines whether a JSON value satisfies a
 JSON path specification.
@@ -713,21 +677,23 @@ quoted identifiers in the `PASSING` clause:
 'lax $.$KeyName' PASSING nation.name AS "KeyName" --> correct
 ```
 
-## Examples
+### Examples
 
 Let `customers` be a table containing two columns: `id:bigint`,
 `description:varchar`.
 
-  id    description
-  ----- ---------------------------------------------------------------
-  101   \'{\"comment\" : \"nice\", \"children\" : \[10, 13, 16\]}\'
-  102   \'{\"comment\" : \"problematic\", \"children\" : \[8, 11\]}\'
-  103   \'{\"comment\" : \"knows best\", \"children\" : \[2\]}\'
+| id  | description                                                      |
+| --- | ---------------------------------------------------------------- |
+| 101 | '{"comment" : "nice", "children" : [10, 13, 16]}'                 |
+| 102 | '{"comment" : "problematic", "children" : [8, 11]}'               |
+| 103 | '{"comment" : "knows best", "children" : [2]}'                    |
+
+
 
 The following query checks which customers have children above the age
 of 10:
 
-``` text
+```sql
 SELECT
       id,
       json_exists(
@@ -736,13 +702,13 @@ SELECT
                  ) AS children_above_ten
 FROM customers
 ```
-
+```text
   id    children_above_ten
   ----- --------------------
   101   true
   102   true
   103   false
-
+```
 In the following query, the path mode is strict. We check the third
 child for each customer. This should cause a structural error for the
 customers who do not have three or more children. This error is handled
@@ -758,14 +724,14 @@ SELECT
                  ) AS child_3_above_ten
 FROM customers
 ```
-
+```text
   id    child_3_above_ten
   ----- -------------------
   101   true
   102   NULL
   103   NULL
-
-# json_query
+```
+## json_query
 
 The `json_query` function extracts a JSON value from a JSON value.
 
@@ -844,7 +810,7 @@ wraps every result.
 The `QUOTES` clause lets you modify the result for a scalar string by
 removing the double quotes being part of the JSON string representation.
 
-## Examples
+#### Examples
 
 Let `customers` be a table containing two columns: `id:bigint`,
 `description:varchar`.
@@ -866,13 +832,13 @@ SELECT
                 ) AS children
 FROM customers
 ```
-
+```text
   id    children
   ----- ------------------
   101   \'\[10,13,16\]\'
   102   \'\[8,11\]\'
   103   \'\[2\]\'
-
+```
 The following query gets the collection of children for each customer.
 Note that the `json_query` function can only output a single JSON item.
 If you don\'t use array wrapper, you get an error for every customer
@@ -890,12 +856,13 @@ SELECT
                 ) AS children
 FROM customers
 ```
-
+```text
   id    children
   ----- ----------
   101   NULL
   102   NULL
   103   \'2\'
+```
 
 The following query gets the last child for each customer, wrapped in a
 JSON array:
@@ -910,13 +877,13 @@ SELECT
                 ) AS last_child
 FROM customers
 ```
-
+```text
   id    last_child
   ----- ------------
   101   \'\[16\]\'
   102   \'\[11\]\'
   103   \'\[2\]\'
-
+```
 The following query gets all children above the age of 12 for each
 customer, wrapped in a JSON array. The second and the third customer
 don\'t have children of this age. Such case is handled according to the
@@ -934,13 +901,13 @@ SELECT
                 ) AS children
 FROM customers
 ```
-
+```text
   id    children
   ----- ---------------
   101   \'\[13,16\]\'
   102   \'\[\]\'
   103   \'\[\]\'
-
+```
 The following query shows the result of the `QUOTES` clause. Note that
 `KEEP QUOTES` is the default.
 
@@ -951,13 +918,13 @@ SELECT
       json_query(description, 'strict $.comment' OMIT QUOTES) AS unquoted_comment
 FROM customers
 ```
-
+```text
   id    quoted_comment        unquoted_comment
   ----- --------------------- ------------------
   101   \'\"nice\"\'          \'nice\'
   102   \'\"problematic\"\'   \'problematic\'
   103   \'\"knows best\"\'    \'knows best\'
-
+```
 If an error occurs, the returned value depends on the `ON ERROR` clause.
 The default value returned `ON ERROR` is `NULL`. One example of error is
 multiple items returned by the path. Other errors caught and handled
@@ -967,7 +934,7 @@ according to the `ON ERROR` clause are:
 -   JSON path evaluation errors, e.g. division by zero
 -   Output conversion errors
 
-# json_value
+## json_value
 
 The `json_value` function extracts a scalar SQL value from a JSON value.
 
@@ -1051,7 +1018,7 @@ according to the `ON ERROR` clause are:
 -   JSON path evaluation errors, e.g. division by zero
 -   Returned scalar not convertible to the desired type
 
-## Examples
+### Examples
 
 Let `customers` be a table containing two columns: `id:bigint`,
 `description:varchar`.
@@ -1072,13 +1039,13 @@ SELECT id, json_value(
                      ) AS comment
 FROM customers
 ```
-
+```text
   id    comment
   ----- ------------------
   101   \'nice \'
   102   \'problematic \'
   103   \'knows best \'
-
+```
 The following query gets the f child\'s age for each customer as
 `tinyint`:
 
@@ -1090,13 +1057,13 @@ SELECT id, json_value(
                      ) AS child
 FROM customers
 ```
-
+```text
   id    child
   ----- -------
   101   10
   102   8
   103   2
-
+```
 The following query gets the third child\'s age for each customer. In
 the strict mode, this should cause a structural error for the customers
 who do not have the third child. This error is handled according to the
@@ -1110,13 +1077,13 @@ SELECT id, json_value(
                      ) AS child
 FROM customers
 ```
-
+```text
   id    child
   ----- ---------
   101   \'16\'
   102   \'err\'
   103   \'err\'
-
+```
 After changing the mode to lax, the structural error is suppressed, and
 the customers without a third child produce empty sequence. This case is
 handled according to the `ON EMPTY` clause.
@@ -1129,14 +1096,14 @@ SELECT id, json_value(
                      ) AS child
 FROM customers
 ```
-
+```text
   id    child
   ----- -------------
   101   \'16\'
   102   \'missing\'
   103   \'missing\'
-
-# json_array
+```
+## json_array
 
 The `json_array` function creates a JSON array containing given
 elements.
@@ -1149,7 +1116,7 @@ JSON_ARRAY(
     )
 ```
 
-## Argument types
+#### Argument types
 
 The array elements can be arbitrary expressions. Each passed value is
 converted into a JSON item according to its type, and optional `FORMAT`
@@ -1157,48 +1124,49 @@ and `ENCODING` specification.
 
 You can pass SQL values of types boolean, numeric, and character string.
 They are converted to corresponding JSON literals:
-
+```sql
     SELECT json_array(true, 12e-1, 'text')
     --> '[true,1.2,"text"]'
-
+```
 Additionally to SQL values, you can pass JSON values. They are character
 or binary strings with a specified format and optional encoding:
-
+```
     SELECT json_array(
                       '[  "text"  ] ' FORMAT JSON,
                       X'5B0035005D00' FORMAT JSON ENCODING UTF16
                      )
     --> '[["text"],[5]]'
+```
 
 You can also nest other JSON-returning functions. In that case, the
 `FORMAT` option is implicit:
-
+```sql
     SELECT json_array(
                       json_query('{"key" : [  "value"  ]}', 'lax $.key')
                      )
     --> '[["value"]]'
-
+```
 Other passed values are cast to varchar, and they become JSON text
 literals:
-
+```sql
     SELECT json_array(
                       DATE '2001-01-31',
                       UUID '12151fd2-7586-11e9-8f9e-2a86e4085a59'
                      )
     --> '["2001-01-31","12151fd2-7586-11e9-8f9e-2a86e4085a59"]'
-
+```
 You can omit the arguments altogether to get an empty array:
-
+```sql
     SELECT json_array() --> '[]'
-
-## Null handling
+```
+### Null handling
 
 If a value passed for an array element is `null`, it is treated
 according to the specified null treatment option. If `ABSENT ON NULL` is
 specified, the null element is omitted in the result. If `NULL ON NULL`
 is specified, JSON `null` is added to the result. `ABSENT ON NULL` is
 the default configuration:
-
+```sql
     SELECT json_array(true, null, 1)
     --> '[true,1]'
 
@@ -1207,8 +1175,8 @@ the default configuration:
 
     SELECT json_array(true, null, 1 NULL ON NULL)
     --> '[true,null,1]'
-
-## Returned type
+```
+### Returned type
 
 The SQL standard imposes that there is no dedicated data type to
 represent JSON data in SQL. Instead, JSON data is represented as
@@ -1216,13 +1184,14 @@ character or binary strings. By default, the `json_array` function
 returns varchar containing the textual representation of the JSON array.
 With the `RETURNING` clause, you can specify other character string
 type:
-
+```sql
     SELECT json_array(true, 1 RETURNING VARCHAR(100))
     --> '[true,1]'
+```
 
 You can also specify to use varbinary and the required encoding as
 return type. The default encoding is UTF8:
-
+```sql
     SELECT json_array(true, 1 RETURNING VARBINARY)
     --> X'5b 74 72 75 65 2c 31 5d'
 
@@ -1234,13 +1203,13 @@ return type. The default encoding is UTF8:
 
     SELECT json_array(true, 1 RETURNING VARBINARY FORMAT JSON ENCODING UTF32)
     --> X'5b 00 00 00 74 00 00 00 72 00 00 00 75 00 00 00 65 00 00 00 2c 00 00 00 31 00 00 00 5d 00 00 00'
-
-# json_object
+```
+## json_object
 
 The `json_object` function creates a JSON object containing given
 key-value pairs.
 
-``` text
+```text
 JSON_OBJECT(
     [ key_value [, ...]
       [ { NULL ON NULL | ABSENT ON NULL } ] ],
@@ -1249,22 +1218,22 @@ JSON_OBJECT(
     )
 ```
 
-## Argument passing conventions
+#### Argument passing conventions
 
 There are two conventions for passing keys and values:
-
+```sql
     SELECT json_object('key1' : 1, 'key2' : true)
     --> '{"key1":1,"key2":true}'
 
     SELECT json_object(KEY 'key1' VALUE 1, KEY 'key2' VALUE true)
     --> '{"key1":1,"key2":true}'
-
+```
 In the second convention, you can omit the `KEY` keyword:
-
+```sql
     SELECT json_object('key1' VALUE 1, 'key2' VALUE true)
     --> '{"key1":1,"key2":true}'
-
-## Argument types
+```
+#### Argument types
 
 The keys can be arbitrary expressions. They must be of character string
 type. Each key is converted into a JSON text item, and it becomes a key
@@ -1276,41 +1245,42 @@ into a JSON item according to its type, and optional `FORMAT` and
 
 You can pass SQL values of types boolean, numeric, and character string.
 They are converted to corresponding JSON literals:
-
+```sql
     SELECT json_object('x' : true, 'y' : 12e-1, 'z' : 'text')
     --> '{"x":true,"y":1.2,"z":"text"}'
-
+```
 Additionally to SQL values, you can pass JSON values. They are character
 or binary strings with a specified format and optional encoding:
-
+```sql
     SELECT json_object(
                        'x' : '[  "text"  ] ' FORMAT JSON,
                        'y' : X'5B0035005D00' FORMAT JSON ENCODING UTF16
                       )
     --> '{"x":["text"],"y":[5]}'
-
+```
 You can also nest other JSON-returning functions. In that case, the
 `FORMAT` option is implicit:
-
+```sql
     SELECT json_object(
                        'x' : json_query('{"key" : [  "value"  ]}', 'lax $.key')
                       )
     --> '{"x":["value"]}'
-
+```
 Other passed values are cast to varchar, and they become JSON text
 literals:
-
+```sql
     SELECT json_object(
                        'x' : DATE '2001-01-31',
                        'y' : UUID '12151fd2-7586-11e9-8f9e-2a86e4085a59'
                       )
     --> '{"x":"2001-01-31","y":"12151fd2-7586-11e9-8f9e-2a86e4085a59"}'
+```
 
 You can omit the arguments altogether to get an empty object:
-
+```sql
     SELECT json_object() --> '{}'
-
-## Null handling
+```
+#### Null handling
 
 The values passed for JSON object keys must not be null. It is allowed
 to pass `null` for JSON object values. A null value is treated according
@@ -1318,7 +1288,7 @@ to the specified null treatment option. If `NULL ON NULL` is specified,
 a JSON object entry with `null` value is added to the result. If
 `ABSENT ON NULL` is specified, the entry is omitted in the result.
 `NULL ON NULL` is the default configuration.:
-
+```sql
     SELECT json_object('x' : null, 'y' : 1)
     --> '{"x":null,"y":1}'
 
@@ -1327,17 +1297,18 @@ a JSON object entry with `null` value is added to the result. If
 
     SELECT json_object('x' : null, 'y' : 1 ABSENT ON NULL)
     --> '{"y":1}'
-
-## Key uniqueness
+```
+#### Key uniqueness
 
 If a duplicate key is encountered, it is handled according to the
 specified key uniqueness constraint.
 
 If `WITH UNIQUE KEYS` is specified, a duplicate key results in a query
 failure:
-
+```sql
     SELECT json_object('x' : null, 'x' : 1 WITH UNIQUE KEYS)
     --> failure: "duplicate key passed to JSON_OBJECT function"
+```
 
 Note that this option is not supported if any of the arguments has a
 `FORMAT` specification.
@@ -1346,7 +1317,7 @@ If `WITHOUT UNIQUE KEYS` is specified, duplicate keys are not supported
 due to implementation limitation. `WITHOUT UNIQUE KEYS` is the default
 configuration.
 
-## Returned type
+#### Returned type
 
 The SQL standard imposes that there is no dedicated data type to
 represent JSON data in SQL. Instead, JSON data is represented as
@@ -1354,13 +1325,13 @@ character or binary strings. By default, the `json_object` function
 returns varchar containing the textual representation of the JSON
 object. With the `RETURNING` clause, you can specify other character
 string type:
-
+```sql
     SELECT json_object('x' : 1 RETURNING VARCHAR(100))
     --> '{"x":1}'
-
+```
 You can also specify to use varbinary and the required encoding as
 return type. The default encoding is UTF8:
-
+```sql
     SELECT json_object('x' : 1 RETURNING VARBINARY)
     --> X'7b 22 78 22 3a 31 7d'
 
@@ -1372,21 +1343,17 @@ return type. The default encoding is UTF8:
 
     SELECT json_object('x' : 1 RETURNING VARBINARY FORMAT JSON ENCODING UTF32)
     --> X'7b 00 00 00 22 00 00 00 78 00 00 00 22 00 00 00 3a 00 00 00 31 00 00 00 7d 00 00 00'
+```
+!!!warning
+    The following functions and operators are not compliant with the SQL
+    standard, and should be considered deprecated. According to the SQL
+    standard, there shall be no `JSON` data type. Instead, JSON values
+    should be represented as string values. The remaining functionality of
+    the following functions is covered by the functions described
+    previously.
 
-::: warning
-::: title
-Warning
-:::
 
-The following functions and operators are not compliant with the SQL
-standard, and should be considered deprecated. According to the SQL
-standard, there shall be no `JSON` data type. Instead, JSON values
-should be represented as string values. The remaining functionality of
-the following functions is covered by the functions described
-previously.
-:::
-
-# Cast to JSON
+### Cast to JSON
 
 The following types can be cast to JSON:
 
@@ -1409,24 +1376,21 @@ the following requirements are met:
 -   `ROW` types can be cast when every field type of the row is a
     supported type.
 
-::: note
-::: title
-Note
-:::
+!!!note
 
-Cast operations with supported `character string types
-<string-data-types>`{.interpreted-text role="ref"} treat the input as a
-string, not validated as JSON. This means that a cast operation with a
-string-type input of invalid JSON results in a succesful cast to invalid
-JSON.
+    Cast operations with supported `character string types
+    <string-data-types>`{.interpreted-text role="ref"} treat the input as a
+    string, not validated as JSON. This means that a cast operation with a
+    string-type input of invalid JSON results in a succesful cast to invalid
+    JSON.
 
-Instead, consider using the `json_parse`{.interpreted-text role="func"}
-function to create validated JSON from a string.
-:::
+    Instead, consider using the `json_parse`{.interpreted-text role="func"}
+    function to create validated JSON from a string.
+
 
 The following examples show the behavior of casting to JSON with these
 types:
-
+```sql
     SELECT CAST(NULL AS JSON);
     -- NULL
 
@@ -1460,13 +1424,13 @@ types:
     SELECT CAST(CAST(ROW(123, 'abc', true) AS
                 ROW(v1 BIGINT, v2 VARCHAR, v3 BOOLEAN)) AS JSON);
     -- JSON '{"v1":123,"v2":"abc","v3":true}'
-
+```
 Casting from NULL to `JSON` is not straightforward. Casting from a
 standalone `NULL` will produce SQL `NULL` instead of `JSON 'null'`.
 However, when casting from arrays or map containing `NULL`s, the
 produced `JSON` will have `null`s in it.
 
-# Cast from JSON
+### Cast from JSON
 
 Casting to `BOOLEAN`, `TINYINT`, `SMALLINT`, `INTEGER`, `BIGINT`,
 `REAL`, `DOUBLE` or `VARCHAR` is supported. Casting to `ARRAY` and `MAP`
@@ -1474,7 +1438,7 @@ is supported when the element type of the array is one of the supported
 types, or when the key type of the map is `VARCHAR` and value type of
 the map is one of the supported types. Behaviors of the casts are shown
 with the examples below:
-
+```sql
     SELECT CAST(JSON 'null' AS VARCHAR);
     -- NULL
 
@@ -1512,12 +1476,13 @@ with the examples below:
     SELECT CAST(JSON '[123,"abc",true]' AS
                 ROW(v1 BIGINT, v2 VARCHAR, v3 BOOLEAN));
     -- {v1=123, v2=abc, v3=true}
+```
 
 JSON arrays can have mixed element types and JSON maps can have mixed
 value types. This makes it impossible to cast them to SQL arrays and
 maps in some cases. To address this, Trino supports partial casting of
 arrays and maps:
-
+```sql
     SELECT CAST(JSON '[[1, 23], 456]' AS ARRAY(JSON));
     -- [JSON '[1,23]', JSON '456']
 
@@ -1526,168 +1491,156 @@ arrays and maps:
 
     SELECT CAST(JSON '[null]' AS ARRAY(JSON));
     -- [JSON 'null']
-
+```
 When casting from `JSON` to `ROW`, both JSON array and JSON object are
 supported.
 
-# Other JSON functions
+## Other JSON functions
 
 In addition to the functions explained in more details in the preceding
 sections, the following functions are available:
 
-::: function
-is_json_scalar(json) -\> boolean
+#### is_json_scalar()
+**is_json_scalar** → boolean
 
 Determine if `json` is a scalar (i.e. a JSON number, a JSON string,
 `true`, `false` or `null`):
-
+```sql
     SELECT is_json_scalar('1');         -- true
     SELECT is_json_scalar('[1, 2, 3]'); -- false
-:::
+```
 
-::: function
-json_array_contains(json, value) -\> boolean
+#### json_array_contains() 
+**json_array_contains(json, value)** → boolean
 
 Determine if `value` exists in `json` (a string containing a JSON
 array):
-
+```sql
     SELECT json_array_contains('[1, 2, 3]', 2); -- true
-:::
+```
 
-::: function
-json_array_get(json_array, index) -\> json
+#### json_array_get()
+**json_array_get(json_array, index)** → json
 
-::: warning
-::: title
-Warning
-:::
+!!!warning 
 
-The semantics of this function are broken. If the extracted element is a
-string, it will be converted into an invalid `JSON` value that is not
-properly quoted (the value will not be surrounded by quotes and any
-interior quotes will not be escaped).
+    The semantics of this function are broken. If the extracted element is a
+    string, it will be converted into an invalid `JSON` value that is not
+    properly quoted (the value will not be surrounded by quotes and any
+    interior quotes will not be escaped).
 
-We recommend against using this function. It cannot be fixed without
-impacting existing usages and may be removed in a future release.
-:::
+    We recommend against using this function. It cannot be fixed without
+    impacting existing usages and may be removed in a future release.
 
 Returns the element at the specified index into the `json_array`. The
 index is zero-based:
-
+```sql
     SELECT json_array_get('["a", [3, 9], "c"]', 0); -- JSON 'a' (invalid JSON)
     SELECT json_array_get('["a", [3, 9], "c"]', 1); -- JSON '[3,9]'
-
+```
 This function also supports negative indexes for fetching element
 indexed from the end of an array:
-
+```sql
     SELECT json_array_get('["c", [3, 9], "a"]', -1); -- JSON 'a' (invalid JSON)
     SELECT json_array_get('["c", [3, 9], "a"]', -2); -- JSON '[3,9]'
-
+```
 If the element at the specified index doesn\'t exist, the function
 returns null:
-
+```sql
     SELECT json_array_get('[]', 0);                -- NULL
     SELECT json_array_get('["a", "b", "c"]', 10);  -- NULL
     SELECT json_array_get('["c", "b", "a"]', -10); -- NULL
-:::
+```
 
-::: function
-json_array_length(json) -\> bigint
+
+#### json_array_length()
+**json_array_length** → bigint
 
 Returns the array length of `json` (a string containing a JSON array):
-
+```sql
     SELECT json_array_length('[1, 2, 3]'); -- 3
-:::
+```
 
-::: function
-json_extract(json, json_path) -\> json
+
+**json_extract(json, json_path)** → json
 
 Evaluates the [JSONPath]()-like expression `json_path` on `json` (a
 string containing JSON) and returns the result as a JSON string:
-
+```sql
     SELECT json_extract(json, '$.store.book');
     SELECT json_extract(json, '$.store[book]');
     SELECT json_extract(json, '$.store["book name"]');
-:::
+```
 
-::: function
-json_extract_scalar(json, json_path) -\> varchar
+#### json_extract_scalar()
+**json_extract_scalar(json, json_path)** → varchar
 
-Like `json_extract`{.interpreted-text role="func"}, but returns the
+Like `json_extract`, but returns the
 result value as a string (as opposed to being encoded as JSON). The
 value referenced by `json_path` must be a scalar (boolean, number or
-string). :
-
+string):
+```sql
     SELECT json_extract_scalar('[1, 2, 3]', '$[2]');
     SELECT json_extract_scalar(json, '$.store.book[0].author');
-:::
+```
 
-::: function
-json_format(json) -\> varchar
+#### json_format()
+**json_format(json)** → varchar
 
 Returns the JSON text serialized from the input JSON value. This is
 inverse function to `json_parse`{.interpreted-text role="func"}. :
-
+```sql
     SELECT json_format(JSON '[1, 2, 3]'); -- '[1,2,3]'
     SELECT json_format(JSON '"a"');       -- '"a"'
+```
 
-::: note
-::: title
-Note
-:::
-
-`json_format`{.interpreted-text role="func"} and `CAST(json AS VARCHAR)`
+`json_format` and `CAST(json AS VARCHAR)`
 have completely different semantics.
 
-`json_format`{.interpreted-text role="func"} serializes the input JSON
-value to JSON text conforming to `7159`{.interpreted-text role="rfc"}.
+`json_format` serializes the input JSON
+value to JSON text conforming to `7159`.
 The JSON value can be a JSON object, a JSON array, a JSON string, a JSON
-number, `true`, `false` or `null`. :
-
+number, `true`, `false` or `null`:
+```sql
     SELECT json_format(JSON '{"a": 1, "b": 2}'); -- '{"a":1,"b":2}'
     SELECT json_format(JSON '[1, 2, 3]');        -- '[1,2,3]'
     SELECT json_format(JSON '"abc"');            -- '"abc"'
     SELECT json_format(JSON '42');               -- '42'
     SELECT json_format(JSON 'true');             -- 'true'
     SELECT json_format(JSON 'null');             -- 'null'
-
+```
 `CAST(json AS VARCHAR)` casts the JSON value to the corresponding SQL
 VARCHAR value. For JSON string, JSON number, `true`, `false` or `null`,
 the cast behavior is same as the corresponding SQL type. JSON object and
 JSON array cannot be cast to VARCHAR. :
-
+```sql
     SELECT CAST(JSON '{"a": 1, "b": 2}' AS VARCHAR); -- ERROR!
     SELECT CAST(JSON '[1, 2, 3]' AS VARCHAR);        -- ERROR!
     SELECT CAST(JSON '"abc"' AS VARCHAR);            -- 'abc' (the double quote is gone)
     SELECT CAST(JSON '42' AS VARCHAR);               -- '42'
     SELECT CAST(JSON 'true' AS VARCHAR);             -- 'true'
     SELECT CAST(JSON 'null' AS VARCHAR);             -- NULL
-:::
-:::
+```
 
-::: function
-json_parse(string) -\> json
+#### json_parse()
+**json_parse(string)** → json
 
 Returns the JSON value deserialized from the input JSON text. This is
-inverse function to `json_format`{.interpreted-text role="func"}:
-
+inverse function to `json_format`:
+```sql
     SELECT json_parse('[1, 2, 3]');   -- JSON '[1,2,3]'
     SELECT json_parse('"abc"');       -- JSON '"abc"'
+```
+!!!note
+    `json_parse` and `CAST(string AS JSON)`
+    have completely different semantics.
 
-::: note
-::: title
-Note
-:::
-
-`json_parse`{.interpreted-text role="func"} and `CAST(string AS JSON)`
-have completely different semantics.
-
-`json_parse`{.interpreted-text role="func"} expects a JSON text
-conforming to `7159`{.interpreted-text role="rfc"}, and returns the JSON
+`json_parse` expects a JSON text
+conforming to `7159`, and returns the JSON
 value deserialized from the JSON text. The JSON value can be a JSON
 object, a JSON array, a JSON string, a JSON number, `true`, `false` or
 `null`. :
-
+```sql
     SELECT json_parse('not_json');         -- ERROR!
     SELECT json_parse('["a": 1, "b": 2]'); -- JSON '["a": 1, "b": 2]'
     SELECT json_parse('[1, 2, 3]');        -- JSON '[1,2,3]'
@@ -1695,10 +1648,11 @@ object, a JSON array, a JSON string, a JSON number, `true`, `false` or
     SELECT json_parse('42');               -- JSON '42'
     SELECT json_parse('true');             -- JSON 'true'
     SELECT json_parse('null');             -- JSON 'null'
+```
 
 `CAST(string AS JSON)` takes any VARCHAR value as input, and returns a
 JSON string with its value set to input string. :
-
+```sql
     SELECT CAST('not_json' AS JSON);         -- JSON '"not_json"'
     SELECT CAST('["a": 1, "b": 2]' AS JSON); -- JSON '"[\"a\": 1, \"b\": 2]"'
     SELECT CAST('[1, 2, 3]' AS JSON);        -- JSON '"[1, 2, 3]"'
@@ -1706,17 +1660,17 @@ JSON string with its value set to input string. :
     SELECT CAST('42' AS JSON);               -- JSON '"42"'
     SELECT CAST('true' AS JSON);             -- JSON '"true"'
     SELECT CAST('null' AS JSON);             -- JSON '"null"'
-:::
-:::
+```
 
-::: function
-json_size(json, json_path) -\> bigint
 
-Like `json_extract`{.interpreted-text role="func"}, but returns the size
+#### json_size()
+**json_size(json, json_path)** → bigint
+
+Like `json_extract`, but returns the size
 of the value. For objects or arrays, the size is the number of members,
-and the size of a scalar value is zero. :
-
+and the size of a scalar value is zero:
+```sql
     SELECT json_size('{"x": {"a": 1, "b": 2}}', '$.x');   -- 2
     SELECT json_size('{"x": [1, 2, 3]}', '$.x');          -- 3
     SELECT json_size('{"x": {"a": 1, "b": 2}}', '$.x.a'); -- 0
-:::
+```
