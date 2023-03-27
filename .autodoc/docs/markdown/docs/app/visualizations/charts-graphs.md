@@ -1,0 +1,22 @@
+[View code on GitHub](https://dune.com/blob/master/app\visualizations\charts-graphs.md)
+
+# Charts & Graphs
+
+This technical guide covers how to create different types of graphs and charts using Dune. The guide explains how to create bar charts, area charts, scatter charts, line charts, pie charts, and mixed graphs. It also explains how to configure each visualization option, including chart options, result data, x-axis options, y-axis options, series options, and pie options.
+
+The guide provides examples of each type of graph and explains how to edit each graph type. For instance, the guide explains how to enable or disable the legend for the chart, stack the chart values on top of each other based on the x-axis values, normalize the chart to display percentage values of the chosen data table, and display the individual datapoints inside of the graph.
+
+The guide also explains how to pick the data points that are to be displayed, how to influence how your x-axis data gets displayed, and how to influence how your y-axis data gets displayed. Additionally, the guide explains how to finalize your graph by renaming the "series," changing the chart type, changing the colors, and changing the order of the series.
+
+Finally, the guide explains how to format tick and label formats for numeric values and axis labels in your graphs. It provides a table that shows how to format tick and label formats for different starting values. 
+
+Overall, this technical guide provides a comprehensive overview of how to create different types of graphs and charts using Dune. It is a useful resource for anyone who wants to create visualizations of their data.
+## Questions: 
+ 1. What types of data sources does Dune Docs support for creating charts and graphs?
+- The app technical guide does not provide information on the types of data sources supported by Dune Docs for creating charts and graphs.
+
+2. Can Dune Docs create charts and graphs for real-time data?
+- The app technical guide does not provide information on whether Dune Docs can create charts and graphs for real-time data.
+
+3. Does Dune Docs support customization of chart and graph colors beyond the browser native color selector?
+- The app technical guide does not provide information on whether Dune Docs supports customization of chart and graph colors beyond the browser native color selector.

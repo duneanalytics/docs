@@ -1,0 +1,13 @@
+[View code on GitHub](https://dune.com/tree/master/doc\docs\json\docs\reference\wizard-tools)
+
+The `.autodoc\docs\json\docs\reference\wizard-tools` folder contains a collection of technical guides that focus on providing resources, tools, and examples to help users better understand and utilize the Dune Docs project. These guides cover various aspects of the project, such as Blockchain Explorers, Helpful Dashboards, Wizard Tools, and Utility Queries.
+
+The `blockchain-explorers.md` guide offers an overview of Blockchain Explorers, which are essential tools for Data Analysts/Scientists. It lists the primary web-based explorers for popular blockchains and emphasizes their importance in understanding how certain protocols work and what data is required for queries. For instance, Etherscan is used to explore the Ethereum blockchain, providing real-time data on transactions, blocks, and addresses.
+
+The `helpful-dashboards.md` guide focuses on providing a list of helpful dashboards for users looking to learn new Dune, Data Analytics, and Blockchain Analysis skills. These dashboards are divided into Tutorial Dashboards and Reference Dashboards, each created by different users and offering unique perspectives on learning Dune. For example, the Tips and Tricks for Dune V2 Queries and Visualizations dashboard by @springzhang provides valuable insights for creating queries and visualizations in Dune V2.
+
+The `index.md` guide lists non-Dune tools that wizards use to make their work easier. These tools are useful for learning how each ERC-xxx standard works, understanding the current crypto data ecosystem, auditing smart contracts, and digging into smart contracts to understand their operation and data structure. Some of the tools mentioned include OpenZepplin's ERC-xxx Standards Docs, EVM Handbook, Solidity Visual Developer for VS Code, Deth.net, and ZK Zhao's map of the Crypto Data Landscape.
+
+The `utility-queries.md` guide provides a list of queries that can help users build their own queries. These queries are focused on decoding contracts, starting points for queries, and NFTs. For example, the "Is my Contract decoded yet" queries by @0xBoxer and @chenxiangli are focused on decoding contracts on different networks, which can be useful for developers who want to analyze the contract's data.
+
+Overall, the guides in this folder offer valuable resources and tools for users to better understand and utilize the Dune Docs project. They provide a comprehensive collection of information that can be helpful for analysts who are curious about using the project and want to learn more about its various aspects.

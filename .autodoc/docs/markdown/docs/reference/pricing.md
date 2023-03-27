@@ -1,0 +1,20 @@
+[View code on GitHub](https://dune.com/blob/master/reference\pricing.md)
+
+The Pricing section of the Dune app technical guide provides information on the premium plans offered by Dune and the additional features that come with them. The guide lists the features of the premium plan, including private queries and dashboards, CSV exports, faster executions, no Dune watermarks, and processing for up to six queries at once. The guide also provides a link to the pricing page where users can learn more about the plans and get started. 
+
+The FAQ section of the guide provides answers to general questions about billing history, upgrading, downgrading, or canceling subscriptions, and how billing works when upgrading or downgrading. The guide also explains which query engine will be billed and what to do if users have more questions. 
+
+The Query Execution section of the guide provides information on the performance tiers and the query engine they support. The guide explains the performance difference between tiers and when the rate for additional executions kicks in. The guide also explains how users can limit premium query usage when they have reached their limit to avoid paying extra fees. 
+
+The Features section of the guide provides information on what happens when users add a private query to a public dashboard and whether they can embed private queries on other websites. The guide also explains what happens to watermarks for Elite users. 
+
+Overall, the guide provides a comprehensive overview of the premium plans offered by Dune, how billing works, and the additional features that come with the premium plans. The guide also provides answers to frequently asked questions about billing, query execution, and features.
+## Questions: 
+ 1. What additional features are available with Dune Premium accounts?
+- Dune Premium accounts offer private queries and dashboards, CSV exports, faster executions, no Dune watermarks, and processing for up to 6 queries at once.
+
+2. What is the difference in performance between the pricing tiers?
+- Each tier has 2-4x the amount of computational power of the previous tier, and the higher the tier, the faster queries will run.
+
+3. How does billing work when upgrading or downgrading a subscription?
+- Upgrading immediately resets the billing cycle to the day of the upgrade, while downgrades are applied at the end of the billing cycle. Unused days of the current plan will be refunded pro rata when upgrading.

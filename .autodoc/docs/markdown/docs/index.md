@@ -1,0 +1,22 @@
+[View code on GitHub](https://dune.com/blob/master/index.md)
+
+The Dune Quickstart technical guide is an introductory guide to using Dune, a platform for analyzing blockchain data. The guide is divided into three sections, each with a specific focus. 
+
+The first section explains why it is important to learn how to use Dune. It highlights the challenges of understanding, ingesting, and aggregating blockchain data, and how Dune can help overcome these challenges. The section also emphasizes the benefits of using Dune, such as the ability to perform cross-context analysis and showcase work to a large audience. 
+
+The second section provides a step-by-step guide on how to analyze Web3 data using Dune. It focuses on how to get the weekly USD volume traded by DEXs in the last six months on Ethereum. The section explains how to use the `dex.trades` table, which is a spellbook table that has been put together by hundreds of star analysts in the community, supported by the Dune team. The section also provides a link to the query used in the example and explains how to work with lower-level tables such as raw and decoded tables. 
+
+The third section provides resources and guides for beginners to learn SQL and blockchain basics. It includes links to the Dune Official Getting Started Video Series, Weekly Web3 SQL problems, All Ethereum and SQL Basics, and hackerrank. The section also encourages readers to join the Dune community on Discord and participate in the `#🐥︱beginners` and `#🙋︱query-questions` channels. 
+
+The guide concludes by providing information on how to hire expert freelancers to help with Dune-related projects. 
+
+Overall, the Dune Quickstart technical guide is a comprehensive guide that provides an overview of Dune and how to use it to analyze blockchain data. It is a useful resource for beginners who want to learn how to use Dune and for experienced users who want to expand their knowledge of the platform.
+## Questions: 
+ 1. What kind of blockchain data can be analyzed using Dune? 
+- The app technical guide mentions that Dune can analyze data from various chains including Ethereum, Polygon, Goerli, Optimism, Solana, and Bitcoin. 
+
+2. What are the different types of tables in Dune's database? 
+- The app technical guide mentions that there are spellbook tables, raw tables, and decoded tables. 
+
+3. How can someone leverage a query in future queries using Dune? 
+- The app technical guide mentions that anyone can leverage a query in future queries by tracking the query id, and there is a guide on how to do this mentioned later in the document.

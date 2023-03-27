@@ -1,0 +1,9 @@
+[View code on GitHub](https://dune.com/tree/master/doc\docs\json\docs\reference)
+
+The "Citing Dune" app technical guide, located in the `.autodoc\docs\json\docs\reference` folder, provides instructions on how to correctly reference and cite Dune queries and dashboards. This guide is focused on the app feature of referencing and sharing data on the Dune platform. It is essential for users who want to ensure they are properly crediting the creators of the queries, visualizations, and dashboards they use or mention in their work.
+
+For example, if a user wants to include a Dune visualization in their blog post, they can refer to this guide to learn how to find the creator's username and the dashboard or query name on the Dune platform. The guide provides screenshots to illustrate how to locate this information. Additionally, the guide directs users to another page for more information on how to get embed links for visualizations they want to share.
+
+The guide also highlights the limitations of commercial use of the queries and public dashboard on the Dune platform. It warns against copying, transmitting, modifying, or creating derivative works from the original queries and dashboard. It also prohibits any form of exploiting any portion, use, or access to Dune without the express written permission by Dune.
+
+Overall, the "Citing Dune" app technical guide provides clear instructions on how to properly reference and cite data and visualizations found on the Dune platform. It also emphasizes the importance of respecting the limitations of commercial use of the queries and dashboard on the platform. This guide is a valuable resource for users who want to ensure they are properly crediting the creators of the queries, visualizations, and dashboards they use or mention in their work.

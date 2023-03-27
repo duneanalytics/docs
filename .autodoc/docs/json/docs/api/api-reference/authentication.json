@@ -1,0 +1,7 @@
+{
+  "fileName": "authentication.md",
+  "filePath": "docs\\api\\api-reference\\authentication.md",
+  "url": "https://dune.com/blob/master/api\\api-reference\\authentication.md",
+  "summary": "# Authentication\n\nThis section of the Dune Docs technical guide covers how to authenticate API requests for the Dune API. The guide emphasizes the importance of keeping API keys secure and not sharing them in publicly accessible areas. \n\nTo authenticate requests, the Dune API uses API keys. These keys are used to determine the permissions of private queries and which account to bill for the requests. The guide provides an example of how to add an \"x-dune-api-key\" property to the request header for authentication. This property is required for all request types. \n\nThe guide also includes an example of how to perform authentication with an Execute POST API request using cURL. \n\nOverall, this section of the technical guide is important for developers working with the Dune API to ensure that their requests are properly authenticated and secure.",
+  "questions": "1. What type of authentication does the Dune API use?\n   - The Dune API uses API keys to authenticate requests.\n\n2. What is the purpose of the \"x-dune-api-key\" property in the request header?\n   - The \"x-dune-api-key\" property is used for authentication with the API and is needed on all request types.\n\n3. What precautions should be taken with API keys?\n   - API keys should be kept secure and not shared in publicly accessible areas such as GitHub or client-side code."
+}

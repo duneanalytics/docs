@@ -1,0 +1,22 @@
+[View code on GitHub](https://dune.com/blob/master/data tables\raw\bitcoin\blocks.md)
+
+# Blocks
+
+This section of the app technical guide covers the `bitcoin.blocks` feature of the project. It provides a detailed description of the columns in the `bitcoin.blocks` table, which contains information about each block in the Bitcoin blockchain. 
+
+Each column name is listed along with its corresponding data type and a description of what the column represents. For example, the `time` column represents the time at which the block was mined, while the `height` column represents the block number. 
+
+The guide also includes information about the various rewards associated with mining a block, such as the `mint_reward` and `total_reward`. Additionally, it provides details about the size of the block, the number of transactions it contains, and the difficulty of mining the block. 
+
+Overall, this section of the guide is useful for developers who are working with Bitcoin data and need to understand the structure of the `bitcoin.blocks` table. 
+
+Example: If a developer wants to retrieve information about the size of a particular block, they can query the `size` column in the `bitcoin.blocks` table.
+## Questions: 
+ 1. What is the purpose of the `bitcoin.blocks` table in the Dune Docs app? 
+- The `bitcoin.blocks` table in the Dune Docs app contains information about Bitcoin blocks, including their time, height, hash, transaction count, size, and various rewards.
+
+2. How does the app handle updates to the `bitcoin.blocks` table? 
+- The app technical guide does not provide information on how updates to the `bitcoin.blocks` table are handled.
+
+3. Can the app be used to analyze blocks from other cryptocurrencies besides Bitcoin? 
+- The app technical guide does not provide information on whether the app can be used to analyze blocks from other cryptocurrencies besides Bitcoin.

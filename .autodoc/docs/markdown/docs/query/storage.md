@@ -1,0 +1,27 @@
+[View code on GitHub](https://dune.com/blob/master/query\storage.md)
+
+# Storage
+
+The Storage section of the Dune Docs app technical guide explains the differences and thinking behind the V2 database structure. The guide explains how databases read data from storage into memory to allow that data to be operated on, and how read speed is an essential constraint of databases. The guide then goes on to explain the differences between row-oriented and column-oriented databases, and how Dune V2 runs on column-oriented tables. 
+
+The guide explains that in a row-oriented database, many pages with unneeded data are loaded when querying for one column across thousands or millions of rows. In contrast, column-oriented databases store pages within row groups which partition the data by rows inside the parquet files. Thus, the database is still roughly stored in a row-oriented format, but the individual values are stored in column orientation inside pages. 
+
+The guide also explains that the `min/max` values of strings are oftentimes not very useful, and that the performance cost is mostly relevant for base tables like `ethereum.transactions`, `bnb.logs`, `erc20_ethereum.erc20_evt_transfer`, etc. which contain very large datasets that aren’t pre-filtered. 
+
+The guide provides examples of Dune V2 queries, including querying for transaction hashes and aggregating data over a large amount of logical rows. The guide explains that querying for data across a large amount of logical rows is now much more efficient, and a lot of queries that were formerly impossible due to timing out are now able to be executed. 
+
+Finally, the guide explains that Dune will continue to keep innovating on these datasets and their database architecture to make every query run as fast as possible on V2. If users have any feedback or run into trouble with the new system, they can reach out to the #dune-sql Discord channel or send an email to dunesql-feedback@dune.com. 
+
+Overall, this guide provides a detailed explanation of the differences between row-oriented and column-oriented databases, and how Dune V2 runs on column-oriented tables. The guide also provides examples of Dune V2 queries and explains how the new system is more efficient than the previous system.
+## Questions: 
+ 1. How does the transition to a data lake in Dune V2 and separating storage and compute address the I/O bound challenge in databases?
+    
+    Answer: A blockchain SQL analyst might want to know more about how the transition to a data lake in Dune V2 and separating storage and compute addresses the I/O bound challenge in databases.
+
+2. How does Dune V2's column-oriented database structure differ from traditional row-oriented databases in terms of query speed and efficiency?
+
+    Answer: A blockchain SQL analyst might want to know more about how Dune V2's column-oriented database structure differs from traditional row-oriented databases in terms of query speed and efficiency.
+
+3. How does Dune V2 handle indexing and querying for data stored in strings like `tx_hash` and `address`?
+
+    Answer: A blockchain SQL analyst might want to know more about how Dune V2 handles indexing and querying for data stored in strings like `tx_hash` and `address`.
