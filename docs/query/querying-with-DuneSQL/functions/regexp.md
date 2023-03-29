@@ -32,14 +32,14 @@ with a few notable exceptions:
         Example: `\p{NoncharacterCodePoint}`
 
 #### regexp_count()
-**regexp_count(string, pattern)** → bigint
+**``regexp_count(string, pattern)``** → bigint
 
 Returns the number of occurrence of `pattern` in `string`:
 ```sql
     SELECT regexp_count('1a 2b 14m', '\s*[a-z]+\s*'); -- 3
 ```
 #### regexp_extract_all()
-**regexp_extract_all(string, pattern)** → array(varchar)
+**``regexp_extract_all(string, pattern)``** → array(varchar)
 
 Returns the substring(s) matched by the regular expression `pattern` in
 `string`:
@@ -47,7 +47,7 @@ Returns the substring(s) matched by the regular expression `pattern` in
     SELECT regexp_extract_all('1a 2b 14m', '\d+'); -- [1, 2, 14]
 ```
 
-**regexp_extract_all(string, pattern, group)** → array(varchar)
+**``regexp_extract_all(string, pattern, group)``** → array(varchar)
 
 Finds all occurrences of the regular expression `pattern` in `string`
 and returns the [capturing group number]() `group`:
@@ -56,7 +56,7 @@ and returns the [capturing group number]() `group`:
 ```
 
 #### regexp_extract()
-**regexp_extract(string, pattern)** → varchar
+**``regexp_extract(string, pattern)``** → varchar
 
 Returns the f substring matched by the regular expression `pattern`
 in `string`:
@@ -64,7 +64,7 @@ in `string`:
     SELECT regexp_extract('1a 2b 14m', '\d+'); -- 1
 ```
 
-**regexp_extract(string, pattern, group)** → varchar
+**``regexp_extract(string, pattern, group)``** → varchar
 
 Finds the f occurrence of the regular expression `pattern` in
 `string` and returns the [capturing group number]() `group`:
@@ -73,7 +73,7 @@ Finds the f occurrence of the regular expression `pattern` in
 ```
 
 #### regexp_like()
-**regexp_like(string, pattern)** → boolean
+**``regexp_like(string, pattern)``** → boolean
 
 Evaluates the regular expression `pattern` and determines if it is
 contained within `string`.
@@ -87,7 +87,7 @@ entire string by anchoring the pattern using `^` and `$`:
 ```  
 
 #### regexp_position()
-**regexp_position(string, pattern)** → integer
+**``regexp_position(string, pattern)``** → integer
 
 Returns the index of the f occurrence (counting from 1) of `pattern`
 in `string`. Returns -1 if not found:
@@ -95,7 +95,7 @@ in `string`. Returns -1 if not found:
     SELECT regexp_position('I have 23 apples, 5 pears and 13 oranges', '\b\d+\b'); -- 8
 ```
 
-**regexp_position(string, pattern, start)** → integer
+**``regexp_position(string, pattern, start)``** → integer
 
 Returns the index of the f occurrence of `pattern` in `string`,
 starting from `start` (include `start`). Returns -1 if not found:
@@ -105,7 +105,7 @@ starting from `start` (include `start`). Returns -1 if not found:
 ```
 
 
-**regexp_position(string, pattern, start, occurrence)** → integer
+**``regexp_position(string, pattern, start, occurrence)``** → integer
 
 Returns the index of the nth `occurrence` of `pattern` in `string`,
 starting from `start` (include `start`). Returns -1 if not found:
@@ -116,7 +116,7 @@ starting from `start` (include `start`). Returns -1 if not found:
 ```
 
 #### regexp_replace()
-**regexp_replace(string, pattern)** → varchar
+**``regexp_replace(string, pattern)``** → varchar
 
 Removes every instance of the substring matched by the regular
 expression `pattern` from `string`:
@@ -124,7 +124,7 @@ expression `pattern` from `string`:
     SELECT regexp_replace('1a 2b 14m', '\d+[ab] '); -- '14m'
 
 
-**regexp_replace(string, pattern, replacement)** → varchar
+**``regexp_replace(string, pattern, replacement)``** → varchar
 
 Replaces every instance of the substring matched by the regular
 expression `pattern` in `string` with `replacement`. [Capturing
@@ -136,7 +136,7 @@ included in the replacement by escaping it with a backslash (`\$`):
 ```
 
 
-**regexp_replace(string, pattern, function)** → varchar
+**``regexp_replace(string, pattern, function)``** → varchar
 
 Replaces every instance of the substring matched by the regular
 expression `pattern` in `string` using `function`. The
@@ -149,7 +149,7 @@ parenthesis). :
     SELECT regexp_replace('new york', '(\w)(\w*)', x -> upper(x[1]) || lower(x[2])); --'New York'
 
 #### regexp_split()
-**regexp_split(string, pattern)** → array(varchar)
+**``regexp_split(string, pattern)``** → array(varchar)
 
 Splits `string` using the regular expression `pattern` and returns an
 array. Trailing empty strings are preserved:

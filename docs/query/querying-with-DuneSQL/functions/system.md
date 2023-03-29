@@ -7,6 +7,6 @@ Functions providing information about the Trino cluster system environment. More
 
 ## Function
 
-**version()** -> varchar
+**``version()``** -> varchar
 
 Returns the Trino version used on the cluster. Equivalent to the value of the `node_version` column in the `system.runtime.nodes` table.

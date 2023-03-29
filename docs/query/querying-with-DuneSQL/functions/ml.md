@@ -125,42 +125,42 @@ way to control the training process.
 # Machine learning functions {#machine-learning-functions-1}
 
 #### features()
-**features(double, ...)** → map(bigint, double)  
+**``features(double, ...)``** → map(bigint, double)  
 Returns the map representing the feature vector.
 
 #### learn_classifier()
-**learn_classifier(label, features)** → Classifier
+**``learn_classifier(label, features)``** → Classifier
 
 Returns an SVM-based classifier model, trained with the given label and
 feature data sets.
 
 #### learn_libsvm_classifier()
-**learn_libsvm_classifier(label, features, params)** → Classifier
+**``learn_libsvm_classifier(label, features, params)``** → Classifier
 
 Returns an SVM-based classifier model, trained with the given label and
 feature data sets. You can control the training process by libsvm
 parameters.
 
 #### classify()
-**classify(features, model)** → label
+**``classify(features, model)``** → label
 
 Returns a label predicted by the given classifier SVM model.
 
 #### learn_regressor()
-**learn_regressor(target, features)** → Regressor
+**``learn_regressor(target, features)``** → Regressor
 
 Returns an SVM-based regressor model, trained with the given target and
 feature data sets.
 
 #### learn_libsvm_regressor()
-**learn_libsvm_regressor(target, features, params)** → Regressor
+**``learn_libsvm_regressor(target, features, params)``** → Regressor
 
 Returns an SVM-based regressor model, trained with the given target and
 feature data sets. You can control the training process by libsvm
 parameters.
 
 #### regress()
-**regress(features, model)** → target
+**``regress(features, model)``** → target
 
 Returns a predicted target value by the given regressor SVM model.
 

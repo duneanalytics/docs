@@ -14,14 +14,14 @@ When necessary, values can be explicitly cast to a particular type.
 
 
 #### cast() 
-**cast(value AS type)** → type
+**``cast(value AS type)``** → type
 
 Explicitly cast a value as a type. This can be used to cast a varchar to
 a numeric value type and vice versa.
 
 
 #### try_cast()
-**try_cast(value AS type)** → type
+**``try_cast(value AS type)``** → type
 
 Like `cast`{.interpreted-text role="func"}, but returns null if the cast
 fails.
@@ -29,7 +29,7 @@ fails.
 ### Formatting
 
 #### format()
-**format(format, args\...)** → varchar
+**``format(format, args\...)``** → varchar
 
 Returns a formatted string using the specified [format
 string](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Formatter.html#syntax)
@@ -58,7 +58,7 @@ and arguments:
 ```
 
 #### format_number()
-**format_number(number, decimal_places)** → varchar
+**``format_number(number, decimal_places)``** → varchar
 Returns a formatted string using a unit symbol:
 
     SELECT format_number(123456); -- '123K'
@@ -69,7 +69,7 @@ Returns a formatted string using a unit symbol:
 ### Miscellaneous
 
 #### typeof()
-**typeof(expr)** → varchar
+**``typeof(expr)``** → varchar
 
 Returns the name of the type of the provided expression:
 ```sql

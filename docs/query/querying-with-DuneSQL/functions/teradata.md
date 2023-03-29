@@ -7,12 +7,12 @@ These functions provide compatibility with Teradata SQL.
 ## String functions
 
 #### char2()
-**char2hexint(string)** → varchar
+**``char2hexint(string)``** → varchar
 
 Returns the hexadecimal representation of the UTF-16BE encoding of the string.
 
 #### index()
-**index(string, substring)** → bigint
+**``index(string, substring)``** → bigint
 
 Alias for `strpos` function.
 
@@ -40,17 +40,17 @@ Teradata reference manual, describes the supported format specifiers:
 
 
 #### to_char()
-**to_char(timestamp, format)** → varchar
+**``to_char(timestamp, format)``** → varchar
 
 Formats `timestamp` as a string using `format`.
 
 #### to_timestamp()
-**to_timestamp(string, format)** → timestamp
+**``to_timestamp(string, format)``** → timestamp
 
 Parses `string` into a `TIMESTAMP` using `format`.
 
 #### to_date()
-**to_date(string, format)** → date
+**``to_date(string, format)``** → date
 
 Parses `string` into a `DATE` using `format`.
 

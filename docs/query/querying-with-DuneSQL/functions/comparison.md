@@ -107,12 +107,12 @@ The following types are supported: `DOUBLE`, `BIGINT`, `VARCHAR`,
 `TIMESTAMP`, `TIMESTAMP WITH TIME ZONE`, `DATE`
 
 #### greatest ()
-**greatest(value1, value2, ..., valueN)** →  [same as input]
+**``greatest(value1, value2, ..., valueN)``** →  [same as input]
 
 Returns the largest of the provided values.
 
 #### least ()
-**least(value1, value2, ..., valueN)** →  [same as input]
+**``least(value1, value2, ..., valueN)``** →  [same as input]
 
 Returns the smallest of the provided values.
 

@@ -37,24 +37,24 @@ The `AT TIME ZONE` operator sets the time zone of a timestamp:
 ### Date and time functions
 
 #### current_date
-**current_date**
+**``current_date``**
 
 Returns the current date as of the start of the query.
 #### current_time
-**current_time**
+**``current_time``**
 
 Returns the current time with time zone as of the start of the query.
 
 
 #### current_timestamp
-**current_timestamp**
+**``current_timestamp``**
 
 Returns the current timestamp with time zone as of the start of the
 query, with `3` digits of subsecond precision,
 
 
 #### current_timestamp()
-**current_timestamp(p)**
+**``current_timestamp(p)``**
 
 Returns the current `timestamp with time zone
 as `timestamp-with-time-zone-data-type` of the start of the query, with `p` digits of subsecond precision:
@@ -64,26 +64,26 @@ as `timestamp-with-time-zone-data-type` of the start of the query, with `p` digi
 ```
 
 #### current_timezone()
-**current_timezone()** → varchar
+**``current_timezone()``** → varchar
 
 Returns the current time zone in the format defined by IANA (e.g.,
 `America/Los_Angeles`) or as fixed offset from UTC (e.g., `+08:35`)
 
 
 #### date()
-**date(x)** → date
+**``date(x)``** → date
 
 This is an alias for `CAST(x AS date)`.
 
 
 #### last_day_of_month()
-**last_day_of_month(x)** → date
+**``last_day_of_month(x)``** → date
 
 Returns the last day of the month.
 
 
 #### from_iso8601_timestamp()
-**from_iso8601_timestamp(string)** → timestamp(3) with time zone
+**``from_iso8601_timestamp(string)``** → timestamp(3) with time zone
 
 Parses the ISO 8601 formatted date `string`, optionally with time and
 time zone, into a `timestamp(3) with time zone`. The time defaults to
@@ -100,7 +100,7 @@ time zone, into a `timestamp(3) with time zone`. The time defaults to
 ```
 
 #### from_iso8601_timestamp_nanos()
-**from_iso8601_timestamp_nanos(string)** → timestamp(9) with time zone
+**``from_iso8601_timestamp_nanos(string)``** → timestamp(9) with time zone
 
 Parses the ISO 8601 formatted date and time `string`. The time zone
 defaults to the session time zone:
@@ -113,7 +113,7 @@ defaults to the session time zone:
 ```
 
 #### from_iso8601_date()
-**from_iso8601_date(string)** → date
+**``from_iso8601_date(string)``** → date
 
 Parses the ISO 8601 formatted date `string` into a `date`. The date can
 be a calendar date, a week date using ISO week numbering, or year and
@@ -130,41 +130,41 @@ day of year combined:
 ```
 
 #### at_timezone()
-**at_timezone(timestamp, zone)** → timestamp(p) with time zone
+**``at_timezone(timestamp, zone)``** → timestamp(p) with time zone
 
 Change the time zone component of `timestamp` with precision `p` to
 `zone` while preserving the instant in time.
 
 
 #### with_timezone()
-**with_timezone(timestamp, zone)** → timestamp(p) with time zone
+**``with_timezone(timestamp, zone)``** → timestamp(p) with time zone
 
 Returns a timestamp with time zone from `timestamp` with precision `p`
 and `zone`.
 
 #### from_unixtime()
-**from_unixtime(unixtime)** → timestamp(3) with time zone
+**``from_unixtime(unixtime)``** → timestamp(3) with time zone
 
 Returns the UNIX timestamp `unixtime` as a timestamp with time zone.
 `unixtime` is the number of seconds since `1970-01-01 00:00:00 UTC`.
 
 
 #### from_unixtime()
-**from_unixtime(unixtime, zone)** → timestamp(3) with time zone
+**``from_unixtime(unixtime, zone)``** → timestamp(3) with time zone
 
 Returns the UNIX timestamp `unixtime` as a timestamp with time zone
 using `zone` for the time zone. `unixtime` is the number of seconds
 since `1970-01-01 00:00:00 UTC`.
 
 #### from_unixtime()
-**from_unixtime(unixtime, hours, minutes)** → timestamp(3) with time zone
+**``from_unixtime(unixtime, hours, minutes)``** → timestamp(3) with time zone
 
 Returns the UNIX timestamp `unixtime` as a timestamp with time zone
 using `hours` and `minutes` for the time zone offset. `unixtime` is the
 number of seconds since `1970-01-01 00:00:00` in `double` data type.
 
 #### from_unixtime_nanos()
-**from_unixtime_nanos(unixtime)** → timestamp(9) with time zone
+**``from_unixtime_nanos(unixtime)``** → timestamp(9) with time zone
 
 Returns the UNIX timestamp `unixtime` as a timestamp with time zone.
 `unixtime` is the number of nanoseconds since
@@ -185,25 +185,25 @@ Returns the UNIX timestamp `unixtime` as a timestamp with time zone.
 
 
 #### now()
-**now()** → timestamp(3) with time zone
+**``now()``** → timestamp(3) with time zone
 
 This is an alias for `current_timestamp`.
 
 #### to_iso8601()
-**to_iso8601(x)** → varchar
+**``to_iso8601(x)``** → varchar
 
 Formats `x` as an ISO 8601 string. `x` can be date, timestamp, or
 timestamp with time zone.
 
 
 #### to_milliseconds()
-**to_milliseconds(interval)** → bigint
+**``to_milliseconds(interval)``** → bigint
 
 Returns the day-to-second `interval` as milliseconds.
 
 
 #### to_unixtime()
-**to_unixtime(timestamp)** → double
+**``to_unixtime(timestamp)``** → double
 
 Returns `timestamp` as a UNIX timestamp.
 
@@ -227,7 +227,7 @@ The above examples use the timestamp `2001-08-22 03:04:05.321` as the
 input.
 
 #### date_trunc()
-**date_trunc(unit, x)** → \[same as input\]
+**``date_trunc(unit, x)``** → \[same as input\]
 
 Returns `x` truncated to `unit`:
 ```sql
@@ -258,7 +258,7 @@ The functions in this section support the following interval units:
 | `year`        | Years                   |
 
 #### date_add()
-**date_add(unit, value, timestamp)** → same as input
+**``date_add(unit, value, timestamp)``** → same as input
 
 Adds an interval `value` of type `unit` to `timestamp`. Subtraction can
 be performed by using a negative value:
@@ -274,7 +274,7 @@ be performed by using a negative value:
 ```
 
 #### date_diff()
-**date_diff(unit, timestamp1, timestamp2)** → bigint
+**``date_diff(unit, timestamp1, timestamp2)``** → bigint
 
 Returns `timestamp2 - timestamp1` expressed in terms of `unit`:
 ```sql
@@ -310,7 +310,7 @@ The `parse_duration` function supports the following units:
 
 
 #### parse_duration()
-**parse_duration(string)** → interval
+**``parse_duration(string)``** → interval
 
 Parses `string` of format `value unit` into an interval, where `value`
 is fractional number of `unit` values:
@@ -327,7 +327,7 @@ is fractional number of `unit` values:
 
 
 #### human_readable_seconds()
-**human_readable_seconds(double)** → varchar
+**``human_readable_seconds(double)``** → varchar
 
 Formats the double value of `seconds` into a human readable string
 containing `weeks`, `days`, `hours`, `minutes`, and `seconds`:
@@ -392,7 +392,7 @@ The following specifiers are not currently supported:
 
 
 
-**date_format(timestamp, format)** → varchar
+**``date_format(timestamp, format)``** → varchar
 
 Formats `timestamp` as a string using `format`:
 ```sql
@@ -400,7 +400,7 @@ Formats `timestamp` as a string using `format`:
     -- 10-20-2022 05
 ```
 
-**date_parse(string, format)** → timestamp
+**``date_parse(string, format)``** → timestamp
 
 Parses `string` into a timestamp using `format`:
 ```sql
@@ -415,12 +415,12 @@ with JodaTime\'s
 pattern format.
 
 #### format_datetime()
-**format_datetime(timestamp, format)** → varchar
+**``format_datetime(timestamp, format)``** → varchar
 
 Formats `timestamp` as a string using `format`.
 
 #### parse_datetime()
-**parse_datetime(string, format)** → timestamp
+**``parse_datetime(string, format)``** → timestamp
 
 Parses `string` into a timestamp with time zone using `format`.
 
@@ -452,7 +452,7 @@ The `extract` function supports the following fields:
 The types supported by the `extract` function vary depending on the
 field to be extracted. Most fields support all date and time types.
 
-**extract(field FROM x)** → bigint
+**``extract(field FROM x)``** → bigint
 
 Returns `field` from `x`:
 ```sql
@@ -466,98 +466,98 @@ Returns `field` from `x`:
 ### Convenience extraction functions
 
 #### day()
-**day(x)** → bigint
+**``day(x)``** → bigint
 
 
 Returns the day of the month from `x`.
 
 #### day_of_month()
-**day_of_month(x)** → bigint
+**``day_of_month(x)``** → bigint
 
 This is an alias for `day`.
 
 #### day_of_week()
-**day_of_week(x)** → bigint
+**``day_of_week(x)``** → bigint
 
 Returns the ISO day of the week from `x`. The value ranges from `1` (Monday) to `7` (Sunday).
 
 #### day_of_year()
-**day_of_year(x)** → bigint
+**``day_of_year(x)``** → bigint
 
 Returns the day of the year from `x`. The value ranges from `1` to `366`.
 
 #### dow()
-**dow(x)** → bigint
+**``dow(x)``** → bigint
 
 This is an alias for `day_of_week`.
 
 #### doy()
-**doy(x)** → bigint
+**``doy(x)``** → bigint
 
 This is an alias for `day_of_year`.
 
 #### hour()
-**hour(x)** → bigint
+**``hour(x)``** → bigint
 
 Returns the hour of the day from `x`. The value ranges from `0` to `23`.
 
 #### millisecond()
-**millisecond(x)** → bigint
+**``millisecond(x)``** → bigint
 
 Returns the millisecond of the second from `x`.
 
 #### minute()
-**minute(x)** → bigint
+**``minute(x)``** → bigint
 
 Returns the minute of the hour from `x`.
 
 #### month()
-**month(x)** → bigint
+**``month(x)``** → bigint
 
 Returns the month of the year from `x`.
 
 #### quarter()
-**quarter(x)** → bigint
+**``quarter(x)``** → bigint
 
 Returns the quarter of the year from `x`. The value ranges from `1` to `4`.
 
 #### second()
-**second(x)** → bigint
+**``second(x)``** → bigint
 
 Returns the second of the minute from `x`.
 
 #### timezone_hour()
-**timezone_hour(timestamp)** → bigint
+**``timezone_hour(timestamp)``** → bigint
 
 Returns the hour of the time zone offset from `timestamp`.
 
 #### timezone_minute()
-**timezone_minute(timestamp)** → bigint
+**``timezone_minute(timestamp)``** → bigint
 
 Returns the minute of the time zone offset from `timestamp`.
 
 #### week()
-**week(x)** → bigint
+**``week(x)``** → bigint
 
 Returns the [ISO week]() of the year from `x`. The value ranges from `1` to `53`.
 
 #### week_of_year()
-**week_of_year(x)** → bigint
+**``week_of_year(x)``** → bigint
 
 This is an alias for `week`.
 
 #### year()
-**year(x)** → bigint
+**``year(x)``** → bigint
 
 Returns the year from `x`.
 
 #### year_of_week()
-**year_of_week(x)** → bigint
+**``year_of_week(x)``** → bigint
 
 Returns the year of the [ISO week]() from `x`.
 
 #### yow()
-**yow(x)** → bigint
+**``yow(x)``** → bigint
 
 This is an alias for `year_of_week`.
 

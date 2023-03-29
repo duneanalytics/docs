@@ -12,18 +12,18 @@ key from a map:
 ## Map functions
 
 #### cardinality()
-**cardinality(x)** → bigint
+**``cardinality(x)``** → bigint
 
 Returns the cardinality (size) of the map `x`.
 
 #### element_at()
-**element_at(map(K,V), key)** → V
+**``element_at(map(K,V), key)``** → V
 
 Returns value for given `key`, or `NULL` if the key is not contained in
 the map.
 
 #### map()
-**map()** → map(unknown, unknown)
+**``map()``** → map(unknown, unknown)
 
 Returns an empty map:
 ```sql
@@ -31,7 +31,7 @@ Returns an empty map:
     -- {}
 ```
 
-**map(array(K), array(V))** → map(K,V)
+**``map(array(K), array(V))``** → map(K,V)
 
 
 Returns a map created using the given key/value arrays:
@@ -43,7 +43,7 @@ See also `map_agg` and `multimap_agg` for creating a map as an aggregation.
 
 
 #### map_from_entries()
-**map_from_entries(array(row(K,V)))** → map(K,V)
+**``map_from_entries(array(row(K,V)))``** → map(K,V)
 
 Returns a map created from the given array of entries:
 ```sql
@@ -52,7 +52,7 @@ Returns a map created from the given array of entries:
 ```
 
 #### multimap_from_entries()
-**multimap_from_entries(array(row(K,V)))** → map(K,array(V))
+**``multimap_from_entries(array(row(K,V)))``** → map(K,array(V))
 
 Returns a multimap created from the given array of entries. Each key can
 be associated with multiple values:
@@ -62,7 +62,7 @@ be associated with multiple values:
 ```
 
 #### map_entries()
-**map_entries(map(K,V))** → array(row(K,V))
+**``map_entries(map(K,V))``** → array(row(K,V))
 
 Returns an array of all entries in the given map:
 ```sql
@@ -71,7 +71,7 @@ Returns an array of all entries in the given map:
 ```
 
 #### map_concat()
-**map_concat(map1(K,V), map2(K,V), ..., mapN(K,V))** → map(K,V)
+**``map_concat(map1(K,V), map2(K,V), ..., mapN(K,V))``** → map(K,V)
 
 Returns the union of all the given maps. If a key is found in multiple
 given maps, that key\'s value in the resulting map comes from the last
@@ -79,7 +79,7 @@ one of those maps.
 
 
 #### map_filter()
-**map_filter(map(K,V), function(K,V,boolean))** → map(K,V)
+**``map_filter(map(K,V), function(K,V,boolean))``** → map(K,V)
 
 Constructs a map from those entries of `map` for which `function`
 returns true:
@@ -97,17 +97,17 @@ returns true:
 ```
 
 #### map_keys()
-**map_keys(x(K,V))** → array(K)
+**``map_keys(x(K,V))``** → array(K)
 
 Returns all the keys in the map `x`.
 
 #### map_values()
-**map_values(x(K,V))** → array(V)
+**``map_values(x(K,V))``** → array(V)
 
 Returns all the values in the map `x`.
 
 #### map_zip_with()
-**map_zip_with(map(K,V1), map(K,V2), function(K,V1,V2,V3))** → map(K,V3)
+**``map_zip_with(map(K,V1), map(K,V2), function(K,V1,V2,V3))``** → map(K,V3)
 
 Merges the two given maps into a single map by applying `function` to
 the pair of values with the same key. For keys only presented in one
@@ -130,7 +130,7 @@ map, NULL will be passed as the value for the missing key:
 ```
 
 #### transform_keys()
-**transform_keys(map(K1,V), function(K1,V,K2))** → map(K2,V)
+**``transform_keys(map(K1,V), function(K1,V,K2))``** → map(K2,V)
 
 
 Returns a map that applies `function` to each entry of `map` and
@@ -157,7 +157,7 @@ transforms the keys:
 ```
 
 #### transform_values()
-**transform_values(map(K,V1), function(K,V1,V2))** → map(K,V2)
+**``transform_values(map(K,V1), function(K,V1,V2))``** → map(K,V2)
 
 Returns a map that applies `function` to each entry of `map` and
 transforms the values:

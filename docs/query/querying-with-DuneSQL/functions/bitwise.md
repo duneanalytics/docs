@@ -3,7 +3,7 @@ title: Bitwise
 ---
 
 #### bit_count()
-**bit_count(x, bits)** → bigint
+**``bit_count(x, bits)``** → bigint
 Count the number of bits set in x (treated as bits-bit signed integer) in 2’s complement representation:
 ```sql
 SELECT bit_count(9, 64); -- 2
@@ -12,14 +12,14 @@ SELECT bit_count(-7, 64); -- 62
 SELECT bit_count(-7, 8); -- 6
 ```
 #### bitwise_and()
-**bitwise_and(x, y)** → bigint
+**``bitwise_and(x, y)``** → bigint
 Returns the bitwise AND of x and y in 2’s complement representation.
 
 Bitwise AND of 19 (binary: 10011) and 25 (binary: 11001) results in 17 (binary: 10001):
 ```sql
 SELECT bitwise_and(19,25); -- 17
 ```
-**bitwise_not(x)** → bigint
+**``bitwise_not(x)``** → bigint
 
 Returns the bitwise NOT of x in 2’s complement representation (NOT x = -x - 1):
 
@@ -29,7 +29,7 @@ SELECT bitwise_not(19);  -- -20
 SELECT bitwise_not(25);  -- -26
 ```
 #### bitwise_or()
-**bitwise_or(x, y)** → bigint
+**``bitwise_or(x, y)``** → bigint
 
 Returns the bitwise OR of x and y in 2’s complement representation.
 
@@ -39,7 +39,7 @@ SELECT bitwise_or(19,25); -- 27
 ```
 
 #### bitwise_xor()
-**bitwise_xor(x, y)** → bigint
+**``bitwise_xor(x, y)``** → bigint
 
 Returns the bitwise XOR of x and y in 2’s complement representation.
 
@@ -49,7 +49,7 @@ SELECT bitwise_xor(19,25); -- 10
 ```
 
 #### bitwise_left_shift()
-**bitwise_left_shift(value, shift)** → [same as value]
+**``bitwise_left_shift(value, shift)``** → [same as value]
 Returns the left shifted value of value.
 
 Shifting 1 (binary: 001) by two bits results in 4 (binary: 00100):
@@ -72,7 +72,7 @@ SELECT bitwise_left_shift(0, 2); -- 0
 ```
 
 #### bitwise_right_shift()
-**bitwise_right_shift(value, shift)** → [same as value]
+**``bitwise_right_shift(value, shift)``** → [same as value]
 
 Returns the logical right shifted value of value.
 
@@ -106,7 +106,7 @@ SELECT bitwise_right_shift(0, 2); -- 0
 ```
 
 #### bitwise_right_shift_arithmetic()
-**bitwise_right_shift_arithmetic(value, shift)** → [same as value]
+**``bitwise_right_shift_arithmetic(value, shift)``** → [same as value]
 
 Returns the arithmetic right shifted value of value.
 

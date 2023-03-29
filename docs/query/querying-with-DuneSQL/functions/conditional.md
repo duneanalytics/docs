@@ -53,13 +53,13 @@ returned if it exists, otherwise null is returned. Example:
 The `IF` expression has two forms, one supplying only a `true_value` and
 the other supplying both a `true_value` and a `false_value`:
 
-**if(condition, true_value)**
+**``if(condition, true_value)``**
 
 Evaluates and returns `true_value` if `condition` is true, otherwise
 null is returned and `true_value` is not evaluated.
 
 
-**if(condition, true_value, false_value)**
+**``if(condition, true_value, false_value)``**
 
 Evaluates and returns `true_value` if `condition` is true, otherwise
 evaluates and returns `false_value`.
@@ -88,20 +88,20 @@ FROM tpch.sf1.orders;
 
 ### COALESCE {#coalesce_function}
 
-**coalesce(value1, value2\[, \...\])**
+**``coalesce(value1, value2\[, \...\])``**
 
 Returns the f non-null `value` in the argument list. Like a `CASE`
 expression, arguments are only evaluated if necessary.
 
 ### NULLIF
 
-**nullif(value1, value2)**
+**``nullif(value1, value2)``**
 
 Returns null if `value1` equals `value2`, otherwise returns `value1`.
 
 ### TRY
 
-**try(expression)**
+**``try(expression)``**
 
 Evaluate an expression and handle certain types of errors by returning
 `NULL`.
@@ -117,7 +117,7 @@ The following errors are handled by `TRY`:
 -   Invalid cast or function argument
 -   Numeric value out of range
 
-**Examples**
+**``Examples``**
 
 Source table with some invalid data:
 

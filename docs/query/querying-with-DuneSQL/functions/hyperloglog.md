@@ -51,24 +51,24 @@ Examples:
 ### Functions
 
 #### approx_set()
-**approx_set(x)** → HyperLogLog
+**``approx_set(x)``** → HyperLogLog
 
 Returns the `HyperLogLog` sketch of the input data set of `x`. This data
 sketch underlies `approx_distinct` and can be stored and used later by calling `cardinality()`.
 
 #### cardinality()
-**cardinality(hll)** → bigint
+**``cardinality(hll)``** → bigint
 
 This will perform `approx_distinct` on
 the data summarized by the `hll` HyperLogLog data sketch.
 
 
 #### empty_hll()
-**empty_hll()** → HyperLogLog
+**``empty_hll()``** → HyperLogLog
 
 Returns an empty `HyperLogLog`.
 
 #### merge()
-**merge(hyperloglog)** → HyperLogLog
+**``merge(hyperloglog)``** → HyperLogLog
 Returns the `HyperLogLog` of the aggregate union of the individual `hll`
 HyperLogLog structures.

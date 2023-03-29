@@ -62,7 +62,7 @@ SELECT id1,
 FROM setdigest_side_by_side
 ORDER BY id1, id2;
 ```
-**Results**:  
+Results:  
 
 | id1 | id2 | intersection_cardinality | jaccard_index |
 |-----|-----|--------------------------|---------------|
@@ -107,7 +107,7 @@ This allows them to be stored for later use.
 ## Functions
 
 #### make_set_digest()
-**make_set_digest(x)** → setdigest
+**``make_set_digest(x)``** → setdigest
 
 Composes all input values of `x` into a `setdigest`.
 
@@ -123,7 +123,7 @@ Create a `setdigest` corresponding to a `varchar` array:
 
 
 #### merge_set_digest()
-**merge_set_digest(setdigest, setdigest)** → setdigest
+**``merge_set_digest(setdigest, setdigest)``** → setdigest
 
 
 Returns the `setdigest` of the aggregate union of the individual
@@ -140,7 +140,7 @@ Examples:
 ```
 
 #### intersection_cardinality()
-**intersection_cardinality(x,y)** → long
+**``intersection_cardinality(x,y)``** → long
 
 Returns the estimation for the cardinality of the intersection of the
 two set digests.
@@ -155,7 +155,7 @@ Examples:
 ```
 
 #### jaccard_index()
-**jaccard_index(x, y)** → double
+**``jaccard_index(x, y)``** → double
 
 Returns the estimation of [Jaccard
 index](https://en.wikipedia.org/wiki/Jaccard_index) for the two set
@@ -171,7 +171,7 @@ Examples:
 ```
 
 #### hash_counts()
-**hash_counts(x)** → map(bigint, bigint)
+**``hash_counts(x)``** → map(bigint, bigint)
 
 Returns a map containing the
 [Murmur3Hash128](https://en.wikipedia.org/wiki/MurmurHash#MurmurHash3)

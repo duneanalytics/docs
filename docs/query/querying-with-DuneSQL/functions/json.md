@@ -1501,7 +1501,7 @@ In addition to the functions explained in more details in the preceding
 sections, the following functions are available:
 
 #### is_json_scalar()
-**is_json_scalar** → boolean
+**``is_json_scalar``** → boolean
 
 Determine if `json` is a scalar (i.e. a JSON number, a JSON string,
 `true`, `false` or `null`):
@@ -1511,7 +1511,7 @@ Determine if `json` is a scalar (i.e. a JSON number, a JSON string,
 ```
 
 #### json_array_contains() 
-**json_array_contains(json, value)** → boolean
+**``json_array_contains(json, value)``** → boolean
 
 Determine if `value` exists in `json` (a string containing a JSON
 array):
@@ -1520,7 +1520,7 @@ array):
 ```
 
 #### json_array_get()
-**json_array_get(json_array, index)** → json
+**``json_array_get(json_array, index)``** → json
 
 !!!warning 
 
@@ -1554,7 +1554,7 @@ returns null:
 
 
 #### json_array_length()
-**json_array_length** → bigint
+**``json_array_length``** → bigint
 
 Returns the array length of `json` (a string containing a JSON array):
 ```sql
@@ -1562,7 +1562,7 @@ Returns the array length of `json` (a string containing a JSON array):
 ```
 
 
-**json_extract(json, json_path)** → json
+**``json_extract(json, json_path)``** → json
 
 Evaluates the [JSONPath]()-like expression `json_path` on `json` (a
 string containing JSON) and returns the result as a JSON string:
@@ -1573,7 +1573,7 @@ string containing JSON) and returns the result as a JSON string:
 ```
 
 #### json_extract_scalar()
-**json_extract_scalar(json, json_path)** → varchar
+**``json_extract_scalar(json, json_path)``** → varchar
 
 Like `json_extract`, but returns the
 result value as a string (as opposed to being encoded as JSON). The
@@ -1585,7 +1585,7 @@ string):
 ```
 
 #### json_format()
-**json_format(json)** → varchar
+**``json_format(json)``** → varchar
 
 Returns the JSON text serialized from the input JSON value. This is
 inverse function to `json_parse`{.interpreted-text role="func"}. :
@@ -1623,7 +1623,7 @@ JSON array cannot be cast to VARCHAR. :
 ```
 
 #### json_parse()
-**json_parse(string)** → json
+**``json_parse(string)``** → json
 
 Returns the JSON value deserialized from the input JSON text. This is
 inverse function to `json_format`:
@@ -1664,7 +1664,7 @@ JSON string with its value set to input string. :
 
 
 #### json_size()
-**json_size(json, json_path)** → bigint
+**``json_size(json, json_path)``** → bigint
 
 Like `json_extract`, but returns the size
 of the value. For objects or arrays, the size is the number of members,

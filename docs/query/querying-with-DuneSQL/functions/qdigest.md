@@ -14,36 +14,36 @@ and retrieval they may be cast to/from `VARBINARY`.
 ## Functions
 
 #### merge()
-**merge(qdigest)** → qdigest
+**``merge(qdigest)``** → qdigest
 
 Merges all input `qdigest`s into a single `qdigest`.
 
 #### values_at_quantile()
-**value_at_quantile(qdigest(T), quantile)** → T
+**``value_at_quantile(qdigest(T), quantile)``** → T
 
 Returns the approximate percentile value from the quantile digest given
 the number `quantile` between 0 and 1.
 
 #### values_at_quantiles()
-**values_at_quantiles(qdigest(T), quantiles)** → array(T)
+**``values_at_quantiles(qdigest(T), quantiles)``** → array(T)
 
 Returns the approximate percentile values as an array given the input
 quantile digest and array of values between 0 and 1 which represent the
 quantiles to return.
 
 #### qdigest_agg()
-**qdigest_agg(x)** → qdigest(same as x)
+**``qdigest_agg(x)``** → qdigest(same as x)
 
 Returns the `qdigest` which is composed of all input values of `x`.
 
 #### qdigest_agg()
-**qdigest_agg(x, w)** → qdigest(same as x)
+**``qdigest_agg(x, w)``** → qdigest(same as x)
 
 Returns the `qdigest` which is composed of all input values of `x` using
 the per-item weight `w`.
 
 #### qdigest_agg()
-**qdigest_agg(x, w, accuracy)** → qdigest(same as x)
+**``qdigest_agg(x, w, accuracy)``** → qdigest(same as x)
 
 Returns the `qdigest` which is composed of all input values of `x` using
 the per-item weight `w` and maximum error of `accuracy`. `accuracy` must
