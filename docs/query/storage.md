@@ -3,6 +3,11 @@ title: Storage
 description: Learn more about the differences and thinking behind our V2 database structure.
 ---
 
+!!!note 
+    This section should probably be rewritten into "how to write efficient queries" or something like that.
+    The data layout is relevant in this context, but the focus should be on how to write efficient queries.
+
+
 On a very high level, databases read data from storage into memory in order to allow that data to be operated on, in our case to transform and return blockchain data according to your Dune query’s logic. 
 
 Read speed, the time it takes to load data from storage to memory, is an essential constraint of databases. In computer science this is referred to as [I/O bound](https://en.wikipedia.org/wiki/I/O_bound), and it’s one of the main challenges we are looking to tackle with our transition to a data lake in Dune V2 and separating storage and compute.
@@ -99,16 +104,13 @@ This allows us to utilize the `min/max` values for the `account_keys` when build
 
 Equipped with the above knowledge, let's look at how some Queries on Dune V2 work.
 
-!!! note
-    These examples are written in Spark SQL.
-
 ### Querying for transaction hashes
 
 ```sql
 
 Select * from ethereum.transactions
 
-where hash = '0xce1f1a2dd0c10fcf9385d14bc92c686c210e4accf00a3fe7ec2b5db7a5499cff'
+where hash = 0xce1f1a2dd0c10fcf9385d14bc92c686c210e4accf00a3fe7ec2b5db7a5499cff
 
 ```
 
@@ -132,7 +134,7 @@ Select * from ethereum.transactions
 
 where block_number = 14854616
 
-and hash = '0xce1f1a2dd0c10fcf9385d14bc92c686c210e4accf00a3fe7ec2b5db7a5499cff'
+and hash = 0xce1f1a2dd0c10fcf9385d14bc92c686c210e4accf00a3fe7ec2b5db7a5499cff
 
 ```
 

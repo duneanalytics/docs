@@ -1,27 +1,48 @@
 ---
-title: Query Overview
+title: DuneSQL
 description: Dune utilizes a fork of TrinoSQL to power DuneSQL. DuneSQL is a custom built query engine that is optimized for blockchain data.   
 ---
 
-Querying for data on Dune is done using DuneSQL, a custom built query engine that is optimized for blockchain data. DuneSQL is a fork of [TrinoSQL](https://trino.io), an open source distributed SQL query engine for big data, to which we have added blockchain specific optimizations. TrinoSQL utilizes parquet files as its storage format, which is a columnar storage format that is optimized for fast reads. DuneSQL features an ANSI compliant SQL dialect. 
-## Querying using DuneSQL
-DuneSQL provides a crypto native SQL experience. Since DuneSQL is based on TrinoSQL, much of the same rules and syntax apply. However, there are several differences that are important to note. DuneSQL supports blockchain varbinary data types, which are used to store addresses, hashes, and other encoded data. Additionally, DuneSQL natively supports unint256 and int256 data types, which are used to store large numbers in blockchain data. For both of these data types, DuneSQL provides a set of functions that allow you to easily work with them. 
+## DuneSQL: Query Engine for Blockchain Data
 
-You can learn about querying using DuneSQL in the [DuneSQL](DuneSQL.md) section.
-## Storage
-DuneSQL utilizes a columnar storage format, which is a storage format that is optimized for fast reads. In a columnar storage format, data is stored in columns instead of rows. This allows for fast reads of a single column, which is useful for aggregations and filters. To write efficient DuneSQL queries, it is important to understand how data is stored in DuneSQL.  
+DuneSQL is a custom-built query engine designed for efficient analysis of blockchain data. Based on the open-source TrinoSQL engine, it incorporates additional optimizations to handle blockchain-specific requirements.
 
-You can learn more about the database layout and how to query it in the [Storage](storage.md) section.
-## Other questions and feedback
+### DuneSQL Features
 
-Google and ChatAIs are a great friend in answering your SQL questions.
+DuneSQL offers several useful features for working with blockchain data:
 
-Since DuneSQL is built on Trino googling for e.g. “Trino SQL median” should most likely get you the answer you need. 
+1. **[Blockchain varbinary data types](DuneSQL-reference/SQL-language/datatypes.md#varbinary)**: Designed for storing addresses, hashes, and other encoded data.
+2. **[Native support for uint256 and int256 data types](DuneSQL-reference/SQL-language/datatypes.md#UINT256)**: Ideal for handling large numbers commonly found in blockchain data, with built-in functions for ease of use.
+3. **[Columnar storage format](storage.md)** Optimized for fast reads, this format organizes data in columns rather than rows, enabling quick access to single columns for aggregation or filtering.
+4. **[Querying a query](query-a-query.md)**: DuneSQL allows you to query a query, which is great for creating reusable queries, building up complex queries, and reusing queries as views.
 
-Trino also has a great documentation site that is worth checking out:
+### Using DuneSQL
 
-* [Trino - Functions and Operators](https://trino.io/docs/current/functions.html)
+DuneSQL is our query engine for blockchain data. It is a fork of TrinoSQL, which is an open-source, distributed SQL query engine for running interactive analytic queries against data sources of all sizes ranging from gigabytes to petabytes.
 
-Our [#dune-sql Discord channel](https://discord.gg/dunecom) is the best place to get help from our team and Wizard community when Google fails you.
+We have created extensive documentation for DuneSQL, which you can find in the [DuneSQL Reference](DuneSQL-reference/index.md) section of our documentation. Here you will be able to find:
 
-As you come across issues or identify areas of improvement, please send us an email at [dunesql-feedback@dune.com](mailto:dunesql-feedback@dune.com) and we’ll work with you to update and optimize!
+- [SQL statement reference](DuneSQL-reference/SQL-statement-syntax/index.md)
+- [SQL language reference](DuneSQL-reference/SQL-language/index.md)
+- [Functions and operators](DuneSQL-reference/Functions-and-operators/index.md)
+
+docs/query/DuneSQL-reference/SQL-language/index.md
+
+### [Understanding DuneSQL Storage](storage.md)
+
+An efficient query-writing process requires knowledge of how data is stored in DuneSQL. For details on the database layout and querying techniques, consult the [Storage section](storage.md) of our documentation.
+
+### Resources and Support
+
+For assistance with DuneSQL, consider the following resources:
+
+- Google search for TrinoSQL-related queries
+- Talk to your favorite AI assistant about TrinoSQL-related questions
+- [the official Trino docs - Functions and Operators](https://trino.io/docs/current/functions.html)
+
+Join our #dune-sql Discord channel to connect with our team and the community for help and support.
+
+### Feedback and Suggestions
+
+We appreciate your feedback and suggestions for improvement. Please email us at dunesql-feedback@dune.com with any concerns or ideas for optimization.
+
