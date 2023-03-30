@@ -5,6 +5,7 @@ description: DuneSQL is a ANSI SQL compliant query engine that follows the stand
 
 !!!note
     Not quite sure what I am going to do with this whole section as we are mostly using very basic Select statements.
+    I think I can summarize this whole section on just one page. 
 
 This chapter describes the SQL syntax used in Trino.
 
