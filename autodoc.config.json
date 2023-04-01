@@ -32,5 +32,6 @@
   "folderPrompt": "Write a detailed explanation of what the guide in this file covers\n and how it mi ght fit into the larger project feature or work with other parts of the project.\n The project feature the file is focused on is contained in the second folder of the file path (either app, api, data tables, or query). \n  Give examples of how this guide might be useful. Include guide examples where appropriate.\n      Be concise. Include any information that may be relevant to analyst who is curious about this using the project.\n       Keep you response under 400 words. Output should be in markdown format.\n      Do not just list the files and folders in this folder.",
   "chatPrompt": "Include general blockchain concept explanations where appropriate.\n",
   "contentType": "app technical guide",
-  "targetAudience": "blockchain SQL analyst"
+  "targetAudience": "blockchain SQL analyst",
+  "linkHosted": true
 }
