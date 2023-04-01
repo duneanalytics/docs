@@ -1,7 +1,7 @@
 {
   "folderName": "examples",
-  "folderPath": ".autodoc/docs/json/docs/data-tables/spellbook/contributing/examples",
-  "url": "https://dune.com/.autodoc/docs/json/docs/data-tables/spellbook/contributing/examples",
+  "folderPath": "docs/data-tables/spellbook/contributing/examples",
+  "url": "https://dune.com/docs/data-tables/spellbook/contributing/examples",
   "files": [
     {
       "fileName": "daily-aggregation.md",

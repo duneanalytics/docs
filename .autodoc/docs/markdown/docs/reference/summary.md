@@ -1,6 +1,6 @@
-[View code on GitHub](https://dune.com/.autodoc/docs/json/docs/reference)
+[View code on GitHub](https://dune.com/docs/reference)
 
-The `.autodoc/docs/json/docs/reference` folder contains a variety of app technical guides that provide essential information for users working with the Dune project. These guides cover topics such as citing Dune, Dune Bounties, events, pricing, and support, among others. They are designed to help users understand various aspects of the Dune platform and how to use its features effectively.
+The `docs/reference` folder contains a variety of app technical guides that provide essential information for users working with the Dune project. These guides cover topics such as citing Dune, Dune Bounties, events, pricing, and support, among others. They are designed to help users understand various aspects of the Dune platform and how to use its features effectively.
 
 For example, the `citing-dune.md` guide is crucial for users who want to correctly reference and cite Dune queries and dashboards. It emphasizes the importance of crediting the creators of the queries, visualizations, and dashboards shared on the platform. The guide provides specific instructions on how to credit the creators, including a direct link to dune.com, a Dune logo, and a reference to the specific creator(s) of the content. This guide is important for users to understand how to properly credit the creators of the content they use and share.
 
@@ -10,4 +10,4 @@ The `events.md` guide covers the Events feature of the Dune app, which is design
 
 The `pricing.md` guide provides detailed information about the pricing feature of the Dune app, including premium accounts, additional features, billing, and query execution. This guide is useful for users who want to learn more about the pricing feature and how to manage their subscriptions.
 
-Overall, the guides in the `.autodoc/docs/json/docs/reference` folder provide concise and relevant information for users who want to understand various aspects of the Dune project. These guides are essential for analysts who are curious about using the project and need clarification on specific features or functionalities.
+Overall, the guides in the `docs/reference` folder provide concise and relevant information for users who want to understand various aspects of the Dune project. These guides are essential for analysts who are curious about using the project and need clarification on specific features or functionalities.

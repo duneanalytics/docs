@@ -1,6 +1,6 @@
-[View code on GitHub](https://dune.com/.autodoc/docs/json/docs/data-tables/community)
+[View code on GitHub](https://dune.com/docs/data-tables/community)
 
-The `.autodoc/docs/json/docs/data-tables/community` folder contains a comprehensive app technical guide for the Community section of the Dune Docs project. This section focuses on providing additional data insights through partnerships with third-party data providers, such as Flashbots and Reservoir. The guide is organized into different sections, each covering a specific aspect of the project, such as availability, purpose, and data providers.
+The `docs/data-tables/community` folder contains a comprehensive app technical guide for the Community section of the Dune Docs project. This section focuses on providing additional data insights through partnerships with third-party data providers, such as Flashbots and Reservoir. The guide is organized into different sections, each covering a specific aspect of the project, such as availability, purpose, and data providers.
 
 For example, the `index.md` file provides an overview of the Community section, its availability on the V2 Engine, and its purpose in providing off-chain data or augmented on-chain data. This guide helps users understand the importance of the Community section and how it can provide additional insights through partnerships with selected organizations.
 

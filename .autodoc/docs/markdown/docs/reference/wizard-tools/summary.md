@@ -1,6 +1,6 @@
-[View code on GitHub](https://dune.com/.autodoc/docs/json/docs/reference/wizard-tools)
+[View code on GitHub](https://dune.com/docs/reference/wizard-tools)
 
-The `.autodoc/docs/json/docs/reference/wizard-tools` folder contains a collection of guides and resources that are essential for data analysts and scientists working with Dune Analytics. These guides cover various aspects of blockchain analysis, data visualization, and query building, providing users with a comprehensive understanding of the tools and techniques used in the field.
+The `docs/reference/wizard-tools` folder contains a collection of guides and resources that are essential for data analysts and scientists working with Dune Analytics. These guides cover various aspects of blockchain analysis, data visualization, and query building, providing users with a comprehensive understanding of the tools and techniques used in the field.
 
 The `blockchain-explorers.md` guide offers an overview of the primary web-based explorers for popular blockchains such as Ethereum, Solana, Arbitrum, and more. These explorers are crucial for understanding how certain protocols work and what data needs to be included in queries. For example, a data analyst can use the Etherscan explorer to retrieve data about transactions, addresses, blocks, and fees on the Ethereum blockchain.
 

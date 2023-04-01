@@ -1,4 +1,4 @@
-[View code on GitHub](https://dune.com/.autodoc/docs/json/docs/data-tables/spellbook/top tables)
+[View code on GitHub](https://dune.com/docs/data-tables/spellbook/top tables)
 
 This folder contains technical guides for various features and tables related to the Dune Docs project, specifically focusing on data tables and their usage. These guides provide detailed explanations, examples, and use cases for working with different aspects of the project, such as decentralized exchange trades, labels, NFT trades, token prices, and token metadata.
 

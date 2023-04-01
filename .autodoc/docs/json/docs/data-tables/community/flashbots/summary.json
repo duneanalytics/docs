@@ -1,7 +1,7 @@
 {
   "folderName": "flashbots",
-  "folderPath": ".autodoc/docs/json/docs/data-tables/community/flashbots",
-  "url": "https://dune.com/.autodoc/docs/json/docs/data-tables/community/flashbots",
+  "folderPath": "docs/data-tables/community/flashbots",
+  "url": "https://dune.com/docs/data-tables/community/flashbots",
   "files": [
     {
       "fileName": "arbitrages.md",

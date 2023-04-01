@@ -1,6 +1,6 @@
-[View code on GitHub](https://dune.com/.autodoc/docs/json/docs/app/queries)
+[View code on GitHub](https://dune.com/docs/app/queries)
 
-The `.autodoc/docs/json/docs/app/queries` folder contains technical guides that focus on the Queries feature of the Dune app. These guides provide comprehensive information on how to use the Query Editor, Data Explorer, and other related features to create effective queries and retrieve data from the blockchain and other sources.
+The `docs/app/queries` folder contains technical guides that focus on the Queries feature of the Dune app. These guides provide comprehensive information on how to use the Query Editor, Data Explorer, and other related features to create effective queries and retrieve data from the blockchain and other sources.
 
 For example, the `data-explorer.md` guide covers the Data Explorer feature, which allows users to search for blockchain and other data to use in their queries. It explains how to select the database, enter keywords, and perform advanced searches in Dune V2 and V1. This guide is useful for users who want to find specific data for their queries and understand the differences between Dune V2 and V1 databases.
 
@@ -16,4 +16,4 @@ The `query-window.md` guide provides a comprehensive overview of the Query windo
 
 Finally, the `tips.md` guide offers useful tips for using queries in the Dune app, covering topics such as using Spells, formatting Ethereum addresses, quoting column and table names, removing decimals, getting time with `date_trunc`, getting USD price, using token symbols, and filtering queries and dashboards with parameters.
 
-Overall, the guides in the `.autodoc/docs/json/docs/app/queries` folder provide valuable information and resources for users who want to become more proficient in using the Queries feature of the Dune app.
+Overall, the guides in the `docs/app/queries` folder provide valuable information and resources for users who want to become more proficient in using the Queries feature of the Dune app.

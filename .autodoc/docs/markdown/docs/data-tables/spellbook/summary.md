@@ -1,4 +1,4 @@
-[View code on GitHub](https://dune.com/.autodoc/docs/json/docs/data-tables/spellbook)
+[View code on GitHub](https://dune.com/docs/data-tables/spellbook)
 
 The `spellbook` folder in the Dune Docs project focuses on the concept of Spells, which are custom tables constructed and maintained by Dune and the community. These tables are designed to make it easier for users to query and analyze blockchain data. The folder contains a main guide, `index.md`, which provides a comprehensive overview of Spells, the Spellbook, and how to contribute to the project. Additionally, there are two subfolders, `contributing` and `top tables`, which contain more specific guides on contributing new Spells and working with various data tables.
 

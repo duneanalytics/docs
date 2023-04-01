@@ -1,6 +1,6 @@
-[View code on GitHub](https://dune.com/.autodoc/docs/json/docs/data-tables/raw/solana)
+[View code on GitHub](https://dune.com/docs/data-tables/raw/solana)
 
-The `.autodoc/docs/json/docs/data-tables/raw/solana` folder contains a comprehensive technical guide for working with Solana's raw data tables. These tables provide valuable insights into various aspects of the Solana blockchain, such as account activity, blocks, rewards, transactions, and vote transactions. This guide is essential for developers and analysts who want to work with Solana's data and understand the structure and contents of these tables.
+The `docs/data-tables/raw/solana` folder contains a comprehensive technical guide for working with Solana's raw data tables. These tables provide valuable insights into various aspects of the Solana blockchain, such as account activity, blocks, rewards, transactions, and vote transactions. This guide is essential for developers and analysts who want to work with Solana's data and understand the structure and contents of these tables.
 
 The `account-activity.md` file covers the `Solana.account_activity` table, which contains information about account usage in transactions. This table can be used to track the usage of a specific account over time and optimize applications based on account activity patterns.
 

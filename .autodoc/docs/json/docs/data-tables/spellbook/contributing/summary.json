@@ -1,7 +1,7 @@
 {
   "folderName": "contributing",
-  "folderPath": ".autodoc/docs/json/docs/data-tables/spellbook/contributing",
-  "url": "https://dune.com/.autodoc/docs/json/docs/data-tables/spellbook/contributing",
+  "folderPath": "docs/data-tables/spellbook/contributing",
+  "url": "https://dune.com/docs/data-tables/spellbook/contributing",
   "files": [
     {
       "fileName": "index.md",
@@ -14,8 +14,8 @@
   "folders": [
     {
       "folderName": "Adding A Spell",
-      "folderPath": ".autodoc/docs/json/docs/data-tables/spellbook/contributing/Adding A Spell",
-      "url": "https://dune.com/.autodoc/docs/json/docs/data-tables/spellbook/contributing/Adding A Spell",
+      "folderPath": "docs/data-tables/spellbook/contributing/Adding A Spell",
+      "url": "https://dune.com/docs/data-tables/spellbook/contributing/Adding A Spell",
       "files": [
         {
           "fileName": "1-do-some-prerequisites and-set-up-Spellbook-dbt.md",
@@ -80,8 +80,8 @@
     },
     {
       "folderName": "examples",
-      "folderPath": ".autodoc/docs/json/docs/data-tables/spellbook/contributing/examples",
-      "url": "https://dune.com/.autodoc/docs/json/docs/data-tables/spellbook/contributing/examples",
+      "folderPath": "docs/data-tables/spellbook/contributing/examples",
+      "url": "https://dune.com/docs/data-tables/spellbook/contributing/examples",
       "files": [
         {
           "fileName": "daily-aggregation.md",

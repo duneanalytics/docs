@@ -1,4 +1,4 @@
-[View code on GitHub](https://dune.com/.autodoc/docs/json/docs/data-tables/spellbook/contributing/examples)
+[View code on GitHub](https://dune.com/docs/data-tables/spellbook/contributing/examples)
 
 This folder contains a series of technical guides focused on the `app` folder of the Dune Docs project, specifically covering the process of tracking daily balances for Ethereum ERC-20 tokens. The guides provide detailed explanations of various features and functionalities, including reformatted transfers, daily aggregation, rolling sum, and final daily balances. These guides are essential for analysts who want to understand the inner workings of the Dune Docs project and how to use it effectively.
 

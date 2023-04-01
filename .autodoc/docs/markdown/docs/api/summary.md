@@ -1,6 +1,6 @@
-[View code on GitHub](https://dune.com/.autodoc/docs/json/docs/api)
+[View code on GitHub](https://dune.com/docs/api)
 
-The `.autodoc/docs/json/docs/api` folder contains a comprehensive set of technical guides and resources for developers working with the Dune Analytics API. These guides cover various aspects of the API, such as authentication, rate limiting, billing, pricing, and functionality, as well as provide quick-start guides for different programming languages.
+The `docs/api` folder contains a comprehensive set of technical guides and resources for developers working with the Dune Analytics API. These guides cover various aspects of the API, such as authentication, rate limiting, billing, pricing, and functionality, as well as provide quick-start guides for different programming languages.
 
 For example, the `index.md` file in this folder serves as a high-level overview of the Dune API, explaining its purpose, how it works, and how to get started with it. This guide is particularly useful for developers who are new to the Dune API and want to understand its capabilities and limitations.
 
@@ -10,4 +10,4 @@ The `api-reference` subfolder contains a collection of technical guides that pro
 
 The `quick-start` subfolder contains a collection of app technical guides that focus on helping users get started with the Dune Analytics API. These guides cover various programming languages and provide step-by-step instructions on how to interact with the API, making it easy for users to fetch data and integrate it into their projects. For example, the `api-js.md` guide provides a detailed walkthrough on how to access the Dune API using JavaScript, demonstrating how to set up the environment, install necessary packages, and call the Dune API using simple and parameterized queries.
 
-Overall, the guides and resources in the `.autodoc/docs/json/docs/api` folder are essential for developers working with the Dune Analytics API. They provide a comprehensive understanding of the API endpoints, common errors, and best practices, helping developers use the API effectively and troubleshoot any issues that may arise.
+Overall, the guides and resources in the `docs/api` folder are essential for developers working with the Dune Analytics API. They provide a comprehensive understanding of the API endpoints, common errors, and best practices, helping developers use the API effectively and troubleshoot any issues that may arise.

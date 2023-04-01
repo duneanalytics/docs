@@ -1,6 +1,6 @@
-[View code on GitHub](https://dune.com/.autodoc/docs/json/docs/query/DuneSQL-reference/SQL-language)
+[View code on GitHub](https://dune.com/docs/query/DuneSQL-reference/SQL-language)
 
-The `.autodoc/docs/json/docs/query/DuneSQL-reference/SQL-language` folder contains a comprehensive guide on various aspects of DuneSQL, a custom-built query engine optimized for blockchain data. This guide is essential for developers and analysts working on the app feature that involves writing SQL queries and understanding the data types supported by DuneSQL.
+The `docs/query/DuneSQL-reference/SQL-language` folder contains a comprehensive guide on various aspects of DuneSQL, a custom-built query engine optimized for blockchain data. This guide is essential for developers and analysts working on the app feature that involves writing SQL queries and understanding the data types supported by DuneSQL.
 
 The `datatypes.md` file provides an in-depth explanation of the various data types used in DuneSQL, such as Boolean, Integer, Floating-point, Fixed-precision, String, Date and time, Structural, Network address, UUID, HyperLogLog, SetDigest, Quantile digest, and T-Digest. This guide is useful for developers who need to understand the properties and functions of each data type when designing database schemas or writing SQL queries.
 

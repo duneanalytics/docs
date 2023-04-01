@@ -1,6 +1,6 @@
-[View code on GitHub](https://dune.com/.autodoc/docs/json/docs/data-tables/raw/bitcoin)
+[View code on GitHub](https://dune.com/docs/data-tables/raw/bitcoin)
 
-The `.autodoc/docs/json/docs/data-tables/raw/bitcoin` folder in the Dune Docs project focuses on providing comprehensive guides for working with raw Bitcoin data. This data is organized into four main categories: Blocks, Transactions, Outputs, and Inputs. Each category has a dedicated markdown file that explains the respective feature in detail, including the available data, data types, and how to access and use the data in the Dune Docs app.
+The `docs/data-tables/raw/bitcoin` folder in the Dune Docs project focuses on providing comprehensive guides for working with raw Bitcoin data. This data is organized into four main categories: Blocks, Transactions, Outputs, and Inputs. Each category has a dedicated markdown file that explains the respective feature in detail, including the available data, data types, and how to access and use the data in the Dune Docs app.
 
 For example, the `blocks.md` file covers the `bitcoin.blocks` feature, which provides information about Bitcoin blocks, such as their time, height, date, hash, transaction count, and size. Developers working with Bitcoin blocks can use this feature to display information about recent Bitcoin blocks in their applications, such as a Bitcoin wallet app.
 

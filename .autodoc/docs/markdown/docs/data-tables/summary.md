@@ -1,6 +1,6 @@
-[View code on GitHub](https://dune.com/.autodoc/docs/json/docs/data-tables)
+[View code on GitHub](https://dune.com/docs/data-tables)
 
-The Decoded Tables guide in the `.autodoc/docs/json/docs/data-tables/decoded` folder focuses on decoding smart contract activity into human-readable tables on the Dune platform. This guide is essential for analysts and developers who want to understand and access the decoded data of smart contracts, events, and function calls on the Dune platform.
+The Decoded Tables guide in the `docs/data-tables/decoded` folder focuses on decoding smart contract activity into human-readable tables on the Dune platform. This guide is essential for analysts and developers who want to understand and access the decoded data of smart contracts, events, and function calls on the Dune platform.
 
 The guide covers the following topics:
 

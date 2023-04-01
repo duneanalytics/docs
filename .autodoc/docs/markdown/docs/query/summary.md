@@ -1,6 +1,6 @@
-[View code on GitHub](https://dune.com/.autodoc/docs/json/docs/query)
+[View code on GitHub](https://dune.com/docs/query)
 
-The `.autodoc/docs/json/docs/query` folder contains a technical guide focused on DuneSQL, a custom-built query engine optimized for blockchain data analysis. This guide is essential for developers and analysts working on app features that involve writing SQL queries and understanding the data types supported by DuneSQL.
+The `docs/query` folder contains a technical guide focused on DuneSQL, a custom-built query engine optimized for blockchain data analysis. This guide is essential for developers and analysts working on app features that involve writing SQL queries and understanding the data types supported by DuneSQL.
 
 For example, a developer working on a feature that requires querying blockchain data can refer to the `dunesql-changes.md` file to understand the migration changes that occurred on March 2nd, 2023, and how to adjust their queries accordingly. The guide provides examples of queries that need to be adjusted and common errors that users may encounter.
 

@@ -1,6 +1,6 @@
-[View code on GitHub](https://dune.com/.autodoc/docs/json/docs/api/api-reference)
+[View code on GitHub](https://dune.com/docs/api/api-reference)
 
-The `.autodoc/docs/json/docs/api/api-reference` folder contains a collection of technical guides that provide comprehensive information on various aspects of the Dune API. These guides are essential for developers working with the Dune Docs project, as they offer detailed explanations, examples, and troubleshooting tips for using the API effectively.
+The `docs/api/api-reference` folder contains a collection of technical guides that provide comprehensive information on various aspects of the Dune API. These guides are essential for developers working with the Dune Docs project, as they offer detailed explanations, examples, and troubleshooting tips for using the API effectively.
 
 The **Authentication** guide (`authentication.md`) focuses on the process of authenticating API requests in the Dune app. It highlights the importance of API keys and provides a method for adding the "x-dune-api-key" property to the request header. This guide is crucial for developers who need to authenticate API requests and ensure the security of their API keys.
 

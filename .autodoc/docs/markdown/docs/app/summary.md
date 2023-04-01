@@ -1,6 +1,6 @@
-[View code on GitHub](https://dune.com/.autodoc/docs/json/docs/app)
+[View code on GitHub](https://dune.com/docs/app)
 
-The `.autodoc/docs/json/docs/app` folder contains technical guides and documentation focused on the Dune app and its various features. These guides are essential for users who want to leverage the full potential of the Dune app, as they provide in-depth explanations and how-to guides for each feature.
+The `docs/app` folder contains technical guides and documentation focused on the Dune app and its various features. These guides are essential for users who want to leverage the full potential of the Dune app, as they provide in-depth explanations and how-to guides for each feature.
 
 For example, the `decoding-contracts.md` guide offers a comprehensive overview of Decoded Contracts in Dune, including how to submit them for decoding. This guide is valuable for users who want to decode smart contracts and explore their functionality using the Dune app interface. It covers advanced options for submitting contracts, tracking submissions, and answers frequently asked questions.
 
@@ -16,4 +16,4 @@ The subfolders in this folder dive deeper into specific features of the Dune app
 
 - `visualizations`: This folder contains guides focused on creating and customizing visualizations using the Dune app. Users can learn how to create various types of visualizations, including charts, graphs, tables, counters, and embeds, and share them across different web platforms.
 
-Overall, the guides in the `.autodoc/docs/json/docs/app` folder provide a comprehensive understanding of the Dune app and its features. These guides are essential for users who want to leverage the power of the Dune app to analyze and visualize blockchain data effectively.
+Overall, the guides in the `docs/app` folder provide a comprehensive understanding of the Dune app and its features. These guides are essential for users who want to leverage the power of the Dune app to analyze and visualize blockchain data effectively.

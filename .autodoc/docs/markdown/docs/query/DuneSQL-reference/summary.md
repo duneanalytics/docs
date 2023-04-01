@@ -1,6 +1,6 @@
-[View code on GitHub](https://dune.com/.autodoc/docs/json/docs/query/DuneSQL-reference)
+[View code on GitHub](https://dune.com/docs/query/DuneSQL-reference)
 
-The `.autodoc/docs/json/docs/query/DuneSQL-reference` folder contains a technical guide focused on DuneSQL, a custom-built query engine optimized for blockchain data. This guide is essential for developers and analysts working on the app feature that involves writing SQL queries and understanding the data types supported by DuneSQL.
+The `docs/query/DuneSQL-reference` folder contains a technical guide focused on DuneSQL, a custom-built query engine optimized for blockchain data. This guide is essential for developers and analysts working on the app feature that involves writing SQL queries and understanding the data types supported by DuneSQL.
 
 The `index.md` file provides an overview of DuneSQL, its capabilities, and how it differs from TrinoSQL. It covers the wide array of functions and operators that DuneSQL provides, such as arithmetic, string manipulation, date and time calculations, and more. It also explains that DuneSQL follows the standard SQL syntax and is ANSI-compliant, allowing users to leverage their existing SQL knowledge while working with blockchain data.
 

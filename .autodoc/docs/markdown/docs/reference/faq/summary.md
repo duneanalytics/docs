@@ -1,6 +1,6 @@
-[View code on GitHub](https://dune.com/.autodoc/docs/json/docs/reference/faq)
+[View code on GitHub](https://dune.com/docs/reference/faq)
 
-The `.autodoc/docs/json/docs/reference/faq` folder contains a collection of app technical guides that answer frequently asked questions about the Dune project. These guides provide valuable information for users who want to understand various aspects of Dune, such as its data sources, API access, and result refreshing mechanisms.
+The `docs/reference/faq` folder contains a collection of app technical guides that answer frequently asked questions about the Dune project. These guides provide valuable information for users who want to understand various aspects of Dune, such as its data sources, API access, and result refreshing mechanisms.
 
 For example, the `does-dune-have-a-token.md` guide clarifies that Dune does not have a token, which is essential for users looking to integrate Dune with other applications or services that require token-based authentication. This information helps users adjust their integration plans and explore alternative authentication methods.
 
@@ -10,4 +10,4 @@ In the `how-are-results-refreshing.md` guide, users can learn about the result r
 
 Lastly, the `how-does-dune-get-its-data.md` guide offers an overview of how Dune obtains its data by working with node providers across the industry to ingest raw historical data from various blockchains. The guide also explains how users can submit their own smart contracts for decoding via the decoding page, provided they have an ABI. This information is useful for users who want to understand Dune's data sources and work with smart contracts on the platform.
 
-Overall, the guides in the `.autodoc/docs/json/docs/reference/faq` folder provide concise and relevant information for users who want to understand various aspects of the Dune project. These guides are essential for analysts who are curious about using the project and need clarification on specific features or functionalities.
+Overall, the guides in the `docs/reference/faq` folder provide concise and relevant information for users who want to understand various aspects of the Dune project. These guides are essential for analysts who are curious about using the project and need clarification on specific features or functionalities.

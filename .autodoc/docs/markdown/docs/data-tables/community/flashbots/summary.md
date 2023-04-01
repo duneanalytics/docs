@@ -1,4 +1,4 @@
-[View code on GitHub](https://dune.com/.autodoc/docs/json/docs/data-tables/community/flashbots)
+[View code on GitHub](https://dune.com/docs/data-tables/community/flashbots)
 
 The Flashbots folder in the Dune Docs project focuses on providing comprehensive information and guides related to the Flashbots project, which is a research and development organization aimed at ensuring that MEV (Miner Extractable Value) incentives remain transparent and democratic. This folder contains various files that cover different aspects of the Flashbots project, such as arbitrages, liquidations, mev_summary, sandwiched swaps, and sandwiches.
 

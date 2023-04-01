@@ -1,7 +1,7 @@
 {
   "folderName": "top tables",
-  "folderPath": ".autodoc/docs/json/docs/data-tables/spellbook/top tables",
-  "url": "https://dune.com/.autodoc/docs/json/docs/data-tables/spellbook/top tables",
+  "folderPath": "docs/data-tables/spellbook/top tables",
+  "url": "https://dune.com/docs/data-tables/spellbook/top tables",
   "files": [
     {
       "fileName": "dex.trades.md",

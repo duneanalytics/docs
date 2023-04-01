@@ -1,6 +1,6 @@
-[View code on GitHub](https://dune.com/.autodoc/docs/json/docs/api/quick-start)
+[View code on GitHub](https://dune.com/docs/api/quick-start)
 
-The `.autodoc/docs/json/docs/api/quick-start` folder contains a collection of app technical guides that focus on helping users get started with the Dune Analytics API. These guides cover various programming languages and provide step-by-step instructions on how to interact with the API, making it easy for users to fetch data and integrate it into their projects.
+The `docs/api/quick-start` folder contains a collection of app technical guides that focus on helping users get started with the Dune Analytics API. These guides cover various programming languages and provide step-by-step instructions on how to interact with the API, making it easy for users to fetch data and integrate it into their projects.
 
 For example, the `api-js.md` guide provides a detailed walkthrough on how to access the Dune API using JavaScript. It assumes the reader has some familiarity with Node.js, NPM, and NVM. The guide demonstrates how to set up the environment, install necessary packages, and call the Dune API using simple and parameterized queries. This guide is particularly useful for developers who want to use the Dune API in their JavaScript projects.
 

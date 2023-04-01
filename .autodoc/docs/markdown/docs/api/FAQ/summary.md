@@ -1,6 +1,6 @@
-[View code on GitHub](https://dune.com/.autodoc/docs/json/docs/api/FAQ)
+[View code on GitHub](https://dune.com/docs/api/FAQ)
 
-The `.autodoc/docs/json/docs/api/FAQ` folder contains a collection of technical guides that provide detailed information and answers to frequently asked questions about the Dune API. These guides are essential for developers who are building applications using the Dune API and need to understand various aspects of the API, such as authentication, rate limiting, billing, pricing, and functionality.
+The `docs/api/FAQ` folder contains a collection of technical guides that provide detailed information and answers to frequently asked questions about the Dune API. These guides are essential for developers who are building applications using the Dune API and need to understand various aspects of the API, such as authentication, rate limiting, billing, pricing, and functionality.
 
 The `TOS.md` file covers the Dune API Terms of Service (TOS), which outlines the rules and guidelines for using the API. Developers must understand and comply with these terms to use the API effectively and avoid legal issues. The guide also provides examples of how to authenticate requests and handle rate limiting.
 

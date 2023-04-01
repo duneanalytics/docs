@@ -1,6 +1,6 @@
-[View code on GitHub](https://dune.com/.autodoc/docs/json/docs/data-tables/raw)
+[View code on GitHub](https://dune.com/docs/data-tables/raw)
 
-The `.autodoc/docs/json/docs/data-tables/raw` folder in the Dune Docs project focuses on providing comprehensive guides for working with raw, unfiltered, and unedited data from various blockchains, including Ethereum, Bitcoin, and Solana. This raw data is organized into different categories such as Blocks, Transactions, Event Logs, and Traces. Each category has a dedicated markdown file that explains the respective feature in detail, including the available data, data types, and how to access and use the data in the Dune Docs app.
+The `docs/data-tables/raw` folder in the Dune Docs project focuses on providing comprehensive guides for working with raw, unfiltered, and unedited data from various blockchains, including Ethereum, Bitcoin, and Solana. This raw data is organized into different categories such as Blocks, Transactions, Event Logs, and Traces. Each category has a dedicated markdown file that explains the respective feature in detail, including the available data, data types, and how to access and use the data in the Dune Docs app.
 
 For example, the `blocks.md` file covers the concept of blocks in blockchains and rollups, providing tables and column data that are useful for identifying block activity and transaction changes over time. Developers working with blockchain data can use this guide to understand how blocks work in the context of the Dune Docs project and extract valuable insights from the data.
 
