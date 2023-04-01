@@ -12,6 +12,7 @@ plugins:
   - redirects:
       redirect_maps:
         #4/1/2022 Rework
+       'tables/*': 'data-tables/*'
        'reference/dune-v2/index.md': 'query/index.md'
        'reference/dune-v2/query-engine.md': 'query/syntax-differences.md'
        'reference/dune-v2/dunesql-changes.md': 'query/dunesql-changes.md'

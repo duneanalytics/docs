@@ -8,7 +8,32 @@ These docs are open source and built with [Material for MkDocs](https://squidfun
 
 Any contributions are welcome, from spelling mistakes to entire guides on the EVM. Just submit a PR.
 
-## Install
+## Want to use the chatgpt integration and ask our docs questions (in a CLI)?
+
+You'll need to follow the [autodoc setup guide](https://github.com/context-labs/autodoc):
+
+Autodoc requires Node v18.0.0 or greater. v19.0.0 or greater is recommended. Make sure you're running the proper version:
+
+```bash
+$ node -v
+```
+
+Example output:
+```bash
+v19.8.1
+```
+
+Install the Autodoc CLI tool as a global NPM module:
+
+```bash
+$ npm install -g @context-labs/autodoc
+```
+
+Then, you'll need to SET or EXPORT your OpenAI API key.
+
+Now just clone this repo, and then all you need to do is run `doc q` in the repo and you'll be able to ask questions! Hopefully we'll have a frontend for this soon :)
+
+## Install Dune Docs Locally
 
 If you'd like to run the docs locally, follow these instructions.
 
