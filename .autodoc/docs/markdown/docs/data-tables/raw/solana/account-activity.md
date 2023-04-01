@@ -1,0 +1,18 @@
+[View code on GitHub](https://dune.com/docs/data-tables/raw/solana/account-activity.md)
+
+# Account Activity
+
+This section of the app technical guide covers the `Solana.account_activity` table, which contains information from the transactions table focused on account usage. Each row in the table contains all information about an account's usage in a transaction. The purpose of this table is to provide a detailed view of how an account is being used in the Solana blockchain.
+
+The table contains several columns, each with a specific purpose. The `block_slot` column contains the slot of the block in which the transaction occurred. The `block_hash` column contains the hash of the block in which the transaction occurred. The `block_time` column contains the timestamp of when the account usage occurred. The `block_date` column contains the date of when the account usage occurred. The `address` column contains the address of the account, also referred to as the public key. The `tx_index` column contains the index of the transaction in the block. The `tx_id` column contains the ID of the transaction in which the account usage occurred. The `tx_success` column indicates whether the transaction succeeded and was committed. The `signed` column indicates whether this account signed the transaction. The `writeable` column indicates whether this account was granted read-write access in the transaction. The `pre_balance` column contains the balance of the account before the transaction was processed. The `pre_token_balance` column contains the token balance before the transaction was processed. The `post_balance` column contains the balance of the account after the transaction was processed. The `post_token_balance` column contains the token balance after the transaction was processed. The `balance_change` column contains the balance change that occurred as part of the transaction. The `token_balance_change` column contains the token balance change that occurred as part of the transaction. The `token_mint_address` column contains the address the associated token address is minting from (i.e. the actual token address). The `token_owner_address` column contains the address that owns this token address.
+
+An example use case for this table would be to track the usage of a specific account over time. By analyzing the data in this table, developers can gain insights into how an account is being used and make informed decisions about how to optimize their application. For example, if an account is being used frequently and experiencing high traffic, developers may want to consider optimizing the account to handle the increased load.
+## Questions: 
+ 1. What blockchain platform is this app technical guide for?
+- The app technical guide is for the Solana blockchain platform.
+
+2. What specific account information is included in the Solana.account_activity table?
+- The Solana.account_activity table contains information about an account's usage in a transaction, including the account's address, pre- and post-transaction balances, and token balances.
+
+3. What is the purpose of the token_mint_address and token_owner_address columns?
+- The token_mint_address column indicates the address from which the associated token is being minted, while the token_owner_address column indicates the address that owns the token address. This information can be useful for tracking token ownership and usage.
