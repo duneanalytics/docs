@@ -1,7 +1,8 @@
 INHERIT: mkdocs.yml
 insiders: true
 plugins:
-  - search
+  - search:
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
   - awesome-pages
   - mkdocs-video
   - social

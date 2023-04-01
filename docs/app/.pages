@@ -1,10 +1,8 @@
 nav:
 - index.md
-- explorer-labels.md
 - queries
 - visualizations
+- dashboards
 - decoding-contracts.md
 - teams.md
-- guides
-- Use Cases: use-cases
 - ...

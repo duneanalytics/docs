@@ -1,6 +1,7 @@
 nav:
-- Querying overview: index.md
-- Querying with DuneSQL: DuneSQL.md
-- Data storage: storage.md 
-- dunesql-changes.md
-- Syntax differences: syntax-differences.md
+- Query overview: index.md
+- DuneSQL reference: DuneSQL-reference
+- Querying a query: query-a-query.md
+- Data storage: storage.md
+- ...
+

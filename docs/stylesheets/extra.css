@@ -38,8 +38,7 @@
         --soft-orange: #FAE6DC;
         --sky-blue: #31C7ED;
         --soft-blue: #DCF4FA;
-
-
+        --link-blue: #0645AD;
 
     /* Default color shades */
     --md-default-fg-color:               hsla(0, 0%, 0%, 0.87);
@@ -142,6 +141,11 @@ h1, h2, h3, h4, h5, h6{
 
 /* Custom CSS selectors */
 
+/* change the color of links with <p> components to link-blue */
+.md-typeset a {
+    color: var(--link-blue);
+}
+
 .md-header__title{
     font-weight: 600;
 }
@@ -162,7 +166,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .md-typeset h1 {
-    color: var(--dune-blue-400);
+    color: var(--dune-blue-500);
     font-size: 2rem;
     font-weight: 700;
 }
@@ -174,11 +178,14 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .md-typeset h3 {
+    color: var(--dune-blue-500);
     font-size: 1.25rem;
+    font-weight: 700;
 }
 
 .md-typeset h4 {
     font-size: 1rem;
+    font-weight: 700;
 }
 
 /*Dark blue bckgrnd w/radius */
