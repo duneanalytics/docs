@@ -8,11 +8,11 @@ description: Documentation regarding the changes to DuneSQL on March 2nd, 2023
     Currently affected tables are:  
     - ``prices.usd`` (fixed on March 6th, 2023)  
     - some Spellbook tables  
-    - ``flashbots.*`` (fix by March 10th, 2023)  
-    - ``reservoir.*`` (fix by March 10th, 2023)  
+    - ~~flashbots.*~~ (fixed on March 12th, 2023)  
+    - ~~reservoir.*~~ (fixed on March 10th, 2023)  
     - ``snapshot.*`` and ``cowswap.*`` (still tbd)  
 
-    You can temporarily cast the columns which are incorrectly still `varchar` to `varbinary` with  `from_hex(x))`. If you deploy this workaround, you will have to change it back once the issue is resolved. Sorry about the inconvenience! 
+    You can temporarily cast the columns which are incorrectly still `varchar` to `varbinary` with  `from_hex(x)`. If you deploy this workaround, you will have to change it back once the issue is resolved. Sorry about the inconvenience! 
     
 
 ## DuneSQL Alpha Deprecation and Data Type Changes
@@ -57,7 +57,7 @@ If you don't remove the `-- dunesql_alpha_deprecated` comment from your query, i
 #### Common Errors and Fixes
 | Error | Example | Solution |
 |---|---|---|
-| Needing to cast varchar to varbinary | `Cannot apply operator: varbinary = varchar(X)` or `Cannot apply operator: varchar = varbinary at` | `from_hex(x))` |
+| Needing to cast varchar to varbinary | `Cannot apply operator: varbinary = varchar(X)` or `Cannot apply operator: varchar = varbinary at` | `from_hex(x)` |
 | Casting to uint256 | `Cannot apply operator: UINT256 = varchar(7) at`  | `cast(xxx as uint256)` |
 | Use bytearray_subtring |`Unexpected parameters (varbinary, integer, integer) for function substring. Expected: substring(varchar(x), bigint), substring(varchar(x), bigint, bigint), substring(char(x), bigint), substring(char(x), bigint, bigint) at`  | `substring(data, 3, 16)` would be `bytearray_substring(data, 1, 8)` |
 | Use `bytearray_substring` and `bytearray_starts_with` instead of LIKE expression | `Left side of LIKE expression must evaluate to a varchar (actual: varbinary) at` | `bytearray_starts_with(varbinary, expression)` |
