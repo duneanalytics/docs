@@ -35,7 +35,7 @@ In this short section, we'll walk you through how to get the weekly USD volume t
 
 You can find [the query here](https://dune.com/queries/2168290).
 
-Now, `dex.trades` is a spellbook table, meaning that it's an abstracted table that's been put together by hundreds of star analysts in the community, supported by the Dune team. You can find any spellbook table's column descriptions [defined here](https://spellbook-docs.dune.com/#!/model/model.spellbook.dex_trades). The lower level tables you'll often work with are `raw` and `decoded` tables. Raw tables are defined [here](data%20tables/raw/index.md), but for decoded tables you'll need to find the protocol's documentation such as [this one for Uniswap V3](https:/.uniswap.org/contracts/v3/reference/core/UniswapV3Factory). You'll find out how to work with these in the guides mentioned in the [advanced section](analytics_guidelines.md).
+Now, `dex.trades` is a spellbook table, meaning that it's an abstracted table that's been put together by hundreds of star analysts in the community, supported by the Dune team. You can find any spellbook table's column descriptions [defined here](https://spellbook-docs.dune.com/#!/model/model.spellbook.dex_trades). The lower level tables you'll often work with are `raw` and `decoded` tables. Raw tables are defined [here](data-tables/raw/index.md), but for decoded tables you'll need to find the protocol's documentation such as [this one for Uniswap V3](https:/.uniswap.org/contracts/v3/reference/core/UniswapV3Factory). You'll find out how to work with these in the guides mentioned in the [advanced section](analytics_guidelines.md).
 
 Once we have this query running, anyone can leverage it in future queries by tracking the query id (link to our query-a-query guide later).
 

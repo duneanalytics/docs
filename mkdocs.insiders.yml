@@ -11,10 +11,10 @@ plugins:
         target: _blank
   - redirects:
       redirect_maps:
-       'docs': 'getting-started/index.md'
-       'dune-engine-v2-beta/abstractions-in-dunev2/getting-started-contribute-a-spell/README.md': 'spellbook/getting-started/submissions.md'
+       'getting-started/index.md': 'index.md'
+       'dune-engine-v2-beta/abstractions-in-dunev2/getting-started-contribute-a-spell/README.md': 'data tables/spellbook/contributing/index.md'
        'bounties/wizard-request-program.md': 'reference/dune-bounties.md'
-       'data-tables/data-tables/raw-data/ethereum-data.md': 'tables/raw/index.md'
+       'data-tables/data-tables/raw-data/ethereum-data.md': 'data tables/raw/index.md'
        'about/tutorials/dune-guides/tips.md': 'app/queries/tips.md'
        'about/tutorials/video-series.md': 'app/guides/video-tutorial.md'
        'dune-engine-v2-beta/dunes-new-query-engine.md': 'reference/dune-v2/query-engine.md'

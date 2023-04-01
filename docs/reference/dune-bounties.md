@@ -145,7 +145,7 @@ Everything in the App Layer is public by default and can be utilized by other Wi
 
 Dune's **Data Layer** allows you and the Wizards you work with to produce scalable and persistent work by standardizing and normalizing data. 
 
-We call this data layer [Spellbook](../data%20tables/spellbook/index.md).  
+We call this data layer [Spellbook](../data-tables/spellbook/index.md).  
 
 A good example of the power of working in the Dune **Data Layer** is OpenSea's standardization and normalization of [all NFT trades across all chains and versions](https://dune.com/spellbook#!/model/model.spellbook.opensea_trades).
 
@@ -215,7 +215,7 @@ For example:
 
 ### What's your recommend approach to organizing bounties for my Project and needs?
 
-Our advice is to first run specific tasks for adding your data to [Spellbook](../data%20tables/spellbook/index.md) first and run a Dashboard design contest afterwards.
+Our advice is to first run specific tasks for adding your data to [Spellbook](../data-tables/spellbook/index.md) first and run a Dashboard design contest afterwards.
 
 This way, your data will be easily accessible to any Dune Wizard in any Queries and Dashboards they imagine
 

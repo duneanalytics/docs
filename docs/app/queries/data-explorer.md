@@ -3,7 +3,7 @@ title: The Data Explorer
 description: The Data Explorer allows you to search for blockchain and other data to use in your Queries. Here's how it works.
 ---
 
-The Data Explorer empowers you to search for blockchain and other data to use in your Queries (learn about all the data Dune offers in the [Tables section](../../data%20tables/index.md)).
+The Data Explorer empowers you to search for blockchain and other data to use in your Queries (learn about all the data Dune offers in the [Tables section](../../data-tables/index.md)).
 
 To find the data you're looking for, first select which database you want to search in:
 
@@ -11,7 +11,7 @@ To find the data you're looking for, first select which database you want to sea
 
 Then simply enter any keywords, protocol names, contract names, or event names into the search bar at the top.
 
-This will bring up a list of [Tables](../../data%20tables/index.md) containing blockchain data you can use to your Queries! 🧙
+This will bring up a list of [Tables](../../data-tables/index.md) containing blockchain data you can use to your Queries! 🧙
 
 ## Advanced Searching in Dune V2 and V1
 
