@@ -1,5 +1,5 @@
 ---
-title: Web3 Analytics Guidelines
+title: Web3 Analytics Resources
 description: End to End tutorials on how to analyze specific protocols
 ---
 
