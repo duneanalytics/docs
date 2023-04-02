@@ -11,8 +11,8 @@ DuneSQL is a custom-built query engine designed for efficient analysis of blockc
 
 DuneSQL offers several useful features for working with blockchain data:
 
-1. **[Blockchain varbinary data types](DuneSQL-reference/SQL-language/datatypes.md#varbinary)**: Designed for storing addresses, hashes, and other encoded data.
-2. **[Native support for uint256 and int256 data types](DuneSQL-reference/SQL-language/datatypes.md#UINT256)**: Ideal for handling large numbers commonly found in blockchain data, with built-in functions for ease of use.
+1. **[Blockchain varbinary data types](DuneSQL-reference/datatypes.md#varbinary)**: Designed for storing addresses, hashes, and other encoded data.
+2. **[Native support for uint256 and int256 data types](DuneSQL-reference/datatypes.md#UINT256)**: Ideal for handling large numbers commonly found in blockchain data, with built-in functions for ease of use.
 3. **[Columnar storage format](storage.md)** Optimized for fast reads, this format organizes data in columns rather than rows, enabling quick access to single columns for aggregation or filtering.
 4. **[Querying a query](query-a-query.md)**: DuneSQL allows you to query a query, which is great for creating reusable queries, building up complex queries, and reusing queries as views.
 
@@ -22,11 +22,10 @@ DuneSQL is our query engine for blockchain data. It is a fork of TrinoSQL, which
 
 We have created extensive documentation for DuneSQL, which you can find in the [DuneSQL Reference](DuneSQL-reference/index.md) section of our documentation. Here you will be able to find:
 
-- [SQL statement reference](DuneSQL-reference/SQL-statement-syntax/index.md)
-- [SQL language reference](DuneSQL-reference/SQL-language/index.md)
 - [Functions and operators](DuneSQL-reference/Functions-and-operators/index.md)
-
-docs/query/DuneSQL-reference/SQL-language/index.md
+- [SQL statement reference](DuneSQL-reference/SQL-statement-syntax/index.md)
+- [Data types](DuneSQL-reference/datatypes.md)
+- [Reserved keywords](DuneSQL-reference/reserved-keywords.md)
 
 ### [Understanding DuneSQL Storage](storage.md)
 

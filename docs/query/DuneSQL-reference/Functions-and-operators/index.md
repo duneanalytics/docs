@@ -3,13 +3,13 @@ title: Overview
 description: DuneSQL supports a wide range of built-in functions and operators.
 ---
 
-!!!note 
-    This section has to be maintained by us since we are implementing our own functions and operators and changing existing ones. 
+!!!warning
+    This section is still under construction.
 
 
 This chapter describes the built-in SQL functions and operators supported by Trino. They allow you to implement complex functionality and behavior of the SQL executed by Trino operating on the underlying data sources.
 
-If you are looking for a specific function or operator, see the full alphabetical list or the full list by topic. Using ``SHOW FUNCTIONS`` returns a list of all available functions, including custom functions, with all supported arguments and a short description.
+Using ``SHOW FUNCTIONS`` in the query editor returns a list of all available functions, including custom functions, with all supported arguments and a short description.
 
 [Aggregate](aggregate.md)  
 [Array](array.md)  

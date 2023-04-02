@@ -12,15 +12,14 @@ character or binary strings. Although Trino supports `JSON` type, it is
 not used or produced by the following functions.
 
 Trino supports three functions for querying JSON data:
-`json_exists<json_exists>`{.interpreted-text role="ref"},
-`json_query<json_query>`{.interpreted-text role="ref"}, and
-`json_value<json_value>`{.interpreted-text role="ref"}. Each of them is
-based on the same mechanism of exploring and processing JSON input using
-JSON path.
+`json_exists<json_exists`,
+`json_query<json_query`, and
+`json_value<json_value`.  
+Each of them is based on the same mechanism of exploring and processing JSON input using JSON path.  
 
 Trino also supports two functions for generating JSON data
-\--`json_array<json_array>`{.interpreted-text role="ref"}, and
-`json_object<json_object>`{.interpreted-text role="ref"}.
+`json_array<json_array`, and
+`json_object<json_object>`.
 
 # JSON path language
 
@@ -46,7 +45,7 @@ sequence as the result.
     In the lax mode, most path operations f unnest all JSON arrays in
     the input sequence. Any divergence from this rule is mentioned in the
     following listing. Path modes are explained in
-    `json_path_modes`. (TODO: add link)
+    [`json_path_modes`](#json_path_modes).
 
 
 The JSON path language features are divided into: literals, variables,

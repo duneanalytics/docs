@@ -1,9 +1,15 @@
 # Reserved keywords
 
 The following table lists all of the keywords that are reserved in
-Trino, along with their status in the SQL standard. These reserved
+DuneSQL, along with their status in the SQL standard. These reserved
 keywords must be quoted (using double quotes) in order to be used as an
 identifier.
+
+For example to query the transactions table for all transactions from a specific address you would use the following query with `from` in double quotes:   
+```sql
+Select * from ethereum.transactions 
+where "from" = 0xc8ebccc5f5689fa8659d83713341e5ad19349448
+```
 
   | Keyword         | SQL:2016  |
 | --------------- | --------- |

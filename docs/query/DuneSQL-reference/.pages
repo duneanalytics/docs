@@ -2,4 +2,5 @@ nav:
 - index.md
 - Functions-and-operators
 - SQL-statement-syntax
-- SQL-language
+- datatypes.md
+- Reserved keywords: reserved-keywords.md

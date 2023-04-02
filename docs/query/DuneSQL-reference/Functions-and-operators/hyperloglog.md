@@ -2,8 +2,7 @@
 title: HyperLogLog functions
 ---
 
-Trino implements the `approx_distinct`{.interpreted-text role="func"}
-function using the
+Trino implements the [`approx_distinct`](DuneSQL-reference/Functions-and-operators/aggregate/#approximate-aggregate-functions) function using the
 [HyperLogLog](https://en.wikipedia.org/wiki/HyperLogLog) data structure.
 
 ### Data structures
@@ -15,8 +14,8 @@ HyperLogLog data structure starts as the sparse representation,
 switching to dense when it is more efficient. The P4HyperLogLog
 structure is initialized densely and remains dense for its lifetime.
 
-`hyperloglog_type`{.interpreted-text role="ref"} implicitly casts to
-`p4hyperloglog_type`{.interpreted-text role="ref"}, while one can
+`hyperloglog_type` implicitly casts to
+`p4hyperloglog_type`, while one can
 explicitly cast `HyperLogLog` to `P4HyperLogLog`:
 ```text
     cast(hll AS P4HyperLogLog)

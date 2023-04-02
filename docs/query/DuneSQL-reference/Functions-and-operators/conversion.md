@@ -2,13 +2,34 @@
 title: Conversions
 ---
 
-Trino will implicitly convert numeric and character values to the
-correct type if such a conversion is possible. Trino will not convert
-between character and numeric types. For example, a query that expects a
-varchar will not automatically convert a bigint value to an equivalent
-varchar.
+## Implicit Conversions
+
+DuneSQL will implicitly convert numeric and character values to the correct type if such a conversion is possible.  
+DuneSQL will not convert implicitly between character and numeric types.  
+For example, a query that expects a varchar will not automatically convert a bigint value to an equivalent varchar.
 
 When necessary, values can be explicitly cast to a particular type.
+
+### Implicit Casting with numeric types
+
+DuneSQL has added support for implicit casts when performing arithmetic with `INT256` and `UINT256` and smaller types like `INTEGER`, `BIGINTEGER`, and `DECIMAL(38,0)`. This allows you to write expressions like `2 * UINT256 '1'` instead of `CAST(2 AS UINT256) * UINT256 '1'`, and similarly for other arithmetic operations.
+
+For example:
+
+```sql
+SELECT 2 * UINT256 '1';
+```
+
+Will be equivalent to:
+
+```sql
+SELECT CAST(2 AS UINT256) * UINT256 '1';
+```
+
+Please note that implicit casting has not been added for arithmetic with DOUBLE to make precision issues more apparent.
+
+
+
 
 ### Conversion functions
 

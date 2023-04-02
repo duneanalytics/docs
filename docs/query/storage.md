@@ -3,10 +3,10 @@ title: Storage
 description: Learn more about the differences and thinking behind our V2 database structure.
 ---
 
-!!!note 
+<!--!!!note 
     This section should probably be rewritten into "how to write efficient queries" or something like that.
     The data layout is relevant in this context, but the focus should be on how to write efficient queries.
-
+-->
 
 On a very high level, databases read data from storage into memory in order to allow that data to be operated on, in our case to transform and return blockchain data according to your Dune query’s logic. 
 

@@ -122,9 +122,9 @@ of `eh?` is `X'65683F'`.
 
 We have built custom functions to make it easier to work with varbinaries in DuneSQL. Check the [varbinary functions](/querying-with-DuneSQL/functions/varbinary/) page for more information.
 
-
-!!! Note
-    Binary strings with length are not yet supported: `varbinary(n)`.
+```sql
+    Select * from ethereum.transactions where "from" = 0xc8ebccc5f5689fa8659d83713341e5ad19349448
+```
 
 ### `JSON`
 
