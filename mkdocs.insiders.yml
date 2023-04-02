@@ -1,4 +1,7 @@
 INHERIT: mkdocs.yml
+site_url: https://dune.com/docs
+repo_url: https://github.com/duneanalytics/docs
+site_dir: site/docs
 insiders: true
 plugins:
   - search:
