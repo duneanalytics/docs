@@ -15,7 +15,7 @@ plugins:
   - redirects:
       redirect_maps:
         #4/1/2022 Rework
-       'reference/dune-v2/index.md': 'query/index.md'
+       'reference/dune-v2/index.md': 'docs/query/index.md'
        'reference/dune-v2/query-engine.md/#byte-array-functions-in-dune-sql': 'query/DuneSQL-reference/Functions-and-operators/varbinary.md'
        'reference/dune-v2/query-engine.md/#byte-array-functions-in-dune-sql': 'query/DuneSQL-reference/Functions-and-operators/varbinary.md'
        'reference/dune-v2/query-engine.md': 'query/syntax-differences.md'
