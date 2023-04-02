@@ -16,9 +16,3 @@ theme:
     - navigation.path
     - search.highlight
     - search.share
-  plugins:
-    - search:
-        separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
-    - awesome-pages
-    - mkdocs-video
-    - social
