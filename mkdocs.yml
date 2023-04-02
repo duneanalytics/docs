@@ -43,6 +43,7 @@ plugins:
   - search
   - awesome-pages
   - mkdocs-video
+  # - info
   # - redirects:
   #     redirect_maps:
   #       #4/1/2022 Rework

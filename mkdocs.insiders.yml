@@ -9,16 +9,17 @@ plugins:
   - awesome-pages
   - mkdocs-video
   - social
+  # - info
   - privacy:
       external_links_attr_map:
         target: _blank
   - redirects:
       redirect_maps:
         #4/1/2022 Rework
-       'reference/dune-v2/index.md': 'query/index.md'
-       'reference/dune-v2/query-engine#byte-array-functions-in-dune-sql': 'query/DuneSQL-reference/Functions-and-operators/varbinary.md'
-       'reference/dune-v2/query-engine#numerical-types-in-dune-sql': 'query/DuneSQL-reference/Functions-and-operators/varbinary.md'
-       'reference/dune-v2/query-engine.md': 'query/syntax-differences.md'
-       'reference/dune-v2/dunesql-changes.md': 'query/dunesql-changes.md'
-       'getting-started/index.md': 'index.md'
-       'dune-engine-v2-beta/abstractions-in-dunev2/getting-started-contribute-a-spell/README.md': 'data-tables/spellbook/contributing/index.md'
+       'reference/dune-v2/index.md': 'https://dune.com/docs/query/index.md'
+       'reference/dune-v2/query-engine#byte-array-functions-in-dune-sql': 'https://dune.com/docs/query/DuneSQL-reference/Functions-and-operators/varbinary.md'
+       'reference/dune-v2/query-engine#numerical-types-in-dune-sql': 'https://dune.com/docs/query/DuneSQL-reference/Functions-and-operators/varbinary.md'
+       'reference/dune-v2/query-engine.md': 'https://dune.com/docs/query/syntax-differences.md'
+       'reference/dune-v2/dunesql-changes.md': 'https://dune.com/docs/query/dunesql-changes.md'
+       'getting-started/index.md': 'https://dune.com/docs/index.md'
+       'dune-engine-v2-beta/abstractions-in-dunev2/getting-started-contribute-a-spell/README.md': 'https://dune.com/docs/data-tables/spellbook/contributing/index.md'
