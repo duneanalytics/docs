@@ -1,6 +1,6 @@
 nav:
 - Query overview: index.md
-- DuneSQL reference: DuneSQL-reference
+- DuneSQL: DuneSQL-reference
 - Querying a query: query-a-query.md
 - Data storage: storage.md
 - ...

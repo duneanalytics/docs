@@ -2,6 +2,8 @@
 
 DuneSQL has a set of built-in data types, described below.
 
+Implicit Conversion and Casting to other datatypes is described in [the conversion function documentation](Functions-and-operators/conversion.md).
+
 ## Boolean
 
 ### `BOOLEAN`

@@ -11,7 +11,9 @@ Select * from ethereum.transactions
 where "from" = 0xc8ebccc5f5689fa8659d83713341e5ad19349448
 ```
 
-  | Keyword         | SQL:2016  |
+## Reserved keywords
+
+| Keyword       | SQL:2016  |
 | --------------- | --------- |
 | `ALTER`         | reserved  |
 | `AND`           | reserved  |
