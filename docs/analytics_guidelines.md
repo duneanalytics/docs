@@ -27,7 +27,7 @@ Protocol metrics are usually dependent on different token and wallet segments. F
 
 To understand token trends and contexts, check out this [ERC20 dashboard](https://dune.com/ilemi/Token-Overview-Metrics) and this [NFT dashboard](https://dune.com/rantum/NFT-Collection-Dashboard). 
 
-To understand wallet/user segments, you'll need to leverage [labels](data-tables/spellbook/top%20tables/labels.md) to enhance your analysis.
+To understand wallet/user segments, you'll need to leverage [labels](data-tables/spellbook/top-tables/labels.md) to enhance your analysis.
 
 Once you have metrics and also understand the underlying tokens and users, it will start to become clear what that real narrative is. Try and pull together a few insights, and then create a really compelling dashboard and story around them. Don't try too hard to capture everything at once - it will become overwhelming for both you those you share it with. 
 
