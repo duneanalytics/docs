@@ -22,6 +22,7 @@ plugins:
        'reference/dune-v2/query-engine.md': 'https://dune.com/docs/query/syntax-differences'
        'reference/dune-v2/dunesql-changes.md': 'https://dune.com/docs/query/dunesql-changes'
        'getting-started/index.md': 'https://dune.com/docs/'
+       'getting-started/query-quick-start.md': 'https://dune.com/docs/'
        'dune-engine-v2-beta/abstractions-in-dunev2/getting-started-contribute-a-spell/README.md': 'https://dune.com/docs/data-tables/spellbook/contributing/'
        'bounties/wizard-request-program.md': 'https://dune.com/docs/reference/dune-bounties'
        'tables/index.md': 'https://dune.com/docs/data-tables'
