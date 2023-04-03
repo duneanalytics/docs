@@ -1,5 +1,5 @@
 ---
-title: Varbinary functions
+title: Varbinary functions (DuneSQL)
 ---
 
 ## Varbinary Functions
