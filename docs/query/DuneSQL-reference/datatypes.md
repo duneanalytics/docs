@@ -33,11 +33,11 @@ available for this type.
 A 64-bit signed two\'s complement integer with a minimum value of
 `-2^63` and a maximum value of `2^63 - 1`.
 
-### `UINT256`
+### `UINT256` (Dune SQL)
 
 A 256-bit unsigned integer with a minimum value of 0 and a maximum value of 2^256 - 1. This data type can represent only non-negative integers, including very large positive integers, as well as zero. Since there is no sign bit, all 256 bits can be used to represent the magnitude of the number. This data type is commonly used in EVM smart contracts to represent balances and other quantities.
 
-### `INT256`
+### `INT256` (Dune SQL)
 
 A 256-bit signed two's complement integer with a minimum value of -2^255 and a maximum value of 2^255 - 1. This data type can represent a wide range of values, including very large negative and positive integers, as well as zero.
 
