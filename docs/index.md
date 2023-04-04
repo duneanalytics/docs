@@ -39,7 +39,7 @@ Now, `dex.trades` is a spellbook table, meaning that it's an abstracted table th
 
 ### Learning SQL and Blockchain Basics
 
-The query above might be confusing to you if you aren't familiar with SQL or Blockchain basics. Here are a few beginner resources and guides ~~to~~ get you started:
+The query above might be confusing to you if you aren't familiar with SQL or Blockchain basics. Here are a few beginner resources and guides to get you started:
 
 - [Dune Official Getting Started Video Series](https://www.youtube.com/watch?v=S-cctFmR828&list=PLK3b5d4iK10ext4v-GBySekaA8-GP8quD&index=1) to learn how the data flows and how to navigate the Dune app to create queries, visualizations, and dashboards. 
 
