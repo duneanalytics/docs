@@ -49,9 +49,9 @@ The query above might be confusing to you if you aren't familiar with SQL or Blo
 
 - For pure SQL practice, try going through the "easy" problems [on hackerrank](https://www.hackerrank.com/domains/sql).
 
-Join the community and learn together [in Discord](https://discord.com/invite/ErrzwBz) by participating in the `#🐥︱beginners` and `#🙋︱query-questions` channels
+Join the community and learn together [in Discord](https://discord.com/invite/ErrzwBz) by participating in the `#🐥︱beginners` and `#🙋︱query-questions` channels.
 
-And when you feel ready to do advanced analysis, check out the [next guide](analytics_guidelines.md)
+And when you feel ready to do advanced analysis, check out the [next guide](analytics_guidelines.md).
 
 You should also read about Dune SQL specific concepts like custom types and functions, and different kinds of tables in our database.
 
