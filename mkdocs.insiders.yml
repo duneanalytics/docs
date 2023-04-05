@@ -16,6 +16,7 @@ plugins:
   - redirects:
       redirect_maps:
         #4/1/2022 Rework
+       'spellbook/index.md': 'https://dune.com/docs/data-tables/spellbook/'
        'reference/dune-v2/index.md': 'https://dune.com/docs/query'
        'reference/dune-v2/query-engine#byte-array-functions-in-dune-sql': 'https://dune.com/docs/query/DuneSQL-reference/Functions-and-operators/varbinary'
        'reference/dune-v2/query-engine#numerical-types-in-dune-sql': 'https://dune.com/docs/query/DuneSQL-reference/Functions-and-operators/varbinary'
