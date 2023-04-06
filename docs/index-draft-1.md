@@ -17,7 +17,7 @@ Dune has many more features, but these are the basics you'll need to get started
 - You'll need to have a Dune account to follow along. If you don't have one, you can [sign up here](https://dune.com/auth/register).  
 - We also recommend you have a basic understanding of SQL and Blockchain concepts.
 
-### Query blockchain data
+### 1. Query blockchain data
 
 To query for blockchain data on Dune you'll need to:
 
@@ -41,13 +41,13 @@ WHERE block_time > DATE '2023-01-01'
 GROUP BY 1
 ```
 
-**[LINK ](https://dune.com/queries/2335378)**  
+**[Direct link to query here.](https://dune.com/queries/2335378)**  
 
 <div style="position: relative; padding-bottom: calc(66.66666666666666% + 41px); height: 0;"><iframe src="https://demo.arcade.software/gT2ctqjvwIuX5xUXPx5S?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;" title="Dashboards"></iframe></div>
 
 
 
-### Create a visualization
+### 2. Create a visualization
 
 To create a visualization you'll need to:
 
@@ -61,7 +61,7 @@ In our example below, we'll create a line chart to visualize the number of uniqu
 <div style="position: relative; padding-bottom: calc(66.66666666666666% + 41px); height: 0;"><iframe src="https://demo.arcade.software/nNxDjw8vBmp34u3aNU0R?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;" title="Dashboards"></iframe></div>
 
 
-### Present your data
+### 3. Present your data
 
 To present your data you'll need to:
 
