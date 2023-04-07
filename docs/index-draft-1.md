@@ -1,11 +1,17 @@
 ---
-title: Dune Quickstart draft 1
+title: Dune Quickstart_
 description: Get started on Dune in five minutes!
 ---
+<p align="center">
+  <img src="../images/quickstart-cover.jpeg" alt="A beautiful dashboard" title="Dashboard" /><br />
+  <em>The world's blockchain data at your fingertips!</em>
+</p>
 
--- New Video here --
 
-Welcome to Dune! This guide will help you get started on Dune in five minutes. We'll walk you through how to:
+### Welcome to Dune
+
+
+This guide will help you get started on Dune in five minutes. We'll walk you through how to:
 
 1. Query blockchain data
 2. Create a visualization
@@ -75,8 +81,11 @@ To present your data you'll need to:
 
 ### Recap
 
-Congratulations, you've just queried blockchain data, created a visualization, and presented your data on Dune!  
+**Congratulations, you've just queried blockchain data, created a visualization, and presented your data on Dune!**
+
 You can now share your dashboard with the world.
+
+We'll take care of updating this dashboard whenever somebody looks at it, so you don't have to worry about keeping it up to date.
 
 ### Next steps
 
