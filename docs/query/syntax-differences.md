@@ -1,5 +1,5 @@
 ---
-title: Migrating Queries
+title: Syntax Differences
 description: This page provides a guide for migrating queries from Postgres to Dune SQL and from SparkSQL to DuneSQL.   
 ---
 
