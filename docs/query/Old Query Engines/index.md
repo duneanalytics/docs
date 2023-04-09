@@ -5,37 +5,81 @@ description: This Page describes the old query engines that will soon be deprece
 
 ## Overview
 
-Dune Analytics supports three different query engines: SparkSQL, PostgreSQL, and DuneSQL. The SparkSQL and PostgreSQL query engines are being deprecated and will be replaced by DuneSQL. This page describes the old query engines and how to migrate your queries to DuneSQL.
+Dune currently supports three different query engines:  
+
+- DuneSQL  
+- SparkSQL  
+- PostgreSQL  
+
+The SparkSQL and PostgreSQL query engines are being deprecated and will be replaced by DuneSQL.
 
 ## Sunsetting Schedule
 
 The following table shows the schedule for the sunsetting of the old query engines.
 
-| Query Engine | Introduced | Deprecated | Removed    |
-|--------------|------------|------------|------------|
-| SparkSQL     | 2022-05-01 | 2023-07-31 | 2024-07-31 |
-| PostgreSQL   | 2019-11-01 | 2023-07-31 | 2024-07-31 |
-| DuneSQL      | 2023-01-01 | ∞          | ∞          |
+| Date       | 11/4/2023      | 15/05/2023              | 05/06/2023     | 01/07/2023          |
+| -----------|----------------|-------------------------|----------------|---------------------|
+| SparkSQL   | Fair Warning   | Drop from data explorer | Edits disabled | Stop ingesting data |
+| PostgreSQL | Fair Warning   | Drop from data explorer | Edits disabled | Stop ingesting data |
+
+
 
 ## SparkSQL
 
-SparkSQL is a query engine that is based on Apache Spark. It is used to query the data that is stored in our databases. This engine was introduced on 2022-05-01. Unfortunately SparkSQL is not a good fit for our use case and therefore we are deprecating it.
+SparkSQL is a query engine that is based on Apache Spark.  
+This Query engine already runs on our V2 database, so the data you can query is the same as with DuneSQL.  
+Unfortunately SparkSQL is not a good fit for our use case and therefore we are deprecating it.
 
-SparkSQL is still in production and will be supported until 2023-07-31. After that date, SparkSQL will be removed from production and all queries will be migrated to DuneSQL.
+SparkSQL is still in production and will be supported until **01/07/2023**. After that date, SparkSQL will be removed from production and all queries will be migrated to DuneSQL.
 
 You can read more about SparkSQL in the [SparkSQL documentation](https://spark.apache.org/docs/latest/sql-ref.html).
 
 ## PostgreSQL
 
-Our PostgresSQL database and query engine are the oldest parts of Dune Analytics. They were introduced on 2019-11-01. PostgresSQL does not scale well and therefore we are deprecating it. 
+Our PostgresSQL database and query engine are the oldest parts of Dune Analytics. PostgresSQL does not scale well and therefore we are deprecating it.  
+Postgres is an entirely different database than our V2 database and therefore the data you can query is different.  
 
-PostgresSQL is still in production and will be supported until 2023-07-31. After that date, PostgresSQL will be removed from production and all queries will be migrated to DuneSQL.
+PostgresSQL is still in production and will be supported until **01/07/2023**. After that date, PostgresSQL will be removed from production and all queries will be migrated to DuneSQL.
 
 You can read more about PostgreSQL in the [PostgreSQL documentation](https://www.postgresql.org/docs/).
 
 ## Migrating Queries
 
-To migrate your queries from SparkSQL or PostgreSQL to DuneSQL, you can use the [DuneSQL migration tool](https://dune.com/migrate). This tool will automatically convert your queries to DuneSQL. The Tool is based on GPT4 and still under active development, we will share updates as we make progress.
+To migrate your queries from SparkSQL or PostgreSQL to DuneSQL, you can use the [DuneSQL migration tool](https://dune.com/migrate). This tool will automatically convert your queries to DuneSQL. The Tool is based on GPT4 and still under active development, we will share updates as we make progress. 
 
+### Migrating from SparkSQL
 
+Migrating queries from SparkSQL to DuneSQL is somewhat easy. The two query engines query the same data and therefore the queries are very similar.
 
+### Migrating from PostgreSQL
+
+Migrating queries from PostgreSQL to DuneSQL is a bit more difficult. The two query engines query different data and therefore the queries are very different. Additionally, the query engines are made for use cases.
+
+| **Description**                                                                       | **V1 - PostgreSQL**                                                                                          | **V2 - Dune SQL**                                                                                                                                                                                                                                                                                           |
+|---------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **`bytea2numeric`, or casting hex/bytea to a number**                                 | `bytea2numeric` (bytea)                                                                                      | `bytearray_to_integer` (hex)   `bytearray_to_bigint` (hex)   `bytearray_to_decimal` (hex)   `bytearray_to_uint256` (hex)   `bytearray_to_int256` (hex)   More details on [Byte Array to Numeric Functions](#byte-array-to-numeric-functions)                                                                |
+| **Doing math or numeric operations on a column, like value in ethereum.transactions** | sum(value)                                                                                                   | sum(cast(value as double)) *soon this won't be needed as UINT and INT columns are added automatically.*                                                                                                                                                                                                     |
+| **0 vs 1 array based indexing**                                                       | 1 indexed                                                                                                    | 1 indexed                                                                                                                                                                                                                                                                                                   |
+| **Implicit type conversions between character and numeric types**                     | Available                                                                                                    | [Not available](https://trino.io/docs/current/functions/conversion.html)                                                                                                                                                                                                                                    |
+| **Addresses**                                                                         | `\x2A7D...`(bytea)  Works in Postgres                                                                        | `0x2a7d...` (Byte array)    No escape quotes should be used, and the literal does __not__ need to be lowercased.                                                                                                                                                                                            |
+| **Selecting keyword columns is different**                                            | "from"                                                                                                       | "from"                                                                                                                                                                                                                                                                                                      |
+| **Alias naming is different**                                                         | as "daily active users"                                                                                      | as "daily active users"                                                                                                                                                                                                                                                                                     |
+| **Exponentiation notation**                                                           | `x/10^y` or `x * 1e123`                                                                                      | `x*power(10,y)` or `x * 1e123`                                                                                                                                                                                                                                                                              |
+| **Interval argument has different syntax**                                            | `Interval '1day'`                                                                                            | `Interval '1' day`                                                                                                                                                                                                                                                                                          |
+| **Generate_series () is now sequence ()**                                             | `generate_series('2022-05-15', CURRENT_DATE, '1 day')`                                                       | [`unnest(sequence(date('2022-01-01'), date('2022-02-01'), interval '7' day))`](https://dune.com/queries/1764158?d=11)   Has a 10000 values limit, and must go in the FROM statement not the SELECT.                                                                                                         |
+| **Handling decimals for prices.usd**                                                  | Don’t use `prices.usd decimals`                                                                              | Replaced by `tokens_[blockchain].erc20.decimals`                                                                                                                                                                                                                                                            |
+| **Define NULL array**                                                                 | ` NULL::integer[]`                                                                                           | `CAST(NULL AS ARRAY<int>))`                                                                                                                                                                                                                                                                                 |
+| **encoding strings to hex**                                                           | `encode(string, 'hex')`                                                                                      | `hex(string)`  *available soon                                                                                                                                                                                                                                                                              |
+| **Get json object differences**                                                       | `(takerOutputUpdate->'deltaWei'->'value') decode(substring((addressSet->'baseAsset')::TEXT, 4,40), 'hex')`   | `json_query(json_query(takerOutputUpdate, 'lax $.deltaWei' omit quotes), 'lax $.value')`                                                                                                                                                                                                                    |
+| **Group by an alias**                                                                 | `SELECT date_trunc('hour',evt_block_time) as col1, COUNT(*) FROM erc721_ethereum evt_Transfer GROUP BY col1` | `GROUP BY date_trunc('hour',evt_block_time)`Or: `GROUP BY 1, 2`                                                                                                                                                                                                                                             |
+| **Explicit date/time casting**                                                        | `'2021-08-08 17:00'::timestamp`                                                                              | `cast('2021-08-08 17:00' as timestamp)`  Or, `timestamp '2021-08-08 17:00'`  There are [many helper functions for casting to date/time types](https://trino.io/docs/current/functions/datetime.html?highlight=date), such as `date(‘2022-01-01’)`                                                           |
+| **Checking if an item exists in an array**                                            | `value = ANY (array)`                                                                                        | [`contains(array, value)` or `contains_sequence(array, array[values])`](https://trino.io/docs/current/functions/array.html#contains)                                                                                                                                                                        |
+| **Explode**                                                                           | `SELECT unnest(array) FROM table`                                                                            | `SELECT vals.val FROM table1, unnest(arrayFromTable1) as vals(val)`  you have to use `unnest` with a `cross join`, as described in this [blog post](https://theleftjoin.com/how-to-explode-arrays-with-presto/).                                                                                            |
+| **Median**                                                                            | `PERCENTILE_CONT(0.5) WITHIN GROUP(ORDER BY x)`                                                              | `approx_percentile(x, 0.5)`                                                                                                                                                                                                                                                                                 |
+| **Using “is True/False”**                                                             | `X is true`                                                                                                  | `X = true`                                                                                                                                                                                                                                                                                                  |
+| **String Data Type**                                                                  | `varchar`                                                                                                    | `varchar`                                                                                                                                                                                                                                                                                                   |
+| **Casting as Strings**                                                                | `cast([xxx] as string)`                                                                                      | `cast([xxx] as varchar)`                                                                                                                                                                                                                                                                                    |
+| **`left()` is no longer a method available for returning substrings**                 | `left([string],[length])`                                                                                    | `substr([string], [start], [length])`    [Returns varchar; Positions start with 1, so use `1` for length if you want to replicate left() functionality](https://trino.io/docs/current/functions/string.html?highlight=substr#substring) `left(somestring, somenumber) -> substr(somestring, 0, somenumber)` |
+| **Aggregate Functions**                                                               | `array_agg(col)`, `array_agg(distinct(col))`                                                                 | `array_agg(col)`, `array_agg(distinct(col))`                                                                                                                                                                                                                                                                |
+| **user generated views**                                                              | create view dune_user_generated.table                                                                        | each query is a view, like [query_1747157](https://dune.com/queries/1747157)                                                                                                                                                                                                                                |
+| **event logs topic indexing**                                                         | topic 1,2,3,4                                                                                                | topic 0,1,2,3                                                                                                                                                                                                                                                                                               |
