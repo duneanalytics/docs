@@ -1,5 +1,5 @@
 ---
-title: Migrating Queries
+title: Syntax Differences
 description: This page provides a guide for migrating queries from Postgres to Dune SQL and from SparkSQL to DuneSQL.   
 ---
 
@@ -10,7 +10,7 @@ The syntax and keyword operator differences between Postgres, Spark, and Dune SQ
 
 ### Syntax Comparison
 
-| <div style="width:90px">**Description**</div> | **V1 - PostgreSQL** | **V2 - Spark SQL** | **V2 - Dune SQL** |
+| **Description** | **V1 - PostgreSQL** | **V2 - Spark SQL** | **V2 - Dune SQL** |
 | --- | --- | --- | --- |
 | **`bytea2numeric`, or casting hex/bytea to a number** | `bytea2numeric` (bytea) | `bytea2numeric_v3` (string) | `bytearray_to_integer` (hex) <br> `bytearray_to_bigint` (hex) <br> `bytearray_to_decimal` (hex) <br> `bytearray_to_uint256` (hex) <br> `bytearray_to_int256` (hex) <br> More details on [Byte Array to Numeric Functions](#byte-array-to-numeric-functions)|
 | **Doing math or numeric operations on a column, like value in ethereum.transactions** | sum(value) | sum(value) | sum(cast(value as double)) *soon this won't be needed as UINT and INT columns are added automatically.* |
