@@ -63,7 +63,7 @@ We also need to do a recursive check to see if those abstractions depend on any 
 
 To do this, we open those two abstractions and search for `FROM` statements.
 
-Here we find a couple of tables referenced that include “_evt_”, which is a naming convention for [Decoded Event tables](../../../decoded/event-logs.md).
+Here we find a couple of tables referenced that include “_evt_”, which is a naming convention for [Decoded Event tables](../../../decoded/evm/event-logs.md).
 
 You’ll find other Raw and Decoded data table naming conventions in our [Tables documentation here](../../../index.md). 
 

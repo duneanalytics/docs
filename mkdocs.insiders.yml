@@ -15,6 +15,13 @@ plugins:
         target: _blank
   - redirects:
       redirect_maps:
+        #4/10/2023 data tables rework:
+       'data-tables/raw/blocks.md': 'https://dune.com/docs/data-tables/raw/evm/blocks'
+       'data-tables/raw/transactions.md': 'https://dune.com/docs/data-tables/raw/evm/transactions'
+       'data-tables/raw/event-logs.md': 'https://dune.com/docs/data-tables/raw/evm/event-logs'
+       'data-tables/raw/traces.md': 'https://dune.com/docs/data-tables/raw/evm/traces' 
+       'data-tables/decoded/call-tables.md': 'https://dune.com/docs/data-tables/decoded/evm/call-tables'
+       'data-tables/decoded/event-logs.md': 'https://dune.com/docs/data-tables/decoded/evm/event-logs'
         #4/1/2022 Rework
        'spellbook/index.md': 'https://dune.com/docs/data-tables/spellbook/'
        'reference/dune-v2/index.md': 'https://dune.com/docs/query'
