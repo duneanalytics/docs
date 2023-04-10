@@ -1,6 +1,6 @@
 # Instruction Calls
 
-This is an unnested table of []`solana.transactions`](transactions.md). There can be multiple instructions in a transaction, so having an exploded view here will make it a little easier to work with the data. This table mainly exists as the base for [Solana decoded tables](../../decoded/solana/idl-tables.md) though. 
+This is an unnested table of [`solana.transactions`](transactions.md). There can be multiple instructions in a transaction, so having an exploded view here will make it a little easier to work with the data. This table mainly exists as the base for [Solana decoded tables](../../decoded/solana/idl-tables.md) though. 
 
 Here is the schema:
 
@@ -20,7 +20,7 @@ Here is the schema:
 | tx_id | varchar | the first signature in the transaction |
 | tx_success | boolean |The transaction was valid and thus committed. |
 | log_messages | array<string> | The log messages emitted by the transaction |
-    
+
 **inner\_instructions**
 
 | Field              | Data type      | Description                                                    |
