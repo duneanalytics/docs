@@ -15,7 +15,7 @@ We support [decoded tables for Ethereum based chains (EVM)](evm/index.md) like E
 
 ## Solana decoded tables
 
-We also support [decoded tables on Solana](solana/index.md). Right now the tables decode instruction calls from each transaction to programs that have a verified Anchor IDL or are System/Native programs.
+We also support [decoded tables on Solana](solana/idl-tables.md). Right now the tables decode instruction calls from each transaction to programs that have a verified Anchor IDL or are System/Native programs.
 
 <div class="cards grid" markdown>
 - [IDL Tables](solana/idl-tables.md): These are decoded from `instruction_calls`, so all function calls at the first instruction level (not inner instructions) are decoded.
