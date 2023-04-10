@@ -57,7 +57,7 @@ plugins:
        'about/tutorials/queries/price-queries.md': 'https://dune.com/docs/data-tables/spellbook/top-tables/prices'
        'data-tables/evm-blockchains/decoded-data/README.md': 'https://dune.com/docs/data-tables/decoded'
        'duneapp/parameters.md': 'https://dune.com/docs/app/queries/parameters'
-       'data-tables/community/README.md': 'https://dune.com/docs/data-tables/community'
+       'data/community/index.md': 'https://dune.com/docs/data-tables/community'
        'data-tables/abstractions/nft.trading.md': 'https://dune.com/docs/data-tables/spellbook/top-tables/nft.trades'
        'duneapp/dashboards.md': 'https://dune.com/docs/app/dashboards'
        'about/tutorials/dune-guides/README.md': 'https://dune.com/docs/app'
