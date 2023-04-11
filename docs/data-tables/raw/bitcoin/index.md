@@ -8,8 +8,8 @@ Bitcoin probably needs no introduction. For a full written guide on getting star
 ## Data Available
 
 <div class="cards grid" markdown>
-- [Blocks](blocks.md)
-- [Transactions](transactions.md)
-- [Outputs](outputs.md)
-- [Inputs](inputs.md)
+- [Blocks](blocks.md): Blocks are the base unit that all transactions fit into.
+- [Transactions](transactions.md): Transactions contain all spent inputs and created outputs from a UTXO transaction.
+- [Outputs](outputs.md): Just the outputs, unnested.
+- [Inputs](inputs.md): Just the inputs, unnested.
 </div>
