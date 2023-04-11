@@ -19,10 +19,10 @@ You can read more about the decisions to sunset the old query engines in the [an
 
 The following table shows the schedule for the sunsetting of the old query engines.
 
-| Date          || 11/4/2023      | 15/05/2023              | 15/06/2023     | 15/07/2023          |
-|---------------||----------------|-------------------------|----------------|---------------------|
-|**SparkSQL**   || Fair Warning   | Drop from data explorer | Edits disabled | Stop ingesting data |
-|**PostgreSQL** || Fair Warning   | Drop from data explorer | Edits disabled | Stop ingesting data |
+| Date          || 11/4/2023            | 15/05/2023              | 15/06/2023     | 15/07/2023          |
+|---------------||----------------------|-------------------------|----------------|---------------------|
+|**SparkSQL**   || Sunsetting Kickoff   | Drop from data explorer | Edits disabled | Stop ingesting data |
+|**PostgreSQL** || Sunsetting Kickoff   | Drop from data explorer | Edits disabled | Stop ingesting data |
 
 
 ## What this means for you
