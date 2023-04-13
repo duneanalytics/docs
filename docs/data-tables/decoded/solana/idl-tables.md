@@ -6,7 +6,7 @@ description: Table Schemas
 !!!WARNING---
     These tables are still in alpha state, as we are still ironing out some kinks. If you discover any issues, please let us know by [dming on Twitter](https://twitter.com/andrewhong5297). This section will be updated with IDL submission details soon.
 
-Decoded tables inherit all of the columns from [`instruction_calls`](../../raw/solana/instruction-calls.md), so you can refer there for most of the types. We only add columns for each argument in the function call `data` and each account that was required to be in `account_arguments`.
+Decoded tables inherit all of the columns from [`instruction_calls`](../../raw/solana/instruction-calls.md), so you can refer there for most of the types. We only add columns for each argument in the function call `data` and each account that was required to be in `account_arguments`. **These only decode from instructions, and not inner instructions.**
 
 ## Example IDL Decoded Walkthrough
 
