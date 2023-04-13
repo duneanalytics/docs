@@ -4,7 +4,7 @@ description: Table Schemas
 ---
 
 !!! example "Warning"
-    These tables are still in alpha state, as we are still ironing out some kinks. If you discover any issues, please let us know by [dming on Twitter](https://twitter.com/andrewhong5297).
+    These tables are still in alpha state, as we are still ironing out some kinks. If you discover any issues, please let us know by [dming on Twitter](https://twitter.com/andrewhong5297). There may still be some changes to the table schemas as we add more decoding features.
 
 !!! info "Submissions"
     You can submit any program for decoding that has a public IDL like [this one](https://solscan.io/account/JUP4Fb2cqiRUcaTHdrPC8h2gNsA2ETXiPDD33WcGuJB#anchorProgramIDL). You can submit to [this form](https://forms.gle/tbHZ6ZeEke5qwVjcA).
