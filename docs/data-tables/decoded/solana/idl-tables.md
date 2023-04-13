@@ -3,10 +3,10 @@ title: IDL Decoded Tables
 description: Table Schemas
 ---
 
-!!!WARNING---
+!!! example "Warning"
     These tables are still in alpha state, as we are still ironing out some kinks. If you discover any issues, please let us know by [dming on Twitter](https://twitter.com/andrewhong5297).
 
-!!!Submissions---
+!!! info "Submissions"
     You can submit any program for decoding that has a public IDL like [this one](https://solscan.io/account/JUP4Fb2cqiRUcaTHdrPC8h2gNsA2ETXiPDD33WcGuJB#anchorProgramIDL). You can submit to [this form](https://forms.gle/tbHZ6ZeEke5qwVjcA).
 
 Decoded tables inherit all of the columns from [`instruction_calls`](../../raw/solana/instruction-calls.md), so you can refer there for most of the types. We only add columns for each argument in the function call `data` and each account that was required to be in `account_arguments`. **These only decode from instructions, and not inner instructions.**
