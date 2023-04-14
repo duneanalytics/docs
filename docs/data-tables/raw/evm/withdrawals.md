@@ -17,12 +17,16 @@ The [Ethereum Improvement Proposal (EIP) 4895](https://eips.ethereum.org/EIPS/ei
 
 In order to connect deposits and withdrawals, we must identify the ``validator_index`` of unique depositors. Since Dune doesn't have beacon chain data yet, we have to rely on a workaround using a query to obtain a list of valid and active deposits from the Ethereum deposit contract.
 
-This [query](https://dune.com/queries/2364548) returns a list of valid and active deposits, which we can use to identify the ``validator_index`` of unique depositors. We can then use this list to filter out invalid and inactive deposits from the ``withdrawals`` table. 
+This [query](https://dune.com/queries/2364548) returns a list of valid and active deposits, which we can use to identify the ``validator_index`` of unique depositors. We can use this query to match the ``validator_index`` of depositors with the ``validator_index`` of withdrawers in the withdrawals table.
 
 The Query is manually maintained and therefore may not always be up to date, but most historical data is available.
 
+Using this query, we can for example take a look at how the exodus of Kraken's ETH staking pools from the beacon chain is going:
 
-We hope to integrate beacon chain data in the future, which will streamline the process of connecting deposits and withdrawals, and eliminate the need for manual exclusions of invalid and inactive deposits.
+![type:video](https://dune.com/embeds/2370313/3886141)
+
+
+We hope to integrate beacon chain data in the future, which will streamline the process of connecting deposits and withdrawals, and eliminate the need for the aforemnetioned workaround.
 
 
 ## Column Data
