@@ -19,7 +19,9 @@ In order to connect deposits and withdrawals, we must identify the ``validator_i
 
 This [query](https://dune.com/queries/2364548) returns a list of valid and active deposits, which we can use to identify the ``validator_index`` of unique depositors. We can use this query to match the ``validator_index`` of depositors with the ``validator_index`` of withdrawers in the withdrawals table.
 
-The Query is manually maintained and therefore may not always be up to date, but most historical data is available.
+The Query is manually maintained and therefore may not always be up to date, but most historical data is available.  
+
+[LINK TO QUERY](https://dune.com/queries/2364548)  
 
 Using this query, we can for example take a look at how the exodus of Kraken's ETH staking pools from the beacon chain is going:
 
