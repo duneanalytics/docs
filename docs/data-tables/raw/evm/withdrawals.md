@@ -11,7 +11,7 @@ The [Ethereum Improvement Proposal (EIP) 4895](https://eips.ethereum.org/EIPS/ei
 
  Withdrawals are represented as a new type of object in the execution payload, called an "operation", that cleanly separates this "system-level" operation from regular transactions. Withdrawals provide key information from the consensus layer such as a monotonically increasing index, validator index, recipient address, and the amount of ether given in Gwei.
 
- Using this table you can observe beacon chain withdrawls.
+ Using this table you can observe beacon chain withdrawals.
 
 ### How to work with this table
 
@@ -26,7 +26,7 @@ Using this query, we can for example take a look at how the exodus of Kraken's E
 ![type:video](https://dune.com/embeds/2370313/3886141)
 
 
-We hope to integrate beacon chain data in the future, which will streamline the process of connecting deposits and withdrawals, and eliminate the need for the aforemnetioned workaround.
+We hope to integrate beacon chain data in the future, which will streamline the process of connecting deposits and withdrawals, and eliminate the need for the aforementioned workaround.
 
 
 ## Column Data
