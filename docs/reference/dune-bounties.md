@@ -51,7 +51,7 @@ and it should be web3 native.
 
 ## The solution: Dune Bounties
 
-Leveraging [dework.xyz](https://www.dework.xyz), we've set up a bounty board to manage our Dune internal bounty programs - and we've set it up so it's accessible for other projects and organizations to make use of this infrastructure!
+Leveraging [dework.xyz](https://dework.xyz), we've set up a bounty board to manage our Dune internal bounty programs - and we've set it up so it's accessible for other projects and organizations to make use of this infrastructure!
 
 Dework describes itself as a “web3 native Trello with payments and credentialing". 
 
