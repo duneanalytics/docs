@@ -21,8 +21,8 @@ The following table shows the schedule for the sunsetting of the old query engin
 
 | Date          || 11/4/2023            | 15/05/2023              | 15/06/2023     | 15/07/2023          |
 |---------------||----------------------|-------------------------|----------------|---------------------|
-|**SparkSQL**   || Sunsetting Kickoff   | Drop from data explorer | Edits disabled | Stop ingesting data |
-|**PostgreSQL** || Sunsetting Kickoff   | Drop from data explorer | Edits disabled | Stop ingesting data |
+|**SparkSQL**   || Sunsetting Kickoff   | Drop from data explorer | Edits disabled | End of Service      |
+|**PostgreSQL** || Sunsetting Kickoff   | Drop from data explorer | Edits disabled | End of Service      |
 
 
 ## What this means for you
