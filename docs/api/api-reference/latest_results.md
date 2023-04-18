@@ -28,7 +28,7 @@ Note that:
 You need to pass the `query_id` like below:
 
 ```
-GET v1/execution/{{execution_id}}/status
+GET v1/query/{{query_id}}/results
 
 https://api.dune.com/api/v1/query/{{query_id}}/results
 ```
@@ -36,7 +36,7 @@ https://api.dune.com/api/v1/query/{{query_id}}/results
 ### cURL
 
 ```
-curl -X GET "https://api.dune.com/api/v1/execution/{{execution_id}}/status" -H x-dune-api-key:{{api_key}}
+curl -X GET "https://api.dune.com/api/v1/query/{{query_id}}/results" -H x-dune-api-key:{{api_key}}
 ```
 
 ### Python
@@ -57,10 +57,28 @@ headers = {"x-dune-api-key": api_key}
 query_id = 1252207
 base_url = f"https://api.dune.com/api/v1/query/{query_id}/results"
 params = {
-    "params.LooksRare Wash Trading Filter": "ON", # one and only param for this query, "ON" value has been executed
+    "params.LooksRare Wash Trading Filter": "ON", # one and only param for this query
 }
 result_response = requests.request("GET", base_url, headers=headers, params=params)
 ```
+
+You can partially fill parameters as well, say there are three parameters - if you only pass in two then the other one will use the default parameters:
+
+```
+# case 4: partial match of the existing params that were executed will work aka 200
+query_id = 1064888
+base_url = f"https://api.dune.com/api/v1/query/{query_id}/results"
+params = {
+    "params.Show Today": "No",
+    "params.Time Period": "day" 
+    # there is one more param for this query "Trailing Num Periods" which we are not passing
+}
+result_response = requests.request("GET", base_url, headers=headers, params=params)
+```
+
+!!! warning "Parameter 404 Behaviors"
+    If a certain parameter has never been run before, i.e. putting in "OFF" above when only "ON" has been executed in app, then you will get a 404. Same thing if you try and use a parameter that doesn't exist on the query.
+
 
 ## Example Response
 

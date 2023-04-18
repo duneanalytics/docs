@@ -7,6 +7,7 @@ Learn about our API endpoints and common errors here:
 
 <div class="cards grid" markdown>
 - [Authentication](../api-reference/authentication.md)
+- [Get Latest Results](../api-reference/latest_results.md)
 - [Execute Query ID](../api-reference/execute-query-id.md)
 - [Execution Status](../api-reference/execution-status.md)
 - [Execution Results](../api-reference/execution-results.md)
