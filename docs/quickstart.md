@@ -1,5 +1,5 @@
 ---
-title: Dune Quickstart_
+title: Dune Quickstart
 description: Get started on Dune in five minutes!
 ---
 <p align="center">

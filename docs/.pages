@@ -1,9 +1,9 @@
 nav:
 - index.md
+- quickstart.md
 - analytics_guidelines.md
 - app
 - data-tables
 - query
 - API: api
 - reference
-- index-draft-1.md
