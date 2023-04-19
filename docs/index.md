@@ -1,62 +1,65 @@
 ---
-title: Dune Quickstart
-description: Get started on Dune in five minutes!
+title: Welcome to the Dune Docs
+description: Dune is a web-based platform that allows you to query public blockchain data and aggregate it into beautiful dashboards.
 ---
 
-### Why Learn to Use Dune?
+Dune is a web-based platform that allows you to query public blockchain data and aggregate it into beautiful dashboards.
 
-You're probably here because you've realized that:
+!!! type "Quickstart"
+    To get started with Dune in 5 minutes, see the [Quickstart](quickstart.md).
 
-1. While blockchain data is open and transparent, **it isn't easy to understand, ingest, and aggregate.** Each chain has different nuances, decoding contract functions and events is not as straightforward as it seems.
 
-2. Either your own protocol or someone else's protocol was not built with a data engineer/analyst in mind. **You've reached the limits of how you can keep up with just contract read functions and most recent events.**
+<p align="center">
+  <img src="images/quickstart-cover.jpeg" alt="A beautiful dashboard" title="Dashboard" /><br />
+  <em>The world's blockchain data at your fingertips!</em>
+</p>
 
-3. You want to do heavy cross context analysis, combining tokens, wallets, and protocols across chains. This requires an end-to-end data warehouse that can scale on demand - and a full team to maintain it. **That's hundreds of terabytes of data to store, and exponential amounts of compute ($$$$).**
 
-4. You're an analyst that wants to **showcase your work to tens of thousands of users**, and earn stars to climb the Wizard Leaderboard to find freelance or full-time roles.
 
-You're in luck! Dune and the community of thousands of wizards are here to bring you powerful analysis of all onchain data. If you just go and search for anything Web3 related, I'm sure **you'll find [at least one dashboard on that topic](https://dune.com/browse/dashboards?q=dex&order=favorites&time_range=all)**. This goes for every chain we have, including EVMs like **Ethereum, Polygon, Goerli, and Optimism** and non-EVM chains like **Solana and Bitcoin.**
+Blockchains are open and transparent, but each chain is unique—making it difficult to understand, ingest, and aggregate data. Dune gives you the proper tools to analyze cross-chain data for different tokens, wallets, and protocols. You can also easily share your work with the community.
 
-You can quickly explore [NFT marketplaces](https://dune.com/hildobby/NFTs), [DEX metrics](https://dune.com/hagaetc/dex-metrics), [Bridges](https://dune.com/eliasimos/Bridge-Away-(from-Ethereum)), [DAO Accounting (Maker)](https://dune.com/SebVentures/maker---accounting_1), [Base Chain Metrics](https://dune.com/optimismfnd/Optimism), and much more!
 
-Enough chatting, let's show you some magic. ✨
+### Start building
 
-### Analyze Web3 Data: DEX Volumes
+Ready to start building? Once you have an [account](https://dune.com/auth/register) and you’ve reviewed the [Quickstart](quickstart.md), check out these essentials to start using Dune:
 
-In this short section, we'll walk you through how to get the weekly USD volume traded by DEXs in the last six months on Ethereum. Click through the interactive walkthrough below to understand how we use the `dex.trades` table to:
 
-- Find and preview data for tables we're interested in
 
-- Write and run a basic query on the Dune SQL engine
+* Use the [Query Editor](../app/queries/) to explore data, write queries, and gain mastery
+* Make stunning [visualizations](../app/visualizations/) with graphs, charts, and other unique options
+* Create a [Dashboard](../app/dashboards/) to embed visualizations, graphics, and text to tell compelling stories with your data
 
-- Create and format a stacked bar chart visualization
 
-<div style="position: relative; padding-bottom: calc(67.14527027027027% + 41px); height: 0;"><iframe src="https://demo.arcade.software/gNuUxSbr6NZi4aXBURWu?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;" title="Dashboards"></iframe></div>
+### Learn more
 
-You can find [the query here](https://dune.com/queries/2168290).
+If you’re new to blockchain or SQL—or want to go deeper on Dune concepts and best practices—check out the following resources:
 
-Now, `dex.trades` is a spellbook table, meaning that it's an abstracted table that's been put together by hundreds of star analysts in the community, supported by the Dune team. You can find any spellbook table's column descriptions [defined here](https://spellbook-docs.dune.com/#!/model/model.spellbook.dex_trades). The lower level tables you'll often work with are `raw` and `decoded` tables. Raw tables are defined [here](data-tables/raw/index.md), but for decoded tables you'll need to find the protocol's documentation such as [this one for Uniswap V3](https:/.uniswap.org/contracts/v3/reference/core/UniswapV3Factory). You'll find out how to work with these in the guides mentioned in the [advanced section](analytics_guidelines.md).
 
-### Learning SQL and Blockchain Basics
 
-The query above might be confusing to you if you aren't familiar with SQL or Blockchain basics. Here are a few beginner resources and guides to get you started:
+* [Dune Official Getting Started Video Series](https://www.youtube.com/watch?v=S-cctFmR828&list=PLK3b5d4iK10ext4v-GBySekaA8-GP8quD&index=1) to learn how data flows and how to navigate the Dune app to get the most out of it
+* [Web3 Analytics Resources](../analytics_guidelines.md) to start performing your own analysis, or to find SQL and Blockchain resources for beginners
+* Join our community in [Discord](https://discord.gg/dunecom) to get support through the `#🐥︱beginners` and `#🙋︱query-questions` channels
 
-- [Dune Official Getting Started Video Series](https://www.youtube.com/watch?v=S-cctFmR828&list=PLK3b5d4iK10ext4v-GBySekaA8-GP8quD&index=1) to learn how the data flows and how to navigate the Dune app to create queries, visualizations, and dashboards. 
 
-- [Weekly Web3 SQL problems](https://daodatadesign.notion.site/Web3-SQL-Weekly-0bababb5e59a412bb73594c512db8cc1) to learn wizard tips and tricks in byte-sized bits. Covers things like token balances, protocol integrations, product metrics, and much more.
+### Why Dune?
 
-- [All Ethereum and SQL Basics](https://web3datadegens.substack.com/p/a-basic-wizard-guide-to-dune-sql) to learn all the basic SQL concepts and Ethereum tables you'll need in your analysis.
+Dune—along with our massive community of users and experts—provides powerful tools and analysis of all onchain data. You can find a [dashboard](https://dune.com/browse/dashboards?q=dex&order=favorites&time_range=all) for pretty much anything web3-related, including for EVMs like Ethereum, Polygon, Goerli, and Optimism—and non-EVM chains like Solana and Bitcoin.
 
-- For pure SQL practice, try going through the "easy" problems [on hackerrank](https://www.hackerrank.com/domains/sql).
+Examples of real dashboards:
 
-Join the community and learn together [in Discord](https://discord.com/invite/ErrzwBz) by participating in the `#🐥︱beginners` and `#🙋︱query-questions` channels.
 
-And when you feel ready to do advanced analysis, check out the [next guide](analytics_guidelines.md).
 
-You should also read about Dune SQL specific concepts like custom types and functions, and different kinds of tables in our database.
+* [NFT marketplaces](https://dune.com/hildobby/NFTs)
+* [DEX metrics](https://dune.com/hagaetc/dex-metrics)
+* [Bridges](https://dune.com/eliasimos/Bridge-Away-(from-Ethereum))
+* [DAO Accounting (Maker)](https://dune.com/SebVentures/maker---accounting_1)
+* [Base Chain Metrics](https://dune.com/optimismfnd/Optimism)
 
-### Still stuck, or want to hire someone else to help?
+To learn more about the possibilities with Dune, see [Use Cases](../app/dashboards/).
 
-There are quite a few people in the crypto industry who either specialize in building on Dune or have the necessary skills to quickly get up to speed on the particulars.
 
-To reach out to this pool of expert freelancers, you can [fill out this questionnaire](http://bounties.dune.com) and wait for freelancers to get back to you in little to no time. If that yields no results, posting the bounty on relevant social channels and spreading it in your networks may help.
+### Find an expert
+
+There are many experts in the crypto community who specialize in Dune or have the necessary skills to get up to speed quickly.
+
+[Post a bounty](http://bounties.dune.com/) to a pool of expert freelancers and receive responses from interested builders. You can also share the posted bounty within your network.
