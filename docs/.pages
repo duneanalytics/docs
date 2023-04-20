@@ -1,5 +1,6 @@
 nav:
 - index.md
+- quickstart.md
 - analytics_guidelines.md
 - app
 - data-tables

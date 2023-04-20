@@ -169,7 +169,7 @@ In Dune V2, we can just read the data that we actually need.
 
 **Lesson:** Querying for data across a large amount of logical rows is now much more efficient and a lot of Queries that were formerly sheer impossible due to timing out are now able to be executed.
 
-Another good example to illustrate this is [@hildobby's](https://twitter.com/hildobby_) [Ethereum Overview](https://dune.com/hildobby/Ethereum-Overview) Dashboard.
+Another good example to illustrate this is [@hildobby's](https://twitter.com/hildobby_) [Ethereum Overview](https://dune.com/hildobby/ethereum) Dashboard.
 
 
 ## We’ll keep innovating

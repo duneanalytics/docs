@@ -38,7 +38,7 @@ A few members of our Wizard community are also amazing content creators, check o
 
 ## News and Info:
 
-- [21Shares](https://21shares.com/research/)
+- [21Shares](https://21shares.com/insights)
 - [Blockworks](https://blockworks.co/)
 - [Decrypt](https://decrypt.co/)
 - [CoinDesk](https://www.coindesk.com/)
