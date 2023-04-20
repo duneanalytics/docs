@@ -1,0 +1,85 @@
+---
+title: Dune API FAQ
+description: Dune API FAQ
+---
+
+# Dune API FAQ
+
+Please reach out to [api-feedback@dune.com](mailto:api-feedback@dune.com) or our #[dune-api](https://discord.com/channels/757637422384283659/1019910980634939433) Discord channel for the fastest path towards getting additional questions answered!
+
+[Find our API Terms of Service Here](https://dune.com/api-terms)
+
+## FAQ: Functionality
+
+#### How many Requests Per Minute can I make?
+
+The API is currently set to a rate limit of 60 requests per minute. This will soon be set to match the rate limiits specified in the varying API plan tiers. 
+
+#### Are there specified SLAs?
+
+SLAs will be available in the future on Enterprise pricing plans.
+
+#### How do I find a query id?
+
+When navigating to a query, it’s the first number after “/queries/” in the URL. For example in `https://dune.com/queries/241/388`, "241" is the query id.
+
+#### Does the API support Query Parameters?
+
+The API does support Query Parameters!
+
+For Dune Queries that include Parameters, you can pass parameter data as part of the [Execute Query ID endpoint](api-reference/execute-query-id.md)!
+
+Learn more about [building Dune Queries with Parameters here](../app/queries/parameters.md).
+
+And learn how to pass parameter data using [cURL here](api-reference/execute-query-id.md#curl-with-parameters) and with [Python here](quick-start/api-py.md#parameterized-queries).
+
+#### What are the performance and overall differences between the Dune API and the Dune web app? What are the differences in what I can query?
+
+There are no major performance differences or differences in what can be accessed between the two if both are using the same app plan tier.
+
+The Dune API gives you programmatic access to the capabilities and data sets that can already be accessed from the Dune web app.
+
+#### What is the execution timeout limit and can I request a longer limit?
+
+The query execution timeout limit matches the Dune web app - 30 minutes.
+
+#### Which query engine should I use with the API?
+
+We recommend using the API with v2 Dune SQL as we’re slowly deprecating usage and support of the old v1 engine and v2 Spark SQL.
+
+#### What is the difference between the states “Executing” and “Pending”?
+
+Pending means, the execution is waiting for an available execution connection slot.
+
+Executing means the query is currently executing against the database.
+
+#### Can I ingest data by getting a direct connection to the database instead?
+    
+Not currently. In the interim we recommend periodically fetching from “max(latestBlockNumber) - 2” to “lastFetchedBlockNumber” in regular intervals. Fetching from 2 behind the latest block number ensures you receive full sets of data from each new request.
+
+#### Are query results data saved for faster retrieval?
+    
+Yes!
+
+#### How long are the results data from an execution stored for?
+    
+Currently set to 2 years but we may reduce this to something closer to 90 days in the future. This is visible on the API response on the “expires_at” field in the execution status and results body.
+
+#### How much data can I retrieve in a single API result call?
+    
+There is currently a 250MB limit, but there is a chance we increase this for certain paid plans. The API does not currently return an explicit error upon hitting this limit but will instead fail (timeout) when attempting to retrieve the results.
+
+## FAQ: Billing & Pricing
+    
+#### How will API Billing work with the new Team plans?
+We'll be shortly supporting API keys on a team level in first few months of 2023. Any usage associated with a team api key will be billed to their respective team.
+
+#### What’s a datapoint?
+
+A datapoint can in most cases be thought of rows * columns with an additional limit of 50 avg bytes per cell in a set of results. This can be expressed as:
+
+Datapoints = max(rows*columns, ceil(totalbytes/50))
+
+#### Do I get charged datapoints for every execution?
+
+We charge the data points in the result for the 1st read result of every distinct query execution and every subsequent 100th read per billing cycle.

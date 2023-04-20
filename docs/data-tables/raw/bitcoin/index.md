@@ -1,5 +1,5 @@
 ---
-title: Bitcoin
+title: Bitcoin Overview
 description: As a non-EVM chain, Bitcoin raw data looks quite different from other chains. Learn more about Bitcoin's data in these pages.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Solana
+title: Solana Overview
 description: As a non-EVM chain, Solana Raw data looks quite different from other chains. Learn more about Solana's data in these pages.
 ---
 
