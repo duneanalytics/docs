@@ -1,9 +1,9 @@
 ---
-title: Labels
+title: labels
 description: Address labels is a feature on Dune where you as a user can add, update and query labels for any address.
 ---
 
-Have you ever made a query on Dune where you get a list of addresses, only to stop and wonder what’s behind these beautiful, random hexadecimal encoded strings? So have we.
+Because of all the open data on blockchain, we can enhance our understanding of any given address by tagging it with different labels. This immediately give any analysis enhanced context. 
 
 **Address labels** is a spell in Dune that allows you to add static or query labels to enhance your analysis.
 

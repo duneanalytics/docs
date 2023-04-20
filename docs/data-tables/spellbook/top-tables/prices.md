@@ -1,5 +1,5 @@
 ---
-title: Prices
+title: prices
 description: These tables allow you to get the price of almost all relevant erc20 tokens.
 ---
 We pull price data from the [coinpaprika](https://coinpaprika.com) API.
