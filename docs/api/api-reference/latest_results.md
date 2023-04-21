@@ -1,9 +1,9 @@
 ---
-title: Latest Results
+title: Latest Query Results
 description: Here"s how to get the latest results of a query run
 ---
 
-# [GET] Get Latest Query Results
+# [GET] Latest Query Results
 
 Here"s how to get the latest results of a query, regardless of the job id/run. 
 
