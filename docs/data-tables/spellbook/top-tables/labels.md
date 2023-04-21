@@ -5,13 +5,27 @@ description: Address labels is a feature on Dune where you as a user can add, up
 
 Because of all the open data on blockchain, we can enhance our understanding of any given address by tagging it with different labels. This immediately give any analysis enhanced context. 
 
-**Address labels** is a spell in Dune that allows you to add static or query labels to enhance your analysis.
+**labels.addresses** is a spell in Dune that allows you to add static or query labels to enhance your analysis.
 
 ## What is a label?
 
 A label is **a piece of metadata about an address**, a tag or metadata if you will. It comes in the form of a key-value pair. The key is the label _type_, and the value the label _name_.
 
-Browse addresses and and labels at the [**labels page**](https://dune.com/dune/dune-v2-labels).
+Browse addresses and and labels at the [**labels page**](https://dune.com/dune/dune-v2-labels) or contribute to the spell [starting with the readme](https://github.com/duneanalytics/spellbook/tree/main/models/labels/addresses).
+
+Here’s a list of label types:
+
+- **Identifiers**: Most static labels should be this label type, as well as common usernames such as Farcaster, ENS, and Lens names. As a rule of thumb, identifiers should usually specify a unique entity name.
+- **Usage**: These are the existing top volume and frequency (or some other percentile-able metric) within a domain and the usage of specific protocols. There must be some sort of ranking/percentile involved!
+- **Personas**: These are for on-chain curated behaviors (like common CT memes) or protocol user tagging. They should be easily understood to non-analysts, though the underlying calculation methods may be more subjective.
+
+To give a sense of examples, for the "social" category you would expect these labels:
+
+- Identifier: Lens username (.lens) ENS reverse resolver (.eth), farcaster (_farcaster)
+- Usage: top holders from ENS
+- Usage: top posters from lens
+- Persona: Lens User, ENS User
+- Persona: Squatter (sitting on dozens of ENS names)
 
 ## What labels look like
 
