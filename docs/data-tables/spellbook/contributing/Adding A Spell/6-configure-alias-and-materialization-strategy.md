@@ -28,7 +28,7 @@ Basically, `view` Spells are just stored SQL logic, no additional data is stored
 
 The Pro is that `view` Spells always have fresh data, the Con is that they can take a long time to run if there’s a lot of data involved.
 
-### Add Your Model as an Incremental Materialized Table
+### Add Your Model as an Incremental Table
 
 `incremental` Spells allow dbt to insert or update records in a table according to the logic we define.
 

@@ -3,17 +3,14 @@ title: Spells
 description: With the help of the community we construct customs tables which cover the entirety of a type of activity on the blockchain called Spells.
 ---
 
-**Spells are custom tables that are built and maintained by Dune and our community.**
-
-!!! note "Spellbook Runs on Spark SQL"
-       Spellbook Spells are available on Dune V2, queryable from both Spark SQL and Dune SQL [V2 Query Engines](/query/index.md). For now, Spells will continue to be written in Spark SQL and querying them with Dune SQL will require small syntax changes. While the changes needed to make Spells Dune SQL native are small, we want to make sure Dune SQL is rock solid before we implement them!
-
 **The spellbook github repo can be found at [Spellbook](https://github.com/duneanalytics/spellbook).**
 
 **To see a complete list of Spellbook Spell tables, visit the [Spellbook Model Docs](https://spellbook-docs.dune.com/#!/overview).**
 ## Abstraction and Aggregation Tables for Blockchain Data
 
 Spellbook is an open-source [dbt repository](https://docs.getdbt.com/docs/introduction) for creating and maintaining high-level blockchain data tables using SQL and [Jinja templating](https://realpython.com/primer-on-jinja-templating/).
+
+**Spells are custom tables that are built and maintained by Dune and our community.**
 
 It enables the community to build toward a standardized way to transform data into meaningful abstraction layers. With web3 data, we have a foundational layer of [Raw Data](../../../raw/index.md) - blockchain transactions, traces, and logs. Spellbook lets us create abstracted data sets, like [dex.trades](https://dune.com/spellbook#!/model/model.spellbook.dex_trades) and [nft.trades](https://dune.com/spellbook#!/model/model.spellbook.nft_trades), which aggregate and organize raw data from multiple sources to make it much easier to query.
 
@@ -32,6 +29,9 @@ These enable you to effortlessly aggregate lots of data with as little friction 
 To view available Spells, take a look at our [Spellbook model documentation](https://dune.com/spellbook) and learn how to contribute new Spells [here](contributing/index.md)
 
 Our Spells are managed via the public [Spellbook GitHub repository](https://github.com/duneanalytics/spellbook/index.md). We welcome pull requests!
+
+!!! note "Spellbook Model Creation Runs on Spark SQL"
+       Spellbook Spells are available on Dune V2, queryable from both Spark SQL and Dune SQL [V2 Query Engines](/query/index.md). For now, Spells will continue to be written in Spark SQL and querying them with Dune SQL will require small syntax changes. While the changes needed to make Spells Dune SQL native are small, we want to make sure Dune SQL is rock solid before we implement them!
 
 ## Why Spellbook?
 

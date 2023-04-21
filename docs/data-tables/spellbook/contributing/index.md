@@ -15,6 +15,8 @@ If you're a learn by doing type of person, check out our guides here:
 
 To take a look under the hood, check out [Spellbook on GitHub](https://github.com/duneanalytics/spellbook)
 
+!!! note "Spellbook Model Creation Runs on Spark SQL"
+       Spellbook Spells are available on Dune V2, queryable from both Spark SQL and Dune SQL [V2 Query Engines](/query/index.md). For now, Spells will continue to be written in Spark SQL and querying them with Dune SQL will require small syntax changes. While the changes needed to make Spells Dune SQL native are small, we want to make sure Dune SQL is rock solid before we implement them!\
 ## Video Guides
 
 In collaboration with [MetricsDAO](https://metricsdao.xyz/), [@agaperste](https://dune.com/agaperste) showed us how to add a Spell from scratch!
