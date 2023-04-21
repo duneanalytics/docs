@@ -6,19 +6,14 @@ title: Spellbook
 
 You can add a view, seed file (excel/csv), or materialized table (incremental or not) using spellbook.
 
-If you're a learn by doing type of person, check out our How to Add a Spell guide here:
+If you're a learn by doing type of person, check out our guides here:
 
 <div class="cards grid" markdown>
-- [How to Add a Spell](../contributing/Adding%20A%20Spell/index.md)
+- [Getting Setup And Adding a Spell (Pull Request)](../contributing/Adding%20A%20Spell/index.md)
+- [Example Spell Models](../contributing/examples/index.md)
 </div>
 
-To take a look under the hood, check out Spellbook on GitHub:
-
-<div class="cards grid" markdown>
-- [Spellbook on GitHub](https://github.com/duneanalytics/spellbook)
-</div>
-
-Here you'll find a variety of how-to guides for making ✨ with Spellbook!
+To take a look under the hood, check out [Spellbook on GitHub](https://github.com/duneanalytics/spellbook)
 
 ## Video Guides
 

@@ -11,7 +11,7 @@ description: With the help of the community we construct customs tables which co
 **The spellbook github repo can be found at [Spellbook](https://github.com/duneanalytics/spellbook).**
 
 **To see a complete list of Spellbook Spell tables, visit the [Spellbook Model Docs](https://spellbook-docs.dune.com/#!/overview).**
-## The Most Powerful Blockchain Abstraction and Aggregation Tables in Web3
+## Abstraction and Aggregation Tables for Blockchain Data
 
 Spellbook is an open-source [dbt repository](https://docs.getdbt.com/docs/introduction) for creating and maintaining high-level blockchain data tables using SQL and [Jinja templating](https://realpython.com/primer-on-jinja-templating/).
 
@@ -43,11 +43,11 @@ What’s the project about? Is it something worth buying as an investment?
 
 If we want to do some on-chain analysis, we could start by going to OpenSea and finding the Renga collection ([here](https://opensea.io/collection/renga)).
 
-![renga collection opensea](images/RENGA-Collection-OpenSea.png)
+![renga collection opensea](../spellbook/contributing/Adding%20A%20Spell/images/RENGA-Collection-OpenSea.png)
 
 [By viewing an item from this collection](https://opensea.io/assets/ethereum/0x394e3d3044fc89fcdd966d3cb35ac0b32b0cda91/6294), we can get the collection’s contract address as well as the unique ID from its OpenSea URL.
 
-![get renga contract address from url](images/get-renga-contract-address-from-url.png)
+![get renga contract address from url](../spellbook/contributing/Adding%20A%20Spell/images/get-renga-contract-address-from-url.png)
 
 We can also scroll down and click on a transaction to [view it on the blockchain explorer](https://etherscan.io/tx/0x96f158d75379057d95c1c562b9908603e543feee25a71ac420e21ecf0a0c643c) and get more data like:
 
