@@ -23,7 +23,7 @@ The API currently lets users:
 The only way to get query results from the Dune API is to execute a query using the Dune API. Results from API executions are not currently reflected on Dune’s website (and vice versa).
 
 ### Obtaining an API Key
-All plans on our new credit-based pricing system [credit-based pricing system](https://dune.com/pricing) come bundled with API access.
+All plans on our new [credit-based pricing system](https://dune.com/pricing) come bundled with API access.
 You'll have seperate API keys for your [individual accounts](https://dune.com/settings/api) and [team accounts](https://dune.com/settings/teams).
 
 ### API Quickstart Guides
