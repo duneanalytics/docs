@@ -15,10 +15,12 @@ None required. For query params, we recommend you to not have spaces for a param
 
 Returns the latest execution id and results of the run. 
 
-Note that: 
-- this endpoint does NOT trigger execution 
-- you only need to pass the id in then you get latest results that was executed 
-- only get the latest execution triggered thru APP (API execution results will be included soon)
+!!!note "Keep in mind"
+    - this endpoint does NOT trigger execution 
+
+    - you only need to pass the id in then you get latest results that was executed 
+
+    - only get the latest execution triggered thru APP (API execution results will be included soon)
 
 
 ## Example Request
