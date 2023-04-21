@@ -16,6 +16,6 @@ Going through these endpoints will teach you how to run an execution and grab it
 
 You will likely need to reference the common [error codes](../api-reference/errors.md) too.
 
-### Easy Results Endpoint
+### Latest Results Endpoint
 
 If you don't need the most up to date data and just want to query for most recently refreshed results of a query, check out the [get latest results](../api-reference/latest_results.md) endpoint.
