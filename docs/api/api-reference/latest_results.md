@@ -3,15 +3,13 @@ title: Latest Results
 description: Here"s how to get the latest results of a query run
 ---
 
-# [GET] query/{query_id}/results
+# [GET] Get Latest Query Results
 
 Here"s how to get the latest results of a query, regardless of the job id/run. 
 
 ## Arguments
 
-`query_id` is the id of the query you are trying to pull results from. It must either be public or a query you have ownership of. 
-
-For query params, we recommend you to not have spaces for a parameter, use underscore instead like `https://api.dune.com/api/v1/query/2340912/results?params.LooksRare%20Wash%20Trading%20Filter=ON`. If no query params provided, will fetch latest results regardless of parameter (not just default!)
+None required. For query params, we recommend you to not have spaces for a parameter, use underscore instead like `https://api.dune.com/api/v1/query/2340912/results?params.LooksRare%20Wash%20Trading%20Filter=ON`. If no query params provided, will fetch latest results regardless of parameter (not just default!)
 
 ## Returns
 
@@ -25,7 +23,7 @@ Note that:
 
 ## Example Request
 
-You need to pass the `query_id` like below:
+`query_id` is the id of the query you are trying to pull results from. It must either be public or a query you have ownership of. 
 
 ```
 GET v1/query/{{query_id}}/results
