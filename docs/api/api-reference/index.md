@@ -4,7 +4,7 @@ description: Learn about our API endpoints and common errors here.
 ---
 ### Execution and Results Flow
 
-Going through these endpoints will teach you how to run an execution and grab it's results.
+Going through these endpoints will teach you how to run an execution and grab it's results. You can specify the `performance` level of executions (see example in [execute query id](../api-reference/execute-query-id.md)).
 
 <div class="cards grid" markdown>
 - [Authentication](../api-reference/authentication.md)
