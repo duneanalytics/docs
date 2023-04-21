@@ -12,7 +12,7 @@ The Dune API gives you full access to the queries and data you can see on the Du
 This documentation describes all of the available API calls and properties of the returned objects. If you have any questions or feedback, please reach out to [api-feedback@dune.com](mailto:api-feedback@dune.com) or our #[dune-api](https://discord.com/channels/757637422384283659/1019910980634939433) Discord channel!
 
 
-## How does the API work?
+### How does the API work?
 
 The API currently lets users:
 
@@ -20,21 +20,26 @@ The API currently lets users:
 2. Check the status of an execution
 3. Get the results of an execution
 
-These results are currently stored separately from anything you see on the Dune.com website. This means the only way to get query results from the Dune API is to execute a query using the Dune API.
-
-Similarly, results from API executions are not currently reflected on Dune’s website.
-
-## API Getting Started
+The only way to get query results from the Dune API is to execute a query using the Dune API. Results from API executions are not currently reflected on Dune’s website (and vice versa).
 
 ### Obtaining an API Key
 After [purchasing an an app plan and API package](https://dune.com/pricing), you can find the API key in your [settings page](https://dune.com/settings/api). 
 
-### Picking a Programming Language
-While you can consume our API in the language of your choice - see the [API Reference](api-reference/authentication.md) section - we currently have quick start guides for [Python](quick-start/api-py.md) and [Node.js](quick-start/api-js.md).
+### API Quickstart Guides
 
-We also have a variety of community clients available, [learn more about them on this page](../api/quick-start/community-clients.md)!
+Get started with our API in a few lines of code using these quick start guides:
 
-## Important Links
- - API Documentation - you're already here, check out the sidebar to learn more!
- - [#dune-api Discord Channel](https://discord.com/channels/757637422384283659/1019910980634939433)
- - [API Client (Community Sourced)](../api/quick-start/community-clients.md)
+<div class="cards grid" markdown>
+- [Python](quick-start/api-py.md)
+- [Javascript](quick-start/api-js.md)
+</div>
+
+You should check out our [community API clients (sdks)](quick-start/community-clients.md) as well.
+
+For building a simple data ingestion pipeline, see [using Python and Celery](https://adamparrish.xyz/downstream-data-extract-transform-load).
+
+If you aren't sure what queries to start with, check out the [API-ready query list](quick-start/index.md).
+
+### All API Endpoints
+
+Check out full explanations and documentation of endpoints in the [api endpoint reference](api-reference/index.md).

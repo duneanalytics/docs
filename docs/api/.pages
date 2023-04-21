@@ -1,6 +1,5 @@
 nav:
 - index.md
 - Quick Start: quick-start
-- API Reference: api-reference
+- api-reference
 - faq.md
-- ...

@@ -4,7 +4,7 @@ description: Here's how to execute (run) a Query with or without parameters to r
 ---
 # [POST] Execute Query ID
 
-Here's how to execute (run) a query with or without parameters to retrieve data.
+Here's how to execute (run) a query for a specific query id. You can choose to include a `performance` parameter, by default it will use the "medium" performance tier which consumes 10 credits. "large" will use 20 credits. You cannot run API executions on the free tier.
 
 ## Arguments
 
@@ -22,6 +22,37 @@ POST v1/query/{{query_id}}/execute
 https://api.dune.com/api/v1/query/{{query_id}}/execute
 ```
 
+## Python
+```
+import dotenv
+import os
+import json
+import requests
+import pandas as pd
+import time
+
+# load .env file
+dotenv.load_dotenv('/Users/zokum/Documents/Workspace/misc/.env')
+# get API key
+api_key = os.environ["DUNE_API_KEY"]
+# authentiction with api key
+headers = {"x-dune-api-key": api_key}
+
+query_id = 1252207
+base_url = f"https://api.dune.com/api/v1/query/{query_id}/execute"
+params = {
+    "performance": "large",
+}
+result_response = requests.request("POST", base_url, headers=headers, params=params)
+```
+
+This will give the response
+
+```
+{'execution_id': '01GXXWZSXR85GYT6K5EBRSYZ7C', 'state': 'QUERY_STATE_PENDING'}
+```
+
+
 ### cURL
 
 ```
@@ -31,7 +62,7 @@ curl -X POST -H x-dune-api-key:{{api_key}} "https://api.dune.com/api/v1/query/{{
 ### cURL with Parameters
 
 ```
-curl -X POST -d '{"query_parameters": { "param1":24}}' -H x-dune-api-key:{{api_key}}  "https://api.dune.com/api/v1/query/{{query_id}}/execute"
+curl -XPOST -d '{"query_parameters": { "param1":24}}' -H "${API_KEY_HEADER}: ${API_KEY}" -H "Content-Type: application/json" https://api.dev.dune.com/api/v1/query/61303/execute -d '{"performance": "large"}'
 ```
 
 ## Example Response

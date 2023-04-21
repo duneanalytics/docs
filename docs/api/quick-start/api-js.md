@@ -15,6 +15,30 @@ We'll show you one of the several ways the API can be consumed via JavaScript, i
 
 To start, make sure you're using the current LTS version of Node.js (Node 18) and the latest version of NPM:
 
+## Want to just get it to quickly work?
+
+Use the [cowprotocol Dune client](https://www.npmjs.com/package/@cowprotocol/ts-dune-client) in Typescript to get started:
+
+```
+import { QueryParameter, DuneClient } from "@cowprotocol/ts-dune-client";
+const { DUNE_API_KEY } = process.env;
+
+const client = new DuneClient(DUNE_API_KEY ?? "");
+const queryID = 1215383;
+const parameters = [
+  QueryParameter.text("TextField", "Plain Text"),
+  QueryParameter.number("NumberField", 3.1415926535),
+  QueryParameter.date("DateField", "2022-05-04 00:00:00"),
+  QueryParameter.enum("ListField", "Option 1"),
+];
+
+client
+  .refresh(queryID, parameters)
+  .then((executionResult) => console.log(executionResult.result?.rows));
+```
+
+Or check out the longer guide to go more low level.
+
 ## Getting Set Up
 
 ```
