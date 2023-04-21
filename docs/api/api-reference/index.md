@@ -11,6 +11,7 @@ Going through these endpoints will teach you how to run an execution and grab it
 - [Execute Query ID](../api-reference/execute-query-id.md)
 - [Execution Status](../api-reference/execution-status.md)
 - [Execution Results](../api-reference/execution-results.md)
+- [Latest Results](../api-reference/latest_results.md)
 - [Cancel Execution](../api-reference/cancel-execution.md)
 </div>
 
