@@ -7,10 +7,15 @@ description: Here"s how to get the latest results of a query run
 
 Here's how to get the latest results of a query, regardless of the job id/run. 
 
-## Arguments
+## Example Request
 
-None required. For query params, we recommend you to not have spaces for a parameter, use underscore instead like `https://api.dune.com/api/v1/query/2340912/results?params.LooksRare%20Wash%20Trading%20Filter=ON`. If no query params are provided, the request will fetch the latest results regardless of parameter (not just default!)
+`query_id` is the id of the query you are trying to pull results from. It must either be public or a query you have ownership of. 
 
+```
+GET v1/query/{{query_id}}/results
+
+https://api.dune.com/api/v1/query/{{query_id}}/results
+```
 ## Returns
 
 Returns the latest execution id and results of the run. 
@@ -21,18 +26,9 @@ Returns the latest execution id and results of the run.
     - you only need to pass the id in then you get latest results that was executed 
 
     - only get the latest execution triggered thru APP (API execution results will be included soon)
+## Query Parameters
 
-
-## Example Request
-
-`query_id` is the id of the query you are trying to pull results from. It must either be public or a query you have ownership of. 
-
-```
-GET v1/query/{{query_id}}/results
-
-https://api.dune.com/api/v1/query/{{query_id}}/results
-```
-
+For query params, we recommend you to not have spaces for a parameter, use underscore instead like `https://api.dune.com/api/v1/query/2340912/results?params.LooksRare%20Wash%20Trading%20Filter=ON`. If no query params are provided, the request will fetch the latest results regardless of parameter (not just default!)
 ### cURL
 
 ```

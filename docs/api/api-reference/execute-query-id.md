@@ -5,15 +5,6 @@ description: Here's how to execute (run) a Query with or without parameters to r
 # [POST] Execute Query ID
 
 Here's how to execute (run) a query for a specific query id. You can choose to include a `performance` parameter, by default it will use the "medium" performance tier which consumes 10 credits. "large" will use 20 credits. You cannot run API executions on the free tier.
-
-## Arguments
-
-None required. You may optionally add query parameters ([see this example](#curl-with-parameters)).
-
-## Returns
-
-Returns an `execution_id` for the specified request.
-
 ## Example Request
 
 ```
@@ -21,7 +12,12 @@ POST v1/query/{{query_id}}/execute
 
 https://api.dune.com/api/v1/query/{{query_id}}/execute
 ```
+## Returns
 
+Returns an `execution_id` for the specified request.
+## Query Parameters
+
+If the query has parameters and you don't add them in your API call, it will just run the default params. You may add query parameters as part of the POST params data: ([see this example](#curl-with-parameters)).
 ## Python
 ```
 import dotenv
