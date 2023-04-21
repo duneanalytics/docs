@@ -5,18 +5,18 @@ description: Here"s how to get the latest results of a query run
 
 # [GET] Latest Query Results
 
-Here"s how to get the latest results of a query, regardless of the job id/run. 
+Here's how to get the latest results of a query, regardless of the job id/run. 
 
 ## Arguments
 
-None required. For query params, we recommend you to not have spaces for a parameter, use underscore instead like `https://api.dune.com/api/v1/query/2340912/results?params.LooksRare%20Wash%20Trading%20Filter=ON`. If no query params provided, will fetch latest results regardless of parameter (not just default!)
+None required. For query params, we recommend you to not have spaces for a parameter, use underscore instead like `https://api.dune.com/api/v1/query/2340912/results?params.LooksRare%20Wash%20Trading%20Filter=ON`. If no query params are provided, the request will fetch the latest results regardless of parameter (not just default!)
 
 ## Returns
 
 Returns the latest execution id and results of the run. 
 
 !!!note "Keep in mind"
-    - this endpoint does NOT trigger execution 
+    - this endpoint does NOT trigger execution but does consume credits through datapoints
 
     - you only need to pass the id in then you get latest results that was executed 
 
