@@ -5,16 +5,16 @@ description: Get started with our API fast using these quick start guides.
 
 ## Language Specific API Quickstart Guides
 
-Get started with our API fast using these quick start guides:
+Get started with our API in a few lines of code using these quick start guides:
 
 <div class="cards grid" markdown>
 - [Python](../quick-start/api-py.md)
 - [Javascript](../quick-start/api-js.md)
-- [Community Clients](../quick-start/community-clients.md)
 </div>
 
-If you're setting up a data ingestion pipeline, check out this guide [using Python and Celery](https://adamparrish.xyz/downstream-data-extract-transform-load).
+You should check out our [community API clients (sdks)](../quick-start/community-clients.md) as well.
 
+For building a simple data ingestion pipeline, see [using Python and Celery](https://adamparrish.xyz/downstream-data-extract-transform-load).
 ## Easy query examples work with
 
 Here we have four queries, you can use the query ID from the URL in any of the [API guides](../quick-start/index.md). Or, you can fork the query and change it however you like - then use that new query ID in the API.
