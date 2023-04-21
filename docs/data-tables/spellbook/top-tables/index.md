@@ -22,7 +22,7 @@ Sector Spells are tables like dex.trades, erc20.stablecoins, lending.borrow, tok
 
 These Spells take in data from multiple contracts and projects, standardize the data across them and therefore make it very easy to query for this data and compare the metrics of different projects with each other.
 
-Most of the [sector Dashboards](../../app/dashboards/sector-dashboards.md) dashboards depend on sector spells. This introduces an interesting dynamic in which projects can easily get their data into these dashboards by making a pull request to our public [github repo](https://github.com/duneanalytics/spellbook/index.md).
+Most of the [sector Dashboards](../../../app/dashboards/sector-dashboards.md) dashboards depend on sector spells. This introduces an interesting dynamic in which projects can easily get their data into these dashboards by making a pull request to our public [github repo](https://github.com/duneanalytics/spellbook/index.md).
 
 Team Dune and the community are always improving on these sector spells, all new additions to existing ones are always welcome.
 

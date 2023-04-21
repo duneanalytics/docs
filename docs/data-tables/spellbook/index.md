@@ -12,7 +12,7 @@ Spellbook is an open-source [dbt repository](https://docs.getdbt.com/docs/introd
 
 **Spells are custom tables that are built and maintained by Dune and our community.**
 
-It enables the community to build toward a standardized way to transform data into meaningful abstraction layers. With web3 data, we have a foundational layer of [Raw Data](../../../raw/index.md) - blockchain transactions, traces, and logs. Spellbook lets us create abstracted data sets, like [dex.trades](https://dune.com/spellbook#!/model/model.spellbook.dex_trades) and [nft.trades](https://dune.com/spellbook#!/model/model.spellbook.nft_trades), which aggregate and organize raw data from multiple sources to make it much easier to query.
+It enables the community to build toward a standardized way to transform data into meaningful abstraction layers. With web3 data, we have a foundational layer of [Raw Data](../raw/index.md) - blockchain transactions, traces, and logs. Spellbook lets us create abstracted data sets, like [dex.trades](https://dune.com/spellbook#!/model/model.spellbook.dex_trades) and [nft.trades](https://dune.com/spellbook#!/model/model.spellbook.nft_trades), which aggregate and organize raw data from multiple sources to make it much easier to query.
 
 dbt natively understands the dependencies between all models. In our old abstractions logic we were managing dependencies manually, which made deploying and maintaining them a mess. With dependency management, we can guarantee that all models are deployed in the correct order.
 
@@ -43,11 +43,11 @@ What’s the project about? Is it something worth buying as an investment?
 
 If we want to do some on-chain analysis, we could start by going to OpenSea and finding the Renga collection ([here](https://opensea.io/collection/renga)).
 
-![renga collection opensea](../spellbook/contributing/Adding%20A%20Spell/images/RENGA-Collection-OpenSea.png)
+![renga collection opensea](../spellbook/contributing/images/RENGA-Collection-OpenSea.png)
 
 [By viewing an item from this collection](https://opensea.io/assets/ethereum/0x394e3d3044fc89fcdd966d3cb35ac0b32b0cda91/6294), we can get the collection’s contract address as well as the unique ID from its OpenSea URL.
 
-![get renga contract address from url](../spellbook/contributing/Adding%20A%20Spell/images/get-renga-contract-address-from-url.png)
+![get renga contract address from url](../spellbook/contributing/images/get-renga-contract-address-from-url.png)
 
 We can also scroll down and click on a transaction to [view it on the blockchain explorer](https://etherscan.io/tx/0x96f158d75379057d95c1c562b9908603e543feee25a71ac420e21ecf0a0c643c) and get more data like:
 
@@ -95,7 +95,7 @@ Which gets us:
 
 Some more interesting info here like `gas_price` and `gas_used` but the juicy stuff is in the `data` column - but to understand that we’d need to reference the contract’s [Application Binary Interface](https://www.quicknode.com/guides/smart-contract-development/what-is-an-abi) ABI.
 
-Thankfully, Dune has [Decoded Data](../../../decoded/index.md), which contains contract data that’s been automatically decoded from the transaction’s raw data using the ABI - the machines save us time.
+Thankfully, Dune has [Decoded Data](../decoded/index.md), which contains contract data that’s been automatically decoded from the transaction’s raw data using the ABI - the machines save us time.
 
 With Decoded Data, we can make a Query like this:
 

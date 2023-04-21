@@ -1,5 +1,5 @@
 ---
-title: 7. 🌈 Make a Pull Request, Get Merged, Become an Archwizard 🧙
+title: 7. 🧙 Make a Pull Request
 description: With all this out of the way, it’s time to submit a PR to the official Spellbook!
 ---
 

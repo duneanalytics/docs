@@ -1,5 +1,5 @@
 ---
-title: 4. 🧪 Define Expectations with Schema and Tests
+title: 4. 🧪 Define Schema/Test
 description: Next, we define what success means for our Spell in two ways.
 ---
 

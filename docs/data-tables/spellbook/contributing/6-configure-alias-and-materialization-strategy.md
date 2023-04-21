@@ -1,5 +1,5 @@
 ---
-title: 6. 🎨 Materiliazing Your Models and Naming/Aliasing them
+title: 6. 🎨 Configure Alias and Materialization
 description: With our Spell’s SQL defined, it’s time to configure our aliases.
 ---
 

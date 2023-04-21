@@ -1,14 +1,15 @@
 ---
-title: Web3 Analytics Resources
+title: Learning Resources
 description: End to End tutorials on how to analyze specific protocols
 ---
 
-*This section will contain links to many community contributed guides and dashboards.*
+After you've gone through the [quickstart guide](quickstart.md), you'll be ready to really start learning how to navigate the Web3 data analytics space.
 
 Analyzing protocols in web3 is both really easy and really hard. It's really easy because everything is transparent and standardized - a deployed contract has a set of functions and events that are pretty much immutable. However, it's an ever expanding data battlefield as new protocols, tokens, and wallets join the fray and add to the chaos. 
 
 To build your reputation as an expert wizard, you must stay centered on what you want to analyze and what metrics you want to present.
 
+*The following sections contain links to community contributed guides and dashboards.* 
 ### Finding What To Analyze
 
 Once you've learned [basic SQL and blockchain concepts](https://web3datadegens.substack.com/p/a-basic-wizard-guide-to-dune-sql), you're ready to start doing your own end-to-end analysis. It's easy to get lost in an ever-expanding web of tables and analysis - so here are some top tips on scoping your work. 

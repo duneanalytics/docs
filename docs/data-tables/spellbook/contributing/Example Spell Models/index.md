@@ -1,5 +1,5 @@
 ---
-title: Spellbook Examples
+title: Example Spell Models
 ---
 
 As an example, we'll look at ERC-20. [ERC-20](https://ethereum.org/en/developers/docs/standards/tokens/erc-20) tokens are fungible tokens that all follow a contract standard set by the Ethereum Foundation. To track daily balances, we need to first identify the transfers.

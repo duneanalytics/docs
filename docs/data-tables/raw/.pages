@@ -1,3 +1,6 @@
 title: Raw Tables
 nav:
-- ...
+- index.md
+- EVM: evm
+- Solana: solana
+- Bitcoin: bitcoin

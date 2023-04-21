@@ -1,5 +1,5 @@
 ---
-title: 1. 💻 Do Some Prerequisites and Set Up Spellbook dbt
+title: 1. 💻 Local Setup
 description: Heres what you need to do to set up your computer to work on Spellbook.
 ---
 
