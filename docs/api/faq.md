@@ -9,7 +9,7 @@ description: Dune API FAQ
 
 #### How many Requests Per Minute can I make?
 
-The API is currently set to a rate limit of 60 requests per minute. This will soon be set to match the rate limiits specified in the varying API plan tiers. 
+The API rate limit currently varies by [subscription plan](https://dune.com/pricing). This is an overall rate limit for any type of API call made. 
 
 #### Are there specified SLAs?
 
@@ -31,7 +31,7 @@ And learn how to pass parameter data using [cURL here](api-reference/execute-que
 
 #### What are the performance and overall differences between the Dune API and the Dune web app? What are the differences in what I can query?
 
-There are no major performance differences or differences in what can be accessed between the two if both are using the same app plan tier.
+There are no major performance differences within a specific performance tier when used through the Dune API or Dune web app.
 
 The Dune API gives you programmatic access to the capabilities and data sets that can already be accessed from the Dune web app.
 
@@ -59,24 +59,24 @@ Yes!
 
 #### How long are the results data from an execution stored for?
     
-Currently set to 2 years but we may reduce this to something closer to 90 days in the future. This is visible on the API response on the “expires_at” field in the execution status and results body.
+The resutls storage period can be found on the API response on the “expires_at” field in the execution status and results body.
 
 #### How much data can I retrieve in a single API result call?
     
-There is currently a 250MB limit, but there is a chance we increase this for certain paid plans. The API does not currently return an explicit error upon hitting this limit but will instead fail (timeout) when attempting to retrieve the results.
+There is currently a ~1GB limit. The API does not currently return an explicit error upon hitting this limit but will instead fail (timeout) when attempting to retrieve the results.
 
 ## FAQ: Billing & Pricing
     
 #### How will API Billing work with the new Team plans?
-We'll be shortly supporting API keys on a team level in first few months of 2023. Any usage associated with a team api key will be billed to their respective team.
+Any API usage billing will be based on what account the API key is associated with. If you use your team api key to call a public query belonging to yourself, the billing will be associated to the team (and vice versa).
 
 #### What’s a datapoint?
 
-A datapoint can in most cases be thought of rows * columns with an additional limit of 50 avg bytes per cell in a set of results. This can be expressed as:
+A datapoint can in most cases be thought of rows * columns with an additional limit of 100 avg bytes per cell in a set of results. This can be expressed as:
 
-Datapoints = max(rows*columns, ceil(totalbytes/50))
+Datapoints = max(rows*columns, ceil(totalbytes/100))
 
-#### Do I get charged datapoints for every execution?
+#### Do I get charged datapoints for every result read?
 
 We charge the data points in the result for the 1st read result of every distinct query execution and every subsequent 100th read per billing cycle.
 
