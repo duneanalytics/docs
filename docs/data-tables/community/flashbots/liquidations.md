@@ -1,4 +1,4 @@
-# liquidations
+# Liquidations
 
 ## **flashbots.liquidations**
 

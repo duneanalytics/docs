@@ -3,7 +3,11 @@ title: Solana Overview
 description: As a non-EVM chain, Solana Raw data looks quite different from other chains. Learn more about Solana's data in these pages.
 ---
 
-As a non-EVM chain, Solana Raw data looks quite different from other chains.
+**Raw tables provide you raw, unfiltered and unedited data.**
+
+Raw data tables are very useful to get transactions, pre and post balances, and instructions data. As a non-EVM chain, Solana Raw data looks quite different from other chains (largely due to it's account structure). You can learn to get started with Solana analysis [in this guide](https://web3datadegens.substack.com/p/starter-guide-to-solana-data-analysis).
+
+However, queries that have been written using raw data tables are notoriously hard to understand and audit due to the nature of the the encoded data commonly found in these tables. Furthermore, the raw data tables have a very large number of rows and hence can be slow to query. Most of the time you are better off working with [decoded data](../../decoded/solana/idl-tables.md).
 
 ## Data Available
 

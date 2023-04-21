@@ -2,9 +2,11 @@
 title: Spellbook
 ---
 
-## Casting a Spell from scratch
+## Add a Spell from scratch 
 
-If you're a learn by doing type of person, check out our How to Cast a Spell guide here:
+You can add a view, seed file (excel/csv), or materialized table (incremental or not) using spellbook.
+
+If you're a learn by doing type of person, check out our How to Add a Spell guide here:
 
 <div class="cards grid" markdown>
 - [How to Add a Spell](../contributing/Adding%20A%20Spell/index.md)
@@ -20,7 +22,7 @@ Here you'll find a variety of how-to guides for making ✨ with Spellbook!
 
 ## Video Guides
 
-In collaboration with [MetricsDAO](https://metricsdao.xyz/), [@agaperste](https://dune.com/agaperste) showed us how to cast a Spell from scratch!
+In collaboration with [MetricsDAO](https://metricsdao.xyz/), [@agaperste](https://dune.com/agaperste) showed us how to add a Spell from scratch!
 
 In this [DuneCon workshop](https://www.youtube.com/playlist?list=PLK3b5d4iK10eVQejE7O1JEwcBMA4uwdSC), Dune Team member Megan Heintz (who came up with the name "Spellbook") walks us through Spellbook's infrastructure and how to migrate data to a Spell:
 

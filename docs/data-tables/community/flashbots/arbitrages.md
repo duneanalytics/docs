@@ -1,4 +1,4 @@
-# arbitrages
+# Arbitrages
 
 ## **flashbots.arbitrages**
 

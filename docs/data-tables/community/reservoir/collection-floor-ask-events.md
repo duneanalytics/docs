@@ -1,4 +1,4 @@
-# collection floor ask events
+# Collection Floor Ask Events
 
 ## **reservoir.collection\_floor\_ask\_events**
 

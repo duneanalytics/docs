@@ -1,4 +1,4 @@
-# collection top bid events
+# Collection Top Bid Events
 
 ## **reservoir.collection\_top\_bid\_events**
 

@@ -1,5 +1,5 @@
 ---
-title: 3. 🛣️ Set Up Your File Structure for SQL, Schema, and Source Files
+title: 2. 🛣️ Set Up Your File Structure for SQL, Schema, and Source Files
 description: Next, let’s check for an existing folder for our project and create one if it doesn’t exist.
 ---
 

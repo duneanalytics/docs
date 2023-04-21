@@ -1,4 +1,4 @@
-# sandwiched swaps
+# Sandwiched Swaps
 
 ## **flashbots.sandwiched\_swaps**
 

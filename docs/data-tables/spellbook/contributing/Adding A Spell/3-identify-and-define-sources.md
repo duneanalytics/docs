@@ -1,5 +1,5 @@
 ---
-title: 4. 📙 Identify and Define Sources
+title: 3. 📙 Identify and Define Sources
 description: With our file structure setup, let’s complete our `_sources.yml` file.
 ---
 

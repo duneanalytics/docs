@@ -1,11 +1,11 @@
 ---
-title: 7. 🎨 Configure Alias and Materialization Strategy
+title: 6. 🎨 Materiliazing Your Models and Naming/Aliasing them
 description: With our Spell’s SQL defined, it’s time to configure our aliases.
 ---
 
 With our Spell’s SQL defined, it’s time to configure our aliases so we can refer to these files in other Spells and Queries and how we want dbt to materialize our work.
 
-## dbt materialization
+## Materialize Your Model as a Table
 
 In dbt, [materializations](https://docs.getdbt.com/docs/build/materializations) are strategies for persisting our data inside of our data lake house.
 
@@ -18,7 +18,7 @@ There are 4 materialization strategies in dbt:
 
 For Spellbook, we just use `view` and `incremental`.
 
-### `view`
+### Add Your Model as a View
 
 `view` is the default materialization strategy in Spellbook - so we don’t need to specify it as our strategy in the Spells that use it.
 
@@ -28,7 +28,7 @@ Basically, `view` Spells are just stored SQL logic, no additional data is stored
 
 The Pro is that `view` Spells always have fresh data, the Con is that they can take a long time to run if there’s a lot of data involved.
 
-### `incremental`
+### Add Your Model as an Incremental Materialized Table
 
 `incremental` Spells allow dbt to insert or update records in a table according to the logic we define.
 
