@@ -15,7 +15,7 @@ Get started with our API in a few lines of code using these quick start guides:
 You should check out our [community API clients (sdks)](../quick-start/community-clients.md) as well.
 
 For building a simple data ingestion pipeline, see [using Python and Celery](https://adamparrish.xyz/downstream-data-extract-transform-load).
-## Easy query examples work with
+## API-ready Queries
 
 Here we have four queries, you can use the query ID from the URL in any of the [API guides](../quick-start/index.md). Or, you can fork the query and change it however you like - then use that new query ID in the API.
 

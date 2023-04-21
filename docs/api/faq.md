@@ -5,10 +5,6 @@ description: Dune API FAQ
 
 # Dune API FAQ
 
-Please reach out to [api-feedback@dune.com](mailto:api-feedback@dune.com) or our #[dune-api](https://discord.com/channels/757637422384283659/1019910980634939433) Discord channel for the fastest path towards getting additional questions answered!
-
-[Find our API Terms of Service Here](https://dune.com/api-terms)
-
 ## FAQ: Functionality
 
 #### How many Requests Per Minute can I make?
@@ -83,3 +79,9 @@ Datapoints = max(rows*columns, ceil(totalbytes/50))
 #### Do I get charged datapoints for every execution?
 
 We charge the data points in the result for the 1st read result of every distinct query execution and every subsequent 100th read per billing cycle.
+
+#### Any other questions?
+
+Please reach out to [api-feedback@dune.com](mailto:api-feedback@dune.com) or our #[dune-api](https://discord.com/channels/757637422384283659/1019910980634939433) Discord channel for the fastest path towards getting additional questions answered!
+
+[Find our API Terms of Service Here](https://dune.com/api-terms)
