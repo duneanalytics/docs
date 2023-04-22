@@ -5,7 +5,7 @@ description: End to End tutorials on how to analyze specific protocols
 
 After you've gone through the [quickstart guide](quickstart.md), you'll be ready to really start learning how to navigate the Web3 data analytics space.
 
-Analyzing protocols in web3 is both really easy and really hard. It's really easy because everything is transparent and standardized - a deployed contract has a set of functions and events that are pretty much immutable. However, it's an ever expanding data battlefield as new protocols, tokens, and wallets join the fray and add to the chaos. 
+Analyzing protocols in web3 is both really easy and really hard. It's really easy because everything is transparent and standardized - a deployed contract has a set of functions and events that are pretty much immutable. However, it's an ever expanding data arena as new protocols, tokens, and wallets join the fray. 
 
 To build your reputation as an expert wizard, you must stay centered on what you want to analyze and what metrics you want to present.
 
