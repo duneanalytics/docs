@@ -32,7 +32,7 @@ dotenv.load_dotenv('/Users/zokum/Documents/Workspace/misc/.env')
 # get API key
 api_key = os.environ["DUNE_API_KEY"]
 # authentiction with api key
-headers = {"x-dune-api-key": api_key}
+headers = {"X-Dune-API-Key": api_key}
 
 query_id = 1252207
 base_url = f"https://api.dune.com/api/v1/query/{query_id}/execute"
@@ -52,13 +52,17 @@ This will give the response
 ### cURL
 
 ```
-curl -X POST -H x-dune-api-key:{{api_key}} "https://api.dune.com/api/v1/query/{{query_id}}/execute"
+curl -X POST "https://api.dune.com/api/v1/query/{{query_id}}/execute"   \
+  -H X-Dune-API-key: {{api_key}}
 ```
 
 ### cURL with Parameters
 
 ```
-curl -XPOST -d '{"query_parameters": { "param1":24}}' -H "${API_KEY_HEADER}: ${API_KEY}" -H "Content-Type: application/json" https://api.dev.dune.com/api/v1/query/61303/execute -d '{"performance": "large"}'
+curl -X POST "https://api.dune.com/api/v1/query/{{query_id}}/execute"   \
+  -H "X-Dune-API-Key: {{api_key}}                                       \
+  -H "Content-Type: application/json"                                   \
+  -d '{"query_parameters": {"param1":24}, "performance": "large"}'
 ```
 
 ## Example Response
