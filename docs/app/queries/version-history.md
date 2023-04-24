@@ -1,5 +1,5 @@
 ---
-title: Version History
+title: Access the Version History
 description: Queries now have version history, where you can compare and revert to previous query versions.
 ---
 

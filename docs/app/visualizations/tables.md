@@ -1,11 +1,7 @@
 ---
-title: Other Visualizations
-description: Here are a few non-graph visualizations you can make with Dune!
+title: Create and format Tables
+description: Tables are a great way to display your data in a tabular format.
 ---
-
-Here are a few non-graph visualizations you can make with Dune!
-
-## Tables
 
 Tables are the default Visualization you'll find labeled <span class="fk-btn-4">Query results</span> whenever you create and run a Query:
 

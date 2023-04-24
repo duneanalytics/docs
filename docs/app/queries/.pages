@@ -1,8 +1,5 @@
 nav:
 - index.md
-- data-explorer.md
 - query-window.md
-- query-results.md
-- parameters.md
-- tips.md
-- ...
+- data-explorer.md
+- version-history.md

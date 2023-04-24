@@ -2,7 +2,7 @@ nav:
 - index.md
 - queries
 - visualizations
-- dashboards
+- dashboards.md
 - decoding-contracts.md
 - teams.md
 - ...
