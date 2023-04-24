@@ -1,5 +1,5 @@
 ---
-title: Teams
+title: Work with your Team
 description: Dune Teams are shared workspaces for Wizards to collaborate within.
 ---
 
@@ -14,7 +14,6 @@ Creating a Team has several benefits:
 3. **🖼 A new Team profile.** Showcase all of your Team’s work in one place.
 4. **👥 User roles.** Onboard Team members as viewers, editors or admins.
 
-## Getting started
 
 ### Creating a Team
 
@@ -60,7 +59,7 @@ Go to My Creations. Here you can see all of your personal content as well as you
 
 **Can I have private content?** 🥷
 
-We’re planning to add support for private content in Teams later this year. Stay tuned!
+Private dashboards and queries are available for the team they are in.
 
 **How do I edit my role?**
 
