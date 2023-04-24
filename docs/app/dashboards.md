@@ -1,10 +1,10 @@
 ---
-title: How To Create a Dashboard
+title: Create a Dashboard
 ---
 
 **Dashboards are where Dune's content lives and gets discovered.**
 
-Dashboards on Dune consist of widgets. Widgets can either be Visualizations or a text box. It is also possible to embed images/GIFs inside of the text box.
+Dashboards on Dune consist of widgets. Widgets can either be Visualizations or a text box. It is also possible to embed images or GIFs inside of the text box.
 
 You can freely resize every widget to match the layout you want to create.
 
@@ -14,25 +14,25 @@ You can create a new Dashboard by navigating to our "Discover" page and clicking
 
 The initial name that you give to your Dashboard will also be the URL slug. You can't change the URL slug afterwards, so be mindful of the name you choose. Changing the Dashboards display name is always possible though.
 
-![create Dashboard](images/create-dashboard.gif)
+![create Dashboard](images/dashboard/create-dashboard.gif)
 
 ## Adding Visualizations
 
 You can simply add Visualizations to your Dashboard by going into the editor mode and clicking on the corresponding button. To go into editor mode first open one of your own Dashboards and click on the edit button on the top right.
 
-![Add Visualizations](images/dashboard-visualizations.gif)
+![Add Visualizations](images/dashboard/dashboard-visualizations.gif)
 
 ## Adding text boxes
 
 To add text boxes to your Dashboard you have to go into editor mode first and can afterwards click on "add text widget". This will open a simple text editor window.
 
-![Text widget](images/dashboard-text-widget.gif)
+![Text widget](images/dashboard/dashboard-text-widget.gif)
 
-Text boxes support a subset of markdown. You can manipulate text and embed images and GIFs.
+Text boxes support a subset of Markdown. You can manipulate text and embed images and GIFs.
 
 ### Text manipulation
 
-This is a short list to markdown syntax. A more advanced markdown guide can be found [here](dashboards.md#dashboards-are-where-dunes-content-lives-and-gets-discovered.).
+This is a short list to Markdown syntax. A more advanced Markdown guide can be found [here](dashboards.md#dashboards-are-where-dunes-content-lives-and-gets-discovered.).
 
 | Element                                                                         | Markdown Syntax                                                                                    |
 | ------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
@@ -67,7 +67,7 @@ You can resize the image by simply resizing the widget it is contained in.
 
 You can combine images and text in one widget.
 
-![embedding an image and resizing it](images/dashboard-image.gif)
+![embedding an image and resizing it](images/dashboard/dashboard-image.gif)
 
 ## Arranging the layout of the Dashboard
 
@@ -75,4 +75,4 @@ You can arrange the different widgets on the Dashboard in whatever way you like.
 
 Widgets will always try to move upwards, so if you want to create a visual divider section in your Dashboard it is advised to create a big text box as a divider.
 
-![Dashboard layout](images/dashboard-layout.gif)
+![Dashboard layout](images/dashboard/dashboard-layout.gif)
