@@ -7,14 +7,6 @@ description: Here's how to get the results data of an execution request.
 
 Here's how to get the results data of an execution request.
 
-## Arguments
-
-None.
-
-## Returns
-
-Returns back the status, metadata, and query results from a query execution.
-
 ## Example Request
 
 You need to pass the `execution_id` you obtained from making a [Execute Query ID POST](execute-query-id.md) request to the complete an Execution Results API request.
@@ -24,7 +16,12 @@ GET v1/execution/{{execution_id}}/results
 
 https://api.dune.com/api/v1/execution/{{execution_id}}/results
 ```
+## Returns
 
+Returns back the status, metadata, and query results from a query execution.
+## Query Parameters
+
+You can't use query parameters here.
 ### cURL
 
 ```

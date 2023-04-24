@@ -1,4 +1,4 @@
-# ask events
+# Ask Events
 
 ## **reservoir.ask\_events**
 

@@ -1,4 +1,4 @@
-# token attributes
+# Token Attributes
 
 ## **reservoir.token\_attributes**
 

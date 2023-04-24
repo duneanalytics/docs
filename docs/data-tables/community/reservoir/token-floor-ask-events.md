@@ -1,4 +1,4 @@
-# token floor ask events
+# Token Floor Ask Events
 
 ## **reservoir.token\_floor\_ask\_events**
 

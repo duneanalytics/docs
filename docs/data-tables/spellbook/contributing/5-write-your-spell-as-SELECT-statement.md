@@ -1,5 +1,5 @@
 ---
-title: 6. 🖋️ Write Your Spell as a SELECT Statement
+title: 5. 🖋️ Write Your Spell
 description: Now we’re ready to *officially* start casting our Spell!
 ---
 

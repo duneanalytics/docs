@@ -37,7 +37,7 @@ If you’re new to blockchain or SQL—or want to go deeper on Dune concepts and
 
 
 * [Dune Official Getting Started Video Series](https://www.youtube.com/watch?v=S-cctFmR828&list=PLK3b5d4iK10ext4v-GBySekaA8-GP8quD&index=1) to learn how data flows and how to navigate the Dune app to get the most out of it
-* [Web3 Analytics Resources](../analytics_guidelines.md) to start performing your own analysis, or to find SQL and Blockchain resources for beginners
+* [Web3 Analytics Resources](analytics_guidelines.md) to start performing your own analysis, or to find SQL and Blockchain resources for beginners
 * Join our community in [Discord](https://discord.gg/dunecom) to get support through the `#🐥︱beginners` and `#🙋︱query-questions` channels
 
 

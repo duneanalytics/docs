@@ -10,6 +10,37 @@ In this example we'll be using Python3. We recommend using a virtual environment
 !!! example "Prerequisites"
     This Quick Start Guide assumes you have some prior experience using Python, though we aimed to make the code here easy to follow. If you have questions, please reach out to our team via the #[dune-api](https://discord.com/channels/757637422384283659/1019910980634939433) channel on Discord.
 
+## Want to just get it to quickly work? 
+
+Leverage the [cowprotocol Dune client](https://github.com/cowprotocol/dune-client) to get started in only 20 lines:
+
+```
+import dotenv
+import os
+
+from dune_client.types import QueryParameter
+from dune_client.client import DuneClient
+from dune_client.query import Query
+
+query = Query(
+    name="Sample Query",
+    query_id=1215383,
+    params=[
+        QueryParameter.text_type(name="TextField", value="Word"),
+        QueryParameter.number_type(name="NumberField", value=3.1415926535),
+        QueryParameter.date_type(name="DateField", value="2022-05-04 00:00:00"),
+        QueryParameter.enum_type(name="EnumField", value="Option 1"),
+    ],
+)
+print("Results available at", query.url())
+
+dotenv.load_dotenv()
+dune = DuneClient(os.environ["DUNE_API_KEY"])
+results = dune.refresh(query)
+```
+
+If you want to understand the details, then check out the full walkthrough of endpoints below.
+
 ## Getting Set Up
 
 We'll primarily be working with the `requests` library to access the API, so let's install it:
@@ -71,15 +102,20 @@ def make_api_url(module, action, ID):
 The Dune API currently has four primary end points as documented in the [API Reference](../api-reference/authentication.md) section. We are going to wrap these up in neat functions which will make using the Dune API as easy as a flick of the 🪄:
 
 ``` py
-def execute_query(query_id):
+def execute_query(query_id, engine="medium"):
     """
-    Takes in the query ID.
+    Takes in the query ID and engine size.
+    Specifying the engine size will change how quickly your query runs. 
+    The default is "medium" which spends 10 credits, while "large" spends 20 credits.
     Calls the API to execute the query.
     Returns the execution ID of the instance which is executing the query.
     """
     
     url = make_api_url("query", "execute", query_id)
-    response = post(url, headers=HEADER)
+    params = {
+        "performance": engine,
+    }
+    response = post(url, headers=HEADER, params=params)
     execution_id = response.json()['execution_id']
     
     return execution_id
@@ -128,12 +164,12 @@ def cancel_query_execution(execution_id):
 
 ### Execute a Query
 
-To [Execute a Query](../api-reference/execute-query-id.md), you can pass any `query_id` from Dune that you want to fetch data from, then pass it to the `execute_query` function:
+To [Execute a Query](../api-reference/execute-query-id.md), you can pass any `query_id` from Dune that you want to fetch data from, then pass it to the `execute_query` function.
 
 #### Function Call
 
 ``` py
-execution_id = execute_query("1258228")
+execution_id = execute_query("1258228","large")
 ```
 
 #### Output

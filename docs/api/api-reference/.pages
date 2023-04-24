@@ -5,6 +5,6 @@ nav:
 - Execute Query ID: execute-query-id.md
 - Execution Status: execution-status.md
 - Execution Results: execution-results.md
+- Latest Query Results: latest_results.md
 - Cancel Execution: cancel-execution.md
 - Error Codes: errors.md
-- ...

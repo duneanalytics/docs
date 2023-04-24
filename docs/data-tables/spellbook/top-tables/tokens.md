@@ -1,5 +1,5 @@
 ---
-title: Tokens
+title: tokens
 description: token transfers and metadata
 ---
 

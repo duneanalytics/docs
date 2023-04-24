@@ -7,14 +7,6 @@ description: Here's how to check the status of an execution request.
 
 Here's how to check the status of an execution request.
 
-## Arguments
-
-None.
-
-## Returns
-
-Returns the status of a query execution along with relevant metadata of the results if the execution is completed.
-
 ## Example Request
 
 You need to pass the `execution_id` you obtained from making a [Execute Query ID POST](execute-query-id.md) request to the complete an Execution Status API request.
@@ -24,7 +16,12 @@ GET v1/execution/{{execution_id}}/status
 
 https://api.dune.com/api/v1/execution/{{execution_id}}/status
 ```
+## Returns
 
+Returns the status of a query execution along with relevant metadata of the results if the execution is completed.
+## Query Parameters
+
+You can't use query parameters here.
 ### cURL
 
 ```

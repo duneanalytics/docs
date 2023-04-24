@@ -1,4 +1,4 @@
-# tokens
+# Tokens
 
 ## **reservoir.tokens**
 

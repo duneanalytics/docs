@@ -1,4 +1,4 @@
-# bids
+# Bids
 
 ## **reservoir.bids**
 

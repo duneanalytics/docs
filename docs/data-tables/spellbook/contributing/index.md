@@ -1,26 +1,40 @@
 ---
-title: Spellbook
+title: Understand and Add a Spell
+description: Let’s learn how to add a Spell in no time flat - it’s like 💫!
 ---
 
-## Casting a Spell from scratch
+## Understanding Spell Models
 
-If you're a learn by doing type of person, check out our How to Cast a Spell guide here:
+If you are just looking to understand the basic models [from the Github Repo](https://github.com/duneanalytics/spellbook), read through the [example model walkthroughs of transfers and balances of ERC20 tokens](Example%20Spell%20Models/index.md)
+
+## 7 Steps to adding a Spell
+
+Let’s learn how to add a Spell in no time flat - it’s like 💫! By the end of this guide, you’ll have your local environment set up and the knowledge you need to add Spells for yourself or to claim bounties.
+
+!!! note
+    [Dune V1 Abstractions have been moved to this repository](https://github.com/duneanalytics/dune-v1-abstractions), which you'll now need to clone in order to access the code for migrating a V1 Abstraction to a Spell like we do in the following steps.
+
+7 steps to go:
 
 <div class="cards grid" markdown>
-- [How to Add a Spell](../contributing/Adding%20A%20Spell/index.md)
+- [1. 💻 Set Up Spellbook dbt locally](1-do-some-prerequisites%20and-set-up-Spellbook-dbt.md)
+- [2. 🛣️ Set Up Your File Structure for SQL, Schema, and Source Files](2-set-up-your-file-structure-for-SQL-schema-and-source-files.md)
+- [3. 📙 Identify and Define Sources](3-identify-and-define-sources.md)
+- [4. 🧪 Define Schema and Tests](4-define-expectations-with-schema-and-tests.md)
+- [5. 🖋️ Write Your Spell](5-write-your-spell-as-SELECT-statement.md)
+- [6. 🎨 Configure Alias and Materialization](6-configure-alias-and-materialization-strategy.md)
+- [7. 🧙 Make a Pull Request, Become an Archwizard](7-make-a-pull-request-get-merged-become-an-archwizard.md)
 </div>
 
-To take a look under the hood, check out Spellbook on GitHub:
-
-<div class="cards grid" markdown>
-- [Spellbook on GitHub](https://github.com/duneanalytics/spellbook)
-</div>
-
-Here you'll find a variety of how-to guides for making ✨ with Spellbook!
-
+!!! note "Spellbook Model Creation Runs on Spark SQL"
+       Spellbook Spells are available on Dune V2, queryable from both Spark SQL and Dune SQL [V2 Query Engines](/query/index.md). For now, Spells will continue to be written in Spark SQL and querying them with Dune SQL will require small syntax changes. While the changes needed to make Spells Dune SQL native are small, we want to make sure Dune SQL is rock solid before we implement them!
 ## Video Guides
 
-In collaboration with [MetricsDAO](https://metricsdao.xyz/), [@agaperste](https://dune.com/agaperste) showed us how to cast a Spell from scratch!
+If you’re more of a watcher, check out these video workshops.
+
+In collaboration with [MetricsDAO](https://metricsdao.xyz/), [@agaperste](https://dune.com/agaperste) showed us how to add a Spell from scratch!
+
+![type:video](https://www.youtube.com/embed/VdTYRxg96-E)
 
 In this [DuneCon workshop](https://www.youtube.com/playlist?list=PLK3b5d4iK10eVQejE7O1JEwcBMA4uwdSC), Dune Team member Megan Heintz (who came up with the name "Spellbook") walks us through Spellbook's infrastructure and how to migrate data to a Spell:
 

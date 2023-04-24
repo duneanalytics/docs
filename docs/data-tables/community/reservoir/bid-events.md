@@ -1,4 +1,4 @@
-# bid events
+# Bid Events
 
 ## **reservoir.bid\_events**
 

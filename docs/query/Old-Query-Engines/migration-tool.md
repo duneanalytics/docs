@@ -9,6 +9,8 @@ Migrating your queries from SparkSQL and PostgreSQL to DuneSQL can be a tedious 
 
 We are still working on integrating GPT4 into the tool, so it is not yet able to migrate a majority queries. However, it will still save you a lot of time.
 
+The tool is open source and available in this [github repo](https://github.com/duneanalytics/harmonizer/). Contributions are very welcome!
+
 ## How to use the tool
 
 Whenever you are ready to migrate your queries, the tool will be available to you in the Dune Query Editor.  

@@ -15,6 +15,9 @@ plugins:
         target: _blank
   - redirects:
       redirect_maps:
+        #4/20/2023 rework:
+       'data-tables/spellbook/contributing/Adding%20A%20Spell/index.md': 'https://dune.com/docs/data-tables/spellbook/contributing/index.md'
+       'api/quick-start/api-ready-queries.md': 'http://dune.com/docs/api/quick-start/'
         #4/10/2023 data tables rework:
        'data-tables/raw/blocks.md': 'https://dune.com/docs/data-tables/raw/evm/blocks'
        'data-tables/raw/transactions.md': 'https://dune.com/docs/data-tables/raw/evm/transactions'
