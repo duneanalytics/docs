@@ -2,6 +2,9 @@
 title: Withdrawals
 description: The withdrawal table stores information about withdrawals made on the Ethereum beacon chain, including the block time, block number, index, validator index, amount, address, withdrawals root, and block hash.
 ---
+!!! warning
+    This table is only relevant of Ethereum mainnet and does not exist for other EVM chains on Dune.
+
 
 !!!note
     Dune does not have beacon chain data yet. This table introduces the action of withdrawing from the beacon chain only.  
