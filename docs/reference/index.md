@@ -3,10 +3,6 @@ title: Reference
 description: Reference is the place to get answers to your "who, what, where" questions and find a few supplemental resources we've put together!
 ---
 
-!!!note
-    This section is just everything that we don't really know where to put yet. Some of it is relevant, some of it is not really, would be interested to hear your thoughts on this.
-
-
 Reference is the place to find answers to your "who, what, where" questions eg:
 
 - What data exists in Dune Tables?

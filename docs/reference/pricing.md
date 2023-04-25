@@ -102,7 +102,7 @@ Other Dune users will be able to see the Visualization in the public dashboard, 
 
 #### Can I embed private queries on other websites?
 
-Yes! Anyone visiting a website with your Dune embed [can see the Visualization you chose](../app/visualizations/embeds.md) and nothing else.
+Yes! Anyone visiting a website with your Dune embed [can see the Visualization you chose](../app/embeds.md) and nothing else.
 
 #### As an Elite user, what will happen to watermarks?
 

@@ -7,7 +7,7 @@ The Query Editor is where you construct your queries. You'll probably spend most
 
 ![Query editor](images/query-window/query-window.png)
 
-
+To learn more about how to write queries, check out the [query documentation](../../query/index.md).
 
 ## Understanding the query editor
 
