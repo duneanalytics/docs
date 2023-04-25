@@ -23,7 +23,7 @@ Likewise, you can find their User Name/Profile link and the Query/Visualization 
 
 ![find user and query visualization name](images/find-user-and-query-visualization-name.png)
 
-For more info on how to get Embed links for Visualizations you want to share, [see this page](../app/visualizations/embeds.md)!
+For more info on how to get Embed links for Visualizations you want to share, [see this page](../app/embeds.md)!
 
 ![Be the galaxy brain! Meme by https://dune.com/eliasimos/](images/galaxy-brain.png)
 

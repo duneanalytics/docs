@@ -5,7 +5,7 @@ description: Welcome to the Dune API
 
 # Welcome to the Dune API
 
-![dune API Cover](images/dune_api_cover.jpg)
+![dune API Cover](images/dune-api-banner.png)
 
 The Dune API gives you full access to the queries and data you can see on the Dune website. This means you can execute and read results from any public query, as well as any personal private queries your Dune account has access to.
 
