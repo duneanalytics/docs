@@ -11,9 +11,6 @@ The Dune API gives you full access to the queries and data you can see on the Du
 
 This documentation describes all of the available API calls and properties of the returned objects. If you have any questions or feedback, please reach out to [api-feedback@dune.com](mailto:api-feedback@dune.com) or our #[dune-api](https://discord.com/channels/757637422384283659/1019910980634939433) Discord channel!
 
-!!!warning "API Executions != APP Executions"
-    The only way to get query results from the Dune API is to execute a query using the Dune API. Results from API executions are not currently reflected on Dune’s website (and vice versa).
-
 ### Obtaining an API Key
 All plans on our new [credit-based pricing system](https://dune.com/pricing) come bundled with API access.
 You'll have seperate API keys for your [individual accounts](https://dune.com/settings/api) and [team accounts](https://dune.com/settings/teams).
