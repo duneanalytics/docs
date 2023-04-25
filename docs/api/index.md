@@ -35,10 +35,12 @@ Pricing for API is charged along two dimensions.
 
 | Dimension | Credits Charged | Relevant API endpoints |
 |---|---|---|
-| Executions | 10 credits per medium query engine executions (Default) 20 credits per large query engine executions | Execute Query |
-| Datapoints | 1 credit per 1,000 datapoints | Execution Results Latest Query Results |
+| Executions | 10 credits per medium query engine executions (Default)<br>20 credits per large query engine executions | Execute Query |
+| Datapoints | 1 credit per 1,000 datapoints | Execution Results<br>Latest Query Results |
 
-More details can be found on our [FAQ page] (https://dune.com/docs/api/faq/#faq-billing-pricing).
+A datapoint applies to query results after the query is run, and can in most cases be thought of rows * columns with an additional limit of 100 avg bytes per cell in a set of results. This can be expressed as: Datapoints = max(rows*columns, ceil(totalbytes/100))
+
+More details can be found on our [FAQ page](https://dune.com/docs/api/faq/#faq-billing-pricing).
 
 ### All API Endpoints
 
