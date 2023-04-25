@@ -42,6 +42,9 @@ A datapoint applies to query results after the query is run, and can in most cas
 
 More details can be found on our [FAQ page](https://dune.com/docs/api/faq/#faq-billing-pricing).
 
+!!!info "Careful of Credit Limits"
+  Make sure you check the query in the interface to see how many rows and columns of data are being returned, otherwise you might end up spending all your credits on one query! The free tier gets 2.5k credits which is about 2.5 million rows with 1 column (or 1.25m rows with 2 columns, 250k rows with 10 columns, etc). 
+
 ### All API Endpoints
 
 Check out full explanations and documentation of endpoints in the [api endpoint reference](api-reference/index.md).
