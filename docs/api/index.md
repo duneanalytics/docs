@@ -30,6 +30,16 @@ For building a simple data ingestion pipeline, see [using Python and Celery](htt
 
 If you aren't sure what queries to start with, check out the [API-ready query list](quick-start/index.md).
 
+### API Pricing
+Pricing for API is charged along two dimensions.
+
+| Dimension | Credits Charged | Relevant API endpoints |
+|---|---|---|
+| Executions | 10 credits per medium query engine executions (Default) 20 credits per large query engine executions | Execute Query |
+| Datapoints | 1 credit per 1,000 datapoints | Execution Results Latest Query Results |
+
+More details can be found on our [FAQ page] (https://dune.com/docs/api/faq/#faq-billing-pricing).
+
 ### All API Endpoints
 
 Check out full explanations and documentation of endpoints in the [api endpoint reference](api-reference/index.md).
