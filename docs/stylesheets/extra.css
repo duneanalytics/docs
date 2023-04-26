@@ -296,13 +296,6 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .grid.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 1rem;
-    margin-top: 1rem;
-}
-
-.grid.cards {
     background-color: whitesmoke;
     border: 0.05rem solid #000;
     border-radius: 0.1rem;
@@ -311,6 +304,10 @@ h1, h2, h3, h4, h5, h6{
     padding: 0.8rem;
     -webkit-transition: border .25s,box-shadow .25s;
     transition: border .25s,box-shadow .25s;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1rem;
+    margin-top: 1rem;
 }
   
   
