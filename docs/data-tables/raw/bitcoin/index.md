@@ -13,25 +13,32 @@ Bitcoin uses a UTXO transaction model, and has a heavy focus on signatures and s
 
 <div class="grid cards" markdown>
 
--   **Blocks**
+-   #### Blocks
 
     ---
 
-    Blocks are the base unit that all transactions fit into.
+    Blocks are the base unit that all transactions fit into.  
     [:octicons-arrow-right-24: Blocks](blocks.md)
 
--   **Transactions**
+-   #### Transactions
+
     ---
-    Transactions contain all spent inputs and created outputs from a UTXO transaction.
+
+    Transactions contain all spent inputs and created outputs from a UTXO transaction.  
     [:octicons-arrow-right-24: Transactions](transactions.md)
 
--   **Outputs**
+-   #### Outputs
+
     ---
-    Just the outputs, unnested.
+
+    Just the outputs, unnested.  
     [:octicons-arrow-right-24: Outputs](outputs.md)
 
--   **Inputs**
+-   #### Inputs
+
     ---
-    Just the inputs, unnested.
+
+    Just the inputs, unnested.  
     [:octicons-arrow-right-24: Inputs](inputs.md)
 </div>
+

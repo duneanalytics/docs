@@ -41,6 +41,7 @@ Ethereum Virtual Machine (EVM) powers all chains in Dune except Solana and Bitco
     ---  
     
     Transactions are cryptographically signed instructions from accounts.  
+      
     [:octicons-arrow-right-24: Transactions](transactions.md)
 
 </div>
