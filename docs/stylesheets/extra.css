@@ -304,14 +304,14 @@ h1, h2, h3, h4, h5, h6{
     margin-top: 1rem;
   }
   
-  .grid.cards > div {
+  .grid.cards div {
     background-color: #21cf15;
     border: 5px solid #0021f8;
     padding: 1rem;
     transition: background-color 0.3s, box-shadow 0.3s;
   }
   
-  .grid.cards > div:hover {
+  .grid.cards div:hover {
     background-color: #a40cdb;
     box-shadow: 0 4px 6px rgba(255, 0, 0, 0.811);
   }
