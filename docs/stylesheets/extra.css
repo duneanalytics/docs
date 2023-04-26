@@ -296,7 +296,6 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .grid.cards {
-    background-color: whitesmoke;
     border: 0.05rem solid #000;
     border-radius: 0.1rem;
     display: block;
@@ -312,15 +311,15 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .grid.cards .card {
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
+    background-color: #cb0d0d;
+    border: 1px solid #32952f;
     border-radius: 5px;
     padding: 1rem;
     transition: background-color 0.3s, box-shadow 0.3s;
   }
 
   .grid.cards .card:hover {
-    background-color: #ec0e0e;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #1838c2;
+    box-shadow: 0 4px 6px rgba(176, 120, 52, 0.967);
   }
   
