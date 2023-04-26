@@ -312,8 +312,8 @@ h1, h2, h3, h4, h5, h6{
   }
   
   .grid.cards > div:hover {
-    background-color: #e8e8e8;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #579066;
+    box-shadow: 0 4px 6px rgba(228, 14, 14, 0.1);
   }
   
   .grid.cards h2 {
@@ -321,7 +321,7 @@ h1, h2, h3, h4, h5, h6{
   }
   
   .grid.cards hr {
-    border-color: #030202;
+    border-color: #d10303;
     margin: 1rem 0;
   }
   
