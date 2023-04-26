@@ -308,6 +308,19 @@ h1, h2, h3, h4, h5, h6{
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 1rem;
     margin-top: 1rem;
+    color: white;
 }
-  
+
+.grid.cards .card {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 1rem;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+
+  .grid.cards .card:hover {
+    background-color: #ec0e0e;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
   
