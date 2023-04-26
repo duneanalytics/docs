@@ -20,7 +20,7 @@ Ethereum Virtual Machine (EVM) powers all chains in Dune except Solana and Bitco
 
     Blocks are the base unit that all transactions fit into.
 
-    [:octicons-arrow-right-24: Getting started](blocks.md)
+    [:octicons-arrow-right-24: Blocks](blocks.md)
 
 -   Event Logs
 
