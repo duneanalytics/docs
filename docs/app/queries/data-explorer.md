@@ -1,5 +1,5 @@
 ---
-title: How to Explore Data
+title: Finding Tables
 description: The Data Explorer allows you to search for blockchain and other data to use in your Queries. Here's how it works.
 ---
 
