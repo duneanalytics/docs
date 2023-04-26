@@ -295,29 +295,15 @@ h1, h2, h3, h4, h5, h6{
     vertical-align: middle !important;
 }
 
-.grid.cards {
-    border: 0.05rem solid #000;
-    border-radius: 0.1rem;
-    display: block;
-    margin: 0;
-    padding: 0.8rem;
-    -webkit-transition: border .25s,box-shadow .25s;
-    transition: border .25s,box-shadow .25s;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 1rem;
-    margin-top: 1rem;
-}
-
 .md-typeset .grid.cards>:-webkit-any(ul,ol)>li, .md-typeset .grid>.card {
-    border: 0.05rem solid hsl(0deg 95.8% 45.85% / 93%);
+    border: 0.05rem solid var(--dune-orange-300);
     border-radius: 0.1rem;
     display: block;
     margin: 0;
     padding: 0.8rem;
     -webkit-transition: border .25s,box-shadow .25s;
     transition: border .25s,box-shadow .25s;
-    background-color: beige;
+    background-color: var(--dune-orange-200);
 }
 
   
