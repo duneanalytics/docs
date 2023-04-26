@@ -309,7 +309,7 @@ h1, h2, h3, h4, h5, h6{
     margin-top: 1rem;
 }
 
-.grid.cards .card {
+.md-typeset .grid.card {
     background-color: #cb0d0d;
     border: 1px solid #32952f;
     border-radius: 5px;
@@ -317,7 +317,7 @@ h1, h2, h3, h4, h5, h6{
     transition: background-color 0.3s, box-shadow 0.3s;
   }
 
-  .grid.cards .card:hover {
+  .md-typeset .grid.card:hover {
     background-color: #1838c2;
     box-shadow: 0 4px 6px rgba(176, 120, 52, 0.967);
   }
