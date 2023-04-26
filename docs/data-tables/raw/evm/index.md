@@ -22,7 +22,7 @@ Ethereum Virtual Machine (EVM) powers all chains in Dune except Solana and Bitco
 
     [:octicons-arrow-right-24: Event Logs](event-logs.md)
 
--   ### Traces
+-   #### Traces
 
     ---
 
@@ -32,7 +32,9 @@ Ethereum Virtual Machine (EVM) powers all chains in Dune except Solana and Bitco
 
 
 -   **Transactions**  
+    
     ---  
+    
     Transactions are cryptographically signed instructions from accounts.  
     [:octicons-arrow-right-24: Transactions](transactions.md)
 
