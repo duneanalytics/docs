@@ -309,10 +309,15 @@ h1, h2, h3, h4, h5, h6{
     margin-top: 1rem;
 }
 
-.grid.cards .card,
-.md-typeset .grid > .card {
-  background-color: #1376d3;
-  border: 2px solid #003366;
+.md-typeset .grid.cards>:-webkit-any(ul,ol)>li, .md-typeset .grid>.card {
+    border: 0.05rem solid hsl(0deg 95.8% 45.85% / 93%);
+    border-radius: 0.1rem;
+    display: block;
+    margin: 0;
+    padding: 0.8rem;
+    -webkit-transition: border .25s,box-shadow .25s;
+    transition: border .25s,box-shadow .25s;
+    background-color: beige;
 }
 
   
