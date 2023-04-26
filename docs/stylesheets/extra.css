@@ -305,29 +305,20 @@ h1, h2, h3, h4, h5, h6{
   }
   
   .grid.cards > div {
-    background-color: #43b03c54;
-    border: 1px solid #030202;
+    background-color: #21cf15;
+    border: 5px solid #0021f8;
     padding: 1rem;
     transition: background-color 0.3s, box-shadow 0.3s;
   }
   
   .grid.cards > div:hover {
-    background-color: #579066;
-    box-shadow: 0 4px 6px rgba(228, 14, 14, 0.1);
-  }
-  
-  .grid.cards h2 {
-    font-size: 1.5rem;
+    background-color: #a40cdb;
+    box-shadow: 0 4px 6px rgba(255, 0, 0, 0.811);
   }
   
   .grid.cards hr {
-    border-color: #d10303;
+    border-color: #f68503;
     margin: 1rem 0;
   }
   
-  .grid.cards a {
-    color: #000;
-    font-size: 1rem;
-    text-decoration: none;
-  }
   
