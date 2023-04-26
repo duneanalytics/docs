@@ -296,7 +296,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 
-.grid.card {
+.grid.cards {
     background-color: whitesmoke;
     border: 0.05rem solid #000;
     border-radius: 0.1rem;
