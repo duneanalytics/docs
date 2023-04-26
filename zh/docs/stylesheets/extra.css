@@ -281,8 +281,8 @@ h1, h2, h3, h4, h5, h6{
 
 /* Adjust card background color and border color */
 .md-typeset .md-card {
-  background-color: #f5f5f5; /* Change this to your desired background color */
-  border-color: #dcdcdc; /* Change this to your desired border color */
+  background-color: #c92e2e; /* Change this to your desired background color */
+  border-color: #030202; /* Change this to your desired border color */
 }
 
 /* Add hover effect: change background color and apply a box-shadow */
