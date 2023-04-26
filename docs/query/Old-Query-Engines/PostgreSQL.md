@@ -1,5 +1,5 @@
 ---
-title: PostgresSQL
+title: PostgreSQL
 description: Dune is sunsetting PostgreSQL. Support for PostgreSQL will be removed on 15/07/2023. Please migrate your queries to DuneSQL.
 ---
 
@@ -8,16 +8,16 @@ description: Dune is sunsetting PostgreSQL. Support for PostgreSQL will be remov
 
 ## PostgreSQL
 
-Our PostgresSQL database and query engine are the oldest parts of Dune Analytics. PostgresSQL does not scale well and therefore we are deprecating it.  
+Our PostgreSQL database and query engine are the oldest parts of Dune Analytics. PostgreSQL does not scale well and therefore we are deprecating it.  
 Postgres is an entirely different database than our V2 database and therefore the data you can query is different.  
 
-PostgresSQL is still in production and will be supported until **15/07/2023**. After that date, PostgresSQL will be removed from production and all queries need to be migrated to DuneSQL.
+PostgreSQL is still in production and will be supported until **15/07/2023**. After that date, PostgreSQL will be removed from production and all queries need to be migrated to DuneSQL.
 
 You can read more about PostgreSQL in the [PostgreSQL documentation](https://www.postgresql.org/docs/).
 
 ### Migrating from PostgreSQL
 
-Migrating queries from PostgreSQL to DuneSQL is a bit more difficult. The two query engines query different data and therefore the queries are very different. Additionally the way you would write queries in the index-heavy PostgresSQL is very different from the way you would write queries in the columnar DuneSQL. Learn more about this in the [data storage section](../storage.md).
+Migrating queries from PostgreSQL to DuneSQL is a bit more difficult. The two query engines query different data and therefore the queries are very different. Additionally the way you would write queries in the index-heavy PostgreSQL is very different from the way you would write queries in the columnar DuneSQL. Learn more about this in the [data storage section](../storage.md).
 
 | **Description**                                                                       | **V1 - PostgreSQL**                                                                                          | **V2 - Dune SQL**                                                                                                                                                                                                                                                                                           |
 |---------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
