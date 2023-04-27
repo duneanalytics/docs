@@ -17,42 +17,48 @@ However, queries that have been written using raw data tables are notoriously ha
 
     ---
 
-    This table contains information from the transactions table focused on account usage.  
+    This table contains information from the transactions table focused on account usage.
+
     [:octicons-arrow-right-24: Account Activity](account-activity.md)
 
 -   #### Blocks
 
     ---
 
-    Blocks are the base unit that all transactions fit into.  
+    Blocks are the base unit that all transactions fit into.
+
     [:octicons-arrow-right-24: Blocks](blocks.md)
 
 -   #### Rewards
 
     ---
 
-    This table contains data about rewards paid out on Solana.  
+    This table contains data about rewards paid out on Solana.
+
     [:octicons-arrow-right-24: Rewards](rewards.md)
 
 -   #### Transactions
 
     ---
 
-    Transactions are cryptographically signed instructions from accounts.  
+    Transactions are cryptographically signed instructions from accounts.
+
     [:octicons-arrow-right-24: Transactions](transactions.md)
 
 -   #### Instruction Calls
 
     ---
 
-    Transactions are unnested here such that each instruction gets its own row.  
+    Transactions are unnested here such that each instruction gets its own row.
+    
     [:octicons-arrow-right-24: Instruction Calls](instruction-calls.md)
 
 -   #### Vote Transactions
 
     ---
 
-    This table contains the full set of vote transactions that are submitted by validators to vote on a block.  
+    This table contains the full set of vote transactions that are submitted by validators to vote on a block.
+
     [:octicons-arrow-right-24: Vote Transactions](vote-transactions.md)
 </div>
 

@@ -85,11 +85,13 @@ Bitcoin data follows a UTXO model. For a full written guide on getting started, 
 Solana data follows an instruction/program based model. You initiate a set of instruction calls (instead of just a single call), and those will set off a bunch of inner instruction calls during execution.. For a full written guide on getting started, [check out this one](https://web3datadegens.substack.com/p/how-to-analyze-bitcoin-data-with).
 
 <div class="grid cards" markdown>
+
 -   #### Account Activity
 
     ---
 
     This table contains information from the transactions table focused on account usage.
+
     [:octicons-arrow-right-24: Account Activity](account-activity.md)
 
 -   #### Blocks
@@ -97,6 +99,7 @@ Solana data follows an instruction/program based model. You initiate a set of in
     ---
 
     Blocks are the base unit that all transactions fit into.
+
     [:octicons-arrow-right-24: Blocks](blocks.md)
 
 -   #### Rewards
@@ -104,6 +107,7 @@ Solana data follows an instruction/program based model. You initiate a set of in
     ---
 
     This table contains data about rewards paid out on Solana.
+
     [:octicons-arrow-right-24: Rewards](rewards.md)
 
 -   #### Transactions
@@ -111,6 +115,7 @@ Solana data follows an instruction/program based model. You initiate a set of in
     ---
 
     Transactions are cryptographically signed instructions from accounts.
+
     [:octicons-arrow-right-24: Transactions](transactions.md)
 
 -   #### Instruction Calls
@@ -118,6 +123,7 @@ Solana data follows an instruction/program based model. You initiate a set of in
     ---
 
     Transactions are unnested here such that each instruction gets its own row.
+    
     [:octicons-arrow-right-24: Instruction Calls](instruction-calls.md)
 
 -   #### Vote Transactions
@@ -125,5 +131,6 @@ Solana data follows an instruction/program based model. You initiate a set of in
     ---
 
     This table contains the full set of vote transactions that are submitted by validators to vote on a block.
+
     [:octicons-arrow-right-24: Vote Transactions](vote-transactions.md)
 </div>
