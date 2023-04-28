@@ -28,7 +28,7 @@ You can freely resize every widget to match the layout you want to create.
 9. You can also move the widget by dragging it around
 10. Click on the "Save" button in the top right corner to save your changes
 
-The initial name that you give to your Dashboard will also be the URL slug. You can't change the URL slug afterwards, so be mindful of the name you choose. Changing the Dashboards display name is always possible though.
+The initial name that you give to your Dashboard will also be the URL slug. You can't change the URL slug afterwards, so be mindful of the name you choose. Changing the Dashboard's display name is always possible though.
 
 ## Add Widgets from the Query Editor
 
@@ -49,21 +49,6 @@ The widget will be added to the bottom of your Dashboard. You can move it around
 You can add text widgets to your dashboard.
 
 Text widgets support a subset of Markdown. You can manipulate text and embed images and GIFs.
-
-### Text manipulation
-
-This is a short list to Markdown syntax. A more advanced Markdown guide can be found [here](dashboards.md#dashboards-are-where-dunes-content-lives-and-gets-discovered.).
-
-| Element                                                                         | Markdown Syntax                                                                                    |
-| ------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| [Heading](https://www.markdownguide.org/basic-syntax/#headings)                 | <p><code># H1</code><br><code>## H2</code><br><code>### H3</code></p>                              |
-| [Bold](https://www.markdownguide.org/basic-syntax/#bold)                        | `**bold text**`                                                                                    |
-| [Italic](https://www.markdownguide.org/basic-syntax/#italic)                    | `*italicized text`                                                                                 |
-| [Ordered List](https://www.markdownguide.org/basic-syntax/#ordered-lists)       | <p><code>1. First item</code><br><code>2. Second item</code><br><code>3. Third item</code><br></p> |
-| [Unordered List](https://www.markdownguide.org/basic-syntax/#unordered-lists)   | <p><code>- First item</code><br><code>- Second item</code><br><code>- Third item</code><br></p>    |
-| [Code](https://www.markdownguide.org/basic-syntax/#code)                        | `` `code` ``                                                                                       |
-| [Horizontal Rule](https://www.markdownguide.org/basic-syntax/#horizontal-rules) | `---`                                                                                              |
-| [Link](https://www.markdownguide.org/basic-syntax/#links)                       | `[title](https://www.example.com)`                                                                 |
 
 ### Embedding Images and GIFs
 

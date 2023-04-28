@@ -5,9 +5,7 @@ description: Learn more about how the dune.com app works in this section!
 
 **The Dune platform is your key to accessing blockchain data!**  
 
-  
 
-The Dune App consists of these components:
 <div class="grid cards" markdown>
 
 -   #### Query Editor

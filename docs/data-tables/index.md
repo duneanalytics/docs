@@ -13,13 +13,51 @@ We also ingest data from **community providers** like [Reservoir](community/rese
 
 In each section below, you'll find details on how the tables are created and some table definitions/descriptions.
 
-- [**Raw data**](raw/index.md): unedited, raw and encoded blockchain data
+<div class="cards grid" markdown>
 
-- [**Decoded data**](decoded/index.md): view the decoded calls and events made to smart contracts. This data is still unedited.
+-   #### Query Editor
 
-- [**Spellbook**](spellbook/index.md): Easy to work with aggregated tables that are maintained by Dune and our community.
+    ---
 
-- [**Community**](community/index.md): Enhanced tables that combine onchain and offchain data together.
+    The Query Editor is where you can write SQL queries to explore blockchain data. This docs section describes the functional elements of the Query Editor, to learn how to write queries, see [the query section](../query/index.md).  
+    
+    [:octicons-arrow-right-24: Queries](query-editor/index.md)
+
+
+-   #### [Raw data](raw/index.md)
+
+    ---
+  
+    Unedited, raw and encoded blockchain data.
+  
+    [:octicons-arrow-right-24: Raw data](raw/index.md)
+
+-   #### [Decoded data](decoded/index.md)
+
+    ---
+  
+    View the decoded calls and events made to smart contracts. This data is still unedited.
+  
+    [:octicons-arrow-right-24: Decoded data](decoded/index.md)
+
+-   #### [Spellbook](spellbook/index.md)
+
+    ---
+
+    Easy to work with aggregated tables that are maintained by Dune and our community.
+  
+    [:octicons-arrow-right-24: Spellbook](spellbook/index.md)
+
+-   #### [Community](community/index.md)
+
+    ---
+  
+    Enhanced tables that combine onchain and offchain data together.
+  
+    [:octicons-arrow-right-24: Community](community/index.md)
+
+</div>
+
 ## Available Chains
 
 Here are the chains we have available to Query in Dune.
@@ -96,7 +134,11 @@ Polygon follows all the rules of ETH mainnet and querying on Dune works exactly 
 
 #### Optimism
 
-!!! note
+Optimism is a Layer 2 Optimistic Rollup network designed to utilize the strong security guarantees of Ethereum while reducing its cost and latency. Optimism processes transactions outside of Ethereum Mainnet, reducing congestion on the base layer and improving scalability. For a Deep Dive into Optimism, we recommend reading through their [Documentation](https://community.optimism.io/docs/how-optimism-works).
+
+Optimism differs in it's EVM implementation in the calculation of gas costs, since it also needs to pay for L1 resources.
+
+!!! warning "Optimism Regenesis"
     We've included Optimism's OVM 1.0 base tables (blocks, logs, traces, transactions) in Dune V2, which can be found in the `optimism_legacy_ovm1` database. Data from these tables are labeled "Optimism (Legacy)" in the dropdown menu and use this icon: 
     
     ![optimism legacy icon](../app/query-editor/images/explorer-labels/optimism-legacy-icon.png)
@@ -106,11 +148,6 @@ Polygon follows all the rules of ETH mainnet and querying on Dune works exactly 
     Data for the current version of Optimism's blockchain (November 11th, 2021 to present), is contained in the `optimism` database, are labeled "Optimism" in the dropdown menu, and use this icon:
     
     ![optimism icon](../app/query-editor/images/explorer-labels/optimism-icon.png)
-
-Optimism is a Layer 2 Optimistic Rollup network designed to utilize the strong security guarantees of Ethereum while reducing its cost and latency. Optimism processes transactions outside of Ethereum Mainnet, reducing congestion on the base layer and improving scalability. For a Deep Dive into Optimism, we recommend reading through their [Documentation](https://community.optimism.io/docs/how-optimism-works).
-
-Optimism differs in it's EVM implementation in the calculation of gas costs, since it also needs to pay for L1 resources.
-
 #### BNB Chain (BSC)
 
 BNB Chain(formerly Binance Smart Chain, BSC) is an instance of the Ethereum Virtual Machine built and maintained by a team from the popular Crypto Exchange [Binance](https://binance.com). BNB Chain follows most of the rules of Ethereum Mainnet, but has not implemented EIP1559. Instead it relies on [BEP-95](https://github.com/bnb-chain/BEPs/blob/master/BEP95.md) to burn fees that accrue during usage of the platform. Furthermore, the gas limit per block is set to 100 mio, enabling more transactions to be processed in a given block. Transactions fees are paid in $BNB instead of $ETH.

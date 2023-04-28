@@ -3,7 +3,7 @@ title: Decoding Contracts
 description: Here's everything you need to know about Decoded contracts and how to submit them!
 ---
 
-Dune contains an extensive catalog of Decoded Contracts, brought into the platform through Wizard submissions!
+**Dune contains an extensive catalog of Decoded Contracts, brought into the platform through Wizard submissions!**
 
 Instead of working with raw transaction, log, and trace data, contracts are decoded into human-readable tables for each event and function defined in the smart contract's ABI ([Application Binary Interface](https://www.alchemy.com/overviews/what-is-an-abi-of-a-smart-contract-examples-and-usage)).
 
@@ -106,7 +106,7 @@ We avoid monitoring the implementation contract's address because its logic is a
 If we did monitor the implementation contract's address directly, we would miss out on any event logs in its logic since these are actually fired by the caller (the Proxy in this case) when calling a function through `DelegateCall`.
 
 !!! warning
-    When submitting Proxy-patterned contracts to Dune, you should input the Proxy contract's address and, if you have it, the Implementation contract's ABI.**
+    When submitting Proxy-patterned contracts to Dune, you should input the Proxy contract's address and, if you have it, the Implementation contract's ABI.
 
 When you submit the Proxy contract's address, we'll attempt to fetch the proxy's contract name and the implementation address it's pointing towards to source the Implementation contract's ABI.
 

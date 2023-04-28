@@ -3,6 +3,8 @@ title: Create Graphs
 description: Charts are good for condensing data points into a Visualization. Learn how to make them here!
 ---
 
+**Visualizations make your data come to life! You can create Visualizations from any results of a query.**
+
 Graphs are great for condensing data points into a Visualization.
 
 With Dune, you can create the following types of graphs:

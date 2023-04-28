@@ -3,7 +3,9 @@ title: Visualizations
 description: Learn more about how to make visualizations here!
 ---
 
-Learn more about how to make visualizations here!
+**Dune offers you several way to display your data.**
+  
+  
 
 <div class="grid cards" markdown>
 
