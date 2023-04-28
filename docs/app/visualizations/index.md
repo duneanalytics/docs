@@ -11,7 +11,7 @@ Learn more about how to make visualizations here!
 
     ---
 
-    Charts & Graphs explains and shows you how to create most of the popular visualizations available with Dune.  
+    Create Charts & Graphs to visualize your data.  
     
     [:octicons-arrow-right-24: Charts & Graphs](charts-graphs.md)
 
@@ -19,7 +19,7 @@ Learn more about how to make visualizations here!
 
     ---
 
-    Tables explains and shows you how to create tables with Dune.  
+    Learn how to change the appearance of your tables. 
     
     [:octicons-arrow-right-24: Tables](tables.md)
 
@@ -27,7 +27,7 @@ Learn more about how to make visualizations here!
 
     ---
 
-    Counters explains and shows you how to create counters with Dune.  
+    Show off specific data points with counters. 
     
     [:octicons-arrow-right-24: Counters](counters.md)
 </div>

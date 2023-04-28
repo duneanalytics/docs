@@ -7,7 +7,7 @@ Dune contains an extensive catalog of Decoded Contracts, brought into the platfo
 
 Instead of working with raw transaction, log, and trace data, contracts are decoded into human-readable tables for each event and function defined in the smart contract's ABI ([Application Binary Interface](https://www.alchemy.com/overviews/what-is-an-abi-of-a-smart-contract-examples-and-usage)).
 
-Learn more about how Decoding works and what Decoded tables are available [here](../../tables/decoded/).
+Learn more about how Decoding works and what Decoded tables are available in the [data tables section](../../tables/decoded/).
 
 ## Submitting a new contract for decoding
 
@@ -17,11 +17,6 @@ Contracts can be submitted for decoding through:
 
 - [The New contract form](https://dune.com/contracts/new)
 - The [My Creations > Contracts Tab](https://dune.com/browse/contracts/authored)
-- Within the dataset explorer in the Query editor's sidebar:
-
-![Add a new contract](images/decoding-contracts/add-new-contract-link.png)
-
-The contract submission form, which consists of 2 steps:
 
 ### 1. Blockchain and address
 
@@ -62,7 +57,7 @@ Once you submit it, you are done! The contract will be stored in our queue, whic
 
 !!! note
     
-    Submission might take a few days to get processed, please be patient with us! 🙏
+    Submission are usully processed within a few hours on weekdays.
 
 ### Advanced options
 
@@ -83,15 +78,13 @@ Then, to the second question - "Is it created by a factory contract?" - select "
 
 !!! warning
 
-    Only use these options if you know what you're doing and are extremely familiar with the project's architecture and deployment hierarchy. Incorrectly applying these settings may lead to a rejected submission.
+    Only use these options if you know what you're doing and are familiar with the project's architecture and deployment hierarchy. Incorrectly applying these settings may lead to a rejected submission.
 
 ## Tracking your submissions
 
-You can view your submissions and their processing status at any time by navigating to [My Creations > Contracts](https://dune.com/browse/contracts/authored):
+You can view your submissions and their processing status at any time by navigating to [My Creations > Contracts](https://dune.com/browse/contracts/authored).
 
-![Track your submission](images/decoding-contracts/track-your-submission.png)
-
-### Frequently Asked Questions
+## Frequently Asked Questions
 
 #### How do I submit contract information manually?
 

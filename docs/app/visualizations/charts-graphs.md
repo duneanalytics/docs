@@ -1,5 +1,5 @@
 ---
-title: Charts & Graphs
+title: Create Graphs
 description: Charts are good for condensing data points into a Visualization. Learn how to make them here!
 ---
 
@@ -29,9 +29,9 @@ With Dune, you can create the following types of graphs:
 
 === "Mixed graphs"
 
-    You can mix all of these graph types together in one Visualization, as long as your base graph isn't a Pie chart:
-
     ![mixed graph example](images/charts-graphs/mixed-graph-example.png)
+
+    You can mix all of these graph types together in one Visualization, as long as your base graph isn't a Pie chart.
 
 All graph Visualizations share a common set of editing options, see the tabs below for how to configure each.
 
