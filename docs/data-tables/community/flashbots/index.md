@@ -22,7 +22,7 @@ Data available:
 
   Arbitrage opportunities found by mev-inspect-py.
 
-  [:octicons-arrow-right-24: Arbitrages](abitrages.md)
+  [:octicons-arrow-right-24: Arbitrages](arbitrages.md)
 
 - #### liquidations
 
@@ -55,6 +55,6 @@ Data available:
 
   Summary of MEV found by mev-inspect-py.
 
-  [:octicons-arrow-right-24: MEV Summary](mev-summary.md)
+  [:octicons-arrow-right-24: MEV Summary](mev_summary.md)
 
   

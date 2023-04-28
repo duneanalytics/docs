@@ -14,14 +14,31 @@ We support [decoded tables for Ethereum based chains (EVM)](evm/index.md) like E
 
 There are two types of EVM decoded tables, one that decodes functions and one that decodes event logs. 
 <div class="cards grid" markdown>
-- [Call Tables](evm/call-tables.md): These are decoded from traces, which contain every function call within a transaction (i.e. between contracts).
-- [Event Log Tables](evm/event-logs.md): These are decoded from event logs, which are data points emitted during a function call.
+
+- #### [Call Tables](evm/call-tables.md)
+
+  These are decoded from traces, which contain every function call within a transaction (i.e. between contracts).
+  
+  [:octicons-arrow-right-24: Call Tables](evm/call-tables.md)
+
+- #### [Event Log Tables](evm/event-logs.md)
+
+  These are decoded from event logs, which are data points emitted during a function call.
+  
+  [:octicons-arrow-right-24: Event Log Tables](evm/event-logs.md)
+
 </div>
+
 
 ## Solana decoded tables
 
 We also support [decoded tables on Solana](solana/idl-tables.md), for any program (Candy Machine, Whirlpool, Jupiter, SPL Token, System Program, Pyth, and many more).
 
 <div class="cards grid" markdown>
-- [IDL Tables](solana/idl-tables.md): These are decoded from `instruction_calls`, so all function calls at the first instruction level (not inner instructions) are decoded.
+
+- #### [IDL Tables](solana/idl-tables.md)
+
+  These are decoded from `instruction_calls`, so all function calls at the first instruction level (not inner instructions) are decoded.
+  
+  [:octicons-arrow-right-24: IDL Tables](solana/idl-tables.md)
 </div>

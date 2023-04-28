@@ -5,7 +5,7 @@ description: With the help of the community we construct customs tables which co
 
 **The spellbook github repo can be found at [Spellbook](https://github.com/duneanalytics/spellbook).**
 
-**To see a complete list of Spellbook Spell tables, visit the [Spellbook Model Docs](https://spellbook-docs.dune.com/#!/overview).**
+**To see a complete list of Spellbook Spell tables, visit the [Spellbook Model Docs](https://dune.com/spellbook).**
 ## Abstraction and Aggregation Tables for Blockchain Data
 
 Spellbook is an open-source [dbt repository](https://docs.getdbt.com/docs/introduction) for creating and maintaining high-level blockchain data tables using SQL and [Jinja templating](https://realpython.com/primer-on-jinja-templating/).
@@ -18,7 +18,7 @@ dbt natively understands the dependencies between all models. In our old abstrac
 
 ![Dependency graph created by dbt showing erc20 daily balances dependency tree](images/dbt-erc20-dependency-graph.jpg)
 
-We hope you are as excited as we are about this new tool. You can add a view, seed file (excel/csv), or materialized table (incremental or not) by [contributing to spellbook](contributing/index.md).
+We hope you are as excited as we are about this tool. You can add a view, seed file (excel/csv), or materialized table (incremental or not) by [contributing to spellbook](contributing/index.md).
 
 ## Contributing to Spellbook
 
@@ -193,11 +193,3 @@ For the first time in history, we have access to an open dataset thanks to block
 Thanks to Spellbook, we can all build on top of that open data to make it more transparent, accessible, and meaningful together!
 
 
-## Abstractions (Dune V1)
-
-!!! warning
-       Our abstractions for v1 are no longer open for contributions, and will be [sunsetted with the v1 engine](../../reference/v1-sunsetting.md) soon.
-
-For our **V1 Engine** (PostgreSQL), abstractions are snippets of SQL executed the data platform. You can check for existing abstractions on [GitHub](https://github.com/duneanalytics/dune-v1-abstractions).
-
-You can check for existing abstractions in our [public github repository](https://github.com/duneanalytics/spellbook/index.md), under `deprecated-dune-v1-abstractions`.

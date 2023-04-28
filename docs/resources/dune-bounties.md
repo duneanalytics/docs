@@ -1,35 +1,17 @@
 ---
-title: Dune Bounties
+title: Find a Wizard
 description: Dune bounties empower projects and wizards to collaborate through $$ incentives.
 ---
 
-How many Holders does BAYC have?
+While Dune has created the tools to make extract knowledge from crypto data, it's through the skills and bravery of our community of Wizards that data is surfaced and made understandable for projects and the public alike.
 
-Wanna do some whale watching?
-
-How is the UST depeg going?
-
-How many users are using Uniswap V3 in a day?
-
-Over the past 3 years, Dune has become the go-to solution for answering questions like these via on-demand crypto analytics. 
-
-When it comes to blockchain data analysis, Dune has it all and can do it all, but there's always a frontier left unexplored.
-
-While Dune has created the tools to make ✨ from the 🌀 of crypto data, it's through the skills and bravery of our community of Wizards that data is surfaced and made understandable for projects and the public alike.
-
-Many of the Dashboards and Queries you see on Dune today were made out of sheer curiosity and enjoyment.
-
-Some were done for clout and stars.
-
-But there's nothing like cold, hard, cash to make sure top tier Wizards come to your aid.
-
-![just send your cash](images/send-ur-cash.gif)
+Many of our Wizards are looking for ways to earn money and build their reputation in the space.
 
 ## The problem: Wizards + Projects != ✨📊
 
 Projects need data, Wizards want jobs. It's hard for one to find the other.
 
-Until now, analytics tasks have been spread out between Twitter, Discord, Gitcoin, Layer3, Notion boards and a few other dark and hidden places. 
+Analytics tasks have been spread out between Twitter, Discord, Gitcoin, Layer3, Notion boards and a few other dark and hidden places. 
 
 It's hard for **Wizards** to keep track of all these locations they should look for jobs and there's unnecessary friction in the application and work-delivery process. 
 
@@ -47,7 +29,7 @@ This one solution should be able to handle:
 
 and it should be web3 native.
 
-**Thankfully this marketplace now exists!**
+**Thankfully this marketplace exists!**
 
 ## The solution: Dune Bounties
 
@@ -69,17 +51,6 @@ All open tasks that have the Dune Analytics Skill attached will appear in the [D
 
 **If you are an organization in need of web3 analytics, it’s now easier than ever to connect with Dune Wizards!**
 
-You can either do all of this by yourself or ask for our help via the typeform in the "supported approach" tab in the section below, we are happy to help!
-
-=== "Supported approach"
-
-    1. **Fill in this Typeform**  
-    
-    We know setting up Dework, defining bounties, and managing your contributors can be quite a challenge.
-    
-    Reach out to us by clicking the button below and filling out our Typeform and we'll happily assist you in onboarding and running successful bounties.
-    
-    <button data-tf-popup="DtX4jqkd" data-tf-size="100" style="all:unset;font-family:Helvetica,Arial,sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#0445AF;color:#FFFFFF;font-size:20px;border-radius:25px;padding:0 33px;font-weight:bold;height:50px;cursor:pointer;line-height:50px;text-align:center;margin:0;text-decoration:none;">Typeform</button><script src="//embed.typeform.com/next/embed.js"></script>
 
 === "Self Serve"
 
@@ -99,10 +70,11 @@ You can either do all of this by yourself or ask for our help via the typeform i
         
         Once you have created a task, the task will be: 
         
-        1. in your board and 
+        1. in your board
         2. in the [Dune hub](https://app.dework.xyz/hubs/dune). 
         
         From there on out, people can find your open task and apply or compete.
+        Additionally, you should share the task link with your community to get more applicants.
 
     3.  **Choose an applicant**
 
@@ -119,6 +91,19 @@ You can either do all of this by yourself or ask for our help via the typeform i
     5.  **Pay your contributor**
 
         Dework integrates with Metamask, Gnosis Safe, Utopia Labs and even Phantom wallet for Solana based payments. You can choose whatever works best for you and your Wizard contributor here.
+
+
+=== "Supported approach"
+
+    1. **Fill in this Typeform**  
+    
+    We know setting up Dework, defining bounties, and managing your contributors can be quite a challenge.
+    
+    Reach out to us by clicking the button below and filling out our Typeform and we'll happily assist you in onboarding and running successful bounties.
+    
+    <button data-tf-popup="DtX4jqkd" data-tf-size="100" style="all:unset;font-family:Helvetica,Arial,sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#0445AF;color:#FFFFFF;font-size:20px;border-radius:25px;padding:0 33px;font-weight:bold;height:50px;cursor:pointer;line-height:50px;text-align:center;margin:0;text-decoration:none;">Typeform</button><script src="//embed.typeform.com/next/embed.js"></script>
+
+
 
 
 
@@ -172,52 +157,52 @@ We suggest working in this order so your data flows efficiently:
 
 ## Dune Bounties FAQ
 
-### I want to create a requests but how much should I pay/offer?
+!!! example  "I want to create a requests but how much should I pay/offer?"
 
-Dune is an open platform on which you can build all kinds of analysis, Dashboards and Spells, so the official answer here is the dreaded "it depends."
+    Dune is an open platform on which you can build all kinds of analysis, Dashboards and Spells, so the official answer here is the dreaded "it depends."
 
-Going rates for Freelance Dune Wizards seem to be anywhere between \$30-\$100 per hour.
+    Going rates for Freelance Dune Wizards seem to be anywhere between \$30-\$100 per hour.
 
-And you can always ask in our [#bounty-questions Discord](https://discord.com/channels/757637422384283659/1025371996277706792) or fill out the [Typeform](https://form.typeform.com/to/DtX4jqkd) in the "Supported approach" tab above to get some help on this! 
+    And you can always ask in our [#bounty-questions Discord](https://discord.com/channels/757637422384283659/1025371996277706792) or fill out the [Typeform](https://form.typeform.com/to/DtX4jqkd) in the "Supported approach" tab above to get some help on this! 
 
-### Does Dune take a cut of bounty payments?
+!!! example  "Does Dune take a cut of bounty payments?"
 
-Dune does not take a cut in any bounty payments.
+    Dune does not take a cut in any bounty payments.
 
-### I don't have time/capacity to do this myself, can you run this for me?
+!!! example  "I don't have time/capacity to do this myself, can you run this for me?"
 
-In some cases, the Dune team can actually run entire bounty campaigns/contests for you, but we can't offer this for every organization.
+    In some cases, the Dune team can actually run entire bounty campaigns/contests for you, but we can't offer this for every organization.
 
-Fill out the [Typeform](https://form.typeform.com/to/DtX4jqkd) in the "Supported approach" tab above and we'll let you know what we can do to help! 
+    Fill out the [Typeform](https://form.typeform.com/to/DtX4jqkd) in the "Supported approach" tab above and we'll let you know what we can do to help! 
 
-### How do Wizards get paid for bounties?
+!!! example  "How do Wizards get paid for bounties?"
 
-Dework has a native payment feature. Wizards simply connect their wallet in their Dework profile and will get paid as soon as the bounty is paid out by the Project that created the task.
+    Dework has a native payment feature. Wizards simply connect their wallet in their Dework profile and will get paid as soon as the bounty is paid out by the Project that created the task.
 
-### Can I run contests on Dework?
+!!! example  "Can I run contests on Dework?"
 
-You can indeed run contests on Dework, they are called "multiple submissions."
+    You can indeed run contests on Dework, they are called "multiple submissions."
 
-You can learn more in [Dework's documentation](https://dework.gitbook.io/product-docs/fundamentals/task-types-and-assignee-gating#multiple-submissions).
+    You can learn more in [Dework's documentation](https://dework.gitbook.io/product-docs/fundamentals/task-types-and-assignee-gating#multiple-submissions).
 
-After running contests it often makes sense to give one of the winners a follow-up task to reconcile the best ideas of all submitted dashboards into one final version.
+    After running contests it often makes sense to give one of the winners a follow-up task to reconcile the best ideas of all submitted dashboards into one final version.
 
-### Is all of this public?
+!!! example  "Is all of this public?"
 
-Dework allows you to define tasks privately and publicly, if you wanted to you could for example limit tasks for only members of your Discord.
+    Dework allows you to define tasks privately and publicly, if you wanted to you could for example limit tasks for only members of your Discord.
 
-### How do I choose the right applicant?
+!!! example  "How do I choose the right applicant?"
 
-You can click on any profile in Dework to see what the Credentials of the person are.
+    You can click on any profile in Dework to see what the Credentials of the person are.
 
-For example:  
-[https://app.dework.xyz/profile/hamzat_iii](https://app.dework.xyz/profile/hamzat_iii)
+    For example:  
+    [https://app.dework.xyz/profile/hamzat_iii](https://app.dework.xyz/profile/hamzat_iii)
 
-### What's your recommend approach to organizing bounties for my Project and needs?
+!!! example  "What's your recommend approach to organizing bounties for my Project and needs?"
 
-Our advice is to first run specific tasks for adding your data to [Spellbook](../data-tables/spellbook/index.md) first and run a Dashboard design contest afterwards.
+    Our advice is to first run specific tasks for adding your data to [Spellbook](../data-tables/spellbook/index.md) first and run a    Dashboard design contest afterwards.
 
-This way, your data will be easily accessible to any Dune Wizard in any Queries and Dashboards they imagine
+    This way, your data will be easily accessible to any Dune Wizard in any Queries and Dashboards they imagine
 
-Then, by running a contest for Dashboard designs using Dework's "multiple submissions" feature, you'll ensure specific Dashboards you want are created while also leaving room to be surprised by our Wizard's creativity.
+    Then, by running a contest for Dashboard designs using Dework's "multiple submissions" feature, you'll ensure specific  Dashboards you want are created while also leaving room to be surprised by our Wizard's creativity.
 

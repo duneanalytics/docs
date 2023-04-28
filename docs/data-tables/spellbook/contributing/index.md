@@ -1,6 +1,6 @@
 ---
 title: Understand and Add a Spell
-description: Let’s learn how to add a Spell in no time flat - it’s like 💫!
+description: Learn how to add a Data Model to the Spellbook
 ---
 
 ## Understanding Spell Models
@@ -10,9 +10,6 @@ If you are just looking to understand the basic models [from the Github Repo](ht
 ## 7 Steps to adding a Spell
 
 Let’s learn how to add a Spell in no time flat - it’s like 💫! By the end of this guide, you’ll have your local environment set up and the knowledge you need to add Spells for yourself or to claim bounties.
-
-!!! note
-    [Dune V1 Abstractions have been moved to this repository](https://github.com/duneanalytics/dune-v1-abstractions), which you'll now need to clone in order to access the code for migrating a V1 Abstraction to a Spell like we do in the following steps.
 
 7 steps to go:
 

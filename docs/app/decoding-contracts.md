@@ -104,8 +104,6 @@ In those instances, you will need to manually input the contract's name and its 
 
 If the contract has been verified by the chain's block explorer, you should be able to find this information there.
 
-[Find a list of each chain's main block explorer here](../reference/wizard-tools/blockchain-explorers.md)!
-
 #### How do I submit a Proxy contract?
 
 In order to properly decode transactions towards contracts that fit the [Proxy pattern](https://blog.openzeppelin.com/proxy-patterns/), Dune needs to map the Proxy contract's address with the implementation contract's ABI.
@@ -119,7 +117,7 @@ If we did monitor the implementation contract's address directly, we would miss 
 
 When you submit the Proxy contract's address, we'll attempt to fetch the proxy's contract name and the implementation address it's pointing towards to source the Implementation contract's ABI.
 
-If we can't find the Implementation contract's ABI, you'll need to find it using [the relevant chain's blockchain explorer](../reference/wizard-tools/blockchain-explorers.md) and input it manually.
+If we can't find the Implementation contract's ABI, you'll need to find it using the relevant chain's blockchain explorer and input it manually.
 
 
 #### How do I re-submit a contract?
