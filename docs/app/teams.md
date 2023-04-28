@@ -54,7 +54,7 @@ The context predicates which credit balance you are spending from. If you are in
 You can spend the credits of your team on any content, regardless of whether it is owned by your personal account, your team or another Wizard. 
 
 You can edit the content of your team, regardless of whether you are in the personal or team context.
-In the [Version History](../app/queries/version-history.md) edits you make will be attributed to your personal account, even if you are in your Team's context.
+In the [Version History](../app/query-editor/version-history.md) edits you make will be attributed to your personal account, even if you are in your Team's context.
 
 ### FAQ
 

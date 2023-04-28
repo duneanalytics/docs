@@ -1,8 +1,7 @@
 nav:
 - index.md
-- queries
+- Query Editor: query-editor
 - visualizations
 - dashboards.md
 - decoding-contracts.md
 - teams.md
-- ...

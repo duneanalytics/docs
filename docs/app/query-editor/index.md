@@ -1,5 +1,5 @@
 ---
-title: Overview
+title: Query Editor
 description: Learn more about how Dune's Query Editor works here!
 ---
 

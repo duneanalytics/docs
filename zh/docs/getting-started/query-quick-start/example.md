@@ -12,7 +12,7 @@ If you get stuck, [fork and test out the demo query here](https://dune.com/queri
 
 ## 1. Find the main point of entry
 
-The easiest place to start your query exploration is the [Dune Data Explorer](../queries/data-explorer.md), for two reasons:
+The easiest place to start your query exploration is the [Dune Data Explorer](../query-editor/data-explorer.md), for two reasons:
 
 1. Searching here will let us discover whether the contracts we'll need have already been decoded; if so we'll have a lot less work to do.
 2. If our data is already [Decoded](../decoding-contracts.md), the contracts, calls, events, and data points will probably have obvious labels - eg `amount_usd` is the US dollar amount an NFT was bought/sold for. So we might not need to dig through the project docs to understand which contracts and data we need to build our Query.
@@ -42,8 +42,8 @@ The first way is to run a `SELECT *` + `LIMIT` search to see what comes up.
 
 Note a couple of things here:
 
-1. Dune has a nice auto complete feature - just start typing to see options and hit enter to paste ([learn more about how the Query Window works here](../queries/query-window.md))
-2. You can click the >> next to a table name in the Data Explorer to automatically paste that into your query ([learn more about the Data Explorer here](../queries/data-explorer.md))
+1. Dune has a nice auto complete feature - just start typing to see options and hit enter to paste ([learn more about how the Query Window works here](../query-editor/query-window.md))
+2. You can click the >> next to a table name in the Data Explorer to automatically paste that into your query ([learn more about the Data Explorer here](../query-editor/data-explorer.md))
 
 Also since this is a pre-made how to guide you can just be lazy and copy this code:
 
@@ -277,7 +277,7 @@ We'll wrap this basic query in a `WITH` statement, so we can return two separate
 
 ### Adding Parameters
 
-Now for extra points, let's add a [Parameter](../queries/parameters.md) so people who view our Visualizations can filter by 1 day, 1 week, and 1 month time periods.
+Now for extra points, let's add a [Parameter](../query-editor/parameters.md) so people who view our Visualizations can filter by 1 day, 1 week, and 1 month time periods.
 
 To do that, let's highlight our `24 hour` interval measure, then click the <span class="fk-btn-5">Add parameter</span> button
 
