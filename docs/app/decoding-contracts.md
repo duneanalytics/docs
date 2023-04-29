@@ -3,11 +3,11 @@ title: Decoding Contracts
 description: Here's everything you need to know about Decoded contracts and how to submit them!
 ---
 
-Dune contains an extensive catalog of Decoded Contracts, brought into the platform through Wizard submissions!
+**Dune contains an extensive catalog of Decoded Contracts, brought into the platform through Wizard submissions!**
 
 Instead of working with raw transaction, log, and trace data, contracts are decoded into human-readable tables for each event and function defined in the smart contract's ABI ([Application Binary Interface](https://www.alchemy.com/overviews/what-is-an-abi-of-a-smart-contract-examples-and-usage)).
 
-Learn more about how Decoding works and what Decoded tables are available [here](../../tables/decoded/).
+Learn more about how Decoding works and what Decoded tables are available in the [data tables section](../../tables/decoded/).
 
 ## Submitting a new contract for decoding
 
@@ -17,11 +17,6 @@ Contracts can be submitted for decoding through:
 
 - [The New contract form](https://dune.com/contracts/new)
 - The [My Creations > Contracts Tab](https://dune.com/browse/contracts/authored)
-- Within the dataset explorer in the Query editor's sidebar:
-
-![Add a new contract](images/decoding-contracts/add-new-contract-link.png)
-
-The contract submission form, which consists of 2 steps:
 
 ### 1. Blockchain and address
 
@@ -62,7 +57,7 @@ Once you submit it, you are done! The contract will be stored in our queue, whic
 
 !!! note
     
-    Submission might take a few days to get processed, please be patient with us! 🙏
+    Submission are usully processed within a few hours on weekdays.
 
 ### Advanced options
 
@@ -83,15 +78,13 @@ Then, to the second question - "Is it created by a factory contract?" - select "
 
 !!! warning
 
-    Only use these options if you know what you're doing and are extremely familiar with the project's architecture and deployment hierarchy. Incorrectly applying these settings may lead to a rejected submission.
+    Only use these options if you know what you're doing and are familiar with the project's architecture and deployment hierarchy. Incorrectly applying these settings may lead to a rejected submission.
 
 ## Tracking your submissions
 
-You can view your submissions and their processing status at any time by navigating to [My Creations > Contracts](https://dune.com/browse/contracts/authored):
+You can view your submissions and their processing status at any time by navigating to [My Creations > Contracts](https://dune.com/browse/contracts/authored).
 
-![Track your submission](images/decoding-contracts/track-your-submission.png)
-
-### Frequently Asked Questions
+## Frequently Asked Questions
 
 #### How do I submit contract information manually?
 
@@ -104,8 +97,6 @@ In those instances, you will need to manually input the contract's name and its 
 
 If the contract has been verified by the chain's block explorer, you should be able to find this information there.
 
-[Find a list of each chain's main block explorer here](../reference/wizard-tools/blockchain-explorers.md)!
-
 #### How do I submit a Proxy contract?
 
 In order to properly decode transactions towards contracts that fit the [Proxy pattern](https://blog.openzeppelin.com/proxy-patterns/), Dune needs to map the Proxy contract's address with the implementation contract's ABI.
@@ -115,11 +106,11 @@ We avoid monitoring the implementation contract's address because its logic is a
 If we did monitor the implementation contract's address directly, we would miss out on any event logs in its logic since these are actually fired by the caller (the Proxy in this case) when calling a function through `DelegateCall`.
 
 !!! warning
-    When submitting Proxy-patterned contracts to Dune, you should input the Proxy contract's address and, if you have it, the Implementation contract's ABI.**
+    When submitting Proxy-patterned contracts to Dune, you should input the Proxy contract's address and, if you have it, the Implementation contract's ABI.
 
 When you submit the Proxy contract's address, we'll attempt to fetch the proxy's contract name and the implementation address it's pointing towards to source the Implementation contract's ABI.
 
-If we can't find the Implementation contract's ABI, you'll need to find it using [the relevant chain's blockchain explorer](../reference/wizard-tools/blockchain-explorers.md) and input it manually.
+If we can't find the Implementation contract's ABI, you'll need to find it using the relevant chain's blockchain explorer and input it manually.
 
 
 #### How do I re-submit a contract?

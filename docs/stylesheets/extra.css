@@ -294,3 +294,16 @@ h1, h2, h3, h4, h5, h6{
 .vrt-cent {
     vertical-align: middle !important;
 }
+
+.md-typeset .grid.cards>:-webkit-any(ul,ol)>li, .md-typeset .grid>.card {
+    border: 0.05rem solid var(--dune-orange-300);
+    border-radius: 0.1rem;
+    display: block;
+    margin: 0;
+    padding: 0.8rem;
+    -webkit-transition: border .25s,box-shadow .25s;
+    transition: border .25s,box-shadow .25s;
+    background-color: var(--dune-orange-200);
+}
+
+  

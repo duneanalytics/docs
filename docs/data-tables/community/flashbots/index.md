@@ -11,3 +11,50 @@ description: >-
 **Docs:** [https://docs.flashbots.net/](https://docs.flashbots.net)
 
 **Discord:** [https://discord.gg/7hvTycdNcK](https://discord.gg/7hvTycdNcK)
+
+Data available:
+
+<div class="grid cards" markdown>
+
+- #### arbitrages
+
+  ---
+
+  Arbitrage opportunities found by mev-inspect-py.
+
+  [:octicons-arrow-right-24: Arbitrages](arbitrages.md)
+
+- #### liquidations
+
+  ---
+
+  Liquidations found by mev-inspect-py.
+
+  [:octicons-arrow-right-24: Liquidations](liquidations.md)
+
+- #### sandwiched_swaps
+
+  ---
+
+  Sandwiched swaps found by mev-inspect-py.
+
+  [:octicons-arrow-right-24: Sandwiched Swaps](sandwiched-swaps.md)
+
+- #### sandwiches 
+
+  ---
+
+  Sandwiches found by mev-inspect-py.
+
+  [:octicons-arrow-right-24: Sandwiches](sandwiches.md)
+
+
+- #### mev_summary
+
+  ---
+
+  Summary of MEV found by mev-inspect-py.
+
+  [:octicons-arrow-right-24: MEV Summary](mev_summary.md)
+
+  

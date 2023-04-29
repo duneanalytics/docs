@@ -3,6 +3,8 @@ title: Create counters
 description: Counters give you a way to display a single number in a prominent way.
 ---
 
+**Counters give you a way to display a single number in a prominent way.**
+
 ## Counters
 
 Counters are a great way to provide your audience with immediate "on a glance" stats.
@@ -54,10 +56,8 @@ This section is where you can adjust how your numerical data is displayed.
 === "Decimals"
 
     * In this field you can choose how many decimals you want displayed for your counter
-    * This is currently limited to 3 decimal places.
 
 ***
 
 ![label](images/other-visualizations/counters-label-1.png)
 
-![label configuration](images/other-visualizations/counters-label-2.png)

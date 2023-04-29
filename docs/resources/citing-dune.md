@@ -3,11 +3,18 @@ title: Citing Dune
 description: Learn about how to correctly reference and cite Dune queries and dashboards
 ---
 
-# How to reference Dune data!
+# Citing Dune
 
+<p align="center">
+  <img src="../images/galaxy-brain.png" alt="Be fair " title="Galaxy Brain" /><br />
+  <em>Be the Galaxy Brain!</em>
+</p>
+
+   
+   
 Content on Dune is first and foremost the product of the creators ("Wizards") who build the Queries, Visualizations, and Dashboards we reference and share.
 
-Any mention or use of data or Visualizations you find on our platform should reference Dune as the source of such information and include a Dune logo, a direct link to dune.com and a reference to credit the creator(s) of the Specific Query, Dashboard, or Data specific.
+Any mention or use of data or Visualizations you find on our platform should reference Dune as the source of such information and include a Dune logo, a direct link to dune.com and a reference to credit the creator(s) of the specific Query, Dashboard, or Data.
 
 Crediting should be done as follows:
 
@@ -23,9 +30,6 @@ Likewise, you can find their User Name/Profile link and the Query/Visualization 
 
 ![find user and query visualization name](images/find-user-and-query-visualization-name.png)
 
-For more info on how to get Embed links for Visualizations you want to share, [see this page](../app/embeds.md)!
-
-![Be the galaxy brain! Meme by https://dune.com/eliasimos/](images/galaxy-brain.png)
 
 ## Limitations of Commercial Use
 Do note that any form of copying, transmitting, transferring, modifying or creating derivative works from the original Queries and the public Dashboard or wrapping them in a white label manner for free or resale is strictly prohibited.
