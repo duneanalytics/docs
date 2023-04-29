@@ -1,11 +1,26 @@
 ---
-title: Spells
+title: Spellbook Tables
 description: With the help of the community we construct customs tables which cover the entirety of a type of activity on the blockchain called Spells.
 ---
 
-**The spellbook github repo can be found at [Spellbook](https://github.com/duneanalytics/spellbook).**
+**Spellbook Tables are the easiest way to query blockchain data on Dune**
 
-**To see a complete list of Spellbook Spell tables, visit the [Spellbook Model Docs](https://dune.com/spellbook).**
+<div class="cards grid" markdown>
+
+-   #### Github Repo
+
+    The Spellbook GitHub repository can be found here.
+  
+    [:octicons-arrow-right-24: Spellbook Github Repo](https://github.com/duneanalytics/spellbook)
+
+-   #### Model Docs
+
+    Visit the Spellbook Model Docs to see a complete list of Spellbook Spell tables.
+  
+    [:octicons-arrow-right-24: Spellbook Model Docs](https://dune.com/spellbook)
+
+</div>
+
 ## Abstraction and Aggregation Tables for Blockchain Data
 
 Spellbook is an open-source [dbt repository](https://docs.getdbt.com/docs/introduction) for creating and maintaining high-level blockchain data tables using SQL and [Jinja templating](https://realpython.com/primer-on-jinja-templating/).
