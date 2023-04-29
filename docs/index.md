@@ -3,7 +3,7 @@ title: Welcome
 description: Dune is a web-based platform that allows you to query public blockchain data and aggregate it into beautiful dashboards.
 ---
 
-Dune is a web-based platform that allows you to query public blockchain data and aggregate it into beautiful dashboards.
+**Dune is a web-based platform that allows you to query public blockchain data and aggregate it into beautiful dashboards.**
 
 !!! type "Quickstart"
     To get started with Dune in 5 minutes, see the [Quickstart](quickstart.md).
