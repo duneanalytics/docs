@@ -15,14 +15,6 @@ In each section below, you'll find details on how the tables are created and som
 
 <div class="cards grid" markdown>
 
--   #### Query Editor
-
-    ---
-
-    The Query Editor is where you can write SQL queries to explore blockchain data. This docs section describes the functional elements of the Query Editor, to learn how to write queries, see [the query section](../query/index.md).  
-    
-    [:octicons-arrow-right-24: Queries](/app/query-editor/index.md)
-
 
 -   #### [Raw data](raw/index.md)
 
