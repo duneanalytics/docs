@@ -3,9 +3,6 @@ title: Overview
 description: DuneSQL supports a wide range of built-in functions and operators.
 ---
 
-!!!warning
-    This section is still under construction.
-
 
 This chapter describes the built-in SQL functions and operators supported by Trino. They allow you to implement complex functionality and behavior of the SQL executed by Trino operating on the underlying data sources.
 
