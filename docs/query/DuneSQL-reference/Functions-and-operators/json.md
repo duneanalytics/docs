@@ -1583,6 +1583,23 @@ string):
     SELECT json_extract_scalar(json, '$.store.book[0].author');
 ```
 
+```sql
+WITH json_table AS (
+    SELECT
+        json_parse(json_content) AS parsed_json
+    FROM
+        (VALUES
+            ('{"name": "John", "value": 42}'),
+            ('{"name": "Jane", "value": 36}')
+        ) AS json_data (json_content)
+)
+SELECT
+    json_extract_scalar(parsed_json, '$.name') AS name,
+    json_extract_scalar(parsed_json, '$.value') AS value
+FROM
+    json_table;
+```
+
 #### json_format()
 **``json_format(json)``** → varchar
 
