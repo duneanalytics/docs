@@ -29,7 +29,7 @@ The scripts that generate the table dex.trades can be found in this [public gith
 | `maker` | _varbinary_ | In some special cases there actually is a counter party to transactions, this party will get displayed here if applicable |
 | `token_a_amount_raw` | _numeric_ | The raw amount of token A that got traded |
 | `token_b_amount_raw` | _numeric_ | The raw amount of token B that got traded |
-| `usd_amount` | _numeric_ | The USD value of this trade |
+| `amount_usd` | _numeric_ | The USD value of this trade |
 | `token_a_address` | _varbinary_ | The ERC-20 token contract address of token A |
 | `token_b_address` | _varbinary_ | The ERC-20 token contract address of token B |
 | `exchange_contract_address` | _varbinary_ | The address of the decentralized exchange contract that made this trade possible |
