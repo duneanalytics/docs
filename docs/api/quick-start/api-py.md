@@ -29,7 +29,7 @@ query = Query(
         QueryParameter.text_type(name="TextField", value="Word"),
         QueryParameter.number_type(name="NumberField", value=3.1415926535),
         QueryParameter.date_type(name="DateField", value="2022-05-04 00:00:00"),
-        QueryParameter.enum_type(name="EnumField", value="Option 1"),
+        QueryParameter.enum_type(name="ListField", value="Option 1"),
     ],
 )
 print("Results available at", query.url())

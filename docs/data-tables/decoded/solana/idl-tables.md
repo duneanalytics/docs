@@ -7,7 +7,7 @@ description: Table Schemas
     These tables are still in alpha state, as we are still ironing out some kinks. If you discover any issues, please let us know by [dming on Twitter](https://twitter.com/andrewhong5297). There may still be some changes to the table schemas as we add more decoding features.
 
 !!! info "Submissions"
-    You can submit any program for decoding that has a public IDL like [this one](https://solscan.io/account/JUP4Fb2cqiRUcaTHdrPC8h2gNsA2ETXiPDD33WcGuJB#anchorProgramIDL). You can submit to [this form](https://forms.gle/tbHZ6ZeEke5qwVjcA).
+    You can submit any program for decoding that has a public IDL or github repo (anchor and native are both supported) like [this one](https://solscan.io/account/JUP4Fb2cqiRUcaTHdrPC8h2gNsA2ETXiPDD33WcGuJB#anchorProgramIDL). You can submit to [this form](https://forms.gle/tbHZ6ZeEke5qwVjcA).
 
 Decoded tables inherit all of the columns from [`instruction_calls`](../../raw/solana/instruction-calls.md), so you can refer there for most of the types. We only add columns for each argument in the function call `data` and each account that was required to be in `account_arguments`. **These only decode from instructions, and not inner instructions.**
 
@@ -17,15 +17,17 @@ Using an IDL, we decode the function data arguments and the required account arg
 
 [Here's a transaction](https://solscan.io/tx/TGDKvM2E8mWYcsG2JBnb9axFcyEcKqs7yZLyayCmrV8p8SSdA8r9SLEC7EHQ4mcXQXpczEyaCBXvnmEi9yoKVJ9) of a pool (a trading pair) being initialzed.
 
-You can see that the instruction data is decoded in "Bumps", "TickSpacing", and "InitialSqrtPrice" on the explorer. You can also see all the account names are labelled clearly. We have the same thing in a SQL table!
+You can see that the instruction data is decoded in "Bumps", "TickSpacing", and "InitialSqrtPrice" on the explorer. We have the same thing in a SQL table! You can also see all the account names are labelled clearly as well with an `account_` prefix. Raw table inherited columns like `tx_id`, `block_time`, `tx_index` get a `call_` prefix.
 
-![](../../images/whirl_init.gif)
+The main thing to note is that we've exploded outer and inner instructions, where the index will match what you see on explorers. This example call is at the outer instruction level, so the inner instruction index is null. For Whirlpool swaps, often times it will happen in inner_instructions so then the top level outer instruction is inherited into the `call_outer_instruction_index` and the inner index is `call_inner_instruction_index` (same idea with the `call_outer_executing_account` and `call_inner_executing_acount`)
 
-Try it out for yourself in [this query](https://dune.com/queries/2352049) below:
+![type:video](https://dune.com/embeds/2352049/3851391)
+
+Try it out for yourself in [this query](https://dune.com/embeds/2352049/3851391) below:
 
 ```
 SELECT * FROM whirlpool_solana.whirlpool_call_initializePool
-WHERE tx_id = 'TGDKvM2E8mWYcsG2JBnb9axFcyEcKqs7yZLyayCmrV8p8SSdA8r9SLEC7EHQ4mcXQXpczEyaCBXvnmEi9yoKVJ9'
+WHERE call_tx_id = 'TGDKvM2E8mWYcsG2JBnb9axFcyEcKqs7yZLyayCmrV8p8SSdA8r9SLEC7EHQ4mcXQXpczEyaCBXvnmEi9yoKVJ9'
 ```
 
 The table name follows the pattern `<namespace>_solana.<programName>_call_<instructionName>`. We already have many of the top projects decoded, so go play around!
