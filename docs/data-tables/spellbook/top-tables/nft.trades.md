@@ -137,9 +137,9 @@ group by platform, day
 | `usd_amount` | _numeric_ | USD value of the trade at time of execution |
 | `seller` | _varbinary_ | Seller of NFTs |
 | `buyer` | _varbinary_ | Buyer of NFTs |
-| `original_amount` | _numeric_ | The amount in the right format |
-| `original_amount_raw` | _numeric_ | Raw amount of the currency |
-| `eth_amount` | _numeric_ | ETH value of the trade at time of execution |
+| `amount_original` | _numeric_ | The amount in the right format |
+| `amount_original_raw` | _numeric_ | Raw amount of the currency |
+| `amount_eth` | _numeric_ | ETH value of the trade at time of execution |
 | `royalty_fees_percent` | _numeric_ | Royalty fees going to the creator (in %) |
 | `original_royalty_fees` | _numeric_ | Royalty fees in the currency used for this trade |
 | `usd_royalty_fees` | _numeric_ | USD value of royalty fees at time of execution |
