@@ -84,6 +84,8 @@ Then, to the second question - "Is it created by a factory contract?" - select "
 
 You can view your submissions and their processing status at any time by navigating to [My Creations > Contracts](https://dune.com/browse/contracts/authored).
 
+Contract submissions are usually processed within a few hours, but some submissions may require additional time. Once a contract has been approved, it may take up to an hour for the data to become available, and up to six hours for historical data to be included.
+
 ## Frequently Asked Questions
 
 #### How do I submit contract information manually?
@@ -141,6 +143,10 @@ Similar to vanilla Proxy contracts, [EIP-2535](https://eips.ethereum.org/EIPS/ei
 #### My submission got rejected, why?
 
 In the interest of data quality, we reject duplicative, incorrect or low quality submissions. To avoid rejection, be sure to submit accurate contract information! 🙏
+
+#### Why am I missing historical data for my contract?
+
+It may take up to six hours from the time of contract approval for the contract to be fully decoded along with its historical data. If you still can't see the data after this period, please reach out to us through our [#decoding Discord channel](https://discord.com/channels/757637422384283659/850326962152538122).
 
 #### For all other questions:
 
