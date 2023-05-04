@@ -109,7 +109,6 @@ Equipped with the above knowledge, let's look at how some Queries on Dune V2 wor
 ```sql
 
 Select * from ethereum.transactions
-
 where hash = 0xce1f1a2dd0c10fcf9385d14bc92c686c210e4accf00a3fe7ec2b5db7a5499cff
 
 ```
