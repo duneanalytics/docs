@@ -10,17 +10,25 @@ The Dune CSV Upload API allows you to upload CSV files in the Dune database. Thi
 
 Currently, the API only supports uploading CSV files with a maximum size of 200 MB. The API will return an error if the file size exceeds this limit. 
 
+For now, all files will be stored in the ``dunecat`` schema in the Dune database. In the future, we will allow users to specify the schema where the data should be stored. The table name must be specified in the request payload.
+
+```sql
+Select * from dunecat.example_table
+```
+
 **All Data uploaded via this API is public and can be accessed by anyone.**
 
+## How to use the API
 
+Here are the key details you need to know to use the API.
 
-## Authentication
+### Authentication
 
 To authenticate with the API, you must include your API key in the request headers. The header should look like this: 
 
 ``X-Dune-Api-Key : <your-api-key>``
 
-## Endpoint
+### Endpoint
 
 The API endpoint for uploading a CSV file is:
 
@@ -32,7 +40,6 @@ POST https://api.dune.com/api/v1/table/upload/csv
 
 The request payload should be a JSON object containing the following fields:
 
-- `namespace`: (string) The schema in the Dune database. This is static for now and should be set to ``dunecat``.
 - `table_name`: (string) The target table in the database where the CSV data should be uploaded.
 - `description`: (string, optional) A brief description of the uploaded data. Will be displayed in the Dune UI in the future.
 - `data`: (string) The content of the CSV file, passed as a string.
@@ -41,7 +48,6 @@ The request payload should be a JSON object containing the following fields:
 
 ```json
 {
-    "namespace": "dunecat",
     "table_name": "example_table",
     "description": "Sample data for testing",
     "data": "column1,column2\nvalue1,value2\nvalue3,value4"
@@ -79,8 +85,7 @@ with open(csv_file_path) as open_file:
     headers = {'X-Dune-Api-Key': api_key}
 
     payload = {
-        "namespace": "dunecat",
-        "table_name": "test_name",
+        "table_name": "example_table",
         "description": "test_description",
         "data": str(data)
     }
@@ -91,3 +96,13 @@ with open(csv_file_path) as open_file:
     print('Response content:', response.content)
 
 ```
+
+
+## Querying for the data in Dune
+
+Once the data has been uploaded, you can query it using the following SQL query:
+
+```sql
+Select * from dunecat.example_table
+```
+
