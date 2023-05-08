@@ -5,10 +5,7 @@ description: Here"s how to get the latest results of a query run
 
 # [GET] Latest Query Results
 
-Here's how to get the latest results of a query, regardless of the job id/run. 
-
-!!!warning "API Executions != APP Executions"
-    The only way to get query results from the Dune API is to execute a query using the Dune API. Results from API executions are not currently reflected on Dune’s website (and vice versa). This will soon be corrected to be interchangeable. 
+Here's how to get the latest results of a query, regardless of the job id/run or if it is run in the app or the api.
 
 ## Example Request
 
