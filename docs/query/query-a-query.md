@@ -34,7 +34,8 @@ There are some important limitations and requirements to consider when using the
 2. **Parameterized queries**: Parameterized queries are not supported for the "Query a Query" feature.
 3. **Public queries**: Only public queries can be queried. Support for querying private queries will be added in the future.
 4. **Saved queries**: Only saved queries can be used with the "Query a Query" feature.
-5. **Dune SQL**: Only queries written in Dune SQL can be queried.
+5. **Archived queries**: Archived queries cannot be queried.
+6. **Dune SQL**: Only queries written in Dune SQL can be queried.
 
 ## Best Practices
 
