@@ -47,10 +47,10 @@ This tool will automatically convert your queries to DuneSQL. The Tool is based 
 
 You can read about the Syntax differences between the engines in the respective sections of SparkSQL and PostgreSQL.
 
-<div class="grid cards" markdown>
+<div class="cards grid" markdown>
 
-- [SparkSQL](SparkSQL.md)
-- [PostgreSQL](PostgreSQL.md)
+- [:octicons-arrow-right-24: SparkSQL](SparkSQL.md)
+- [:octicons-arrow-right-24: PostgreSQL](PostgreSQL.md)
 
 </div>
 
