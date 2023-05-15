@@ -90,7 +90,7 @@ After **15/07/2023**, queries running on either SparkSQL or PostgreSQL will no l
 
 ??? question "What happens with Spellbook? Can I still contribute?"
 
-    Spellbook is still a valuable tool for Dune and will continue to be used. You can still contribute to Spellbook by submitting pull requests on the project's GitHub repository. We are working on migrating Spellbook to DuneSQL. We will share updates as we make progress. 
+    Spellbook is still a valuable tool for Dune and will continue to be used. You can still contribute to Spellbook by submitting pull requests on the project's GitHub repository. We are working on migrating Spellbook to DuneSQL. The Spellbook code will be migrated to DuneSQL by the Dune Team. The preminary timeline for a first version of Spellbook on DuneSQL is **30/05/2023**.
  
 
 ### Timeline
