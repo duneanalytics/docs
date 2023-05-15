@@ -23,14 +23,14 @@ The following tables shows the schedule for the sunsetting of the old query engi
 
 | Date          | 11/4/2023            | 15/05/2023              | 15/06/2023     | 15/07/2023          |
 |---------------|----------------------|-------------------------|----------------|---------------------|
-|**SparkSQL**   | Sunsetting Kickoff   | Drop from data explorer | Edits disabled | End of Service      |
+|**Changes**    | Sunsetting Kickoff   | Drop from data explorer | Edits disabled | End of Service      |
 
 
 ### PostgreSQL
 
 | Date          | 11/4/2023            | 30/05/2023              | 15/06/2023     | 15/07/2023          |
 |---------------|----------------------|-------------------------|----------------|---------------------|
-|**PostgreSQL** | Sunsetting Kickoff   | Drop from data explorer | Edits disabled | End of Service      |
+| **Changes**   | Sunsetting Kickoff   | Drop from data explorer | Edits disabled | End of Service      |
 
 
 
