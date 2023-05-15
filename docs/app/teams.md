@@ -58,28 +58,28 @@ In the [Version History](../app/query-editor/version-history.md) edits you make 
 
 ### FAQ
 
-!!! question "Can I have private content?"
+??? question "Can I have private content?"
 
     Private dashboards and queries are available for the team or personal account they are in.
 
-!!! question "How do I edit my role?"
+??? question "How do I edit my role?"
 
     You have to ask one of your team admins. If you're an admin, you will still have to ask another admin or upgrade someone else to the admin role. That's to ensure every team always has at least an admin.
 
-!!! question "Can I remove people from my Team?"
+??? question "Can I remove people from my Team?"
 
     Yes, you can remove people from your Team in the People section of your Team’s Settings page.
 
-!!! question "Can I transfer content to another Team?"
+??? question "Can I transfer content to another Team?"
 
     Yes, you can transfer content to another Team in the Settings page of the Query or Dashboard you want to transfer.
 
-!!! question "Can I transfer content to another Wizard?"
+??? question "Can I transfer content to another Wizard?"
 
     Yes, you can transfer content to another Wizard in the Settings page of the Query or Dashboard you want to transfer.
     This will only work if the other Wizard is a member of your Team. If they are not, you will have to invite them to your Team first.
 
-!!! question "Can I transfer content to my personal account?"
+??? question "Can I transfer content to my personal account?"
 
     Yes, you can transfer content to your personal account in the Settings page of the Query or Dashboard you want to transfer.
 
