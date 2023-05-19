@@ -67,6 +67,6 @@ There are many experts in the crypto community who specialize in Dune or have th
 
     A guide on how to find a skilled Dune Freelancer to work with you on your project. 
   
-    [:octicons-arrow-right-24: Citing Dune](../resources/dune-bounties.md)
+    [:octicons-arrow-right-24: Find a Wizard](../resources/dune-bounties.md)
 
 </div>
