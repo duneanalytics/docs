@@ -61,4 +61,12 @@ Examples of real dashboards:
 
 There are many experts in the crypto community who specialize in Dune or have the necessary skills to get up to speed quickly.
 
-[Post a bounty](http://bounties.dune.com/) to a pool of expert freelancers and receive responses from interested builders. You can also share the posted bounty within your network.
+<div class="cards grid" markdown>
+
+-   #### Find a Wizard
+
+    A guide on how to find a skilled Dune Freelancer to work with you on your project. 
+  
+    [:octicons-arrow-right-24: Citing Dune](../resources/dune-bounties.md)
+
+</div>

@@ -29,6 +29,6 @@ A collection of resources for the Dune community.
 
     Have questions or feedback about Dune Analytics? Get in touch with the team here.
   
-    [:octicons-arrow-right-24: Support & Feedback](support-and-feedback.md)
+    [:octicons-arrow-right-24: Support & Feedback](support-feedback.md)
 
 </div>
