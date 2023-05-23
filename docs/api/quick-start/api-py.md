@@ -12,11 +12,12 @@ In this example we'll be using Python3. We recommend using a virtual environment
 
 ## Want to just get it to quickly work? 
 
-Leverage the [cowprotocol Dune client](https://github.com/cowprotocol/dune-client) to get started in only 20 lines:
+Leverage the [cowprotocol Dune client](https://github.com/cowprotocol/dune-client) to get started in only a few lines:
 
 ```
 import dotenv
 import os
+import pandas as pd
 
 from dune_client.types import QueryParameter
 from dune_client.client import DuneClient
@@ -36,7 +37,7 @@ print("Results available at", query.url())
 
 dotenv.load_dotenv()
 dune = DuneClient(os.environ["DUNE_API_KEY"])
-results = dune.refresh(query)
+pd = dune.refresh_into_dataframe(query)
 ```
 
 If you want to understand the details, then check out the full walkthrough of endpoints below.
