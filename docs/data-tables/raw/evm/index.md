@@ -14,7 +14,7 @@ Ethereum Virtual Machine (EVM) powers all chains in Dune except Solana and Bitco
 
 <div class="grid cards" markdown>
 
--   #### Traces
+-   #### Blocks
 
     ---
 
