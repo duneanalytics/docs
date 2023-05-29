@@ -5,6 +5,10 @@ description: Learn how to leverage the power of query scheduling for a more reli
 
 **Query Scheduling allows you to schedule a query to run at a specific time and frequency.**
 
+Queries on Dune usually execute when a user triggers an automatic or interactive execution. This means that if you have a dashboard that is not frequently viewed, the data displayed on the dashboard may be outdated and execution of the queries will only be triggered once a user views the dashboard. Especially for dashboards that contain resource-intensive queries, this can lead to long loading times for the viewer.
+
+To keep your dashboard up-to-date and to ensure that your queries are executed reliably and in a timely manner, you can schedule them to run at a specific time and frequency. Scheduled queries can be run on medium and large query engines, which will require credits.
+
 ### How to Schedule a Query
 
 <div style="position: relative; padding-bottom: calc(50.67708333333333% + 41px); height: 0; width: 100%"><iframe src="https://demo.arcade.software/HDqYf2VdwfwMdHFzKh6u?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;" title="Query Scheduler V2"></iframe></div>
@@ -28,19 +32,33 @@ If you need to modify or cancel a query schedule, click on the scheduler icon to
 
 ### Why Schedule a Query? 
 
-Scheduled queries are useful for ensuring that your query or dashboard displays the most up-to-date data. They give you the flexibility to schedule queries to run at a specific time and frequency, and to choose the execution tier (medium or large) for the query. 
+Scheduling queries are useful for two reasons:
 
-Queries that are not scheduled will only update when a user triggers an automatic or interactive execution. This means that if you have a dashboard that is not frequently viewed, the data displayed on the dashboard may be outdated and execution of the queries will only be triggered when a user views the dashboard. Especially for dashboards that contain resource-intensive queries, this can lead to long loading times for the user.
+1. **Increase the execution frequency of your queries**
+2. **Guarantee that resource-intensive queries are executed reliably**
 
-To understand how scheduled queries help with this, a short excursion into how queries are executed on Dune is necessary:   
 
-- **Interactive executions** are manually triggered by a user clicking the "Run" button in the query editor page or a dashboard. Additionally, interactive executions can also be triggered by the [API](../api/README.md). Interactive executions can be routed via the community, medium, or large cluster, depending on the query engine selected.  
+#### When does Dune execute queries? 
+Before we dive into the details, let's first take a look at when queries are executed on Dune:
+
+- **Interactive executions** are manually triggered by a user clicking the "Run" button in the query editor page or refreshing an entire dashboard. Interactive executions can be routed via the community, medium, or large cluster, depending on the query engine selected.  
 
 - **Automatic executions** are triggered whenever any user on Dune encounters a widget on a dashboard and the widget's underlying query results are "expired". As of now, query results are set to expire every 6 hours, although this is subject to change. These automatic executions are always routed via the community cluster.
 
-Since the community cluster can get quite busy, we cannot guarantee that all automatic query executions will finish within the given 30-minute query timeout limit.
+- **Scheduled executions** are triggered at a specific time and frequency. Scheduled executions can be routed via the medium or large cluster, depending on the execution tier selected.
 
-**Scheduling queries allows you to choose a higher execution frequency and execution tier, which will ensure that your queries are executed reliably and in a timely manner.** 
+
+
+#### 1. Increase the execution frequency of your queries
+
+To bypass the usual 6-hour expiration time of query results, you can schedule your queries to run at a higher frequency. This will ensure that your dashboard displays the most up-to-date data. 
+
+#### 2. Guarantee that resource-intensive queries are executed reliably
+
+All automatic query executions are routed via the community cluster. This can lead to very long loading times for the viewer if the query is resource-intensive and the community cluster is busy. In the worst case, the query may even time out.
+
+If you schedule your queries instead of relying on automatic executions, you can choose a higher execution tier, which will ensure that your queries are executed reliably and in a timely manner.
+
 ### Additional Info
 ➕ We plan to extend the functionality of query scheduling with webhooks, alerts, and the ability to update materialized views. We are also working on a allowing you to schedule a whole dashboard at once. Stay tuned for updates!
 
