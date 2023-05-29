@@ -35,7 +35,7 @@ Learn more about how Dune's Query Editor works:
 
     ---
 
-    Query Scheduler enables update your queries on a set schedule, allowing for more automation and reliability.  
+    Query Scheduler allows you to reliably execute queries in a defined schedule.
     
     [:octicons-arrow-right-24: Scheduling Queries](query-scheduler.md)
 </div>
