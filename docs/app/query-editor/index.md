@@ -30,6 +30,14 @@ Learn more about how Dune's Query Editor works:
     Version History allows you to see the history of changes made to your queries.  
     
     [:octicons-arrow-right-24: Version History](version-history.md)
+
+-   #### Scheduling Queries
+
+    ---
+
+    Query Scheduler enables update your queries on a set schedule, allowing for more automation and reliability.  
+    
+    [:octicons-arrow-right-24: Scheduling Queries](query-scheduler.md)
 </div>
 
 
