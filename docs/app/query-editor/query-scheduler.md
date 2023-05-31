@@ -3,9 +3,9 @@ title: Scheduling Queries
 description: Learn how to leverage the power of query scheduling for a more reliable and up-to-date dashboard display!
 ---
 
-**Query Scheduling allows you to schedule a query to run at a specific time and frequency.**
+**Query Scheduling [allows you to schedule a query](query-scheduler.md#why-schedule-a-query) to run at a specific time and frequency.**
 
-Queries on Dune usually execute when a user triggers an automatic or interactive execution. This means that if you have a dashboard that is not frequently viewed, the data displayed on the dashboard may be outdated and execution of the queries will only be triggered once a user views the dashboard. Especially for dashboards that contain resource-intensive queries, this can lead to long loading times for the viewer.
+Queries on Dune usually execute when a user triggers an [automatic or interactive execution](query-scheduler.md#when-does-dune-execute-queries). This means that if you have a dashboard that is not frequently viewed, the data displayed on the dashboard may be outdated and execution of the queries will only be triggered once a user views the dashboard. Especially for dashboards that contain resource-intensive queries, this can lead to long loading times for the viewer.
 
 To keep your dashboard up-to-date and to ensure that your queries are executed reliably and in a timely manner, you can schedule them to run at a specific time and frequency. Scheduled queries can be run on medium and large query engines, which will require credits. Credit costs are the same as any other query execution on Dune, you will pay 10 credits for a medium tier execution and 20 credits for a large tier execution.
 
@@ -23,7 +23,7 @@ To keep your dashboard up-to-date and to ensure that your queries are executed r
 !!! warning
     - Query scheduling is currently not available for queries with parameters.
     - The query schedule is removed when the queries are archived or when the ownership changes (e.g., when a query is migrated).
-    - There are no notifications available for scheduled query failures as of now.
+    - There are no notifications available for scheduled query failures as of now. Rest assured, these failures do not result in any charges to your account.
 #### Adjusting or Cancelling a Query Schedule
 
 If you need to modify or cancel a query schedule, click on the scheduler icon to open the scheduling dialog. Make changes as needed or click "Stop" to cancel the schedule.
