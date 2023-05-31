@@ -36,6 +36,7 @@ Scheduling queries are useful for two reasons:
 
 1. **Increase the execution frequency of your queries**
 2. **Guarantee that resource-intensive queries are executed reliably**
+3. **Maintain fresh data & reliable uptime for your queries and dashboards**
 
 
 #### When does Dune execute queries? 
