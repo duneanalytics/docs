@@ -48,20 +48,18 @@ In addition to leveraging the columnar storage format and using sequentially ord
 
 2. **Use the LIMIT clause**: If you're only interested in a specific number of rows, use the LIMIT clause to avoid processing more data than necessary.
 
-3. **Use the appropriate JOIN type**: When joining tables, choose the appropriate join type (INNER JOIN, LEFT JOIN, etc.) to optimize query performance. Also, consider the size of the tables being joined and the join condition. Make sure larger tables appear on the right side of the join, as TrinoSQL processes joins from left to right.
+3. **Leverage partition pruning**: If your data is partitioned, use partition keys in the WHERE clause to help the query engine prune unnecessary partitions and reduce the amount of data scanned.
 
-4. **Leverage partition pruning**: If your data is partitioned, use partition keys in the WHERE clause to help the query engine prune unnecessary partitions and reduce the amount of data scanned.
+4. **Filter early and use predicate pushdown**: Apply filters as early as possible in the query to reduce the amount of data being processed. This takes advantage of predicate pushdown, which pushes filter conditions down to the storage layer, reducing the amount of data read from storage.
 
-5. **Filter early and use predicate pushdown**: Apply filters as early as possible in the query to reduce the amount of data being processed. This takes advantage of predicate pushdown, which pushes filter conditions down to the storage layer, reducing the amount of data read from storage.
+5. **Use window functions**: Window functions can be more efficient than self-joins or subqueries for computing aggregations over a set of rows related to the current row.
 
-6. **Use window functions**: Window functions can be more efficient than self-joins or subqueries for computing aggregations over a set of rows related to the current row.
+6. **Avoid using DISTINCT when possible**: DISTINCT can be computationally expensive, especially on large datasets. If you can use GROUP BY or other aggregation methods to achieve the same result, it may improve query performance. Try using approx_distinct instead.
 
-7. **Avoid using DISTINCT when possible**: DISTINCT can be computationally expensive, especially on large datasets. If you can use GROUP BY or other aggregation methods to achieve the same result, it may improve query performance.
+7. **Optimize subqueries**: Subqueries can sometimes cause performance issues. Consider using Common Table Expressions (CTEs) or rewriting the query using JOINs to optimize subqueries.
 
-8. **Optimize subqueries**: Subqueries can sometimes cause performance issues. Consider using Common Table Expressions (CTEs) or rewriting the query using JOINs to optimize subqueries.
+8. **Use the EXPLAIN command**: The EXPLAIN command shows the query execution plan, which can help you understand the underlying operations and optimize your query. Analyze the output of EXPLAIN to identify potential bottlenecks or improvements.
 
-9. **Use the EXPLAIN command**: The EXPLAIN command shows the query execution plan, which can help you understand the underlying operations and optimize your query. Analyze the output of EXPLAIN to identify potential bottlenecks or improvements.
-
-10. **Optimize data types**: Use appropriate data types for your columns, as it can improve query performance by reducing the amount of data processed.
+9. **Optimize data types**: Use appropriate data types for your columns, as it can improve query performance by reducing the amount of data processed. For example, varbinary operations are faster that varchar so be careful casting around too much.
 
 By following these tips, you can write more efficient queries on DuneSQL with TrinoSQL and optimize the performance of your data processing tasks. Remember that DuneSQL's unique structure, such as the parquet file format and columnar storage, should be taken into account when optimizing your queries to fully benefit from the system's capabilities.
