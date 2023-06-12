@@ -36,7 +36,7 @@ The API endpoint for uploading a CSV file is:
 POST https://api.dune.com/api/v1/table/upload/csv
 ```
 
-## Request Parameters
+### Request Parameters
 
 The request payload should be a JSON object containing the following fields:
 
@@ -44,7 +44,7 @@ The request payload should be a JSON object containing the following fields:
 - `description`: (string, optional) A brief description of the uploaded data. Will be displayed in the Dune UI in the future.
 - `data`: (string) The content of the CSV file, passed as a string.
 
-## Example Request
+### Example Request
 
 ```json
 {
@@ -54,11 +54,11 @@ The request payload should be a JSON object containing the following fields:
 }
 ```
 
-## Response
+### Response
 
 The API will respond with a status code indicating the result of the upload. A successful upload will return a 200 status code. The response body may contain additional information about the result of the request.
 
-## Example Usage
+### Example Usage
 
 You can test the API with this google colab notebook: 
 
