@@ -148,7 +148,7 @@ CONTAINER ID   IMAGE               COMMAND                  CREATED             
 
 ```
 
-Start the Trino serve with: 
+Start the Trino server with: 
 
 ```console
 docker start trino
