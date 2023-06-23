@@ -21,14 +21,14 @@ The following tables shows the schedule for the sunsetting of the old query engi
 
 ### SparkSQL
 
-| Date          | 11/4/2023            | 30/05/2023              | 15/06/2023     | 15/07/2023          |
+| Date          | 11/4/2023            | 30/05/2023              | 15/07/2023     | 15/08/2023          |
 |---------------|----------------------|-------------------------|----------------|---------------------|
 |**SparkSQL**   | Sunsetting Kickoff   | Drop from data explorer | Edits disabled | End of Service      |
 
 
 ### PostgreSQL
 
-| Date          | 11/4/2023            | 16/05/2023              | 15/06/2023     | 15/07/2023          |
+| Date          | 11/4/2023            | 16/05/2023              | 01/06/2023     | 15/07/2023          |
 |---------------|----------------------|-------------------------|----------------|---------------------|
 |**PostgreSQL** | Sunsetting Kickoff   | Drop from data explorer | Edits disabled | End of Service      |
 
@@ -43,8 +43,7 @@ You will unfortunately need to migrate your queries from SparkSQL or PostgreSQL 
 If you are using SparkSQL or PostgreSQL, you will need to migrate your queries to DuneSQL by **15/07/2023**.  
 
 To migrate your queries from SparkSQL or PostgreSQL to DuneSQL, you can use the [DuneSQL migration tool](migration-tool.md).  
-This tool will automatically convert your queries to DuneSQL. The Tool is based on GPT4 and still under active development, we will share updates as we make progress.
-
+This tool will automatically convert your queries to DuneSQL.
 You can read about the Syntax differences between the engines in the respective sections of SparkSQL and PostgreSQL.
 
 <div class="cards grid" markdown>
