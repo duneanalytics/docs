@@ -1,4 +1,4 @@
----
+reufrujevic750@gmail.com---
 title: Python
 description: Here's how to access the Dune API via Python.
 ---
