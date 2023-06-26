@@ -23,7 +23,7 @@ The following tables shows the schedule for the sunsetting of the old query engi
 
 | Date          | 11/4/2023            | 30/05/2023              | 15/07/2023     | 15/08/2023          |
 |---------------|----------------------|-------------------------|----------------|---------------------|
-|**SparkSQL**   | Sunsetting Kickoff   | Drop from data explorer | Edits disabled | End of Service      |
+|**SparkSQL**   | Sunsetting Kickoff   | no action taken         | drop from data explorer | End of Service |
 
 
 ### PostgreSQL
@@ -32,7 +32,7 @@ The following tables shows the schedule for the sunsetting of the old query engi
 |---------------|----------------------|-------------------------|----------------|---------------------|
 |**PostgreSQL** | Sunsetting Kickoff   | Drop from data explorer | Edits disabled | End of Service      |
 
-
+After 
 
 ## What this means for you
 
