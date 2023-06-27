@@ -6,8 +6,8 @@ description: Here's how to execute (run) a Query with or without parameters to r
 
 Here's how to execute (run) a query for a specific query id. You can choose to include a `performance` parameter, by default it will use the "medium" performance tier which consumes 10 credits. "large" will use 20 credits. You cannot run API executions on the free tier.
 
-!!!info "Careful of Credit Limits"
-  Make sure you check the query in the app interface to see how many rows and columns of data are being returned, so that you don't spend all of your credits in one query read. The free tier gets 2.5k credits, which at 1000 datapoints a credit allows you to return 2.5 million rows and 1 column (or 1.25m rows and 2 columns, 250k rows and 10 columns, etc.). There won't be overage charges (unless you've changed this setting), but still be sure to double check.
+!!!tip "Careful of Credit Limits"
+    Make sure you check the query in the app interface to see how many rows and columns of data are being returned, so that you don't spend all of your credits in one query read. The free tier gets 2.5k credits, which at 1000 datapoints a credit allows you to return 2.5 million rows and 1 column (or 1.25m rows and 2 columns, 250k rows and 10 columns, etc.). There won't be overage charges (unless you've changed this setting), but still be sure to double check.
 
 ## Example Request
 

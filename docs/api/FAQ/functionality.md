@@ -26,11 +26,11 @@ When navigating to a query, it’s the first number after “/queries/” in the
 
 The API does support Query Parameters!
 
-For Dune Queries that include Parameters, you can pass parameter data as part of the [Execute Query ID endpoint](../../api/api-reference/execute-query-id.md)!
+For Dune Queries that include Parameters, you can pass parameter data as part of the [Execute Query ID endpoint](../../api/api-reference/execute-queries/execute-query-id.md)!
 
 Learn more about [building Dune Queries with Parameters here](../../app/query-editor/query-window.md#parameters).
 
-And learn how to pass parameter data using [cURL here](../../api/api-reference/execute-query-id.md#curl-with-parameters) and with [Python here](../../api/quick-start/api-py.md#parameterized-queries).
+And learn how to pass parameter data using [cURL here](../../api/api-reference/execute-queries/execute-query-id.md#curl-with-parameters) and with [Python here](../../api/quick-start/api-py.md#parameterized-queries).
 
 ### What are the performance and overall differences between the Dune API and the Dune web app? What are the differences in what I can query?
 

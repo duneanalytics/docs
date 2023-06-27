@@ -165,7 +165,7 @@ def cancel_query_execution(execution_id):
 
 ### Execute a Query
 
-To [Execute a Query](../api-reference/execute-query-id.md), you can pass any `query_id` from Dune that you want to fetch data from, then pass it to the `execute_query` function.
+To [Execute a Query](../api-reference/execute-queries/execute-query-id.md), you can pass any `query_id` from Dune that you want to fetch data from, then pass it to the `execute_query` function.
 
 #### Function Call
 
@@ -185,7 +185,7 @@ This execution ID is the required input for rest of the API functions.
 
 ### Get Query Execution Status
 
-To get the [Query Execution Status](../api-reference/execution-status.md), take the `execution_id` that was returned from the `execute_query` function in the previous section, then pass it to `get_query_status` function as shown here:
+To get the [Query Execution Status](../api-reference/execute-queries/execution-status.md), take the `execution_id` that was returned from the `execute_query` function in the previous section, then pass it to `get_query_status` function as shown here:
 
 #### Function Call
 

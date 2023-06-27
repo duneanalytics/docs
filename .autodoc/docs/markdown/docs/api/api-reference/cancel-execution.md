@@ -1,4 +1,4 @@
-[View code on GitHub](https://dune.com/docs/api/api-reference/cancel-execution.md)
+[View code on GitHub](https://dune.com/docs/api/api-reference/execute-queries/cancel-execution.md)
 
 # Explanation of the App Technical Guide
 

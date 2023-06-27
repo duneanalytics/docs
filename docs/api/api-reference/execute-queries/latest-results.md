@@ -1,6 +1,6 @@
 ---
 title: Latest Query Results
-description: Here"s how to get the latest results of a query run
+description: Here's how to get the latest results of a query run
 ---
 
 # [GET] Latest Query Results

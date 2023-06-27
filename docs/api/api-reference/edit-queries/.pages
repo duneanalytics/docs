@@ -1,0 +1,9 @@
+title: Editing Queries (CRUD API)
+nav:
+- index.md
+- Create Query: create-query.md
+- Update Query: update-query.md
+- Retrieve or Get Query: get-query.md
+- Archive Query: archive-query.md
+- Make Query Private: private-query.md
+- How to Pass Parameters: parameter-passing.md

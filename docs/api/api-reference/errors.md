@@ -3,9 +3,16 @@ title: Errors Codes
 description: Here's how to handle errors that may come up when working with the Dune API.
 ---
 
-In cases when things do not work as expected, feel free to reach out to us on the [#dune-api Discord channel](https://discord.com/channels/757637422384283659/1019910980634939433) and we'll help out when you're stuck!
+Dune uses conventional HTTP response codes to indicate the success or failure of an API request. In general: Codes in the `2xx` range indicate success. Codes in the `4xx` range indicate an error that failed given the information provided. Codes in the `5xx` range indicate an error with Dune's servers (these are rare).
 
-Here are a few common error scenarios:
+## Common Error Code Summary
+| Method      | Description                                                   |
+| ----------- | ------------------------------------------------------------- |
+| `400`       | Invalid request                                               |
+| `402`       | Reached maximum number of private queries                     |
+| `403`       | Not allowed to create or update this query                    |
+| `404`       | Query not found, or it’s private and belongs to somebody else |
+| `409`       | Query was updated in the meantime (this is currently never returned, but might be in the future if we add the version parameter or a nonce to the request) |
 
 ## Invalid API Key
 
@@ -34,6 +41,4 @@ Here are a few common error scenarios:
   - If you are using one of our POST endpoints, ensure that the `execution_id` you obtained from your GET endpoint has been correctly passed on to your POST endpoint.
 
 
-The documentation here isn't exhaustive!
-
-While we are working on making it better, again, the best place to get any support is our [#dune-api Discord channel](https://discord.com/channels/757637422384283659/1019910980634939433).
+In cases when things do not work as expected, please reach out to us on the [#dune-api Discord channel](https://discord.com/channels/757637422384283659/1019910980634939433) and we'll help out when you're stuck!
