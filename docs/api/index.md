@@ -17,6 +17,9 @@ You'll have seperate API keys for your [individual accounts](https://dune.com/se
 
 ### API Quickstart Guides
 
+!!!note
+    The quickstart and community SDKs currently only contains endpoints under [Executing Queries](../api-reference/execute-queries) and [Getting Results](../api-reference/get-results). We will be adding info regarding newer endpoints under [Editing Queries](../api-reference/edit-queries) soon.
+
 Get started with our API in a few lines of code using these quick start guides:
 
 <div class="cards grid" markdown>

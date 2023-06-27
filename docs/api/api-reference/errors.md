@@ -5,14 +5,9 @@ description: Here's how to handle errors that may come up when working with the 
 
 Dune uses conventional HTTP response codes to indicate the success or failure of an API request. In general: Codes in the `2xx` range indicate success. Codes in the `4xx` range indicate an error that failed given the information provided. Codes in the `5xx` range indicate an error with Dune's servers (these are rare).
 
-## Common Error Code Summary
-| Method      | Description                                                   |
-| ----------- | ------------------------------------------------------------- |
-| `400`       | Invalid request                                               |
-| `402`       | Reached maximum number of private queries                     |
-| `403`       | Not allowed to create or update this query                    |
-| `404`       | Query not found, or it’s private and belongs to somebody else |
-| `409`       | Query was updated in the meantime (this is currently never returned, but might be in the future if we add the version parameter or a nonce to the request) |
+For specific error code information, please refer to each of the endpoint itself.
+
+Here we list some common errors and suggest possible solution:
 
 ## Invalid API Key
 

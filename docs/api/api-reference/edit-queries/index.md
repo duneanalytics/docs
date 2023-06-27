@@ -9,10 +9,12 @@ CRUD API endpoints enables users to create, read, update, or archive queries *be
     CRUD queries is an advanced feature included only in our Premium subscription plans. Please upgrade your plan to use it.
     
 !!! info end "What is CRUD"
-    1. CRUD operations, standing for Create, Read, Update, and Delete, are the four basic functions that a software application needs to interact with data. They are essential because they allow you to add new data (Create), view existing data (Read), modify existing data (Update), and remove data (Delete) in your database or other storage systems.
-    2. In Dune context, `delete` aciton is replaced by `archive` as deletion of queries is not possible.
+    - CRUD operations, standing for Create, Read, Update, and Delete, are the four basic functions that a software application needs to interact with data. They are essential because they allow you to add new data (Create), view existing data (Read), modify existing data (Update), and remove data (Delete) in your database or other storage systems.
+    - In Dune context, `delete` aciton is replaced by `archive` as deletion of queries is not possible.
+    - Unlike endpoints in [query execution](../execute-queries) group, endpoints in CRUD queries API *cannot* be cancelled, i.e. it is a sync call and there is no intermediary status.
 
 
+## How to CRUD Queries
 <div class="cards grid" markdown>
 - [Create Query](../edit-queries/create-query.md)
 - [Update Query](../edit-queries/update-query.md)
@@ -22,5 +24,11 @@ CRUD API endpoints enables users to create, read, update, or archive queries *be
 - [How to Pass Parameters](../edit-queries/parameter-passing.md)
 </div>
 
-!!! tip 
-    Unlike endpoints in [query execution](../execute-queries) group, endpoints in CRUD queries API *cannot* be cancelled, i.e. it is a sync call and there is no intermediary status.
+## Error Code Summary
+| Method      | Description                                                   |
+| ----------- | ------------------------------------------------------------- |
+| `400`       | Invalid request                                               |
+| `402`       | Reached maximum number of private queries                     |
+| `403`       | Not allowed to create or update this query                    |
+| `404`       | Query not found, or it’s private and belongs to somebody else |
+| `409`       | Query was updated in the meantime (this is currently never returned, but might be in the future if we add the version parameter or a nonce to the request) |

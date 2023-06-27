@@ -3,35 +3,49 @@ title: Execution Results
 description: Here's how to get the results data of an execution request.
 ---
 
-# [GET] Execution Results
+!!! abstract "ENDPOINTS"
+    GET /api/v1/execution/{{execution_id}}/results
+    GET /api/v1/execution/{{execution_id}}/results/csv
 
-Here's how to get the results data of an execution request.
+These endpoints allow you to get the results data of an execution request. You must pass the **`execution_id`** obtained from making a [Execute Query ID POST](../execute-queries/execute-query-id.md) request. Result returns the status, metadata, and query results from a query execution.
+
+By appending "/csv" to the URL, you specify the return to be in CSV format. Else, results are returned in JSON format.
 
 ## Example Request
 
-You need to pass the `execution_id` you obtained from making a [Execute Query ID POST](execute-query-id.md) request to the complete an Execution Results API request.
-
-```
-GET v1/execution/{{execution_id}}/results
-
-https://api.dune.com/api/v1/execution/{{execution_id}}/results
-```
-## Returns
-
-Returns back the status, metadata, and query results from a query execution.
-## Query Parameters
-
-You can't use query parameters here.
 ### cURL
 
 ```
 curl -X GET "https://api.dune.com/api/v1/execution/{{execution_id}}/results" -H x-dune-api-key:{{api_key}}
 ```
 
-There is a default 250,000 datapoints limit to make sure you don't accidently spend all your credits in one call. You can see it with the API param below:
+!!!info
+    There is a default 250,000 datapoints limit to make sure you don't accidently spend all your credits in one call. To ignore teh max limit, you can add `ignore_max_datapoints_per_request=true`
 
-```
-curl -X GET "https://api.dune.com/api/v1/execution/{{execution_id}}/results/?ignore_max_datapoints_per_request=true" -H x-dune-api-key:{{api_key}}
+    ```
+    curl -X GET "https://api.dune.com/api/v1/execution/{{execution_id}}/results/?ignore_max_datapoints_per_request=true" -H x-dune-api-key:{{api_key}}
+    ```
+
+### Python
+```python
+import dotenv
+import os
+import json
+import requests
+import pandas as pd
+import time
+
+# load .env file
+dotenv.load_dotenv('/Users/abc/Documents/Workspace/misc/.env')
+# get API key
+api_key = os.environ["DUNE_API_KEY"]
+# authentiction with api key
+headers = {"X-Dune-API-Key": api_key}
+
+execution_id = 60066
+base_url = f"https://api.dune.com/api/v1/execution/{execution_id}/results"
+result_response = requests.request("GET", base_url, headers=headers)
+
 ```
 
 ## Example Response
@@ -126,16 +140,14 @@ ct,TableName
 2.942005e+06,bnb_transactions
 120973,optimism_transactions
 ```
-In order to get the results in CSV format, use the same URL pattern with "/csv" appended. The results will be returned in CSV format without additional metadata details like the JSON response.
 
-```
-GET v1/execution/{{execution_id}}/results/csv
+!!!tip
+    1. In order to get the results in CSV format, append "/csv": ``` GET /api/v1/execution/{{execution_id}}/results/csv ```
+    The results will be returned in CSV format without additional metadata details like the JSON response.
+    
+    2. Additionally you can use "api_key" as a param to enable use cases such as importing results into a google sheet. (We advise against doing this any public document where your API key can be viewed and compromised.)
 
-https://api.dune.com/api/v1/execution/{{execution_id}}/results/csv
-```
-Additionally you can use "api_key" as a param to enable use cases such as importing results into a google sheet. (We advise against doing this any public document where your API key can be viewed and compromised.)
-
-![image (7)](https://user-images.githubusercontent.com/105652677/220012986-aaf6f372-8f4c-4e30-8da3-25e87a5271ab.png)
+    ![image (7)](https://user-images.githubusercontent.com/105652677/220012986-aaf6f372-8f4c-4e30-8da3-25e87a5271ab.png)
 
 
 ## Reading Results Data FAQ

@@ -4,5 +4,6 @@ nav:
 - Authentication: authentication.md
 - Error Codes: errors.md
 - execute-queries
-- edit-queries
+- get-results
 - data-upload
+- edit-queries

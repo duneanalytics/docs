@@ -185,7 +185,7 @@ This execution ID is the required input for rest of the API functions.
 
 ### Get Query Execution Status
 
-To get the [Query Execution Status](../api-reference/execute-queries/execution-status.md), take the `execution_id` that was returned from the `execute_query` function in the previous section, then pass it to `get_query_status` function as shown here:
+To get the [Query Execution Status](../api-reference/get-results/execution-status.md), take the `execution_id` that was returned from the `execute_query` function in the previous section, then pass it to `get_query_status` function as shown here:
 
 #### Function Call
 

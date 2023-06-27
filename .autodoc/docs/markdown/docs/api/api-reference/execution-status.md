@@ -1,4 +1,4 @@
-[View code on GitHub](https://dune.com/docs/api/api-reference/execute-queries/execution-status.md)
+[View code on GitHub](https://dune.com/docs/api/api-reference/get-results/execution-status.md)
 
 # Explanation of Execution Status App Technical Guide
 

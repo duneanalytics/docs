@@ -38,15 +38,32 @@ description: Learn everything about how to use our Dune API here, including comm
 
     ---
 
-    Turn existing queries into endpoints and progmatically execute them and fetch results.
+    Turn existing queries into endpoints and progmatically execute them.
     
     [:octicons-arrow-right-24: Executing Queries](execute-queries/index.md)
 
     - [Execute Query Via Query ID](../api-reference/execute-queries/execute-query-id.md)
-    - [Check Execution Status](../api-reference/execute-queries/execution-status.md)
-    - [Get Execution Results](../api-reference/execute-queries/execution-results.md)
-    - [Get Latest Query Results](../api-reference/execute-queries/latest-results.md)
     - [Cancel Execution](../api-reference/execute-queries/cancel-execution.md)
+
+-   #### Getting Results
+
+    ---
+
+    Get results of executed queries.
+    
+    [:octicons-arrow-right-24: Executing Queries](get-results/index.md)
+
+    - [Check Execution Status](../api-reference/get-results/execution-status.md)
+    - [Get Execution Results](../api-reference/get-results/execution-results.md)
+    - [Get Latest Query Results](../api-reference/get-results/latest-results.md)
+
+-   #### Uploading Data (Write API)
+
+    ---
+
+    Use Dune's write API to upload CSV files to a specific table in the Dune database.
+
+    [:octicons-arrow-right-24: Write API](data-upload/write-api.md)
 
 -   #### Editing Queries (CRUD API)
 
@@ -61,14 +78,6 @@ description: Learn everything about how to use our Dune API here, including comm
     - [Retrieve or Get Query](../api-reference/edit-queries/get-query.md)
     - [Archive Query](../api-reference/edit-queries/archive-query.md)
     - [Make Query Private](../api-reference/edit-queries/private-query.md)
-    - [How to Pass Paramters](../api-reference/edit-queries/parameter-passing.md)
-
--   #### Uploading Data (Write API)
-
-    ---
-
-    Use Dune's write API to upload CSV files to a specific table in the Dune database.
-
-    [:octicons-arrow-right-24: Write API](data-upload/write-api.md)
+    - [How to Pass Parameters](../api-reference/edit-queries/parameter-passing.md)
 
 </div>

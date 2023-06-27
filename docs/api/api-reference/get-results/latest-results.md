@@ -3,44 +3,37 @@ title: Latest Query Results
 description: Here's how to get the latest results of a query run
 ---
 
-# [GET] Latest Query Results
+!!! abstract "ENDPOINTS"
+    GET /api/v1/query/{{query_id}}/results
+    GET /api/v1/query/{{query_id}}/results/csv
 
-Here's how to get the latest results of a query, regardless of the job id/run or if it is run in the app or the api.
+These endpoints allow you to get the latest results of a query, regardless of the job id/run or if it is run in the app or the api. Returns the latest execution id and results of the run. You must pass parameter `query_id`. The query specified must either be public or a query you have ownership of (you or a team you belong to have ownership).
+
+By appending "/csv" to the URL, you specify the return to be in CSV format. Else, results are returned in JSON format.
+
+
+!!!tip "Note on Parameters"
+    - For query params, we recommend you to not have spaces for a parameter, use underscore instead like `https://api.dune.com/api/v1/query/2340912/results?params.LooksRare%20Wash%20Trading%20Filter=ON`. If no query params are provided, the request will fetch the latest results regardless of parameter (not just default!)
+    - This endpoint does NOT trigger execution but does consume credits through datapoints
 
 ## Example Request
 
-`query_id` is the id of the query you are trying to pull results from. It must either be public or a query you have ownership of. 
-
-```
-GET v1/query/{{query_id}}/results
-
-https://api.dune.com/api/v1/query/{{query_id}}/results
-```
-## Returns
-
-Returns the latest execution id and results of the run. 
-
-!!!note "Keep in mind"
-    - this endpoint does NOT trigger execution but does consume credits through datapoints
-
-## Query Parameters
-
-For query params, we recommend you to not have spaces for a parameter, use underscore instead like `https://api.dune.com/api/v1/query/2340912/results?params.LooksRare%20Wash%20Trading%20Filter=ON`. If no query params are provided, the request will fetch the latest results regardless of parameter (not just default!)
 ### cURL
 
 ```
 curl -X GET "https://api.dune.com/api/v1/query/{{query_id}}/results" -H x-dune-api-key:{{api_key}}
 ```
 
-There is a default 250,000 datapoints limit to make sure you don't accidently spend all your credits in one call. You can see it with the API param below:
+!!!info
+    There is a default 250,000 datapoints limit to make sure you don't accidently spend all your credits in one call. To ignore teh max limit, you can add `ignore_max_datapoints_per_request=true`
 
-```
-curl -X GET "https://api.dune.com/api/v1/query/{{query_id}}/results\?ignore_max_datapoints_per_request=true" -H x-dune-api-key:{{api_key}}
-```
+    ```
+    curl -X GET "https://api.dune.com/api/v1/query/{{query_id}}/results\?ignore_max_datapoints_per_request=true" -H x-dune-api-key:{{api_key}}
+    ```
 
 ### Python
 
-```
+```Python
 import dotenv
 import os
 import json
@@ -80,8 +73,6 @@ result_response = requests.request("GET", base_url, headers=headers, params=para
 
 
 ## Example Response
-
-!!! info "Dune API responses are delivered in JSON format."
 
 ```json
 {"execution_id": "01GXDTYMM2CKFRBEW44X5S0WZE",
