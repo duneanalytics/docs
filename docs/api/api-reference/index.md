@@ -3,11 +3,11 @@ title: API Reference
 description: Learn everything about how to use our Dune API here, including common errors
 ---
 
-**The Dune API is flexible and powerful!** We can largely bucket Dune API features into three categories: 
+**The Dune API is flexible and powerful!** We can largely bucket Dune API features into these categories: 
 
 1. 🪄 **Executing queries** - turning an existing query into an endpoint and execute it, or retrieve latest results associated 
 2. 💫 **Editing queries** (**CRUD** [Create, Retrieve, Update, Delete/Archive] API) 
-3. 🪄 **Uploading data** (Write API) 
+<!-- 3. 🪄 **Uploading data** (Write API)  -->
 
 
 !!! info end "Feature Availability"
@@ -57,14 +57,6 @@ description: Learn everything about how to use our Dune API here, including comm
     - [Get Execution Results](../api-reference/get-results/execution-results.md)
     - [Get Latest Query Results](../api-reference/get-results/latest-results.md)
 
--   #### Uploading Data (Write API)
-
-    ---
-
-    Use Dune's write API to upload CSV files to a specific table in the Dune database.
-
-    [:octicons-arrow-right-24: Write API](data-upload/write-api.md)
-
 -   #### Editing Queries (CRUD API)
 
     ---
@@ -80,4 +72,12 @@ description: Learn everything about how to use our Dune API here, including comm
     - [Make Query Private](../api-reference/edit-queries/private-query.md)
     - [How to Pass Parameters](../api-reference/edit-queries/parameter-passing.md)
 
+<!-- -   #### Uploading Data (Write API)
+
+    ---
+
+    Use Dune's write API to upload CSV files to a specific table in the Dune database.
+
+    [:octicons-arrow-right-24: Write API](data-upload/write-api.md) -->
+    
 </div>
