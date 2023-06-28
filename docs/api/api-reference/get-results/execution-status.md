@@ -3,34 +3,41 @@ title: Execution Status
 description: Here's how to check the status of an execution request.
 ---
 
-# [GET] Execution Status
+!!! abstract "ENDPOINTS"
+    GET /api/v1/execution/{{execution_id}}/status
 
-Here's how to check the status of an execution request.
+This endpoint allow you to heck the status of an execution request. You must pass the **`execution_id`** obtained from making a [Execute Query ID POST](../execute-queries/execute-query-id.md) request. Returns the status of a query execution along with relevant metadata of the results if the execution is completed.
 
 ## Example Request
 
-You need to pass the `execution_id` you obtained from making a [Execute Query ID POST](execute-query-id.md) request to the complete an Execution Status API request.
-
-```
-GET v1/execution/{{execution_id}}/status
-
-https://api.dune.com/api/v1/execution/{{execution_id}}/status
-```
-## Returns
-
-Returns the status of a query execution along with relevant metadata of the results if the execution is completed.
-## Query Parameters
-
-You can't use query parameters here.
 ### cURL
 
 ```
 curl -X GET "https://api.dune.com/api/v1/execution/{{execution_id}}/status" -H x-dune-api-key:{{api_key}}
 ```
 
-## Example Response
+### Python
+```python
+import dotenv
+import os
+import json
+import requests
+import pandas as pd
+import time
 
-!!! info "Dune API responses are delivered in JSON format."
+# load .env file
+dotenv.load_dotenv('/Users/abc/Documents/Workspace/misc/.env')
+# get API key
+api_key = os.environ["DUNE_API_KEY"]
+# authentiction with api key
+headers = {"X-Dune-API-Key": api_key}
+
+execution_id = '01GBM4W2N0NMCGPZYW8AYK4YF1'
+base_url = f"https://api.dune.com/api/v1/execution/{execution_id}/status"
+result_response = requests.request("GET", base_url, headers=headers, params=params)
+```
+
+## Example Responses
 
 ### Query Executing
 

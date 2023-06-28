@@ -10,6 +10,9 @@ If you've built your own let us know about it in our [#dune-api Discord Channel]
 !!! warning "Disclaimer"
     While we love that our community has taken the lead, these clients are not directly maintained by the Dune team.
 
+!!!note
+    The community SDKs currently only contains endpoints under [Executing Queries](../api-reference/execute-queries) and [Getting Results](../api-reference/get-results). 
+
 ## Cow Protocol Python Client
 
 Built by [@bh2smith](https://dune.com/bh2smith) and the team at [Cow Protocol](https://dune.com/cowprotocol), you can find this client on [PyPi](https://pypi.org/project/dune-client/).
