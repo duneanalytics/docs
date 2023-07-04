@@ -11,35 +11,33 @@ Dune currently supports three different query engines:
 - SparkSQL  
 - PostgreSQL  
 
-The SparkSQL and PostgreSQL query engines are being deprecated and will be replaced by DuneSQL.  
-
-You can read more about the decisions to sunset the old query engines in the [announcement post](https://dune.com/blog/introducing-dune-sql).
+The SparkSQL and PostgreSQL query engines are being deprecated and will be replaced by DuneSQL. You can read more about the decisions to sunset the old query engines in the [announcement post](https://dune.com/blog/introducing-dune-sql).
 
 ## Sunsetting Schedule
 
 We are progressively disabling the ability to create new queries on the old query engines. You can read up on the stages of that in the table below. 
-The final date of the sunsetting will be **18/08/2023** when the old query engines will no longer receive new data.
+The final date of the sunsetting will be **30/07/2023** when the old query engines will no longer receive new data and all executions will stop.
 
 
 ### SparkSQL
 
-| Date          | 11/4/2023            | 30/05/2023              | 15/07/2023     | 18/08/2023          |
-|---------------|----------------------|-------------------------|----------------|---------------------|
+| Date          | 11/4/2023            | 30/05/2023              | 15/07/2023                     | 30/07/2023     |
+|---------------|----------------------|-------------------------|--------------------------------|----------------|
 |**SparkSQL**   | Sunsetting Kickoff   | no action taken         | Query creation, edits disabled | End of Service |
 
 ### PostgreSQL
 
-| Date          | 11/4/2023            | 30/05/2023              | 15/07/06/2023  | 18/08/2023          |
+| Date          | 11/4/2023            | 30/05/2023              | 15/07/2023     | 30/07/2023          |
 |---------------|----------------------|-------------------------|----------------|---------------------|
-|**PostgreSQL** | Sunsetting Kickoff   | Query creation, edits disabled | no action taken | End of Service |
+|**PostgreSQL** | Sunsetting Kickoff   | Query creation disabled | edits disabled | End of Service      |
 
 ## What this means for you
 
-You will unfortunately need to migrate your queries from SparkSQL or PostgreSQL to DuneSQL. If you don't migrate your queries, you queries will cease to update on **15/08/2023** and you will no longer be able to edit them without migrating them to DuneSQL. 
+You will need to migrate your queries from SparkSQL or PostgreSQL to DuneSQL. If you don't migrate your queries, you queries will cease to update on **30/07/2023** and you will no longer be able to edit or execute them without migrating them to DuneSQL. 
 
 ### Migrating your queries
 
-If you are using SparkSQL or PostgreSQL, you will need to migrate your queries to DuneSQL by **18/08/2023**.  
+If you are using SparkSQL or PostgreSQL, you will need to migrate your queries to DuneSQL by **30/07/2023**.  
 
 To migrate your queries from SparkSQL or PostgreSQL to DuneSQL, you can use the [DuneSQL migration tool](migration-tool.md).  
 This tool will automatically convert your queries to DuneSQL.
@@ -54,9 +52,11 @@ You can read about the Syntax differences between the engines in the respective 
 
 
 ### What happens to non-migrated queries?
-After **18/08/2023**, queries running on either SparkSQL or PostgreSQL will no longer be updated. You will still be able to access the data from your queries, but there won't be any new data added to your query results and they will stop executing. Query code will still be available to you, but you will not be able to edit it.
+After **30/07/2023**, queries running on either SparkSQL or PostgreSQL will no longer be updated. You will still be able to access the data from your queries, but there won't be any new data added to your query results and they will stop executing. Query code will still be available to you, but you will not be able to edit it.
 
 ## FAQ
+
+### general
 
 ??? question "What is DuneSQL?"
 
@@ -84,7 +84,7 @@ After **18/08/2023**, queries running on either SparkSQL or PostgreSQL will no l
 
 ??? question "Will Postgres and SparkSQL still be around for a while?"
 
-    PostgreSQL and SparkSQL are being deprecated and will be replaced by DuneSQL. After **18/08/2023**, queries running on either SparkSQL or PostgreSQL will no longer be updated. You will still be able to access the data from your queries, but there won't be any new data added to your query results and they will stop executing. Query code will still be available to you, but you will not be able to edit it.
+    PostgreSQL and SparkSQL are being deprecated and will be replaced by DuneSQL. After **30/07/2023**, queries running on either SparkSQL or PostgreSQL will no longer be updated. You will still be able to access the last execution result from your queries, but there won't be any new data added to your query results and they will stop executing. The Query code will still be available to you, but you will not be able to edit it.
 
 ??? question "What happens with Spellbook? Can I still contribute?"
 
@@ -95,17 +95,18 @@ After **18/08/2023**, queries running on either SparkSQL or PostgreSQL will no l
 
 ??? question "When do Spark Queries stop working?"
 
-    SparkSQL queries will stop being updated on **18/08/2023**.
+    SparkSQL queries will stop being updated on **30/07/2023**. This means they will no longer receive new data and will stop executing.
 
 ??? question "When do Postgres Queries stop working?"
 
-    PostgreSQL queries will stop being updated on **18/08/2023**.
+    PostgreSQL queries will stop being updated on **30/07/2023**. This means they will no longer receive new data and will stop executing.
 
 ### Migration
 
 ??? question "How can I migrate existing Queries?"
 
     To migrate your queries from SparkSQL or PostgreSQL to DuneSQL, you can use the [DuneSQL migration tool](migration-tool.md). This tool will automatically convert your queries to DuneSQL.
+    Additionally, you can read about the Syntax differences between the engines in the respective sections of (SparkSQL)[sparksql.md] and (PostgreSQL)[postgresql.md].
 
 ??? question "Can I get help to migrate existing queries?"
 
