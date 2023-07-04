@@ -306,4 +306,12 @@ h1, h2, h3, h4, h5, h6{
     background-color: var(--dune-orange-200);
 }
 
+.md-typeset table {
+    table-layout: fixed;
+    width: 100%;
+}
+.md-typeset th, .md-typeset td {
+    width: 20%;
+    word-wrap: break-word;
+}
   

@@ -4,7 +4,7 @@ description: Dune is sunsetting PostgreSQL. Support for PostgreSQL will be remov
 ---
 
 !!! warning "Sunsetting PostgreSQL"
-    Dune is sunsetting PostgreSQL. You can no longer create or edit PostgreSQL queries. All Support for PostgreSQL will be removed on 18/08/2023. Please migrate your queries to DuneSQL.
+    Dune is sunsetting PostgreSQL. You can no longer create or edit PostgreSQL queries. All Support for PostgreSQL will be removed on 30/07/2023. Please migrate your queries to DuneSQL.
 
 ## PostgreSQL
 
