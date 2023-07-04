@@ -22,7 +22,7 @@ Read more [here](https://medium.com/chainalysis/ethereum-traces-not-transactions
     | Arbitrum          | `arbitrum.traces`     | `value` measured in `ArbGas`, does not contain `gas` |
     | Avalanche C-Chain  | `avalanche_c.traces` | `value` measured in `nanoavax` |
 
-=== "V1 Engine (PosgreSQL)"
+=== "V1 Engine (PostgreSQL)"
 
     |   Chain              |   Table           |   Notes   |
     | -------------------  | ----------------- | --------- |

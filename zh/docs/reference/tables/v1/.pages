@@ -1,4 +1,4 @@
-title: V1 引擎 (PosgreSQL)
+title: V1 引擎 (PostgreSQL)
 nav:
 - 原始数据表: raw
 - 解析表: decoded

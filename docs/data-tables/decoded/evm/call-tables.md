@@ -11,7 +11,7 @@ On Dune, we parse all message calls and transactions made to smart contracts in 
 
     `[projectname_blockchain].contractName_call_functionName`
 
-=== "V1 Engine (PosgreSQL)"
+=== "V1 Engine (PostgreSQL)"
 
     `[projectname]."contractName_call_functionName"`
 
@@ -25,7 +25,7 @@ For example, when a uniswap v3 pool gets created via the [uniswap v3 factory](ht
 
     ![type:video](https://dune.com/embeds/1616145/2679669/79f2a210-959d-4308-9dc3-7578cc898e9d)
 
-=== "V1 Engine (PosgreSQL)"
+=== "V1 Engine (PostgreSQL)"
 
     [`uniswap_v3."Factory_call_createPool"`]
     
@@ -43,7 +43,7 @@ For a contract where multiple instances exist, we will decode all calls to all i
 
     ![type:video](https://dune.com/embeds/1616219/2679778/548764d6-179d-4fe3-8a23-1f3107f0e918)
 
-=== "V1 Engine (PosgreSQL)"
+=== "V1 Engine (PostgreSQL)"
 
     `uniswap_v3."Pair_call_swap"`
 

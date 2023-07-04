@@ -8,7 +8,7 @@ The official Ethereum documentation provides more information on transactions [h
 
 ## Tables
 
-This section of the app technical guide provides a table of the V2 Engine (Spark SQL) and V1 Engine (PosgreSQL) for different chains. The table lists the chain, table, and notes. 
+This section of the app technical guide provides a table of the V2 Engine (Spark SQL) and V1 Engine (PostgreSQL) for different chains. The table lists the chain, table, and notes. 
 
 ### Example
 

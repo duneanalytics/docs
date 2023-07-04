@@ -6,7 +6,7 @@ This section of the app technical guide covers the concept of blocks in blockcha
 
 ## Tables
 
-This section provides tables that are useful for identifying block activity and transaction changes over time. There are two tables provided, one for the V2 Engine (Spark SQL) and one for the V1 Engine (PosgreSQL). Each table contains information about the chains, tables, and notes for each chain. For example, the Ethereum Mainnet chain has a table called `ethereum.blocks` that contains information about blocks on the Ethereum Mainnet.
+This section provides tables that are useful for identifying block activity and transaction changes over time. There are two tables provided, one for the V2 Engine (Spark SQL) and one for the V1 Engine (PostgreSQL). Each table contains information about the chains, tables, and notes for each chain. For example, the Ethereum Mainnet chain has a table called `ethereum.blocks` that contains information about blocks on the Ethereum Mainnet.
 
 ## Column Data
 

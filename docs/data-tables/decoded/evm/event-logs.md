@@ -13,7 +13,7 @@ We will decode all event logs for smart contracts into tables named accordingly 
 
     `[projectname_blockchain].[contractName]_evt_[eventName]`
 
-=== "V1 Engine (PosgreSQL)"
+=== "V1 Engine (PostgreSQL)"
 
     `[projectname]."[contractName]_evt_[eventName]"`
 
@@ -25,7 +25,7 @@ Let's stay in the context of the [uniswap v3 factory](https://etherscan.io/addre
 
     ![type:video](https://dune.com/embeds/1616189/2679743/677e99ea-ff65-4ae1-8efd-4f1ffedb1a7e)
 
-=== "V1 Engine (PosgreSQL)"
+=== "V1 Engine (PostgreSQL)"
 
     `uniswap_v3."Factory_evt_PoolCreated"`
     
@@ -41,7 +41,7 @@ If there is multiple instances of a contract we will collect all event logs acro
 
     ![type:video](https://dune.com/embeds/1616209/2679768/9e48417a-165e-40db-90a4-508b96b2bcdf)
 
-=== "V1 Engine (PosgreSQL)"
+=== "V1 Engine (PostgreSQL)"
 
     `uniswap_v3."Pair_evt_Swap"`
     

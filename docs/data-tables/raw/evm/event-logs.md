@@ -30,7 +30,7 @@ For more on this topic read [this article](https://medium.com/mycrypto/understan
     | Avalanche C-Chain  | `avalanche_c.logs` |       |
     
 
-=== "V1 Engine (PosgreSQL)"
+=== "V1 Engine (PostgreSQL)"
 
     |   Chain              |   Table         | Notes |
     | -------------------  | --------------- | ----- |

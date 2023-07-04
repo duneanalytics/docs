@@ -10,7 +10,7 @@ The guide also discusses which tables to use (events or calls) and provides quer
 ## Questions: 
  1. **How can I check if a specific contract has already been decoded in the Dune database?**
 
-You can check if a contract has been decoded by querying the `[blockchain].contracts` tables through the database or by using the provided dashboard links for V2 Engine (Spark SQL) and V1 Engine (PosgreSQL) in the app technical guide.
+You can check if a contract has been decoded by querying the `[blockchain].contracts` tables through the database or by using the provided dashboard links for V2 Engine (Spark SQL) and V1 Engine (PostgreSQL) in the app technical guide.
 
 2. **How long does it take to decode a smart contract once it has been submitted?**
 

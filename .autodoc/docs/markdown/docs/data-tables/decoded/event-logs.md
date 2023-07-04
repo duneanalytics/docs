@@ -6,7 +6,7 @@ This technical guide covers the concept of event logs in smart contracts. Smart 
 
 The guide explains that logs are useful for monitoring, alerting, and keeping track of what happens inside a smart contract. Logs are also useful for data analysis since they reliably present data that is intended to be analyzed post factum. The guide provides an example of how to search for the keyword `emit` in the source code of a smart contract to see which logs can be emitted by a smart contract.
 
-The guide also explains how event logs for smart contracts are decoded into tables named accordingly to a specific schema. The schema is different for the V2 Engine (Spark SQL) and V1 Engine (PosgreSQL). The guide provides examples of how to name tables for each engine.
+The guide also explains how event logs for smart contracts are decoded into tables named accordingly to a specific schema. The schema is different for the V2 Engine (Spark SQL) and V1 Engine (PostgreSQL). The guide provides examples of how to name tables for each engine.
 
 The guide provides an example of how to look at the event logs of a transaction in Etherscan. The example is in the context of the uniswap v3 factory, and the event that gets emitted upon the creation of a new pool. The event is called `PoolCreated`, and it gives information like the tokens in the pool, the fee tier of this pool, and the tick spacing. The guide provides examples of how to name tables for each engine.
 
@@ -22,7 +22,7 @@ Overall, this guide provides a comprehensive explanation of event logs in smart 
 
 2. How are event logs stored in Dune Docs and what is the naming convention for the tables?
 
-   Event logs for smart contracts are decoded into tables named according to the schema `[projectname_blockchain].[contractName]_evt_[eventName]` for the V2 Engine (Spark SQL) and `[projectname]."[contractName]_evt_[eventName]"` for the V1 Engine (PosgreSQL). For example, the event log for the Uniswap V3 pool creation event is stored in the table `uniswap_v3_ethereum.Factory_evt_PoolCreated` for the V2 Engine and `uniswap_v3."Factory_evt_PoolCreated"` for the V1 Engine.
+   Event logs for smart contracts are decoded into tables named according to the schema `[projectname_blockchain].[contractName]_evt_[eventName]` for the V2 Engine (Spark SQL) and `[projectname]."[contractName]_evt_[eventName]"` for the V1 Engine (PostgreSQL). For example, the event log for the Uniswap V3 pool creation event is stored in the table `uniswap_v3_ethereum.Factory_evt_PoolCreated` for the V2 Engine and `uniswap_v3."Factory_evt_PoolCreated"` for the V1 Engine.
 
 3. How are event logs from multiple instances of a contract handled in Dune Docs?
 

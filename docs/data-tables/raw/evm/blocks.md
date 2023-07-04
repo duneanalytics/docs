@@ -23,7 +23,7 @@ These tables are useful for identifying block activity and transaction changes o
     | Avalanche C-Chain  | `avalanche_c.blocks` | Does not contain `miner` `difficulty`                 |
     
 
-=== "V1 Engine (PosgreSQL)"
+=== "V1 Engine (PostgreSQL)"
 
     | Chain                | Table             | Notes                                               |
     | -------------------  | ----------------- | --------------------------------------------------- |

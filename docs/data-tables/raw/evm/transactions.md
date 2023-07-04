@@ -24,7 +24,7 @@ Read more in the official Ethereum documentation [here](https://ethereum.org/en/
     | Arbitrum          | `arbitrum.transactions`     | No EIP1559 so does not contain  `access_list`, `max_fee_per_gas`,`max_priority_fee_per_gas`, `priority_fee_per_gas` and `type` is always `Legacy`. Gas is measured in `ArbGas` instead of `wei` |
     | Avalanche C-Chain  | `avalanche_c.transactions` | Does not contain. Gas is measured in `nanoavax` instead of `wei` |
 
-=== "V1 Engine (PosgreSQL)"
+=== "V1 Engine (PostgreSQL)"
 
     |   Chain              |   Table                 |   Notes   |
     | -------------------  | ----------------------- | --------- |
