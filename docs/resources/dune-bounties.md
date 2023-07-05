@@ -1,7 +1,7 @@
 ---
 title: Find a Wizard
 description: Dune bounties empower projects and wizards to collaborate through $$ incentives.
----
+--- 
 
 While Dune has created the tools to make extract knowledge from crypto data, it's through the skills and bravery of our community of Wizards that data is surfaced and made understandable for projects and the public alike.
 
@@ -205,4 +205,4 @@ We suggest working in this order so your data flows efficiently:
     This way, your data will be easily accessible to any Dune Wizard in any Queries and Dashboards they imagine
 
     Then, by running a contest for Dashboard designs using Dework's "multiple submissions" feature, you'll ensure specific  Dashboards you want are created while also leaving room to be surprised by our Wizard's creativity.
-
+@sammytizzy
