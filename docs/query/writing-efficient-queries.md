@@ -1,4 +1,4 @@
----
+---author:sammytizzy 
 title: How to Write Efficient Queries on DuneSQL
 description: Get the most out of DuneSQL by writing efficient queries.
 ---
@@ -6,7 +6,7 @@ description: Get the most out of DuneSQL by writing efficient queries.
 **Writing efficient queries is essential for getting the most out of DuneSQL. This guide will help you understand how to write efficient queries on DuneSQL.**
 
 ## DuneSQL architecture
-
+ 
 DuneSQL is a TrinoSQL-based query engine designed for handling data stored in a columnar format on Dune.com. In Dune, the data is stored using the parquet file format, which combines row-oriented and column-oriented approaches. Understanding the nuances of parquet file storage and how it impacts query efficiency is essential for creating optimized queries on DuneSQL.
 
 ### Parquet Files and Columnar Storage
