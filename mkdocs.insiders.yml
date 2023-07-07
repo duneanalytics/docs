@@ -16,7 +16,6 @@ plugins:
   - redirects:
       redirect_maps:
         #4/20/2023 rework:
-       'data-tables/spellbook/contributing/Adding%20A%20Spell/index.md': 'https://dune.com/docs/data-tables/spellbook/contributing/index.md'
        'api/quick-start/api-ready-queries.md': 'http://dune.com/docs/api/quick-start/'
         #4/10/2023 data tables rework:
        'data-tables/raw/blocks.md': 'https://dune.com/docs/data-tables/raw/evm/blocks'
@@ -26,7 +25,6 @@ plugins:
        'data-tables/decoded/call-tables.md': 'https://dune.com/docs/data-tables/decoded/evm/call-tables'
        'data-tables/decoded/event-logs.md': 'https://dune.com/docs/data-tables/decoded/evm/event-logs'
         #4/1/2022 Rework
-       'spellbook/index.md': 'https://dune.com/docs/data-tables/spellbook/'
        'reference/dune-v2/index.md': 'https://dune.com/docs/query'
        'reference/dune-v2/query-engine#byte-array-functions-in-dune-sql': 'https://dune.com/docs/query/DuneSQL-reference/Functions-and-operators/varbinary'
        'reference/dune-v2/query-engine#numerical-types-in-dune-sql': 'https://dune.com/docs/query/DuneSQL-reference/Functions-and-operators/varbinary'
