@@ -14,11 +14,11 @@ description: Heres what you need to do to set up your computer to work on Spellb
 **After that, you’ll also need to:**
 
 * Make a [fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) of the [spellbook repo](https://github.com/duneanalytics/spellbook). Including cloning locally and adding an upstream. 
-* Review Github’s [instructions](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork) on how to make a pull request from a fork. 
+* Review [Github’s instructions](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork) on how to make a pull request from a fork. 
 
 For new users, we recommend using github desktop, it makes the process a bit easier.
 
-Download Github Desktop [here](https://desktop.github.com/)
+Download Github Desktop [here](https://desktop.github.com/).
 
 The following video focusses on the command line, but the process is the same in Github Desktop.
 
@@ -57,7 +57,7 @@ If no changes were made previously, you can begin to add, edit, or delete files 
 **You are now ready to start working on Spellbook!**
 
 ## Coming back
-If you have done this installation on your machine once, to get back into dbt, simply navigate to the spellbook repo, run pipenv shell, and you can run dbt compile again.
+If you have done this installation on your machine once, to get back into dbt, simply navigate to the spellbook repo, run `pipenv shell`, and you can run `dbt compile` again.
 
 ## What did I just do?
 
