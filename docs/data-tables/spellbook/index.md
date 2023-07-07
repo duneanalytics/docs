@@ -33,15 +33,15 @@ dbt natively understands the dependencies between all models. In our old abstrac
 
 ![Dependency graph created by dbt showing erc20 daily balances dependency tree](images/dbt-erc20-dependency-graph.jpg)
 
-We hope you are as excited as we are about this tool. You can add a view, seed file (excel/csv), or materialized table (incremental or not) by [contributing to spellbook](contributing/index.md).
+We hope you are as excited as we are about this tool. You can add a view, seed file (excel/csv), or materialized table (incremental or not) by [contributing to spellbook](../spellbook/index.md).
 
 ## Contributing to Spellbook
 
-If you'd like to contribute to Dune spells, take a look at [Spellbook](contributing/index.md).
+If you'd like to contribute to Dune spells, take a look at [Spellbook](../spellbook/index.md).
 
 These enable you to effortlessly aggregate lots of data with as little friction as possible.
 
-To view available Spells, take a look at our [Spellbook model documentation](https://dune.com/spellbook) and learn how to contribute new Spells [here](contributing/index.md)
+To view available Spells, take a look at our [Spellbook model documentation](https://dune.com/spellbook) and learn how to contribute new Spells [here](../spellbook/index.md)
 
 Our Spells are managed via the public [Spellbook GitHub repository](https://github.com/duneanalytics/spellbook/). We welcome pull requests!
 
@@ -58,11 +58,11 @@ What’s the project about? Is it something worth buying as an investment?
 
 If we want to do some on-chain analysis, we could start by going to OpenSea and finding the Renga collection ([here](https://opensea.io/collection/renga)).
 
-![renga collection opensea](../spellbook/contributing/images/RENGA-Collection-OpenSea.png)
+![renga collection opensea](../../spellbook/images/RENGA-Collection-OpenSea.png)
 
 [By viewing an item from this collection](https://opensea.io/assets/ethereum/0x394e3d3044fc89fcdd966d3cb35ac0b32b0cda91/6294), we can get the collection’s contract address as well as the unique ID from its OpenSea URL.
 
-![get renga contract address from url](../spellbook/contributing/images/get-renga-contract-address-from-url.png)
+![get renga contract address from url](../../spellbook/images/get-renga-contract-address-from-url.png)
 
 We can also scroll down and click on a transaction to [view it on the blockchain explorer](https://etherscan.io/tx/0x96f158d75379057d95c1c562b9908603e543feee25a71ac420e21ecf0a0c643c) and get more data like:
 

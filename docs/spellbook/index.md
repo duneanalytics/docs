@@ -9,9 +9,10 @@ If you are just looking to understand the basic models [from the Github Repo](ht
 
 ## 7 Steps to adding a Spell
 
-Let’s learn how to add a Spell in no time flat - it’s like 💫! By the end of this guide, you’ll have your local environment set up and the knowledge you need to add Spells for yourself or to claim bounties.
+Let’s learn how to add a Spell!   
+By the end of this guide, you’ll have your local environment set up and the knowledge you need to add Spells.
 
-7 steps to go:
+**7 steps to go:**
 
 <div class="cards grid" markdown>
 - [1. 💻 Set Up Spellbook dbt locally](1-do-some-prerequisites%20and-set-up-Spellbook-dbt.md)
