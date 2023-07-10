@@ -63,7 +63,7 @@ The resutls storage period can be found on the API response on the “expires_at
 
 #### How much data can I retrieve in a single API result call?
     
-There is currently a ~1GB limit. The API does not currently return an explicit error upon hitting this limit but will instead fail (timeout) when attempting to retrieve the results.
+There is currently a ~300MB limit. The API does not currently return an explicit error upon hitting this limit but will instead fail (timeout) when attempting to retrieve the results.
 
 ## FAQ: Billing & Pricing
     
