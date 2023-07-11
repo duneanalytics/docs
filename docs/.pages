@@ -5,6 +5,6 @@ nav:
 - App: app
 - Data Tables: data-tables
 - Query: query
-- spellbook
+- spellbook: spellbook
 - API: api
 - resources
