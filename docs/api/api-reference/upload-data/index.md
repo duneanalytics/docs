@@ -1,15 +1,13 @@
 ---
 title: Uploading data
-description: The Dune CSV Upload API allows developers to upload CSV files to a specific table in the Dune database.
+description: The Dune CSV Upload API allows you to upload CSV files to a specific table in the Dune database.
 ---
 
-# Dune CSV Upload API
-
-The Dune CSV Upload API allows you to upload CSV files into the Dune database. This API streamlines the process of importing data into the Dune platform and allows you to import off-chain data into Dune with ease. You can simply use your usual API key to authenticate with the API and upload your CSV file.
+The Dune write API allows you to upload CSV files into the Dune database. This API streamlines the process of importing data into the Dune platform and allows you to import off-chain data into Dune with ease. You can simply use your usual API key to authenticate with the API and upload your CSV file.
 
 Currently, the API only supports uploading CSV files with a maximum size of 200 MB. The API will return an error if the file size exceeds this limit. 
 
-For now, all files will be stored in the ``dune_upload`` schema in the Dune database. In the future, we will allow users to specify the schema where the data should be stored. The table name must be specified in the request payload.
+For now, all files will be stored in the ``dune_upload`` schema in the Dune database. The table name (e.g. ``example_table``) must be specified in the request payload.
 
 You'll be able to query for your data in any query.
 
