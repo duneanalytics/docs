@@ -5,6 +5,7 @@ description: Here's how make queries private via Dune API
 
 !!! abstract "ENDPOINTS"
     POST /api/v1/query/{{query_id}}/private
+    
     POST /api/v1/query/{{query_id}}/unprivate
 
 !!! success end "Note" 
