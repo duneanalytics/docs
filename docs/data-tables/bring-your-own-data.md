@@ -13,12 +13,12 @@ You can upload data to Dune via the API or the UI.
 
     Upload data via dune.com
     
-    [:octicons-arrow-right-24: Upload data](/app/upload-data/)
+    [:octicons-arrow-right-24: App Docs](../app/upload-data.md)
   
 -  #### Upload data via the API
     
     Programmatically upload data via the API
         
-    [:octicons-arrow-right-24: Upload data](../api/api-reference/upload-data)
+    [:octicons-arrow-right-24: API docs](../api/api-reference/upload-data/index.md)
 
 </div>
