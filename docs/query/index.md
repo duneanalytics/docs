@@ -34,14 +34,6 @@ We have created extensive documentation for DuneSQL, which you can find in the [
   
     [:octicons-arrow-right-24: Functions and operators](DuneSQL-reference/Functions-and-operators/index.md)
 
--   #### SQL statement reference
-
-    ---
-
-    A reference guide to DuneSQL syntax and statements.
-  
-    [:octicons-arrow-right-24: SQL statement reference](DuneSQL-reference/SQL-statement-syntax/index.md)
-
 -   #### Data types
 
     ---
