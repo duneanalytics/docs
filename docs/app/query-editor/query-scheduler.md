@@ -3,7 +3,7 @@ title: Scheduling Queries
 description: Learn how to leverage the power of query scheduling for a more reliable and up-to-date dashboard display!
 ---
 
-**Query Scheduling [allows you to schedule a query](query-scheduler.md#why-schedule-a-query) to run at a specific time and frequency.**
+**Query Scheduling allows you to schedule a query to run at a specific time and frequency.**
 
 Queries on Dune usually execute when a user triggers an [automatic or interactive execution](query-scheduler.md#when-does-dune-execute-queries). This means that if you have a dashboard that is not frequently viewed, the data displayed on the dashboard may be outdated and execution of the queries will only be triggered once a user views the dashboard. Especially for dashboards that contain resource-intensive queries, this can lead to long loading times for the viewer.
 
