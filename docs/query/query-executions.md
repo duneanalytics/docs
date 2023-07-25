@@ -24,6 +24,38 @@ Query executions on Dune are triggered in four ways:
 4. **Popular dashboards** are automatically refreshed based on their popularity. We measure popularity based on the number of views a dashboard has received. The most popular dashboards are refreshed every hour, the less popular dashboards are refreshed every 24 hours. Popular dashboards are refreshed via the community cluster.
 
 
+
+
+=== "interactive dashboard execution"
+
+    <div style="position: relative; padding-bottom: calc(57.58333333333333% + 41px); height: 0; width: 100%"><iframe src="https://demo.arcade.software/inelINzxmsLyvP2pj7Re?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;" title="interactive dashboard executions"></iframe></div>
+
+=== "interactive query execution"
+
+    <div style="position: relative; padding-bottom: calc(57.58333333333333% + 41px); height: 0; width: 100%"><iframe src="https://demo.arcade.software/9RYMKYvePPjNV4kVjIt4?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;" title="interactive query execution"></iframe></div>
+
+
+=== "scheduled query execution"
+
+    <div style="position: relative; padding-bottom: calc(50.67708333333333% + 41px); height: 0; width: 100%"><iframe src="https://demo.arcade.software/HDqYf2VdwfwMdHFzKh6u?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;" title="Query Scheduler V2"></iframe></div>
+
+=== "scheduled dashboard execution"
+
+    <div style="position: relative; padding-bottom: calc(63.83333333333333% + 41px); height: 0; width: 100%"><iframe src="https://demo.arcade.software/doDebCcmeiVj5xKiq4nK?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;" title="Meta Monitoring"></iframe></div>
+
+=== "API query execution"
+
+    You can trigger query executions via the API. This is useful if you want to embed a query result in your own application or if you want to trigger a query execution via a cron job.
+
+    [→ API executions](../api/api-reference/execute-queries/index.md)
+
+=== "popular dashboard executions"
+
+    Popular dashboards are automatically refreshed based on their popularity. We measure popularity based on the number of views a dashboard has received. The most popular dashboards are refreshed every hour, the less popular dashboards are refreshed every 24 hours. Popular dashboards are refreshed via the community cluster.
+
+    ![](../query/images/popular%20dashboard.jpeg)
+
+
 <div class="cards grid" markdown>
 
 -   #### Interactive executions
@@ -59,36 +91,6 @@ Query executions on Dune are triggered in four ways:
 
 
 </div>
-
-
-=== "interactive dashboard execution"
-
-    <div style="position: relative; padding-bottom: calc(57.58333333333333% + 41px); height: 0; width: 100%"><iframe src="https://demo.arcade.software/inelINzxmsLyvP2pj7Re?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;" title="interactive dashboard executions"></iframe></div>
-
-=== "interactive query execution"
-
-    <div style="position: relative; padding-bottom: calc(57.58333333333333% + 41px); height: 0; width: 100%"><iframe src="https://demo.arcade.software/9RYMKYvePPjNV4kVjIt4?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;" title="interactive query execution"></iframe></div>
-
-
-=== "scheduled query execution"
-
-    <div style="position: relative; padding-bottom: calc(50.67708333333333% + 41px); height: 0; width: 100%"><iframe src="https://demo.arcade.software/HDqYf2VdwfwMdHFzKh6u?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;" title="Query Scheduler V2"></iframe></div>
-
-=== "scheduled dashboard execution"
-
-    <div style="position: relative; padding-bottom: calc(63.83333333333333% + 41px); height: 0; width: 100%"><iframe src="https://demo.arcade.software/doDebCcmeiVj5xKiq4nK?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;" title="Meta Monitoring"></iframe></div>
-
-=== "API query execution"
-
-    You can trigger query executions via the API. This is useful if you want to embed a query result in your own application or if you want to trigger a query execution via a cron job.
-
-    [→ API executions](../api/api-reference/execute-queries/index.md)
-
-=== "popular dashboard executions"
-
-    Popular dashboards are automatically refreshed based on their popularity. We measure popularity based on the number of views a dashboard has received. The most popular dashboards are refreshed every hour, the less popular dashboards are refreshed every 24 hours. Popular dashboards are refreshed via the community cluster.
-
-    ![](../query/images/popular%20dashboard.jpeg)
 
 
 ## Query engine size
