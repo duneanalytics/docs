@@ -73,7 +73,7 @@ Query executions on Dune are triggered in four ways:
 
     Trigger: scheduled dashboard or query
 
-    [→ Scheduled queries](../app/query-editor/query-scheduler.md)
+    [→ Scheduled queries](../app/query-editor/query-scheduler.md)   
     [→ Scheduled dashboards](../app/dashboards.md#keeping-your-dashboard-up-to-date)
 
 - #### API executions
