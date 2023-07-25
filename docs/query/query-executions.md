@@ -23,8 +23,7 @@ Query executions on Dune are triggered in four ways:
 
 4. **Popular dashboards** are automatically refreshed based on their popularity. We measure popularity based on the number of views a dashboard has received. The most popular dashboards are refreshed every hour, the less popular dashboards are refreshed every 24 hours. Popular dashboards are refreshed via the community cluster.
 
-
-
+**Here is an overview of the different execution triggers:**
 
 === "interactive dashboard execution"
 
@@ -54,6 +53,8 @@ Query executions on Dune are triggered in four ways:
     Popular dashboards are automatically refreshed based on their popularity. We measure popularity based on the number of views a dashboard has received. The most popular dashboards are refreshed every hour, the less popular dashboards are refreshed every 24 hours. Popular dashboards are refreshed via the community cluster.
 
     ![](../query/images/popular%20dashboard.jpeg)
+
+**Learn more about the different execution triggers:**
 
 
 <div class="cards grid" markdown>
