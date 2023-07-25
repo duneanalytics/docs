@@ -1,5 +1,6 @@
 nav:
 - index.md
+- query-executions.md
 - DuneSQL: DuneSQL-reference
 - Writing efficient Queries: writing-efficient-queries.md
 - Querying a query: query-a-query.md
