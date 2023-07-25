@@ -93,24 +93,24 @@ Query executions on Dune are triggered in four ways:
 
 ## Query engine size
 
-Dune has three query engine sizes: community, medium, and large. The query engine size determines the amount of resources allocated to your query. The larger the query engine, the more resources are allocated to your query. This means that queries executed on a larger query engine will run faster and are less likely to time out.
+Dune has three query engine sizes: **community**, **medium**, and **large**. The query engine size determines the amount of resources allocated to your query. The larger the query engine, the more resources are allocated to your query. This means that queries executed on a larger query engine will run faster and are less likely to time out.
 
 <div style="position: relative; padding-bottom: calc(57.58333333333333% + 41px); height: 0; width: 100%"><iframe src="https://demo.arcade.software/qEa2Yifc6aUHvSO3p0QA?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;" title="Query engine size selector"></iframe></div>
 
 
 
-### Community engine
+#### Community engine
 
 The community engine is the default query engine for all queries on Dune. It is a shared cluster, meaning that it is used by all Dune users. This means that the community cluster can be busy at times, if many users are running queries at the same time. 
 To avoid long loading times and timeouts, we recommend using the medium or large engine for resource-intensive queries.   
 Executions on the community engine are free of charge.
 
-### Medium engine
+#### Medium engine
 
 The medium engine is built to handle most queries on Dune. It is cheap, reliable and fast. The medium engine will scale up and down depening on the demand. In contrast to the community engine, that means that running a query on the medium engine will not be affected by other users' queries.   
 Executions on the medium engine cost 10 credits.
 
-### Large engine
+#### Large engine
 
 The large engine is built to handle the most resource-intensive queries on Dune. It's blazing fast, reliable and can easily deal with large amounts of data. The large engine also scales up and down depending on the demand. Running a query on the large engine will not be affected by other users' queries.   
 
