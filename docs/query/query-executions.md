@@ -68,17 +68,21 @@ Dune has three query engine sizes: community, medium, and large. The query engin
 
 
 
-### Community engine (0 credits)
+### Community engine
 
-The community engine is the default query engine for all queries on Dune. It is a shared cluster, meaning that it is used by all Dune users. This means that the community cluster can be busy at times, which can lead to long loading times for the viewer if the query is resource-intensive. In the worst case, the query may even time out.
+The community engine is the default query engine for all queries on Dune. It is a shared cluster, meaning that it is used by all Dune users. This means that the community cluster can be busy at times, if many users are running queries at the same time. 
+To avoid long loading times and timeouts, we recommend using the medium or large engine for resource-intensive queries.   
+Executions on the community engine are free of charge.
 
-### Medium engine (10 credits)
+### Medium engine
 
-The medium engine is built to handle most queries on Dune. It is cheap, reliable and fast. The medium engine will scale up and down depening on the demand. In contrast to the community engine, that means that running a query on the medium engine will not be affected by other users' queries.
+The medium engine is built to handle most queries on Dune. It is cheap, reliable and fast. The medium engine will scale up and down depening on the demand. In contrast to the community engine, that means that running a query on the medium engine will not be affected by other users' queries.   
+Executions on the medium engine cost 10 credits.
 
-### Large engine (20 credits)
+### Large engine
 
 The large engine is built to handle the most resource-intensive queries on Dune. It's blazing fast, reliable and can easily deal with large amounts of data. The large engine also scales up and down depending on the demand. Running a query on the large engine will not be affected by other users' queries.   
 
 In addition to that, the large engine is also the only engine that can handle queries that requires lots of planning time. This mostly happens when you query a large amount of data, when you use a lot of joins or large aggregate window functions.
-
+   
+Executions on the large engine cost 20 credits.
