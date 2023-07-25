@@ -10,8 +10,6 @@ You can freely resize every widget to match the layout you want to create.
 
 ## Creating a Dashboard
 
-
-
 <div style="position: relative; padding-bottom: calc(66.66666666666666% + 41px); height: 0;"><iframe src="https://demo.arcade.software/xTAXmlo0nCL0FOn38hW9?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;" title="Creating a dashboard"></iframe></div>
 
 
@@ -50,14 +48,15 @@ You can add text widgets to your dashboard.
 
 Text widgets support a subset of Markdown. You can manipulate text and embed images and GIFs.
 
-### Embedding Images and GIFs
+## Embedding Images and GIFs
 
-Our text boxes can also be used to embed images or GIFs into your Dashboard.
+Text boxes can also be used to embed images or GIFs into your Dashboard.
 
 The Syntax for embedding images is:
 
-| [Image](https://www.markdownguide.org/basic-syntax/#images-1) | `![alt text](image url)` |
-| ------------------------------------------------------------- | ------------------------ |
+``` markdown
+![alt text](image url)
+```
 
 Since you can't store images locally on our servers, you need to upload your images somewhere else or find the raw file somewhere on the internet.
 
@@ -70,3 +69,24 @@ In practice this might look like this:
 You can resize the image by simply resizing the widget it is contained in.
 
 You can combine images and text in one widget.
+
+## Keeping your Dashboard up to date
+
+Dashboards on Dune are not updated automatically. You can refresh your Dashboard by clicking on the "Run" button in the top right corner.
+
+Alternatively, you can schedule your Dashboard to be refreshed in regular intervals. 
+
+<div style="position: relative; padding-bottom: calc(63.83333333333333% + 41px); height: 0; width: 100%"><iframe src="https://demo.arcade.software/doDebCcmeiVj5xKiq4nK?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;" title="Meta Monitoring"></iframe></div>
+
+To schedule a dashboard:
+
+1. Click on the "clock" icon in the top right corner
+2. Select the frequency you want your Dashboard to be refreshed
+3. Select the execution tier you want to use
+4. Click on "Save"
+
+You can also schedule individual queries to be refreshed. This is useful if you have a Dashboard with many queries and only want to refresh a few of them. Learn more about scheduling queries [here](/query-editor/query-scheduler.md).
+
+## Sharing your Dashboard
+
+You can share your public Dashboard by simply sharing the URL. For private dashboards, viewers need to be part of the same team as the team that owns the Dashboard. Alternatively, you can also share your Dashboard with individual users via the "Share" button in the top right corner.
