@@ -1,6 +1,5 @@
 nav:
 - index.md
 - charts-graphs.md
-- tables.md
 - counters.md
-- ...
+- tables.md

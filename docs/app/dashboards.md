@@ -74,6 +74,8 @@ You can combine images and text in one widget.
 
 Dashboards on Dune are not updated automatically. You can refresh your Dashboard by clicking on the "Run" button in the top right corner.
 
+<div style="position: relative; padding-bottom: calc(57.58333333333333% + 41px); height: 0; width: 100%"><iframe src="https://demo.arcade.software/inelINzxmsLyvP2pj7Re?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;" title="interactive dashboard executions"></iframe></div>
+
 Alternatively, you can schedule your Dashboard to be refreshed in regular intervals. 
 
 <div style="position: relative; padding-bottom: calc(63.83333333333333% + 41px); height: 0; width: 100%"><iframe src="https://demo.arcade.software/doDebCcmeiVj5xKiq4nK?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;" title="Meta Monitoring"></iframe></div>
