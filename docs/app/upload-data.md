@@ -31,7 +31,7 @@ Anything that represents a timestamp is especially tricky for automated systems 
 ## How to Upload Data
 
 !!! note
-    You can also upload data via the API. Check out the [API documentation](../api/api-reference/upload-data/) for more information.
+    You can also upload data via the API. Check out the [API documentation](../../api/api-reference/upload-data/) for more information.
 
 
 
