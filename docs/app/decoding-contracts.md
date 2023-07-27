@@ -7,7 +7,7 @@ description: Here's everything you need to know about Decoded contracts and how 
 
 Instead of working with raw transaction, log, and trace data, contracts are decoded into human-readable tables for each event and function defined in the smart contract's ABI ([Application Binary Interface](https://www.alchemy.com/overviews/what-is-an-abi-of-a-smart-contract-examples-and-usage)).
 
-Learn more about how Decoding works and what Decoded tables are available in the [data tables section](../../tables/decoded/).
+Learn more about how Decoding works and what Decoded tables are available in the [data tables section](../data-tables/decoded/).
 
 ## Submitting a new contract for decoding
 

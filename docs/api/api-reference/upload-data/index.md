@@ -29,7 +29,7 @@ Anything that represents a timestamp is especially tricky for automated systems 
 
 
 !!! note
-    You can also upload data via the User Interface. Check out the [APP documentation](/app/upload-data/) for more information.
+    You can also upload data via the User Interface. Check out the [APP documentation](../../../app/upload-data.md) for more information.
 ## How to use the API
 
 The write API allows you to upload any .csv file into Dune. The only limitations are:
