@@ -16,10 +16,10 @@ plugins:
   - redirects:
       redirect_maps:
         #7/31/2023 migrations move:
-       'query/old-query-engines/index.md': 'https://dune.com/docs/migrations'
-       'query/old-query-engines/migration-tool.md': 'https://dune.com/docs/migrations/migration-tool'
-       'query/old-query-engines/sparksql.md': 'https://dune.com/docs/migrations/sparksql'
-       'query/old-query-engines/postgresql.md': 'https://dune.com/docs/migrations/postgresql'
+       'query/Old-Query-Engines/index.md': 'https://dune.com/docs/migrations'
+       'query/Old-Query-Engines/migration-tool.md': 'https://dune.com/docs/migrations/migration-tool'
+       'query/Old-Query-Engines/sparksql.md': 'https://dune.com/docs/migrations/sparksql'
+       'query/Old-Query-Engines/postgresql.md': 'https://dune.com/docs/migrations/postgresql'
         #4/20/2023 rework:
        'api/quick-start/api-ready-queries.md': 'http://dune.com/docs/api/quick-start/'
         #4/10/2023 data tables rework:
