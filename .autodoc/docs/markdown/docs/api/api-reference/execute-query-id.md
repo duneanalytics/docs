@@ -1,4 +1,4 @@
-[View code on GitHub](https://dune.com/docs/api/api-reference/execute-query-id.md)
+[View code on GitHub](https://dune.com/docs/api/api-reference/execute-queries/execute-query-id.md)
 
 # Explanation of the Dune Docs App Technical Guide
 

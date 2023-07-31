@@ -4,14 +4,14 @@ description: Dune is sunsetting PostgreSQL. Support for PostgreSQL will be remov
 ---
 
 !!! warning "Sunsetting PostgreSQL"
-    Dune is sunsetting PostgreSQL. Support for PostgreSQL will be removed on **15/07/2023**. Please migrate your queries to DuneSQL.
+    Dune is sunsetting PostgreSQL. You can no longer create or edit PostgreSQL queries. All Support for PostgreSQL will be removed on 30/07/2023. Please migrate your queries to DuneSQL.
 
 ## PostgreSQL
 
 Our PostgreSQL database and query engine are the oldest parts of Dune Analytics. PostgreSQL does not scale well and therefore we are deprecating it.  
 Postgres is an entirely different database than our V2 database and therefore the data you can query is different.  
 
-PostgreSQL is still in production and will be supported until **15/07/2023**. After that date, PostgreSQL will be removed from production and all queries need to be migrated to DuneSQL.
+PostgreSQL is still in production and will be supported until **15/08/2023**. After that date, PostgreSQL will be removed from production and all queries need to be migrated to DuneSQL.
 
 You can read more about PostgreSQL in the [PostgreSQL documentation](https://www.postgresql.org/docs/).
 

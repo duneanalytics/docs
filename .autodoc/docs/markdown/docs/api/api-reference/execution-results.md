@@ -1,4 +1,4 @@
-[View code on GitHub](https://dune.com/docs/api/api-reference/execution-results.md)
+[View code on GitHub](https://dune.com/docs/api/api-reference/get-results/execution-results.md)
 
 This technical guide provides information on how to obtain the results data of an execution request in the Dune Docs project. The guide is focused on the Execution Results API feature of the app. The guide provides details on how to make a GET request to the API endpoint to retrieve the status, metadata, and query results from a query execution. 
 

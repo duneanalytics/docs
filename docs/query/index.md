@@ -14,6 +14,10 @@ DuneSQL offers several useful features for working with blockchain data:
 3. **[Columnar storage format](storage.md)** Optimized for fast reads, this format organizes data in columns rather than rows, enabling quick access to single columns for aggregation or filtering.
 4. **[Querying a query](query-a-query.md)**: DuneSQL allows you to query a query, which is great for creating reusable queries, building up complex queries, and reusing queries as views.
 
+!!! warning "Sunsetting Old Query Engines"
+    We are sunsetting our old query engines, SparkSQL and PostgreSQL. Please find all information in the [Old Query Engines](Old-Query-Engines/index.md) section of our documentation.
+
+
 ## Using DuneSQL
 
 DuneSQL is our query engine for blockchain data. It is a fork of TrinoSQL, which is an open-source, distributed SQL query engine for running interactive analytic queries against data sources of all sizes ranging from gigabytes to petabytes.
@@ -29,14 +33,6 @@ We have created extensive documentation for DuneSQL, which you can find in the [
     A reference guide to DuneSQL functions and operators.
   
     [:octicons-arrow-right-24: Functions and operators](DuneSQL-reference/Functions-and-operators/index.md)
-
--   #### SQL statement reference
-
-    ---
-
-    A reference guide to DuneSQL syntax and statements.
-  
-    [:octicons-arrow-right-24: SQL statement reference](DuneSQL-reference/SQL-statement-syntax/index.md)
 
 -   #### Data types
 
@@ -85,7 +81,7 @@ For assistance with DuneSQL, consider the following resources:
 - Talk to your favorite AI assistant about TrinoSQL-related questions
 - [the official Trino docs - Functions and Operators](https://trino.io/docs/current/functions.html)
 
-Join our #dune-sql Discord channel to connect with our team and the community for help and support.
+Join our #dune-sql [Discord channel](https://discord.gg/dunecom) to connect with our team and the community for help and support.
 
 ### Feedback and Suggestions
 
