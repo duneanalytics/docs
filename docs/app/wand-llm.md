@@ -1,5 +1,5 @@
 ---
-title: Wand Features
+title: Wand LLM Features
 description: Wand is a beta suite of tools for writing SQL queries with the help of large language models.
 ---
 
