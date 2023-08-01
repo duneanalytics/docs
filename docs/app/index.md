@@ -56,6 +56,14 @@ description: Learn more about how the dune.com app works in this section!
     
     [:octicons-arrow-right-24: Embeds](embeds.md)
 
+-   #### Wand (Beta)
+
+    ---
+
+    Wand is a beta suite of tools for writing SQL queries with the help of large language models.
+    
+    [:octicons-arrow-right-24: Wand (Beta)](wand-llm.md)
+
 </div>
 
 
