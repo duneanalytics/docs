@@ -3,7 +3,7 @@ title: Scheduling Queries
 description: Learn how to leverage the power of query scheduling for a more reliable and up-to-date dashboard display!
 ---
 
-**Query Scheduling [allows you to schedule a query](query-scheduler.md#why-schedule-a-query) to run at a specific time and frequency.**
+**Query Scheduling allows you to schedule a query to run at a specific time and frequency.**
 
 Queries on Dune usually execute when a user triggers an [automatic or interactive execution](query-scheduler.md#when-does-dune-execute-queries). This means that if you have a dashboard that is not frequently viewed, the data displayed on the dashboard may be outdated and execution of the queries will only be triggered once a user views the dashboard. Especially for dashboards that contain resource-intensive queries, this can lead to long loading times for the viewer.
 
@@ -44,11 +44,7 @@ Before we dive into the details, let's first take a look at when queries are exe
 
 - **Interactive executions** are manually triggered by a user clicking the "Run" button in the query editor page or refreshing an entire dashboard. Interactive executions can be routed via the community, medium, or large cluster, depending on the query engine selected.  
 
-- **Automatic executions** are triggered whenever any user on Dune encounters a widget on a dashboard and the widget's underlying query results are "expired". As of now, query results are set to expire every 6 hours, although this is subject to change. These automatic executions are always routed via the community cluster.
-
 - **Scheduled executions** are triggered at a specific time and frequency. Scheduled executions can be routed via the medium or large cluster, depending on the execution tier selected.
-
-
 
 #### 1. Increase the execution frequency of your queries
 
@@ -60,7 +56,6 @@ All automatic query executions are routed via the community cluster. This can le
 
 If you schedule your queries instead of relying on automatic executions, you can choose a higher execution tier, which will ensure that your queries are executed reliably and in a timely manner.
 
-### Additional Info
-➕ We plan to extend the functionality of query scheduling with webhooks, alerts, and the ability to update materialized views. We are also working on a allowing you to schedule a whole dashboard at once. Stay tuned for updates!
+### Scheduling entire dashboards
 
-💭 Have an idea for additional features for scheduled queries? Please [submit them here](https://feedback.dune.com/)! We value your input and are regularly implementing improvements based on user feedback.
+Instead of scheduling individual queries, you can also schedule entire dashboards. Learn more about scheduling dashboards [here](/app/dashboards.md#keeping-your-dashboard-up-to-date).

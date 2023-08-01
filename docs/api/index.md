@@ -1,21 +1,24 @@
 ---
 title: API
-description: Welcome to the Dune API
+description: Discover how Dune API seamlessly enhances your data integration workflow, turbocharging your efficiency.
 ---
 
-# Welcome to the Dune API
+**The Dune API simplifies your data integration worflow and turbocharges your efficiency!** 
 
-![dune API Cover](images/dune-api-banner.png)
+Dune API is your solution for data infrastructure and workflow management, enabling you to create API endpoints, run queries, and manage them systematically across 12 chains and 700,000+ data tables, thereby unlocking its full potential.
 
-The Dune API gives you full access to the queries and data you can see on the Dune website. This means you can execute and read results from any public query, as well as any personal private queries your Dune account has access to.
+### API Reference
 
-This documentation describes all of the available API calls and properties of the returned objects. If you have any questions or feedback, please reach out to [api-feedback@dune.com](mailto:api-feedback@dune.com) or our #[dune-api](https://discord.com/channels/757637422384283659/1019910980634939433) Discord channel!
+Check out full documentation regarding API features and endpoints [here](api-reference/index.md).
 
 ### Obtaining an API Key
 All plans on our new [credit-based pricing system](https://dune.com/pricing) come bundled with API access.
 You'll have seperate API keys for your [individual accounts](https://dune.com/settings/api) and [team accounts](https://dune.com/settings/teams).
 
 ### API Quickstart Guides
+
+!!!note
+    The quickstart and community SDKs currently only contains endpoints under [Executing Queries](../api-reference/execute-queries) and [Getting Results](../api-reference/get-results). We will be adding info regarding newer endpoints under [Editing Queries](../api-reference/edit-queries) soon.
 
 Get started with our API in a few lines of code using these quick start guides:
 
@@ -44,6 +47,8 @@ Credits = Datapoints/1000 = max(rows*columns, ceil(totalbytes/100))
 ```
 More details can be found on our [FAQ page](https://dune.com/docs/api/faq/#faq-billing-pricing).
 
-### All API Endpoints
+### Additional Info
 
-Check out full explanations and documentation of endpoints in the [api endpoint reference](api-reference/index.md).
+💭 If you have any questions or feedback, please reach out to our #[dune-api](https://discord.com/channels/757637422384283659/1019910980634939433) Discord channel or [api-feedback@dune.com](mailto:api-feedback@dune.com)!
+
+💡 Have an idea for additional Dune API features? Please [submit them here](https://feedback.dune.com/)! We value your input and are regularly implementing improvements based on user feedback.

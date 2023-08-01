@@ -7,9 +7,7 @@ description: The Dune Migration tool will help you migrate your queries from Spa
 
 Migrating your queries from SparkSQL and PostgreSQL to DuneSQL can be a tedious task. The Dune Migration tool will help you migrate your queries from SparkSQL and PostgreSQL to DuneSQL. 
 
-We are still working on integrating GPT4 into the tool, so it is not yet able to migrate a majority queries. However, it will still save you a lot of time.
-
-The tool is open source and available in this [github repo](https://github.com/duneanalytics/harmonizer/). Contributions are very welcome!
+The tool is open source and available in this [github repo](https://github.com/duneanalytics/harmonizer/). Contributions are very welcome! **If you run into issues, please let us know by [creating an issue](https://github.com/duneanalytics/harmonizer/issues).**
 
 ## How to use the tool
 

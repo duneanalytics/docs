@@ -1,5 +1,5 @@
 ---
-title: Creating Embeds
+title: Share your work
 description: Embeds allow you to enjoy beautiful, updating Dune charts across the web!
 ---
 

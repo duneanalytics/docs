@@ -5,7 +5,7 @@ description: Dune is sunsetting SparkSQL. Support for SparkSQL will be removed o
 
 !!! warning "Warning"
 
-    Dune is sunsetting SparkSQL. Support for SparkSQL will be removed on **15/07/2023**. Please migrate your queries to DuneSQL.
+    Dune is sunsetting SparkSQL. Support for SparkSQL will be removed on **30/07/2023**. Please migrate your queries to DuneSQL.
 
 ## SparkSQL
 
@@ -13,7 +13,7 @@ SparkSQL is a query engine that is based on Apache Spark.
 This Query engine already runs on our V2 database, so the data you can query is the same as with DuneSQL.  
 Unfortunately SparkSQL is not a good fit for our use case and therefore we are deprecating it.
 
-SparkSQL is still in production and will be supported until **15/07/2023**. After that date, SparkSQL will be removed from production and all queries need to be migrated to DuneSQL.
+SparkSQL is still in production and will be supported until **30/07/2023**. After that date, SparkSQL will be removed from production and all queries need to be migrated to DuneSQL.
 
 You can read more about SparkSQL in the [SparkSQL documentation](https://spark.apache.org/docs/latest/sql-ref.html).
 
