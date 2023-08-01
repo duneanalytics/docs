@@ -87,10 +87,10 @@ all rows where `x` is null are excluded from the calculation. If
 `default_value` is returned, or if it is not specified, `null` is
 returned.
 
-#### f_value()
-**f_value(x)** → [same as input]
+#### first_value()
+**first_value(x)** → [same as input]
 
-Returns the f value of the window.
+Returns the first value of the window.
 
 #### last_value()
 **last_value(x)** → [same as input]
