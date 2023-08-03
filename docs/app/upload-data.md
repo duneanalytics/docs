@@ -23,10 +23,10 @@ WHERE table_schema = 'dune_upload'
 AND table_name = 'energy_data';
 ```
 
-Anything that represents a timestamp is especially tricky for automated systems to detect, if something is not working as intended, try coverting the timestamp to ISO time before uploading and use the applicable TrinoSQL function to convert it back.
+Anything that represents a timestamp is especially tricky for automated systems to detect, if something is not working as intended, try coverting the timestamp to ISO time before uploading and use the applicable DuneSQL function to convert it back.
 
 
-**All Data uploaded via this API is public and can be accessed by anyone.**
+**All Data uploaded is public and can be accessed by anyone.**
 
 ## How to Upload Data
 
