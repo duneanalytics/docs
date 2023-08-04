@@ -10,6 +10,7 @@ Using ``SHOW FUNCTIONS`` in the query editor returns a list of all available fun
 
 ### DuneSQL Added Functions:
 - [Binary (DuneSQL)](varbinary.md)
+- [Chain Utility Functions](chain-utility-functions.md)
 
 ### Trino Base Functions:
 - [Aggregate](aggregate.md)  
