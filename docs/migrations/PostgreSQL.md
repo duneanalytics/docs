@@ -45,5 +45,26 @@ Migrating queries from PostgreSQL to DuneSQL is a bit more difficult. The two qu
 | **Casting as Strings**                                                                | `cast([xxx] as string)`                                                                                      | `cast([xxx] as varchar)`                                                                                                                                                                                                                                                                                    |
 | **`left()` is no longer a method available for returning substrings**                 | `left([string],[length])`                                                                                    | `substr([string], [start], [length])`    [Returns varchar; Positions start with 1, so use `1` for length if you want to replicate left() functionality](https://trino.io/docs/current/functions/string.html?highlight=substr#substring) `left(somestring, somenumber) -> substr(somestring, 0, somenumber)` |
 | **Aggregate Functions**                                                               | `array_agg(col)`, `array_agg(distinct(col))`                                                                 | `array_agg(col)`, `array_agg(distinct(col))`                                                                                                                                                                                                                                                                |
-| **user generated views**                                                              | create view dune_user_generated.table                                                                        | each query is a view, like [query_1747157](https://dune.com/queries/1747157)                                                                                                                                                                                                                                |
-| **event logs topic indexing**                                                         | topic 1,2,3,4                                                                                                | topic 0,1,2,3                                                                                                                                                                                                                                                                                               |
+| **user generated views**                                                              | create view dune_user_generated.table                                                                        | each query is a view, like [query_1747157](https://dune.com/queries 1747157)          |
+| **event logs topic indexing**                                                         | topic 1,2,3,4                                                                                                | topic 0,1,2,3                                                                          |
+
+
+
+#### Migrating User Generated Views
+
+In PostgresSQL you had the ability to create views. This functionality is not available in DuneSQL.   
+Instead, each query can act as a view. You can learn about how to use the "query a query" feature in the [query a query section](../query/query-a-query.md).   
+
+To migrate a user generated view, you need to create a new query and copy the SQL from the user generated view into the new query. You can then use the "query a query" feature to query the new query.
+
+You can view the definiiton of a user generated view by querying for it on DuneSQL:
+
+```sql
+select 
+    table_name, 
+    view_definition 
+from dunecat.v1_user_generated_views
+where table_name = 'view_name'
+```
+
+[→ Query link](https://dune.com/queries/2516791)
