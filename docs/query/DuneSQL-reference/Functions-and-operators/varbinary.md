@@ -17,7 +17,13 @@ To make it simpler to work with byte arrays we have the following helper functio
 
 Concatenates two byte arrays or strings.
 
-**`bytearry_concat(varchar, varchar)`** → varchar
+Example:
+```sql
+SELECT bytearray_concat(0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2,
+                        0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48)
+```
+
+**`bytearray_concat(varchar, varchar)`** → varchar
 
 Concatenates two byte arrays or strings.
 
@@ -27,7 +33,13 @@ Concatenates two byte arrays or strings.
 
 Returns the length of a byte array.
 
-**``bytearray_length(varchar)``** → varchar
+Example:
+```sql
+ -- this will return 20
+SELECT bytearray_length(0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2)
+```
+
+**``bytearray_length(varchar)``** → bigint
 
 Returns the length of a string.
 
@@ -36,6 +48,13 @@ Returns the length of a string.
 **``bytearray_ltrim(varbinary)``** → varbinary
 
 Removes zero bytes or spaces from the beginning of a byte array
+
+Example:
+```sql
+ -- this will remove the zeros at the front,
+ -- returning 0xa2b80f9c09558945800ddf4f8786dcc8b1c44974
+SELECT bytearray_ltrim(0x000000000000000000000000a2b80f9c09558945800ddf4f8786dcc8b1c44974)
+```
 
 **``bytearray_ltrim(varchar)``** → varchar
 
@@ -47,6 +66,18 @@ Removes spaces from the beginning of a string.
 
 Returns the index of the first occurrence of a given bytearray or string (or 0 if not found) within a byte array or string.
 
+Example:
+```sql
+
+-- get $ARKM claimers 
+SELECT * FROM ethereum.transactions
+WHERE block_time >= TIMESTAMP '2023-07-17' -- claim start date
+AND bytearray_position(data,0x3d13f874) = 1 -- 0x3d13f874 is the methodID
+AND success
+LIMIT 100
+
+```
+
 **``bytearray_position(varchar, varchar)``** → bigint
 
 Returns the index of the first occurrence of a given bytearray or string (or 0 if not found) within a byte array or string.
@@ -56,6 +87,16 @@ Returns the index of the first occurrence of a given bytearray or string (or 0 i
 **``bytearray_replace(varbinary, varbinary, varbinary)``** → varbinary
 
 Greedily replaces occurrences of a pattern within a byte array.
+
+Example:
+```sql
+
+-- replacing the blackhole address (ETH)
+-- to WETH address
+SELECT bytearray_replace(0x0000000000000000000000000000000000000000,
+                         0x0000000000000000000000000000000000000000,
+                         0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2)  
+```
 
 **``bytearray_replace(varchar, varchar, varchar)``** → varchar
 
@@ -67,6 +108,12 @@ Greedily replaces occurrences of a pattern within a string.
 
 Reverses a given byte array.
 
+Example:
+```sql
+
+SELECT bytearray_reverse(0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2)
+```
+
 **``bytearray_reverse(varchar)``** → varchar
 
 Reverses a given string.
@@ -77,11 +124,32 @@ Reverses a given string.
 
 Removes zero bytes or spaces from the end of a byte array or string.
 
+Example:
+```sql
+ -- this will remove the zeros at the end,
+ -- returning 0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
+SELECT bytearray_ltrim(0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc20000000000000000000000000000000000000000)
+```
+
 #### bytearray_starts_with()
 
 **``bytearray_starts_with(varbinary, varbinary)``** → boolean
 
 Determines whether a byte array starts with a prefix.
+
+Example:
+```sql
+
+-- get $ARKM claimers 
+-- bytearray_starts_with checks whether 
+-- data starts with 0x3d13f874 (claim)
+SELECT * FROM ethereum.transactions
+WHERE block_time >= TIMESTAMP '2023-07-17'
+AND bytearray_starts_with(data,0x3d13f874) -- returns true if starts with 0x3d13f874
+AND success
+LIMIT 100
+
+```
 
 **``bytearray_starts_with(varchar, varchar)``** → boolean
 
@@ -93,6 +161,14 @@ Determines whether a string starts with a prefix.
 
 Returns a suffix byte array or string starting at a given index.
 
+Example:
+```sql
+-- using bytearray_substring starting from the 21th index
+-- this returns 0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2 
+SELECT 0x0000000000000000000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2 as original_bytearray,
+       bytearray_substring(0x0000000000000000000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2,21) as bytearraysubstring_data
+```
+
 **``bytearray_substring(varchar, integer)``** → varchar
 
 Returns a suffix string starting at a given index.
@@ -100,6 +176,21 @@ Returns a suffix string starting at a given index.
 **``bytearray_substring(varbinary, integer, integer)``** → varbinary
 
 Returns a sub byte array or string of a given length starting at an index.
+
+Example:
+```sql
+-- getting the sizeDelta using bytearray_substring
+-- and converting to uint256 using bytearray_to_uint256
+SELECT tx_hash,
+       bytearray_substring(data,65,32) as sizeDelta,
+       bytearray_to_uint256(bytearray_substring(data,65,32)) as sizeDelta_uint256
+FROM optimism.logs
+WHERE contract_address = 0xa1ace9ce6862e865937939005b1a6c5ac938a11f
+AND topic0 = 0xc9d5ada2ea384fe04826ecd1b258955ac73c3e2e20d755108eafde90bc5588d4
+-- some sample transaction hash
+AND tx_hash IN (0x3e3c558e7f723e3bb7de1d8f5f920ca206e3e878984296a2b8e6af2969003a19, 
+                0xccfd2033adfb1fdd14fdfc047fe554ba7549e396abc6c559e9528a4259295b89) 
+```
 
 **``bytearray_substring(varchar, integer, integer)``** → varchar
 
@@ -117,11 +208,38 @@ The byte array conversion functions throw an overflow exception if the byte arra
 
 Returns the `INTEGER` value of a big-endian byte array of length <= 4 representing the integer in two's complement. If the byte array has length < 4 it is padded with zero bytes.
 
+Example:
+
+```sql
+-- convert bytearray to integer [result will be either 1 or 0]
+-- if 1 = true, 0 = false
+SELECT tx_hash,
+       bytearray_to_integer(bytearray_ltrim(bytearray_substring(data,1,32))) as isQuote_number,
+       CASE WHEN  bytearray_to_integer(bytearray_ltrim(bytearray_substring(data,1,32))) = 1 THEN TRUE ELSE FALSE END AS isQuote
+FROM arbitrum.logs
+WHERE contract_address = 0xdaf4ffb05bfcb2c328c19135e3e74e1182c88283
+AND topic0 = 0xf1bc206c8d659bf05edd19865dbae82643062168ec3970d9d7c5468f900487d9
+LIMIT 10
+```
+
 #### bytearray_to_bigint()
 
 **``bytearray_to_bigint(varbinary)``** → bigint
 
 Returns the `BIGINT` value of a big-endian byte array of length <= 8 representing the bigint in two's complement. If the byte array has length < 8 it is padded with zero bytes.
+
+Example:
+```sql
+-- convert bytearray to integer [result will be either 1 or 0]
+-- if 1 = true, 0 = false
+SELECT tx_hash,
+       bytearray_to_bigint(bytearray_ltrim(bytearray_substring(data,1,32))) as isQuote_number,
+       CASE WHEN  bytearray_to_bigint(bytearray_ltrim(bytearray_substring(data,1,32))) = 1 THEN TRUE ELSE FALSE END AS isQuote
+FROM arbitrum.logs
+WHERE contract_address = 0xdaf4ffb05bfcb2c328c19135e3e74e1182c88283
+AND topic0 = 0xf1bc206c8d659bf05edd19865dbae82643062168ec3970d9d7c5468f900487d9
+LIMIT 10
+```
 
 #### bytearray_to_decimal()
 
@@ -129,17 +247,61 @@ Returns the `BIGINT` value of a big-endian byte array of length <= 8 representin
 
 Returns the `DECIMAL(38,0)` value of a big-endian byte array of length <= 16 representing the decimal(38,0) in two's complement. If the byte array has length < 16 it is padded with zero bytes.
 
+Example:
+
+```sql
+-- using raw table to get usdc transfers amount
+-- transfer topic0 = 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+-- usdc contract_address = 0xaf88d065e77c8cc2239327c5edb3a432268e5831
+SELECT tx_hash,
+       data,
+       bytearray_to_decimal(bytearray_ltrim(data)) as data_decimal
+FROM arbitrum.logs
+WHERE topic0 = 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+AND contract_address = 0xaf88d065e77c8cc2239327c5edb3a432268e5831
+AND block_time >= NOW() - interval '1' day
+LIMIT 50
+```
+
 #### bytearray_to_uint256()
 
 **``bytearray_to_uint256(varbinary)``** → uint256
 
 Returns the `UINT256` of a big-endian byte array of length <= 32 representing the unsigned integer. If the byte array has length < 32 it is padded with zero bytes.
 
+Example:
+```sql
+select tx_hash,
+       data,
+       bytearray_substring(data,97,32) as fee,
+       bytearray_to_uint256(bytearray_substring(data,97,32)) as fee_uint256
+from optimism.logs
+where contract_address = 0xa1ace9ce6862e865937939005b1a6c5ac938a11f
+and topic0 = 0xc9d5ada2ea384fe04826ecd1b258955ac73c3e2e20d755108eafde90bc5588d4
+-- sample transaction hash
+and tx_hash IN (0x3e3c558e7f723e3bb7de1d8f5f920ca206e3e878984296a2b8e6af2969003a19,
+                0xccfd2033adfb1fdd14fdfc047fe554ba7549e396abc6c559e9528a4259295b89)
+```
+
 #### bytearray_to_int256()
 
 **``bytearray_to_int256(varbinary)``** → int256
 
 Returns the `INT256` of a big-endian byte array of length <= 32 representing the signed integer. If the byte array has length < 32 it is padded with zero bytes.
+
+Example:
+```sql
+select tx_hash,
+       data,
+       bytearray_substring(data,65,32) as sizeDelta,
+       bytearray_to_int256(bytearray_substring(data,65,32)) as sizeDelta_int256
+from optimism.logs
+where contract_address = 0xa1ace9ce6862e865937939005b1a6c5ac938a11f
+and topic0 = 0xc9d5ada2ea384fe04826ecd1b258955ac73c3e2e20d755108eafde90bc5588d4
+-- sample transaction hash
+and tx_hash IN (0x3e3c558e7f723e3bb7de1d8f5f920ca206e3e878984296a2b8e6af2969003a19,
+                0xccfd2033adfb1fdd14fdfc047fe554ba7549e396abc6c559e9528a4259295b89)
+```
 
 #### bytea2numeric()
 
