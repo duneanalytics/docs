@@ -142,7 +142,7 @@ Example:
 
 -- get $ARKM claimers 
 -- bytearray_starts_with checks whether 
--- data starts with 0x3d13f874 (claim)
+-- data starts with 0x3d13f874 (claim methodID)
 SELECT * FROM ethereum.transactions
 WHERE block_time >= TIMESTAMP '2023-07-17'
 AND bytearray_starts_with(data,0x3d13f874) -- returns true if starts with 0x3d13f874
