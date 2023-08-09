@@ -27,6 +27,15 @@ SELECT bytearray_concat(0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2,
 
 Concatenates two byte arrays or strings.
 
+Example:
+```sql
+-- concatenate varchar
+-- using typeof to check the datatype
+SELECT bytearray_concat('0xabcd', '0x00ab') as bytearray_varchar_concat,
+       typeof(bytearray_concat('0xabcd', '0x00ab')) as bytearray_varchar_type
+
+```
+
 #### bytearray_length()
 
 **``bytearray_length(varbinary)``** → bigint
@@ -42,6 +51,13 @@ SELECT bytearray_length(0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2)
 **``bytearray_length(varchar)``** → bigint
 
 Returns the length of a string.
+
+Example:
+```sql
+ -- this will return 20
+SELECT typeof('0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2') as data_type,
+       bytearray_length('0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2') varchar_length
+```
 
 #### bytearray_ltrim()
 
@@ -59,6 +75,14 @@ SELECT bytearray_ltrim(0x000000000000000000000000a2b80f9c09558945800ddf4f8786dcc
 **``bytearray_ltrim(varchar)``** → varchar
 
 Removes spaces from the beginning of a string.
+
+Example:
+```sql
+ -- this will remove the zeros at the front,
+ -- returning 0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
+SELECT typeof('0x0000000000000000000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2') as data_type,
+       bytearray_ltrim('0x0000000000000000000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2') varchar_ltrim
+```
 
 #### bytearray_position()
 
@@ -82,6 +106,15 @@ LIMIT 100
 
 Returns the index of the first occurrence of a given bytearray or string (or 0 if not found) within a byte array or string.
 
+Example:
+```sql
+-- search for 0x6cc2 and replaced with 0xabcd
+-- 0xc02aaa39b223fe8d0a0e5c4f27ead9083c75abcd as output
+SELECT bytearray_replace('0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
+                         '0x6cc2',
+                         '0xabcd')   
+```
+
 #### bytearray_replace()
 
 **``bytearray_replace(varbinary, varbinary, varbinary)``** → varbinary
@@ -102,6 +135,14 @@ SELECT bytearray_replace(0x0000000000000000000000000000000000000000,
 
 Greedily replaces occurrences of a pattern within a string.
 
+Example:
+```sql
+
+SELECT bytearray_replace('0x0000000000000000000000000000000000000000a2b80f9c09558945800ddf4f8786dcc8b1c44974',
+                         '0x0000000000000000000000000000000000000000',
+                         '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2')  
+```
+
 #### bytearray_reverse()
 
 **``bytearray_reverse(varbinary)``** → varbinary
@@ -117,6 +158,14 @@ SELECT bytearray_reverse(0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2)
 **``bytearray_reverse(varchar)``** → varchar
 
 Reverses a given string.
+
+Example:
+```sql
+-- '0xabcdef' as original
+-- '0xefcdab' as reversed
+SELECT '0xabcdef' as original,
+       bytearray_reverse('0xabcdef') as reversed
+```
 
 #### bytearray_rtrim()
 
@@ -155,6 +204,13 @@ LIMIT 100
 
 Determines whether a string starts with a prefix.
 
+Example:
+```sql
+-- returns true if starts with 0x3d13f874
+SELECT bytearray_starts_with(0x3d13f874abcd,0x3d13f874) 
+
+```
+
 #### bytearray_substring()
 
 **``bytearray_substring(varbinary, integer)``** → varbinary
@@ -172,8 +228,6 @@ SELECT 0x0000000000000000000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead90
 **``bytearray_substring(varchar, integer)``** → varchar
 
 Returns a suffix string starting at a given index.
-
-**``bytearray_substring(varbinary, integer, integer)``** → varbinary
 
 Returns a sub byte array or string of a given length starting at an index.
 
@@ -195,6 +249,22 @@ AND tx_hash IN (0x3e3c558e7f723e3bb7de1d8f5f920ca206e3e878984296a2b8e6af2969003a
 **``bytearray_substring(varchar, integer, integer)``** → varchar
 
 Returns a sub string of a given length starting at an index.
+
+Example:
+```sql
+-- returns 	'0xabcd'
+SELECT '0xabcdefabcdef' as varchar_data,
+       bytearray_substring('0xabcdefabcdef',1,3) as varchar_substring
+```
+
+**``bytearray_substring(varbinary, integer, integer)``** → varbinary
+
+Example:
+```sql
+-- returns  0xabcd
+SELECT 0xabcdefabcdef as varbinary_data,
+       bytearray_substring(0xabcdefabcdef,1,3) as varbinary_substring
+```
 
 ## Byte Array to Numeric Functions
 
