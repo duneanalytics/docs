@@ -15,7 +15,7 @@ DuneSQL offers several useful features for working with blockchain data:
 4. **[Querying a query](query-a-query.md)**: DuneSQL allows you to query a query, which is great for creating reusable queries, building up complex queries, and reusing queries as views.
 
 !!! warning "Sunsetting Old Query Engines"
-    We are sunsetting our old query engines, SparkSQL and PostgreSQL. Please find all information in the [Old Query Engines](Old-Query-Engines/index.md) section of our documentation.
+    We are sunsetting our old query engines, SparkSQL and PostgreSQL. Please find all information in the [Migrating to DuneSQL](../migrations/index.md) section of our documentation.
 
 
 ## Using DuneSQL

@@ -1,38 +1,98 @@
 # Chain Utility Functions
 
-Dune SQL offers a series of functions designed for interacting with all the chains available on Dune.
+Dune SQL offers a series of functions designed to ease some common tasks when working with blockchain data.
 
-#### get_chain_explorer(varchar)
-**``get_chain_explorer(varchar)``** → varchar
+These functions are helpful to generate links to the explorer of a chain, to specific addresses, or to specific transactions.
+Most of the time you'll want to use ``get_href()`` in combination with one of the other functions to generate a clickable link to a specific address or transaction.
+ 
+```sql
+Select
+    get_href(get_chain_explorer_address('ethereum', to), cast(to as varchar))
+FROM ethereum.transactions
+limit 100
+```
 
-This function returns the URL of the explorer for a specified chain (provided as a varchar).
+This sql code will generate a clickable link pointing to the explorer of the Ethereum chain for each address in the ``to`` column. The displayed link will be the address itself.
 
-#### all_evm_chains()
-**``all_evm_chains()``** → array(varchar)
+These functions are defined in Spellbook as dbt macros. You can find the source code [here](https://github.com/duneanalytics/spellbook/tree/main/macros/public). Contributions are welcome!
 
-This function returns an array listing all the EVM chains available on Dune.
 
-#### get_href(varchar, varchar)
+You can find all the functions in action on this dashboard: [Chain Utility Functions](https://dune.com/bln/chain-utility-functions)
+
+#### get_href()
 **``get_href(varchar, varchar)``** → varchar
 
-This function converts a link and associated text into a clickable hyperlink.
+This function converts a link and associated text into a clickable hyperlink. The first argument is the link, and the second argument is the text to be displayed.
 
-#### get_chain_explorer_address(varchar, varchar)
+```sql
+SELECT 
+    get_href('https://dune.com', 'Dune')
+```
+
+#### get_chain_explorer_address()
 **``get_chain_explorer_address(varchar, varchar)``** → varchar
 
 This function generates a URL for the explorer of a specified chain (provided as a varchar) for a given address (also provided as a varchar).
 
-#### get_chain_explorer_address(varchar, varbinary)
+```sql
+SELECT 
+    get_chain_explorer_address('ethereum', cast(to as varchar)) 
+FROM ethereum.transactions 
+limit 100
+```
+
+#### get_chain_explorer_address()
 **``get_chain_explorer_address(varchar, varbinary)``** → varchar
 
 This function generates a URL for the explorer of a specified chain (provided as a varchar) for a given address (provided as a varbinary).
 
-#### get_chain_explorer_tx_hash(varchar, varchar)
+```sql
+SELECT 
+    get_chain_explorer_address('ethereum', to) 
+FROM ethereum.transactions 
+limit 100
+```
+
+#### get_chain_explorer_tx_hash()
 **``get_chain_explorer_tx_hash(varchar, varchar)``** → varchar
 
 This function generates a URL for the explorer of a specified chain (provided as a varchar) for a given transaction hash (also provided as a varchar).
 
-#### get_chain_explorer_tx_hash(varchar, varbinary)
+```sql
+SELECT 
+    get_chain_explorer_tx_hash('ethereum', cast(hash as varchar)) 
+FROM ethereum.transactions 
+limit 100
+```
+
+#### get_chain_explorer_tx_hash()
 **``get_chain_explorer_tx_hash(varchar, varbinary)``** → varchar
 
 This function generates a URL for the explorer of a specified chain (provided as a varchar) for a given transaction hash (provided as a varbinary).
+
+```sql
+SELECT 
+    get_chain_explorer_tx_hash('ethereum', hash) 
+FROM ethereum.transactions 
+limit 100
+```
+
+#### get_chain_explorer()
+**``get_chain_explorer(varchar)``** → varchar
+
+This function returns the URL of the explorer for a specified chain (provided as a varchar).
+
+```sql
+SELECT 
+    get_chain_explorer('ethereum')
+```
+
+#### all_evm_chains()
+**``all_evm_chains()``** → array(varchar)
+
+```sql
+SELECT 
+    all_evm_chains()
+```
+
+This function returns an array listing all the EVM chains available on Dune.
