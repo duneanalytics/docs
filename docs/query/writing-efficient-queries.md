@@ -62,4 +62,10 @@ In addition to leveraging the columnar storage format and using sequentially ord
 
 8. **Optimize data types**: Use appropriate data types for your columns, as it can improve query performance by reducing the amount of data processed. For example, varbinary operations are faster that varchar so be careful casting around too much.
 
+9. **Make sure to join the smaller table to the larger table**: This saves on memory use and will make your queries run faster. So you should be joining erc20 transfers onto ethereum transactions (as an example). 
+
 By following these tips, you can write more efficient queries on DuneSQL with TrinoSQL and optimize the performance of your data processing tasks. Remember that DuneSQL's unique structure, such as the parquet file format and columnar storage, should be taken into account when optimizing your queries to fully benefit from the system's capabilities.
+
+!!! example  "Query still not running? Try materialized views (alpha)"
+
+    If your query still runs out of memory or time, try taking subquerys of it into materialized views.

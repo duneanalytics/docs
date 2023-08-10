@@ -3,4 +3,5 @@ nav:
 - query-executions.md
 - DuneSQL: DuneSQL-reference
 - Writing efficient Queries: writing-efficient-queries.md
-- Querying a query: query-a-query.md
+- Query Views: query-a-query.md
+- Materialized Views: materialized-views.md
