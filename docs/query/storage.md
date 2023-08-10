@@ -3,11 +3,6 @@ title: Storage
 description: Learn more about the differences and thinking behind our V2 database structure.
 ---
 
-<!--!!!note 
-    This section should probably be rewritten into "how to write efficient queries" or something like that.
-    The data layout is relevant in this context, but the focus should be on how to write efficient queries.
--->
-
 On a very high level, databases read data from storage into memory in order to allow that data to be operated on, in our case to transform and return blockchain data according to your Dune query’s logic. 
 
 Read speed, the time it takes to load data from storage to memory, is an essential constraint of databases. In computer science this is referred to as [I/O bound](https://en.wikipedia.org/wiki/I/O_bound), and it’s one of the main challenges we are looking to tackle with our transition to a data lake in Dune V2 and separating storage and compute.

@@ -15,11 +15,11 @@ Whenever you are ready to migrate your queries, the tool will be available to yo
 
 Whenever you open a query running on SparkSQL or PostgreSQL, you will see a banner at the bottom of the query editor. Simply click on "Migrate to DuneSQL" and the tool will automatically convert your query to DuneSQL.
 
-![Migration banner](../images/migration-banner.jpeg)
+![Migration banner](../query/images/migration-banner.jpeg)
 
 You can also always access the tool by opening the settings menu in the query editor and clicking on "Migrate to DuneSQL".
 
-![Migration options](../images/migration-option.jpeg)
+![Migration options](../query/images/migration-option.jpeg)
 
 ## Limitations
 
