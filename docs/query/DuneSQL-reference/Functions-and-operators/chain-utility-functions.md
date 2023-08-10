@@ -3,9 +3,8 @@
 Dune SQL offers a series of functions designed to ease some common tasks when working with blockchain data.
 
 These functions are helpful to generate links to the explorer of a chain, to specific addresses, or to specific transactions.
-Most of the time you'll want to use ``get_href()`` to generate a clickable link to a specific address or transaction.
-
-e.g. 
+Most of the time you'll want to use ``get_href()`` in combination with one of the other functions to generate a clickable link to a specific address or transaction.
+ 
 ```sql
 Select
     get_href(get_chain_explorer_address('ethereum', to), cast(to as varchar))
@@ -16,6 +15,9 @@ limit 100
 This sql code will generate a clickable link pointing to the explorer of the Ethereum chain for each address in the ``to`` column. The displayed link will be the address itself.
 
 These functions are defined in Spellbook as dbt macros. You can find the source code [here](https://github.com/duneanalytics/spellbook/tree/main/macros/public). Contributions are welcome!
+
+
+You can find all the functions in action on this dashboard: [Chain Utility Functions](https://dune.com/bln/chain-utility-functions)
 
 #### get_href()
 **``get_href(varchar, varchar)``** → varchar
