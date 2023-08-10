@@ -53,6 +53,7 @@ Eventually, you’ll be able to query by the materialized view name specified du
 
 ## Missing functionality
 We still have several more things to work on. Things we know that aren’t working include:
+
 1. Deleting a materialized view (although you can turn off the schedule for now)
 2. Hiding/showing a materialized view in the right context based on the context switcher might not work perfectly.
 3. Currently there is no way to force refresh a materialized view outside the normally set schedule (we are looking to add this later).
