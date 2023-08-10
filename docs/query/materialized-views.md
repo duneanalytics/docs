@@ -17,10 +17,10 @@ You have full control over this view, you can think of it as a simplified Spellb
 
 Here are some examples: 
 
-| Description | Original | Example Materialized View |
+| Description | Materialized View Source | Materialized View Name (Use In Other Query) |
 |---|---|---|
-| Query which bumps into cluster capacity issue | https://dune.com/queries/2698624/4490178 | https://dune.com/queries/2744461 |
-| A large view used within the above query (to be materialized) | https://dune.com/queries/268877 | https://dune.com/queries/2744412
+| Query which bumps into cluster capacity issue | [source query](https://dune.com/queries/2698624/4490178) | [dune.dune.result_2744412](https://dune.com/queries/2744461) |
+| A large view used within the above query (to be materialized) | [source query](https://dune.com/queries/268877) | [???](https://dune.com/queries/2744412)
 
 ## To create a materialized view
 Write a new query or go to an existing query. (We suggest creating via team context on a plan with sufficient credits.)
