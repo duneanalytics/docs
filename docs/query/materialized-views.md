@@ -11,6 +11,7 @@ description: The "Materialized View" feature in DuneSQL allows you to schedule a
 The "Materialized View" feature in DuneSQL allows you to use an existing query as a view in another query. This powerful functionality enables you to break down bigger queries so that the complex/high compute logic only has to run a few times a day, and the queries you build on top run much faster.
 
 You have full control over this view, you can think of it as a simplified Spellbook table. You should think of using this feature any time you run into:
+
 1. Query timeouts (running longer than 30 mintes)
 2. Stage limits (exceeding stage limits in the planning stage, normally happens when you join too many tables)
 3. Memory limits (exceeding the memory limits, normally happens when you use too many large tables like `solana.transactions` or `ethereum.traces`)
@@ -23,7 +24,8 @@ Here are some examples:
 | A large view used within the above query (to be materialized) | [source query](https://dune.com/queries/268877) | [???](https://dune.com/queries/2744412)
 
 ## To create a materialized view
-Write a new query or go to an existing query. (We suggest creating via team context on a plan with sufficient credits.)
+Write a new query or go to an existing query. (We suggest creating via team context on a plan with sufficient credits)
+
 1. Make sure all columns are explicitly named
 2. Save the query
 3. After saving a “materialize” button will appear below the run button.
@@ -32,15 +34,16 @@ Write a new query or go to an existing query. (We suggest creating via team cont
 (add arcade example walkthrough later)
 
 Some key things to keep in mind: 
+
 1. A query result has a 200MB limit in the editor but a materialized view doesn’t have storage limits. Even though the results will look truncated in the editor.
 2. This materialized view refresh schedule is DIFFERENT from the query scheduler. Results from running the query or the normal query scheduler will NOT update the materialized view. 
 3. Plans have total monthly storage limits (for premium plans, it’s 50GB, plus it’s 15GB, free is 10MB). These limits will soon be implemented, so keep that in mind.
 
 ## To query a materialized view
 
-Wait X minutes after initiating for materialized view to finish creation. (Should be roughly similar to time the query normally takes to execute.)
+Wait for materialized view to finish creation first. It should be roughly similar to time the query normally takes to execute - maybe a bit longer due to time it takes to write the new table.
 
-Query a materialized view via `dune.<username>.result_<queryId>` (displayed in modal)
+Query the materialized view via `dune.<username>.result_<queryId>` (displayed in modal)
 If your username starts with a number, you’ll need to wrap the <username> in quotes i.e. `dune.”123co”.result567`
 
 Eventually, you’ll be able to query by the materialized view name specified during the materialized view creation flow but that doesn’t work yet.
