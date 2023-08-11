@@ -8,4 +8,5 @@ nav:
 - Query: query
 - Spellbook: spellbook
 - API: api
+- plan_billing_and_payment.md
 - resources
