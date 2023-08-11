@@ -18,6 +18,12 @@ and retrieval they may be cast to/from `VARBINARY`.
 
 Merges all input `qdigest`s into a single `qdigest`.
 
+#### quantile_at_value()
+
+**``quantile_at_value(qdigest(T), T)``** → quantile
+
+Returns the approximate ``quantile`` number between 0 and 1 from the quantile digest given an input value. Null is returned if the quantile digest is empty or the input value is outside of the range of the quantile digest.
+
 #### values_at_quantile()
 **``value_at_quantile(qdigest(T), quantile)``** → T
 
