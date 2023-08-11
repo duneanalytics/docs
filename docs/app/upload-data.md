@@ -35,7 +35,7 @@ Anything that represents a timestamp is especially tricky for automated systems 
 
 
 
-<div style="position: relative; padding-bottom: calc(57.550713749060854% + 41px); height: 0; width: 100%"><iframe src="https://demo.arcade.software/cDBbbBOiYa42Otpv5j5L?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;" title="Upload data"></iframe></div>
+<div style="position: relative; padding-bottom: calc(54.153605015673975% + 41px); height: 0; width: 100%"><iframe src="https://demo.arcade.software/NfLaWWM1kimE2T7oQd6O?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;" title="Dashboards"></iframe></div>
 
 1. Click on the "Upload Data" button in the menu of the Dune UI.
 2. Select the csv file you want to upload.
