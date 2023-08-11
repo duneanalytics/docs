@@ -43,7 +43,7 @@ expression above:
 
     SELECT 2 BETWEEN NULL AND 6; -- null
 
-    SELECT 2 BETWEEN 1 AND NULL; -- false
+    SELECT 2 BETWEEN 3 AND NULL; -- false
 
     SELECT 8 BETWEEN NULL AND 6; -- false
 ```

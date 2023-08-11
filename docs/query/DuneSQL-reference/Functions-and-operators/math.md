@@ -170,6 +170,10 @@ Returns the sine of `x`.
 **``tan(x)``** → double  
 Returns the tangent of `x`.
 
+#### sinh()
+**``sinh(x)``** → double
+Returns the hyperbolic sine of `x`.
+
 #### tanh()
 **``tanh(x)``** → double  
 Returns the hyperbolic tangent of `x`.

@@ -131,15 +131,30 @@ day of year combined:
 #### at_timezone()
 **``at_timezone(timestamp, zone)``** → timestamp(p) with time zone
 
-Change the time zone component of `timestamp` with precision `p` to
-`zone` while preserving the instant in time.
+Returns the timestamp specified in timestamp with the time zone converted from the session time zone to the time zone specified in zone with precision p. In the following example, the session time zone is set to America/New_York, which is three hours ahead of America/Los_Angeles:
 
+```sql
+SELECT current_timezone()
+-- America/New_York
+```
+
+```sql
+SELECT at_timezone(TIMESTAMP '2022-11-01 09:08:07.321', 'America/Los_Angeles')
+-- 2022-11-01 06:08:07.321 America/Los_Angeles
+```
 
 #### with_timezone()
 **``with_timezone(timestamp, zone)``** → timestamp(p) with time zone
 
-Returns a timestamp with time zone from `timestamp` with precision `p`
-and `zone`.
+Returns the timestamp specified in ``timestamp`` with the time zone specified in ``zone`` with precision ``p``.
+
+```sql
+SELECT current_timezone()
+-- America/New_York
+
+SELECT with_timezone(TIMESTAMP '2022-11-01 09:08:07.321', 'America/Los_Angeles')
+-- 2022-11-01 09:08:07.321 America/Los_Angeles
+```
 
 #### from_unixtime()
 **``from_unixtime(unixtime)``** → timestamp(3) with time zone
