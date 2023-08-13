@@ -3,7 +3,7 @@ title: How to Write Efficient Queries on DuneSQL
 description: Get the most out of DuneSQL by writing efficient queries.
 ---
 
-**Writing efficient queries is essential for getting the most out of DuneSQL. This guide will help you understand how to write efficient queries on DuneSQL.**
+**Writing efficient queries is essential for getting the most out of Dune. This guide will help you understand how to write efficient queries on DuneSQL.**
 
 ## DuneSQL architecture
 
