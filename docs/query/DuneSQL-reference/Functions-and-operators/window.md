@@ -16,8 +16,7 @@ orders for each clerk by price:
     FROM orders
     ORDER BY clerk, rnk
 ```
-The window can be specified in two ways (see
-`window_clause`):
+The window can be specified in two ways (see `window_clause`):
 
 -   By a reference to a named window specification defined in the
     `WINDOW` clause,
@@ -43,7 +42,7 @@ by day for each clerk:
 ## Ranking functions
 
 #### cume_dist()
-**cume_dist()** → bigint
+**``cume_dist()``** → bigint
 
 Returns the cumulative distribution of a value in a group of values. The
 result is the number of rows preceding or peer with the row in the
@@ -52,12 +51,12 @@ rows in the window partition. Thus, any tie values in the ordering will
 evaluate to the same distribution value.
 
 #### dense_rank()
-**````dense_rank()````** → bigint
+**``dense_rank()``** → bigint
 
 Returns the rank of a value in a group of values. This is similar to `rank`, except that tie values do not produce gaps in the sequence.
 
 #### ntile()
-**````ntile(n)````** → bigint
+**``ntile(n)``** → bigint
 
 
 
@@ -66,17 +65,17 @@ Divides the rows for each window partition into `n` buckets ranging from `1` to 
 For example, with `6` rows and `4` buckets, the bucket values would be as follows: `1` `1` `2` `2` `3` `4`
 
 #### percent_rank()
-**````percent_rank()````** → double
+**``percent_rank()``** → double
 
 Returns the percentage ranking of a value in group of values. The result is `(r - 1) / (n - 1)` where `r` is the `rank` of the row and `n` is the total number of rows in the window partition.
 
 #### rank()
-**````rank()````** → bigint
+**``rank()``** → bigint
 
 Returns the rank of a value in a group of values. The rank is one plus the number of rows preceding the row that are not peer with the row. Thus, tie values in the ordering will produce gaps in the sequence. The ranking is performed for each window partition.
 
 #### row_number()
-**````row_number()````** → bigint
+**``row_number()``** → bigint
 
 Returns a unique, sequential number for each row, starting with one, according to the ordering of rows within the window partition.
 
@@ -90,29 +89,26 @@ all rows where `x` is null are excluded from the calculation. If
 returned.
 
 #### f_value()
-**````f_value(x)````** → [same as input]
+**``f_value(x)``** → [same as input]
 
 Returns the f value of the window.
 
 #### last_value()
-**````last_value(x)````** → [same as input]
+**``last_value(x)``** → [same as input]
 
 Returns the last value of the window.
 
 #### nth_value()
-**````nth_value(x, offset)````** → [same as input]
+**``nth_value(x, offset)``** → [same as input]
 
 Returns the value at the specified offset from the beginning of the window. Offsets start at `1`. The offset can be any scalar expression. If the offset is null or greater than the number of values in the window, `null` is returned. It is an error for the offset to be zero or negative.
 
 #### lead()
 **``lead(x, offset , default_value)``** → [same as input]
-**``lead(x, offset , default_value)``** → [same as input]
-**lead(x, offset , default_value)** → [same as input]
 
 Returns the value at `offset` rows after the current row in the window partition. Offsets start at `0`, which is the current row. The offset can be any scalar expression. The default `offset` is `1`. If the offset is null, `null` is returned. If the offset refers to a row that is not within the partition, the `default_value` is returned, or if it is not specified `null` is returned. The `lead` function requires that the window ordering be specified. Window frame must not be specified.
 
 #### lag()
-**lag(x, offset , default_value)** → [same as input]
 **``lag(x, offset , default_value)``** → [same as input]
 
 Returns the value at `offset` rows before the current row in the window partition. Offsets start at `0`, which is the current row. The offset can be any scalar expression. The default `offset` is `1`. If the offset is null, `null` is returned. If the offset refers to a row that is not within the partition, the `default_value` is returned, or if it is not specified `null` is returned. The `lag` function requires that the window ordering be specified. Window frame must not be specified.
