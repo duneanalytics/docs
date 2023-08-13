@@ -15,7 +15,7 @@ description: Learn more about how to make visualizations here!
 
     Create Charts & Graphs to visualize your data.  
     
-    [:octicons-arrow-right-24: Charts & Graphs](charts-graphs.md)
+    [→ Charts & Graphs](charts-graphs.md)
 
 -   #### Tables
 
@@ -23,7 +23,7 @@ description: Learn more about how to make visualizations here!
 
     Learn how to change the appearance of your tables. 
     
-    [:octicons-arrow-right-24: Tables](tables.md)
+    [→ Tables](tables.md)
 
 -   #### Counters
 
@@ -31,6 +31,6 @@ description: Learn more about how to make visualizations here!
 
     Show off specific data points with counters. 
     
-    [:octicons-arrow-right-24: Counters](counters.md)
+    [→ Counters](counters.md)
 </div>
 

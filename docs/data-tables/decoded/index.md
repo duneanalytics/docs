@@ -23,7 +23,7 @@ There are two types of EVM decoded tables, one that decodes functions and one th
 
     These are decoded from traces, which contain every function call within a transaction (i.e. between contracts).
   
-    [:octicons-arrow-right-24: Call Tables](evm/call-tables.md)
+    [→ Call Tables](evm/call-tables.md)
 
 -   #### [Event Log Tables](evm/event-logs.md)
 
@@ -31,7 +31,7 @@ There are two types of EVM decoded tables, one that decodes functions and one th
 
     These are decoded from event logs, which are data points emitted during a function call.
   
-    [:octicons-arrow-right-24: Event Log Tables](evm/event-logs.md)
+    [→ Event Log Tables](evm/event-logs.md)
 
 </div>
 
@@ -46,5 +46,5 @@ We also support [decoded tables on Solana](solana/idl-tables.md), for any progra
 
     These are decoded from `instruction_calls`, so all function calls at the first instruction level (not inner instructions) are decoded.
   
-    [:octicons-arrow-right-24: IDL Tables](solana/idl-tables.md)
+    [→ IDL Tables](solana/idl-tables.md)
 </div>

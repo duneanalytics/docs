@@ -22,7 +22,7 @@ In each section below, you'll find details on how the tables are created and som
   
     Unedited, raw and encoded blockchain data.
   
-    [:octicons-arrow-right-24: Raw data](raw/index.md)
+    [→ Raw data](raw/index.md)
 
 -   #### [Decoded data](decoded/index.md)
 
@@ -30,7 +30,7 @@ In each section below, you'll find details on how the tables are created and som
   
     View the decoded calls and events made to smart contracts. This data is still unedited.
   
-    [:octicons-arrow-right-24: Decoded data](decoded/index.md)
+    [→ Decoded data](decoded/index.md)
 
 -   #### [Spellbook](spellbook/index.md)
 
@@ -38,7 +38,7 @@ In each section below, you'll find details on how the tables are created and som
 
     Easy to work with aggregated tables that are maintained by Dune and our community.
   
-    [:octicons-arrow-right-24: Spellbook](spellbook/index.md)
+    [→ Spellbook](spellbook/index.md)
 
 -   #### [Community](community/index.md)
 
@@ -46,7 +46,7 @@ In each section below, you'll find details on how the tables are created and som
   
     Enhanced tables that combine onchain and offchain data together.
   
-    [:octicons-arrow-right-24: Community](community/index.md)
+    [→ Community](community/index.md)
 
 </div>
 

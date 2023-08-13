@@ -22,7 +22,7 @@ Data available:
 
   Arbitrage opportunities found by mev-inspect-py.
 
-  [:octicons-arrow-right-24: Arbitrages](arbitrages.md)
+  [→ Arbitrages](arbitrages.md)
 
 - #### liquidations
 
@@ -30,7 +30,7 @@ Data available:
 
   Liquidations found by mev-inspect-py.
 
-  [:octicons-arrow-right-24: Liquidations](liquidations.md)
+  [→ Liquidations](liquidations.md)
 
 - #### sandwiched_swaps
 
@@ -38,7 +38,7 @@ Data available:
 
   Sandwiched swaps found by mev-inspect-py.
 
-  [:octicons-arrow-right-24: Sandwiched Swaps](sandwiched-swaps.md)
+  [→ Sandwiched Swaps](sandwiched-swaps.md)
 
 - #### sandwiches 
 
@@ -46,7 +46,7 @@ Data available:
 
   Sandwiches found by mev-inspect-py.
 
-  [:octicons-arrow-right-24: Sandwiches](sandwiches.md)
+  [→ Sandwiches](sandwiches.md)
 
 
 - #### mev_summary
@@ -55,6 +55,6 @@ Data available:
 
   Summary of MEV found by mev-inspect-py.
 
-  [:octicons-arrow-right-24: MEV Summary](mev_summary.md)
+  [→ MEV Summary](mev_summary.md)
 
   
