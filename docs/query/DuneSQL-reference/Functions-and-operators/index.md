@@ -9,9 +9,9 @@ This chapter describes the built-in SQL functions and operators supported by Tri
 Using ``SHOW FUNCTIONS`` in the query editor returns a list of all available functions, including custom functions, with all supported arguments and a short description.
 
 ### DuneSQL Added Functions:
-- [Binary (DuneSQL)](varbinary.md)
+- [Varbinary datatypes](varbinary.md)
+- [Base58](base58.md)
 - [Chain Utility Functions](chain-utility-functions.md)
-
 ### Trino Base Functions:
 - [Aggregate](aggregate.md)  
 - [Array](array.md)  
@@ -33,7 +33,6 @@ Using ``SHOW FUNCTIONS`` in the query editor returns a list of all available fun
 - [Set Digest](setdigest.md)  
 - [String](string.md)  
 - [System](system.md)  
-- [Table](table.md)  
 - [Teradata](teradata.md)  
 - [T-Digest](tdigest.md)  
 - [URL](url.md)  

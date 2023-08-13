@@ -24,7 +24,7 @@ description: Learn everything about how to use our Dune API here, including comm
 
     Learn how to authenticate with our API.  
     
-    [:octicons-arrow-right-24: Authentication](authentication.md)
+    [→ Authentication](authentication.md)
 
 -   #### Errors Codes
 
@@ -32,7 +32,7 @@ description: Learn everything about how to use our Dune API here, including comm
 
     Get a comprehensive overview of the different error codes you may encounter while using our API, along with their meanings and potential solutions for troubleshooting.
     
-    [:octicons-arrow-right-24: Error Codes](errors.md)
+    [→ Error Codes](errors.md)
 
 -   #### Executing Queries
 
@@ -40,7 +40,7 @@ description: Learn everything about how to use our Dune API here, including comm
 
     Turn existing queries into endpoints and progmatically execute them.
     
-    [:octicons-arrow-right-24: Executing Queries](execute-queries/index.md)
+    [→ Executing Queries](execute-queries/index.md)
 
     - [Execute Query Via Query ID](../api-reference/execute-queries/execute-query-id.md)
     - [Cancel Execution](../api-reference/execute-queries/cancel-execution.md)
@@ -51,7 +51,7 @@ description: Learn everything about how to use our Dune API here, including comm
 
     Get results of executed queries.
     
-    [:octicons-arrow-right-24: Executing Queries](get-results/index.md)
+    [→ Executing Queries](get-results/index.md)
 
     - [Check Execution Status](../api-reference/get-results/execution-status.md)
     - [Get Execution Results](../api-reference/get-results/execution-results.md)
@@ -63,7 +63,7 @@ description: Learn everything about how to use our Dune API here, including comm
 
     CRUD API endpoints enables users to create, read, update, or archive queries *beyond* the Dune IDE, enabling more flexible integration of Dune API into your workflow and freeing you from UI-exclusive query editing.
 
-    [:octicons-arrow-right-24: CRUD API](edit-queries/index.md)
+    [→ CRUD API](edit-queries/index.md)
     
     - [Create Query](../api-reference/edit-queries/create-query.md)
     - [Update Query](../api-reference/edit-queries/update-query.md)
@@ -78,6 +78,6 @@ description: Learn everything about how to use our Dune API here, including comm
 
     Use Dune's write API to upload CSV files to a specific table in the Dune database.
 
-    [:octicons-arrow-right-24: Write API](data-upload/write-api.md) -->
+    [→ Write API](data-upload/write-api.md) -->
     
 </div>

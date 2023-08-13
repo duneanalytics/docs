@@ -11,13 +11,13 @@ description: With the help of the community we construct customs tables which co
 
     The Spellbook GitHub repository can be found here.
   
-    [:octicons-arrow-right-24: Spellbook Github Repo](https://github.com/duneanalytics/spellbook)
+    [→ Spellbook Github Repo](https://github.com/duneanalytics/spellbook)
 
 -   #### Model Docs
 
     Visit the Spellbook Model Docs to see a complete list of Spellbook Spell tables.
   
-    [:octicons-arrow-right-24: Spellbook Model Docs](https://dune.com/spellbook)
+    [→ Spellbook Model Docs](https://dune.com/spellbook)
 
 </div>
 
