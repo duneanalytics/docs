@@ -129,4 +129,28 @@ The erc20_ethereum.evt_transfer contains all erc20 token transfer events that oc
 </table>
 </div>
 
+```sql
+-- get total amount of weth sent daily in the past 3 days 
+SELECT DATE_TRUNC('day', evt_block_time) AS date,
+       SUM(value / 1e18) AS daily_amount
+FROM erc20_ethereum.evt_transfer
+WHERE contract_address = 0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
+AND evt_block_time >= NOW() - INTERVAL '3' day
+GROUP BY 1
+```
+
+You can also get your wallet erc20 token balances! There is a evms.erc20_transfers table that contains all evms erc20 token transfer event
+
+```sql
+-- getting erc20 token balances for 0xbe0eb53f46cd790cd13851d5eff43d12404d33e8
+SELECT * FROM (
+select blockchain,symbol,SUM(CASE WHEN "from" = 0xbe0eb53f46cd790cd13851d5eff43d12404d33e8 THEN -(value/POW(10,decimals)) ELSE (value/POW(10,decimals)) END) AS token_balance 
+from evms.erc20_transfers JOIN tokens.erc20 USING (contract_address,blockchain)
+where ("from" = 0xbe0eb53f46cd790cd13851d5eff43d12404d33e8 OR "to" = 0xbe0eb53f46cd790cd13851d5eff43d12404d33e8)
+GROUP BY 1,2
+) 
+WHERE token_balance > 0
+```
+
+
 
