@@ -152,5 +152,133 @@ GROUP BY 1,2
 WHERE token_balance > 0
 ```
 
+## dex.trades
+
+<div style="text-align: center;">
+<table>
+    <tr>
+      <th>Column Names</th>
+      <th>Data Type</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>amount_usd</td>
+      <td>double</td>
+      <td>Equivalent amount in USD</td>
+    </tr>
+    <tr>
+      <td>block_date</td>
+      <td>timestamp</td>
+      <td>Date of the block</td>
+    </tr>
+    <tr>
+      <td>block_time</td>
+      <td>timestamp</td>
+      <td>Time of the block</td>
+    </tr>
+    <tr>
+      <td>blockchain</td>
+      <td>varchar</td>
+      <td>Blockchain identifier</td>
+    </tr>
+    <tr>
+      <td>evt_index</td>
+      <td>int</td>
+      <td>Index of the event within the block</td>
+    </tr>
+    <tr>
+      <td>maker</td>
+      <td>varbinary</td>
+      <td>Address of the maker</td>
+    </tr>
+    <tr>
+      <td>project</td>
+      <td>varchar</td>
+      <td>Project name</td>
+    </tr>
+    <tr>
+      <td>project_contract_address</td>
+      <td>varbinary</td>
+      <td>Contract address of the project</td>
+    </tr>
+    <tr>
+      <td>taker</td>
+      <td>varbinary</td>
+      <td>Address of the taker</td>
+    </tr>
+    <tr>
+      <td>token_bought_address</td>
+      <td>varbinary</td>
+      <td>Address of the token bought</td>
+    </tr>
+    <tr>
+      <td>token_bought_amount</td>
+      <td>double</td>
+      <td>Amount of token bought</td>
+    </tr>
+    <tr>
+      <td>token_bought_amount_raw</td>
+      <td>decimal(38,0)</td>
+      <td>Raw amount of token bought</td>
+    </tr>
+    <tr>
+      <td>token_bought_symbol</td>
+      <td>varchar</td>
+      <td>Symbol of token bought</td>
+    </tr>
+    <tr>
+      <td>token_pair</td>
+      <td>varchar</td>
+      <td>Token pair identifier</td>
+    </tr>
+    <tr>
+      <td>token_sold_address</td>
+      <td>varbinary</td>
+      <td>Address of the token sold</td>
+    </tr>
+    <tr>
+      <td>token_sold_amount</td>
+      <td>double</td>
+      <td>Amount of token sold</td>
+    </tr>
+    <tr>
+      <td>token_sold_amount_raw</td>
+      <td>decimal(38,0)</td>
+      <td>Raw amount of token sold</td>
+    </tr>
+    <tr>
+      <td>token_sold_symbol</td>
+      <td>varchar</td>
+      <td>Symbol of token sold</td>
+    </tr>
+    <tr>
+      <td>trace_address</td>
+      <td>varchar</td>
+      <td>Trace address</td>
+    </tr>
+    <tr>
+      <td>tx_from</td>
+      <td>varbinary</td>
+      <td>Transaction sender address</td>
+    </tr>
+    <tr>
+      <td>tx_hash</td>
+      <td>varbinary</td>
+      <td>Transaction hash</td>
+    </tr>
+    <tr>
+      <td>tx_to</td>
+      <td>varbinary</td>
+      <td>Transaction receiver address</td>
+    </tr>
+    <tr>
+      <td>version</td>
+      <td>varchar</td>
+      <td>Version of the trade</td>
+    </tr>
+</table>
+</div>
+
+
 
 
