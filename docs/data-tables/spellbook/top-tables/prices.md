@@ -31,9 +31,9 @@ and blockchain = 'ethereum'
 and minute >= NOW() - interval '30' day
 ```
 
-## prices.usd_latest
+## Getting the latest token price
 
-Just as the table name suggest, this table contains the latest price available, derived from prices.usd
+We can use prices.usd_latest. Just as the table name suggest, this table contains the latest price available, derived from prices.usd
 
 ```sql
 -- getting the latest price for 4 tokens 
