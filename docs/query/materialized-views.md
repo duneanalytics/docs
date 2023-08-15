@@ -8,7 +8,7 @@ description: The "Materialized View" feature in DuneSQL allows you to schedule a
 
 ## Overview
 
-The "Materialized View" feature in DuneSQL allows you to use an existing query as a view in another query. This powerful functionality enables you to break down bigger queries so that the complex/high compute logic only has to run a few times a day, and the queries you build on top run much faster.
+The "Materialized View" feature in DuneSQL allows you to use an existing query's results in another query. This powerful functionality enables you to break down bigger queries so that the complex/high compute logic only has to run a few times a day, and the queries you build on top run much faster.
 
 You have full control over this view, you can think of it as a simplified Spellbook table. You should think of using this feature any time you run into:
 
