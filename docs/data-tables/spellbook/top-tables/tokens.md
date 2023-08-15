@@ -59,7 +59,7 @@ AND evt_block_time >= NOW() - interval '3' day
 GROUP BY 1
 ```
 
-Get all holders with their ens and balances of an erc20 token
+Get all holders with their ens and balances of an erc20 token contract
 
 ```sql
 SELECT address,
@@ -91,6 +91,8 @@ FROM erc20_ethereum.evt_transfer tr JOIN tokens.erc20 USING (contract_address)
  ORDER BY 5 DESC
 ```
 
+If you're looking for how to calculate native token balances like ethereum (ETH) balances then check out [this guide](https://web3datadegens.substack.com/p/web3-sql-weekly-1-how-to-calculate)
+
 You can find how to get erc20 balances, mints, and burns using [this guide](https://www.youtube.com/watch?v=LT_PB-Fso3M).
 
 2. [**`nft.transfers`**](https://spellbook-docs.dune.com/#!/model/model.spellbook.nft_transfers): all transfer events for every erc721 or erc1155 token. 
@@ -106,8 +108,51 @@ You can find how to get erc20 balances, mints, and burns using [this guide](http
 | `evt_index`       | _bigint_    | The index of the event within the block           |
 | `evt_tx_hash`     | _varbinary_ | The transaction hash of the event                 |
 
+Get all erc721 token transfers to an addresses in the past 30 days
+
+```sql
+SELECT date_trunc('day',evt_block_time) as date,
+       COUNT(*) as transfer_count
+FROM erc721_ethereum.evt_transfer
+where to = 0x6ce82874eaf6e7602fd21cf8bbded82705680a99
+AND evt_block_time >= NOW() - interval '30' day
+GROUP BY 1
+order by 1 desc
+```
+
+Get all holders with their ens,labels and balances of an erc721 token contract
+
+```sql
+SELECT z.name,
+       contract_address,
+       address,
+       a.name as ens_name,
+       ARRAY_AGG(DISTINCT b.name) as labels_list,
+       nft_list,
+       number_of_nft_held,
+       total_nft_supply
+FROM (
+SELECT contract_address,
+       to as address,
+       ARRAY_AGG(tokenId) as nft_list,
+       COUNT(*) as number_of_nft_held,
+       SUM(COUNT(*)) OVER () as total_nft_supply
+FROM (
+select contract_address,
+       to,
+       tokenId,
+       ROW_NUMBER() OVER (PARTITION BY contract_address,tokenId ORDER BY evt_block_time DESC,evt_index DESC) as rn
+from erc721_ethereum.evt_transfer
+where contract_address = 0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D
+) x 
+WHERE rn = 1
+GROUP BY 1,2
+) p
+LEFT JOIN tokens.nft z USING (contract_address)
+LEFT JOIN ens.reverse_latest a USING (address)
+LEFT JOIN labels.addresses   b USING (address)
+GROUP BY 1,2,3,4,6,7,8
+ORDER BY 7 DESC
+```
 
 You can learn how to leverage this to find nft balances, transfers, and mints in [this guide](https://web3datadegens.substack.com/p/web3-sql-weekly-3-finding-all-nfts)
-
-If you're looking for how to calculate native token balances like ethereum (ETH) balances then check out [this guide](https://web3datadegens.substack.com/p/web3-sql-weekly-1-how-to-calculate)
-
