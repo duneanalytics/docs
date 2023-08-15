@@ -41,7 +41,7 @@ The scripts that generate the table dex.trades can be found in this [public gith
 | `tx_to`                 | _varbinary_       | The address of the first smart contract called during this transaction                   |
 | `version`               | _varchar_         | The version of the DEX used for this trade                                               |
 
-#### Get all transactions of USDC swaps in the past 24 hours
+Get all transactions of USDC swaps in the past 24 hours
 
 ```sql
 select * from dex.trades
@@ -51,7 +51,7 @@ AND blockchain = 'ethereum'
 AND block_time >= NOW() - interval '24' hour
 ```
 
-#### Get top 100 uniswap pairs' volume from uniswap in the past 3 days
+Get top 100 uniswap pairs' volume from uniswap in the past 3 days
 
 ```sql
 select token_pair,
@@ -64,6 +64,24 @@ AND token_pair IS NOT NULL
 GROUP BY 1
 ORDER BY 2 DESC -- order by total_volume
 limit 100 -- 100 rows
+```
+
+Get top 100 traders' volume of erc20 token using dex.trades
+
+```sql
+SELECT tx_from as address,
+       SUM(amount_usd) as total_volume,
+       SUM(CASE WHEN "token_bought_address" = 0x2260fac5e5542a773aa44fbcfedf7c193bc2c599 THEN 1 END) as buy_count,
+       SUM(CASE WHEN "token_sold_address" = 0x2260fac5e5542a773aa44fbcfedf7c193bc2c599 THEN 1 END) as sell_count,
+       SUM(CASE WHEN "token_bought_address" = 0x2260fac5e5542a773aa44fbcfedf7c193bc2c599 THEN amount_usd END) as total_buy_volume,
+       SUM(CASE WHEN "token_sold_address" = 0x2260fac5e5542a773aa44fbcfedf7c193bc2c599 THEN amount_usd END) as total_sell_volume
+FROM dex.trades
+WHERE ("token_bought_address" = 0x2260fac5e5542a773aa44fbcfedf7c193bc2c599 OR "token_sold_address" = 0x2260fac5e5542a773aa44fbcfedf7c193bc2c599)
+AND blockchain = 'ethereum'
+AND block_time >= NOW() - interval '7' day
+GROUP BY 1
+ORDER BY 2 DESC
+limit 100
 ```
 
 
