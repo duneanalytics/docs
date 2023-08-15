@@ -75,10 +75,6 @@ In the most recent version of `nft.trades`, information about the amount and per
 
 Royalty fees are going to the creator, and Platform fees are collected by the NFT platform. Note that royalty fees cannot always be retrieved, and are set to null by default.
 
-## Examples
-
-### Queries
-
 #### All trades for a given NFT in the past 7 days
 
 ```sql
@@ -100,22 +96,18 @@ GROUP BY 1,2
 ORDER BY 3 DESC
 limit 100
 ```
-#### Platform volumes in the last year
-
-**_SQL_**
+#### Platform daily and cumulative volume over time in the last year
 
 ```sql
-select  sum(usd_amount), 
-        date_trunc('day', block_time) as day, 
-        platform 
+select date_trunc('day', block_time) as day,
+       project,
+       sum(amount_usd) as daily_project_amount_usd,
+       sum(sum(amount_usd)) OVER (PARTITION BY project ORDER BY date_trunc('day',block_time)) as project_cumulative_volume_usd
 from nft.trades 
-where block_time > now() - interval '365 days'
-group by platform, day
+where block_time > now() - interval '365' day
+group by 1,2
+ORDER BY 1 DESC,4 DESC
 ```
-
-**_Results_**
-
-![type:video](https://dune.com/embeds/146160/288002/cc990e4d-21e8-43a7-9bc3-2357a72be7b0)
 
 ### Dashboards
 
