@@ -86,6 +86,12 @@ versicolor |   34
 
 Returns an arbitrary non-null value of `x`, if one exists.
 
+#### any_value()
+
+**``any_value(x)``** &#8594 [same as input]
+
+Returns an arbitrary non-null value of `x`, if one exists. This is an alias for `arbitrary`.
+
 #### array_agg()
 **``array_agg(x)``** &#8594 [same as input]
 
@@ -428,11 +434,7 @@ Returns linear regression slope of input values. `y` is the dependent value and 
 #### skewness()
 **``skewness(x)``** &#8594 double
 
-Returns the skewness of all input values. Unbiased estimate using the following expression:
-
-``` text
-skewness(x) = n/((n-1)(n-2))sum[(x_i-mean)^3]/stddev(x)^3
-```
+Returns the skewness of all input values. Returns the Fisher’s moment coefficient of [skewness](https://en.wikipedia.org/wiki/Skewness) of all input values.
 
 #### stddev()
 **``stddev(x)``** &#8594 double

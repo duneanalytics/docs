@@ -103,12 +103,12 @@ Returns the last value of the window.
 Returns the value at the specified offset from the beginning of the window. Offsets start at `1`. The offset can be any scalar expression. If the offset is null or greater than the number of values in the window, `null` is returned. It is an error for the offset to be zero or negative.
 
 #### lead()
-**lead(x[, offset [, default_value]])** → [same as input]
+**lead(x, offset , default_value)** → [same as input]
 
 Returns the value at `offset` rows after the current row in the window partition. Offsets start at `0`, which is the current row. The offset can be any scalar expression. The default `offset` is `1`. If the offset is null, `null` is returned. If the offset refers to a row that is not within the partition, the `default_value` is returned, or if it is not specified `null` is returned. The `lead` function requires that the window ordering be specified. Window frame must not be specified.
 
 #### lag()
-**lag(x[, offset [, default_value]])** → [same as input]
+**lag(x, offset , default_value)** → [same as input]
 
 Returns the value at `offset` rows before the current row in the window partition. Offsets start at `0`, which is the current row. The offset can be any scalar expression. The default `offset` is `1`. If the offset is null, `null` is returned. If the offset refers to a row that is not within the partition, the `default_value` is returned, or if it is not specified `null` is returned. The `lag` function requires that the window ordering be specified. Window frame must not be specified.
 

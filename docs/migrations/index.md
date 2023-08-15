@@ -47,8 +47,8 @@ You can read about the Syntax differences between the engines in the respective 
 
 <div class="cards grid" markdown>
 
-- [:octicons-arrow-right-24: SparkSQL](SparkSQL.md)
-- [:octicons-arrow-right-24: PostgreSQL](PostgreSQL.md)
+- [→ SparkSQL](SparkSQL.md)
+- [→ PostgreSQL](PostgreSQL.md)
 
 </div>
 

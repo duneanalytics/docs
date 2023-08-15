@@ -19,7 +19,7 @@ However, queries that have been written using raw data tables are notoriously ha
 
     This table contains information from the transactions table focused on account usage.
 
-    [:octicons-arrow-right-24: Account Activity](account-activity.md)
+    [→ Account Activity](account-activity.md)
 
 -   #### Blocks
 
@@ -27,7 +27,7 @@ However, queries that have been written using raw data tables are notoriously ha
 
     Blocks are the base unit that all transactions fit into.
 
-    [:octicons-arrow-right-24: Blocks](blocks.md)
+    [→ Blocks](blocks.md)
 
 -   #### Rewards
 
@@ -35,7 +35,7 @@ However, queries that have been written using raw data tables are notoriously ha
 
     This table contains data about rewards paid out on Solana.
 
-    [:octicons-arrow-right-24: Rewards](rewards.md)
+    [→ Rewards](rewards.md)
 
 -   #### Transactions
 
@@ -43,7 +43,7 @@ However, queries that have been written using raw data tables are notoriously ha
 
     Transactions are cryptographically signed instructions from accounts.
 
-    [:octicons-arrow-right-24: Transactions](transactions.md)
+    [→ Transactions](transactions.md)
 
 -   #### Instruction Calls
 
@@ -51,7 +51,7 @@ However, queries that have been written using raw data tables are notoriously ha
 
     Transactions are unnested here such that each instruction gets its own row.
     
-    [:octicons-arrow-right-24: Instruction Calls](instruction-calls.md)
+    [→ Instruction Calls](instruction-calls.md)
 
 -   #### Vote Transactions
 
@@ -59,7 +59,7 @@ However, queries that have been written using raw data tables are notoriously ha
 
     This table contains the full set of vote transactions that are submitted by validators to vote on a block.
 
-    [:octicons-arrow-right-24: Vote Transactions](vote-transactions.md)
+    [→ Vote Transactions](vote-transactions.md)
 </div>
 
 

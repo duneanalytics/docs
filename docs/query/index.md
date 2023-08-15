@@ -32,7 +32,7 @@ We have created extensive documentation for DuneSQL, which you can find in the [
 
     A reference guide to DuneSQL functions and operators.
   
-    [:octicons-arrow-right-24: Functions and operators](DuneSQL-reference/Functions-and-operators/index.md)
+    [→ Functions and operators](DuneSQL-reference/Functions-and-operators/index.md)
 
 -   #### Data types
 
@@ -40,7 +40,7 @@ We have created extensive documentation for DuneSQL, which you can find in the [
 
     A reference guide to DuneSQL data types.
   
-    [:octicons-arrow-right-24: Data types](DuneSQL-reference/datatypes.md)
+    [→ Data types](DuneSQL-reference/datatypes.md)
 
 -   #### Reserved keywords
 
@@ -48,7 +48,7 @@ We have created extensive documentation for DuneSQL, which you can find in the [
 
     A list of reserved keywords in DuneSQL.
   
-    [:octicons-arrow-right-24: Reserved keywords](DuneSQL-reference/reserved-keywords.md)
+    [→ Reserved keywords](DuneSQL-reference/reserved-keywords.md)
 
 </div>
 
@@ -59,7 +59,7 @@ An efficient query-writing process requires knowledge of how DuneSQL and data st
 
 <div class="cards grid" markdown>
 
-- [:octicons-arrow-right-24: Writing efficient queries](writing-efficient-queries.md)
+- [→ Writing efficient queries](writing-efficient-queries.md)
 
 </div>
 
@@ -69,7 +69,7 @@ DuneSQL allows you to query a query, which is great for creating reusable querie
 
 <div class="cards grid" markdown>
 
-- [:octicons-arrow-right-24: Querying a query](query-a-query.md)
+- [→ Querying a query](query-a-query.md)
 
 </div>
 

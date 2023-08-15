@@ -23,12 +23,12 @@ Your imagination is really the limit here. The only requirement is that this dat
 
     Upload data via dune.com
     
-    [:octicons-arrow-right-24: App Docs](../app/upload-data.md)
+    [→ App Docs](../app/upload-data.md)
   
 -  #### Upload data via the API
     
     Programmatically upload data via the API
         
-    [:octicons-arrow-right-24: API docs](../api/api-reference/upload-data/index.md)
+    [→ API docs](../api/api-reference/upload-data/index.md)
 
 </div>

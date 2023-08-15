@@ -14,7 +14,7 @@ description: Learn more about how the dune.com app works in this section!
 
     The Query Editor is where you can write SQL queries to explore blockchain data. This docs section describes the functional elements of the Query Editor, to learn how to write queries, see [the query section](../query/index.md).  
     
-    [:octicons-arrow-right-24: Queries](query-editor/index.md)
+    [→ Queries](query-editor/index.md)
 
 -   #### Visualizations
 
@@ -22,7 +22,7 @@ description: Learn more about how the dune.com app works in this section!
 
     Visualizations make your data come to life! You can create Visualizations from any results of a query.  
     
-    [:octicons-arrow-right-24: Visualizations](visualizations/index.md)
+    [→ Visualizations](visualizations/index.md)
 
 -   #### Dashboards
 
@@ -30,7 +30,7 @@ description: Learn more about how the dune.com app works in this section!
 
     Dashboards are a collection of Visualizations and text that you can share with the world. You can create Dashboards out of any Visualizations you have created.  
     
-    [:octicons-arrow-right-24: Dashboards](dashboards.md)
+    [→ Dashboards](dashboards.md)
 
 -   #### Decoding
 
@@ -38,7 +38,7 @@ description: Learn more about how the dune.com app works in this section!
 
     Decoding is a feature that allows you to submit contracts for decoding. This is useful if you want to decode events or transactions that are not decoded already.  
     
-    [:octicons-arrow-right-24: Decoding](decoding-contracts.md)
+    [→ Decoding](decoding-contracts.md)
 
 -   #### Teams
 
@@ -46,7 +46,7 @@ description: Learn more about how the dune.com app works in this section!
 
     Working with a team? You can create a team and invite your teammates to collaborate on queries, visualizations, and dashboards.  
     
-    [:octicons-arrow-right-24: Teams](teams.md)
+    [→ Teams](teams.md)
 
 -   #### Embeds
 
@@ -54,7 +54,7 @@ description: Learn more about how the dune.com app works in this section!
 
     Embeds allow you to embed your Visualizations on your website, blog, twitter, or anywhere else you want to share your data.  
     
-    [:octicons-arrow-right-24: Embeds](embeds.md)
+    [→ Embeds](embeds.md)
 
 -   #### Wand (Beta)
 
@@ -62,7 +62,7 @@ description: Learn more about how the dune.com app works in this section!
 
     Wand is a beta suite of tools for writing SQL queries with the help of large language models.
     
-    [:octicons-arrow-right-24: Wand (Beta)](wand-llm.md)
+    [→ Wand (Beta)](wand-llm.md)
 
 </div>
 
