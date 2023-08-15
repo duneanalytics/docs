@@ -39,7 +39,8 @@ Some key things to keep in mind:
 1. A query result has a 200MB limit in the editor but a materialized view doesn’t have storage limits. Even though the results will look truncated in the editor.
 2. This materialized view refresh schedule is DIFFERENT from the query scheduler. Results from running the query or the normal query scheduler will NOT update the materialized view. 
 3. Plans have total monthly storage limits (for premium plans, it’s 50GB, plus it’s 15GB, free is 10MB). These limits will soon be implemented, so keep that in mind.
-
+4. You can delete your materialized view at any time. By going to the settings "gear" icon in the query.
+   
 ## To query a materialized view
 
 Wait for materialized view to finish creation first. It should be roughly similar to time the query normally takes to execute - maybe a bit longer due to time it takes to write the new table.
@@ -55,11 +56,10 @@ Eventually, you’ll be able to query by the materialized view name specified du
 ## Missing functionality
 We still have several more things to work on. Things we know that aren’t working include:
 
-1. Deleting a materialized view (although you can turn off the schedule for now)
-2. Hiding/showing a materialized view in the right context based on the context switcher might not work perfectly.
+1. Hiding/showing a materialized view in the right context based on the context switcher might not work perfectly.
 3. Currently there is no way to force refresh a materialized view outside the normally set schedule (we are looking to add this later).
-4. Marking a materialized view as private does not work yet. Private materialized views will be available on premium tier plans and above in late August.
-5. All materialized views can be seen by other alpha testers currently (and later the public)
+3. Marking a materialized view as private does not work yet. Private materialized views will be available on premium tier plans and above in late August.
+4. All materialized views can be seen by other alpha testers currently (and later the public)
 
 **Matviews are marked separately in your query list and can also be filtered on.**
 
