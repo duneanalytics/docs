@@ -64,7 +64,7 @@ In contrast, should we try to query for all columns of specific logical rows, we
 
 To better understand rows vs columns, check out this video on the differences:
 
-![type:video]([https://youtu.be/Vw1fCeD06YI](https://youtu.be/Vw1fCeD06YI))
+![type:video][https://youtu.be/Vw1fCeD06YI](https://youtu.be/Vw1fCeD06YI)
 
 
 ### To index, or not to index?
@@ -75,7 +75,7 @@ Each parquet file has a footer that contains `min/max` values for every column s
 
 This pattern is repeated on a column chunk level, which stores this metadata for the columns within a specific row group within the parquet file.
 
-![schematic view of mix/max values](images/minmax-schema.jpg)
+![schematic view of mix/max values](images/minmax-schema2.jpeg)
 
 Using these `min/max` values, both on a file level and on a column chunk level allows the database to efficiently skip over entire parquet files or column chunks within parquet files while scanning through a table. For the min/max values to be useful, and the chunk skipping to work, the column must be correlated with the sorting of the file.
 

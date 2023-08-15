@@ -4,3 +4,6 @@ nav:
 - DuneSQL: DuneSQL-reference
 - Writing efficient Queries: writing-efficient-queries.md
 - Querying a query: query-a-query.md
+- writing-efficient-queries-rework.md
+- storage.md
+
