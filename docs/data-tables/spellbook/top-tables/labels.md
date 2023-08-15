@@ -69,21 +69,88 @@ Note that there might be a few minutes delay from adding the label on [dune.com]
 
 ## The labels table
 
-Labels are stored in the new `labels.labels` table which has the following schema:
+Labels are stored in the new `labels.all` table which has the following schema:
 
-| Column name | Data type | Description |
-| - | :-: | - |
-| `id` | _int_ | incrementing integer |
-| `address` | _varbinary_ | The address of a contract or wallet this label describes |
-| `name` | _varchar_ | label name |
-| `blockchain` | _varchar_ | the blockchain the label is meant for |
-| `author` | _varchar_ | The username of the user who created this label |
-| `source` | _varchar_ | The source of this label, autopopulated by Dune |
-| `updated_at` | _timestamptz_ | The last time this label was changed |
-| `label_type` | _varchar_ | The type of label, defined in the readme |
-| `model_name` | _varchar_ | The name of the label model (filename) |
+| Column name   | Data type     | Description                                           |
+|---------------|---------------|-------------------------------------------------------|
+| `address`     | _varbinary_   | The address of a contract or wallet this label describes |
+| `category`    | _varchar_     | The category of the label (e.g., dex/contracts/institution) |
+| `blockchain`  | _varchar_     | The blockchain of the address where the label is given |
+| `contributor` | _varchar_     | The name of the contributor that created the label    |
+| `name`        | _varchar_     | The name of the label                                |
+| `source`      | _varchar_     | The source reference of the label                    |
+| `label_type`  | _varchar_     | The type of label (e.g., persona/usage/identifier)   |
+| `model_name`  | _varchar_     | The name of the model used to create the label       |
+| `created_at`  | _timestamp_   | The time when the label was created                  |
+| `updated_at`  | _timestamp_   | The time when the label was last updated             |
 
 ## Using labels
 
-!!! warning
-    this section is currently under construction, stay tuned!
+#### Using label to identify top token holders
+
+Using labels to identify top CRV holders
+
+```sql
+SELECT address,
+       ens,
+       ARRAY_AGG(DISTINCT name) as label_list,
+       symbol,
+       contract_address,
+       balance
+FROM (
+SELECT address,
+       symbol,
+       name as ens,
+       contract_address,
+       SUM(amount) as balance
+FROM (
+SELECT tr."from" AS address,
+       symbol,
+       contract_address,
+       -(tr.value/POW(10,decimals)) AS amount
+FROM erc20_ethereum.evt_transfer tr JOIN tokens.erc20 USING (contract_address)
+WHERE "from" != 0x0000000000000000000000000000000000000000 -- exclude mint/burn addresses
+AND contract_address = 0xD533a949740bb3306d119CC777fa900bA034cd52 -- contract_address of the erc20 token 
+UNION ALL
+SELECT tr."to" AS address,
+       symbol,
+       contract_address,
+       (tr.value/POW(10,decimals)) AS amount
+FROM erc20_ethereum.evt_transfer tr JOIN tokens.erc20 USING (contract_address)
+ WHERE "to" != 0x0000000000000000000000000000000000000000 -- exclude mint/burn addresses
+ AND contract_address = 0xD533a949740bb3306d119CC777fa900bA034cd52 -- contract_address of the erc20 token
+ ) x LEFT JOIN ens.reverse_latest USING (address)
+ GROUP BY 1,2,3,4
+ HAVING SUM(amount) > 0.1 --  having more than 0.1 balance
+ ) p LEFT JOIN labels.all USING (address)
+ GROUP BY 1,2,4,5,6
+ ORDER BY 6 DESC
+```
+
+#### Using addresses of labels.contract_deployers_ethereum to find the top 100 deployers
+
+```sql
+SELECT "from" as deployer,
+       COUNT(*) as contracts_deployed
+from ethereum.creation_traces
+WHERE "from" IN (SELECT distinct address FROM labels.contract_deployers_ethereum)
+AND block_time >= NOW() - interval '7' day
+GROUP BY 1
+ORDER BY 2 DESC
+LIMIT 100
+```
+
+#### Using smart_dex_traders label to find tokens traded by traders
+
+```sql
+SELECT tx_from as address,
+       COALESCE(token_bought_symbol,CAST(token_bought_address AS VARCHAR)) as token_amount,
+       SUM(amount_usd) as total_volume,
+       SUM(SUM(amount_usd)) OVER (PARTITION BY COALESCE(token_bought_symbol,CAST(token_bought_address AS VARCHAR))) as total_token_volume
+FROM dex.trades
+WHERE tx_from IN (select from_hex(address) from labels.smart_dex_traders)
+AND block_time >= NOW() - interval '14' day
+GROUP BY 1,2
+HAVING SUM(amount_usd) >= 100000
+ORDER BY 4 DESC,3 DESC
+```

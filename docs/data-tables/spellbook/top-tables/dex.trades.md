@@ -41,7 +41,7 @@ The scripts that generate the table dex.trades can be found in this [public gith
 | `tx_to`                 | _varbinary_       | The address of the first smart contract called during this transaction                   |
 | `version`               | _varchar_         | The version of the DEX used for this trade                                               |
 
-Get all transactions of USDC swaps in the past 24 hours
+#### Get all transactions of USDC swaps in the past 24 hours
 
 ```sql
 select * from dex.trades
@@ -51,7 +51,7 @@ AND blockchain = 'ethereum'
 AND block_time >= NOW() - interval '24' hour
 ```
 
-Get top 100 uniswap pairs' volume from uniswap in the past 3 days
+#### Get top 100 uniswap pairs' volume from uniswap in the past 3 days
 
 ```sql
 select token_pair,
@@ -66,7 +66,7 @@ ORDER BY 2 DESC -- order by total_volume
 limit 100 -- 100 rows
 ```
 
-Get top 100 traders' volume of erc20 token using dex.trades
+#### Get top 100 traders' volume of erc20 token using dex.trades
 
 ```sql
 SELECT tx_from as address,

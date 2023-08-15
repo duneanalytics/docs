@@ -31,9 +31,9 @@ and blockchain = 'ethereum'
 and minute >= NOW() - interval '30' day
 ```
 
-## Getting the latest token price
+#### Getting the latest token price
 
-We can use prices.usd_latest. Just as the table name suggest, this table contains the latest price available, derived from prices.usd
+Just as the table name suggest, this table contains the latest price available, derived from prices.usd
 
 ```sql
 -- getting the latest price for 4 tokens 
@@ -76,6 +76,8 @@ Calculating the price of $SPELL is now as simple as dividing the amount of token
 We now have successfully calculated the price of 1 $SPELL.
 
 In order to correct for extreme outliers and in order for this table to be performant the script then aggregates all recorded data into one `median_price` per hour.
+
+#### Get daily average price using dex.prices
 
 ```sql
 -- get daily average price of weth from dex.prices
