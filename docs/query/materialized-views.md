@@ -16,13 +16,6 @@ You have full control over this view, you can think of it as a simplified Spellb
 2. Stage limits (exceeding stage limits in the planning stage, normally happens when you join too many tables)
 3. Memory limits (exceeding the memory limits, normally happens when you use too many large tables like `solana.transactions` or `ethereum.traces`)
 
-Here are some examples: 
-
-| Description | Materialized View Source | Materialized View Name (Use In Other Query) |
-|---|---|---|
-| Query which bumps into cluster capacity issue | [source query](https://dune.com/queries/2698624/4490178) | [dune.dune.result_2744412](https://dune.com/queries/2744461) |
-| A large view used within the above query (to be materialized) | [source query](https://dune.com/queries/268877) | [???](https://dune.com/queries/2744412)
-
 ## To create a materialized view
 Write a new query or go to an existing query. (We suggest creating via team context on a plan with sufficient credits)
 
@@ -31,7 +24,15 @@ Write a new query or go to an existing query. (We suggest creating via team cont
 3. After saving a “materialize” button will appear below the run button.
 4. Click the materialize button, and set a refresh schedule. Each refresh uses up credits based on cluster used.
 
-(add arcade example walkthrough later)
+<div style="position: relative; padding-bottom: calc(66.66666666666666% + 41px); height: 0;"><iframe src="https://demo.arcade.software/NWga8JMv0LWkB7toRngC?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;" title="wallet all chain activity summary"></iframe></div>
+
+You can find the example query [here](https://dune.com/queries/2858381), and it can be queried with just:
+
+```
+SELECT 
+*
+FROM dune.dune.result2858381
+```
 
 Some key things to keep in mind: 
 
