@@ -154,6 +154,8 @@ WHERE token_balance > 0
 
 ## dex.trades
 
+The dex.trades table contains  transfer events that occured. With this table, you will be able to get information such as number of token holders,token balances and many more! This table is available for other EVM chain too, just change the suffix to the chain desired(eg.erc20_arbitrum.evt_transfer,erc20_bnb.evt_transfer)
+
 <div style="text-align: center;">
 <table>
     <tr>
