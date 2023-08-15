@@ -79,9 +79,7 @@ Royalty fees are going to the creator, and Platform fees are collected by the NF
 
 ### Queries
 
-#### All trades for a given NFT
-
-**_SQL_**
+#### All trades for a given NFT in the past 7 days
 
 ```sql
 -- get trade details of specific NFT collection
@@ -89,26 +87,19 @@ select * from nft.trades
 where nft_contract_address = 0x670fd103b1a08628e9557cd66b87ded841115190
 AND block_time >= NOW() - interval '7' day
 ```
-
-**_Results_**
-
-![type:video](https://dune.com/embeds/146090/288199/bc835020-f730-4348-b749-abd94277b0f7)
-
 #### Top collection in terms of volume traded in the last 24 hour on a given platform
 
 ```sql
-select COALESCE(collection,CAST(nft_contract_address AS VARCHAR)) as collection,blockchain,SUM(amount_usd) as total_volume from nft.trades 
+select COALESCE(collection,CAST(nft_contract_address AS VARCHAR)) as collection, -- using coalesce here will get you the nft_contract_address
+       blockchain,                                                               -- instead of null if collection name does not exist
+       SUM(amount_usd) as total_volume 
+FROM nft.trades 
 where project = 'opensea' --only shows trades on Opensea
 and block_time > now() - interval '24' hour
 GROUP BY 1,2
 ORDER BY 3 DESC
 limit 100
 ```
-
-**_Results_**
-
-![type:video](https://dune.com/embeds/1622909/2690008/ce6aa75e-b94c-4dcf-a1f0-020d2cb5fa9b)
-
 #### Platform volumes in the last year
 
 **_SQL_**
