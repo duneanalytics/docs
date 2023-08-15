@@ -69,6 +69,8 @@ Here are the chains we have available to Query in Dune.
 - Polygon (POS)
   
 - Optimism
+
+- Optimism Stack Rollups (Base)
   
 - BNB (Binance Smart Chain)
   
@@ -140,6 +142,13 @@ Optimism differs in it's EVM implementation in the calculation of gas costs, sin
     Data for the current version of Optimism's blockchain (November 11th, 2021 to present), is contained in the `optimism` database, are labeled "Optimism" in the dropdown menu, and use this icon:
     
     ![optimism icon](../app/query-editor/images/explorer-labels/optimism-icon.png)
+
+#### Optimism Stack Rollups (Base)
+
+There are many deployments using the Optimism Stack that can be deployed using Rollup-as-a-Service providers like [conduit.xyz](https://conduit.xyz). Here is the list that we currently support:
+
+- Coinbase (BASE) chain
+
 #### BNB Chain (BSC)
 
 BNB Chain(formerly Binance Smart Chain, BSC) is an instance of the Ethereum Virtual Machine built and maintained by a team from the popular Crypto Exchange [Binance](https://binance.com). BNB Chain follows most of the rules of Ethereum Mainnet, but has not implemented EIP1559. Instead it relies on [BEP-95](https://github.com/bnb-chain/BEPs/blob/master/BEP95.md) to burn fees that accrue during usage of the platform. Furthermore, the gas limit per block is set to 100 mio, enabling more transactions to be processed in a given block. Transactions fees are paid in $BNB instead of $ETH.
