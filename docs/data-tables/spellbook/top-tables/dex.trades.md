@@ -15,11 +15,6 @@ The scripts that generate the table dex.trades can be found in this [public gith
 
 ## Column Data
 
-
-Certainly! Here's the markup code with properly aligned columns:
-
-markdown
-Copy code
 | Column Name             | Data Type         | Description                                                            |
 |-------------------------|-------------------|------------------------------------------------------------------------|
 | `amount_usd`            | _double_          | The USD value of this trade.                                          |
