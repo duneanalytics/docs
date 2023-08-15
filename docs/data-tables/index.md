@@ -70,7 +70,7 @@ Here are the chains we have available to Query in Dune.
   
 - Optimism
 
-- OP Stack Chains (Base)
+- Optimism Stack Rollups (Base)
   
 - BNB (Binance Smart Chain)
   
