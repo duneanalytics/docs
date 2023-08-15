@@ -31,7 +31,7 @@ You can find the example query [here](https://dune.com/queries/2858381), and it 
 ```
 SELECT 
 *
-FROM dune.dune.result2858381
+FROM dune.dune.result_2858381
 ```
 
 Some key things to keep in mind: 
