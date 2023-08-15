@@ -47,7 +47,7 @@ where contract_address = 0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d
 | `evt_index`        | _bigint_         | The index of the event within the block.          |
 | `evt_tx_hash`      | _varbinary_      | The transaction hash of the event.                |
 
-Finding out the total inflow and outflow of USDT token from an address in the past 3 days
+#### Get the total inflow and outflow of USDT token from an address in the past 3 days
 
 ```sql
 SELECT CASE WHEN "from" = 0xdfd5293d8e347dfe59e90efd55b2956a1343963d THEN 'Outflow' ELSE 'Inflow' END AS token_flow,
@@ -59,7 +59,7 @@ AND evt_block_time >= NOW() - interval '3' day
 GROUP BY 1
 ```
 
-Get all holders with their ens and balances of an erc20 token contract
+#### Get all holders with their ens and balances of an erc20 token contract
 
 ```sql
 SELECT address,
@@ -108,7 +108,7 @@ You can find how to get erc20 balances, mints, and burns using [this guide](http
 | `evt_index`       | _bigint_    | The index of the event within the block           |
 | `evt_tx_hash`     | _varbinary_ | The transaction hash of the event                 |
 
-Get all erc721 token transfers to an addresses in the past 30 days
+#### Get all erc721 token transfers to an addresses in the past 30 days
 
 ```sql
 SELECT date_trunc('day',evt_block_time) as date,
@@ -120,7 +120,7 @@ GROUP BY 1
 order by 1 desc
 ```
 
-Get all holders with their ens,labels and balances of an erc721 token contract
+#### Get all holders with their ens,labels and balances of an erc721 token contract
 
 ```sql
 SELECT z.name,
