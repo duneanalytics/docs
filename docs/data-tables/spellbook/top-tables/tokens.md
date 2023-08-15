@@ -9,6 +9,13 @@ You'll likely be working with tokens that are fungible (erc20) and nonfungible (
 
 1. [**`tokens.erc20`**](https://spellbook-docs.dune.com/#!/model/model.spellbook.tokens_erc20): contains useful information such as the token `symbol` and the `decimals` for any given `contract_address`, the latter of which is needed to get the actual amount from raw amounts in onchain data.
 
+| Column Name       | Data Type   | Description                                            |
+|-------------------|-------------|--------------------------------------------------------|
+| `blockchain`      | _varchar_   | The blockchain associated with the ERC20 token         |
+| `contract_address`| _varbinary_ | The contract address of the ERC20 token                |
+| `decimals`        | _int_       | The number of decimal places for the token's value     |
+| `symbol`          | _varchar_   | The identifier of the asset (ticker)                   |
+
 2. [**`tokens.nft`**](https://spellbook-docs.dune.com/#!/model/model.spellbook.tokens_nft): contains the collection `name` and `symbol` for any given `contract_address`.
 
 These tables are usually joined on `contract_address` at the end of a query to make everything more human readable.

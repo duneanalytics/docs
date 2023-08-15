@@ -13,11 +13,11 @@ If the token has yet to be listed in here, please make a pull request to our [Gi
 
 | Column Name       | Data Type     | Description                                                 |
 |-------------------|---------------|-------------------------------------------------------------|
-| `contract_address`| `varbinary`   | The contract address of the ERC20 token.                    |
-| `blockchain`      | `varchar`     | The blockchain associated with the ERC20 token.             |
-| `decimals`        | `int`         | The number of decimal places for the token's value.         |
-| `minute`          | `timestamp`   | The resolution of this data table in minutes.               |
-| `price`           | `double`      | The price of the asset in any given minute.                 |
+| `contract_address`| `varbinary`   | The contract address of the ERC20 token                     |
+| `blockchain`      | `varchar`     | The blockchain associated with the ERC20 token              |
+| `decimals`        | `int`         | The number of decimal places for the token's value          |
+| `minute`          | `timestamp`   | The resolution of this data table in minutes                |
+| `price`           | `double`      | The price of the asset in any given minute                  |
 | `symbol`          | `varchar`     | The identifier of the asset (ticker)                        |
 
 
