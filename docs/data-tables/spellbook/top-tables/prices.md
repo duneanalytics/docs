@@ -28,8 +28,10 @@ Note that `WETH` can be used for ETH price as it trades at virtually the same pr
 select * from prices.usd
 where contract_address = 0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
 and blockchain = 'ethereum'
-and minute >= NOW() - interval '30' day
+and minute >= NOW() - interval '7' day
 ```
+
+<iframe src="https://dune.com/embeds/2914436/4843731" width="100%" height="400" frameborder="0"></iframe>
 
 #### Getting the latest token price
 
@@ -41,6 +43,10 @@ select * from prices.usd_latest
 where blockchain = 'ethereum'
 and symbol IN ('WETH','WBTC','USDC','USDT')
 ```
+
+<iframe src="https://dune.com/embeds/2914542/4843862" width="100%" height="400" frameborder="0"></iframe>
+
+
 
 ## How we get prices from DEXs
 
@@ -90,6 +96,8 @@ AND contract_address = 0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
 AND hour >= NOW() - interval '3' day
 GROUP BY 1,2
 ```
+
+<iframe src="https://dune.com/embeds/2914564/4843885" width="100%" height="400" frameborder="0"></iframe>
 
 ### Known issues
 

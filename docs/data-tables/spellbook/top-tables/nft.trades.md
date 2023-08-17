@@ -75,27 +75,38 @@ In the most recent version of `nft.trades`, information about the amount and per
 
 Royalty fees are going to the creator, and Platform fees are collected by the NFT platform. Note that royalty fees cannot always be retrieved, and are set to null by default.
 
-#### All trades for a given NFT in the past 7 days
+#### Trading price for a given NFT in the past 7 days
 
 ```sql
--- get trade details of specific NFT collection
+-- get trade details of specific NFT collection (y00ts on polygon)
 select * from nft.trades 
 where nft_contract_address = 0x670fd103b1a08628e9557cd66b87ded841115190
 AND block_time >= NOW() - interval '7' day
 ```
-#### Top collection in terms of volume traded in the last 24 hour on a given platform
+
+<iframe src="https://dune.com/embeds/2914584/4844017" width="100%" height="400" frameborder="0"></iframe>
+
+
+#### Top collection in terms of volume traded in the last 72 hour on a given platform
 
 ```sql
-select COALESCE(collection,CAST(nft_contract_address AS VARCHAR)) as collection, -- using coalesce here will get you the nft_contract_address
+SELECT ROW_NUMBER() OVER (ORDER BY total_volume DESC) as ranking,
+       *
+FROM (
+SELECT COALESCE(collection,CAST(nft_contract_address AS VARCHAR)) as collection, -- using coalesce here will get you the nft_contract_address
        blockchain,                                                               -- instead of null if collection name does not exist
        SUM(amount_usd) as total_volume 
 FROM nft.trades 
 where project = 'opensea' --only shows trades on Opensea
-and block_time > now() - interval '24' hour
+and block_time > now() - interval '72' hour
 GROUP BY 1,2
 ORDER BY 3 DESC
 limit 100
+) 
 ```
+
+<iframe src="https://dune.com/embeds/2914602/4843928" width="100%" height="400" frameborder="0"></iframe>
+
 #### Platform daily and cumulative volume over time in the last year
 
 ```sql
@@ -108,6 +119,10 @@ where block_time > now() - interval '365' day
 group by 1,2
 ORDER BY 1 DESC,4 DESC
 ```
+<iframe src="https://dune.com/embeds/2914617/4843982" width="100%" height="400" frameborder="0"></iframe>
+
+<iframe src="https://dune.com/embeds/2914617/4843954" width="100%" height="400" frameborder="0"></iframe>
+
 
 ### Dashboards
 

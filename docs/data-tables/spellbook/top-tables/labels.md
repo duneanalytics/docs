@@ -127,30 +127,37 @@ FROM erc20_ethereum.evt_transfer tr JOIN tokens.erc20 USING (contract_address)
  ORDER BY 6 DESC
 ```
 
+<iframe src="https://dune.com/embeds/2914955/4844332" width="100%" height="400" frameborder="0"></iframe>
+
 #### Using addresses of labels.contract_deployers_ethereum to find the top 100 deployers
 
 ```sql
-SELECT "from" as deployer,
-       COUNT(*) as contracts_deployed
+SELECT COUNT(*) as contracts_deployed,
+       SUM(COUNT(*)) OVER (ORDER BY block_time) as contracts_over_time
 from ethereum.creation_traces
 WHERE "from" IN (SELECT distinct address FROM labels.contract_deployers_ethereum)
 AND block_time >= NOW() - interval '7' day
 GROUP BY 1
 ORDER BY 2 DESC
-LIMIT 100
 ```
+
+<iframe src="https://dune.com/embeds/2914898/4844304" width="100%" height="400" frameborder="0"></iframe>
 
 #### Using smart_dex_traders label to find tokens traded by traders
 
 ```sql
-SELECT tx_from as address,
-       COALESCE(token_bought_symbol,CAST(token_bought_address AS VARCHAR)) as token_amount,
-       SUM(amount_usd) as total_volume,
-       SUM(SUM(amount_usd)) OVER (PARTITION BY COALESCE(token_bought_symbol,CAST(token_bought_address AS VARCHAR))) as total_token_volume
+SELECT COALESCE(token_bought_symbol,CAST(token_bought_address AS VARCHAR)) as token_traded,
+       COUNT(DISTINCT tx_from) as address_count,
+       ARRAY_AGG(tx_from) as address_list,
+       SUM(amount_usd) as total_volume
 FROM dex.trades
 WHERE tx_from IN (select from_hex(address) from labels.smart_dex_traders)
+AND token_bought_address != 0x0000000000000000000000000000000000000000
 AND block_time >= NOW() - interval '14' day
-GROUP BY 1,2
+GROUP BY 1
 HAVING SUM(amount_usd) >= 100000
-ORDER BY 4 DESC,3 DESC
+ORDER BY 4 DESC
 ```
+
+<iframe src="https://dune.com/embeds/2914807/4844172" width="100%" height="400" frameborder="0"></iframe>
+
