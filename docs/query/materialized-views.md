@@ -4,7 +4,7 @@ description: This feature in DuneSQL allows you to schedule a query and save it'
 ---
 
 !!! warning
-    THIS FEATURE IS CURRENTLY IN ALPHA. There may still be breaking changes, we welcome your feedback anytime. Thank you for helping us test the feature!
+  This feature is in beta and currently only for paid users. There may still be breaking changes, we welcome your feedback anytime. Thank you for helping us test the feature!
 
 ## Overview
 
