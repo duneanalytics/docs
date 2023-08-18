@@ -13,6 +13,10 @@ This table standardizes and normalizes the trading data across virtually all rel
 
 The scripts that generate the table dex.trades can be found in this [public github](https://github.com/duneanalytics/spellbook/tree/main/models/dex) repo.
 
+## Indexed Chains And Platforms
+
+<iframe src="https://dune.com/embeds/2924534/4857165" width="100%" height="400" frameborder="0"></iframe>
+
 ## Column Data
 
 | Column Name             | Data Type         | Description                                                                              |
@@ -51,6 +55,9 @@ AND blockchain = 'ethereum'
 AND block_time >= NOW() - interval '24' hour
 ```
 
+<iframe src="https://dune.com/embeds/2924567/4857210" width="100%" height="400" frameborder="0"></iframe>
+
+
 #### Get top 100 uniswap pairs' volume from uniswap in the past 3 days
 
 ```sql
@@ -66,9 +73,13 @@ ORDER BY 2 DESC -- order by total_volume
 limit 100 -- 100 rows
 ```
 
+<iframe src="https://dune.com/embeds/2924570/4857215" width="100%" height="400" frameborder="0"></iframe>
+
+
 #### Get top 100 traders' volume of erc20 token using dex.trades
 
 ```sql
+-- top traders trading wBTC in the past 7 days
 SELECT tx_from as address,
        SUM(amount_usd) as total_volume,
        SUM(CASE WHEN "token_bought_address" = 0x2260fac5e5542a773aa44fbcfedf7c193bc2c599 THEN 1 END) as buy_count,
@@ -83,5 +94,9 @@ GROUP BY 1
 ORDER BY 2 DESC
 limit 100
 ```
+
+<iframe src="https://dune.com/embeds/2924573/4857218" width="100%" height="400" frameborder="0"></iframe>
+
+
 
 

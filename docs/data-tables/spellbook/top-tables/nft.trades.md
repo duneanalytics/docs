@@ -9,6 +9,11 @@ The culmination of this is a dataset which makes it extremely easy to query for 
 
 You can find the specifications for nft.trades on our [Spellbook documentation](https://dune.com/spellbook#!/model/model.spellbook.nft_trades).
 
+## Indexed Chain And Projects
+
+<iframe src="https://dune.com/embeds/2923934/4856112" width="100%" height="400" frameborder="0"></iframe>
+
+
 ## Column Data
 
 | Column Name             | Data Type         | Description                                              |
