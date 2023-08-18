@@ -5,20 +5,20 @@ description: This Page describes the old query engines that will soon be deprece
 
 ## Dune's Query Engines
 
-Dune currently supports three different query engines:  
+Dune formerly supported three different query engines:  
 
 - DuneSQL  
-- SparkSQL  
-- PostgreSQL  
+- SparkSQL (shut down) 
+- PostgreSQL (shut down) 
 
-The SparkSQL and PostgreSQL query engines are being deprecated and will be replaced by DuneSQL. You can read more about the decisions to sunset the old query engines in the [announcement post](https://dune.com/blog/introducing-dune-sql).
+The SparkSQL and PostgreSQL query engines were deprecated and are replaced by DuneSQL. You can read more about the decisions to sunset the old query engines in the [announcement post](https://dune.com/blog/introducing-dune-sql).
 
 **You should use the [migration tool](migration-tool.md) to try and translate your queries. If you run into issues, please let us know by [creating an issue](https://github.com/duneanalytics/harmonizer/issues).**
 
 ## Sunsetting Schedule
 
 We are progressively disabling the ability to create new queries on the old query engines. You can read up on the stages of that in the table below. 
-The final date of the sunsetting will be **30/07/2023** when the old query engines will no longer receive new data and all executions will stop.
+The final date of the sunsetting was **30/07/2023**. The old query engines will no longer receive new data and there is no more executions.
 
 
 ### SparkSQL
