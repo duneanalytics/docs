@@ -86,9 +86,7 @@ Labels are stored in the new `labels.all` table which has the following schema:
 
 ## Using labels
 
-#### Using label to identify top token holders
-
-Using labels to identify top CRV holders
+#### Identifying CRV Holders Using Labels
 
 ```sql
 SELECT address,
