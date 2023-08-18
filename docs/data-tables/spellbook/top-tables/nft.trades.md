@@ -129,15 +129,15 @@ ORDER BY 1 DESC,4 DESC
 #### That utilize parameters
 
 <div class="cards grid" markdown>
-- [NFT by @0xBoxer](https://dune.com/0xBoxer/NFT)
-- [NFT Sales Overview by Project by @rantum](https://dune.com/rantum/NFT-Sales-Overview-by-Project)
+- [NFT Business metrics by @0datawolf](https://dune.com/0xdatawolf/nft-business-metrics)
+- [NFT Custom Project @sealaunch](https://dune.com/sealaunch/abc)
 </div>
 
 #### That look across the entire Ecosystem
 
 <div class="cards grid" markdown>
-- [NFT Collection Dashboard by @rantum](https://dune.com/rantum/NFT-Collection-Dashboard)
-- [NFT by @sealaunch](https://dune.com/sealaunch/NFT)
+- [NFT market overview by @hildobby](https://dune.com/hildobby/NFTs)
+- [NFT Top Collections by @sealaunch](https://dune.com/sealaunch/NFT-Top-Collections)
 </div>
 
 ## Ser, my platform is not indexed
