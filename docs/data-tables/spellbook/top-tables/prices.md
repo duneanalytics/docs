@@ -54,32 +54,32 @@ We created a table that creates price feeds based on decentralized exchange trad
 
 **Please keep in mind that this script can generate wrong prices in rare cases.**
 
-This table is very resource intensive and can therefore only be updated every few hours, please keep that in mind when utilizing it. Also the resolution is only hourly, so if you need minutely prices do refer to [`prices.usd`](prices.md).
-
 The logic of how this table works can be accessed in our [public github](https://github.com/duneanalytics/spellbook/blob/main/models/dex/dex_prices.sql) repo.
 
-This script generates median hourly prices based on data from decentralized exchanges found in `dex.trades`. It will assign asset prices based on a trading pair which has a pricefeed in `prices.usd`.
+As there could be potential inaccuracy of prices derived from dex.trades due to low liquidity/high slippage trades. Hence, it is recommended to use [`prices.usd`](prices.md),which prices are sourced directly from Coinpaprika API.
 
-Let's take the $SPELL/ETH Pool for example.
+## How Dex.prices work?
+
+For example, let's assume there is a liquidity pool with the token pair $DUNE/ETH
 
 * $ETH price is contained in `prices.usd`
-* $SPELL price is not contained in `prices.usd`
+* $DUNE price is not contained in `prices.usd`
 
 In order to get the $SPELL price, the script will dynamically calculate the price of $SPELL based on the price of $ETH that was exchanged for it.
 
-e.g. 5 $ETH were exchanged for 1,086,083 $SPELL.
+e.g. 1337 $ETH were exchanged for 69.42 $DUNE.
 
 Dex.trades will assign a `usd_amount` to this trade based on the $ETH price data in `prices.usd`.
 
-That `usd_amount` is $23,498.
+That `usd_amount` is $13,337,000.
 
-`5 * price of ETH (4.699,6) = $23,498`
+`1337 * price of ETH ($10,000) = $13,370,000`
 
 Calculating the price of $SPELL is now as simple as dividing the amount of tokens exchanged with the `usd_amount` recorded in `dex.trades`.
 
-`$23,498/1,086,083 ≈ $0,02163`
+`$13,337,000/69.42 ≈ $192,595.79`
 
-We now have successfully calculated the price of 1 $SPELL.
+We now have successfully calculated the price of 1 $DUNE.
 
 In order to correct for extreme outliers and in order for this table to be performant the script then aggregates all recorded data into one `median_price` per hour.
 
