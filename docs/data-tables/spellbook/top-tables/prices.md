@@ -44,7 +44,7 @@ where blockchain = 'ethereum'
 and symbol IN ('WETH','WBTC','USDC','USDT')
 ```
 
-<iframe src="https://dune.com/embeds/2914542/4843862" width="100%" height="400" frameborder="0"></iframe>
+<iframe src="https://dune.com/embeds/2914542/4843862" width="100%" height="300" frameborder="0"></iframe>
 
 
 
@@ -63,8 +63,10 @@ As there could be potential inaccuracy of prices derived from dex.trades due to 
 For example, there is a liquidity pool with the token pair $WBTC/ETH
 
  Assuming the following:
-*   $ETH price is contained in `prices.usd`
-*   $WBTC price is not contained in `prices.usd`
+
+ - $ETH price is contained in `prices.usd`
+
+ - $WBTC price is not contained in `prices.usd`
 
 In order to get the $WBTC price, the script will dynamically calculate the price of $WBTC based on the price of $ETH that was exchanged for it.
 
@@ -96,9 +98,10 @@ WHERE blockchain = 'ethereum'
 AND contract_address = 0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
 AND hour >= NOW() - interval '3' day
 GROUP BY 1,2
+ORDER BY 1 DESC
 ```
 
-<iframe src="https://dune.com/embeds/2914564/4843885" width="100%" height="400" frameborder="0"></iframe>
+<iframe src="https://dune.com/embeds/2914564/4843885" width="100%" height="300" frameborder="0"></iframe>
 
 ### Known issues
 
