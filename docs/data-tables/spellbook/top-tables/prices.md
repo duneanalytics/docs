@@ -60,26 +60,27 @@ As there could be potential inaccuracy of prices derived from dex.trades due to 
 
 ## How Dex.prices work?
 
-For example, let's assume there is a liquidity pool with the token pair $DUNE/ETH
+For example, there is a liquidity pool with the token pair $WBTC/ETH
 
-* $ETH price is contained in `prices.usd`
-* $DUNE price is not contained in `prices.usd`
+ Assuming the following:
+*   $ETH price is contained in `prices.usd`
+*   $WBTC price is not contained in `prices.usd`
 
-In order to get the $SPELL price, the script will dynamically calculate the price of $SPELL based on the price of $ETH that was exchanged for it.
+In order to get the $WBTC price, the script will dynamically calculate the price of $WBTC based on the price of $ETH that was exchanged for it.
 
-e.g. 1337 $ETH were exchanged for 69.42 $DUNE.
+e.g. 10 $ETH were exchanged for 0.69 $WBTC.
 
 Dex.trades will assign a `usd_amount` to this trade based on the $ETH price data in `prices.usd`.
 
-That `usd_amount` is $13,337,000.
+That `usd_amount` is $17,000.
 
-`1337 * price of ETH ($10,000) = $13,370,000`
+`10 * price of ETH ($1,700) = $17,000`
 
-Calculating the price of $SPELL is now as simple as dividing the amount of tokens exchanged with the `usd_amount` recorded in `dex.trades`.
+Calculating the price of $WBTC is now as simple as dividing the amount of tokens exchanged with the `usd_amount` recorded in `dex.trades`.
 
-`$13,337,000/69.42 ≈ $192,595.79`
+`$17,000 /0.69 ≈ $24,637.68`
 
-We now have successfully calculated the price of 1 $DUNE.
+We now have successfully calculated the price of 1 $WBTC.
 
 In order to correct for extreme outliers and in order for this table to be performant the script then aggregates all recorded data into one `median_price` per hour.
 
