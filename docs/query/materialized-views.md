@@ -3,8 +3,8 @@ title: Materialized Views
 description: This feature in DuneSQL allows you to schedule a query and save it's results as a table, to be used in another query. This powerful functionality enables you to take the query view feature even further.
 ---
 
-!!! warning
-    This feature is in beta and currently only for paid users. There may still be breaking changes, we welcome your feedback anytime. Thank you for helping us test the feature!
+!!! Info
+    This feature is in beta and currently only for [paid users](https://dune.com/pricing). There are still improvements to be made and we welcome your feedback anytime!
 
 ## Overview
 
