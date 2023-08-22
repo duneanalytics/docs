@@ -58,7 +58,7 @@ We still have several more things to work on. Things we know that aren’t worki
 
 1. Hiding/showing a materialized view in the right context based on the context switcher might not work perfectly.
 2. Marking a materialized view as private does not work yet. Private materialized views will be available on premium tier plans and above in early September.
-4. All non-private materialized views can be seen by other users (and later the public)
+3. All non-private materialized views can be seen by other users (and later the public)
 
 **Matviews are marked separately in your query list and can also be filtered on.**
 
