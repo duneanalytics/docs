@@ -43,12 +43,12 @@ Some key things to keep in mind:
    
 ## To query a materialized view
 
-Wait for materialized view to finish creation first. It should be roughly similar to time the query normally takes to execute - maybe a bit longer due to time it takes to write the new table.
+Wait for a materialized view to finish creation first. It should be roughly similar to the time the query normally takes to execute - maybe a bit longer due to time it takes to write the new table.
 
 Query the materialized view via `dune.<username>.result_<queryId>` (displayed in modal)
 If your username starts with a number, you’ll need to wrap the <username> in quotes i.e. `dune.”123co”.result567`
 
-Eventually, you’ll be able to query by the materialized view name specified during the materialized view creation flow but that doesn’t work yet.
+Eventually, you can query by the materialized view name specified during the materialized view creation flow but that doesn’t work yet.
 
 !!! info
     When you query a materialized view in another query, it does not rerun the materialized view (unlike query views).  
@@ -57,9 +57,8 @@ Eventually, you’ll be able to query by the materialized view name specified du
 We still have several more things to work on. Things we know that aren’t working include:
 
 1. Hiding/showing a materialized view in the right context based on the context switcher might not work perfectly.
-3. Currently there is no way to force refresh a materialized view outside the normally set schedule (we are looking to add this later).
-3. Marking a materialized view as private does not work yet. Private materialized views will be available on premium tier plans and above in late August.
-4. All materialized views can be seen by other alpha testers currently (and later the public)
+2. Marking a materialized view as private does not work yet. Private materialized views will be available on premium tier plans and above in early September.
+4. All non-private materialized views can be seen by other users (and later the public)
 
 **Matviews are marked separately in your query list and can also be filtered on.**
 
