@@ -66,6 +66,6 @@ In addition to leveraging the columnar storage format and using sequentially ord
 
 By following these tips, you can write more efficient queries on DuneSQL with TrinoSQL and optimize the performance of your data processing tasks. Remember that DuneSQL's unique structure, such as the parquet file format and columnar storage, should be taken into account when optimizing your queries to fully benefit from the system's capabilities.
 
-!!! example  "Query still not running? Try materialized views (alpha)"
+!!! example  "Query still not running? Try materialized views (beta)"
 
-    If your query still runs out of memory or time, try taking subquerys of it into materialized views.
+    If your query still runs out of memory or time, try taking subquerys of it into a [materialized views](https://dune.com/docs/query/materialized-views/).
