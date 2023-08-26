@@ -24,10 +24,11 @@ Databases are designed to optimize for the logical view of a table, which is the
 
 - **Data partitioning**: Data partitioning is a technique that divides data into smaller chunks called partitions. This reduces the amount of data that needs to be stored and accessed, which improves performance.
 - **Data indexing**: Data indexing is a technique that creates a data structure called an index. This data structure contains information about the data in a table, which allows the database to quickly find the data it needs.
+- **Data storage layout**: Data storage layout relates to how the data is stored on disk. This includes the file format, how the data is physically stored on disk, and how the data is organized in memory. The right data storage layout can significantly improve performance. 
 - **Data compression**: Data compression is a technique that reduces the size of data by removing redundant information. This reduces the amount of data that needs to be stored and accessed, which improves performance.
 - **Data caching**: Data caching is a technique that stores frequently accessed data in memory. This reduces the amount of data that needs to be stored and accessed, which improves performance.
 
-For the most part, these techniques are employed in the background and are not visible to the user. However, understanding how **data partitioning** and **data indexing** work is essential for writing efficient queries on DuneSQL.
+For the most part, these techniques are employed in the background and are not visible to the user. However, understanding how **data partitioning**, **data indexing** and the **data storage layout** work is essential for writing efficient queries on DuneSQL.
 
 Databases employ these techniques to combat their most significant challenge: **the I/O bound nature of data storage**. I/O bound refers to the fact that the speed of data access is limited by the speed of the storage device. Read speed, the time it takes to load data from storage to memory, is an essential constraint of databases.
 
@@ -41,14 +42,16 @@ Now that we understand how databases work, let's take a look at how DuneSQL work
 
 Dune stores data in parquet files, which are first and foremost columnar storage files, but also ultilize some of the advantages of row-oriented storage. Data in parquet systems is partitioned by rows into multiple parquet files, and within each file, the data is further partitioned into row groups. However, the pages inside of row groups store data in columns rather than rows. As a result, the database appears row-oriented at a higher level, but it reads data from column-oriented pages when accessing specific values. Additionally, each parquet file contains metadata about the data it stores, mainly **min/max** column statistics for each column. This allows the database to efficiently skip entire parquet files or row groups within files while scanning through a table, provided that the column contains values that are not random and can be ordered.
 
-In a very simplified way, our `ethereum.transactions` table looks like this:
+In a very simplified schematic view, our `ethereum.transactions` table is stored in a parquet file that looks like this:
 
 <p align="center">
   <img src="/docs/query/images/minmax-schema2.jpeg" alt="Parquet file schema" title="Parquet schema" /><br />
   <em>Example of contents of a parquet file</em>
 </p>
 
-The File consists of multiple row groups, each row group contains multiple column chunks, and each column chunk contains multiple pages. The pages are the smallest unit of data that can be read from disk into memory. The column chunks contain the actual data that is needed for the query. Each file has a footer that contains metadata about the data it stores, mainly **min/max** column statistics for each column. This allows the database to efficiently skip entire parquet files or row groups within files while scanning through a table, provided that the column contains values that are not random and can be ordered. **Writing queries that take advantage of this is essential for writing efficient queries on DuneSQL.**  
+Please note that this is a simplified view, usually there are hundreds or thousands of rows in a row group and hundreds of row groups in a parquet file.
+
+The Parquet File consists of multiple row groups, each row group contains multiple column chunks, and each column chunk contains multiple pages. The pages are the smallest unit of data that can be read from disk into memory. The column chunks contain the actual data that is needed for the query. Each file has a footer that contains metadata about the data it stores, mainly **min/max** column statistics for each column. This allows the database to efficiently skip entire parquet files or row groups within files while scanning through a table, provided that the column contains values that are not random and can be ordered. **Writing queries that take advantage of this is essential for writing efficient queries on DuneSQL.**  
  
 
 
@@ -57,11 +60,7 @@ The File consists of multiple row groups, each row group contains multiple colum
   <em>Schematic view of a parquet file</em>
 </p>
 
-An easier way to visualize this is a schematic view of a table and its column. Please note that is a simplified view, usually there are hundredes or thousands of rows in a row group and hundreds of row groups in a parquet file.
-
-
-
-What's important to understand here is that the traditional index structure of a database is not needed in DuneSQL. Instead, the ``min/max`` values of each column are used to efficiently skip entire parquet files or row groups within files while scanning through a table, provided that the column contains values that are not random and can be ordered. This is a key difference between DuneSQL and traditional databases.
+What's important to understand here is that the traditional index structure of a database is not needed in DuneSQL. Instead, the ``min/max`` values of each column are used to efficiently skip entire parquet files or row groups within files while scanning through a table, provided that the column contains values that are not random and can be ordered. This is a key difference between DuneSQL and e.g. Snowflake.
 
 If you query a table in DuneSQL, the system will access the data in the following order:
 
@@ -77,21 +76,107 @@ If you query a table in DuneSQL, the system will access the data in the followin
 The engine will repeat this process for each parquet file and row group that might contain the data needed for the query. Once all the data is read into memory, the system will process the data and return the results to the user.    
 If the query is too large to fit in memory, the data will "spill" from memory to disk. This is called a "spill to disk" and is a common occurrence in databases. This will negatively impact query performance, as reading data from disk is much slower than reading data from memory. To avoid this issue, it's important to write efficient queries that minimize the amount of data that needs to be read into memory.
 
-### 
+### Tips for Writing Efficient Queries on DuneSQL 
 
+To write efficient queries on DuneSQL, it's crucial to use filter conditions based on columns that are are not random and can be ordered. Columns like `block_time` and `block_number` are the best candidates for this, as they are sequentially ordered and can be used to efficiently skip entire parquet files or row groups within files while scanning through a table.
 
+Let's take a look at an example. Say you want to query the `ethereum.transactions` table for a specific transaction hash. The query would usually look like this:
 
+```sql
+SELECT * FROM ethereum.transactions
+WHERE hash = 0xce1f1a2dd0c10fcf9385d14bc92c686c210e4accf00a3fe7ec2b5db7a5499cff;
+```
 
+using the steps above the query engine would do the following:
 
-To write efficient queries on DuneSQL, it's crucial to use filter conditions based on columns that are sequentially ordered and correlated with the file's sorting. Columns like `block_time` and `block_number` are suitable for this purpose. For instance, consider the following optimized query:
+1. **File Level:** The query engine tries to locate the specific parquet files associated with the table or a portion of the table being queried. It reads the metadata contained in the footer of each parquet file to determine whether it might contain the data needed for the query. It will try to skip any files that do not contain the data needed for the query. However, since the query is based on a random hash, the engine will not be able to skip any files. It will have to read all the files associated with the table.
+
+We can stop going through the steps here, as the query engine will have to read almost all the files and row groups associated with the table. This will negatively impact query performance, as having to read all pages from all column chunks in all row groups in all parquet files is very inefficient. There might be some very unlikely edge cases where the engine can skip some files, but in general, the engine will have to read all the files associated with the table. An example of a row group or column chunk that can be skipped for this query is if the hash column for a row group or file miraculously contains only values from ``0xd... - 0xz...``. In that case, since our hash is ``0xc...``, there is no way that the row group or file contains the hash we are looking for, and the engine can skip it. However, this is very unlikely to happen, and most likely the engine will have to read all the files associated with the table.
+
+Now let's take a look at a query that uses a column that is not random and can be ordered, such as `block_number`:
 
 ```sql
 SELECT * FROM ethereum.transactions
 WHERE block_number = 14854616
-AND hash = 0xce1f1a2dd0c10fcf9385d14bc92c686c210e4accf00a3fe7ec2b5db7a5499cff;
+AND hash = 0xce1f1a2dd0c10fcf9385d14bc92c686c210e4accf00a3fe7ec2b5db7a5499cff
+``` 
+
+using the steps above the query engine would do the following:
+
+1. **File Level:** The query engine tries to locate the specific parquet files associated with the table or a portion of the table being queried. It reads the metadata contained in the footer of each parquet file to determine whether it might contain the data needed for the query. In this case, the engine will check whether the `block_number` we are searching for is within the range of `min/max` values for the `block_number` column in the footer of each parquet file. For example, if the engine starts reading the first parquet file and sees that the `min/max` values for the `block_number` column are `14854600` and `14854620`, it will know that the file does not contain the data needed for the query. It will skip the file and move on to the next one. This will significantly reduce the amount of data that needs to be read into memory, which will improve query performance.
+
+2. **Row Group Level:** Once the appropriate Parquet file is identified, the engine will access the relevant row groups within the file, based on the query conditions. Again, it will first read the metadata of each row group to determine whether it might contain the data needed for the query. If the row group does not contain the data needed for the query, it will skip the row group and move on to the next one. This will further reduce the amount of data that needs to be read into memory, which will improve query performance.
+
+3. **Column Chunk Level:** Once the appropriate row group is identified, the system will access the relevant column chunks within the row group, based on the query conditions. The column chunks contain the actual data that is needed for the query. The database will only read the column chunks that contain the data needed for the query. It will not read the logical row - saving time and resources.
+
+4. **Page Level:** Within the column chunk, the data is further segmented into pages. The database reads these pages into memory, benefiting from any compression or encoding optimizations.
+
+As you can see, the query engine can skip entire parquet files and row groups within files while scanning through a table, provided that the column contains values that are not random and can be ordered. This is why it's important to use filter conditions based on columns that are not random and can be ordered, such as `block_number` and `block_time`.
+
+The above example is pretty theoretical, as you will most likely not be querying the `ethereum.transactions` table for a specific transaction hash. However, the same principle applies to other tables and queries. For example, if we want to query `ethereum.transactions` for all transactions to a specific smart contract, we can use `block_number` or `block_time` to skip entire parquet files and row groups within files while scanning through the table. 
+
+Usually you would write a query like this:
+
+```sql
+Select 
+  *
+FROM ethereum.traces
+WHERE to = 0x510100D5143e011Db24E2aa38abE85d73D5B2177
 ```
 
-By including the block_number column in the query, the engine can narrow down the search to a specific block, reducing the amount of data scanned and considerably speeding up the query.
+With our new knowledge, we can deduct that this query will be very inefficient, as the engine will have to read almost all the files and row groups associated with the table. Instead, we can write the query like this:
+
+```sql
+Select 
+  *
+FROM ethereum.traces
+where block_number > 17580247
+and to = 0x510100D5143e011Db24E2aa38abE85d73D5B2177
+```
+
+By including the `block_number` column in the query, the engine can quickly narrow down the search to files and row groups that have a `block_number` greater than `17580247`. This significantly reduces the amount of data that needs to be read, thereby improving query performance.
+
+We can also apply the same principle to join tables. For example, if we want to join the `ethereum.transactions` on `uniswap_v3_ethereum.Pair_evt_Swap` table, we can write the query like this:
+
+```sql
+Select
+  to,
+  "from",
+  value,
+  block_time,
+  sqrt_price_x96,
+FROM
+  uniswap_v3_ethereum.Pair_evt_Swap swap
+  join ethereum.transactions t 
+    on swap.evt_tx_hash = t.hash
+    and swap.evt_block_number = t.block_number
+where
+  swap.contract_address = 0x510100D5143e011Db24E2aa38abE85d73D5B2177
+```
+
+By including the `block_number` column in the join condition, the engine can quickly narrow down the search in `ethereum.transactions` to files and row groups that contain the `block_number` contained in a specific row in `uniswap_v3_ethereum.Pair_evt_Swap`. This significantly reduces the amount of data that needs to be read, thereby improving query performance.
+
+Now for variousreasons that only the TrinoSQL developers know, it also makes a difference whether we join `ethereum.transactions` on `uniswap_v3_ethereum.Pair_evt_Swap` or the other way around. The following query will be even faster:
+
+```sql
+Select
+  to,
+  "from",
+  value,
+  block_time,
+  sqrt_price_x96
+FROM ethereum.transactions t
+join uniswap_v3_ethereum.Pair_evt_Swap swap
+  on t.hash = swap.evt_tx_hash
+  and t.block_number = swap.evt_block_number
+where
+  swap.contract_address = 0x510100D5143e011Db24E2aa38abE85d73D5B2177
+```
+
+This join order optimization is related to the size of the tables. **You should always join the smaller table on the bigger table**. In this case, `ethereum.transactions` is much bigger than `uniswap_v3_ethereum.Pair_evt_Swap`, so we should join `uniswap_v3_ethereum.Pair_evt_Swap` on `ethereum.transactions`. 
+
+Additionally, to enjoy these optimizations, **you will have to use inner joins**. Left joins and right joins will not benefit in the same way.
+
 
 ### Exceptions
 A notable exception to the general rule of using sequentially ordered columns is the Solana dataset `account_activity`, which is ordered by `account_keys` rather than `block_time`. This allows for utilizing the min/max values for `account_keys` when building queries based on raw Solana data.
