@@ -4,3 +4,4 @@ nav:
 - Check Execution Status: execution-status.md
 - Get Execution Results: execution-results.md
 - Get Latest Query Results: latest-results.md
+- Import to Google Sheets: import-sheets.md

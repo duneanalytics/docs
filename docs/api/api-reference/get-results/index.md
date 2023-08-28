@@ -9,6 +9,7 @@ Learn how to get query results, including how to check status of an execution an
 - [Get Execution Status](../get-results/execution-status.md)
 - [Get Execution Results](../get-results/execution-results.md)
 - [Get Latest Query Results](../get-results/latest-results.md)
+- [Import to Google Sheets](../get-results/import-sheets.md)
 </div>
 
 
