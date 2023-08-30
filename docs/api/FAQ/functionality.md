@@ -8,7 +8,7 @@ description: Answers to questions about how the Dune API works.
 
 ### How many Requests Per Minute can I make?
 
-The API is currently set to a rate limit of 60 requests per minute. This will soon be set to match the rate limiits specified in the varying API plan tiers. 
+The API request per limit and vary by plan, specified on our [pricing page](https://dune.com/pricing).
 
 ### Are there specified SLAs?
 
@@ -41,11 +41,6 @@ The Dune API gives you programmatic access to the capabilities and data sets tha
 ### What is the execution timeout limit and can I request a longer limit?
 
 The query execution timeout limit matches the Dune web app - 30 minutes.
-
-### Which query engine should I use with the API?
-
-We recommend using the API with v2 Dune SQL as we’re slowly deprecating usage and support of the old v1 engine and v2 Spark SQL.
-
 
 ## Check Execution Status
 
