@@ -6,7 +6,7 @@ description: Here's how to get or retrieve query info via Dune API
 !!! abstract "ENDPOINTS"
     GET /api/v1/query/{{query_id}}
 
-!!! success end "Note" 
+!!! success end "Note"
     This endpoint is included only in our Premium subscription plans.
 
 This endpoint will get details about a query (public, owned by the user, or a team the user belongs to), given the query ID. In the future we will likely also support getting a specific version, but for now, it returns data for the latest version.
@@ -17,7 +17,7 @@ User will be permissioned to get any public queries, private queries user owns, 
 
 ### cURL
 ```cURL
-curl -X GET "https://api.dune.com/api/v1/query/{{query_id}}/execute"   \
+curl -X GET "https://api.dune.com/api/v1/query/{{query_id}}"   \
   -H X-Dune-API-key: {{api_key}}
 ```
 
