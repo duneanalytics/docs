@@ -27,5 +27,13 @@ We are still building out the infrastructure for this endeavor and can therefore
     Reservoir is a developer platform that lets you interact with the NFT market using a single toolkit. Reservoir uploads additional NFT data to Dune.  
     
     [→ Reservoir](reservoir/index.md)
+
+-   #### Neynar
+
+    ---
+
+    Neynar is the development platform for web3 social protocols. Neynar makes social protocol data available on Dune.   
+    
+    [→ Neynar](neynar/index.md)
     
 </div>
