@@ -24,7 +24,7 @@ We are still building out the infrastructure for this endeavor and can therefore
 
     ---
 
-   Reservoir is a developer platform that lets you interact with the NFT market using a single toolkit. Reservoir uploads additional NFT data to Dune.  
+    Reservoir is a developer platform that lets you interact with the NFT market using a single toolkit. Reservoir uploads additional NFT data to Dune.  
     
     [→ Reservoir](reservoir/index.md)
     
