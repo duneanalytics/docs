@@ -34,6 +34,6 @@ We are still building out the infrastructure for this endeavor and can therefore
 
     Neynar is the development platform for web3 social protocols. Neynar makes social protocol data available on Dune.   
     
-    [→ Neynar](neynar/index.md)
+    [→ Farcaster](neynar/farcaster/index.md)
     
 </div>

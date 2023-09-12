@@ -7,22 +7,26 @@ description: >-
 [Farcaster](https://farcaster.xyz) - a protocol for decentralized social apps
 
 **Note:** Neynar is the development platform for web3 social protocols. Neynar makes Farcaster protocol data available on Dune. Check out on [neynar.com](https://neynar.com) for Farcaster hubs, APIs or processed data reach out to the team.
+
 **Website:** [neynar.com](https://neynar.com)
+
 **Docs:** [docs.neynar.com](https://docs.neynar.com)
-**Reach the team:** [t.me/rishavmukherji](https://t.me/rishdoteth)
+
+**Reach the team:** [Telegram](https://t.me/rishdoteth)
+
 
 Data available:
 <div class="grid cards" markdown>
 
-- #### casts
+-   #### casts
 
-  ---
+    ---
 
-  All casts on the Farcaster protocol.
+    All casts on the Farcaster protocol.
 
-  [→ Casts](casts.md)
+    [→ Casts](casts.md)
 
-- #### fids
+-   #### fids
 
   ---
 
@@ -30,60 +34,60 @@ Data available:
 
   [→ FIDs](fids.md)
 
-- #### fnames
+-   #### fnames
 
-  ---
+    ---
 
-  Usernames for FIDs on the protocol.
+    Usernames for FIDs on the protocol.
 
-  [→ Fnames](fnames.md)
+    [→ Fnames](fnames.md)
 
-- #### links
+-   #### links
 
-  ---
+    ---
 
-  Follower and following graph on Farcaster.
+    Follower and following graph on Farcaster.
 
-  [→ Links](links.md)
+    [→ Links](links.md)
 
-- #### reactions 
+-   #### reactions 
 
-  ---
+    ---
 
-  Likes and recast events on Farcaster.
+    Likes and recast events on Farcaster.
 
-  [→ Reactions](reactions.md)
+    [→ Reactions](reactions.md)
 
-- #### signers
+-   #### signers
 
-  ---
+    ---
 
-  Signers for users on Farcaster.
+    Signers for users on Farcaster.
 
-  [→ Signers](signers.md)
+    [→ Signers](signers.md)
 
-- #### storage
+-   #### storage
 
-  ---
+    ---
 
-  Storage units for Farcaster users.
+    Storage units for Farcaster users.
 
-  [→ Storage](storage.md)
+    [→ Storage](storage.md)
 
-- #### user_data
+-   #### user_data
 
-  ---
+    ---
 
-  User information for Farcaster users.
+    User information for Farcaster users.
 
-  [→ User Data](user_data.md)
+    [→ User Data](user_data.md)
 
-- #### verifications
+-   #### verifications
 
-  ---
+    ---
 
-  Ethereum wallet addresses connected to Farcaster profiles.
+    Ethereum wallet addresses connected to Farcaster profiles.
 
-  [→ Verifications](verifications.md)
+    [→ Verifications](verifications.md)
 
 </div>
