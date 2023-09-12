@@ -6,7 +6,7 @@ description: >-
 # Farcaster
 [Farcaster](https://farcaster.xyz) - a protocol for decentralized social apps
 
-**Note:** Neynar is the development platform for web3 social protocols. Neynar makes Farcaster protocol data available on Dune. Check out on [neynar.com](https://neynar.com) for Farcaster hubs, APIs or processed data reach out to the team.
+**Note:** Neynar is the development platform for web3 social protocols. Neynar makes Farcaster protocol data available on Dune. Check out [neynar.com](https://neynar.com) for Farcaster hubs, APIs or other processed data.
 
 **Website:** [neynar.com](https://neynar.com)
 
@@ -28,11 +28,11 @@ Data available:
 
 -   #### fids
 
-  ---
+    ---
 
-  User IDs associated with users on the Farcaster protocol.
+    User IDs associated with users on the Farcaster protocol.
 
-  [→ FIDs](fids.md)
+    [→ FIDs](fids.md)
 
 -   #### fnames
 

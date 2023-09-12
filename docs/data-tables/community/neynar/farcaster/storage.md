@@ -1,8 +1,6 @@
 # Storage
 
-## **Storage units for Farcaster users**
-
-### **farcaster.storage**
+### **dune.neynar.dataset_storage**
 
 This table contains data about the storage units available for users on the Farcaster protocol.
 

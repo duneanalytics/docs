@@ -1,8 +1,6 @@
 # Verifications
 
-## **Ethereum wallet addresses connected to Farcaster profiles**
-
-### **neynar.verifications**
+### **dune.neynar.dataset_verifications**
 
 This table contains data about the Ethereum wallet addresses connected to Farcaster profiles.
 
