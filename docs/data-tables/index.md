@@ -6,7 +6,7 @@ title: Tables and Chains Overview
 
 Dune ingests data from [node providers](https://www.quicknode.com/case-study/dune-analytics) to directly fill our **raw tables** for each chain. This data is then decoded using contract ABIs to provide easier to work with **decoded tables**. Then we create abstracted tables that standardize and aggregate the data (from all other tables) - giving you the easiest to work with **spell tables**. 
 
-We also ingest data from **community providers** like [Reservoir](community/reservoir/index.md) and [Flashbots](community/flashbots/index.md), which you can think of as spell level abstractions.
+We also ingest data from **community providers** like [Reservoir](community/reservoir/index.md), [Neynar](community/neynar/farcaster/index.md) and [Flashbots](community/flashbots/index.md), which you can think of as spell level abstractions.
 
 !!! suggestion "Easy Tables"
     We highly recommend you use spellbook and decoded tables first, and then if you can't find the data you want try raw tables.
