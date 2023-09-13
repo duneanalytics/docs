@@ -271,11 +271,8 @@ Returns the index of the first occurrence of a given bytearray or string (or 0 i
 
 
 ```sql
--- search for 0x6cc2 and replaced with 0xabcd
--- 0xc02aaa39b223fe8d0a0e5c4f27ead9083c75abcd as output
-SELECT bytearray_replace('0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
-                         '0x6cc2',
-                         '0xabcd')   
+-- search for '0x6cc2' and return its position
+SELECT bytearray_position('0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2','0x6cc2') 
 ```
 
 #### bytearray_replace()
