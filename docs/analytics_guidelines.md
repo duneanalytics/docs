@@ -14,7 +14,7 @@ To build your reputation as an expert wizard, you must stay centered on what you
 
 Once you've learned [basic SQL and blockchain concepts](https://web3datadegens.substack.com/p/a-basic-wizard-guide-to-dune-sql), you're ready to start doing your own end-to-end analysis. It's easy to get lost in an ever-expanding web of tables and analysis - so here are some top tips on scoping your work. 
 
-When looking into a protocol, you'll need to understand the contract architecture and context. That starts with functions, events, and wallets overviews. There is a [quickstart dashboard](https://dune.com/duniversity/contract-quickstart) built just for this, you can see a walkthrough analyzing Opensea [here](https://web3datadegens.substack.com/p/how-to-start-analyzing-any-web3-protocol). 
+When looking into a protocol, you'll need to understand the contract architecture and context. That starts with functions, events, and wallets overviews. There is a [quickstart dashboard](https://dune.com/ilemi/contract-quickstart) built just for this, you can see a walkthrough analyzing Opensea [here](https://web3datadegens.substack.com/p/how-to-start-analyzing-any-web3-protocol). 
 
 Remember that no protocol lives in isolation - there is always some mix of onchain events happening. That could be some new airdrop, a new upstream/downstream protocol integration, large whales making moves, governance changes in protocol parameters, and more. Once you have a solid understanding of protocol history in usage, user, and integration trends, you're ready to start building some metrics.
 
