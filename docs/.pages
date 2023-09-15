@@ -1,7 +1,7 @@
 nav:
 - index.md
 - quickstart.md
-- analytics_guidelines.md
+- Learning Resources: learning
 - Migrating To DuneSQL: migrations
 - App: app
 - Data Tables: data-tables

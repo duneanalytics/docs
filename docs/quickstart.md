@@ -17,7 +17,7 @@ This guide will help you get started on Dune in five minutes. We'll walk you thr
 2. Create a visualization
 3. Present your data
 
-Dune has many more features, but these are the basics you'll need to get started. If you're looking for more advanced guides, check out the [Analytics Guidelines](analytics_guidelines.md) and [Data Tables](data-tables/index.md) sections.
+Dune has many more features, but these are the basics you'll need to get started. If you're looking for more advanced guides, check out the [Analytics Guidelines](./learning/index.md) and [Data Tables](data-tables/index.md) sections.
 
 **Prerequisites:**   
 - You'll need to have a Dune account to follow along. If you don't have one, you can [sign up here](https://dune.com/auth/register).  
@@ -101,4 +101,4 @@ Check out these resources to learn more about Dune:
 
 Join the community and learn together [in Discord](https://discord.com/invite/ErrzwBz) by participating in the `#🐥︱beginners` and `#🙋︱query-questions` channels
 
-And when you feel ready to do advanced analysis, check out the [next guide](analytics_guidelines.md)
+And when you feel ready to do advanced analysis, check out the [next guide](./learning/index.md)
