@@ -5,31 +5,14 @@ description: On Dune, we parse all message calls and transactions made to smart 
 
 Smart contracts generally have functions that are able to be called by either an externally owned account(EOA) or other smart contracts. Functions can be anything from a simple state read and return to changing multiple states and invoking message calls to other smart contracts.
 
-On Dune, we parse all message calls and transactions made to smart contracts in their own tables. The tables are then accordingly named:
-
-=== "V2 Engine (Spark SQL)"
-
-    `[projectname_blockchain].contractName_call_functionName`
-
-=== "V1 Engine (PosgreSQL)"
-
-    `[projectname]."contractName_call_functionName"`
+On Dune, we parse all message calls and transactions made to smart contracts in their own tables. The tables are then accordingly named: `[projectname_blockchain].contractName_call_functionName`.
 
 This is either done on an individual contract level like for the uniswap v3 factory, or a class of contracts like the uniswap v3 pairs.
 
-For example, when a uniswap v3 pool gets created via the [uniswap v3 factory](https://etherscan.io/address/0x1f98431c8ad98523631ae4a59f267346ea31f984#code) (on Ethereum) function `createPool`, Dune will record that transaction in the table:
-
-=== "V2 Engine (Spark SQL)"
-
-    `uniswap_v3_ethereum.Factory_call_createPool`
+For example, when a uniswap v3 pool gets created via the [uniswap v3 factory](https://etherscan.io/address/0x1f98431c8ad98523631ae4a59f267346ea31f984#code) (on Ethereum) function `createPool`, Dune will record that transaction in the table `uniswap_v3_ethereum.Factory_call_createPool`
 
     ![type:video](https://dune.com/embeds/1616145/2679669/79f2a210-959d-4308-9dc3-7578cc898e9d)
 
-=== "V1 Engine (PosgreSQL)"
-
-    [`uniswap_v3."Factory_call_createPool"`]
-    
-    ![type:video](https://dune.com/embeds/1616134/2679651/af9175b5-e1a8-4f25-a275-7bcfbe5edb4c)
 
 This will happen whether this was done by an externally owned account (EOA) through a transaction or a smart contract by the means of a message call.
 
