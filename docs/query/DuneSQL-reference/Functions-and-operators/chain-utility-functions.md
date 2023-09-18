@@ -1,4 +1,4 @@
-# Chain Utility Functions
+W# Chain Utility Functions
 
 Dune SQL offers a series of functions designed to ease some common tasks when working with blockchain data.
 
