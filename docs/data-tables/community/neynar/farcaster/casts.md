@@ -1,6 +1,6 @@
 # Casts
 
-## **dune.neynar.dataset_casts**
+## **dune.neynar.dataset_farcaster_casts**
 
 This table contains all casts on the Farcaster protocol
 
