@@ -102,18 +102,18 @@ Dune has three query engine sizes: **community**, **medium**, and **large**. The
 
 
 
-#### Community engine
+#### Free engine size
 
 The community engine is the default query engine for all queries on Dune. It is a shared cluster, meaning that it is used by all Dune users. This means that the community cluster can be busy at times, if many users are running queries at the same time. 
 To avoid long loading times and timeouts, we recommend using the medium or large engine for resource-intensive queries.   
 Executions on the community engine are free of charge.
 
-#### Medium engine
+#### Medium engine size
 
 The medium engine is built to handle most queries on Dune. It is cheap, reliable and fast. The medium engine will scale up and down depening on the demand. In contrast to the community engine, that means that running a query on the medium engine will not be affected by other users' queries.   
 Executions on the medium engine cost 10 credits.
 
-#### Large engine
+#### Large engine size
 
 The large engine is built to handle the most resource-intensive queries on Dune. It's blazing fast, reliable and can easily deal with large amounts of data. The large engine also scales up and down depending on the demand. Running a query on the large engine will not be affected by other users' queries.   
 
