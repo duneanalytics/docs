@@ -32,7 +32,8 @@ api_key = os.environ["DUNE_API_KEY"]
 # authentiction with api key
 headers = {"X-Dune-API-Key": api_key}
 
-base_url = f"https://api.dune.com/api/v1/query/"
+query_id = 62608
+base_url = f"https://api.dune.com/api/v1/query/{query_id}"
 params = {
 	"name": "test query",
 	"description": "this is the query description",
