@@ -79,7 +79,7 @@ and arguments:
 ```
 
 #### format_number()
-**``format_number(number, decimal_places)``** → varchar
+**``format_number(number)``** → varchar
 Returns a formatted string using a unit symbol:
 
     SELECT format_number(123456); -- '123K'
