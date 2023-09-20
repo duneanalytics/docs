@@ -25,7 +25,7 @@ curl -X GET "https://api.dune.com/api/v1/query/{{query_id}}/results" -H x-dune-a
 ```
 
 !!!info
-    There is a default 250,000 datapoints limit to make sure you don't accidently spend all your credits in one call. To ignore teh max limit, you can add `ignore_max_datapoints_per_request=true`
+    There is a default 250,000 datapoints limit to make sure you don't accidentally spend all your credits in one call. To ignore the max limit, you can add `ignore_max_datapoints_per_request=true`
 
     ```
     curl -X GET "https://api.dune.com/api/v1/query/{{query_id}}/results\?ignore_max_datapoints_per_request=true" -H x-dune-api-key:{{api_key}}
