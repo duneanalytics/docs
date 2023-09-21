@@ -2,16 +2,41 @@
 title: Tables and Chains Overview
 ---
 
-## The Four Kinds of Tables
 
-Dune ingests data from [node providers](https://www.quicknode.com/case-study/dune-analytics) to directly fill our **raw tables** for each chain. This data is then decoded using contract ABIs to provide easier to work with **decoded tables**. Then we create abstracted tables that standardize and aggregate the data (from all other tables) - giving you the easiest to work with **spell tables**. 
+## Available Chains
 
-We also ingest data from **community providers** like [Reservoir](community/reservoir/index.md), [Neynar](community/neynar/farcaster/index.md) and [Flashbots](community/flashbots/index.md), which you can think of as spell level abstractions.
+Dune currently indexes these chains:
 
-!!! suggestion "Easy Tables"
-    We highly recommend you use spellbook and decoded tables first, and then if you can't find the data you want try raw tables.
+**EVM Chains**
 
-In each section below, you'll find details on how the tables are created and some table definitions/descriptions.
+- Ethereum Mainnet
+- Polygon POS
+- Arbitrum
+- Optimism
+- Base
+- BNB
+- Avalanche C-chain
+- Gnosis Chain
+- Fantom
+- Mainnet Goerli Testnet
+
+**Non-EVM Chains**
+
+- Solana
+- Bitcoin
+
+## Categories of tables
+
+Dune ingests data from [node providers](https://www.quicknode.com/case-study/dune-analytics) to directly fill our **raw tables** for each chain. We further process this raw data into **decoded tables** using the smart contract's ABIs to create an effortless way to query the data.
+
+On top of the raw and decoded tables, we have built a data interpretation layer called **spells**, in which Dune and our community maintain a set of tables that are easy to work with and understand.
+
+We also ingest data from **community providers** like [Reservoir](community/reservoir/index.md), [Neynar](community/neynar/farcaster/index.md) and [Flashbots](community/flashbots/index.md), which ingest data from off-chain sources and combine it with on-chain data to create enhanced tables.
+
+![data categories](../data-tables/images/data_categories.png)
+
+
+**In each section below, you'll find details on how the tables are created and table definitions/descriptions.**
 
 <div class="cards grid" markdown>
 
@@ -20,15 +45,14 @@ In each section below, you'll find details on how the tables are created and som
 
     ---
   
-    Unedited, raw and encoded blockchain data.
+    Raw blockchain data. Includes Transactions, Blocks, Logs, Traces.
   
     [→ Raw data](raw/index.md)
 
 -   #### [Decoded data](decoded/index.md)
 
     ---
-  
-    View the decoded calls and events made to smart contracts. This data is still unedited.
+    Decoded data from smart contracts. This is the easiest way to query data from smart contracts.
   
     [→ Decoded data](decoded/index.md)
 
@@ -44,45 +68,12 @@ In each section below, you'll find details on how the tables are created and som
 
     ---
   
-    Enhanced tables that combine onchain and offchain data together.
+    Data uploaded by selected partners which is not/paritally available on-chain.
   
     [→ Community](community/index.md)
 
 </div>
 
-## Available Chains
-
-Here are the chains we have available to Query in Dune.
-
-**Non-EVM Chains**
-
-- Solana
-
-- Bitcoin
-
-**EVM Chains**
-
-- Ethereum Mainnet
-
-- Gnosis (previously xDai)
-  
-- Polygon (POS)
-  
-- Optimism
-
-- Optimism Stack Rollups (Base)
-  
-- BNB (Binance Smart Chain)
-  
-- Arbitrum
-  
-- Avalanche (c-chain)
-  
-- Goerli (Ethereum)
-  
-- Fantom
-
-### Non-EVM Chains
 #### Solana
 
 Solana is a non-EVM blockchain that aims to have high transaction speeds without sacrificing decentralization. The chain employs a bunch of novel approaches, including the “proof of history” mechanism, which is why you'll find their data is quite different from EVM chains.
