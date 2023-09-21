@@ -5,7 +5,7 @@ title: Tables and Chains Overview
 
 ## Available Chains
 
-**Dune currently indexes these chains:**
+Dune currently indexes these chains:
 
 **EVM Chains**
 
@@ -30,7 +30,16 @@ title: Tables and Chains Overview
 Dune ingests data from [node providers](https://www.quicknode.com/case-study/dune-analytics) to directly fill our **raw tables** for each chain. We further process this raw data into **decoded tables** using the smart contract's ABIs to create an effortless way to query the data.
 
 On top of the raw and decoded tables, we have built a data interpretation layer called **spells**, in which Dune and our community maintain a set of tables that are easy to work with and understand.
+Dune ingests data from [node providers](https://www.quicknode.com/case-study/dune-analytics) to directly fill our **raw tables** for each chain. We further process this raw data into **decoded tables** using the smart contract's ABIs to create an effortless way to query the data.
 
+On top of the raw and decoded tables, we have built a data interpretation layer called **spells**, in which Dune and our community maintain a set of tables that are easy to work with and understand.
+
+We also ingest data from **community providers** like [Reservoir](community/reservoir/index.md), [Neynar](community/neynar/farcaster/index.md) and [Flashbots](community/flashbots/index.md), which ingest data from off-chain sources and combine it with on-chain data to create enhanced tables.
+
+![data categories](../data-tables/images/data_categories.png)
+
+
+**In each section below, you'll find details on how the tables are created and table definitions/descriptions.**
 We also ingest data from **community providers** like [Reservoir](community/reservoir/index.md), [Neynar](community/neynar/farcaster/index.md) and [Flashbots](community/flashbots/index.md), which ingest data from off-chain sources and combine it with on-chain data to create enhanced tables.
 
 ![data categories](../data-tables/images/data_categories.png)
@@ -46,12 +55,14 @@ We also ingest data from **community providers** like [Reservoir](community/rese
     ---
   
     Raw blockchain data. Includes Transactions, Blocks, Logs, Traces.
+    Raw blockchain data. Includes Transactions, Blocks, Logs, Traces.
   
     [→ Raw data](raw/index.md)
 
 -   #### [Decoded data](decoded/index.md)
 
     ---
+    Decoded data from smart contracts. This is the easiest way to query data from smart contracts.
     Decoded data from smart contracts. This is the easiest way to query data from smart contracts.
   
     [→ Decoded data](decoded/index.md)
@@ -69,10 +80,43 @@ We also ingest data from **community providers** like [Reservoir](community/rese
     ---
   
     Data uploaded by selected partners which is not/paritally available on-chain.
+    Data uploaded by selected partners which is not/paritally available on-chain.
   
     [→ Community](community/index.md)
 
 </div>
+
+## Available Chains
+
+Here are the chains we have available to Query in Dune.
+
+**Non-EVM Chains**
+
+- Solana
+
+- Bitcoin
+
+**EVM Chains**
+
+- Ethereum Mainnet
+
+- Gnosis (previously xDai)
+  
+- Polygon (POS)
+  
+- Optimism
+
+- Optimism Stack Rollups (Base)
+  
+- BNB (Binance Smart Chain)
+  
+- Arbitrum
+  
+- Avalanche (c-chain)
+  
+- Goerli (Ethereum)
+  
+- Fantom
 
 ### Non-EVM Chains
 #### Solana
