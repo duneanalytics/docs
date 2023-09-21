@@ -3,11 +3,14 @@ title: Decoded Tables (EVM)
 description: Instead of working with the transactions, logs, and traces in their raw states, on Dune we decode smart contract activity into nice human-readable tables.
 ---
 
-To make it easier to work with smart contracts, Dune also provides decoded data as individual, human readable tables. We use the ABI for smart contracts and the interface standard for standardized token smart contracts (ERC20, ERC721 etc.). We've indexed over 280k contracts as of writing, and you can [submit new contracts](../../../app/decoding-contracts.md).
+**Instead of working with the transactions, logs, and traces in their raw states, on Dune we decode smart contract activity into nice human-readable tables.**
 
-Instead of working with the transactions, logs, and traces in their raw states, on Dune we decode smart contract activity into nice human-readable tables.
+To make it easier to work with smart contracts Dune provides decoded data as individual, decoded tables. We use a contract's ABI and the interface standard for standardized token smart contracts (ERC20, ERC721, ERC1155, etc.) to decode the raw transaction and log data into a decoded and human readable format.   
+We've indexed over 300k contracts as of writing, and we're constantly add new contracts.   
+You can [submit new contracts here.](../../../app/decoding-contracts.md).
 
-We create tables for each event and function defined in the smart contract's ABI(Application Binary Interface). Subsequently, every event, message call or transaction made to that contract is decoded and inserted as a row into these tables.
+
+We create tables for each event and function defined in the smart contract's ABI (Application Binary Interface). Subsequently, every event, message call or transaction made to that contract is decoded and inserted as a row into these tables.
 
 The tables are named accordingly:
 
@@ -15,13 +18,11 @@ The tables are named accordingly:
 
 **function calls:** `[projectname_blockchain].contractName_call_eventName`
 
-As an example, decoded data for the `swap`-event of the Uniswap V2 pair contract on Ethereum is found in the table `uniswap_v2_ethereum.Pair_evt_Swap`.
+As an example, decoded data for the `swap` event of the Uniswap V3 pair contract on Ethereum is found in the table `uniswap_v3_ethereum.Pair_evt_Swap`.
 
-![type:video](https://dune.com/embeds/1616367/2680001/f9d16ba2-9f69-4b84-acaa-6dff2e2de9bd)
+![type:video](https://dune.com/embeds/3032979/5041712)
 
-If a contract has multiple instances, we will decode all of them into the same table, you will be able to identify the specific smart contract using the `contract_address` column. You can find unique contract names/addresses using the `labels.contracts` table.
-
-Since all chain's data resides in one database, but the multichain world is a reality, contracts on Dune have a meta attribute that describes which blockchain this specific table is pulling the data from.
+If a contract has multiple instances, we will decode all of them into the same table, you will be able to identify the specific smart contract using the `contract_address` column.
 
 **Read more about the difference between calls and events here:**
 
@@ -52,16 +53,13 @@ You can check if contracts are already decoded by querying `[blockchain].contrac
 
 ```sql
 Select * from ethereum.contracts --you can change ethereum.contracts to the e.g. optimism.contracts
-where address = '0x429881672b9ae42b8eba0e26cd9c73711b891ca5'
+where address = 0x429881672b9ae42b8eba0e26cd9c73711b891ca5
 ```
 
-![type:video](https://dune.com/embeds/1616434/2680124/eefc0eb8-e335-4a56-86ca-1e4dac39d2d8)
-
-If the contract is not in our database yet, you can submit them here: 
-
-<div class="cards grid" markdown>
-- [dune.com/contracts/new](https://dune.com/contracts/new).
-</div>
+!!! note 
+    If the contract is not decoded yet, you can submit them here:   
+    [dune.com/contracts/new](https://dune.com/contracts/new).
+    
 
 If you want to submit several contracts at the same time, there is also the possibility of submitting a batch of contracts. To do so, please use [this CSV](https://gist.github.com/antonio-mendes/c6a43c22862581674c11462cae230e23) as a template and fill it in with the appropriate information for the contracts you want to decode. Afterwards send the CSV to decoding@dune.com.
 

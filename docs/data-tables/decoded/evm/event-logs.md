@@ -1,56 +1,29 @@
 ---
 title: Event Logs
-description: Smart Contracts emit event logs when certain predefined actions are completed
+description: Smart Contracts emit event logs to record predefined actions that have been executed.
 ---
 
-Smart Contracts emit **event logs** when certain predefined actions are completed. The structure published in these logs is predefined by the developer of the smart contract, the content is dynamically created during the transaction.
+## Introduction
 
-Logs are useful for monitoring, alerting and in general keeping track of what happens inside of a smart contract. Logs are your best friend as a data analyst since they reliably present you with data that is intended to be analyzed post factum. If you ever want to see which logs _can_ be emitted by a smart contract, you can simply search for the keyword `emit` in the source code of the smart contract.
+Smart Contracts generate **event logs** to document predefined actions once they are executed. These logs possess a structure predetermined by the contract's developer, while the content is dynamically generated during transactions.
 
-We will decode all event logs for smart contracts into tables named accordingly to this schema: 
+Utilizing logs is pivotal for monitoring, alerting, and generally tracking the activities within a smart contract. As a data analyst, logs serve as a reliable tool, offering data that is curated for post-transaction analysis. To ascertain which logs a smart contract _can_ generate, simply search for the `emit` keyword in the contract's source code.
 
-=== "V2 Engine (Spark SQL)"
+We facilitate the decoding of all event logs for smart contracts, organizing them into tables with names corresponding to this schema: `[projectname_blockchain].[contractName]_evt_[eventName]`.
 
-    `[projectname_blockchain].[contractName]_evt_[eventName]`
+Taking the [uniswap v3 factory](https://etherscan.io/address/0x1f98431c8ad98523631ae4a59f267346ea31f984#code) as an example, let us explore the `PoolCreated` event, which is triggered whenever a new Uniswap V3 pool is successfully deployed through the `createPool` function. This event offers insights into various aspects, such as the tokens involved in the pool, the pool's fee tier, and tick spacing. On Etherscan, you can view the transaction's event logs under the [logs tab](https://etherscan.io/tx/0xdeb368592f3de0f2840754bce61d2c3f29cdb3407c63c699052e68a854c71eaa#eventlog). On Dune, this specific event is stored in the `uniswap_v3_ethereum.Factory_evt_PoolCreated` table.   
 
-=== "V1 Engine (PosgreSQL)"
+![type:video](https://dune.com/embeds/3033062/5041840)
 
-    `[projectname]."[contractName]_evt_[eventName]"`
+## Addressing Multiple Instances
 
-Let's stay in the context of the [uniswap v3 factory](https://etherscan.io/address/0x1f98431c8ad98523631ae4a59f267346ea31f984#code) and look at the event that gets emitted upon the creation of a new pool. The event is called `PoolCreated` and gets emitted every time somebody successfully deployed a new Uniswap V3 pool by calling the function `createPool`. The event will readily give us information like the tokens in the pool, the fee tier of this pool and the tick spacing. In Etherscan, you can easily look at the event logs of transaction by opening the [logs tab](https://etherscan.io/tx/0xdeb368592f3de0f2840754bce61d2c3f29cdb3407c63c699052e68a854c71eaa#eventlog). In Dune, this particular event will be stored in the table:
+In situations where a contract has multiple instances, we consolidate all event logs from every instance into a unified table. For instance, all the `swap` events from Uniswap v3 pools (on Ethereum) are catalogued in the `uniswap_v3_ethereum.Pair_evt_Swap` table.
 
-=== "V2 Engine (Spark SQL)"
+![type:video](https://dune.com/embeds/3033067/5041845)
 
-    `uniswap_v3_ethereum.Factory_evt_PoolCreated`
+The `contract_address` column denotes the specific instance of that smart contract that generated the event.
 
-    ![type:video](https://dune.com/embeds/1616189/2679743/677e99ea-ff65-4ae1-8efd-4f1ffedb1a7e)
-
-=== "V1 Engine (PosgreSQL)"
-
-    `uniswap_v3."Factory_evt_PoolCreated"`
-    
-    ![type:video](https://dune.com/embeds/1616199/2679754/0a6da377-6ab2-4bba-8e85-36df09cbd470)
-
-## Multiple Instances
-
-If there is multiple instances of a contract we will collect all event logs across all instances of this smart contract in one table. For example, all uniswap v3 pool `swap` events (on ethereum) are stored in the table:
-
-=== "V2 Engine (Spark SQL)"
-    
-    `uniswap_v3_ethereum.Pair_evt_Swap`
-
-    ![type:video](https://dune.com/embeds/1616209/2679768/9e48417a-165e-40db-90a4-508b96b2bcdf)
-
-=== "V1 Engine (PosgreSQL)"
-
-    `uniswap_v3."Pair_evt_Swap"`
-    
-    ![type:video](https://dune.com/embeds/1616210/2679769/673e672a-b406-49e2-bc68-c566cd8f0b20)
-
- 
- The column `contract_address` indicates as to which smart contract emitted this event.
-
-## Further Reading
+## Additional Resources
 
 <div class="cards grid" markdown>
 - [Understanding event logs on the Ethereum blockchain](https://medium.com/mycrypto/understanding-event-logs-on-the-ethereum-blockchain-f4ae7ba50378)
