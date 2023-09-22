@@ -15,7 +15,7 @@ If you've built your own let us know about it in our [#dune-api Discord Channel]
 
 ## Python
 
-Built by [@bh2smith](https://dune.com/bh2smith) and the team at [Cow Protocol](https://dune.com/cowprotocol), you can find this client on [PyPi](https://pypi.org/project/dune-client/).
+Built by [@bh2smith](https://dune.com/bh2smith), Dune team member [@msf](https://dune.com/msf) and [Cow Protocol](https://dune.com/cowprotocol)'s team, you can find this client on [PyPi](https://pypi.org/project/dune-client/).
 
 Get started quickly with a simple pip install command:
 
