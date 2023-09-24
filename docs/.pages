@@ -5,6 +5,7 @@ nav:
 - Migrating To DuneSQL: migrations
 - App: app
 - Data Tables: data-tables
+- Data Tables COPY: data-tables-copy
 - Query: query
 - Spellbook: spellbook
 - API: api

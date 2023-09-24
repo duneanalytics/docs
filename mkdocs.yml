@@ -64,6 +64,7 @@ extra:
     provider: posthog
     api_key: !ENV POSTHOG_API_KEY
     api_host: !ENV POSTHOG_API_HOST
+    
 extra_css:
   - stylesheets/extra.css
 extra_javascript:

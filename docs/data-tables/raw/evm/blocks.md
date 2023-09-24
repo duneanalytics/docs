@@ -7,32 +7,6 @@ Blocks are the building blocks of blockchains and rollups. A block contains tran
 
 These tables are useful for identifying block activity and transaction changes over time.
 
-## Tables
-
-=== "V2 Engine (Spark SQL)"
-
-    | Chain             | Table                | Notes                                                 |
-    | ----------------  | -------------------- | ----------------------------------------------------- |
-    | Ethereum Mainnet  | `ethereum.blocks`    |                                                       |
-    | Gnosis Chain      | `gnosis.blocks`      | Does not contain `nonce`                              |
-    | Polygon           | `polygon.blocks`     |                                                       |
-    | Optimism          | `optimism.blocks`    | Does not contain `miner` `nonce` `base_fee_per_gas`   |
-    | Optimism (legacy) | `optimism_legacy_ovm1.blocks` | Does not contain `miner` `nonce` `base_fee_per_gas` |
-    | BNB Chain         | `bnb.blocks`         | Does not contain `base_fee_per_gas`                   |
-    | Arbitrum          | `arbitrum.blocks`    | Does not contain `miner` `difficulty` `total_difficulty` `nonce` `size` `base_fee_per_gas` |
-    | Avalanche C-Chain  | `avalanche_c.blocks` | Does not contain `miner` `difficulty`                 |
-    
-
-=== "V1 Engine (PosgreSQL)"
-
-    | Chain                | Table             | Notes                                               |
-    | -------------------  | ----------------- | --------------------------------------------------- |
-    | Ethereum Mainnet     | `ethereum.blocks` |                                                     |
-    | Gnosis Chain (xDai)  | `xdai.blocks`     | Does not contain `nonce`                            |
-    | Polygon              | `polygon.blocks`  |                                                     |
-    | Optimism (OVM 1 & 2) | `optimism.blocks` | Does not contain `miner` `nonce` `base_fee_per_gas` |
-    | BNB Chain (BSC)      | `bsc.blocks`      | Does not contain `base_fee_per_gas`                 |
-
 ## Column Data
 
 ### Example
