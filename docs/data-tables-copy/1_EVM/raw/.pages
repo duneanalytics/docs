@@ -1,0 +1,7 @@
+nav:
+- index.md
+- transactions.md
+- traces.md
+- event-logs.md
+- blocks.md
+- withdrawals.md

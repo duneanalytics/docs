@@ -5,7 +5,7 @@ title: Tables and Chains Overview
 
 ## Available Chains
 
-Dune currently indexes these chains:
+**Dune currently indexes these chains:**
 
 **EVM Chains**
 
@@ -74,6 +74,7 @@ We also ingest data from **community providers** like [Reservoir](community/rese
 
 </div>
 
+### Non-EVM Chains
 #### Solana
 
 Solana is a non-EVM blockchain that aims to have high transaction speeds without sacrificing decentralization. The chain employs a bunch of novel approaches, including the “proof of history” mechanism, which is why you'll find their data is quite different from EVM chains.
