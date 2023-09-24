@@ -4,6 +4,7 @@ nav:
 - App: app
 - API: api
 - Data Tables: data-tables
+- Data Tables COPY: data-tables-copy
 - Query: query
 - Contributing To Spellbook: spellbook
 - Migrating To DuneSQL: migrations
