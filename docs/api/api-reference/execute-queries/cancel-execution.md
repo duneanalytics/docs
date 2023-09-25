@@ -4,7 +4,9 @@ description: Here's how to cancel your Dune API execution requests.
 ---
 
 !!! abstract "ENDPOINTS"
+    ```
     POST /api/v1/execution/{{execution_id}}/cancel
+    ```
 
 This endpoint allows you to cancel an triggered exectuion request. You must pass the **`execution_id`** obtained from making a [Execute Query ID POST](execute-query-id.md) request. Result returns a boolean for whether the execution is successfully canceled.
 

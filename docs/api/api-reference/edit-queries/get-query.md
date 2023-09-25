@@ -4,7 +4,9 @@ description: Here's how to get or retrieve query info via Dune API
 ---
 
 !!! abstract "ENDPOINTS"
-    GET /api/v1/query/{{query_id}}
+	```
+	GET /api/v1/query/{{query_id}}	
+	```
 
 !!! success end "Note"
     This endpoint is included only in our Premium subscription plans.

@@ -4,7 +4,9 @@ description: Here's how to check the status of an execution request.
 ---
 
 !!! abstract "ENDPOINTS"
+    ```
     GET /api/v1/execution/{{execution_id}}/status
+    ```
 
 This endpoint allow you to check the status of an execution request. You must pass the **`execution_id`** obtained from making a [Execute Query ID POST](../execute-queries/execute-query-id.md) request. Returns the status of a query execution along with relevant metadata of the results if the execution is completed.
 
