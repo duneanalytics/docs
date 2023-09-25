@@ -1,11 +1,11 @@
 nav:
 - index.md
 - quickstart.md
-- Learning Resources: learning
-- API: api
 - App: app
+- API: api
 - Data Tables: data-tables
 - Query: query
 - Contributing To Spellbook: spellbook
 - Migrating To DuneSQL: migrations
+- Learning Resources: learning
 - Other Resources: resources
