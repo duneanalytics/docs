@@ -10,6 +10,8 @@ plugins:
   - mkdocs-video
   - social
   # - info
+  - markdown_extensions:
+    - pymdownx.superfences
   - privacy:
       external_links_attr_map:
         target: _blank

@@ -12,35 +12,39 @@ description: Learn everything about how to use our Dune API here, including comm
 !!! abstract "ALL ENDPOINTS"
 
     ===Query Execution
-    ```
-    POST [/api/v1/query/{{query_id}}/execute](../api-reference/execute-queries/execute-query-id.md)
-    POST [/api/v1/execution/{{execution_id}}/cancel](../api-reference/execute-queries/cancel-execution.md)
-    ```
+    
+        ```
+        POST [/api/v1/query/{{query_id}}/execute](../api-reference/execute-queries/execute-query-id.md)
+        POST [/api/v1/execution/{{execution_id}}/cancel](../api-reference/execute-queries/cancel-execution.md)
+        ```
 
     ===Query Results
-    ```
-    GET [/api/v1/execution/{{execution_id}}/status](../api-reference/get-results/execution-status.md)
-    GET [/api/v1/execution/{{execution_id}}/results](../api-reference/get-results/execution-status.md)
-    GET [/api/v1/execution/{{execution_id}}/results/csv](../api-reference/get-results/execution-status.md)
-    GET [/api/v1/query/{{query_id}}/results](../api-reference/get-results/execution-results.md)
-    GET [/api/v1/query/{{query_id}}/results/csv](../api-reference/get-results/execution-results.md)
-    ```
+
+        ```
+        GET [/api/v1/execution/{{execution_id}}/status](../api-reference/get-results/execution-status.md)
+        GET [/api/v1/execution/{{execution_id}}/results](../api-reference/get-results/execution-status.md)
+        GET [/api/v1/execution/{{execution_id}}/results/csv](../api-reference/get-results/execution-status.md)
+        GET [/api/v1/query/{{query_id}}/results](../api-reference/get-results/execution-results.md)
+        GET [/api/v1/query/{{query_id}}/results/csv](../api-reference/get-results/execution-results.md)
+        ```
 
     ===CRUD Query Management
-    ```
-    POST [/api/v1/query/](../api-reference/edit-queries/create-query.md)
-    PATCH [/api/v1/query/{{query_id}}](../api-reference/edit-queries/update-query.md)
-    GET [/api/v1/query/{{query_id}}](../api-reference/edit-queries/get-query.md)
-    POST [/api/v1/query/{{query_id}}/archive](../api-reference/edit-queries/archive-query.md)
-    POST [/api/v1/query/{{query_id}}/unarchive](../api-reference/edit-queries/archive-query.md)
-    POST [/api/v1/query/{{query_id}}/private](../api-reference/edit-queries/private-query.md)
-    POST [/api/v1/query/{{query_id}}/unprivate](../api-reference/edit-queries/private-query.md)
-    ```
+
+        ```
+        POST [/api/v1/query/](../api-reference/edit-queries/create-query.md)
+        PATCH [/api/v1/query/{{query_id}}](../api-reference/edit-queries/update-query.md)
+        GET [/api/v1/query/{{query_id}}](../api-reference/edit-queries/get-query.md)
+        POST [/api/v1/query/{{query_id}}/archive](../api-reference/edit-queries/archive-query.md)
+        POST [/api/v1/query/{{query_id}}/unarchive](../api-reference/edit-queries/archive-query.md)
+        POST [/api/v1/query/{{query_id}}/private](../api-reference/edit-queries/private-query.md)
+        POST [/api/v1/query/{{query_id}}/unprivate](../api-reference/edit-queries/private-query.md)
+        ```
 
     ===Data Uploads
-    ```
-    POST [https://api.dune.com/api/v1/table/upload/csv](../api-reference/upload-data/index.md)
-    ```
+
+        ```
+        POST [https://api.dune.com/api/v1/table/upload/csv](../api-reference/upload-data/index.md)
+        ```
 
 !!! info end "Feature Availability"
     🪄 denotes features available to Community users whereas 💫 denotes features only available to Premium users. 

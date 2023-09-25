@@ -4,7 +4,9 @@ description: Here's how to update queries via Dune API
 ---
 
 !!! abstract "ENDPOINTS"
+	```
     PATCH /api/v1/query/{{query_id}}
+	```
 
 !!! success end "Note" 
     This endpoint is included only in our Premium subscription plans.

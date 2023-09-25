@@ -4,7 +4,9 @@ description: Here's how to execute (run) a Query with or without parameters to r
 ---
 
 !!! abstract "ENDPOINTS"
+    ```
     POST /api/v1/query/{{query_id}}/execute
+    ```
 
 This endpoint allows you to execute, or run a query for the specified query id. 
 
