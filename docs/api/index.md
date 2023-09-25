@@ -9,7 +9,8 @@ Dune API is your solution for data infrastructure and workflow management, enabl
 
 ### API Reference
 
-Full documentation of API endpoints [here](api-reference/index.md).
+!!! note "Endpoints"
+    Full documentation of API endpoints [here](api-reference/index.md).
 
 We can largely bucket Dune API features into these categories: 
 
