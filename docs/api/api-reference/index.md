@@ -37,38 +37,26 @@ Here are all endpoints:
 <div class="grid cards" markdown>
 
 -   #### Authentication
-
-    ---
-
+-   
     Learn how to authenticate with our API.  
 
 -   #### Errors Codes
-
-    ---
 
     Get a comprehensive overview of the different error codes you may encounter while using our API, along with their meanings and potential solutions for troubleshooting.
 
 -   #### Executing Queries
 
-    ---
-
     Turn existing queries into endpoints and progmatically execute them.
 
 -   #### Getting Results
-
-    ---
 
     Get results of executed queries.
 
 -   #### Editing Queries (CRUD API)
 
-    ---
-
     CRUD API endpoints enables users to create, read, update, or archive queries *beyond* the Dune IDE, enabling more flexible integration of Dune API into your workflow and freeing you from UI-exclusive query editing.
 
 -   #### Uploading Data (Write API)
-
-    ---
 
     Use Dune's write API to upload CSV files to a specific table in the Dune database.
     
