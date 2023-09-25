@@ -13,25 +13,25 @@ description: Learn everything about how to use our Dune API here, including comm
 
     === "Query Execution"
 
-        POST [/api/v1/query/{{query_id}}/execute](../api-reference/execute-queries/execute-query-id.md)
+        POST [/api/v1/query/{{query_id}}/execute](../api-reference/execute-queries/execute-query-id.md)<br>
         POST [/api/v1/execution/{{execution_id}}/cancel](../api-reference/execute-queries/cancel-execution.md)
 
     === "Query Results"
 
-        GET [/api/v1/execution/{{execution_id}}/status](../api-reference/get-results/execution-status.md)
-        GET [/api/v1/execution/{{execution_id}}/results](../api-reference/get-results/execution-status.md)
-        GET [/api/v1/execution/{{execution_id}}/results/csv](../api-reference/get-results/execution-status.md)
-        GET [/api/v1/query/{{query_id}}/results](../api-reference/get-results/execution-results.md)
+        GET [/api/v1/execution/{{execution_id}}/status](../api-reference/get-results/execution-status.md)<br>
+        GET [/api/v1/execution/{{execution_id}}/results](../api-reference/get-results/execution-status.md)<br>
+        GET [/api/v1/execution/{{execution_id}}/results/csv](../api-reference/get-results/execution-status.md)<br>
+        GET [/api/v1/query/{{query_id}}/results](../api-reference/get-results/execution-results.md)<br>
         GET [/api/v1/query/{{query_id}}/results/csv](../api-reference/get-results/execution-results.md)
 
     === "CRUD Query Management"
 
-        POST [/api/v1/query/](../api-reference/edit-queries/create-query.md)
-        PATCH [/api/v1/query/{{query_id}}](../api-reference/edit-queries/update-query.md)
-        GET [/api/v1/query/{{query_id}}](../api-reference/edit-queries/get-query.md)
-        POST [/api/v1/query/{{query_id}}/archive](../api-reference/edit-queries/archive-query.md)
-        POST [/api/v1/query/{{query_id}}/unarchive](../api-reference/edit-queries/archive-query.md)
-        POST [/api/v1/query/{{query_id}}/private](../api-reference/edit-queries/private-query.md)
+        POST [/api/v1/query/](../api-reference/edit-queries/create-query.md)<br>
+        PATCH [/api/v1/query/{{query_id}}](../api-reference/edit-queries/update-query.md)<br>
+        GET [/api/v1/query/{{query_id}}](../api-reference/edit-queries/get-query.md)<br>
+        POST [/api/v1/query/{{query_id}}/archive](../api-reference/edit-queries/archive-query.md)<br>
+        POST [/api/v1/query/{{query_id}}/unarchive](../api-reference/edit-queries/archive-query.md)<br>
+        POST [/api/v1/query/{{query_id}}/private](../api-reference/edit-queries/private-query.md)<br>
         POST [/api/v1/query/{{query_id}}/unprivate](../api-reference/edit-queries/private-query.md)
 
     === "Data Uploads"
