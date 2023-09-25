@@ -13,9 +13,9 @@ If you've built your own let us know about it in our [#dune-api Discord Channel]
 !!!note
     The community SDKs currently only contains endpoints under [Executing Queries](../api-reference/execute-queries) and [Getting Results](../api-reference/get-results). 
 
-## Cow Protocol Python Client
+## Python
 
-Built by [@bh2smith](https://dune.com/bh2smith) and the team at [Cow Protocol](https://dune.com/cowprotocol), you can find this client on [PyPi](https://pypi.org/project/dune-client/).
+Built by [@bh2smith](https://dune.com/bh2smith), Dune team member [@msf](https://dune.com/msf) and [Cow Protocol](https://dune.com/cowprotocol)'s team, you can find this client on [PyPi](https://pypi.org/project/dune-client/).
 
 Get started quickly with a simple pip install command:
 
@@ -23,9 +23,9 @@ Get started quickly with a simple pip install command:
 pip install dune-client
 ```
 
-And if you want to learn more about how it's built and works, check out the client's [GitHub page here](https://github.com/cowprotocol/dune-client).
+And if you want to learn more about how it's built and works, check out the client's [GitHub page here](https://github.com/duneanalytics/dune-client).
 
-## Cow Protocol Typescript Client
+## Typescript
 
 [@bh2smith](https://dune.com/bh2smith) also built a [Node.js client you can find here](https://www.npmjs.com/package/@cowprotocol/ts-dune-client).
 
@@ -35,13 +35,13 @@ Install it like this:
 yarn add @cowprotocol/ts-dune-client
 ```
 
-## Dune Go Client
+## GoLang
 
 Dune team member [@theedgeofrage](https://dune.com/theedgeofrage) built [a Go client you can find on GitHub here](https://github.com/duneanalytics/duneapi-client-go/).
 
 [There's also more advanced documentation here](https://pkg.go.dev/github.com/duneanalytics/duneapi-client-go).
 
-## Dune Ruby client
+## Ruby
 
 [@shellandbull](https://github.com/shellandbull) built the Ruby client, available in [RubyGems](https://rubygems.org/gems/dune)
 
@@ -52,3 +52,11 @@ gem "dune"
 ```
 
 Then run `$ bundle install` from your terminal
+
+## Rust
+
+[@bh2smith](https://dune.com/bh2smith) also built a rust client available on [docs.rs here](https://docs.rs/duners/latest/duners/). To install run
+
+```sh
+cargo add duners
+```
