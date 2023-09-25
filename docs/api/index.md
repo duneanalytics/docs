@@ -9,7 +9,13 @@ Dune API is your solution for data infrastructure and workflow management, enabl
 
 ### API Reference
 
-Check out full documentation regarding API features and endpoints [here](api-reference/index.md).
+Full documentation of API endpoints [here](api-reference/index.md).
+
+We can largely bucket Dune API features into these categories: 
+
+1. **Executing queries** - execute any query, and retrieving results from that execution (or latest results from any execution)
+2. **Editing queries** (**CRUD** [Create, Retrieve, Update, Delete/Archive] API) 
+3. **Uploading Data** - right now you can upload CSV files to the API. This is append only.
 
 ### Obtaining an API Key
 All plans on our new [credit-based pricing system](https://dune.com/pricing) come bundled with API access.
@@ -18,7 +24,7 @@ You'll have seperate API keys for your [individual accounts](https://dune.com/se
 ### API Quickstart Guides
 
 !!!note
-    The quickstart and community SDKs currently only contains endpoints under [Executing Queries](./api-reference/execute-queries) and [Getting Results](./api-reference/get-results). We will be adding info regarding newer endpoints under [Editing Queries](./api-reference/edit-queries) soon.
+    The quickstart and developer SDKs currently only contains endpoints under [Executing Queries](./api-reference/execute-queries) and [Getting Results](./api-reference/get-results). We will be adding info regarding newer endpoints under [Editing Queries](./api-reference/edit-queries) soon.
 
 Get started with our API in a few lines of code using these quick start guides:
 
@@ -27,7 +33,7 @@ Get started with our API in a few lines of code using these quick start guides:
 - [Javascript](quick-start/api-js.md)
 </div>
 
-You should check out our [community API clients (sdks)](quick-start/community-clients.md) as well.
+You should check out our [developer API clients (sdks)](quick-start/community-clients.md) as well.
 
 For building a simple data ingestion pipeline, see [using Python and Celery](https://adamparrish.xyz/downstream-data-extract-transform-load).
 
