@@ -5,6 +5,7 @@ description: Here's how to get the latest results of a query run
 
 !!! abstract "ENDPOINTS"
     GET /api/v1/query/{{query_id}}/results
+    
     GET /api/v1/query/{{query_id}}/results/csv
 
 These endpoints allow you to get the latest results of a query, regardless of the job id/run or if it is run in the app or the api. Returns the latest execution id and results of the run. You must pass parameter `query_id`. The query specified must either be public or a query you have ownership of (you or a team you belong to have ownership).

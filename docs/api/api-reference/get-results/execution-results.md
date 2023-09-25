@@ -5,6 +5,7 @@ description: Here's how to get the results data of an execution request.
 
 !!! abstract "ENDPOINTS"
     GET /api/v1/execution/{{execution_id}}/results
+    
     GET /api/v1/execution/{{execution_id}}/results/csv
 
 These endpoints allow you to get the results data of an execution request. You must pass the **`execution_id`** obtained from making a [Execute Query ID POST](../execute-queries/execute-query-id.md) request. Result returns the status, metadata, and query results from a query execution.

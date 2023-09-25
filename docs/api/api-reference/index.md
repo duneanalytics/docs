@@ -9,6 +9,38 @@ description: Learn everything about how to use our Dune API here, including comm
 2. 💫 **Editing queries** (**CRUD** [Create, Retrieve, Update, Delete/Archive] API) 
 <!-- 3. 🪄 **Uploading data** (Write API)  -->
 
+!!! abstract "ALL ENDPOINTS"
+
+    ===Query Execution
+    ```
+    POST /api/v1/query/{{query_id}}/execute
+    POST /api/v1/execution/{{execution_id}}/cancel
+    GET /api/v1/execution/{{execution_id}}/status
+    ```
+
+    ===Query Results
+    ```
+    GET /api/v1/execution/{{execution_id}}/results 
+    GET /api/v1/execution/{{execution_id}}/results/csv
+    GET /api/v1/query/{{query_id}}/results 
+    GET /api/v1/query/{{query_id}}/results/csv
+    ```
+
+    ===CRUD Query Management
+    ```
+    POST /api/v1/query/
+    PATCH /api/alpha/v1/query/{{id}}
+    GET /api/v1/query/{{query_id}}
+    POST /api/v1/query/{{query_id}}/archive
+    POST /api/v1/query/{{query_id}}/unarchive
+    POST /api/v1/query/{{query_id}}/private
+    POST /api/v1/query/{{query_id}}/unprivate
+    ```
+
+    ===Data Uploads
+    ```
+    POST https://api.dune.com/api/v1/table/upload/csv
+    ```
 
 !!! info end "Feature Availability"
     🪄 denotes features available to Community users whereas 💫 denotes features only available to Premium users. 
