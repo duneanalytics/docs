@@ -90,4 +90,12 @@ Data available:
 
     [→ Verifications](verifications.md)
 
+-   #### profiles_with_addresses
+
+    ---
+
+    Farcaster user's profile data and their connected addresses.
+
+    [→ Profiles with Addresses](profiles_with_addresses.md)
+
 </div>
