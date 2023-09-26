@@ -1,6 +1,6 @@
 # Signers
 
-### **dune.neynar.dataset_signers**
+### **dune.neynar.dataset_farcaster_signers**
 
 This table contains data about signers associated with users on the Farcaster protocol.
 
