@@ -1,6 +1,6 @@
 # User Data
 
-### **dune.neynar.dataset_user_data**
+### **dune.neynar.dataset_farcaster_user_data**
 
 This table contains data about the user information on the Farcaster protocol. It can be joined with `fname` or `fid` for additional details.
 

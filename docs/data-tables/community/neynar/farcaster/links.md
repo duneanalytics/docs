@@ -1,6 +1,6 @@
 # Links
 
-### **dune.neynar.dataset_links**
+### **dune.neynar.dataset_farcaster_links**
 
 This table contains data about follower and following relationships on the Farcaster protocol.
 
