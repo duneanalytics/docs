@@ -56,7 +56,7 @@ def make_api_url(module, action, ID):
 
 ## Wrapping API endpoints in functions
 
-The Dune API currently has four primary end points as documented in the [API Reference](../api-reference/authentication.md) section. We are going to wrap these up in neat functions which will make using the Dune API as easy as a flick of the 🪄:
+The Dune API currently has four primary end points as documented in the [API Reference](../../api-reference/authentication.md) section. We are going to wrap these up in neat functions which will make using the Dune API as easy as a flick of the 🪄:
 
 ``` py
 def execute_query(query_id, engine="medium"):
@@ -121,7 +121,7 @@ def cancel_query_execution(execution_id):
 
 ### Execute a Query
 
-To [Execute a Query](../api-reference/execute-queries/execute-query-id.md), you can pass any `query_id` from Dune that you want to fetch data from, then pass it to the `execute_query` function.
+To [Execute a Query](../../api-reference/execute-queries/execute-query-id.md), you can pass any `query_id` from Dune that you want to fetch data from, then pass it to the `execute_query` function.
 
 #### Function Call
 
@@ -141,7 +141,7 @@ This execution ID is the required input for rest of the API functions.
 
 ### Get Query Execution Status
 
-To get the [Query Execution Status](../api-reference/get-results/execution-status.md), take the `execution_id` that was returned from the `execute_query` function in the previous section, then pass it to `get_query_status` function as shown here:
+To get the [Query Execution Status](../../api-reference/get-results/execution-status.md), take the `execution_id` that was returned from the `execute_query` function in the previous section, then pass it to `get_query_status` function as shown here:
 
 #### Function Call
 
