@@ -58,4 +58,5 @@ If you schedule your queries instead of relying on automatic executions, you can
 
 ### Scheduling entire dashboards
 
-Instead of scheduling individual queries, you can also schedule entire dashboards. Learn more about scheduling dashboards [here](/app/dashboards.md#keeping-your-dashboard-up-to-date).
+Instead of scheduling individual queries, you can also schedule entire dashboards. Learn more about scheduling dashboards [here](../dashboards.md#keeping-your-dashboard-up-to-date).
+
