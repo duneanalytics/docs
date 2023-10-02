@@ -4,7 +4,9 @@ description: Here's how to create new queries via Dune API
 ---
 
 !!! abstract "ENDPOINTS"
+	```
     POST /api/v1/query/
+	```
 
 !!! success end "Note" 
     This endpoint is included only in our Premium subscription plans.

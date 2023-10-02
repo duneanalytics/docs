@@ -4,9 +4,10 @@ description: Here's how to get the latest results of a query run
 ---
 
 !!! abstract "ENDPOINTS"
+    ``` 
     GET /api/v1/query/{{query_id}}/results
     GET /api/v1/query/{{query_id}}/results/csv
-
+    ```
 These endpoints allow you to get the latest results of a query, regardless of the job id/run or if it is run in the app or the api. Returns the latest execution id and results of the run. You must pass parameter `query_id`. The query specified must either be public or a query you have ownership of (you or a team you belong to have ownership).
 
 By appending "/csv" to the URL, you specify the return to be in CSV format. Else, results are returned in JSON format.
@@ -25,7 +26,7 @@ curl -X GET "https://api.dune.com/api/v1/query/{{query_id}}/results" -H x-dune-a
 ```
 
 !!!info
-    There is a default 250,000 datapoints limit to make sure you don't accidently spend all your credits in one call. To ignore teh max limit, you can add `ignore_max_datapoints_per_request=true`
+    There is a default 250,000 datapoints limit to make sure you don't accidentally spend all your credits in one call. To ignore the max limit, you can add `ignore_max_datapoints_per_request=true`
 
     ```
     curl -X GET "https://api.dune.com/api/v1/query/{{query_id}}/results\?ignore_max_datapoints_per_request=true" -H x-dune-api-key:{{api_key}}

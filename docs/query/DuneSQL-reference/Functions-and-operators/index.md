@@ -12,6 +12,7 @@ Using ``SHOW FUNCTIONS`` in the query editor returns a list of all available fun
 - [Varbinary datatypes](varbinary.md)
 - [Base58](base58.md)
 - [Chain Utility Functions](chain-utility-functions.md)
+- [Varchar Utility Functions](varchar-utility-functions.md)
 ### Trino Base Functions:
 - [Aggregate](aggregate.md)  
 - [Array](array.md)  

@@ -1,6 +1,6 @@
 # Reactions
 
-### **dune.neynar.dataset_reactions**
+### **dune.neynar.dataset_farcaster_reactions**
 
 This table contains data about likes and recast events on the Farcaster protocol.
 

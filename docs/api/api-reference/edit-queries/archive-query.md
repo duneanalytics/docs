@@ -4,9 +4,10 @@ description: Here's how to archive queries via Dune API
 ---
 
 !!! abstract "ENDPOINTS"
+    ```
     POST /api/v1/query/{{query_id}}/archive
-    
     POST /api/v1/query/{{query_id}}/unarchive
+    ```
 
 !!! success end "Note" 
     This endpoint is included only in our Premium subscription plans.

@@ -1,6 +1,6 @@
 # Fnames
 
-### **dune.neynar.dataset_fnames**
+### **dune.neynar.dataset_farcaster_fnames**
 
 This table contains usernames associated with FIDs on the Farcaster protocol.
 

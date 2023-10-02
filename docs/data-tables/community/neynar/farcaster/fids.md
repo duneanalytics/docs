@@ -1,6 +1,6 @@
 # Fids
 
-## **dune.neynar.dataset_fids**
+## **dune.neynar.dataset_farcaster_fids**
 
 This table contains all User IDs for Farcaster users
 

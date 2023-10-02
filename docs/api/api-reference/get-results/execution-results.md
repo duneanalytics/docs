@@ -4,8 +4,11 @@ description: Here's how to get the results data of an execution request.
 ---
 
 !!! abstract "ENDPOINTS"
+    ```
     GET /api/v1/execution/{{execution_id}}/results
     GET /api/v1/execution/{{execution_id}}/results/csv
+    ```
+
 
 These endpoints allow you to get the results data of an execution request. You must pass the **`execution_id`** obtained from making a [Execute Query ID POST](../execute-queries/execute-query-id.md) request. Result returns the status, metadata, and query results from a query execution.
 
@@ -20,7 +23,7 @@ curl -X GET "https://api.dune.com/api/v1/execution/{{execution_id}}/results" -H 
 ```
 
 !!!info
-    There is a default 250,000 datapoints limit to make sure you don't accidently spend all your credits in one call. To ignore teh max limit, you can add `ignore_max_datapoints_per_request=true`
+    There is a default 250,000 datapoints limit to make sure you don't accidentally spend all your credits in one call. To ignore the max limit, you can add `ignore_max_datapoints_per_request=true`
 
     ```
     curl -X GET "https://api.dune.com/api/v1/execution/{{execution_id}}/results/?ignore_max_datapoints_per_request=true" -H x-dune-api-key:{{api_key}}
