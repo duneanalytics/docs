@@ -159,6 +159,24 @@ If you don't want to share your data with the world, you can also upload private
 
 Data uploaded with the ``is_private`` parameter set to ``true`` will only be visible to you and your team members. You can query it in the same way as public data and use it in public queries. However, the raw data will not be visible to anyone outside of your team.
 
+
+You can also change the privacy settings of a dataset after it has been uploaded. To do so, go to settings -> data page and click on the three dots next to the dataset you want to change the privacy settings for. Then click on "make table private" to make the table private or "make table public" to make it public. 
+
+## Deleting data
+
+You can delete your data via your settings page.
+
+<div style="position: relative; padding-bottom: calc(61.25000000000001% + 41px); height: 0; width: 100%"><iframe src="https://demo.arcade.software/mr3mDEQl0qQi9e1H4HZB?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;" title="Teams > Dune"></iframe></div>
+
+1. Click on the "settings" button in the menu of the Dune UI.
+2. Click on "data".
+3. Find the dataset you want to delete.
+4. Click on the three dots to open the options for the dataset.
+5. Click on "delete dataset".
+6. confirm the deletion.
+7. The dataset is now deleted.
+
+
 ## Updating data
 
 Currently there is no way to update the data of an already existing .csv file.
