@@ -1,5 +1,5 @@
 ---
-title: Find Datasetes on Dune
+title: Find Datasets on Dune
 description: How to find datasets on Dune
 ---
 
