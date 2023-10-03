@@ -1,18 +1,20 @@
 ---
 title: Uploading data
-description: The Dune CSV Upload API allows you to upload CSV files to a specific table in the Dune database.
+description: The Dune CSV Upload API allows you to upload csv files to Dune.
 ---
+
+**Easily upload your own data to Dune**
 
 The Dune write API allows you to upload CSV files into the Dune database. This API streamlines the process of importing data into the Dune platform and allows you to import off-chain data into Dune with ease. You can simply use your usual API key to authenticate with the API and upload your CSV file.
 
 Currently, the API only supports uploading CSV files with a maximum size of 200 MB. The API will return an error if the file size exceeds this limit. 
 
-For now, all files will be stored in the ``dune_upload`` schema in the Dune database. The table name (e.g. ``example_table``) must be specified in the request payload.
+The files you upload will be queryable via the schema ``dune.team_name.dataset_name``. For example, if you upload a file called ``energy_data.csv`` to the team ``dune`` and name the dataset ``energy_data``, you will be able to query the data via ``dune.dune.energy_data``.
 
 You'll be able to query for your data in any query.
 
 ```sql
-Select * from dune_upload.example_table
+Select * from dune.dune.dataset_energy_data
 ```
 
 We automatically infer schemas (=detect datatypes) for all uploaded data. If in doubt, you can check the assumed datatypes in the information schema. 
@@ -25,10 +27,12 @@ AND table_name = 'energy_data';
 
 Anything that represents a timestamp is especially tricky for automated systems to detect, if something is not working as intended, try coverting the timestamp to ISO time before uploading and use the applicable TrinoSQL function to convert it back.
 
-**All Data uploaded via this API is public and can be accessed by anyone.**
+!!! Info
+    All data uploaded is public and can be accessed by anyone.   
+    Private data uploads are available only on the **premium plan.**
 
 
-!!! note
+!!! Tip
     You can also upload data via the User Interface. Check out the [APP documentation](../../../app/upload-data.md) for more information.
 ## How to use the API
 
@@ -60,6 +64,7 @@ The request payload should be a JSON object containing the following fields:
 - `table_name`: (string) The target table in the database where the CSV data should be uploaded.
 - `description`: (string, optional) A brief description of the uploaded data. Will be displayed in the Dune UI in the future.
 - `data`: (string) The content of the CSV file, passed as a string.
+- `is_private`: (boolean, optional) Whether the data should be private or not. Private data is only available to the team that uploaded it. Defaults to `false`.
 
 
 ### Example Request
@@ -106,6 +111,7 @@ with open(csv_file_path) as open_file:
     payload = {
         "table_name": "example_table",
         "description": "test_description",
+        "is_private": false,
         "data": str(data)
     }
     
@@ -119,19 +125,39 @@ with open(csv_file_path) as open_file:
 
 ## Querying for the data in Dune
 
-Once the data has been uploaded, you can query it using the following SQL query:
+Once the data has been uploaded, you can explore it in the my data section in the data explorer: 
+
+![upload data](../../../app/images/upload_data.gif)
+
+You can query for your data in any query.
 
 ```sql
-Select * from dune_upload.example_table
+Select * from dune.dune.dataset_energy_data
 ```
 
-to check whether the datatypes are correctly inferred, you can use the following query:
+To check whether the datatypes are correctly inferred, you can use the following query:
 
 ```sql
 SELECT * FROM information_schema.columns 
-WHERE table_schema = 'dune_upload'
-AND table_name = 'example_table';
+WHERE table_schema = 'dune' -- replace with your team name
+AND table_name = 'energy_data'; -- replace with your dataset name
 ```
+
+
+## Private data
+
+If you don't want to share your data with the world, you can also upload private data. Private data is only visible to you and your team members. To upload private data, **you need to be on the premium plan**. If you are on the premium plan, you can upload private data by passing the ``is_private`` parameter in the request payload.
+
+```json
+{
+    "table_name": "example_table",
+    "description": "Sample data for testing",
+    "data": "column1,column2\nvalue1,value2\nvalue3,value4",
+    "is_private": true
+}
+```
+
+Data uploaded with the ``is_private`` parameter set to ``true`` will only be visible to you and your team members. You can query it in the same way as public data and use it in public queries. However, the raw data will not be visible to anyone outside of your team.
 
 ## Updating data
 
@@ -145,11 +171,11 @@ For example:
 ```sql
 --query_2441513
 
-Select * from dune_upload.my_data_upload_2023_04_29
+Select * from dune.dune.dataset_energy_data_1
 
 UNION ALL
 
-Select * from dune_upload.my_data_upload_2023_05_05
+Select * from dune.dune.dataset_energy_data_2
 
 -- add more as it becomes relevant
 ```
@@ -161,3 +187,13 @@ Select * from ethereum.transactions t
 left join query_2441513 q on q.address = t."from"
 ```
 
+
+## Large Amounts of Data
+
+If you want to share valueable off-chain data on Dune with your community, we are happy to discuss custom arrangements. Please reach indicate your interest via this [form](https://bit.ly/dune-data-integration).
+
+This is only applicable for datasets with positive externalities for the Dune community. Examples include:
+
+- [Farcaster](../../../data-tables/community/neynar/farcaster/index.md)
+- [Reservoir](../../../data-tables/community/reservoir/index.md)
+- [Flashbots](../../../data-tables/community/flashbots/index.md)
