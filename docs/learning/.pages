@@ -1,3 +1,4 @@
 nav:
 - index.md
-- How-To Guides: how-tos
+- Dune 101: how-tos
+- create-sankey-diagram.md

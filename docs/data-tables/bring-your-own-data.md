@@ -32,3 +32,14 @@ Your imagination is really the limit here. The only requirement is that this dat
     [→ API docs](../api/api-reference/upload-data/index.md)
 
 </div>
+
+
+## Large Amounts of Data
+
+If you want to share valueable off-chain data on Dune with your community, we are happy to discuss custom arrangements. Please reach indicate your interest via this [form](https://bit.ly/dune-data-integration).
+
+This is only applicable for datasets with positive externalities for the Dune community. Examples include:
+
+- [Farcaster](../data-tables/community/neynar/farcaster/index.md)
+- [Reservoir](../data-tables/community/reservoir/index.md)
+- [Flashbots](../data-tables/community/flashbots/index.md)

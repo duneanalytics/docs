@@ -52,8 +52,8 @@ Examples of real dashboards:
 
 * [NFT marketplaces](https://dune.com/hildobby/NFTs)
 * [DEX metrics](https://dune.com/hagaetc/dex-metrics)
-* [Bridges](https://dune.com/eliasimos/Bridge-Away-(from-Ethereum))
-* [DAO Accounting (Maker)](https://dune.com/SebVentures/maker---accounting_1)
+* [Project metrics](https://dune.com/whale_hunter/unibot-revenue)
+* [DAO Accounting (Maker)](https://dune.com/steakhouse/makerdao)
 * [Base Chain Metrics](https://dune.com/optimismfnd/Optimism)
 
 
