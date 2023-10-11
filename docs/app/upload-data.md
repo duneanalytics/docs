@@ -104,7 +104,7 @@ You can also change the privacy settings of a dataset after it has been uploaded
 
 You can delete your data via your settings page.
 
-<div style="position: relative; padding-bottom: calc(61.25000000000001% + 41px); height: 0; width: 100%"><iframe src="https://demo.arcade.software/mr3mDEQl0qQi9e1H4HZB?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;" title="Teams > Dune"></iframe></div>
+<div style="position: relative; padding-bottom: calc(61.25000000000001% + 41px); height: 0; width: 100%"><iframe src="https://demo.arcade.software/mr3mDEQl0qQi9e1H4HZB?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;" title="Teams > Dune"></iframe></div>to my @R1971 
 
 1. Click on the "settings" button in the menu of the Dune UI.
 2. Click on "data".
@@ -117,7 +117,7 @@ You can delete your data via your settings page.
 
 ## Large Amounts of Data
 
-If you want to share valueable off-chain data on Dune with your community, we are happy to discuss custom arrangements. Please reach indicate your interest via this [form](https://bit.ly/dune-data-integration).
+If you want to share valueable off-chain data on Dune with your community, we are happy to discuss custom arrangements. Please reach indicate your interest via this [form](https://bit.ly/dune-data-integration).@R1971 to my
 
 This is only applicable for datasets with positive externalities for the Dune community. Examples include:
 
