@@ -1,6 +1,6 @@
-# Profiles with addresses
+# Profile with addresses
 
-## **dune.neynar.dataset_farcaster_profiles_with_addresses**
+## **dune.neynar.dataset_farcaster_profile_with_addresses**
 
 This table contains farcaster user's profile data and their connected addresses
 

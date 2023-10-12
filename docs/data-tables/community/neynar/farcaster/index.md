@@ -84,18 +84,18 @@ Data available:
 
 -   #### verifications
 
-    ---
+    ---'
 
     Ethereum wallet addresses connected to Farcaster profiles.
 
     [→ Verifications](verifications.md)
 
--   #### profiles_with_addresses
+-   #### profile_with_addresses
 
     ---
 
     Farcaster user's profile data and their connected addresses.
 
-    [→ Profiles with Addresses](profiles_with_addresses.md)
+    [→ Profiles with Addresses](profile_with_addresses.md)
 
 </div>
