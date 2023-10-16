@@ -15,7 +15,7 @@ You'll be able to query for your data in any query.
 ```sql
 Select * from dune.dune.dataset_energy_data
 ```
-
+<!--
 We automatically infer schemas (=detect datatypes) for all uploaded data. If in doubt, you can check the assumed datatypes in the information schema. 
 
 ```sql
@@ -25,7 +25,7 @@ AND table_name = 'energy_data'; -- replace with your dataset name
 ```
 
 Anything that represents a timestamp is especially tricky for automated systems to detect, if something is not working as intended, try coverting the timestamp to ISO time before uploading and use the [applicable DuneSQL function](../query/DuneSQL-reference/Functions-and-operators/datetime.md#from_iso8601_timestamp) to convert it back. This will not automatically convert the datatype, but it will allow you to easily query the data as a timestamp.
-
+-->
 
 !!! Info
     All data uploaded is public and can be accessed by anyone.   
