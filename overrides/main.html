@@ -14,6 +14,17 @@
     {% include "partials/icons.html" %}
 {% endblock %}
 
+{% block scripts %}
+    {{ super() }}
+    <script
+        id="awesomeqa-chat-widget-script"
+        type="text/javascript"
+        src="https://awesomeqa.xyz/web-support/chat-widget.js"
+        communityId="eba081b4-d576-4e16-80a4-3ab3936be38a"
+        config="{}"
+    ></script>
+{% endblock %}
+
 {% block fonts %}
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400&display=swap" rel="stylesheet">
 {% endblock %}
