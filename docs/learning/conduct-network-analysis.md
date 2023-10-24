@@ -3,6 +3,15 @@ title: Farcaster Social Network Analysis
 description: How to conduct social network analysis for Farcaster with Dune API and Python (summary statistics, centrality measures, graph sampling, and community detection)
 ---
 
+??? success "[Create an API key](#environment-setup-for-dune-api-python-client) to follow along the guide."
+    To obtain an API key:
+
+    1. Go to Settings → API.
+    2. Select "Create new API key".
+    3. Copy the entire key.
+
+    <div style="position: relative; padding-bottom: calc(55.052083333333336% + 41px); height: 0; width: 100%"><iframe src="https://demo.arcade.software/f07eudjtOJz9URF8TGa5?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;" title="how to generate API key"></iframe></div>    
+
 In the age of digital interconnectivity, platforms like Facebook and Instagram leverage the intricate webs of user relationships to drive their strategies, from identifying top influencers to deploying targeted ads to deciding what content to recommend on user's feed. Yet, obtaining and analyzing real-world social network data is no small feat. For those with a budding interest in graph theory or network analysis, this guide will pave your path. Delve deep as we walk you through analyzing data from Farcaster, a fully decentralized social network, using Python and the Dune API. It's a unique opportunity that many platforms guard closely.
 
 👣 In this guide, we'll cover the basics of network analysis in four parts: (1) 📊 summary statistics, (2) 📏 centrality measures, (3) 🔍 graph sampling, and (4) 🏘️ community detection.
@@ -87,7 +96,7 @@ For the Dune API, obtain an API key:
 
 <div style="position: relative; padding-bottom: calc(55.052083333333336% + 41px); height: 0; width: 100%"><iframe src="https://demo.arcade.software/f07eudjtOJz9URF8TGa5?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;" title="how to generate API key"></iframe></div>
 
-Set up a .env file:
+Set up a .env file and paste in your API key:
 ```
 DUNE_API_KEY=<insert your key>
 DUNE_API_REQUEST_TIMEOUT=120
