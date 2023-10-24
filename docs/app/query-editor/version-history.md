@@ -10,7 +10,7 @@ All queries now come with version history, where you can compare and revert to p
 
 ### Start of a new version
 
-The first time you save a query (whether it is forked or freshly created), there will be an intial commit to the query history. If you've forked the query, you won't be able to access the original query's edit history - it starts anew for you.
+The first time you save a query (whether it is forked or freshly created), there will be an initial commit to the query history. If you've forked the query, you won't be able to access the original query's edit history - it starts anew for you.
 
 ![](images/version-history/version_start.PNG)
 

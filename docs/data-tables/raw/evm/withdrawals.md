@@ -49,6 +49,6 @@ We hope to integrate beacon chain data in the future, which will streamline the 
 | index             | bigint    | a monotonically increasing index, starting from 0, as a value that increments by 1 per withdrawal to uniquely identify each withdrawal|
 | validator_index   | bigint    | the validator_index of the validator, as a uint64 value, on the consensus layer the withdrawal corresponds to|
 | amount            | bigint    | a nonzero amount of ether given in Gwei (1e9 wei)                        |
-| address           | varbinary | a recipient for the withdrawn ether. Note that depositor and recipient address are not neccesarily the same|
+| address           | varbinary | a recipient for the withdrawn ether. Note that depositor and recipient address are not necessarily the same|
 | withdrawals_root  | varbinary | the 32 byte root of the trie committing to the list of withdrawals provided in a given execution payload|
 | block_hash        | varbinary | The hash of the block                                                    |
