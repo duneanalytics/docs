@@ -1412,7 +1412,7 @@ the following requirements are met:
     Cast operations with supported `character string types
     <string-data-types>`{.interpreted-text role="ref"} treat the input as a
     string, not validated as JSON. This means that a cast operation with a
-    string-type input of invalid JSON results in a succesful cast to invalid
+    string-type input of invalid JSON results in a successful cast to invalid
     JSON.
 
     Instead, consider using the `json_parse`{.interpreted-text role="func"}

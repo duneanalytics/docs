@@ -36,7 +36,7 @@ Some key things to keep in mind:
 1. A query result has a 200MB limit in the editor but a materialized view doesn’t have storage limits. Even though the results will look truncated in the editor.
 2. This materialized view refresh schedule is DIFFERENT from the query scheduler. Results from running the query or the normal query scheduler will NOT update the materialized view. 
 3. Plans have total monthly storage limits (for premium plans, it’s 50GB, plus it’s 15GB, free is 1MB).
-4. You can delete your materialized view by archiving it. This works via the setting dialouge on the query page.
+4. You can delete your materialized view by archiving it. This works via the setting dialogue on the query page.
    
 ## To query a materialized view
 

@@ -36,7 +36,7 @@ Your imagination is really the limit here. The only requirement is that this dat
 
 ## Large Amounts of Data
 
-If you want to share valueable off-chain data on Dune with your community, we are happy to discuss custom arrangements. Please reach indicate your interest via this [form](https://bit.ly/dune-data-integration).
+If you want to share valuable off-chain data on Dune with your community, we are happy to discuss custom arrangements. Please reach indicate your interest via this [form](https://bit.ly/dune-data-integration).
 
 This is only applicable for datasets with positive externalities for the Dune community. Examples include:
 
