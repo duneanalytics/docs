@@ -9,7 +9,15 @@ Analyzing protocols in web3 is both really easy and really hard. It's really eas
 
 To build your reputation as an expert wizard, you must stay centered on what you want to analyze and what metrics you want to present.
 
-*The following sections contain links to community contributed guides and dashboards.* 
+### Dune 101 
+Dive straight into our succinct [how-to tutorials](./how-tos/index.md) and fast-track your journey as a Dune creator!
+
+### Targeted Learning: How-To Guides
+Eager for focused insights? Explore our curated guides:
+
+- [How to create Sankey diagram with Dune's data](./how-to-create-sankey-diagram.md) 
+- [How to conduct social network analysis for Farcaster with Dune API and Python](./how-to-perform-social-network-analysis.md)
+
 ### Finding What To Analyze
 
 Once you've learned [basic SQL and blockchain concepts](https://web3datadegens.substack.com/p/a-basic-wizard-guide-to-dune-sql), you're ready to start doing your own end-to-end analysis. It's easy to get lost in an ever-expanding web of tables and analysis - so here are some top tips on scoping your work. 
