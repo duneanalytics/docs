@@ -42,8 +42,8 @@ Notes:
 
 - You can combine multiple filters together with arbitrary text. 
 - You can also combine multiple values by separating them with a comma (`,`).
-- You can wrap your input in double quotes (`"`) such as `stablecoins tags:usdc,usdt`
-- You can also exclude results by prefixing it with a minus sign (`-`) (e.g. `-tags:ethereum`)
+- You can wrap your input in double quotes (`"`) such as `stablecoins tags:usdc,usdt`.
+- You can also exclude results by prefixing it with a minus sign (`-`) (e.g. `-tags:ethereum`).
 
 !!! note
     
