@@ -25,6 +25,8 @@ You can edit your input and the results will immediately update to reflect. You 
 
 You can apply advanced filters to your search, in any of Dune's search fields (in the top bar or in the sidebar in Discover).
 
+For example, you can search for `nft tags:nft,opensea,looksrare author:hildobby,denze,rantum,cryptuschrist,sealaunch` or `tags:usdc,usdt,dai -tags:ust` for more relevant and precise results.
+
 These are the filters we currently support:
 
 | **Filter** | **Description** | **Example** |
