@@ -11,7 +11,7 @@ You can access Dune's search functionality everywhere in the Dune App through th
 
 ## Refining your results
 
-Alternatively, you can head over to the [Discover page](https://dune.com/browse/dashboards) where you will find the extended results page, with addiitonal filters to apply, such as ranking by trending, favorites or recently created. You will find your search input which you can edit alongside these filters to refine your search on the sidebar next to the results list:
+Alternatively, you can head over to the [Discover page](https://dune.com/browse/dashboards) where you will find the extended results page, with additonal filters to apply, such as ranking by trending, favorites or recently created. You will find your search input which you can edit alongside these filters to refine your search on the sidebar next to the results list:
 
 ![Search sidebar](images/search/search_results.png)
 
