@@ -70,7 +70,7 @@ Here are the chains we have available to Query in Dune.
   
 - Optimism
 
-- Optimism Stack Rollups (Base)
+- Base
   
 - BNB (Binance Smart Chain)
   
@@ -81,6 +81,10 @@ Here are the chains we have available to Query in Dune.
 - Goerli (Ethereum)
   
 - Fantom
+
+- Zksync Era
+
+- Celo
 
 ### Non-EVM Chains
 #### Solana
@@ -143,11 +147,11 @@ Optimism differs in it's EVM implementation in the calculation of gas costs, sin
     
     ![optimism icon](../app/query-editor/images/explorer-labels/optimism-icon.png)
 
-#### Optimism Stack Rollups (Base)
+#### Base
 
-There are many deployments using the Optimism Stack that can be deployed using Rollup-as-a-Service providers like [conduit.xyz](https://conduit.xyz). Here is the list that we currently support:
+Base is an Optimistic Rollup that is built on top of Optimism. It is a Layer 2 solution that utilizes the strong security guarantees of Ethereum while reducing its cost and latency. Base processes transactions outside of Ethereum Mainnet, reducing congestion on the base layer and improving scalability. For a Deep Dive into Base, we recommend reading through their [Documentation](https://docs.base.org/). Base is launched an maintained by coinbase. It follows the Optimism EVM implementation.
 
-- Coinbase (BASE) chain
+
 
 #### BNB Chain (BSC)
 
@@ -186,3 +190,15 @@ This is the perfect solution for dapp developers looking to get stats before you
 [Fantom](https://fantom.foundation/) is a layer 1 blockchain offering smart contract functionality.
 
 It uses a Directed Acyclic Graph, which involves the seamless interaction of nodes in the network to ensure fast and secure transactions.
+
+
+
+#### Zksync Era
+
+!!! warning
+    Zksync Era's client is currently not returning all traces. Decoded tables, traces and creation traces tables may be incomplete.
+
+Zksync Era is a zk-rollup that settles it's transactions on Ethereum Mainnet. You can read all about Zksync's approach to scaling and building a rollup [in their docs](https://era.zksync.io/docs/).
+
+
+Zksync 
