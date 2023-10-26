@@ -39,9 +39,11 @@ These are the filters we currently support:
 | `updated_after` | Only include matches updated before or at a given date. | `updated_after:2023-01-30` |
 
 Notes:
+
 - You can combine multiple filters together with arbitrary text. 
-- You can also combine multiple values by separating them with a comma.
-- You can wrap your input in double quotes such as `stablecoins tags:usdc,usdt`
+- You can also combine multiple values by separating them with a comma (`,`).
+- You can wrap your input in double quotes (`"`) such as `stablecoins tags:usdc,usdt`
+- You can also exclude results by prefixing it with a minus sign (`-`) (e.g. `-tags:ethereum`)
 
 !!! note
     
