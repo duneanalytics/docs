@@ -15,4 +15,7 @@ description: Beginner how-to guides that helps you onboard Dune
 - [Share Dune content](./share-dune-content.md)
 - [Transfer ownership](./transfer-ownership.md)
 - [Credit System on Dune](./credit-system-on-dune.md)
+- [Create your first query](./create-your-first-query.md)
+- [Create your first visualization](./create-your-first-visualization.md)
+- [Share your query](./share-your-query.md)
 </div>
