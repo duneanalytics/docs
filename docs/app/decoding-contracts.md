@@ -55,7 +55,7 @@ eg `augur`, `tornado_cash`, `uniswap_v2`
 
 Once you submit it, you are done! The contract will be stored in our queue, which we manually review for quality assurance purposes.
 
-!!! note
+!!! info
     
     Submission are usully processed within a few hours on weekdays.
 
