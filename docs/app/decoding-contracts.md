@@ -51,47 +51,6 @@ We have some naming conventions on that, partly due to our technical setup and a
 - No spaces (underscore "_" if needed)
 - Added "_v2" or other version names at the end if applicable
 
-eg `augur`, `tornado_cash`, `uniswap_v2`
-
-Once you submit it, you are done! The contract will be stored in our queue, which we manually review for quality assurance purposes.
-
-!!! info
-    
-    Submission are usully processed within a few hours on weekdays.
-
-### Advanced options
-
-In some instances, Dune can automatically detect and index multiple contract addresses under the same submission. This is useful for examples such as AMM pools where there often exists one contract instance per pair.
-
-We have two strategies for detecting other contracts for decoding:
-
-1. **Bytecode match.** We use the bytecode of the contract address in the submission to find other matches in the whole chain history.
-2. **Factory instances.** We find all other contracts created by the same address as the one responsible for creating the submitted contract.
-
-In both cases, we assume that all the contracts found through either method correspond to the same blockchain, project name, contract name and ABI.
-
-If you want us to index more than one contract, toggle on Advanced options and select "Yes" to the first question, "Are there several instances of this contract?"
-
-Then, to the second question - "Is it created by a factory contract?" - select "No" to index all other contracts with the same bytecode or "Yes" to index all other contracts originating from the same creator:
-
-![new-contract-advanced-options](images/decoding-contracts/new-contract-advanced-options.png)
-
-!!! warning
-
-    Only use these options if you know what you're doing and are familiar with the project's architecture and deployment hierarchy. Incorrectly applying these settings may lead to a rejected submission.
-
-## Tracking your submissions
-
-You can view your submissions and their processing status at any time by navigating to [My Creations > Contracts](https://dune.com/browse/contracts/authored).
-
-Contract submissions are usually processed within a few hours, but some submissions may require additional time. Once a contract has been approved, it may take up to an hour for the data to become available, and up to six hours for historical data to be included.
-
-## Frequently Asked Questions
-
-#### How do I submit contract information manually?
-
-!!! note
-    If the contract being manually submitted is a Proxy contract, we recommend you to move on to the next section.
 
 Although we try to fetch contract information such as the ABI, sometimes this information might not be available through our sources.
 
