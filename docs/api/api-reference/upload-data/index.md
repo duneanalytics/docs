@@ -111,7 +111,7 @@ with open(csv_file_path) as open_file:
     payload = {
         "table_name": "example_table",
         "description": "test_description",
-        "is_private": false,
+        "is_private": False,
         "data": str(data)
     }
     
