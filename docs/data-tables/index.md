@@ -4,7 +4,7 @@ title: Tables and Chains Overview
 
 ## The Four Kinds of Tables
 
-Dune ingests data from [node providers](https://www.quicknode.com/case-study/dune-analytics) to directly fill our **raw tables** for each chain. This data is then decoded using contract ABIs to provide easier to work with **decoded tables**. Then we create abstracted tables that standardize and aggregate the data (from all other tables) - giving you the easiest to work with **spell tables**. 
+Dune ingests data from [node providers](https://www.quicknode.com/case-study/dune-analytics) to directly fill our **raw tables** for each chain. This data is then decoded using contract ABIs to provide easier to work with **decoded tables**. Then we create abstracted tables that standardize and aggregate the data (from all other tables) - giving you the easiest to work with **spell tables**.
 
 We also ingest data from **community providers** like [Reservoir](community/reservoir/index.md), [Neynar](community/neynar/farcaster/index.md) and [Flashbots](community/flashbots/index.md), which you can think of as spell level abstractions.
 
@@ -19,17 +19,17 @@ In each section below, you'll find details on how the tables are created and som
 -   #### [Raw data](raw/index.md)
 
     ---
-  
+
     Unedited, raw and encoded blockchain data.
-  
+
     [→ Raw data](raw/index.md)
 
 -   #### [Decoded data](decoded/index.md)
 
     ---
-  
+
     View the decoded calls and events made to smart contracts. This data is still unedited.
-  
+
     [→ Decoded data](decoded/index.md)
 
 -   #### [Spellbook](spellbook/index.md)
@@ -37,15 +37,15 @@ In each section below, you'll find details on how the tables are created and som
     ---
 
     Easy to work with aggregated tables that are maintained by Dune and our community.
-  
+
     [→ Spellbook](spellbook/index.md)
 
 -   #### [Community](community/index.md)
 
     ---
-  
+
     Enhanced tables that combine onchain and offchain data together.
-  
+
     [→ Community](community/index.md)
 
 </div>
@@ -65,22 +65,24 @@ Here are the chains we have available to Query in Dune.
 - Ethereum Mainnet
 
 - Gnosis (previously xDai)
-  
+
 - Polygon (POS)
-  
+
 - Optimism
 
 - Optimism Stack Rollups (Base)
-  
+
 - BNB (Binance Smart Chain)
-  
+
 - Arbitrum
-  
+
 - Avalanche (c-chain)
-  
+
 - Goerli (Ethereum)
-  
+
 - Fantom
+
+- ZkSync Era
 
 ### Non-EVM Chains
 #### Solana
@@ -120,7 +122,7 @@ Gnosis Chain follows all standards and upgrades of Ethereum Mainnet, querying on
 
 #### Polygon POS
 
-Polygon(formerly MATIC) is an Ethereum sidechain hosted and maintained by by Polygon Technology. Polygon PoS is a solution that achieves transaction speed and cost savings by utilizing a POS network. Polygon node requirements are significantly higher than Mainnet requirements as Polygon has a higher gas limit and shorter block time. 
+Polygon(formerly MATIC) is an Ethereum sidechain hosted and maintained by by Polygon Technology. Polygon PoS is a solution that achieves transaction speed and cost savings by utilizing a POS network. Polygon node requirements are significantly higher than Mainnet requirements as Polygon has a higher gas limit and shorter block time.
 
 You can read more about Polygon and their approach to scaling an EVM in their [documentation](https://docs.polygon.technology).
 
@@ -133,14 +135,14 @@ Optimism is a Layer 2 Optimistic Rollup network designed to utilize the strong s
 Optimism differs in it's EVM implementation in the calculation of gas costs, since it also needs to pay for L1 resources.
 
 !!! warning "Optimism Regenesis"
-    We've included Optimism's OVM 1.0 base tables (blocks, logs, traces, transactions) in Dune V2, which can be found in the `optimism_legacy_ovm1` database. Data from these tables are labeled "Optimism (Legacy)" in the dropdown menu and use this icon: 
-    
+    We've included Optimism's OVM 1.0 base tables (blocks, logs, traces, transactions) in Dune V2, which can be found in the `optimism_legacy_ovm1` database. Data from these tables are labeled "Optimism (Legacy)" in the dropdown menu and use this icon:
+
     ![optimism legacy icon](../app/query-editor/images/explorer-labels/optimism-legacy-icon.png)
 
     These tables are no longer updated as Optimism made significant changes with their [OVM 2.0 update](https://twitter.com/optimismFND/status/1458953238867165192).
 
     Data for the current version of Optimism's blockchain (November 11th, 2021 to present), is contained in the `optimism` database, are labeled "Optimism" in the dropdown menu, and use this icon:
-    
+
     ![optimism icon](../app/query-editor/images/explorer-labels/optimism-icon.png)
 
 #### Optimism Stack Rollups (Base)
@@ -186,3 +188,7 @@ This is the perfect solution for dapp developers looking to get stats before you
 [Fantom](https://fantom.foundation/) is a layer 1 blockchain offering smart contract functionality.
 
 It uses a Directed Acyclic Graph, which involves the seamless interaction of nodes in the network to ensure fast and secure transactions.
+
+#### ZkSync Era
+
+[zkSync Era](https://zksync.io/) is a Layer 2 scaling solution for Ethereum, developed by [Matter Labs](https://matter-labs.io/), that employs zero-knowledge proofs to facilitate fast and low-cost transactions while still leveraging Ethereum's robust security framework. It is distinguished by its implementation of zkRollups technology, which aggregates several off-chain transactions into a single proof. This proof is then verified on the Ethereum mainnet, allowing for enhanced scalability without sacrificing decentralization or security.
