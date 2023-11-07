@@ -14,7 +14,7 @@ limit 100
 
 This sql code will generate a clickable link pointing to the explorer of the Ethereum chain for each address in the ``to`` column. The displayed link will be the address itself.
 
-You can find all the functions in action on this dashboard: [Chain Utility Functions](https://dune.com/bln/chain-utility-functions)
+You can find all the functions in action on this dashboard: [Chain Utility Functions](https://dune.com/dune/chain-utility-functions)
 
 #### get_href()
 **``get_href(varchar, varchar)``** → varchar
