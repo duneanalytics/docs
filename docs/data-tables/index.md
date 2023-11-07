@@ -149,9 +149,11 @@ Optimism differs in it's EVM implementation in the calculation of gas costs, sin
 
 #### Base
 
-Base is an Optimistic Rollup that is built on top of Optimism. It is a Layer 2 solution that utilizes the strong security guarantees of Ethereum while reducing its cost and latency. Base processes transactions outside of Ethereum Mainnet, reducing congestion on the base layer and improving scalability. For a Deep Dive into Base, we recommend reading through their [Documentation](https://docs.base.org/). Base is launched an maintained by coinbase. It follows the Optimism EVM implementation.
+Base is an Optimistic Rollup that is built on top of the OP stack. It is a Layer 2 solution that utilizes the strong security guarantees of Ethereum while reducing its cost and latency. Base processes transactions outside of Ethereum Mainnet, reducing congestion on the base layer and improving scalability. For a Deep Dive into Base, we recommend reading through their [Documentation](https://docs.base.org/). Base is launched an maintained by coinbase. It follows the Optimism EVM implementation.
 
+#### Zora
 
+Zora is a decentralized protocol for media ownership, distribution, and monetization. Zora has launched an Optimistic Rollup that is built on top of the OP stack. It is a Layer 2 solution that utilizes the strong security guarantees of Ethereum while reducing its cost and latency. Zora processes transactions outside of Ethereum Mainnet, reducing congestion on the base layer and improving scalability. For a Deep Dive into Zora, we recommend reading through their [Documentation](https://docs.zora.co/).
 
 #### BNB Chain (BSC)
 
@@ -201,4 +203,18 @@ It uses a Directed Acyclic Graph, which involves the seamless interaction of nod
 Zksync Era is a zk-rollup that settles it's transactions on Ethereum Mainnet. You can read all about Zksync's approach to scaling and building a rollup [in their docs](https://era.zksync.io/docs/).
 
 
-Zksync 
+#### Celo 
+
+Celo is a layer 1 EVM blockchain. Celo was designed to enable a new universe of financial solutions accessible for mobile users, creating a global financial ecosystem where an end-user can onboard into the Celo ecosystem with just a mobile number. Here are few of the key features of Celo: 
+
+- Layer-1 protocol
+- EVM compatible
+- Proof-of-stake
+- Carbon negative
+- Mobile-first identity
+- Ultra-light clients
+- Localized stablecoins (cUSD, cEUR, cREAL)
+- Gas payable in multiple currencies
+
+
+
