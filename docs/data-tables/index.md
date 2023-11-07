@@ -70,7 +70,7 @@ Here are the chains we have available to Query in Dune.
   
 - Optimism
 
-- Optimism Stack Rollups (Base)
+- Base
   
 - BNB (Binance Smart Chain)
   
@@ -81,6 +81,10 @@ Here are the chains we have available to Query in Dune.
 - Goerli (Ethereum)
   
 - Fantom
+
+- Zksync Era
+
+- Celo
 
 ### Non-EVM Chains
 #### Solana
@@ -143,11 +147,13 @@ Optimism differs in it's EVM implementation in the calculation of gas costs, sin
     
     ![optimism icon](../app/query-editor/images/explorer-labels/optimism-icon.png)
 
-#### Optimism Stack Rollups (Base)
+#### Base
 
-There are many deployments using the Optimism Stack that can be deployed using Rollup-as-a-Service providers like [conduit.xyz](https://conduit.xyz). Here is the list that we currently support:
+Base is an Optimistic Rollup that is built on top of the OP stack. It is a Layer 2 solution that utilizes the strong security guarantees of Ethereum while reducing its cost and latency. Base processes transactions outside of Ethereum Mainnet, reducing congestion on the base layer and improving scalability. For a Deep Dive into Base, we recommend reading through their [Documentation](https://docs.base.org/). Base is launched an maintained by coinbase. It follows the Optimism EVM implementation.
 
-- Coinbase (BASE) chain
+#### Zora
+
+Zora is a decentralized protocol for media ownership, distribution, and monetization. Zora has launched an Optimistic Rollup that is built on top of the OP stack. It is a Layer 2 solution that utilizes the strong security guarantees of Ethereum while reducing its cost and latency. Zora processes transactions outside of Ethereum Mainnet, reducing congestion on the base layer and improving scalability. For a Deep Dive into Zora, we recommend reading through their [Documentation](https://docs.zora.co/).
 
 #### BNB Chain (BSC)
 
@@ -186,3 +192,30 @@ This is the perfect solution for dapp developers looking to get stats before you
 [Fantom](https://fantom.foundation/) is a layer 1 blockchain offering smart contract functionality.
 
 It uses a Directed Acyclic Graph, which involves the seamless interaction of nodes in the network to ensure fast and secure transactions.
+
+
+
+#### Zksync Era
+
+!!! warning
+    Zksync Era's client is currently not returning all traces. Decoded tables, traces and creation traces tables may be incomplete.
+
+[zkSync Era](https://zksync.io/) is a Layer 2 scaling solution for Ethereum, developed by [Matter Labs](https://matter-labs.io/). Zksync Era utilizes zero knowledge proofs to enable fast and cheap transactions that still benefit from the security of Ethereum Mainnet. 
+To learn more about zkSync Era, we recommend reading through their [documentation](https://era.zksync.io/docs/).
+
+
+#### Celo 
+
+Celo is a layer 1 EVM blockchain. Celo was designed to enable a new universe of financial solutions accessible for mobile users, creating a global financial ecosystem where an end-user can onboard into the Celo ecosystem with just a mobile number. Here are few of the key features of Celo: 
+
+- Layer-1 protocol
+- EVM compatible
+- Proof-of-stake
+- Carbon negative
+- Mobile-first identity
+- Ultra-light clients
+- Localized stablecoins (cUSD, cEUR, cREAL)
+- Gas payable in multiple currencies
+
+
+
