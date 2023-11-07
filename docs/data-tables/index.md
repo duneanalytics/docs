@@ -200,7 +200,8 @@ It uses a Directed Acyclic Graph, which involves the seamless interaction of nod
 !!! warning
     Zksync Era's client is currently not returning all traces. Decoded tables, traces and creation traces tables may be incomplete.
 
-Zksync Era is a zk-rollup that settles it's transactions on Ethereum Mainnet. You can read all about Zksync's approach to scaling and building a rollup [in their docs](https://era.zksync.io/docs/).
+[zkSync Era](https://zksync.io/) is a Layer 2 scaling solution for Ethereum, developed by [Matter Labs](https://matter-labs.io/). Zksync Era utilizes zero knowledge proofs to enable fast and cheap transactions that still benefit from the security of Ethereum Mainnet. 
+To learn more about zkSync Era, we recommend reading through their [documentation](https://era.zksync.io/docs/).
 
 
 #### Celo 
