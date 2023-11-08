@@ -67,7 +67,7 @@ In our example below, we'll create a line chart to visualize the number of uniqu
 <div style="position: relative; padding-bottom: calc(66.66666666666666% + 41px); height: 0;"><iframe src="https://demo.arcade.software/nNxDjw8vBmp34u3aNU0R?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;" title="Dashboards"></iframe></div>
 
 
-### 3. Present your data
+### 3. Present your 
 
 To present your data you'll need to:
 
