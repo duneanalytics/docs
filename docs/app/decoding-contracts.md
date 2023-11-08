@@ -16,7 +16,7 @@ Learn more about how Decoding works and what Decoded tables are available in the
 Contracts can be submitted for decoding through:
 
 - [The New contract form](https://dune.com/contracts/new)
-- The [My Creations > Contracts Tab](https://dune.com/browse/contracts/authored)
+- The [My Creations > Contracts Tab](https://dune.com/settings/contracts)
 
 ### 1. Blockchain and address
 
