@@ -18,8 +18,10 @@ This allows you to use `INT256` and `UINT256` without adding casts explicitly.
 Whenever DuneSQL needs to find a common type for `INT256` or `UINT256` and another numeric type, it will generally go towards the bigger type.
 
 `TINYINT`, `SMALLINT`, `INTEGER`, `BIGINT`, and `DECIMAL` types will be converted to `INT256` or `UINT256`.
-Please note that some conversions to `UINT256` will fail, since this type cannot hold negative values.
-Also, conversions from `DECIMAL` type with non-zero scale, like `DECIMAL(2,1)`, will fail.
+
+Please note that `UINT256` cannot hold negative values, so conversions from `TINYINT`, `SMALLINT`, `INTEGER`, and `BIGINT` types with negative values will fail. You will need to use explicit cast to override DuneSQL conversion rules. Please be aware that a conversion from `UINT256` to either `INT256` or `DOUBLE` will result in a precision loss.  
+
+Also, conversions from `DECIMAL` type with non-zero scale, like `DECIMAL(2,1)`, will fail. The commonly used `DECIMAL` type with zero scale, like `DECIMAL(38,0)`, will be converted to `INT256` or `UINT256` without any issues.
 
 For `REAL` and `DOUBLE` types, the conversion goes from `INT256` or `UINT256` to `REAL` or `DOUBLE`.
 Please note that `REAL` and `DOUBLE` are approximate numeric types and hence the conversion might lose some precision.
@@ -53,6 +55,7 @@ DuneSQL uses implicit conversions in many other contexts. Here are some examples
 
 ```sql
 SELECT COALESCE(1, INT256 '2');
+--resolves to INT256 '1'
 ```
 
 ```sql
@@ -61,7 +64,9 @@ SELECT CASE
     WHEN false THEN INT256 '1' 
     WHEN true THEN UINT256 '2' 
 END;
+--will resolve to UNIT256 type, since it is the biggest type
 ```
+
 
 ```sql
 SELECT * FROM (
@@ -69,9 +74,9 @@ SELECT * FROM (
     UNION 
     (VALUES INT256 '1') 
     UNION 
-    (VALUES REAL '2'));
+    (VALUES DOUBLE '2'));
+--  resolves to DOUBLE '0', DOUBLE '1', DOUBLE '2'
 ```
-
 
 ### Conversion functions
 
