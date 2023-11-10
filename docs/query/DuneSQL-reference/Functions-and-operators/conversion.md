@@ -12,8 +12,8 @@ When necessary, values can be explicitly cast to a particular type.
 
 ### Implicit Casting with numeric types
 
-DuneSQL has added support for implicit casts when performing operations with `INT256` and `UINT256` and other numeric types like `INTEGER`, `BIGINTEGER`, `DECIMAL`, or `DOUBLE`.
-This allows you to use `INT256` and `UINT256` without adding casts explicitly.
+DuneSQL has added support for implicit casts when performing arithmetic with `INT256` and `UINT256` and smaller types like `INTEGER`, `BIGINTEGER`, and `DECIMAL(38,0)`. This allows you to write expressions like `2 * UINT256 '1'` instead of `CAST(2 AS UINT256) * UINT256 '1'`, and similarly for other arithmetic operations.
+
 
 Whenever DuneSQL needs to find a common type for `INT256` or `UINT256` and another numeric type, it will generally go towards the bigger type.
 
@@ -29,29 +29,19 @@ You can use explicit cast to override DuneSQL conversion rules.
 
 With implicit conversion, this arithmetic expression:
 
+
 ```sql
 SELECT 2 * UINT256 '1';
 ```
 
-will be equivalent to:
+Will be equivalent to:
 
 ```sql
 SELECT CAST(2 AS UINT256) * UINT256 '1';
 ```
 
-Similarly, this comparison:
-
-```sql
-SELECT INT256 '1' > 0;
-```
-
-will be equivalent to:
-
-```sql
-SELECT INT256 '1' > CAST(0 AS INT256);
-```
-
-DuneSQL uses implicit conversions in many other contexts. Here are some examples:
+!!! warning 
+    Please note that implicit casting has not been added for arithmetic with DOUBLE to make precision issues more apparent.
 
 ```sql
 SELECT COALESCE(1, INT256 '2');
@@ -77,6 +67,7 @@ SELECT * FROM (
     (VALUES DOUBLE '2'));
 --  resolves to DOUBLE '0', DOUBLE '1', DOUBLE '2'
 ```
+
 
 ### Conversion functions
 
