@@ -15,6 +15,7 @@ This table contains all casts on the Farcaster protocol
 | hash                     | bytea                           | Hash of the cast                                                 |
 | parent\_hash             | bytea                           | Hash of the cast that this cast is a reply to                    |
 | parent\_fid              | bigint                          | FID of author or parent_hash                                     |
+| parent\_url              | varchar                         | Posting channel for the cast; can be null                        |
 | text                     | text                            | Text of the cast                                                 |
 | embeds                   | jsonb                           | Attachments inside the cast e.g. images, links, etc.             |
 | mentions                 | bigint[]                        | Array of FIDs for the users that were mentioned in the cast text |
