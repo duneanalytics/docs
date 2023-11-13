@@ -12,21 +12,65 @@ When necessary, values can be explicitly cast to a particular type.
 
 ### Implicit Casting with numeric types
 
-DuneSQL has added support for implicit casts when performing arithmetic with `INT256` and `UINT256` and smaller types like `INTEGER`, `BIGINTEGER`, and `DECIMAL(38,0)`. This allows you to write expressions like `2 * UINT256 '1'` instead of `CAST(2 AS UINT256) * UINT256 '1'`, and similarly for other arithmetic operations.
+DuneSQL has added support for implicit casts when performing operations with `INT256` and `UINT256` and other numeric types like `INTEGER`, `BIGINTEGER`, `DECIMAL`, or `DOUBLE`.
+This allows you to use `INT256` and `UINT256` without adding casts explicitly.
 
-For example:
+Whenever DuneSQL needs to find a common type for `INT256` or `UINT256` and another numeric type, it will generally go towards the bigger type.
+
+`TINYINT`, `SMALLINT`, `INTEGER`, `BIGINT`, and `DECIMAL` type with zero scale, like `DECIMAL(2,0)` will be converted to `INT256` or `UINT256`.
+Please note that some conversions to `UINT256` will fail, since this type cannot hold negative values.
+
+For operations involving `INT256` or `UINT256` and `DECIMAL` type with non-zero scale, like `DECIMAL(2,1)`,
+the result type is `DOUBLE`. Also, for operations involving `INT256` or `UINT256` and `REAL` or `DOUBLE` types, the result type is `DOUBLE`.
+Please note that `DOUBLE` is an approximate numeric type and hence the conversion might lose some precision.
+You can use explicit cast to override DuneSQL conversion rules.
+
+With implicit conversion, this arithmetic expression:
 
 ```sql
 SELECT 2 * UINT256 '1';
 ```
 
-Will be equivalent to:
+will be equivalent to:
 
 ```sql
 SELECT CAST(2 AS UINT256) * UINT256 '1';
 ```
 
-Please note that implicit casting has not been added for arithmetic with DOUBLE to make precision issues more apparent.
+Similarly, this comparison:
+
+```sql
+SELECT INT256 '1' > 0;
+```
+
+will be equivalent to:
+
+```sql
+SELECT INT256 '1' > CAST(0 AS INT256);
+```
+
+DuneSQL uses implicit conversions in many other contexts. Here are some examples:
+
+```sql
+SELECT COALESCE(1, INT256 '2');
+```
+
+```sql
+SELECT CASE 
+    WHEN false THEN BIGINT '0' 
+    WHEN false THEN INT256 '1' 
+    WHEN true THEN UINT256 '2' 
+END;
+```
+
+```sql
+SELECT * FROM (
+    (VALUES TINYINT '0') 
+    UNION 
+    (VALUES INT256 '1') 
+    UNION 
+    (VALUES REAL '2'));
+```
 
 
 
