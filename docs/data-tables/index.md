@@ -27,6 +27,30 @@ title: Tables and Chains Overview
 
 ## Categories of tables
 
+## Available Chains
+
+**Dune currently indexes these chains:**
+
+**EVM Chains**
+
+- Ethereum Mainnet
+- Polygon POS
+- Arbitrum
+- Optimism
+- Base
+- BNB
+- Avalanche C-chain
+- Gnosis Chain
+- Fantom
+- Mainnet Goerli Testnet
+
+**Non-EVM Chains**
+
+- Solana
+- Bitcoin
+
+## Categories of tables
+
 Dune ingests data from [node providers](https://www.quicknode.com/case-study/dune-analytics) to directly fill our **raw tables** for each chain. We further process this raw data into **decoded tables** using the smart contract's ABIs to create an effortless way to query the data.
 
 On top of the raw and decoded tables, we have built a data interpretation layer called **spells**, in which Dune and our community maintain a set of tables that are easy to work with and understand.
