@@ -15,7 +15,8 @@ When necessary, values can be explicitly cast to a particular type using the [ca
 DuneSQL has added support for implicit casts when performing operations with `INT256` and `UINT256` and other numeric types like `INTEGER`, `BIGINTEGER`, `DECIMAL`, or `DOUBLE`.
 This allows you to use `INT256` and `UINT256` without adding casts explicitly.
 
-Whenever DuneSQL needs to find a common type for `INT256` or `UINT256` and another numeric type, it will generally go towards the bigger type. We consider `INT256` to be bigger than `UINT256`. Please be aware of this when using `UINT256` and `INT256` datatypes in the same expression, the `UINT256` datatype will be converted to `INT256` and you will loose some precision. 
+Whenever DuneSQL needs to find a common type for `INT256` or `UINT256` and another numeric type, it will generally go towards the bigger type.  
+We consider `INT256` to be bigger than `UINT256`. In some cases, this might lead to an overflow error when trying to include `UINT256` and `INT256` values into the same expression. 
 
 `TINYINT`, `SMALLINT`, `INTEGER`, `BIGINT`, and `DECIMAL` type with zero scale, like `DECIMAL(2,0)` will be converted to `INT256` or `UINT256`.
 Please note that some conversions to `UINT256` will fail, since this type cannot hold negative values.
