@@ -3,7 +3,7 @@ title: Executing Queries
 description: Learn how to execute queries via Dune API
 ---
 
-Learn how to execute an existing query and cancel the execution. For how to get query results (including knowing how big the result will be), please refer to [Getting Results](../get-results) section.
+Learn how to execute an existing query and cancel the execution. For how to get query results (including knowing how big the result will be), please refer to [Getting Results](../../api-reference/get-results/index.md) section.
 
 <div class="cards grid" markdown>
 - [Execute Query via Query ID](../execute-queries/execute-query-id.md)

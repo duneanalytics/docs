@@ -90,7 +90,7 @@ Results are paginated, so you can click through the pages to see more results. E
 
 You can full text search the results by using the search bar below the results table.
 
-You can format the results according to the rules laid out in the [tables section](/visualizations/tables) of the documentation.
+You can format the results according to the rules laid out in the [tables section](../visualizations/tables.md) of the documentation.
 
 <div style="position: relative; padding-bottom: calc(50.67708333333333% + 41px); height: 0;"><iframe src="https://demo.arcade.software/FrOeNaAh5HBsESAvGUGm?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;" title="Net flow of stake ETH last 7 days"></iframe></div>
 

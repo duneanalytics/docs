@@ -4,7 +4,6 @@
 
 This table contains records with information about each bid change.
 
-Query examples can be found here: [TBD](TBD)
 
 | **Column name**     | **Type**  | **Description**                                                                                                 |
 | ------------------- | --------- | --------------------------------------------------------------------------------------------------------------- |

@@ -87,7 +87,7 @@ To schedule a dashboard:
 3. Select the execution tier you want to use
 4. Click on "Save"
 
-You can also schedule individual queries to be refreshed. This is useful if you have a Dashboard with many queries and only want to refresh a few of them. Learn more about scheduling queries [here](/query-editor/query-scheduler.md).
+You can also schedule individual queries to be refreshed. This is useful if you have a Dashboard with many queries and only want to refresh a few of them. Learn more about scheduling queries [here](query-editor/query-scheduler.md).
 
 ## Sharing your Dashboard
 

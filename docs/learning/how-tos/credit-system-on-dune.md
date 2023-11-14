@@ -15,9 +15,9 @@ For those using Dune in a team account, credits are shared among all team member
 ## What Consumes Credits?
 
 - Executing queries
-- [Scheduling queries](../../../app/query-editor/query-scheduler/)
-- [Materializing query results](../../../query/materialized-views/)
-- [Data exports via API](../../../api/api-reference/get-results/)
+- [Scheduling queries](../../app/query-editor/query-scheduler.md)
+- [Materializing query results](../../query/materialized-views.md)
+- [Data exports via API](../../api/api-reference/get-results/index.md)
 
 !!! note
     Opting for larger, more powerful engines will result in higher credit consumption.

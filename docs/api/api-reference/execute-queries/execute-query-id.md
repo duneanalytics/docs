@@ -66,4 +66,4 @@ result_response = requests.request("POST", base_url, headers=headers, params=par
 ```
 
  - *execution_id* : A unique ID that is generated every time this API is called. You might want to save it to later pass on to other API endpoints.
- - *state* : The current state of the query's execution. Check our [`FAQ` section](../../../faq/#what-is-the-difference-between-the-states-executing-and-pending) to see what different status codes mean.
+ - *state* : The current state of the query's execution. Check our [`FAQ` section](../../FAQ/functionality.md#what-is-the-difference-between-the-states-executing-and-pending) to see what different status codes mean.

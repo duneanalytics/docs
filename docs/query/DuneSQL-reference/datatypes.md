@@ -122,7 +122,7 @@ SQL statements support usage of binary data with the prefix `0x`. The
 binary data has to use hexadecimal format. For example, the binary form
 of `eh?` is `X'65683F'`.
 
-We have built custom functions to make it easier to work with varbinaries in DuneSQL. Check the [varbinary functions](/docs/query/DuneSQL-reference/Functions-and-operators/varbinary/) page for more information.
+We have built custom functions to make it easier to work with varbinaries in DuneSQL. Check the [varbinary functions](../DuneSQL-reference/Functions-and-operators/varbinary.md) page for more information.
 
 ```sql
     Select * from ethereum.transactions where "from" = 0xc8ebccc5f5689fa8659d83713341e5ad19349448
@@ -135,7 +135,7 @@ number, a JSON string, `true`, `false` or `null`.
 
 ## Date and time
 
-See also [`date and time functions`](/docs/query/DuneSQL-reference/Functions-and-operators/conversion/).
+See also [`date and time functions`](../DuneSQL-reference/Functions-and-operators/conversion.md).
 
 ### `DATE`
 

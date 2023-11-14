@@ -11,7 +11,7 @@ CRUD API endpoints enables users to create, read, update, or archive queries *be
 !!! info end "What is CRUD"
     - CRUD operations, standing for Create, Read, Update, and Delete, are the four basic functions that a software application needs to interact with data. They are essential because they allow you to add new data (Create), view existing data (Read), modify existing data (Update), and remove data (Delete) in your database or other storage systems.
     - In Dune context, `delete` aciton is replaced by `archive` as deletion of queries is not possible.
-    - Unlike endpoints in [query execution](../execute-queries) group, endpoints in CRUD queries API *cannot* be cancelled, i.e. it is a sync call and there is no intermediary status.
+    - Unlike endpoints in [query execution](../execute-queries/index.md) group, endpoints in CRUD queries API *cannot* be cancelled, i.e. it is a sync call and there is no intermediary status.
 
 
 ## How to CRUD Queries

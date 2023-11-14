@@ -21,7 +21,7 @@ In this guide, we'll walk you through the essentials of setting up and managing 
 ## Inviting Members & Assigning Roles
 
 - Once your team is set up, you'll have the opportunity to invite others. Click on “Invite People” and proceed as directed.
-- During the invitation process, you can assign one of three roles to the invitee: [admin, editor, or viewer](../../../app/teams/#adding-users).
+- During the invitation process, you can assign one of three roles to the invitee: [admin, editor, or viewer](../../app/teams.md#adding-users).
 - Alternatively, use the provided URL to invite members.
 
 <div style="position: relative; padding-bottom: calc(56.71874999999999% + 41px); height: 0; width: 100%"><iframe src="https://demo.arcade.software/gsRWeOexH1dchsNlzAgV?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;" title="Invite member after team creation"></iframe></div>
