@@ -14,7 +14,7 @@ Beyond these, Dune showcases the most frequently used datasets under the “esse
 ![data categories](images/data categories.png)
 
 ## Available Chains on Dune
-Currently, Dune supports 10 EVM chains and 2 non-EVM chains: Solana and Bitcoin. To view the full list of [supported chains](../../../data-tables), navigate to the data explorer, select “Raw”, and then click the “All chains” dropdown.
+Currently, Dune supports 10 EVM chains and 2 non-EVM chains: Solana and Bitcoin. To view the full list of [supported chains](../../data-tables/index.md), navigate to the data explorer, select “Raw”, and then click the “All chains” dropdown.
 
 <div style="position: relative; padding-bottom: calc(55.052083333333336% + 41px); height: 0; width: 100%"><iframe src="https://demo.arcade.software/05AwYXRMlnz4rSqlgw91?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;" title="How to navigate to raw all chains"></iframe></div>
 
@@ -36,4 +36,4 @@ Once you've identified the desired table, use the double-arrow symbol to instant
     - Starting Point: If unsure, begin with the “Essentials” category.
     - Protocol-Specific Analysis: The “Decoded projects” category is ideal. Filter by a specific chain, event, or function to expedite your search.
     - Ecosystem Research: The “Raw” category is a good starting point. Alternatively, the “Spells” category might have pre-aggregated data for your analysis.
-    - Helper Tables: Tables like [prices](../../../data-tables/spellbook/top-tables/prices), [tokens](../../../data-tables/spellbook/top-tables/prices), and [labels](../../../data-tables/spellbook/top-tables/labels) are accessible under the “Essentials” category.
+    - Helper Tables: Tables like [prices](../../data-tables/spellbook/top-tables/prices.md), [tokens](../../data-tables/spellbook/top-tables/tokens.md), and [labels](../../data-tables/spellbook/top-tables/labels.md) are accessible under the “Essentials” category.

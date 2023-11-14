@@ -25,7 +25,7 @@ By the end of this guide, you’ll have your local environment set up and the kn
 </div>
 
 !!! note "Spellbook Model Creation Runs on Spark SQL"
-       Spellbook Spells are available on Dune V2, queryable from both Spark SQL and Dune SQL [V2 Query Engines](/query/index.md). For now, Spells will continue to be written in Spark SQL and querying them with Dune SQL will require small syntax changes. While the changes needed to make Spells Dune SQL native are small, we want to make sure Dune SQL is rock solid before we implement them!
+       Spellbook Spells are available on Dune V2, queryable from both Spark SQL and Dune SQL [V2 Query Engines](../query/index.md). For now, Spells will continue to be written in Spark SQL and querying them with Dune SQL will require small syntax changes. While the changes needed to make Spells Dune SQL native are small, we want to make sure Dune SQL is rock solid before we implement them!
 ## Video Guides
 
 If you’re more of a watcher, check out these video workshops.

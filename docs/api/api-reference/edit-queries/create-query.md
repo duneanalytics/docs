@@ -11,7 +11,7 @@ description: Here's how to create new queries via Dune API
 !!! success end "Note" 
     This endpoint is included only in our Premium subscription plans.
 
-This endpoint accepts a JSON body to create a new query. It returns just the new query ID. **The `name` and `query_sql` parameters are mandatory, the rest are optional.** All newly created queries are only created on our [DuneSQL](../../../../query/DuneSQL-reference) query engine.
+This endpoint accepts a JSON body to create a new query. It returns just the new query ID. **The `name` and `query_sql` parameters are mandatory, the rest are optional.** All newly created queries are only created on our [DuneSQL](../../../query/index.md) query engine.
 
 ## Example Request in Python
 

@@ -3,7 +3,7 @@ title: Date and time functions and operators
 ---
 
 These functions and operators operate on
-[`date and time data types`](DuneSQL-reference/SQL-language/datatypes.md/#date-and-time).
+[`date and time data types`](../datatypes.md).
 
 ### Date and time operators
 

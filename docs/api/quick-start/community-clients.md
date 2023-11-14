@@ -5,13 +5,13 @@ description: Here's a list of Dune API clients built by our magnificent communit
 
 Our community once again comes through for the win with the below API clients.
 
-If you've built your own let us know about it in our [#dune-api Discord Channel](https://discord.com/channels/757637422384283659/1019910980634939433)!
+If you've built your own let us know about it in our [#dune-api Discord Channel](https://discord.gg/dunecom)!
 
 !!! warning "Disclaimer"
     While we love that our community has taken the lead, these clients are not directly maintained by the Dune team.
 
 !!!note
-    The community SDKs currently only contains endpoints under [Executing Queries](../api-reference/execute-queries) and [Getting Results](../api-reference/get-results). 
+    The community SDKs currently only contains endpoints under [Executing Queries](../api-reference/execute-queries/index.md) and [Getting Results](../api-reference/get-results/index.md). 
 
 ## Python
 

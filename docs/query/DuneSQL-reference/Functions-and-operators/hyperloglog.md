@@ -2,8 +2,7 @@
 title: HyperLogLog functions
 ---
 
-Trino implements the [`approx_distinct`](DuneSQL-reference/Functions-and-operators/aggregate/#approximate-aggregate-functions) function using the
-[HyperLogLog](https://en.wikipedia.org/wiki/HyperLogLog) data structure.
+Trino implements the [`approx_distinct`](../Functions-and-operators/aggregate.md#approximate-aggregate-functions) function using the [HyperLogLog](https://en.wikipedia.org/wiki/HyperLogLog) data structure.
 
 ### Data structures
 

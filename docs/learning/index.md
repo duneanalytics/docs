@@ -17,8 +17,8 @@ Speed up your learning curve and become a Dune creator. Dive into our [how-to tu
 ### How-To Guides
 Eager for focused insights? Explore our curated guides:
 
-- [How to create Sankey diagram with Dune's data](./how-to-create-sankey-diagram.md) 
-- [How to conduct social network analysis for Farcaster with Dune API and Python](./how-to-perform-social-network-analysis.md)
+- [How to create Sankey diagram with Dune's data](create-sankey-diagram.md) 
+- [How to conduct social network analysis for Farcaster with Dune API and Python](conduct-network-analysis.md)
 
 ### Metrics-Driven Analysis
 

@@ -25,7 +25,7 @@ You'll have seperate API keys for your [individual accounts](https://dune.com/se
 ### API Quickstart Guides
 
 !!!note
-    The quickstart and developer SDKs currently only contains endpoints under [Executing Queries](./api-reference/execute-queries) and [Getting Results](./api-reference/get-results). We will be adding info regarding newer endpoints under [Editing Queries](./api-reference/edit-queries) soon.
+    The quickstart and developer SDKs currently only contains endpoints under [Executing Queries](../api/api-reference/execute-queries/index.md) and [Getting Results](../api/api-reference/get-results/index.md). We will be adding info regarding newer endpoints under [Editing Queries](../api/api-reference/edit-queries/index.md) soon.
 
 Get started with our API in a few lines of code using these quick start guides:
 

@@ -15,7 +15,7 @@ This endpoint updates the query with the ID from the URL.
 
 The request body should contain all fields that need to be updated. **Any omitted fields will be left untouched**. If the `tags` or `parameters` are provided as an empty array, they will be deleted from the query. If they are sent with some values, the existing ones will be overwritten by the new ones. And as with the other fields, if those keys aren’t set at all, they won’t be updated. 
 
-The Update query endpoint does not allow setting a query as private or archived, please refer to [archive query](../archive-query) and [make query private](../private-query) pages respectively.
+The Update query endpoint does not allow setting a query as private or archived, please refer to [archive query](archive-query.md) and [make query private](private-query.md) pages respectively.
 
 ## Example Request in Python
 

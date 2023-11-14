@@ -12,6 +12,7 @@ In this example we'll be using Python3. We recommend using a virtual environment
 
 ## Python SDK - Quickstart
 
+
 The following code demo
 
 ### Install & Setup
@@ -89,7 +90,7 @@ results = client.run_sql(
 
 ### Further Examples
 
-There [client project repo](github.com/duneanalytics/dune-client) contains extensive [end-to-end testing](https://github.com/duneanalytics/dune-client/blob/main/tests/e2e/test_client.py) of all available API routes.
+There [client project repo](https://github.com/duneanalytics/dune-client) contains extensive [end-to-end testing](https://github.com/duneanalytics/dune-client/blob/main/tests/e2e/test_client.py) of all available API routes.
 
 ## API Breakdown
 

@@ -9,7 +9,7 @@ In this guide, we'll provide an overview of the Dune Query Editor and its featur
 
 - Query Explorer: Search and locate relevant content for your query.
 - Data Explorer: Discover the necessary data tables for your projects.
-- [Version History](../../../app/query-editor/version-history): Review the query's edit history and, if required, revert to a previous version.
+- [Version History](../../app/query-editor/version-history.md): Review the query's edit history and, if required, revert to a previous version.
 - Settings: Adjust setting for your query.
 
 <div style="position: relative; padding-bottom: calc(56.71874999999999% + 41px); height: 0; width: 100%"><iframe src="https://demo.arcade.software/4CDTAz0GqLpsCGT9iUJF?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;" title="left buttons of query editor"></iframe></div>

@@ -25,9 +25,10 @@ Ready to start building? Once you have an [account](https://dune.com/auth/regist
 
 
 
-* Use the [Query Editor](/app/query-editor/) to explore data, write queries, and gain mastery
-* Make stunning [visualizations](/app/visualizations/) with graphs, charts, and other unique options
-* Create a [Dashboard](/app/dashboards/) to embed visualizations, graphics, and text to tell compelling stories with your data
+* Use the [Query Editor](app/query-editor/index.md) to explore data, write queries, and gain mastery
+* Make stunning [visualizations](app/visualizations/index.md) with graphs, charts, and other unique options
+* Create a [Dashboard](app/dashboards.md) to embed visualizations, graphics, and text to tell compelling stories with your data
+
 
 
 

@@ -26,7 +26,7 @@ Ensure you have an API key. If not, generate one:
 
 <div style="position: relative; padding-bottom: calc(55.052083333333336% + 41px); height: 0; width: 100%"><iframe src="https://demo.arcade.software/f07eudjtOJz9URF8TGa5?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;" title="how to generate API key"></iframe></div>
 
-For this guide, we'll focus on exporting data using the ['get latest query result'](../../../api/api-reference/get-results/latest-results) endpoint. Here's a Python example:
+For this guide, we'll focus on exporting data using the ['get latest query result'](../../api/api-reference/get-results/index.md) endpoint. Here's a Python example:
 
 !!! note 
     First, create a .env file with the API key you just created.
@@ -63,7 +63,7 @@ print(latest_res)
 
 ```
 
-There are multiple methods to export data via the API, and it's possible to get data in various formats like JSON and CSV. You can even integrate the data with Google Sheets. For a comprehensive guide, refer to [this page](../../../api/api-reference/get-results/).
+There are multiple methods to export data via the API, and it's possible to get data in various formats like JSON and CSV. You can even integrate the data with Google Sheets. For a comprehensive guide, refer to [this page](../../api/api-reference/get-results/index.md).
 
 !!! tip 
     Access the 'get latest result' endpoint directly from the Dune UI. When viewing a query, click the API icon in the top-right corner and copy the endpoint URL.

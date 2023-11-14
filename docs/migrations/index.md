@@ -112,5 +112,5 @@ After **30/07/2023**, queries running on either SparkSQL or PostgreSQL will no l
 
 ??? question "Can I get help to migrate existing queries?"
 
-    Please [create an issue in the translator github](https://github.com/duneanalytics/harmonizer/issues) for priority support. Otherwise, you can direct your general questions in the #DuneSQL Channel in the [Dune Discord](discord.gg/dunecom).
+    Please [create an issue in the translator github](https://github.com/duneanalytics/harmonizer/issues) for priority support. Otherwise, you can direct your general questions in the #DuneSQL Channel in the [Dune Discord](https://discord.gg/dunecom).
 
