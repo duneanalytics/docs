@@ -6,9 +6,9 @@ title: Conversions
 
 DuneSQL will implicitly convert numeric and character values to the correct type if such a conversion is possible.  
 DuneSQL will not convert implicitly between character and numeric types.  
-For example, a query that expects a varchar will not automatically convert a bigint value to an equivalent varchar.
+For example, a query that expects a `VARCHAR` will not automatically convert a `BIGINT` value to an equivalent `VARCHAR`.
 
-When necessary, values can be explicitly cast to a particular type.
+When necessary, values can be explicitly cast to a particular type using the [cast function](#cast).
 
 ### Implicit Casting with numeric types
 
@@ -53,6 +53,7 @@ DuneSQL uses implicit conversions in many other contexts. Here are some examples
 
 ```sql
 SELECT COALESCE(1, INT256 '2');
+-- will resolve to INT256
 ```
 
 ```sql
@@ -61,6 +62,7 @@ SELECT CASE
     WHEN false THEN INT256 '1' 
     WHEN true THEN UINT256 '2' 
 END;
+-- will resolve to INT256
 ```
 
 ```sql
@@ -69,11 +71,9 @@ SELECT * FROM (
     UNION 
     (VALUES INT256 '1') 
     UNION 
-    (VALUES REAL '2'));
+    (VALUES DOUBLE '2'));
+-- will resolve to DOUBLE
 ```
-
-
-
 
 ### Conversion functions
 
