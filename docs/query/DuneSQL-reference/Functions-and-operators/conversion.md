@@ -89,7 +89,7 @@ a numeric value type and vice versa.
 #### try_cast()
 **``try_cast(value AS type)``** → type
 
-Like `cast`{.interpreted-text role="func"}, but returns null if the cast
+Like `cast`, but returns `null` if the cast
 fails.
 
 ### Formatting
