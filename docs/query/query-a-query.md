@@ -34,12 +34,12 @@ The table below shows the syntax for passing parameters to different types. The 
 For varchar, uint256, int256 and datetime parameters, you should use single quotes wrapping the params on the base query. So '{{some_param}}' in the base query.
 
 | **Parameter Type** | **Syntax** | **Example** |
-| --- | --- | --- | --- |
+| --- | --- | --- |
 | Literal | `query(tableName='labels.all', whateverKey='lala')` | Original Query: select * from {{tableName}} <br> Macro: select * from "query_123(tableName='labels.all')" |
 | Integer, Bigint | `query(integerKey='1')` | Original Query: select {{integerKey}} <br> Macro: select * from "query_123(integerKey='1')" |
 | Decimal, Double | `query(decimalKey='1.2')` <br> `query(realKey='1.2F')` <br> `query(doubleKey='1.2E0')` | Original Query: select {{realKey}} <br> Macro: select * from "query_123(realKey='1.2F')" |
 | Varchar | `query(varcharKey='\'ethereum\'')` | Original Query: select * from labels.all where name = {{varcharKey}} <br> Macro: select * from "query_123(varcharKey='\'DEX Trader\'')" |
-| Char | `query(charKey='\'a\'')` | - with double single quotes <br> Original Query: select {{charKey}} <br> Macro: select * from "query_123(charKey='\'a\'')" |
+| Char | `query(charKey='\'a\'')` | Original Query: select {{charKey}} <br> Macro: select * from "query_123(charKey='\'a\'')" |
 | Varbinary | `query(varbinaryKey='0xabcd')` | Original Query: select * from labels.all where address = {{varbinaryKey}} <br> Macro: select * from "query_123(varbinaryKey='0xabcd')" |
 | UINT256 | `query(uint256Key='UINT256 \'1\'')` | Original Query: select * from arbitrum.transactions where gas_price = {{uint256Key}} <br> Macro: select * from "query_123(uint256Key='uint256 \'1\'')" <br> Original Query: select * from arbitrum.transactions where gas_price = uint256 '{{uint256Key}}' <br> Macro: select * from "query_123(uint256Key='1')" |
 | INT256 | `query(int256Key='INT256 \'-1\'')` | Original Query: select * from arbitrum.transactions where gas_price = {{int256Key}} <br> Macro: select * from "query_123(int256Key='int256 \'-1\'')" <br> Original Query: select * from arbitrum.transactions where gas_price = int256 '{{int256Key}}' <br> Macro: select * from "query_123(int256Key='1')" |
