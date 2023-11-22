@@ -28,7 +28,10 @@ dotenv.load_dotenv('/Users/abc/Documents/Workspace/misc/.env')
 # get API key
 api_key = os.environ["DUNE_API_KEY"]
 # authentiction with api key
-headers = {"X-Dune-API-Key": api_key}
+headers = {
+    "X-Dune-API-Key": api_key,
+    "Content-Type": "application/json"  # Specify the content type as JSON
+}
 
 base_url = f"https://api.dune.com/api/v1/query/"
 params = {
@@ -41,9 +44,10 @@ params = {
         	"value": "5"
     	}
 	],
-	"is_private": false
+	"is_private": False
 }
-result_response = requests.request("POST", base_url, headers=headers, params=params)
+result_response = requests.post(base_url, headers=headers, json=data)
+
 ```
 
 ### Standalone Request Body
