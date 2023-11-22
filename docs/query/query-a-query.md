@@ -1,7 +1,7 @@
----
+-feramer/docs---
 title: Query Views
 description: The "Query View" feature in DuneSQL allows you to use an existing query as a view in another query. This powerful functionality enables you to create reusable queries, build complex queries, and take advantage of existing queries as views.
----
+--Control + Shift + mبرای تغییر دادن فوکوس متحرک کلید-
 
 ## Overview
 
