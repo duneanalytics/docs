@@ -35,19 +35,19 @@ For varchar, uint256, int256 and datetime parameters, you should use single quot
 
 | **Parameter Type** | **Syntax** | **Example** |
 | --- | --- | --- |
-| Literal | `query(tableName='labels.all', whateverKey='lala')` | Original Query: select * from {{tableName}} <br> Macro: select * from "query_123(tableName='labels.all')" |
-| Integer, Bigint | `query(integerKey='1')` | Original Query: select {{integerKey}} <br> Macro: select * from "query_123(integerKey='1')" |
-| Decimal, Double | `query(decimalKey='1.2')` <br> `query(realKey='1.2F')` <br> `query(doubleKey='1.2E0')` | Original Query: select {{realKey}} <br> Macro: select * from "query_123(realKey='1.2F')" |
-| Varchar | `query(varcharKey='\'ethereum\'')` | Original Query: select * from labels.all where name = {{varcharKey}} <br> Macro: select * from "query_123(varcharKey='\'DEX Trader\'')" |
-| Char | `query(charKey='\'a\'')` | Original Query: select {{charKey}} <br> Macro: select * from "query_123(charKey='\'a\'')" |
-| Varbinary | `query(varbinaryKey='0xabcd')` | Original Query: select * from labels.all where address = {{varbinaryKey}} <br> Macro: select * from "query_123(varbinaryKey='0xabcd')" |
-| UINT256 | `query(uint256Key='UINT256 \'1\'')` | Original Query: select * from arbitrum.transactions where gas_price = {{uint256Key}} <br> Macro: select * from "query_123(uint256Key='uint256 \'1\'')" <br> Original Query: select * from arbitrum.transactions where gas_price = uint256 '{{uint256Key}}' <br> Macro: select * from "query_123(uint256Key='1')" |
-| INT256 | `query(int256Key='INT256 \'-1\'')` | Original Query: select * from arbitrum.transactions where gas_price = {{int256Key}} <br> Macro: select * from "query_123(int256Key='int256 \'-1\'')" <br> Original Query: select * from arbitrum.transactions where gas_price = int256 '{{int256Key}}' <br> Macro: select * from "query_123(int256Key='1')" |
-| Date, Time, Timestamp | `query(dateKey='2023-01-02')` <br> `query(dateKey='date \'2023-01-02\'')` <br> `query(dateKey='13:45:30 +05:00')` <br> `query(dateKey='time \'13:45:30 +05:00\'')` <br> `query(dateKey='2023-08-24 13:45:30 UTC')` <br> `query(dateKey='timestamp \'2023-08-24 13:45:30 UTC\'')` | Original Query: select * from ethereum.blocks where time > {{dateKey}} <br> Macro: select * from "query_123(dateKey='timestamp \'2023-08-24\'')" <br> Original Query: select * from ethereum.blocks where time > timestamp '{{dateKey}}' <br> Macro: select * from "query_123(dateKey='2023-08-24')" |
-| Array | `query(arrayKey='array[1,2,3]')` <br> `query(arrayKey='array[uint256 \'1\', uint256 \'2\']')` <br> `query(arrayKey='array[\'these\', \'are\, \'varchar\]')` | Original Query: select * from dex_aggregator.trades where trace_address = {{arrayKey}} <br> Macro: select * from "query_123(arrayKey='array[1, 2]')" |
-| Boolean | `query(booleanKey='true')` | Original Query: select * from bitcoin.inputs where is_coinbase = {{booleanKey}} <br> Macro: select * from "query_123(booleanKey='false')" |
-| Row | `query(rowKey='row(1, uint256 \'1\', \'hi\')')` | Original Query: select {{rowKey}} <br> Macro: select * from "query_123(rowKey='row(false, 1, uint256 \'1\', \'hi\')')" |
-| Map | `query(mapKey='map(array[\'key1\', \'key2\'], array[\'value1\', \'value2\'])')` | Original Query: select {{mapKey}} <br> Macro: select * from "query_123(mapKey='map(array[\'key1\', \'key2\'], array[\'value1\', \'value2\'])')" |
+| Literal | `query(tableName='labels.all', whateverKey='lala')` | **Original Query**: select * from {{tableName}} <br> **Macro**: select * from "query_123(tableName='labels.all')" |
+| Integer, Bigint | `query(integerKey='1')` | **Original Query**: select {{integerKey}} <br> **Macro**: select * from "query_123(integerKey='1')" |
+| Decimal, Double | `query(decimalKey='1.2')` <br> `query(realKey='1.2F')` <br> `query(doubleKey='1.2E0')` | **Original Query**: select {{realKey}} <br> **Macro**: select * from "query_123(realKey='1.2F')" |
+| Varchar | `query(varcharKey='\'ethereum\'')` | **Original Query**: select * from labels.all where name = {{varcharKey}} <br> **Macro**: select * from "query_123(varcharKey='\'DEX Trader\'')" |
+| Char | `query(charKey='\'a\'')` | **Original Query**: select {{charKey}} <br> **Macro**: select * from "query_123(charKey='\'a\'')" |
+| Varbinary | `query(varbinaryKey='0xabcd')` | **Original Query**: select * from labels.all where address = {{varbinaryKey}} <br> **Macro**: select * from "query_123(varbinaryKey='0xabcd')" |
+| UINT256 | `query(uint256Key='UINT256 \'1\'')` | **Original Query**: select * from arbitrum.transactions where gas_price = {{uint256Key}} <br> **Macro**: select * from "query_123(uint256Key='uint256 \'1\'')" <br> **Original Query**: select * from arbitrum.transactions where gas_price = uint256 '{{uint256Key}}' <br> **Macro**: select * from "query_123(uint256Key='1')" |
+| INT256 | `query(int256Key='INT256 \'-1\'')` | **Original Query**: select * from arbitrum.transactions where gas_price = {{int256Key}} <br> **Macro**: select * from "query_123(int256Key='int256 \'-1\'')" <br> **Original Query**: select * from arbitrum.transactions where gas_price = int256 '{{int256Key}}' <br> **Macro**: select * from "query_123(int256Key='1')" |
+| Date, Time, Timestamp | `query(dateKey='2023-01-02')` <br> `query(dateKey='date \'2023-01-02\'')` <br> `query(dateKey='13:45:30 +05:00')` <br> `query(dateKey='time \'13:45:30 +05:00\'')` <br> `query(dateKey='2023-08-24 13:45:30 UTC')` <br> `query(dateKey='timestamp \'2023-08-24 13:45:30 UTC\'')` | **Original Query**: select * from ethereum.blocks where time > {{dateKey}} <br> **Macro**: select * from "query_123(dateKey='timestamp \'2023-08-24\'')" <br> **Original Query**: select * from ethereum.blocks where time > timestamp '{{dateKey}}' <br> **Macro**: select * from "query_123(dateKey='2023-08-24')" |
+| Array | `query(arrayKey='array[1,2,3]')` <br> `query(arrayKey='array[uint256 \'1\', uint256 \'2\']')` <br> `query(arrayKey='array[\'these\', \'are\, \'varchar\]')` | **Original Query**: select * from dex_aggregator.trades where trace_address = {{arrayKey}} <br> **Macro**: select * from "query_123(arrayKey='array[1, 2]')" |
+| Boolean | `query(booleanKey='true')` | **Original Query**: select * from bitcoin.inputs where is_coinbase = {{booleanKey}} <br> **Macro**: select * from "query_123(booleanKey='false')" |
+| Row | `query(rowKey='row(1, uint256 \'1\', \'hi\')')` | **Original Query**: select {{rowKey}} <br> **Macro**: select * from "query_123(rowKey='row(false, 1, uint256 \'1\', \'hi\')')" |
+| Map | `query(mapKey='map(array[\'key1\', \'key2\'], array[\'value1\', \'value2\'])')` | **Original Query**: select {{mapKey}} <br> **Macro**: select * from "query_123(mapKey='map(array[\'key1\', \'key2\'], array[\'value1\', \'value2\'])')" |
 
 
 ## Limitations
@@ -70,7 +70,7 @@ When using the "Query View" feature, consider the following best practices:
 2. **Documentation**: Provide clear documentation and comments for your queries, especially when they are intended to be used as views in other queries.
 3. **Modularity**: Break down complex queries into smaller, reusable components. This will make your queries more maintainable and easier to understand.
 4. **Version control**: If you need to update a query that is being used as a view in other queries, consider creating a new version of the query instead of modifying the existing one. This will help prevent unexpected changes in dependent queries.
-5. **Forking** If you use the query of another user as a view in your query, consider forking the query instead of querying it. That way, you will not be affected by changes made to the original query. On the other hand, you will also not be able to benefit from any improvements made to the original query.
+5. **Forking** If you use the query of another user as a view in your query, consider forking the query instead of querying it. That way, you will not be affected by changes made to the **Original Query**. On the other hand, you will also not be able to benefit from any improvements made to the **Original Query**.
 
 
 
