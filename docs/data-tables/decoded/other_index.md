@@ -104,4 +104,4 @@ Submissions can be rejected for a number of reasons, including not following the
 
 #### Step 3: Query your table
 
-(edit:show how to find it in data explorer and bring it into the query editor)
+(edit:show how to find it in data explorer and bring it into the query editor) 
