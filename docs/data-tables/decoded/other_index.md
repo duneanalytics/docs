@@ -9,7 +9,7 @@ description: Instead of working with the transactions, logs, and traces in their
 
 But what does decoding mean? Blockchain transaction data starts as bytecode, a low level programming language that can be read by machines. Using the ABI (Application Binary Interface) that is personal to each contract, we translate that bytecode into query-able data tables.   
 
-### A. The Lifecycle of Decoding
+### A. The Lifecycle of Decoding  
 
 #### Step 1: Submission
 
