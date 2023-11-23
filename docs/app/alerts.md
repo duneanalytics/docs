@@ -1,94 +1,105 @@
 ---
-title: Create a Dashboard
+title: Alerts
+
 ---
 
-**Dashboards are where Dune's content lives and gets discovered.**
+**Get notified when something important happens.**
 
-Dashboards on Dune consist of widgets. Widgets can either be Visualizations or Text. It is also possible to embed images or GIFs inside of the text widget.
+Alerts allow users to set notifications for a scheduled query. These notifications are triggered each time the query runs. Supported delivery methods include:
 
-You can freely resize every widget to match the layout you want to create.
+- **Email:** Multiple email addresses can be added.
+- **Webhooks:** Alerts can be sent to a specified callback URL.
 
-## Creating a Dashboard
+## Setup
 
-<div style="position: relative; padding-bottom: calc(66.66666666666666% + 41px); height: 0;"><iframe src="https://demo.arcade.software/xTAXmlo0nCL0FOn38hW9?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;" title="Creating a dashboard"></iframe></div>
+### Accessing Alerts
 
+To use Alerts, follow these steps:
 
-**To create a dashboard on Dune:**
+1. Open a saved query that you own.
+2. Click the "Schedule" button. [insert image]
+3. Configure the query schedule.
+4. Activate the Alerts option. [insert image]
+5. Save the alert configuration.
 
-1. Use the create menu and pick "New Dashboard"
-2. Give your Dashboard a name
-3. Click on "Save and Open"
-4. You are now inside of your Dashboard
-5. Enter the edit mode by clicking on the "Edit" button in the top right corner
-6. Add widgets by clicking on the "Add Widget" button in the top right corner
-7. Pick the widget you want to add
-8. You can now resize the widget by dragging the bottom right corner
-9. You can also move the widget by dragging it around
-10. Click on the "Save" button in the top right corner to save your changes
+### Alert Timing
 
-The initial name that you give to your Dashboard will also be the URL slug. You can't change the URL slug afterwards, so be mindful of the name you choose. Changing the Dashboard's display name is always possible though.
+Alerts are triggered after query execution. Delays may occur due to factors like query complexity or system queues. Note that retry mechanisms for failed deliveries are not yet implemented. Alerts are not recommended for time-sensitive or critical applications at this stage.
 
-## Add Widgets from the Query Editor
+## Alert Content
 
-You can add widgets directly from the Query Editor.
+### Email Alerts
 
-<div style="position: relative; padding-bottom: calc(56.99999999999999% + 41px); height: 0;"><iframe src="https://demo.arcade.software/tcRqeUZ7qVNahQImdVsw?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;" title="Rocket Pool Minipools by ETH Bond vs. Time"></iframe></div>
+Email alerts currently include a raw HTML table of truncated results and a link to the query. Future updates will replace the HTML table with a screenshot of the Dune table.
 
-1. Navigate to the query Editor
-2. Pick the Visualization you want to add to your Dashboard
-3. Click on the "Add to Dashboard" button
-4. Choose the Dashboard you want to add the Visualization to
-5. The Visualization is now added to your Dashboard
+### Webhook Alerts
 
-The widget will be added to the bottom of your Dashboard. You can move it around and resize it as you like.
+Webhook alerts adhere to the following schema:
 
-## Adding Text Widget
-
-You can add text widgets to your dashboard.
-
-Text widgets support a subset of Markdown. You can manipulate text and embed images and GIFs.
-
-## Embedding Images and GIFs
-
-Text boxes can also be used to embed images or GIFs into your Dashboard.
-
-The Syntax for embedding images is:
-
-``` markdown
-![alt text](image url)
+```jsx
+{
+  message: string,
+  query_result: {
+    execution_id: string;
+    query_id: number;
+    state: string;
+    submitted_at: string;
+    expires_at: string;
+    execution_started_at: string;
+    execution_ended_at: string;
+    result: {
+      data_uri: string;
+      metadata: {
+        column_names: string[];
+        result_set_bytes: number;
+        total_row_count: number;
+        datapoint_count: number;
+        pending_time_millis: number;
+        execution_time_millis: number;
+      };
+    };
+  }
+}
 ```
 
-Since you can't store images locally on our servers, you need to upload your images somewhere else or find the raw file somewhere on the internet.
+Validation of webhook format can be done at [Webhook.site](https://webhook.site/).
 
-In practice this might look like this:
+## Integration with Third-Party Apps
 
-```markdown
-![text](https://pbs.twimg.com/media/FEWVLQwWUAQcqLY?format=jpg&name=medium)
-```
+### Slack Integration
 
-You can resize the image by simply resizing the widget it is contained in.
+Slack integration is possible through the webhook alert type. Users should:
 
-You can combine images and text in one widget.
+1. Create a Slack app and activate "Incoming Webhooks."
+2. Paste the Slack URL into the Alert configuration. [insert image]
 
-## Keeping your Dashboard up to date
+### Zapier Integration
 
-Dashboards on Dune are not updated automatically. You can refresh your Dashboard by clicking on the "Run" button in the top right corner.
+Direct integration with Zapier is not available. A workaround involves:
 
-<div style="position: relative; padding-bottom: calc(57.58333333333333% + 41px); height: 0; width: 100%"><iframe src="https://demo.arcade.software/inelINzxmsLyvP2pj7Re?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;" title="interactive dashboard executions"></iframe></div>
+1. Setting up a Zapier webhook trigger.
+2. Using the provided webhook URL as the Alert’s webhook.
+3. Employing a specific [Dune zap](https://zapier.com/developer/public-invite/194504/2174c6b998748b657f28dab4097f3e80/) for interfacing with Dune. [insert image]
 
-Alternatively, you can schedule your Dashboard to be refreshed in regular intervals. 
+## Known Issues and Solutions
 
-<div style="position: relative; padding-bottom: calc(63.83333333333333% + 41px); height: 0; width: 100%"><iframe src="https://demo.arcade.software/doDebCcmeiVj5xKiq4nK?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;" title="Meta Monitoring"></iframe></div>
+1. **Email Table Readability:** The HTML table is currently difficult to read.
+   - **Workaround:** Use the link in the email to view the query.
+2. **Manual Alert Triggering:** Currently, manual triggering is not available.
+   - **Workaround:** Set a 15-minute schedule for quicker testing.
+3. **Pagination in Webhooks:** No pagination support, which might affect data quota.
+   - **Workaround:** Use queries with smaller result sets for testing.
+4. **Visualizations:** Currently limited to Slack messages.
+   - **Future Update:** Include in webhooks and emails, including private content.
 
-To schedule a dashboard:
+## Feedback
 
-1. Click on the "clock" icon in the top right corner
-2. Select the frequency you want your Dashboard to be refreshed
-3. Select the execution tier you want to use
-4. Click on "Save"
+Feedback can be provided through the Alerts Beta Telegram channel.
 
-You can also schedule individual queries to be refreshed. This is useful if you have a Dashboard with many queries and only want to refresh a few of them. Learn more about scheduling queries [here](query-editor/query-scheduler.md).
+[Join the channel](https://t.me/+bt5J1QlJ3_FhMDU0)
 
-## Sharing your Dashboard
+## Acknowledgement
 
-You can share your public Dashboard by simply sharing the URL. For private dashboards, viewers need to be part of the same team as the team that owns the Dashboard. Alternatively, you can also share your Dashboard with individual users via the "Share" button in the top right corner.
+Thank you for participating in our beta testing program. Your feedback is essential for improving this feature.
+
+---

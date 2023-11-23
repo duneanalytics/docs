@@ -57,13 +57,7 @@ You can query for your data in any query.
 Select * from dune.dune.dataset_energy_data
 ```
 
-To check whether the datatypes are correctly inferred, you can use the following query:
-
-```sql
-SELECT * FROM information_schema.columns 
-WHERE table_schema = 'dune' -- replace with your team name
-AND table_name = 'energy_data'; -- replace with your dataset name
-```
+To check whether the datatypes are correctly inferred, you can check the table details in the [data explorer](../app/query-editor/data-explorer.md).
 
 ## Updating data
 
