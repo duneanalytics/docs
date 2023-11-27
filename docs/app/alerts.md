@@ -3,9 +3,9 @@ title: Alerts
 
 ---
 
-**Get notified when something important happens.**
+**Alerts allow you to receive notifications based on any query!**
 
-Alerts allow users to set notifications for a scheduled query. These notifications are triggered each time the query runs. Supported delivery methods include:
+Alerts allows users to set notifications for a scheduled query. These notifications are triggered each time the query runs. Supported delivery methods include:
 
 - **Email:** Multiple email addresses can be added.
 - **Webhooks:** Alerts can be sent to a specified callback URL.
@@ -14,13 +14,18 @@ Alerts allow users to set notifications for a scheduled query. These notificatio
 
 ### Accessing Alerts
 
+<div style="position: relative; padding-bottom: calc(61.25000000000001% + 41px); height: 0;"><iframe src="https://demo.arcade.software/6IfAf55RjoFQ5OCax9Zj?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;"></iframe></div>
+
 To use Alerts, follow these steps:
 
 1. Open a saved query that you own.
-2. Click the "Schedule" button. [insert image]
+2. Click the "Schedule" button.
 3. Configure the query schedule.
-4. Activate the Alerts option. [insert image]
-5. Save the alert configuration.
+4. Activate the Alerts option.
+5. Configure the alert delivery method.
+6. Save the schedule.
+7. Every time the query runs, the alert will be triggered. 
+
 
 ### Alert Timing
 
@@ -31,6 +36,12 @@ Alerts are triggered after query execution. Delays may occur due to factors like
 ### Email Alerts
 
 Email alerts currently include a raw HTML table of truncated results and a link to the query. Future updates will replace the HTML table with a screenshot of the Dune table.
+
+The Email will look like this:
+
+![Email Alert](../app/images/email_alert.png)
+
+The HTML table will include the raw results of the query, none of the formatting or styling from the Dune table will be included. Therefore, it is recommended to use ``cast``, ``format`` and ``round`` functions to format the data in the query.
 
 ### Webhook Alerts
 
