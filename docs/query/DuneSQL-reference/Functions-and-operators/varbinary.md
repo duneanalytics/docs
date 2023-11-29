@@ -158,7 +158,21 @@ most commonly will have to be used like this:
 Select from_utf8(bytearray_ltrim(0x0000000000000000006e66746e657264732e6169))
 ```
 
+## Text to Byte Array
 
+#### from_hex()
+
+**``from_hex(varchar)``** → varbinary
+
+Converts a varbinary expression in datatype `string` to `varbinary` datatype
+
+```sql
+Select from_hex('0x6574686275696c646572')
+-- returns VARBINARY 0x6574686275696c646572
+```
+
+!!!warning
+       you **cannot** use ``cast(x as varbinary)`` in these cases as it will actually encode the string as varbinary which is different from converting the expression to `varbinary`. 
 
 ## Byte Array Manipulation Functions
 
