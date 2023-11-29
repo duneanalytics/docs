@@ -142,6 +142,19 @@ Similar to vanilla Proxy contracts, [EIP-2535](https://eips.ethereum.org/EIPS/ei
 
 #### My submission got rejected, why?
 
+The most common reason that your submission got rejected is because it is already decoded! You can make use of [this dashboard](https://dune.com/dune/is-my-contract-decoded-yet-v2) to check whether the contract have been decoded.
+
+Enter the contract that you wish to decode and hit enter to run
+
+![check if contract is decoded](images/decoding-contracts/check_decoding_input_address.png)
+
+Viewing results
+
+![query results to determine whether contract is decoded](images/decoding-contracts/check_decoding_result_output.png)
+
+If you see results after running the query, that means the contract is already decoded! You'll be able to find the decoded tables under 'Decoded projects' in the data explorer.
+
+
 In the interest of data quality, we reject duplicative, incorrect or low quality submissions. To avoid rejection, be sure to submit accurate contract information! 🙏
 
 #### Why am I missing historical data for my contract?
