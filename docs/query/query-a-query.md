@@ -27,9 +27,9 @@ For example, if you want to use the query with queryID 1746191 as a view in your
 select * from query_1746191 
 ```
 
-### Adding parameters
+### Adding Parameters When Using Query Views
 
-The table below shows the syntax for passing parameters to different types. The parameters need to be named.
+The table below shows the syntax for passing parameters to different types when querying a query view. The parameters need to be named.
 
 For varchar, uint256, int256 and datetime parameters, you should use single quotes wrapping the params on the base query. So '{{some_param}}' in the base query.
 
