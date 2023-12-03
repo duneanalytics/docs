@@ -108,7 +108,9 @@ We avoid monitoring the implementation contract's address because its logic is a
 If we did monitor the implementation contract's address directly, we would miss out on any event logs in its logic since these are actually fired by the caller (the Proxy in this case) when calling a function through `DelegateCall`.
 
 !!! warning
-    When submitting Proxy-patterned contracts to Dune, you should input the Proxy contract's address and, if you have it, the Implementation contract's ABI.
+    When submitting Proxy-patterned contracts to Dune, you should input the Proxy contract's address and, if you have it, the Implementation contract's ABI. If the Proxy has a new implementation upgraded that you wish to decode, use the same project name + contract name and select <b>'NO'</b> for several instances!
+
+![new proxy implementation submission](images/decoding-contracts/proxy_new_implementation.png)
 
 When you submit the Proxy contract's address, we'll attempt to fetch the proxy's contract name and the implementation address it's pointing towards to source the Implementation contract's ABI.
 
@@ -142,7 +144,7 @@ Similar to vanilla Proxy contracts, [EIP-2535](https://eips.ethereum.org/EIPS/ei
 
 #### My submission got rejected, why?
 
-The most common reason that your submission got rejected is because it is already decoded! You can make use of [this dashboard](https://dune.com/dune/is-my-contract-decoded-yet-v2) to check whether the contract have been decoded.
+The most common reason that your submission got rejected is because it has already been decoded! You can make use of [this dashboard](https://dune.com/dune/is-my-contract-decoded-yet-v2) to check whether the contract have been decoded.
 
 Enter the contract that you wish to decode and hit enter to run
 
@@ -159,7 +161,14 @@ In the interest of data quality, we reject duplicative, incorrect or low quality
 
 #### Why am I missing historical data for my contract?
 
-It may take up to six hours from the time of contract approval for the contract to be fully decoded along with its historical data. If you still can't see the data after this period, please reach out to us through our [#decoding Discord channel](https://discord.com/channels/757637422384283659/850326962152538122).
+It may take <b>up to six hours</b> from the time of contract approval for the contract to be fully decoded along with its historical data. If you still can't see the data after this period, please reach out to us through our [#decoding Discord channel](https://discord.com/channels/757637422384283659/850326962152538122).
+
+#### Alternative solution while waiting for contracts to be decoded
+
+Need some data urgently but the contract have yet to be fully decoded? You can refer to these following queries that utilizes the logs table to get the events!
+
+- [Querying Synthetix's PerpsTracking Event](https://dune.com/queries/2743182){:target="_blank"}
+- [Querying USDT's AddedBlackList Event](https://dune.com/queries/3250843){:target="_blank"}
 
 #### For all other questions:
 
