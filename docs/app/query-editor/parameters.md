@@ -123,7 +123,15 @@ group by 1
 
 #### List from query results
 
-You can use the results of a query as the list of values for a parameter. Doing this allows you to build dynamic dashboards that allow users to choose from a list of values that is populated by a different query. You can choose any query by its query_id and any column by its name. The column data type will be transferred to the parameter. 
+You can use the results of a query as the list of values for a parameter. Doing this allows you to build dynamic dashboards that allow users to choose from a list of values that is populated by a different query. You can choose any query by its query_id and any column by its name. The column data type will be transferred to the parameter.
+
+<p align="center">
+  <img src="images/parameters/parameter-query-result.jpeg" alt="parameter from query results" title="parameter options" /><br />
+  <em>Simply pick a query id and column name to populate your parameter list </em>
+</p>
+
+
+
 
 !!! info "Query results"
 
@@ -136,7 +144,7 @@ This feature can be used in all kinds of ways, but here are a few examples:
 - to choose from a list of addresses or labels
 - to single out specific products or categories
 
-All of these examples can probably be solved with a manual list as well, but using a query to populate the list of values allows you to build dynamic dashboards that update automatically. It also can simply make it easier to manage a list of values that is shared between multiple queries.
+All of these examples could be solved with a manual list, but using a query to populate the list of values allows you to build dynamic dashboards that update automatically. It also can simply make it easier to manage a list of values that is shared between multiple queries.
 
 **Example 1:**   
 
@@ -145,7 +153,7 @@ You can use a distinct query on dex.trades to populate a list of all projects cu
 Select distinct project from dex.trades
 ```
 
-[link to dashboard emplyoing this strategy](https://dune.com/dune/query-result-parameter-showcase)
+[link to dashboard](https://dune.com/dune/query-result-parameter-showcase)
 
 
 **Example 2:**
