@@ -127,7 +127,7 @@ You can use the results of a query as the list of values for a parameter. Doing 
 
 !!! info "Query results"
 
-        The query that you use to populate the list of values does not update automatically. You need to trigger a refresh of the query results to update the list of values. This can happen by either manually refreshing the query results or by setting up a [query schedule](query-scheduler.md).
+    The query that you use to populate the list of values does not update automatically. You need to trigger a refresh of the query results to update the list of values. This can happen by either manually refreshing the query results or by setting up a [query schedule](query-scheduler.md).
 
 This feature can be used in all kinds of ways, but here are a few examples:
 
