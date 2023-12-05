@@ -1,6 +1,7 @@
 nav:
 - index.md
 - query-window.md
+- parameters.md
 - query-scheduler.md
 - data-explorer.md
 - version-history.md
