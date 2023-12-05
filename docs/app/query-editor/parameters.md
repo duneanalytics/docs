@@ -14,15 +14,7 @@ Parameters in Dune are versatile and can be used in many different ways. You can
 - filter on a specific category
 - etc.
 
-Parameters can be used in any part of your Query, including:
-
-- in the `where` clause
-- in the `group by` clause
-- in the `order by` clause
-- in the `select` clause
-- etc. 
-
-Parameters can be a single value or a list of values and you can choose **one** or **multiple** values from a pre-defined list of values. This list can be manually defined or populated from a different query.
+Parameters can be a **single value** or a **list of values** and you can choose **one** or **multiple** values from a pre-defined list of values. This list can be manually defined or populated from a different query.
 
 
 **To use parameters:**
