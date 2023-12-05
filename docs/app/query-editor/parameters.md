@@ -125,12 +125,8 @@ group by 1
 
 You can use the results of a query as the list of values for a parameter. Doing this allows you to build dynamic dashboards that allow users to choose from a list of values that is populated by a different query. You can choose any query by its query_id and any column by its name. The column data type will be transferred to the parameter.
 
-<p align="center">
-  <img src="images/parameters/parameter-query-result.jpeg" alt="parameter from query results" title="parameter options" /><br />
-  <em>Simply pick a query id and column name to populate your parameter list </em>
-</p>
 
-
+![parameter from query results](../query-editor/images/parameters/parameter-query-result.jpeg)
 
 
 !!! info "Query results"
