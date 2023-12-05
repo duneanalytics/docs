@@ -15,6 +15,14 @@ Learn more about how Dune's Query Editor works:
     
     [→ Writing Queries](query-window.md)
 
+-   #### Query Parameters
+    
+    ---
+
+    Parameters allow you to implement variables in certain parts of your Query.  
+    
+    [→ Query Parameters](parameters.md)
+
 -   #### Finding Tables
 
     ---
