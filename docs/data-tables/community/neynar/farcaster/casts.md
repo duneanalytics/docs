@@ -20,3 +20,4 @@ This table contains all casts on the Farcaster protocol
 | embeds                   | jsonb                           | Attachments inside the cast e.g. images, links, etc.             |
 | mentions                 | bigint[]                        | Array of FIDs for the users that were mentioned in the cast text |
 | mentions\_positions      | smallint[]                      | Positions in the cast text where the users were mentioned        |
+| root_parent_hash         | bytea                           | Hash of the parent cast that started the thread                  |
