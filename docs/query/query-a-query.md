@@ -29,9 +29,23 @@ select * from query_1746191
 
 ### Adding Parameters When Using Query Views
 
-The table below shows the syntax for passing parameters to different types when querying a query view. The parameters need to be named.
+You can also pass on parameters when querying a query view. This allows you to use the same query view with different parameters in different queries.
 
-For varchar, uint256, int256 and datetime parameters, you should use single quotes wrapping the params on the base query. So '{{some_param}}' in the base query.
+To pass on parameters when querying a query view, you need to use the following syntax:
+
+```sql
+
+Select * from query_<queryID>(<parameter1>=<value1>, <parameter2>=<value2>, ...)
+```
+
+
+The table below shows the syntax for passing parameters to different types when querying a query view.
+
+
+
+For `varchar`, `uint256`, `int256` and `datetime` parameters, you should use single quotes wrapping the params on the base query. 
+
+
 
 | **Parameter Type** | **Syntax** | **Example** |
 | --- | --- | --- |

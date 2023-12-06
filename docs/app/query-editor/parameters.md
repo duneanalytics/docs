@@ -173,6 +173,20 @@ and perp_name in (Select perp_name from unnest(split('{{perp_name}}',',')) as b(
 [link to query](https://dune.com/queries/3256054/)
 
 
+### Parameters in query descriptions
+
+You can use parameters in the description of a query. This feature is useful to effortlessly report on the current value of a parameter. For example, you can use this to report on the current value of a parameter that is used in a dashboard.
+
+<div style="position: relative; padding-bottom: calc(88.10226155358899% + 41px); height: 0;"><iframe src="https://demo.arcade.software/mvz7g0C5C3uGkt8U4Fw9?embed" title="dune.com/queries/3259087/5455458?Wash+Trading+Filter_e15077=OFF&amp;sidebar=none" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;color-scheme: light;"></iframe></div>
+
+To use a parameter in a query description:
+
+1. open your query settings
+2. add the parameter to the query description by using the `{{example_parameter_name}}` syntax
+3. save your query settings
+4. your query description will now show the current value of the parameter
+
+
 ### Parameters in dashboards
 
 If you want to use the same parameter between different queries on a dashboard, make sure to use exactly the same settings for the parameter in each query. The parameter will then be shared between the queries and only turn up once in the dashboard's parameter menu. Exactly the same settings means:
