@@ -10,7 +10,8 @@ The "Query View" feature in DuneSQL allows you to use an existing query as a vie
 **You can also pass on parameters when querying a query view.**
 
 !!! info
-    All upstream queries are executed as functional SQL views, which means that they will be executed every time they are queried. This means there currently is no performance benefit to using the "Query a Query" feature.
+    All upstream queries are executed as functional SQL views, which means that they will be executed every time they are queried. This means there currently is no performance benefit to using the "Query a Query" feature. If you are looking for a performance benefit, consider using [materialized views](materialized-views.md) instead.
+
 ## Using Query View
 
 To use the "Query View" feature, you will need the queryID of the query you want to use as a view. The queryID can be found in the URL of a query. For example, if the URL of a query is [https://dune.com/queries/1746191](https://dune.com/queries/1746191), the queryID would be `1746191`.
@@ -29,9 +30,93 @@ select * from query_1746191
 
 ### Adding Parameters When Using Query Views
 
-The table below shows the syntax for passing parameters to different types when querying a query view. The parameters need to be named.
+You can also pass on parameters when querying a query view. This allows you to use the same query view with different parameters in different queries.
 
-For varchar, uint256, int256 and datetime parameters, you should use single quotes wrapping the params on the base query. So '{{some_param}}' in the base query.
+To pass on parameters when querying a query view, you need to use the following syntax:
+
+```sql
+
+Select * from "query_<queryID>(<parameter1>='<value1>', <parameter2>='<value2>', ...)"
+```
+
+For example, if you want to use the query with queryID 3256410 as a view in your new query and pass on the parameter `blockchain` with the value `ethereum`, the setup would look like this: 
+
+```sql
+--query_3256410, our query to be invoked
+Select 
+    project,
+    block_date,
+    sum(amount_usd) as amount_usd
+from dex.trades
+where blockchain = '{{blockchain}}'
+and block_time > now() - interval '7' day 
+```
+[link to query](https://dune.com/queries/3256410)
+
+```sql
+--query_3256401, our query that invokes the query_3256410
+Select 
+    project,
+    block_date,
+    amount_usd 
+from "query_3256410(blockchain='ethereum')"
+```
+[link to query](https://dune.com/queries/3256401)
+
+Parameters in the query view are passed on as strings and therefore always need to be wrapped in single quotes. Since we sometimes want to pass a `string` including the single quotes, we need to escape the single quotes in the query view. We can do that by adding a backslash in front of the single quote. Escaping single quotes means that the single quote will be treated as a literal character and not as a string delimiter.
+
+**For example:**
+
+```sql
+--query to be invoked
+Select 
+    project,
+    block_date,
+    sum(amount_usd) as volume_in_usd
+from dex.trades
+where blockchain = {{blockchain}}
+-- we want to pass a string including the single quotes to this query
+```
+
+```sql
+--query that invokes the query above
+Select 
+    project,
+    block_date,
+    volume_in_usd
+from "query_3256410(blockchain='\'ethereum\'')"
+--note the escaped single quotes
+--this will pass the parameter blockchain with the value 'ethereum'
+``` 
+
+The backslash is not needed when passing on a parameter that doesn't need to be wrapped in single quotes on the receiving side, like `integers` or `booleans`.
+You can choose to handle this on the query view side or on the query that invokes the query view side. If you wrap your parameter in single quotes on the receiving side, you don't need to escape the single quotes on the query view side. 
+
+**For example:**
+
+```sql
+--query_3256410, our query to be invoked
+Select 
+    project,
+    block_date,
+    sum(amount_usd) as amount_usd
+from dex.trades
+where blockchain = '{{blockchain}}'
+and block_time > now() - interval '7' day 
+--note the single quotes around the parameter blockchain
+```
+
+```sql
+Select 
+    project,
+    block_date,
+    amount_usd 
+from "query_3256410(blockchain='ethereum')"
+--since we wrap the parameter blockchain in single quotes on the receiving side, we don't need to escape the single quotes on the query view side
+```
+
+The table below shows how different parameter types are passed on when using the "Query view" feature:
+
 
 | **Parameter Type** | **Syntax** | **Example** |
 | --- | --- | --- |
