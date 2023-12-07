@@ -210,7 +210,7 @@ Here are some examples illustrating the translate function:
     SELECT translate('abcd', 'a', 'zy'); -- 'zbcd'
     SELECT translate('abcd', 'ac', 'z'); -- 'zbd'
     SELECT translate('abcd', 'aac', 'zq'); -- 'zbd'
-````
+```
 
 #### trim()
 **``trim(string)``** → varchar
