@@ -24,7 +24,8 @@ and tx_hash IN (0x3e3c558e7f723e3bb7de1d8f5f920ca206e3e878984296a2b8e6af2969003a
                 0xccfd2033adfb1fdd14fdfc047fe554ba7549e396abc6c559e9528a4259295b89)
 ```
 
-
+!!! info "Byte array functions"
+    Varbinary functions were previously called byte array functions. You might find e.g. `bytearray_to_uint256` in some of our older queries. These functions are identical to the varbinary functions and work as aliases. 
 
 
 
