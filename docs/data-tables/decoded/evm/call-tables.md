@@ -4,9 +4,12 @@ description: On Dune, we parse all message calls and transactions made to smart 
 ---
 
 **We parse all message calls and transactions made to smart contracts in their own tables.**
+**We parse all message calls and transactions made to smart contracts in their own tables.**
 
 ### Smart Contract Functionality
+### Smart Contract Functionality
 
+Smart contracts can have various functions which can be invoked by either an Externally Owned Account (EOA) or other smart contracts. These functions range from simple state read-and-return operations to complex tasks involving multiple state changes and sending message calls to other smart contracts.
 Smart contracts can have various functions which can be invoked by either an Externally Owned Account (EOA) or other smart contracts. These functions range from simple state read-and-return operations to complex tasks involving multiple state changes and sending message calls to other smart contracts.
 
 ### Data Tracking in Dune
