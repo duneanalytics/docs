@@ -44,7 +44,7 @@ markdown_extensions:
 plugins:
   - search
   - awesome-pages
-  - mkdocs-video
+  # - mkdocs-video
   # - info
   ## note that this redirects only works on local serve. The mkdocs.insiders redirects is what works on production.
   # - redirects:

@@ -1,6 +1,6 @@
 title: Decoded Tables
 nav:
 - index.md
-- new_guide.md 
 - EVM: evm
 - Solana: solana
+- decoding-submission-guide.md
