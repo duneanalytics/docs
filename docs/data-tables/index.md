@@ -5,7 +5,7 @@ title: Tables and Chains Overview
 
 ## Available Chains
 
-Dune currently indexes these chains:
+**Dune currently indexes these chains:**
 
 **EVM Chains**
 
@@ -118,6 +118,7 @@ Here are the chains we have available to Query in Dune.
   
 - Fantom
 
+### Non-EVM Chains
 ### Non-EVM Chains
 #### Solana
 
