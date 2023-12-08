@@ -106,7 +106,7 @@ Here are the chains we have available to Query in Dune.
   
 - Optimism
 
-- Base
+- Optimism Stack Rollups (Base)
   
 - BNB (Binance Smart Chain)
   
@@ -118,10 +118,7 @@ Here are the chains we have available to Query in Dune.
   
 - Fantom
 
-- Zksync Era
-
-- Celo
-
+### Non-EVM Chains
 ### Non-EVM Chains
 #### Solana
 
