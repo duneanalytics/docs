@@ -1,153 +1,107 @@
 ---
 title: Decoding Contracts
-description: Here's everything you need to know about Decoded contracts and how to submit them!
+description: Instead of working with the logs and traces in their raw states, on Dune we decode smart contract activity into nice human-readable tables.
 ---
 
-**Dune contains an extensive catalog of Decoded Contracts, brought into the platform through Wizard submissions!**
+# Decoding Contracts
 
-Instead of working with raw transaction, log, and trace data, contracts are decoded into human-readable tables for each event and function defined in the smart contract's ABI ([Application Binary Interface](https://www.alchemy.com/overviews/what-is-an-abi-of-a-smart-contract-examples-and-usage)).
+**Dune’s extensive catalog of decoded smart contracts are driven by our Wizards. Our decoding process empowers our community to submit the data and build the tables that they’d like to query on Dune!**
 
-Learn more about how Decoding works and what Decoded tables are available in the [data tables section](../data-tables/decoded/index.md).
+But what does decoding mean? Blockchain transaction data starts as bytecode, a low level programming language that can be read by machines. Using the ABI (Application Binary Interface) that is personal to each contract, we translate that bytecode into query-able data tables.
 
-## Submitting a new contract for decoding
+## A. The Lifecycle of Decoding
 
-![type:video](https://www.youtube.com/embed/4v9zEYZvv34)
+### Step 1: Submission
 
-Contracts can be submitted for decoding through:
+Our decoding process begins with our [contract submission page](https://dune.com/docs/app/decoding-contracts/)
 
-- [The New contract form](https://dune.com/contracts/new)
-- The [My Creations > Contracts Tab](https://dune.com/settings/contracts)
+![](../images/General-Submission.png)
 
-### 1. Blockchain and address
+To successfully submit a contract, you will need four pieces of information:
 
-We first ask for the contract's address and blockchain. Requesting this data first has two purposes:
+1. **Blockchain**: The name of the origin blockchain of the contract
+2. Contract Address: The address associated with contract
+3. Project Name: The name of the project that the contract originates from (ex. Tether) 
+4. Contract name: The name of the smart contract as given by the Project (ex. USDT)
+5. ABI: Unique to each smart contract. Further details can be found [here](https://docs.soliditylang.org/en/latest/abi-spec.html). Note that for contracts that are verified by a chain's explorer we will attempt to auto-fetch the ABI. Otherwise the ABI will need to be entered manually.         
 
-1. To enable us to review for potential duplicate contracts and pending submissions.
-2. To automate parts of the submission process where we can.
+In most cases, the contract name will be pulled directly from a blockchain scanner. We recommend using the name provided. If the name is not automatically provided, please follow our naming conventions to assure the contract is properly assimilated into Dune’s database.
 
-The latter is usually accomplished by fetching potentially useful metadata from Dune and other third party sources where relevant.
+**When do you need Advanced Options?**
 
-For instance, below here's an example of submitting the USDT contract (`0x94b008aA00579c1307B0EF2c499aD98a8ce58e58`) in Optimism:
+**Are there several instances of this contract?**
 
-![Submit smart contract](images/decoding-contracts/submit-smart-contract.png)
+Contract “instances” are essentially contracts that are on the same chain and have the same bytecode (and therefore the same ABI). If you toggle instances to “Yes”, Dune can decode all instances without multiple submissions. 
 
-If we can find the contract through a third party source, we will show a green check mark next to the address field.
+**Is it created by a factory contract?**
 
-This means we were able to fetch information such as the contract's name and ABI (Application Binary Interface).
+A factory contract is essentially a smart contract that creates other smart contracts. If there are multiple contract instances, there is a chance that it is due to a factory contract. If you toggle this question to “yes”, Dune can decode all contracts created by the same factory that use the same ABI, and store them in the same table (ex., pools from Uniswap V3). 
 
-### 2. Contract details
+**Other Special Contracts**
 
-After pressing Next, we ask for other information about the contract that we need in order to decode it:
+Other special smart contracts can be decoded as well, following these conventions: 
 
-![Submit smart contract 2](images/decoding-contracts/submit-smart-contract-2.png)
+Proxy contract: Submit using the proxy address but the ABI of the implementation
 
-If we found the contract through other third party sources, you will only have to fill in the project name.
+Diamond proxy contracts: Submit all the facets using just the same name for the project and contract and upload all the relevant ABIs. This can be done with one ABI representing all facets or separate ABIs for each facet.
 
-We have some naming conventions on that, partly due to our technical setup and also to make finding data more predictable.
+!!! suggestion "Where can I find this information?"
+    Contract addresses can usually be found in a project’s docs. Once you have the contract address, you can use a blockchain explorer to get the rest of the information. Most blockchain explorers have everything you need!
 
-**Project Names Rules**
+??? suggestion "Resubmissions"
+    Given the popularity of some smart contracts, re-submissions happen. If the contract you are trying to submit already exists, an error like the following will pop up.
+    ![](../images/Resubmission%20Info.png)
+    There are some circumstances under which a contract can be resubmitted, like if the contract needs to be renamed. In that case, you can click **“Proceed to Resubmit”** and follow the steps to submit the contract as normal with one caveat: at the end of the submission process, you will be asked to explain why you want to resubmit the contract. Give as much detail as possible to avoid the resubmission being rejected! 
 
-- All lowercase
-- No spaces (underscore "_" if needed)
-- Added "_v2" or other version names at the end if applicable
+### Step 2: Decoding
 
-eg `augur`, `tornado_cash`, `uniswap_v2`
+Once the contract has been approved for decoding, you will receive a notification in your email. While the table itself may be visible after approval, it may be empty. No reason to worry! Note that it takes around 6 hours from the time the contract has been approved to be fully decoded and incorporated into the Dune database. 
 
-Once you submit it, you are done! The contract will be stored in our queue, which we manually review for quality assurance purposes.
+### Step 3: Finding Your Decoded Contract
 
-!!! note
-    
-    Submission are usully processed within a few hours on weekdays.
+One quick tip to find and begin querying your decoded table is to use Dune's Explorer. When beginning a new query, the Explorer is located to the left side of the Query Editor. Drop the contract address of your decoded contract in the search bar, pull up the specific function or event you are looking for, and use the ">>" button to immediately populate that table in your Query Editor. 
 
-### Advanced options
+![The search bar and >> symbol that will help you get started](../images/Explorer%20Image.png)
 
-In some instances, Dune can automatically detect and index multiple contract addresses under the same submission. This is useful for examples such as AMM pools where there often exists one contract instance per pair.
+Then it’s all ready for you to query. Let the data flow! 
 
-We have two strategies for detecting other contracts for decoding:
+## B. Frequently Asked Questions
 
-1. **Bytecode match.** We use the bytecode of the contract address in the submission to find other matches in the whole chain history.
-2. **Factory instances.** We find all other contracts created by the same address as the one responsible for creating the submitted contract.
 
-In both cases, we assume that all the contracts found through either method correspond to the same blockchain, project name, contract name and ABI.
+??? "On which chains does this work?"
+    Any contracts created on blockchains that Dune has integrated. To check which blockchains we currently have available, see our section on [Tables and Chains](../index.md).
 
-If you want us to index more than one contract, toggle on Advanced options and select "Yes" to the first question, "Are there several instances of this contract?"
+<details>
+<summary>**How do I figure out if my contract has been decoded?**</summary>
+<br>
+There are two main ways to find out if your contract has been decoded. 
 
-Then, to the second question - "Is it created by a factory contract?" - select "No" to index all other contracts with the same bytecode or "Yes" to index all other contracts originating from the same creator:
+First: Account Settings
 
-![new-contract-advanced-options](images/decoding-contracts/new-contract-advanced-options.png)
+Information on submitted contracts can be found in your account settings under “Contracts”. The status of the contract will reflect one of the following: 
 
-!!! warning
+Pending
+Approved/Rejected*
 
-    Only use these options if you know what you're doing and are familiar with the project's architecture and deployment hierarchy. Incorrectly applying these settings may lead to a rejected submission.
+Note that once a contract has been approved, it takes around 6 hours for the data to be fully decoded and populated into our database.
 
-## Tracking your submissions
+*If the contract is rejected, hover your mouse over the status to see the reason for the rejection. 
 
-You can view your submissions and their processing status at any time by navigating to [My Creations > Contracts](https://dune.com/browse/contracts/authored).
+Second: Our [Contract Decoding Dashboard](https://dune.com/dune/is-my-contract-decoded-yet-v2)
+![](../images/Decoding%20Dashboard.png)  
+Built by our decoding team, this dashboard gives you information on the status of any submitted contract. Input the contract address in the box at the top of the dashboard and if the contract has been decoded, the contract information will populate the box along with where it is located in the Dune database. 
+</details>
 
-Contract submissions are usually processed within a few hours, but some submissions may require additional time. Once a contract has been approved, it may take up to an hour for the data to become available, and up to six hours for historical data to be included.
+<details>
+<summary> I see data on Dune but it doesn’t match or is missing what I expected to see. </summary>
+<br>
+Unfortunately, Dune only has access to contract data in circumstances that the contract performed an event that left a trace. Our recommendation is to check out the {blockchain}.traces table to see what information is available for a particular contract.
 
-## Frequently Asked Questions
+Alternatively, some contracts are upgradeable (ie., the smart contract code can be modified). In this case we may not have all of the ABIs. ABIs can be checked in the ABI column of the {blockchain}.contracts tables. A contract can always be resubmitted with missing ABIs so we can update our data. 
+</details>
 
-#### How do I submit contract information manually?
-
-!!! note
-    If the contract being manually submitted is a Proxy contract, we recommend you to move on to the next section.
-
-Although we try to fetch contract information such as the ABI, sometimes this information might not be available through our sources.
-
-In those instances, you will need to manually input the contract's name and its ABI.
-
-If the contract has been verified by the chain's block explorer, you should be able to find this information there.
-
-#### How do I submit a Proxy contract?
-
-In order to properly decode transactions towards contracts that fit the [Proxy pattern](https://blog.openzeppelin.com/proxy-patterns/), Dune needs to map the Proxy contract's address with the implementation contract's ABI.
-
-We avoid monitoring the implementation contract's address because its logic is accessed in transactions via the [`DelegateCall` function](https://medium.com/coinmonks/delegatecall-calling-another-contract-function-in-solidity-b579f804178c).
-
-If we did monitor the implementation contract's address directly, we would miss out on any event logs in its logic since these are actually fired by the caller (the Proxy in this case) when calling a function through `DelegateCall`.
-
-!!! warning
-    When submitting Proxy-patterned contracts to Dune, you should input the Proxy contract's address and, if you have it, the Implementation contract's ABI.
-
-When you submit the Proxy contract's address, we'll attempt to fetch the proxy's contract name and the implementation address it's pointing towards to source the Implementation contract's ABI.
-
-If we can't find the Implementation contract's ABI, you'll need to find it using the relevant chain's blockchain explorer and input it manually.
-
-
-#### How do I re-submit a contract?
-
-Dune assumes each address in the blockchain can map to at most 1 contract. For this reason, submitting a contract with an address that already exists in `[blockchain].contracts` will override it for Decoding purposes.
-
-This has a couple potential dangerous side effects:
-
-- If the project or contract name has changed, we will generate new tables for all of the contract's methods and events. In turn, previous tables will stop updating, data will be fragmented, and Queries will stop working.
-- If the ABI has changed in a way that modifies an existing table's parameters, Queries that depend on such table might break or become inaccurate.
-
-If you attempt to submit a contract that already exists, we'll first present a warning note and ask you to confirm you want to proceed:
-
-![new contract resubmission warning](images/decoding-contracts/new-contract-resubmission-warning.png)
-
-Then, at the bottom of the Details page, we'll ask you to explain why you're resubmitting the contract so we can assess whether it's worth overriding the contract's data:
-
-![new contract resubmission reason](images/decoding-contracts/new-contract-resubmission-reason.png)
-
-If we believe the risk of accepting a re-submission is higher than the added value, we'll reject your resubmission.
-
-If you think we're wrong (we're only human!), feel free to reach out in our [#decoding Discord channel](https://discord.com/channels/757637422384283659/850326962152538122) and we'll discuss it further with you!
-
-#### How do I submit Diamond Proxy contracts?
-
-Similar to vanilla Proxy contracts, [EIP-2535](https://eips.ethereum.org/EIPS/eip-2535) contracts can be supported by passing in the address of the Diamond Proxy as well as **a single ABI representing the totality of all the facets interfaces**.
-
-#### My submission got rejected, why?
-
-In the interest of data quality, we reject duplicative, incorrect or low quality submissions. To avoid rejection, be sure to submit accurate contract information! 🙏
-
-#### Why am I missing historical data for my contract?
-
-It may take up to six hours from the time of contract approval for the contract to be fully decoded along with its historical data. If you still can't see the data after this period, please reach out to us through our [#decoding Discord channel](https://discord.com/channels/757637422384283659/850326962152538122).
-
-#### For all other questions:
-
-Head over to the [#decoding Discord channel](https://discord.com/channels/757637422384283659/850326962152538122) and we'll be happy to help!
+<details>
+<summary> **My submission got rejected, why?** </summary>
+<br>
+Submissions can be rejected for a number of reasons, including not following the naming conventions, not providing clear data at submission, etc. The particular reason for a contract submission being rejected can be found in account settings under “Contracts” by hovering the mouse over the “Rejected” status. 
+</details>
