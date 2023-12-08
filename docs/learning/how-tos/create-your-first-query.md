@@ -55,7 +55,7 @@ ORDER BY
   1
 ```
 
-Here is the [link to demo query](https://dune.com/queries/3100875). 
+Here is the [link to demo query](https://dune.com/queries/3100875).
 
 
 ## Boost Flexibility with Parameters
@@ -82,6 +82,8 @@ ORDER BY
 ## Execute & Fetch the Result
 
 All set! Click "Run" and behold the outcome. Kudos on crafting your first query! 🎉
+
+Now that you have successfully run your query, you can go ahead and save it so you can keep monitoring your gas usage going forward. To save, click **Save** in the upper right part of the screen.
 
 !!! note
     For a more intuitive insight, consider visualizing this data. Navigate to [Create your first visualization](./create-your-first-visualization.md) and conjure up some graphical magic!
