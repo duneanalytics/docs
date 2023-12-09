@@ -5,7 +5,7 @@ description: Learn how to make use of popular tables and spells on Dune
 
 # Sample Queries  
    
-Refer to this [dashboard](https://dune.com/resident_wizards/sample-queries){:target="_blank"}, a collection of commonly requested queries over time, and this list will continue to grow! Don't find the query that you need? Check out the [Dune AI](https://dune.com/ai){:target="_blank"} or head down to our [Discord](https://discord.gg/dunecom).
+Refer to this [Dune Dashboard](https://dune.com/resident_wizards/sample-queries){:target="_blank"}, a collection of commonly requested queries over time, and this list will continue to grow! Don't find the query that you need? Check out the [Dune AI](https://dune.com/ai){:target="_blank"} or head down to our [Discord](https://discord.gg/dunecom).
 
 
 
@@ -310,7 +310,7 @@ We will just need to identify the latest recipient of each NFT token and we will
 
 Aggregate by address will get you all current holders of BAYC collection!
 
-### Using Logs Table For Specific Event
+### Querying Logs Table For Specific Event (Topics)
 
 [$ARKM Claimers From Logs Table](https://dune.com/queries/3269288){:target="_blank"}
 
@@ -354,15 +354,75 @@ The `ethereum.logs` table is one of the raw tables available that contains all e
 
 
   ```
-       varbinary_ltrim(topic1) as address, -- removes the zeros
-       varbinary_to_uint256(topic2)/1e18 as amount_claimed -- converting varbinary to uint256
+  varbinary_ltrim(topic1) as address, -- removes the zeros
+  varbinary_to_uint256(topic2)/1e18 as amount_claimed -- converting varbinary to uint256
   ```
 
   In the `logs` table, they are raw data hence you will need to use [varbinary functions](https://dune.com/docs/query/DuneSQL-reference/Functions-and-operators/varbinary/?h=bytearray_to_uint#varbinary-functions){:target="_blank"} to decode them.
 
   Since $ARKM token has 18 decimals, we use `/1e18` to get the actual amount that each address claimed.
 
-  It is advisable to get the contracts to be [decoded at Dune](https://dune.com/contracts/new){:target="_blank"} as querying from the raw tables can take a long time as they contain all the events emitted! To understand more about decoded tables, check out our [Decoding Docs](https://dune.com/docs/app/decoding-contracts/){:target="_blank"}
+  It is advisable to get the contracts to be [decoded at Dune](https://dune.com/contracts/new){:target="_blank"} as querying from the raw tables can take a long time as they contain all the events emitted! To understand more about decoded tables, check out our [Decoding Docs](https://dune.com/docs/app/decoding-contracts/){:target="_blank"}.
+
+
+### Querying Logs Table For Specific Event (Topics and Data)
+
+[Swap Event From Logs Table](https://dune.com/queries/3269338){:target="_blank"}
+
+```
+select varbinary_ltrim(topic1) as sender, -- topic1
+       varbinary_ltrim(topic2) as recipient, -- topic2
+       varbinary_to_int256(varbinary_substring(data,1,32)) as amount0, -- int256
+       varbinary_to_int256(varbinary_substring(data,33,32)) as amount1, -- int256
+       varbinary_to_uint256(varbinary_substring(data,65,32)) as price, -- uint160
+       varbinary_to_uint256(varbinary_substring(data,97,32)) as liquidity, -- uint128
+       varbinary_to_int256(varbinary_substring(data,129,32)) as tick -- int24
+from arbitrum.logs
+where contract_address = 0x3ab5dd69950a948c55d1fbfb7500bf92b4bd4c48
+and topic0 = 0xc42079f94a6350d7e6235f29174924f928cc2ac818eb64fed8004e115fbcca67
+and tx_hash = 0x0807434b7d837f5feffe4cf3ee0c024bf38ebf58372dcb0e77f9b61b04ee6a1f
+```
+
+<p align="center">
+  <img src="../images/etherscan-logs-event-data.png"/><br />
+</p>
+
+What this query does:
+
+- Querying logs table by filtering the contract address (`contract_address`) and event signature(`topic0`)
+
+- Using varbinary functions to get the decoded data from both topics and data column
+
+In the `Swap` event, you will be able to identify:
+
+- Sender : `topic1`
+
+- Recipient : `topic2`
+
+- amount0,amount1,price,liquidity,tick : `data` 
+
+In the `data` column, it contains all the data payload for `amount0,amount1,price,liquidity,tick`. We will have to make use of the `varbinary functions` to slice the data and convert to the correct data type.
+
+```
+select varbinary_ltrim(topic1) as sender, -- topic1
+    varbinary_ltrim(topic2) as recipient, -- topic2
+    varbinary_to_int256(varbinary_substring(data,1,32)) as amount0, -- int256
+    varbinary_to_int256(varbinary_substring(data,33,32)) as amount1, -- int256
+    varbinary_to_uint256(varbinary_substring(data,65,32)) as price, -- uint160
+    varbinary_to_uint256(varbinary_substring(data,97,32)) as liquidity, -- uint128
+    varbinary_to_int256(varbinary_substring(data,129,32)) as tick -- int24
+```
+
+The above codes make use of the [varbinary functions](https://dune.com/docs/query/DuneSQL-reference/Functions-and-operators/varbinary/?h=bytearray_to_uint#varbinary-functions){:target="_blank"} to decode. We will be able to identify which varbinary function to use based on the datatype of each variable. 
+
+  As it can get complicated as there is no restriction on the data payload, it is advisable to get the contracts to be [decoded at Dune](https://dune.com/contracts/new){:target="_blank"} as querying from the raw tables can take a long time as they contain all the events emitted! To understand more about decoded tables, check out our [Decoding Docs](https://dune.com/docs/app/decoding-contracts/){:target="_blank"}.
+
+
+
+
+
+
+
   
 
 
