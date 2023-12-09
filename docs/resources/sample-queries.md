@@ -27,7 +27,13 @@ and ("from" = 0x0000000000000000000000000000000000000000 or "to" = 0x00000000000
 -- to filter transfers that are sent from or receiving from the blackhole address
 ```
 
-From the query above, we can make use of the `erc20_ethereum.evt_transfer` table, to get the total supply. As the `erc20_ethereum.evt_transfer` table contains all erc20 tokens' transfer, you have to filter by `contract_address`,sender(`from`) and recipient(`to`).
+What this query does:
+
+- Get all erc20 token transfer that originates and received by the blackhole address
+
+- Check if it is minted from blackhole address, sum them up, if not subtract them
+
+We can make use of the `erc20_ethereum.evt_transfer` table, to get the total supply. As the `erc20_ethereum.evt_transfer` table contains all erc20 tokens' transfer, you have to filter by `contract_address`,sender(`from`) and recipient(`to`).
 
 
 Next, you'll need to sum up all the transfer events, adding when token is minted `"from" = 0x0000000000000000000000000000000000000000` and subtracting when token is burned(sent to blackhole address(`to = 0x0000000000000000000000000000000000000000`))
@@ -77,6 +83,14 @@ FROM erc20_ethereum.evt_transfer tr JOIN tokens.erc20 USING (contract_address)
  HAVING SUM(amount) > 0.1 --  having more than 0.1 balance
  ORDER BY 3 DESC
 ```
+
+What this query does:
+
+- Get all erc20 token transfer but exclude blackhole address 
+
+- Get the token decimals from tokens.erc20 table
+
+- Get the sum inflows and subtract outflows
 
 ```
 FROM erc20_ethereum.evt_transfer tr JOIN tokens.erc20 USING (contract_address)
@@ -145,6 +159,14 @@ GROUP BY 1
 ORDER BY 1 DESC
 ```
 
+What this query does:
+
+- Get addresses' balance of available dates
+
+- Generate date series to ensure no gaps in between
+
+- Subtract previous day data to get the daily change
+
 ```
 SUM(SUM(amount)) OVER (PARTITION BY address ORDER BY date) as daily_cumulative_balance
 ```
@@ -174,6 +196,7 @@ INNER JOIN gs ON g.date <= gs.date AND gs.date < g.latest_day
 WHERE daily_cumulative_balance > 0.01
 )
 ```
+
 With the generated date series(`gs` CTE), you will just have to join it with the `setLeadData` CTE to get the daily balance of each address since inception!
 
 - You can also add in a filter to remove dusts (`WHERE daily_cumulative_balance > 0.01`)
@@ -199,6 +222,14 @@ ORDER BY 4 DESC
 LIMIT 1000
 ```
 
+What this query does:
+
+- Get token transfers into Binance 14 Hot Wallet
+
+- Join the prices table to get token price
+
+- Filter to only get latest 24 hour data and limiting to 1000 records
+
 The above query shows you the top 1000 deposits in the past 24 hours (`evt_block_time >= NOW() - interval '24' hour`). You can simply just do a JOIN with the `prices.usd` table, with the erc20 token contract address (`contract_address`) and datetime of the transaction (`date_trunc('day',evt_block_time)`).
 
 - The `date_trunc` here is required as there are milliseconds in the `evt_block_time`, to match the minute-level data in `prices.usd`
@@ -208,7 +239,7 @@ The above query shows you the top 1000 deposits in the past 24 hours (`evt_block
 
 [Getting Current NFT Holders](https://dune.com/queries/2858082){:target="_blank"}
 
-You can make use of the `erc721_ethereum.evt_trasnfer` table to get the holders of a NFT collection. The example below identifies the current holders of Bored Ape Yacht Club(BAYC) collection.
+You can make use of the `erc721_ethereum.evt_trasnfer` table to get the holders of a NFT collection. The example below identifies the current holders of Bored Ape Yacht Club(BAYC) collection. For ERC721 nft token, each of them have a unique token number (`tokenId`). 
 
 ```
 SELECT "to" as address,
@@ -226,16 +257,19 @@ WHERE rn = 1
 GROUP BY 1
 ```
 
-For ERC721 nft token, each of them have a unique token number (`tokenId`). 
+What this query does:
 
-From the query above, what it does is:
-- get the recipients (`to`)
-- get the token number (`tokenId`)
-- create a sequential numbering of rows to rank the deposits using `ROW_NUMBER()` windows function
-- to get the latest transfer of each token (`PARTITION BY tokenId ORDER BY evt_block_time DESC,evt_index DESC`)
+- Get the recipients (`to`)
+
+- Get the token number (`tokenId`)
+
+- Create a sequential numbering of rows to rank the deposits using `ROW_NUMBER()` windows function
+
+- To get the latest transfer of each token (`PARTITION BY tokenId ORDER BY evt_block_time DESC,evt_index DESC`)
 
 We will just need to identify the latest recipient of each NFT token and we will just remove all other transactions (`WHERE rn = 1`).
-Aggregate by address will get you the current holder of BAYC collection!
+
+Aggregate by address will get you all current holders of BAYC collection!
 
 
 
