@@ -5,8 +5,6 @@ description: Learn how to make use of popular tables and spells on Dune
 
 # Sample Queries  
    
-Dune is a platform that provides tools for querying, visualizing, and analyzing data from various chains. However, this can be difficult for new users that are not familiar with SQL/on chain data! Hence this guide will help you on your journey becoming a Dune wizard.
-
 Refer to this [dashboard](https://dune.com/resident_wizards/sample-queries){:target="_blank"}, a collection of commonly requested queries over time, and this list will continue to grow! Don't find the query that you need? Check out the [Dune AI](https://dune.com/ai){:target="_blank"} or head down to our [Discord](https://discord.gg/dunecom).
 
 
@@ -270,6 +268,49 @@ What this query does:
 We will just need to identify the latest recipient of each NFT token and we will just remove all other transactions (`WHERE rn = 1`).
 
 Aggregate by address will get you all current holders of BAYC collection!
+
+### Getting the current ETH balance
+
+```
+    -- outbound transfers
+    SELECT SUM(amount) as current_eth_balance FROM (
+    SELECT "from" AS address,
+           -CAST(tr.value AS DOUBLE)/POWER(10,18) AS amount,
+           tx_hash
+    FROM ethereum.traces tr
+    WHERE "from" = 0x29ffea86733d7feac7c353343f300e99b8910c77
+    AND success
+    AND (call_type NOT IN ('delegatecall', 'callcode', 'staticcall') OR call_type IS null)
+
+    UNION ALL
+
+    -- inbound transfers
+    SELECT to AS address, (CAST(value AS DOUBLE)/POWER(10,18)) AS amount,tx_hash
+    FROM ethereum.traces
+    WHERE to = 0x29ffea86733d7feac7c353343f300e99b8910c77
+    AND success
+    AND (call_type NOT IN ('delegatecall', 'callcode', 'staticcall') OR call_type IS null)
+
+    UNION ALL
+    
+    -- gas costs
+    SELECT "from" AS address, -(CAST(gas_used AS DOUBLE)/POWER(10,18) * CAST(gas_price AS DOUBLE)),hash
+    FROM ethereum.transactions et
+    WHERE "from" = 0x29ffea86733d7feac7c353343f300e99b8910c77
+    ) x
+```
+
+What this query does:
+
+- Get all outbound and inbound transfers from `traces` table
+
+- Get all gas costs from the `transactions` table
+
+- Aggregate all transfers, summing up the inflows and subtracting outflows and gas fee
+
+For ETH on mainnet, you will have to use the `ethereum.traces`. They do not appear in erc20 transfer table as it is not an erc20 token.
+
+
 
 
 
