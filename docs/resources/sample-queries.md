@@ -103,6 +103,47 @@ We then aggregate all the values from the events,to get the current balance of e
 - You can also add in a filter to remove holders that are holding dust amount (` HAVING SUM(amount) > 0.1`)
 - You can also add in a filter to get the top X holders (`LIMIT 100`) at the end of query
 
+### Getting Current ETH balance
+
+```
+    -- outbound transfers
+    SELECT SUM(amount) as current_eth_balance FROM (
+    SELECT "from" AS address,
+           -CAST(tr.value AS DOUBLE)/POWER(10,18) AS amount,
+           tx_hash
+    FROM ethereum.traces tr
+    WHERE "from" = 0x29ffea86733d7feac7c353343f300e99b8910c77
+    AND success
+    AND (call_type NOT IN ('delegatecall', 'callcode', 'staticcall') OR call_type IS null)
+
+    UNION ALL
+
+    -- inbound transfers
+    SELECT to AS address, (CAST(value AS DOUBLE)/POWER(10,18)) AS amount,tx_hash
+    FROM ethereum.traces
+    WHERE to = 0x29ffea86733d7feac7c353343f300e99b8910c77
+    AND success
+    AND (call_type NOT IN ('delegatecall', 'callcode', 'staticcall') OR call_type IS null)
+
+    UNION ALL
+    
+    -- gas costs
+    SELECT "from" AS address, -(CAST(gas_used AS DOUBLE)/POWER(10,18) * CAST(gas_price AS DOUBLE)),hash
+    FROM ethereum.transactions et
+    WHERE "from" = 0x29ffea86733d7feac7c353343f300e99b8910c77
+    ) x
+```
+
+What this query does:
+
+- Get all outbound and inbound transfers from `traces` table
+
+- Get all gas costs from the `transactions` table
+
+- Aggregate all transfers, summing up the inflows and subtracting outflows and gas fee
+
+For ETH on mainnet, you will have to use the `ethereum.traces`. They do not appear in erc20 transfer table as it is not an erc20 token.
+
 ### Getting Number Of ERC20 Token Holders Over Time
 
 [Getting Number Of ERC20 Token Holders Over Time](https://dune.com/queries/2749329){:target="_blank"}
@@ -269,46 +310,63 @@ We will just need to identify the latest recipient of each NFT token and we will
 
 Aggregate by address will get you all current holders of BAYC collection!
 
-### Getting the current ETH balance
+### Using Logs Table For Specific Event
+
+[$ARKM Claimers From Logs Table](https://dune.com/queries/3269288){:target="_blank"}
 
 ```
-    -- outbound transfers
-    SELECT SUM(amount) as current_eth_balance FROM (
-    SELECT "from" AS address,
-           -CAST(tr.value AS DOUBLE)/POWER(10,18) AS amount,
-           tx_hash
-    FROM ethereum.traces tr
-    WHERE "from" = 0x29ffea86733d7feac7c353343f300e99b8910c77
-    AND success
-    AND (call_type NOT IN ('delegatecall', 'callcode', 'staticcall') OR call_type IS null)
-
-    UNION ALL
-
-    -- inbound transfers
-    SELECT to AS address, (CAST(value AS DOUBLE)/POWER(10,18)) AS amount,tx_hash
-    FROM ethereum.traces
-    WHERE to = 0x29ffea86733d7feac7c353343f300e99b8910c77
-    AND success
-    AND (call_type NOT IN ('delegatecall', 'callcode', 'staticcall') OR call_type IS null)
-
-    UNION ALL
-    
-    -- gas costs
-    SELECT "from" AS address, -(CAST(gas_used AS DOUBLE)/POWER(10,18) * CAST(gas_price AS DOUBLE)),hash
-    FROM ethereum.transactions et
-    WHERE "from" = 0x29ffea86733d7feac7c353343f300e99b8910c77
-    ) x
+SELECT block_time,
+       varbinary_ltrim(topic1) as address,
+       varbinary_to_uint256(topic2)/1e18 as amount_claimed
+FROM ethereum.logs
+where contract_address = 0x08c7676680f187a31241e83e6d44c03a98adab05
+and topic0 = 0xd8138f8a3f377c5259ca548e70e4c2de94f129f5a11036a15b69513cba2b426a
+order by 3 desc
 ```
 
 What this query does:
 
-- Get all outbound and inbound transfers from `traces` table
+- Querying logs table by filtering the contract address (`contract_address`) and event signature(`topic0`)
 
-- Get all gas costs from the `transactions` table
+- Using varbinary functions to get the decoded data
 
-- Aggregate all transfers, summing up the inflows and subtracting outflows and gas fee
+The `ethereum.logs` table is one of the raw tables available that contains all events that are emitted. You will need to specify the contract address and topic0 to get the specific events you need. Each event has a unique signature (`topic0`), that you will be able to get this the logs page. [Here is a sample transaction hash of $ARKM claim](https://etherscan.io/tx/0xc127438f51ae6917d7b1b7709d50049162ae41bdac4201b5658cd9cc01c9c591){:target="_blank"}.
 
-For ETH on mainnet, you will have to use the `ethereum.traces`. They do not appear in erc20 transfer table as it is not an erc20 token.
+<p align="center">
+  <img src="../images/etherscan_logs.png"/><br />
+  </p>
+
+  Click on the `Logs` tab.
+
+  <p align="center">
+  <img src="../images/etherscan-logs-event-sample.png"/><br />
+  </p>
+
+  In the `Claim` event, you will be able to identify:
+
+  - Address : `contract_address`
+
+  - Event signature  : `topic0`
+
+  - Account : `topic1`
+
+  - Amount : `topic2`
+
+
+  ```
+       varbinary_ltrim(topic1) as address, -- removes the zeros
+       varbinary_to_uint256(topic2)/1e18 as amount_claimed -- converting varbinary to uint256
+  ```
+
+  In the `logs` table, they are raw data hence you will need to use [varbinary functions](https://dune.com/docs/query/DuneSQL-reference/Functions-and-operators/varbinary/?h=bytearray_to_uint#varbinary-functions){:target="_blank"} to decode them.
+
+  Since $ARKM token has 18 decimals, we use `/1e18` to get the actual amount that each address claimed.
+
+  It is advisable to get the contracts to be [decoded at Dune](https://dune.com/contracts/new){:target="_blank"} as querying from the raw tables can take a long time as they contain all the events emitted! To understand more about decoded tables, check out our [Decoding Docs](https://dune.com/docs/app/decoding-contracts/){:target="_blank"}
+  
+
+
+
 
 
 
