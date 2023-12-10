@@ -8,6 +8,7 @@ description: Learn how to make use of popular tables and spells on Dune
 Refer to this [Dune Dashboard](https://dune.com/resident_wizards/sample-queries){:target="_blank"}, a collection of commonly requested queries over time, and this list will continue to grow! Don't find the query that you need? Check out the [Dune AI](https://dune.com/ai){:target="_blank"} or head down to our [Discord](https://discord.gg/dunecom).
 
 
+## EVM Queries
 
 ### Getting Total Supply Of ERC20 Token 
 
@@ -34,7 +35,7 @@ What this query does:
 We can make use of the `erc20_ethereum.evt_transfer` table, to get the total supply. As the `erc20_ethereum.evt_transfer` table contains all erc20 tokens' transfer, you have to filter by `contract_address`,sender(`from`) and recipient(`to`).
 
 
-Next, you'll need to sum up all the transfer events, adding when token is minted `"from" = 0x0000000000000000000000000000000000000000` and subtracting when token is burned(sent to blackhole address(`to = 0x0000000000000000000000000000000000000000`))
+Next, we'll need to sum up all the transfer events, adding when token is minted `"from" = 0x0000000000000000000000000000000000000000` and subtracting when token is burned(sent to blackhole address(`to = 0x0000000000000000000000000000000000000000`))
 
 This is done here, using `CASE` function to get the aggregated amount.
 
@@ -42,7 +43,7 @@ This is done here, using `CASE` function to get the aggregated amount.
 SELECT SUM(case when "from" = 0x0000000000000000000000000000000000000000 THEN (value/1e18) ELSE -(value/1e18) END)
 ```
 
-You can then verify the token supply on blockchain explorer!
+We can then verify the token supply on blockchain explorer!
 
 <a id="current-erc20-holder"></a>
 
@@ -97,11 +98,11 @@ FROM erc20_ethereum.evt_transfer tr JOIN tokens.erc20 USING (contract_address)
 As token decimals varies, we can make use of the `tokens.erc20` table, which contains the token mapping to get the `symbol` and `decimals`.
 We then divide the value by the token decimals(`tr.value/POW(10,decimals)`) to get the amount.
 
-To get the balance of each user, you'll need to get to sum up inflows(`"to"`) and subtracting outflows(`"from"`) to get the current balance.
+To get the balance of each user, we'll need to get to sum up inflows(`"to"`) and subtracting outflows(`"from"`) to get the current balance.
 We then aggregate all the values from the events,to get the current balance of each holder(`GROUP BY address,symbol`).
 
-- You can also add in a filter to remove holders that are holding dust amount (` HAVING SUM(amount) > 0.1`)
-- You can also add in a filter to get the top X holders (`LIMIT 100`) at the end of query
+- We can also add in a filter to remove holders that are holding dust amount (` HAVING SUM(amount) > 0.1`)
+- We can also add in a filter to get the top X holders (`LIMIT 100`) at the end of query
 
 ### Getting Current ETH balance
 
@@ -148,7 +149,7 @@ For ETH on mainnet, you will have to use the `ethereum.traces`. They do not appe
 
 [Getting Number Of ERC20 Token Holders Over Time](https://dune.com/queries/2749329){:target="_blank"}
 
-Getting the number of holders over time will require you to modify [the previous example](#current-erc20-holder). From the transfer events, you will only get records of addresses that have transfer events on the particular day. To ensure that there will be no gaps in between, you will need to generate a date series and backfill with the previous date's data.
+Getting the number of holders over time will require you to modify [the previous example](#current-erc20-holder). From the transfer events, we will only get records of addresses that have transfer events on the particular day. To ensure that there will be no gaps in between, we will need to generate a date series and backfill with the previous date's data.
 
 ```
 WITH user_balance AS (
@@ -223,7 +224,7 @@ SELECT date FROM UNNEST(sequence(CAST('2023-06-28' AS TIMESTAMP),CAST(NOW() AS T
 ```
 
 - `setLeadData`: This will get the next available date of the address (`PARTITION BY address`), in an ascending date order (`ORDER BY date`)
-- `gs`: This will help you to generate a date series, which you can set the start and end date of the timeframe, in the above example its `2023-06-28` as start date and `NOW()` as current date
+- `gs`: This will help us to generate a date series, which we can set the start and end date of the timeframe, in the above example its `2023-06-28` as start date and `NOW()` as current date
 
 ```
 getUserDailyBalance as (
@@ -273,6 +274,7 @@ The above query shows you the top 1000 deposits in the past 24 hours (`evt_block
 
 - The `date_trunc` here is required as there are milliseconds in the `evt_block_time`, to match the minute-level data in `prices.usd`
 
+<a id="current-nft-holder"></a>
 
 ### Getting Current NFT Holders For A Specific Collection
 
@@ -309,6 +311,111 @@ What this query does:
 We will just need to identify the latest recipient of each NFT token and we will just remove all other transactions (`WHERE rn = 1`).
 
 Aggregate by address will get you all current holders of BAYC collection!
+
+### Getting NFT Collection Mints And Current Status
+
+[NFT Mints And Status](https://dune.com/queries/3098984){:target="_blank"}
+
+```
+WITH nftMints as (
+select "to" as address,tokenId from erc721_ethereum.evt_transfer
+where "from" = 0x0000000000000000000000000000000000000000 -- mints are from blackhole address
+and contract_address = 0xbd3531da5cf5857e7cfaa92426877b022e612cf8 -- pudgy penguin address
+),
+
+-- gets the current nft holder
+currentNFTHolder as (
+SELECT "to" as address,
+        tokenId
+FROM (
+select contract_address,
+       to,
+       tokenId,
+       ROW_NUMBER() OVER (PARTITION BY tokenId ORDER BY evt_block_time DESC,evt_index DESC) as rn
+from erc721_ethereum.evt_transfer
+where contract_address = 0xbd3531da5cf5857e7cfaa92426877b022e612cf8 -- pudgy penguin address
+) x
+WHERE rn = 1
+)
+
+SELECT address,
+       ARRAY_AGG(tokenId) as minted_list, -- aggregate all the nft minted
+       COUNT(*) as total_minted, -- count total nft minted
+       COUNT(*) FILTER (WHERE token_id IS NOT NULL) as hold_count, -- count current holdings
+       COUNT(*) FILTER (WHERE token_id IS NULL) as sold_count -- count amount sold
+FROM (
+SELECT a.address,a.tokenId,b.tokenId as token_id
+FROM nftMints a LEFT JOIN currentNFTHolder b ON a.address = b.address AND a.tokenId = b.tokenId
+) x
+GROUP BY 1
+ORDER BY 3 DESC
+```
+
+What this query does:
+
+- `nftMints` : Getting all the mint transactions
+
+- `currentNFTHolder` : Getting all the current NFT holder
+
+- Joining both CTEs to get minted nft list,total counts of mint,holding and sold of each address
+
+In `nftMints`, we filter the sender(`"from"`) to the blackhole address (`0x0000000000000000000000000000000000000000`) and nft contract address (`contract_address`) to only get all the nft minted transactions. 
+
+In `currentNFTHolder`, we get all the current NFT holders of the same collection. For more details, you can refer to [the previous example](#current-nft-holder).
+
+```
+nftMints a LEFT JOIN currentNFTHolder b ON a.address = b.address AND a.tokenId = b.tokenId
+```
+
+We then join both tables up by using `LEFT JOIN`, on the condition of matching the `address` and `tokenId` in both CTE. Finally, we aggregate by the address, to get the total minted list (`ARRAY_AGG(tokenId) as minted_list`), counting the total counts of mint,holding and sold.
+
+### Getting Total Value Locked Of Liquidity Pool Over Time
+
+[Uniswap USDC-WETH LP Total Value Locked Over Time](https://dune.com/queries/3269911){:target="_blank"}
+
+```
+-- get weth and usdc token balance in lp
+WITH DailyTokensInLP as (
+SELECT date,symbol,SUM(SUM(amount)) OVER (PARTITION BY symbol ORDER BY date) as token_amount -- sum the token balance cumulatively , group by symbol
+FROM (
+SELECT date_trunc('day',evt_block_time) as date,symbol,-(value/POW(10,decimals)) as amount
+FROM erc20_ethereum.evt_transfer a 
+LEFT JOIN tokens.erc20 b ON a.contract_address = b.contract_address and blockchain = 'ethereum' -- join the tokens.erc20 to get token symbol and decimals
+where "from" = 0xb4e16d0168e52d35cacd2c6185b44281ec28c9dc -- usdc-weth pair
+and a.contract_address IN (0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2,0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48) -- filter to get usdc and weth only
+UNION ALL
+SELECT date_trunc('day',evt_block_time) as date,symbol,(value/POW(10,decimals)) as amount
+FROM erc20_ethereum.evt_transfer a 
+LEFT JOIN tokens.erc20 b ON a.contract_address = b.contract_address and blockchain = 'ethereum' -- join the tokens.erc20 to get token symbol and decimals
+where "to" = 0xb4e16d0168e52d35cacd2c6185b44281ec28c9dc -- usdc-weth pair
+and a.contract_address IN (0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2,0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48) -- filter to get usdc and weth only
+) x
+GROUP BY date,symbol
+),
+
+getDailyPrice as (
+SELECT date_trunc('day',minute) as date,
+       symbol,
+       AVG(price) as price
+FROM prices.usd
+WHERE contract_address IN (0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2,0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48) -- filter to get usdc and weth only
+AND blockchain = 'ethereum' -- ethereum only
+GROUP BY 1,2
+)
+
+SELECT date,SUM(token_amount * price) as daily_tvl 
+FROM DailyTokensInLP LEFT JOIN getDailyPrice USING (date,symbol)
+GROUP BY 1
+ORDER BY 1 DESC
+```
+
+What this query does:
+
+- In `DailyTokensInLP`, we make use of the transfer event table (`erc20_ethereum.evt_transfer`) and `tokens.erc20` to get the token symbol and the correct cumulative token amount on each day (`GROUP BY date,symbol`).
+
+- In `getDailyPrice`, we use the prices table (`prices.usd`) , to get the daily average prices of both tokens (`AVG(price)`).
+
+- Joining both CTEs to will get the token amount , daily average price daily. Aggregating them will get us the daily total value locked over time!
 
 ### Querying Logs Table For Specific Event (Topics)
 
@@ -413,48 +520,45 @@ select varbinary_ltrim(topic1) as sender, -- topic1
     varbinary_to_int256(varbinary_substring(data,129,32)) as tick -- int24
 ```
 
-The above codes make use of the [varbinary functions](https://dune.com/docs/query/DuneSQL-reference/Functions-and-operators/varbinary/?h=bytearray_to_uint#varbinary-functions){:target="_blank"} to decode. We will be able to identify which varbinary function to use based on the datatype of each variable. 
+The codes above utilizes [varbinary functions](https://dune.com/docs/query/DuneSQL-reference/Functions-and-operators/varbinary/?h=bytearray_to_uint#varbinary-functions){:target="_blank"} to decode. We will be able to identify which varbinary function to use based on the datatype of each variable. 
 
   As it can get complicated as there is no restriction on the data payload, it is advisable to get the contracts to be [decoded at Dune](https://dune.com/contracts/new){:target="_blank"} as querying from the raw tables can take a long time as they contain all the events emitted! To understand more about decoded tables, check out our [Decoding Docs](https://dune.com/docs/app/decoding-contracts/){:target="_blank"}.
 
+## Solana Queries
 
+### Getting Top 100 USDC Holders And Their Balances
 
+[Top 100 USDC Balance](https://dune.com/queries/3269780){:target="_blank"}
 
+```
+SELECT token_balance_owner,post_token_balance FROM (
+select token_balance_owner,post_token_balance,ROW_NUMBER() OVER (PARTITION BY token_balance_owner ORDER BY block_time DESC) as latest_change 
+FROM solana.account_activity
+where token_mint_address = 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v' -- usdc address
+) x
+where latest_change = 1 -- filter by only getting latest balance change transaction
+order by 2 desc
+LIMIT 100
+```
 
+What this query does:
 
+- Get all transactions that involves usdc balance change
 
-  
+- Using window functions to get the latest balance (`post_token_change`)
 
+- Filtering to only get the latest account's token balance
 
+```
+ROW_NUMBER() OVER (PARTITION BY token_balance_owner ORDER BY block_time DESC)
+```
 
+Using the ROW_NUMBER() windows function will help us to identify the latest transaction that involves USDC balance change, and we filter all other transactions by doing `WHERE latest_change = 1`. This allow us to get the updated USDC amount for each wallet address.
 
+We are also able to get the total supply of USDC on Solana by editing the query above, removing the `LIMIT 1000` and adding another windows function to get the supply.
 
+```
+SUM(post_token_balance) OVER () 
+```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+The above code will aggregate every addresses' USDC balance, which gets us the total USDC supply in Solana!
