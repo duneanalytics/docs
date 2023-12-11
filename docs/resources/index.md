@@ -13,7 +13,7 @@ A collection of resources for the Dune community.
   
     [→ Citing Dune](citing-dune.md)
 
--   #### Exploring frequently used queries on Dune
+-   #### Exploring Frequently Used Queries
 
     Walkthrough of commonly used queries
   

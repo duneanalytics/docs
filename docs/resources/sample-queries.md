@@ -143,13 +143,16 @@ What this query does:
 
 - Aggregate all transfers, summing up the inflows and subtracting outflows and gas fee
 
-For ETH on mainnet, you will have to use the `ethereum.traces`. They do not appear in erc20 transfer table as it is not an erc20 token.
+For ETH on mainnet, we will have to use the `ethereum.traces`. They do not appear in erc20 transfer table as it is not an erc20 token.
+
+<a id="erc20-holder-over-time"></a>
 
 ### Getting Number Of ERC20 Token Holders Over Time
 
 [Getting Number Of ERC20 Token Holders Over Time](https://dune.com/queries/2749329){:target="_blank"}
 
-Getting the number of holders over time will require you to modify [the previous example](#current-erc20-holder). From the transfer events, we will only get records of addresses that have transfer events on the particular day. To ensure that there will be no gaps in between, we will need to generate a date series and backfill with the previous date's data.
+
+Getting the number of holders over time will require us to modify [the previous example](#current-erc20-holder). From the transfer events, we will only get records of addresses that have transfer events on the particular day. To ensure that there will be no gaps in between, we will need to generate a date series and backfill with the previous date's data.
 
 ```
 WITH user_balance AS (
@@ -211,7 +214,7 @@ What this query does:
 SUM(SUM(amount)) OVER (PARTITION BY address ORDER BY date) as daily_cumulative_balance
 ```
 
-This windows function will sum up all the amount(`token transfer amount`) cumulatively, to get the token balance of each address on that particular day, which you have to aggregate them by date and address (`GROUP BY date,address`)
+This windows function will sum up all the amount(`token transfer amount`) cumulatively, to get the token balance of each address on that particular day, which we have to aggregate them by date and address (`GROUP BY date,address`)
 
 ```
 setLeadData as (
@@ -237,17 +240,17 @@ WHERE daily_cumulative_balance > 0.01
 )
 ```
 
-With the generated date series(`gs` CTE), you will just have to join it with the `setLeadData` CTE to get the daily balance of each address since inception!
+With the generated date series(`gs` CTE), we will just have to join it with the `setLeadData` CTE to get the daily balance of each address since inception!
 
-- You can also add in a filter to remove dusts (`WHERE daily_cumulative_balance > 0.01`)
+- We can also add in a filter to remove dusts (`WHERE daily_cumulative_balance > 0.01`)
 
-Once you have the daily balance of each user, you can now get the daily number of holders by simply aggregating the number of addresses on each day. You can also get the daily change in token holders by taking each day's holder count and subtracting previous day's holder count (`COUNT(address) - LAG(COUNT(address)) OVER (ORDER BY date) as change `)
+Once we have the daily balance of each user, we can now get the daily number of holders by simply aggregating the number of addresses on each day. We can also get the daily change in token holders by taking each day's holder count and subtracting previous day's holder count (`COUNT(address) - LAG(COUNT(address)) OVER (ORDER BY date) as change `)
 
 ### Getting ERC20 Token Transaction Value In USD
 
 [Top 100 Transfers In USD Into Binance](https://dune.com/queries/3269085){:target="_blank"}
 
-You are able to get the token amount for transfers from the `erc20 evt transfer` table, to get the usd amount, you will need to join with the prices table (`prices.usd`)
+We are able to get the token amount for transfers from the `erc20 evt transfer` table. To get the usd amount, we will need to join with the prices table (`prices.usd`)
 
 ```
 select "from" as sender,
@@ -280,7 +283,7 @@ The above query shows you the top 1000 deposits in the past 24 hours (`evt_block
 
 [Getting Current NFT Holders](https://dune.com/queries/2858082){:target="_blank"}
 
-You can make use of the `erc721_ethereum.evt_trasnfer` table to get the holders of a NFT collection. The example below identifies the current holders of Bored Ape Yacht Club(BAYC) collection. For ERC721 nft token, each of them have a unique token number (`tokenId`). 
+We can make use of the `erc721_ethereum.evt_trasnfer` table to get the holders of a NFT collection. The example below identifies the current holders of Bored Ape Yacht Club(BAYC) collection. For ERC721 nft token, each of them have a unique token number (`tokenId`). 
 
 ```
 SELECT "to" as address,
@@ -310,7 +313,7 @@ What this query does:
 
 We will just need to identify the latest recipient of each NFT token and we will just remove all other transactions (`WHERE rn = 1`).
 
-Aggregate by address will get you all current holders of BAYC collection!
+Aggregate by address will get us all current holders of BAYC collection!
 
 ### Getting NFT Collection Mints And Current Status
 
@@ -368,6 +371,30 @@ nftMints a LEFT JOIN currentNFTHolder b ON a.address = b.address AND a.tokenId =
 ```
 
 We then join both tables up by using `LEFT JOIN`, on the condition of matching the `address` and `tokenId` in both CTE. Finally, we aggregate by the address, to get the total minted list (`ARRAY_AGG(tokenId) as minted_list`), counting the total counts of mint,holding and sold.
+
+### Getting NFT Platforms Daily And Cumulative Volume Over Time
+
+[NFT Platform Daily And Cumulative Volume Over Time](https://dune.com/queries/2858389){:target="_blank"}
+
+```
+select date_trunc('day', block_time) as day,
+       project,
+       sum(amount_usd) as daily_project_amount_usd,
+       sum(sum(amount_usd)) OVER (PARTITION BY project ORDER BY date_trunc('day',block_time)) as project_cumulative_volume_usd
+from nft.trades -- from nft.trades spell table
+where block_time > now() - interval '365' day -- getting 1 year data, current - 365 days
+group by 1,2
+ORDER BY 1 DESC,4 DESC
+```
+
+What this query does:
+
+- Getting daily usd volume of each nft platform in nft.trades
+
+- Summing up cumulatively to get the total volume processed in 365 days
+
+`nft.trades` is a [spell](https://github.com/duneanalytics/spellbook/tree/main/models/_sector/nft/trades){:target="_blank"} that contains most transactions from the popular NFT market. We can aggregate the daily volume (`sum(amount_usd)`) and summing the volume cumulatively (`sum(sum(amount_usd)) OVER (PARTITION BY project ORDER BY date_trunc('day',block_time))`) to identify the performance between NFT platforms' volume in the past one year.
+
 
 ### Getting Total Value Locked Of Liquidity Pool Over Time
 
@@ -437,7 +464,7 @@ What this query does:
 
 - Using varbinary functions to get the decoded data
 
-The `ethereum.logs` table is one of the raw tables available that contains all events that are emitted. You will need to specify the contract address and topic0 to get the specific events you need. Each event has a unique signature (`topic0`), that you will be able to get this the logs page. [Here is a sample transaction hash of $ARKM claim](https://etherscan.io/tx/0xc127438f51ae6917d7b1b7709d50049162ae41bdac4201b5658cd9cc01c9c591){:target="_blank"}.
+The `ethereum.logs` table is one of the raw tables available that contains all events that are emitted. We will need to specify the contract address and topic0 to get the specific events we need. Each event has a unique signature (`topic0`), that we will be able to get this the logs page. [Here is a sample transaction hash of $ARKM claim](https://etherscan.io/tx/0xc127438f51ae6917d7b1b7709d50049162ae41bdac4201b5658cd9cc01c9c591){:target="_blank"}.
 
 <p align="center">
   <img src="../images/etherscan_logs.png"/><br />
@@ -500,7 +527,7 @@ What this query does:
 
 - Using varbinary functions to get the decoded data from both topics and data column
 
-In the `Swap` event, you will be able to identify:
+In the `Swap` event, we will be able to identify:
 
 - Sender : `topic1`
 
@@ -562,3 +589,22 @@ SUM(post_token_balance) OVER ()
 ```
 
 The above code will aggregate every addresses' USDC balance, which gets us the total USDC supply in Solana!
+
+### Getting Wallet Balance On Solana
+
+[Getting Daily Solana Wallet Balances With Dates]((https://dune.com/queries/3273348){:target"_blank})
+
+```
+select  day,token_balance_owner,address,COALESCE(symbol,'unknown token') as symbol,token_balance
+from solana_utils.daily_balances join tokens_solana.fungible USING (token_mint_address)
+where token_balance_owner = 'JCNCMFXo5M5qwUPg2Utu1u6YWp3MbygxqBsBeXXJfrw'
+ORDER BY 1 DESC
+```
+
+What this query does:
+
+- Get daily balance with daily balances spell (`solana_utils.daily_balances`)
+
+- Joining `tokens_solana.fungible` to get the token symbols
+
+If you need daily balances with no gaps in between, you can modify the query, referring [to this example](#erc20-holder-over-time).
