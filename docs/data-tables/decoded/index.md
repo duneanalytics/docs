@@ -4,6 +4,10 @@ description: Instead of working with the transactions, logs, and traces in their
 ---
 
 
+!!! tip 
+    You can find information on how to submit a contract for decoding [here](../../app/decoding-contracts.md).
+
+
 
 **To make it easier to work with smart contracts and programs, Dune has decoded data from all transactions (all functions and logs) into human readable tables. This means you don't need to work with any of the raw data from the blockchain!**
 
