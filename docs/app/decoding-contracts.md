@@ -20,10 +20,10 @@ Our decoding process begins with our [contract submission page](https://dune.com
 To successfully submit a contract, you will need four pieces of information:
 
 1. **Blockchain**: The name of the origin blockchain of the contract
-2. Contract Address: The address associated with contract
-3. Project Name: The name of the project that the contract originates from (ex. Tether) 
-4. Contract name: The name of the smart contract as given by the Project (ex. USDT)
-5. ABI: Unique to each smart contract. Further details can be found [here](https://docs.soliditylang.org/en/latest/abi-spec.html). Note that for contracts that are verified by a chain's explorer we will attempt to auto-fetch the ABI. Otherwise the ABI will need to be entered manually.         
+2. **Contract Address**: The address associated with contract
+3. **Project Name**: The name of the project that the contract originates from (ex. Tether) 
+4. **Contract Name**: The name of the smart contract as given by the Project (ex. USDT)
+5. **ABI**: Unique to each smart contract. Further details can be found [here](https://docs.soliditylang.org/en/latest/abi-spec.html). Note that for contracts that are verified by a chain's explorer we will attempt to auto-fetch the ABI. Otherwise the ABI will need to be entered manually.         
 
 In most cases, the contract name will be pulled directly from a blockchain scanner. We recommend using the name provided. If the name is not automatically provided, please follow our naming conventions to assure the contract is properly assimilated into Dune’s database.
 
@@ -48,7 +48,7 @@ Diamond proxy contracts: Submit all the facets using just the same name for the 
 !!! suggestion "Where can I find this information?"
     Contract addresses can usually be found in a project’s docs. Once you have the contract address, you can use a blockchain explorer to get the rest of the information. Most blockchain explorers have everything you need!
 
-??? suggestion "Resubmissions"
+??? suggestion "Re-submissions"
     Given the popularity of some smart contracts, re-submissions happen. If the contract you are trying to submit already exists, an error like the following will pop up.
     ![](../images/Resubmission%20Info.png)
     There are some circumstances under which a contract can be resubmitted, like if the contract needs to be renamed. In that case, you can click **“Proceed to Resubmit”** and follow the steps to submit the contract as normal with one caveat: at the end of the submission process, you will be asked to explain why you want to resubmit the contract. Give as much detail as possible to avoid the resubmission being rejected! 
@@ -71,34 +71,29 @@ Then it’s all ready for you to query. Let the data flow!
 ??? "On which chains does this work?"
     Any contracts created on blockchains that Dune has integrated. To check which blockchains we currently have available, see our section on [Tables and Chains](../index.md).
 
-<details>
-<summary>**How do I figure out if my contract has been decoded?**</summary>
-<br>
-There are two main ways to find out if your contract has been decoded. 
+??? "How do I figure out if my contract has been decoded?"
+    There are two main ways to find out if your contract has been decoded. 
 
-First: Account Settings
+    First: Account Settings
 
-Information on submitted contracts can be found in your account settings under “Contracts”. The status of the contract will reflect one of the following: 
+    Information on submitted contracts can be found in your account settings under “Contracts”. The status of the contract will reflect one of the following: 
 
-Pending
-Approved/Rejected*
+    1. Pending
+    2. Approved/Rejected*
 
-Note that once a contract has been approved, it takes around 6 hours for the data to be fully decoded and populated into our database.
+    Note that once a contract has been approved, it takes around 6 hours for the data to be fully decoded and populated into our database.
+    
+    *If the contract is rejected, hover your mouse over the status to see the reason for the rejection. 
 
-*If the contract is rejected, hover your mouse over the status to see the reason for the rejection. 
+    Second: Our [Contract Decoding Dashboard](https://dune.com/dune/is-my-contract-decoded-yet-v2)
+    ![](../images/Decoding%20Dashboard.png)  
+    Built by our decoding team, this dashboard gives you information on the status of any submitted contract. Input the contract address in the box at the top of the dashboard and if the contract has been decoded, the contract information will populate the box along with where it is located in the Dune database. 
 
-Second: Our [Contract Decoding Dashboard](https://dune.com/dune/is-my-contract-decoded-yet-v2)
-![](../images/Decoding%20Dashboard.png)  
-Built by our decoding team, this dashboard gives you information on the status of any submitted contract. Input the contract address in the box at the top of the dashboard and if the contract has been decoded, the contract information will populate the box along with where it is located in the Dune database. 
-</details>
+??? I see data on Dune but it doesn’t match or is missing what I expected to see. 
 
-<details>
-<summary> I see data on Dune but it doesn’t match or is missing what I expected to see. </summary>
-<br>
-Unfortunately, Dune only has access to contract data in circumstances that the contract performed an event that left a trace. Our recommendation is to check out the {blockchain}.traces table to see what information is available for a particular contract.
-
-Alternatively, some contracts are upgradeable (ie., the smart contract code can be modified). In this case we may not have all of the ABIs. ABIs can be checked in the ABI column of the {blockchain}.contracts tables. A contract can always be resubmitted with missing ABIs so we can update our data. 
-</details>
+    Unfortunately, Dune only has access to contract data in circumstances that the contract performed an event that left a trace. Our recommendation is to check out the {blockchain}.traces table to see what information is available for a particular contract.
+    
+    Alternatively, some contracts are upgradeable (ie., the smart contract code can be modified). In this case we may not have all of the ABIs. ABIs can be checked in the ABI column of the {blockchain}.contracts tables. A contract can always be resubmitted with missing ABIs so we can update our data. 
 
 #### How do I submit contract information manually?
 
