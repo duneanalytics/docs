@@ -50,7 +50,7 @@ Pricing for API is charged along two dimensions.
 
 A datapoint applies to query results after the query is run, and can in most cases be thought of `rows * columns` with an additional limit of 100 avg bytes per cell in a set of results. This can be expressed as: 
 ```math
-Credits = Datapoints/1000 = max(rows*columns, ceil(totalbytes/100))
+Credits = Datapoints/1000 = max(rows*columns, ceil(totalbytes/100))/1000
 ```
 More details can be found on our [FAQ page](https://dune.com/docs/api/faq/#faq-billing-pricing).
 
