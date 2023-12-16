@@ -551,6 +551,26 @@ The codes above utilizes [varbinary functions](https://dune.com/docs/query/DuneS
 
   As it can get complicated as there is no restriction on the data payload, it is advisable to get the contracts to be [decoded at Dune](https://dune.com/contracts/new){:target="_blank"} as querying from the raw tables can take a long time as they contain all the events emitted! To understand more about decoded tables, check out our [Decoding Docs](https://dune.com/docs/app/decoding-contracts/){:target="_blank"}.
 
+### Unnesting Arrays From Decoded Tables
+
+[Unnesting Arrays](https://dune.com/queries/2665544){:target=="_blank"}
+
+```
+SELECT account,
+       perc,
+       accounts,
+       percentAllocations
+FROM splits_ethereum.SplitMain_call_updateSplit 
+CROSS JOIN UNNEST(accounts,percentAllocations) as t(account,perc)
+WHERE "split" = 0x84af3D5824F0390b9510440B6ABB5CC02BB68ea1
+```
+
+What this query does:
+
+- Unnesting arrays into multiple rows
+
+We have to select the columns that contains the array (`accounts,percentAllocations`) and unnest them into two new columns (`account,perc`). We will then be able to query it normally as rows after!
+
 ## Solana Queries
 
 ### Getting Top 100 USDC Holders And Their Balances
@@ -592,7 +612,7 @@ The above code will aggregate every addresses' USDC balance, which gets us the t
 
 ### Getting Wallet Balance On Solana
 
-[Getting Daily Solana Wallet Balances With Dates]((https://dune.com/queries/3273348){:target"_blank})
+[Getting Daily Solana Wallet Balances With Dates](https://dune.com/queries/3273348){:target"_blank}
 
 ```
 select  day,token_balance_owner,address,COALESCE(symbol,'unknown token') as symbol,token_balance
