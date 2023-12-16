@@ -43,7 +43,7 @@ This is done here, using `CASE` function to get the aggregated amount.
 SELECT SUM(case when "from" = 0x0000000000000000000000000000000000000000 THEN (value/1e18) ELSE -(value/1e18) END)
 ```
 
-We can then verify the token supply on blockchain explorer!
+We can then verify the token supply [on blockchain explorer](https://etherscan.io/token/0x046eee2cc3188071c02bfc1745a6b17c656e3f3d)!
 
 <a id="current-erc20-holder"></a>
 
@@ -100,6 +100,8 @@ We then divide the value by the token decimals(`tr.value/POW(10,decimals)`) to g
 
 To get the balance of each user, we'll need to get to sum up inflows(`"to"`) and subtracting outflows(`"from"`) to get the current balance.
 We then aggregate all the values from the events,to get the current balance of each holder(`GROUP BY address,symbol`).
+
+<iframe src="https://dune.com/embeds/2753189/4581118" width="100%" height="400" frameborder="0"></iframe>
 
 - We can also add in a filter to remove holders that are holding dust amount (` HAVING SUM(amount) > 0.1`)
 - We can also add in a filter to get the top X holders (`LIMIT 100`) at the end of query
@@ -246,23 +248,29 @@ With the generated date series(`gs` CTE), we will just have to join it with the 
 
 Once we have the daily balance of each user, we can now get the daily number of holders by simply aggregating the number of addresses on each day. We can also get the daily change in token holders by taking each day's holder count and subtracting previous day's holder count (`COUNT(address) - LAG(COUNT(address)) OVER (ORDER BY date) as change `)
 
+
+<iframe src="https://dune.com/embeds/2749329/5505530" width="100%" height="400" frameborder="0"></iframe>
+
+
 ### Getting ERC20 Token Transaction Value In USD
 
-[Top 100 Transfers In USD Into Binance](https://dune.com/queries/3269085){:target="_blank"}
+[Top 100 Transfers In USD Into Binance(24Hrs)](https://dune.com/queries/3269085){:target="_blank"}
 
 We are able to get the token amount for transfers from the `erc20 evt transfer` table. To get the usd amount, we will need to join with the prices table (`prices.usd`)
 
 ```
+SELECT ROW_NUMBER() OVER (ORDER BY token_usd DESC) as ranking,* FROM (
 select "from" as sender,
        symbol,
        value/POW(10,decimals) as token_amount,
-       value/POW(10,decimals) * price as token_usd
-from erc20_ethereum.evt_transfer a 
-LEFT JOIN prices.usd b ON date_trunc('minute',a.evt_block_time) = b.minute AND a.contract_address = b.contract_address
+       value/POW(10,decimals) * price as token_usd,
+       evt_tx_hash
+from erc20_ethereum.evt_transfer a LEFT JOIN prices.usd b ON date_trunc('minute',a.evt_block_time) = b.minute AND a.contract_address = b.contract_address
 where "to" = 0x28c6c06298d514db089934071355e5743bf21d60
 and evt_block_time >= NOW() - interval '24' hour
 ORDER BY 4 DESC
-LIMIT 1000
+LIMIT 100
+)
 ```
 
 What this query does:
@@ -276,6 +284,8 @@ What this query does:
 The above query shows you the top 1000 deposits in the past 24 hours (`evt_block_time >= NOW() - interval '24' hour`). You can simply just do a JOIN with the `prices.usd` table, with the erc20 token contract address (`contract_address`) and datetime of the transaction (`date_trunc('day',evt_block_time)`).
 
 - The `date_trunc` here is required as there are milliseconds in the `evt_block_time`, to match the minute-level data in `prices.usd`
+
+<iframe src="https://dune.com/embeds/3269085/5472074" width="100%" height="400" frameborder="0"></iframe>
 
 <a id="current-nft-holder"></a>
 
@@ -317,7 +327,7 @@ Aggregate by address will get us all current holders of BAYC collection!
 
 ### Getting NFT Collection Mints And Current Status
 
-[NFT Mints And Status](https://dune.com/queries/3098984){:target="_blank"}
+[Pudgy Penguin Mints And Status](https://dune.com/queries/3098984){:target="_blank"}
 
 ```
 WITH nftMints as (
@@ -371,6 +381,8 @@ nftMints a LEFT JOIN currentNFTHolder b ON a.address = b.address AND a.tokenId =
 ```
 
 We then join both tables up by using `LEFT JOIN`, on the condition of matching the `address` and `tokenId` in both CTE. Finally, we aggregate by the address, to get the total minted list (`ARRAY_AGG(tokenId) as minted_list`), counting the total counts of mint,holding and sold.
+
+<iframe src="https://dune.com/embeds/3098984/5170947" width="100%" height="400" frameborder="0"></iframe>
 
 ### Getting NFT Platforms Daily And Cumulative Volume Over Time
 
@@ -443,6 +455,8 @@ What this query does:
 - In `getDailyPrice`, we use the prices table (`prices.usd`) , to get the daily average prices of both tokens (`AVG(price)`).
 
 - Joining both CTEs to will get the token amount , daily average price daily. Aggregating them will get us the daily total value locked over time!
+
+<iframe src="https://dune.com/embeds/3269911/5505554" width="100%" height="400" frameborder="0"></iframe>
 
 ### Querying Logs Table For Specific Event (Topics)
 
