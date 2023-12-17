@@ -325,6 +325,8 @@ We will just need to identify the latest recipient of each NFT token and we will
 
 Aggregate by address will get us all current holders of BAYC collection!
 
+<iframe src="https://dune.com/embeds/2858082/4779585" width="100%" height="400" frameborder="0"></iframe>
+
 ### Getting NFT Collection Mints And Current Status
 
 [Pudgy Penguin Mints And Status](https://dune.com/queries/3098984){:target="_blank"}
@@ -584,6 +586,57 @@ What this query does:
 - Unnesting arrays into multiple rows
 
 We have to select the columns that contains the array (`accounts,percentAllocations`) and unnest them into two new columns (`account,perc`). We will then be able to query it normally as rows after!
+
+### Extracting Data From JSON Objects
+
+[Extract Trade Order Details From JSON Object](https://dune.com/queries/3291221){:target=="_blank"}
+
+```
+select json_extract_scalar(_position,'$.isLong') as isLong,
+       from_hex(json_extract_scalar(_position,'$.marginAsset')) as marginAsset,
+       from_hex(json_extract_scalar(_position,'$.player')) as player,
+       cast(json_extract_scalar(_position,'$.priceOpened') as decimal)/pow(10,18) as priceOpened,
+       cast(json_extract_scalar(_position,'$.positionSizeUsd') as decimal)/pow(10,18) as positionSizeUsd,
+       json_extract_scalar(_position,'$.fundingRateOpen') as fundingRateOpen,
+       cast(json_extract_scalar(_position,'$.marginAmountUsd') as decimal)/pow(10,18) as marginAmountUsd,
+       cast(json_extract_scalar(_position,'$.maxPositionProfitUsd') as decimal)/pow(10,18) as maxPositionProfitUsd,
+       cast(json_extract_scalar(_position,'$.positionSizeInTargetAsset') as decimal) as positionSizeInTargetAsset
+from degensbet_arbitrum.DegenMain_evt_OrderExecuted 
+```
+
+What this query does:
+
+- Extracting order details from JSON Object by using `json_extract_scalar`
+
+- Casting to the correct data type 
+
+```
+{
+  "isLong": true,
+  "isOpen": true,
+  "marginAsset": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+  "player": "0x101a2d2afc2f9b0b217637f53e3a3e859104a33d",
+  "timestampOpened": 1698168769,
+  "priceOpened": 1783000000000000000000,
+  "positionSizeUsd": 10000000000000000000000,
+  "fundingRateOpen": 98,
+  "orderIndex": 768,
+  "marginAmountUsd": 10000000000000000000,
+  "maxPositionProfitUsd": 3419059418235433408476,
+  "positionSizeInTargetAsset": 5608524957936062815
+}
+```
+
+The above is a sample of `_position` column. To extract the individual data, we can make use of `json_extract_scalar` to get each data.
+We will also need to cast them to the correct data type for further calculations as they are `varchar` datatype upon extraction.
+
+```
+from_hex(json_extract_scalar(_position,'$.player')) as player,
+```
+
+For addresses, you will have to make use of `from_hex()` to convert the addresses from `varchar` to `varbinary`
+
+<iframe src="https://dune.com/embeds/3291221/5509932" width="100%" height="400" frameborder="0"></iframe>
 
 ## Solana Queries
 
