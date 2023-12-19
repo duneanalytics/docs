@@ -8,7 +8,7 @@ title: Alerts
 Alerts allows users to set notifications for a scheduled query. These notifications are triggered each time the query runs. Supported delivery methods include:
 
 - **Email:** Multiple email addresses can be added.
-- **Webhooks:** Alerts can be sent to a specified callback URL.
+- **Webhooks:** Alerts can be sent to a specified callback URL, including Slack.
 
 ## Setup
 
@@ -29,19 +29,30 @@ To use Alerts, follow these steps:
 
 ### Alert Timing
 
-Alerts are triggered after query execution. Delays may occur due to factors like query complexity or system queues. Note that retry mechanisms for failed deliveries are not yet implemented. Alerts are not recommended for time-sensitive or critical applications at this stage.
+Alerts are triggered after query execution. Delays may occur due to factors like query complexity or system queues. Note that retry mechanisms for failed deliveries are not yet implemented. 
+
+!!! warning
+    
+    Alerts are not recommended for time-sensitive or critical applications at this stage.
+
+
 
 ## Alert Content
 
 ### Email Alerts
 
-Email alerts currently include a raw HTML table of truncated results and a link to the query. Future updates will replace the HTML table with a screenshot of the Dune table.
+Email alerts include screenshots of the visualizations you have defined. If you have defined no visualizations, we include a screenshot of the query results by default. Here's an example:
 
-The Email will look like this:
+![Default email alert](./images/alerts/email_table.png)
 
-![Email Alert](../app/images/email_alert.png)
+If you have defined a visualization, we will include it instead of the table, like this:
 
-The HTML table will include the raw results of the query, none of the formatting or styling from the Dune table will be included. Therefore, it is recommended to use ``cast``, ``format`` and ``round`` functions to format the data in the query.
+![Email Alert with visualization](./images/alerts/email_viz.png)
+
+
+If your query contains multiple visualizations, or table visualizations (outside the default "Query results" table), they will all be included, such as here:
+
+![Email Alert with multiple visualizations](./images/alerts/email_complex.png)
 
 ### Webhook Alerts
 
@@ -69,39 +80,117 @@ Webhook alerts adhere to the following schema:
         execution_time_millis: number;
       };
     };
-  }
+  },
+  visualizations: [
+    {
+      title: string;
+      image_url: string;
+    }
+  ]
 }
 ```
 
-Validation of webhook format can be done at [Webhook.site](https://webhook.site/).
+Here is an example corresponding to the last email example shared earlier:
+
+```
+{
+  "message": "Query ETH SMA alert was submitted for execution at Wed, 13 Dec 2023 13:42:40 GMT by your query schedule and it was successfully executed with a non empty result.\nYou can check its latest result here: https://dune.com/queries/3137182?utm_source=webhook&utm_campaign=alerts",
+  "query_result": {
+    "execution_id": "01HHHPMKG6NBY0B04A36TS3AQH",
+    "query_id": 3137182,
+    "state": "QUERY_STATE_COMPLETED",
+    "submitted_at": "2023-12-13T13:42:40Z",
+    "expires_at": "2024-03-12T13:42:48Z",
+    "execution_started_at": "2023-12-13T13:42:40Z",
+    "execution_ended_at": "2023-12-13T13:42:48Z",
+    "result": {
+      "data_uri": "https://api.dune.com/api/v1/execution/01HHHPMKG6NBY0B04A36TS3AQH/results",
+      "metadata": {
+        "column_names": [
+          "day",
+          "avg_price",
+          "sma_20",
+          "sma_50",
+          "sma_100",
+          "sma_200"
+        ],
+        "result_set_bytes": 10710,
+        "total_row_count": 91,
+        "datapoint_count": 546,
+        "pending_time_millis": 13,
+        "execution_time_millis": 8038
+      }
+    }
+  },
+  "visualizations": [
+    {
+      "title": "SMA",
+      "image_url": "https://prod-dune-media.s3.eu-west-1.amazonaws.com/screenshots/3137182/01HHHPMKG6NBY0B04A36TS3AQH/5232261.png"
+    },
+    {
+      "title": "Counter",
+      "image_url": "https://prod-dune-media.s3.eu-west-1.amazonaws.com/screenshots/3137182/01HHHPMKG6NBY0B04A36TS3AQH/5451006.png"
+    },
+    {
+      "title": "Last days of data",
+      "image_url": "https://prod-dune-media.s3.eu-west-1.amazonaws.com/screenshots/3137182/01HHHPMKG6NBY0B04A36TS3AQH/5451008.png"
+    }
+  ]
+}
+```
+
+Validation of the webhook format can be done at [Webhook.site](https://webhook.site/). You can easily test it out by triggering manual deliveries by clicking the Manual trigger link below the URL field.
 
 ## Integration with Third-Party Apps
 
-### Slack Integration
+### Slack Support
 
-Slack integration is possible through the webhook alert type. Users should:
+The webhook alert type supports posting directly to Slack. Users should:
 
-1. Create a Slack app and activate "Incoming Webhooks."
-2. Paste the Slack URL into the Alert configuration. [insert image]
+1. Create a [Slack app](https://api.slack.com/apps) and activate "Incoming Webhooks."
+2. Paste the Slack hook URL into the Alert configuration. 
+3. The help text below the field should indicate that a Slack URL has been detected:
+
+![Slack Setup](./images/alerts/slack_setup.png)
+
+Once saved, you will start receiving messages on Slack. Here is an example of how it looks:
+
+![Slack message](./images/alerts/slack_hook.png)
 
 ### Zapier Integration
 
-Direct integration with Zapier is not available. A workaround involves:
+[Zapier](https://zapier.com/) is a third party solution that supports building integrations betwen different software solutions without writing any code. With it you can build advanced workflows that relay data between Dune and your favorite work tools.
 
-1. Setting up a Zapier webhook trigger.
-2. Using the provided webhook URL as the Alert’s webhook.
-3. Employing a specific [Dune zap](https://zapier.com/developer/public-invite/194504/2174c6b998748b657f28dab4097f3e80/) for interfacing with Dune. [insert image]
+We currently offer an experimental [Zapier app](https://zapier.com/developer/public-invite/194504/2174c6b998748b657f28dab4097f3e80/) to support connecting Dune with thousands of other tools via Zapier. 
+
+To set it up, follow these steps:
+
+1. Accept the invite to use our private Zapier app via [this link](https://zapier.com/developer/public-invite/194504/2174c6b998748b657f28dab4097f3e80/).
+2. Create a new zap, with a [Webhook trigger](https://zapier.com/apps/webhook/integrations).
+3. Copy the webhook URL provided by Zapier's Webhook trigger, and paste it in the Dune webhook URL field.
+4. Now, on Zapier you can click Test to test that the webhook works.
+5. Trigger a manual hook request from the Alerts configuration form to test it out, and it should show up on Zapier.
+    1. If you want to relay screenshots to other tools, the screenshots will be in the payload.
+    2. If you want to relay query results, the Dune Zapier App includes an action to fetch a query's latest results by query id, which will allow you to easily fetch query results.
+
+This is where you can trigger manual hook deliveries:
+
+![Manual hook](./images/alerts/manual_hook.png)
+
+Your setup on Zapier should look something like this:
+
+![Zapier zap](./images/alerts/zapier_example.png)
 
 ## Known Issues and Solutions
 
-1. **Email Table Readability:** The HTML table is currently difficult to read.
-   - **Workaround:** Use the link in the email to view the query.
-2. **Manual Alert Triggering:** Currently, manual triggering is not available.
-   - **Workaround:** Set a 15-minute schedule for quicker testing.
-3. **Pagination in Webhooks:** No pagination support, which might affect data quota.
-   - **Workaround:** Use queries with smaller result sets for testing.
-4. **Visualizations:** Currently limited to Slack messages.
-   - **Future Update:** Include in webhooks and emails, including private content.
+1. **Manual Alert Triggering:** Currently, manual triggering is only available for webhooks.
+
+    1. We're planning to add it to Email and Slack. In the meantime, you can set your query on a 15-minute schedule for quicker testing.
+
+2. **No results in webhook:** Instead of including query results in the callback, the webhook payload includes a URL to fetch the query's results in case you need to action on them.
+
+    1. We do not include datapoints in the hook callback in order to prevent unwanted credit spend on data exports.
+    2. We're open to feedback on changing this behavior. If you have thoughts, let us know.
 
 ## Feedback
 
@@ -111,6 +200,6 @@ Feedback can be provided through the Alerts Beta Telegram channel.
 
 ## Acknowledgement
 
-Thank you for participating in our beta testing program. Your feedback is essential for improving this feature.
+Thank you to everyone that participated in our beta testing program. Your feedback has been essential for improving this feature.
 
 ---
