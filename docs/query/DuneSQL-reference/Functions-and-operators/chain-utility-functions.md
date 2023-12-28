@@ -84,6 +84,30 @@ SELECT
     get_chain_explorer('ethereum')
 ```
 
+#### get_balancer_link()
+**``get_balancer_link(varchar, varchar)``** → varchar
+
+This function returns a link to access a specific pool on the Balancer app. The first argument is the chain, and the second argument is the pool Id (provided as varchar).
+
+```sql
+SELECT 
+    get_balancer_link(blockchain, cast(pool_id as varchar))
+FROM balancer.trades
+limit 100
+```
+
+#### get_balancer_link()
+**``get_balancer_link(varchar, varbinary)``** → varchar
+
+This function returns a link to access a specific pool on the Balancer app. The first argument is the chain, and the second argument is the pool Id (provided as varbinary).
+
+```sql
+SELECT 
+    get_balancer_link(blockchain, pool_id)
+FROM balancer.trades
+limit 100
+```
+
 #### all_evm_chains()
 **``all_evm_chains()``** → array(varchar)
 
@@ -93,3 +117,13 @@ SELECT
 ```
 
 This function returns an array listing all the EVM chains available on Dune.
+
+#### all_op_chains()
+**``all_op_chains()``** → array(varchar)
+
+```sql
+SELECT 
+    all_op_chains()
+```
+
+This function returns an array listing all the Optimism chains available on Dune.
