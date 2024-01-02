@@ -149,7 +149,7 @@ Optimism differs in it's EVM implementation in the calculation of gas costs, sin
 
 #### Base
 
-Base is an Optimistic Rollup that is built on top of the OP stack. It is a Layer 2 solution that utilizes the strong security guarantees of Ethereum while reducing its cost and latency. Base processes transactions outside of Ethereum Mainnet, reducing congestion on the base layer and improving scalability. For a Deep Dive into Base, we recommend reading through their [Documentation](https://docs.base.org/). Base is launched an maintained by coinbase. It follows the Optimism EVM implementation.
+Base is an Optimistic Rollup that is built on top of the OP stack. It is a Layer 2 solution that utilizes the strong security guarantees of Ethereum while reducing its cost and latency. Base processes transactions outside of Ethereum Mainnet, reducing congestion on the base layer and improving scalability. For a Deep Dive into Base, we recommend reading through their [Documentation](https://docs.base.org/). Base is launched and maintained by coinbase. It follows the Optimism EVM implementation.
 
 #### Zora
 
