@@ -5,7 +5,7 @@ description: Here's a list of Dune API clients built by our magnificent communit
 
 Our community once again comes through for the win with the below API clients.
 
-If you've built your own let us know about it in our [#dune-api Discord Channel](https://discord.gg/dunecom)!
+If you've built your own let us know about it in our [#dune-api Discord Channel](https://discord.gg/FjwGvbgDFS)!
 
 !!! warning "Disclaimer"
     While we love that our community has taken the lead, these clients are not directly maintained by the Dune team.

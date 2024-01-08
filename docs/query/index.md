@@ -81,7 +81,7 @@ For assistance with DuneSQL, consider the following resources:
 - Talk to your favorite AI assistant about TrinoSQL-related questions
 - [the official Trino docs - Functions and Operators](https://trino.io/docs/current/functions.html)
 
-Join our #dune-sql [Discord channel](https://discord.gg/dunecom) to connect with our team and the community for help and support.
+Join our #dune-sql [Discord channel](https://discord.gg/FjwGvbgDFS) to connect with our team and the community for help and support.
 
 ### Feedback and Suggestions
 
