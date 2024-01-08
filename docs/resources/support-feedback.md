@@ -15,8 +15,7 @@ We know you probably did that already but just in case
 
 We have a very active community of Dune Wizards in our Discord. If you're not already a member, you can join by clicking the button below:
 
-<a href="https://discord.gg/dunecom" target="_blank" class="button button--primary button--lg">Join Discord</a>
-
+<a href="https://discord.gg/FjwGvbgDFS" target="_blank" class="button button--primary button--lg">Join Discord</a>
 
 ## How to Leave Feedback
 
