@@ -127,3 +127,9 @@ SELECT
 ```
 
 This function returns an array listing all the Optimism chains available on Dune.
+
+SELECT bit_count(9, 64); -- 2
+SELECT bit_count(9, 8); -- 2
+SELECT bit_count(-7, 64); -- 62
+SELECT bit_count(-7, 8); -- 6
+
