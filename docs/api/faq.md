@@ -76,10 +76,6 @@ A datapoint can in most cases be thought of rows * columns with an additional li
 
 Datapoints = max(rows*columns, ceil(totalbytes/100))
 
-#### Do I get charged datapoints for every result read?
-
-We charge the data points in the result for the 1st read result of every distinct query execution and every subsequent 100th read per billing cycle.
-
 #### Any other questions?
 
 💭 If you have any questions or feedback, please reach out to our #[dune-api](https://discord.com/channels/757637422384283659/1019910980634939433) Discord channel or [api-feedback@dune.com](mailto:api-feedback@dune.com)!
