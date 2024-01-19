@@ -12,7 +12,7 @@ But what does decoding mean? Blockchain transaction data starts as bytecode, a l
 
 ### Step 1: Submission
 
-Our decoding process begins with our [contract submission page](https://dune.com/docs/app/decoding-contracts/).
+Our decoding process begins with our [contract submission page](https://dune.com/contracts/new).
 
 ![](../app/images/decoding-contracts/Contract%20Submission%20Pages.png)
 
