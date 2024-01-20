@@ -3,7 +3,7 @@ title: API
 description: Discover how Dune API seamlessly enhances your data integration workflow, turbocharging your efficiency.
 ---
 
-!!! Warning
+!!! warning
     Our API docs have moved to [here](https://dune.mintlify.app/api-reference/overview/introduction), this reference page will be deprecated soon.
 
 **The Dune API simplifies your data integration worflow and turbocharges your efficiency!** 

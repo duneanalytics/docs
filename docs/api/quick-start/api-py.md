@@ -3,7 +3,7 @@ title: Python
 description: Here's how to access the Dune API via Python.
 ---
 
-!!! Warning
+!!! warning
     Our API docs have moved to [here](https://dune.mintlify.app/api-reference/overview/introduction), this reference page will be deprecated soon.
 
 Let's get started using the Dune API via Python!

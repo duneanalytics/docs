@@ -3,7 +3,7 @@ title: Update queries
 description: Here's how to update queries via Dune API
 ---
 
-!!! Warning
+!!! warning
     Our API docs have moved to [here](https://dune.mintlify.app/api-reference/overview/introduction), this reference page will be deprecated soon.
 
 

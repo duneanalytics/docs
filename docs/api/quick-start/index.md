@@ -3,7 +3,7 @@ title: API Quick Start
 description: Get started with our API fast using these quick start guides.
 ---
 
-!!! Warning
+!!! warning
     Our API docs have moved to [here](https://dune.mintlify.app/api-reference/overview/introduction), this reference page will be deprecated soon.
 
 ## Language Specific API Quickstart Guides

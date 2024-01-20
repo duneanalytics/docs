@@ -3,7 +3,7 @@ title: API Reference
 description: Learn everything about how to use our Dune API here, including common errors
 ---
 
-!!! Warning
+!!! warning
     Our API docs have moved to [here](https://dune.mintlify.app/api-reference/overview/introduction), this reference page will be deprecated soon.
 
 Here are all endpoints: 

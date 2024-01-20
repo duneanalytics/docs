@@ -3,7 +3,7 @@ title: Dune API Functionality
 description: Answers to questions about how the Dune API works.
 ---
 
-!!! Warning
+!!! warning
     Our API docs have moved to [here](https://dune.mintlify.app/api-reference/overview/introduction), this reference page will be deprecated soon.
 
 # FAQ: Functionality

@@ -2,7 +2,7 @@
 title: Getting Results
 description: Learn how to get results via Dune API
 ---
-!!! Warning
+!!! warning
     Our API docs have moved to [here](https://dune.mintlify.app/api-reference/overview/introduction), this reference page will be deprecated soon.
 
 Learn how to get query results, including how to check status of an execution and how to get latest associated result. 

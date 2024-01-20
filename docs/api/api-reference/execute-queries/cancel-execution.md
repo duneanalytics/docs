@@ -3,7 +3,7 @@ title: Cancel Execution
 description: Here's how to cancel your Dune API execution requests.
 ---
 
-!!! Warning
+!!! warning
     Our API docs have moved to [here](https://dune.mintlify.app/api-reference/overview/introduction), this reference page will be deprecated soon.
 
 !!! abstract "ENDPOINTS"
