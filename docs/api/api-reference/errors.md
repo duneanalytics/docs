@@ -3,7 +3,7 @@ title: Errors Codes
 description: Here's how to handle errors that may come up when working with the Dune API.
 ---
 
-!!! warning
+!!! warning "Docs Migration"
     Our API docs have moved to [here](https://dune.mintlify.app/api-reference/overview/introduction), this reference page will be deprecated soon.
 
 Dune uses conventional HTTP response codes to indicate the success or failure of an API request. In general: Codes in the `2xx` range indicate success. Codes in the `4xx` range indicate an error that failed given the information provided. Codes in the `5xx` range indicate an error with Dune's servers (these are rare).

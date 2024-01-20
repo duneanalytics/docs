@@ -3,7 +3,7 @@ title: Executing Queries
 description: Learn how to execute queries via Dune API
 ---
 
-!!! warning
+!!! warning "Docs Migration"
     Our API docs have moved to [here](https://dune.mintlify.app/api-reference/overview/introduction), this reference page will be deprecated soon.
 
 Learn how to execute an existing query and cancel the execution. For how to get query results (including knowing how big the result will be), please refer to [Getting Results](../../api-reference/get-results/index.md) section.

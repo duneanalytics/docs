@@ -3,7 +3,7 @@ title: Create queries
 description: Here's how to create new queries via Dune API
 ---
 
-!!! warning
+!!! warning "Docs Migration"
     Our API docs have moved to [here](https://dune.mintlify.app/api-reference/overview/introduction), this reference page will be deprecated soon.
 
 !!! abstract "ENDPOINTS"

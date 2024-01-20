@@ -3,7 +3,7 @@ title: Execute Query ID
 description: Here's how to execute (run) a Query with or without parameters to retrieve data.
 ---
 
-!!! warning
+!!! warning "Docs Migration"
     Our API docs have moved to [here](https://dune.mintlify.app/api-reference/overview/introduction), this reference page will be deprecated soon.
 
 !!! abstract "ENDPOINTS"

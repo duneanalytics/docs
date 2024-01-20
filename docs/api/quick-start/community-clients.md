@@ -3,7 +3,7 @@ title: Community Clients
 description: Here's a list of Dune API clients built by our magnificent community!
 ---
 
-!!! warning
+!!! warning "Docs Migration"
     Our API docs have moved to [here](https://dune.mintlify.app/api-reference/overview/introduction), this reference page will be deprecated soon.
 
 Our community once again comes through for the win with the below API clients.

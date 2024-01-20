@@ -3,7 +3,7 @@ title: Execution Results
 description: Here's how to get the results data of an execution request.
 ---
 
-!!! warning
+!!! warning "Docs Migration"
     Our API docs have moved to [here](https://dune.mintlify.app/api-reference/overview/introduction), this reference page will be deprecated soon.
 
 !!! abstract "ENDPOINTS"
