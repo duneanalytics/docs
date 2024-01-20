@@ -3,6 +3,9 @@ title: Get queries
 description: Here's how to get or retrieve query info via Dune API
 ---
 
+!!! Warning
+    Our API docs have moved to [here](https://dune.mintlify.app/api-reference/overview/introduction), this reference page will be deprecated soon.
+
 !!! abstract "ENDPOINTS"
 	```
 	GET /api/v1/query/{{query_id}}	

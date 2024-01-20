@@ -3,6 +3,9 @@ title: Editing (CRUD) Queries
 description: Learn how to CRUD queries via Dune API
 ---
 
+!!! Warning
+    Our API docs have moved to [here](https://dune.mintlify.app/api-reference/overview/introduction), this reference page will be deprecated soon.
+
 CRUD API endpoints enables users to create, read, update, or archive queries *beyond* the Dune IDE, enabling more flexible integration of Dune API into your workflow and freeing you from UI-exclusive query editing. Learn more about our CRUD queries feature:
 
 !!! success end "Note" 

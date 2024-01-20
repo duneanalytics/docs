@@ -3,6 +3,9 @@ title: API
 description: Discover how Dune API seamlessly enhances your data integration workflow, turbocharging your efficiency.
 ---
 
+!!! Warning
+    Our API docs have moved to [here](https://dune.mintlify.app/api-reference/overview/introduction), this reference page will be deprecated soon.
+
 **The Dune API simplifies your data integration worflow and turbocharges your efficiency!** 
 
 Dune API is your solution for data infrastructure and workflow management, enabling you to create API endpoints, run queries, and manage them systematically across 12 chains and 700,000+ data tables, thereby unlocking its full potential.

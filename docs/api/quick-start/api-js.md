@@ -4,7 +4,7 @@ description: Here's how to access the Dune API via JavaScript.
 ---
 
 !!! Warning
-    This guide is not yet comprehensive. If you have questions, please reach out to our team via the #[dune-api](https://discord.com/channels/757637422384283659/1019910980634939433) channel on Discord.
+    Our API docs have moved to [here](https://dune.mintlify.app/api-reference/overview/introduction), this reference page will be deprecated soon.
 
 Let's get started using the Dune API via JavaScript!
 

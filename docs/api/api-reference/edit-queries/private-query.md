@@ -3,6 +3,9 @@ title: Make query private
 description: Here's how make queries private via Dune API
 ---
 
+!!! Warning
+    Our API docs have moved to [here](https://dune.mintlify.app/api-reference/overview/introduction), this reference page will be deprecated soon.
+
 !!! abstract "ENDPOINTS"
     ```
     POST /api/v1/query/{{query_id}}/private

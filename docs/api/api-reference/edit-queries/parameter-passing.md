@@ -3,6 +3,9 @@ title: Note on parameters
 description: Here's how to pass in parameters while using CRUD API
 ---
 
+!!! Warning
+    Our API docs have moved to [here](https://dune.mintlify.app/api-reference/overview/introduction), this reference page will be deprecated soon.
+
 The parameters have to be passed in a specific format laid out here:  
 
 - The `type` field can be one of `number`, `text`, `datetime`, `enum` 

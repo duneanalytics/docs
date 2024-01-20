@@ -3,6 +3,9 @@ title: Uploading data
 description: The Dune CSV Upload API allows you to upload csv files to Dune.
 ---
 
+!!! Warning
+    Our API docs have moved to [here](https://dune.mintlify.app/api-reference/overview/introduction), this reference page will be deprecated soon.
+
 **Easily upload your own data to Dune**
 
 The Dune write API allows you to upload CSV files into the Dune database. This API streamlines the process of importing data into the Dune platform and allows you to import off-chain data into Dune with ease. You can simply use your usual API key to authenticate with the API and upload your CSV file.

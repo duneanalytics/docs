@@ -3,6 +3,9 @@ title: Execution Results
 description: Here's how to get the results data of an execution request.
 ---
 
+!!! Warning
+    Our API docs have moved to [here](https://dune.mintlify.app/api-reference/overview/introduction), this reference page will be deprecated soon.
+
 !!! abstract "ENDPOINTS"
     ```
     GET /api/v1/execution/{{execution_id}}/results

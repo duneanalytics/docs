@@ -3,6 +3,9 @@ title: Execution Status
 description: Here's how to check the status of an execution request.
 ---
 
+!!! Warning
+    Our API docs have moved to [here](https://dune.mintlify.app/api-reference/overview/introduction), this reference page will be deprecated soon.
+
 !!! abstract "ENDPOINTS"
     ```
     GET /api/v1/execution/{{execution_id}}/status

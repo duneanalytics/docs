@@ -3,6 +3,10 @@ title: Dune API FAQ
 description: Dune API FAQ
 ---
 
+!!! Warning
+    Our API docs have moved to [here](https://dune.mintlify.app/api-reference/overview/introduction), this reference page will be deprecated soon.
+
+
 # Dune API FAQ
 
 ## FAQ: Functionality
