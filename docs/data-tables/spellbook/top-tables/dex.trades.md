@@ -13,29 +13,90 @@ This table standardizes and normalizes the trading data across virtually all rel
 
 The scripts that generate the table dex.trades can be found in this [public github](https://github.com/duneanalytics/spellbook/tree/main/models/dex) repo.
 
+## Indexed Chains And Platforms
+
+<iframe src="https://dune.com/embeds/2924534/4857165" width="100%" height="400" frameborder="0"></iframe>
+
 ## Column Data
 
-| Column name | Data type | Description |
-| - | :-: | - |
-| `block_time` | _timestamptz_ | The timestamp of the block that included this transaction |
-| `token_a_symbol` | _varchar_ | The symbol of one of the two tokens that got traded |
-| `token_b_symbol` | _varchar_ | The symbol of one of the two tokens that got traded |
-| `token_a_amount` | _numeric_ | The amount of token A that got traded |
-| `token_b_amount` | _numeric_ | The amount of token B that got traded |
-| `project` | _varchar_ | The dex on which this trade was executed |
-| `version` | _varchar_ | Which version of the dex got used? |
-| `blockchain` | _varchar_ | Which blockchain did this occur on |
-| `taker` | _varbinary_ | Which contract called the dex contract? |
-| `maker` | _varbinary_ | In some special cases there actually is a counter party to transactions, this party will get displayed here if applicable |
-| `token_a_amount_raw` | _numeric_ | The raw amount of token A that got traded |
-| `token_b_amount_raw` | _numeric_ | The raw amount of token B that got traded |
-| `amount_usd` | _numeric_ | The USD value of this trade |
-| `token_a_address` | _varbinary_ | The ERC-20 token contract address of token A |
-| `token_b_address` | _varbinary_ | The ERC-20 token contract address of token B |
-| `exchange_contract_address` | _varbinary_ | The address of the decentralized exchange contract that made this trade possible |
-| `tx_hash` | _varbinary_ | The hash of the transaction that contained this trade |
-| `tx_from` | _varbinary_ | Which address initiated this transaction? |
-| `tx_to` | _varbinary_ | What was the first smart contract that got called during this tx? |
-| `trace_address` | _ARRAY_ | Which position in the graph tree does the execution of the trade have? |
-| `evt_index` | _integer_ | This logs index position in the block (cumulative amount of logs ordered by execution) |
-| `trade_id` | _integer_ | Just for database magic |
+| Column Name             | Data Type         | Description                                                                              |
+|-------------------------|-------------------|-----------------------------------------------------------------------                   |
+| `amount_usd`            | _double_          | The USD value of this trade                                                              |
+| `block_date`            | _timestamp_       | The truncated timestamp of the block including this transaction                          |
+| `block_time`            | _timestamp_       | The timestamp of the block including this transaction                                    |
+| `blockchain`            | _varchar_         | The blockchain where this transaction was broadcasted                                    |
+| `evt_index`             | _int_             | This log's index position in the block (cumulative amount of logs ordered by execution)  |
+| `maker`                 | _varbinary_       | In some special cases, the counterparty to transactions (if applicable)                  |
+| `project`               | _varchar_         | The decentralized exchange (DEX) on which this trade was executed                        |
+| `project_contract_address` | _varbinary_     | The contract address of the project or DEX                                              |
+| `taker`                 | _varbinary_       | The contract that called the DEX contract                                                |
+| `token_bought_address`  | _varbinary_       | The address of the token bought during this trade                                        |
+| `token_bought_amount`   | _double_          | The amount of the token bought during this trade                                         |
+| `token_bought_amount_raw` | _decimal(38,0)_  | The raw amount of the token bought during this trade                                    |
+| `token_bought_symbol`   | _varchar_         | The symbol of the token bought                                                           |
+| `token_pair`            | _varchar_         | The trading pair of tokens involved in this trade                                        |
+| `token_sold_address`    | _varbinary_       | The address of the token sold during this trade                                          |
+| `token_sold_amount`     | _double_          | The amount of the token sold during this trade                                           |
+| `token_sold_amount_raw` | _decimal(38,0)_  | The raw amount of the token sold during this trade                                        |
+| `token_sold_symbol`     | _varchar_         | The symbol of the token sold                                                             |
+| `trace_address`         | _varchar_         | The position in the execution graph tree for this trade                                  |
+| `tx_from`               | _varbinary_       | The address that initiated this transaction                                              |
+| `tx_hash`               | _varbinary_       | The hash of the transaction containing this trade                                        |
+| `tx_to`                 | _varbinary_       | The address of the first smart contract called during this transaction                   |
+| `version`               | _varchar_         | The version of the DEX used for this trade                                               |
+
+#### Get all transactions of USDC swaps in the past 24 hours
+
+```sql
+select * from dex.trades
+where (token_bought_address = 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48 
+OR     token_sold_address   = 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48)
+AND blockchain = 'ethereum'
+AND block_time >= NOW() - interval '24' hour
+```
+
+<iframe src="https://dune.com/embeds/2924567/4857210" width="100%" height="400" frameborder="0"></iframe>
+
+
+#### Get top 100 uniswap pairs' volume from uniswap in the past 3 days
+
+```sql
+select token_pair,
+       SUM(amount_usd) as total_volume
+from dex.trades
+WHERE blockchain = 'ethereum'
+AND project = 'uniswap'
+AND block_time >= NOW() - interval '3' day
+AND token_pair IS NOT NULL
+GROUP BY 1
+ORDER BY 2 DESC -- order by total_volume
+limit 100 -- 100 rows
+```
+
+<iframe src="https://dune.com/embeds/2924570/4857215" width="100%" height="400" frameborder="0"></iframe>
+
+
+#### Get top 100 traders' volume of erc20 token using dex.trades
+
+```sql
+-- top traders trading wBTC in the past 7 days
+SELECT tx_from as address,
+       SUM(amount_usd) as total_volume,
+       SUM(CASE WHEN "token_bought_address" = 0x2260fac5e5542a773aa44fbcfedf7c193bc2c599 THEN 1 END) as buy_count,
+       SUM(CASE WHEN "token_sold_address" = 0x2260fac5e5542a773aa44fbcfedf7c193bc2c599 THEN 1 END) as sell_count,
+       SUM(CASE WHEN "token_bought_address" = 0x2260fac5e5542a773aa44fbcfedf7c193bc2c599 THEN amount_usd END) as total_buy_volume,
+       SUM(CASE WHEN "token_sold_address" = 0x2260fac5e5542a773aa44fbcfedf7c193bc2c599 THEN amount_usd END) as total_sell_volume
+FROM dex.trades
+WHERE ("token_bought_address" = 0x2260fac5e5542a773aa44fbcfedf7c193bc2c599 OR "token_sold_address" = 0x2260fac5e5542a773aa44fbcfedf7c193bc2c599)
+AND blockchain = 'ethereum'
+AND block_time >= NOW() - interval '7' day
+GROUP BY 1
+ORDER BY 2 DESC
+limit 100
+```
+
+<iframe src="https://dune.com/embeds/2924573/4857218" width="100%" height="400" frameborder="0"></iframe>
+
+
+
+

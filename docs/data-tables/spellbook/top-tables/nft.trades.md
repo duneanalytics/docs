@@ -9,14 +9,42 @@ The culmination of this is a dataset which makes it extremely easy to query for 
 
 You can find the specifications for nft.trades on our [Spellbook documentation](https://dune.com/spellbook#!/model/model.spellbook.nft_trades).
 
-So far we have indexed the data of the following platforms:
+## Indexed Chain And Projects
 
-- OpenSea
-- Rarible
-- SuperRare
-- CryptoPunks (They get traded in their own contracts)
-- Foundation
-- LooksRare
+<iframe src="https://dune.com/embeds/2923934/4856112" width="100%" height="400" frameborder="0"></iframe>
+
+
+## Column Data
+
+| Column Name             | Data Type         | Description                                              |
+|-------------------------|-------------------|----------------------------------------------------------|
+| `nft_contract_address`  | _varbinary_       | The contract address of the NFT                         |
+| `number_of_items`       | _decimal(38,0)_   | The number of NFT items in this trade                   |
+| `project`               | _varchar_         | The platform where the NFT is traded                    |
+| `project_contract_address` | _varbinary_     | The contract address of platform                       |
+| `seller`                | _varbinary_       | The seller's address of the NFT transaction            |
+| `token_id`              | _varchar_         | The ID of the NFT token                                 |
+| `token_standard`        | _varchar_         | The standard of the NFT token (ERC-721 / ERC-1155)      |
+| `trade_category`        | _varchar_         | The category of the NFT trade (e.g., Buy/Sell/Auction)  |
+| `trade_type`            | _varchar_         | The type of the NFT trade (e.g., Single Item Trade/Bundle Trade) |
+| `tx_from`               | _varbinary_       | The address that initiated the transaction             |
+| `tx_hash`               | _varbinary_       | The hash of the NFT transaction                         |
+| `tx_to`                 | _varbinary_       | The destination address of the NFT transaction         |
+| `unique_trade_id`       | _varchar_         | A unique identifier for the NFT trade                  |
+| `version`               | _varchar_         | The version of the platform                            |
+| `aggregator_address`    | _varbinary_       | The address of the aggregator                          |
+| `aggregator_name`       | _varchar_         | The name of the aggregator                             |
+| `amount_original`       | _double_          | The original amount of currency in the trade           |
+| `amount_raw`            | _decimal(38,0)_   | The raw amount of currency in the trade                |
+| `amount_usd`            | _double_          | The USD value of the trade                             |
+| `block_number`          | _double_          | The block number of the NFT transaction                |
+| `block_time`            | _timestamp_       | The timestamp of the block of the NFT transaction      |
+| `blockchain`            | _varchar_         | The blockchain of the NFT transaction                 |
+| `buyer`                 | _varbinary_       | The buyer's address in the NFT trade                   |
+| `collection`            | _varchar_         | The NFT collection name                                |
+| `currency_contract`     | _varbinary_       | The contract address of the currency used in the trade |
+| `currency_symbol`       | _varchar_         | The symbol of the currency used in the trade           |
+| `evt_type`              | _varchar_         | The type of event associated with the NFT transaction  |
 
 ## How it works
 
@@ -52,109 +80,70 @@ In the most recent version of `nft.trades`, information about the amount and per
 
 Royalty fees are going to the creator, and Platform fees are collected by the NFT platform. Note that royalty fees cannot always be retrieved, and are set to null by default.
 
-## Examples
-
-### Queries
-
-#### All trades for a given NFT
-
-**_SQL_**
+#### Trading price for a given NFT in the past 7 days
 
 ```sql
+-- get trade details of specific NFT collection (y00ts on polygon)
 select * from nft.trades 
-
-where nft_contract_address = '\xb47e3cd837ddf8e4c57f05d70ab865de6e193bbb' --this is the cryptopunks address
+where nft_contract_address = 0x670fd103b1a08628e9557cd66b87ded841115190
+AND block_time >= NOW() - interval '7' day
 ```
 
-**_Results_**
+<iframe src="https://dune.com/embeds/2914584/4844017" width="100%" height="400" frameborder="0"></iframe>
 
-![type:video](https://dune.com/embeds/146090/288199/bc835020-f730-4348-b749-abd94277b0f7)
 
-#### Trades in the last 24 hour on a given platform
-
-**_SQL_**
+#### Top collection in terms of volume traded in the last 72 hour on a given platform
 
 ```sql
-select date_trunc('day', block_time), usd_amount, nft_contract_address, token_id from nft.trades 
-
-where platform = 'OpenSea' --only shows trades on given Platform
-
-and block_time > now() - interval '24hours'
+SELECT ROW_NUMBER() OVER (ORDER BY total_volume DESC) as ranking,
+       *
+FROM (
+SELECT COALESCE(collection,CAST(nft_contract_address AS VARCHAR)) as collection, -- using coalesce here will get you the nft_contract_address
+       blockchain,                                                               -- instead of null if collection name does not exist
+       SUM(amount_usd) as total_volume 
+FROM nft.trades 
+where project = 'opensea' --only shows trades on Opensea
+and block_time > now() - interval '72' hour
+GROUP BY 1,2
+ORDER BY 3 DESC
+limit 100
+) 
 ```
 
-**_Results_**
+<iframe src="https://dune.com/embeds/2914602/4843928" width="100%" height="400" frameborder="0"></iframe>
 
-![type:video](https://dune.com/embeds/1622909/2690008/ce6aa75e-b94c-4dcf-a1f0-020d2cb5fa9b)
-
-#### Platform volumes in the last year
-
-**_SQL_**
+#### Platform daily and cumulative volume over time in the last year
 
 ```sql
-select  sum(usd_amount), 
-        date_trunc('day', block_time) as day, 
-        platform 
+select date_trunc('day', block_time) as day,
+       project,
+       sum(amount_usd) as daily_project_amount_usd,
+       sum(sum(amount_usd)) OVER (PARTITION BY project ORDER BY date_trunc('day',block_time)) as project_cumulative_volume_usd
 from nft.trades 
-where block_time > now() - interval '365 days'
-group by platform, day
+where block_time > now() - interval '365' day
+group by 1,2
+ORDER BY 1 DESC,4 DESC
 ```
+<iframe src="https://dune.com/embeds/2914617/4843982" width="100%" height="400" frameborder="0"></iframe>
 
-**_Results_**
+<iframe src="https://dune.com/embeds/2914617/4843954" width="100%" height="400" frameborder="0"></iframe>
 
-![type:video](https://dune.com/embeds/146160/288002/cc990e4d-21e8-43a7-9bc3-2357a72be7b0)
 
 ### Dashboards
 
 #### That utilize parameters
 
 <div class="cards grid" markdown>
-- [NFT by @0xBoxer](https://dune.com/0xBoxer/NFT)
-- [NFT Sales Overview by Project by @rantum](https://dune.com/rantum/NFT-Sales-Overview-by-Project)
+- [NFT Business metrics by @0datawolf](https://dune.com/0xdatawolf/nft-business-metrics)
+- [NFT Custom Project @sealaunch](https://dune.com/sealaunch/abc)
 </div>
 
 #### That look across the entire Ecosystem
 
 <div class="cards grid" markdown>
-- [NFT Collection Dashboard by @rantum](https://dune.com/rantum/NFT-Collection-Dashboard)
-- [NFT by @sealaunch](https://dune.com/sealaunch/NFT)
+- [NFT market overview by @hildobby](https://dune.com/hildobby/NFTs)
+- [NFT Top Collections by @sealaunch](https://dune.com/sealaunch/NFT-Top-Collections)
 </div>
-
-## Column Data
-
-| Column name | Data type | Description |
-| - | :-: | - |
-| `block_time` | _timestamp with time zone_ | When was this trade executed |
-| `block_time` | _varchar_ | NFT project name (e.g. "the dudes") |
-| `nft_token_id` | _varchar_ | The token_id that was traded (e.g. 235) |
-| `erc_standard` | _varchar_ | The Token Standard of the traded token `ERC-721` or `ERC-1155` |
-| `platform` | _varchar_ | Which Platform the trade was executed on |
-| `platform_version` | _varchar_ | Which version of this platform was utilized? |
-| `trade_type` | _varchar_ | "Single Item Sale" or "Bundle Sale" |
-| `number_of_items` | _integer_ | How many NFTs were included in this trade |
-| `category` | _varchar_ | Was this an auction or a direct sale |
-| `evt_type` | _varchar_ | Currently not in use, default 'Trade' |
-| `aggregator` | _varchar_ | Was this trade made using an aggregator (Yes : Name of aggregator, No : Null) |
-| `usd_amount` | _numeric_ | USD value of the trade at time of execution |
-| `seller` | _varbinary_ | Seller of NFTs |
-| `buyer` | _varbinary_ | Buyer of NFTs |
-| `royalty_fees_percent` | _numeric_ | Royalty fees going to the creator (in %) |
-| `original_royalty_fees` | _numeric_ | Royalty fees in the currency used for this trade |
-| `usd_royalty_fees` | _numeric_ | USD value of royalty fees at time of execution |
-| `platform_fees_percent` | _numeric_ | Platform fees (in %) |
-| `original_platform_fees` | _numeric_ | Platform fees in the currency used for this trade |
-| `usd_platform_fees` | _numeric_ | USD value of platform fees at time of execution |
-| `original_currency` | _varchar_ | The Currency used for this trade |
-| `original_currency_contract` | _varbinary_ | The ERC-20 address of the currency used in this trade (does not work with raw ETH) |
-| `currency_contract` | _varbinary_ | The corrected currency contract |
-| `nft_contract_address` | _varbinary_ | The contract address of the NFT traded |
-| `exchange_contract_address` | _varbinary_ | The platform contract that facilitated this trade |
-| `tx_hash` | _varbinary_ | The hash of this transaction |
-| `block_number` | _integer_ | The block_number that this trade was done in |
-| `tx_from` | _varbinary_ | Initiated this transaction |
-| `tx_to` | _varbinary_ | Received this transaction |
-| `trace_address` | _ARRAY_ | n/a |
-| `evt_index` | _integer_ | Event index |
-| `trade_id` | _integer_ | n/a |
 
 ## Ser, my platform is not indexed
 
