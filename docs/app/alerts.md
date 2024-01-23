@@ -191,15 +191,3 @@ Your setup on Zapier should look something like this:
 
     1. We do not include datapoints in the hook callback in order to prevent unwanted credit spend on data exports.
     2. We're open to feedback on changing this behavior. If you have thoughts, let us know.
-
-## Feedback
-
-Feedback can be provided through the Alerts Beta Telegram channel.
-
-[Join the channel](https://t.me/+bt5J1QlJ3_FhMDU0)
-
-## Acknowledgement
-
-Thank you to everyone that participated in our beta testing program. Your feedback has been essential for improving this feature.
-
----
