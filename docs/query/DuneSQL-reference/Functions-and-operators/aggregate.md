@@ -244,6 +244,11 @@ Returns `n` values of `x` associated with the `n` smallest of all input values o
 
 Returns the sum of all input values.
 
+#### try_sum()
+**``try_sum(uint256)``** &#8594 uint256
+
+Returns the sum of all input values, or null if an addition overflow occurred.
+
 ## Bitwise aggregate functions
 
 #### bitwise_and_agg()
