@@ -64,9 +64,11 @@ Include project names or schemas in your prompt. Similar to finding relevant spe
 
 #### Asking about your own wallet
 
-**Prompt**: "Provide an analysis of the project named 'DeFiKingdoms' including its blockchain base, key features, and current market position."
+**Prompt**: "what chain has my wallet transacted the most value?"
 
-**Purpose**: To gather comprehensive information about the project 'DeFiKingdoms,' including its technological foundation and market performance.
+**Prompt Engineering Tip**: Saying "my wallet" will prompt the LLM to use the wallet address linked to your profile to provide personalized insights and analytics.
+
+![dune-ai-my-wallet.png](images%2Fdune-ai-my-wallet.png)
 
 ## Best Practices for Prompt Engineering
 
