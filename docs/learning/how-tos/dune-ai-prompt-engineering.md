@@ -22,38 +22,45 @@ Before we dive into the examples, it's important to understand the basics of pro
 Dune AI offers a range of capabilities, especially suited for blockchain analytics. Key features include:
 
 - Parsing smart contracts addresses and identifying the relevant functions and their tables.
-- Identifying and categorizing project names and mapping them to their respective contract tables and spells (expertly curated datasets)
-- Identifying token symbols and injecting their contract addresses and correct contract tables.
-- Injected your wallet address (when linked in profile) to provide personalized insights and analytics.
-
-## Example Prompts
+- Identifying and categorizing project names and mapping them to their respective spells (expertly curated datasets)
+- Identifying token symbols and identifying their contract addresses and contract types.
+- Injecting your wallet address (when linked in profile) to provide personalized insights and analytics.
 
 Below are examples of how you can structure your prompts to make the most out of Dune AI's capabilities.
 
-### Parsing Smart Contracts
-
-#### Example 1: Extracting relevant functions via contract addresses
+### Smart Contracts: Extracting relevant events via contract addresses
 
 **Prompt**: "List recent trades on 0xcf205808ed36593aa40a44f10c7f7c2f67d4a4d4 from trader 0x0b660e916537a75f8d7d3ac7dfe6c8678a8ac5fa"
 
-**Purpose**: Given the contract address, we can find that it corresponds to the FriendtechSharesV1 contract and pick the appropriate function Trade to get the table friendtech_base.FriendtechSharesV1_evt_Trade.
+**Prompt Engineering Tip**: 
+Include a smart contract address. Given the contract address `0xcf205808ed36593aa40a44f10c7f7c2f67d4a4d4`, we can find that it corresponds to the FriendtechSharesV1 contract and the LLM can then pick the appropriate event `Trade` to recommend the table `friendtech_base.FriendtechSharesV1_evt_Trade`.
 
 ![dune-ai-function-example.png](..%2F..%2Fresources%2Fimages%2Fdune-ai-function-example.png)
 
+### Identifying project names and finding their respective "spells" or crafted datasets
 
-#### Example 2: Identifying Variables
+**Prompt**: "list of wallets that have traded more than 2500 usd on blur"
 
-**Prompt**: "Identify all public variables in the ABC smart contract and explain their significance."
+**Prompt Engineering Tip**: 
+Include project names or schemas in your prompt. Below including `blur` in the prompt will help Dune AI identify all spells under that schema. Blur has many spells but the LLM selects the most relevant one (`blur.trades`) based on the context of the prompt.
+If you want to validate the spelling of the project name, all schemas are listed in the [data explorer](https://dune.com/queries?category=abstraction)
 
-**Purpose**: To get an overview of the variables in the ABC smart contract and understand their roles within the contract.
+![dune-ai-spells-example.png](..%2F..%2Fresources%2Fimages%2Fdune-ai-spells-example.png)
 
-### Identifying Project Names
+### Identifying project names and finding relevant events
 
-#### Example 1: Project Categorization
+**Prompt**: "top transfer receiver on lido on base"
 
-**Prompt**: "Categorize the following project names by their primary blockchain technology: Ethereum, Solana, Cardano."
+**Prompt Engineering Tip**: 
+Include project names or schemas in your prompt. Similar to finding relevant spells, including project names in your prompt will help Dune AI identify the relevant functions and tables. In this example for `lido`, the LLM selects the most relevant event `Transfer` and the `lido_base.wsteth_evt_Transfer` based on the context of the prompt.
 
-**Purpose**: This prompt helps in understanding which projects operate on which blockchain technology, assisting in trend analysis and market segmentation.
+### Identifying token symbols and finding their contract addresses and contract types
+
+**Prompt**: "DAI token swaps today"
+
+**Prompt Engineering Tip**: Including token symbols (in CAPs) in your prompt will help Dune AI identify the relevant contract addresses and contract types. In this example, the LLM selects the most relevant contract address `0x6b175474e89094c44da98b954eedeac495271d0f` and contract type `ERC20` based on the context of the prompt. Many token addresses are already embedded in the LLM's knowledge base, but using CAPS will help this happen deterministically.
+
+![dune-ai-token-example.png](..%2F..%2Fresources%2Fimages%2Fdune-ai-token-example.png)
 
 #### Example 2: Project Insights
 
