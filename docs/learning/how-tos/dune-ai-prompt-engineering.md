@@ -21,10 +21,10 @@ Before we dive into the examples, it's important to understand the basics of pro
 
 Dune AI offers a range of capabilities, especially suited for blockchain analytics. Key features include:
 
-- Parsing smart contracts to extract functions, variables, and more.
-- Identifying and categorizing project names within blockchain data.
-- Analyzing transaction patterns and detecting anomalies.
-- Generating insights from blockchain data trends.
+- Parsing smart contracts addresses and identifying the relevant functions and their tables.
+- Identifying and categorizing project names and mapping them to their respective contract tables and spells (expertly curated datasets)
+- Identifying token symbols and injecting their contract addresses and correct contract tables.
+- Injected your wallet address (when linked in profile) to provide personalized insights and analytics.
 
 ## Example Prompts
 
@@ -32,11 +32,14 @@ Below are examples of how you can structure your prompts to make the most out of
 
 ### Parsing Smart Contracts
 
-#### Example 1: Extracting Functions
+#### Example 1: Extracting relevant functions via contract addresses
 
-**Prompt**: "List all functions within the XYZ smart contract and provide a brief description of each."
+**Prompt**: "List recent trades on 0xcf205808ed36593aa40a44f10c7f7c2f67d4a4d4 from trader 0x0b660e916537a75f8d7d3ac7dfe6c8678a8ac5fa"
 
-**Purpose**: This prompt aims to extract detailed information about the functions defined in a smart contract named XYZ.
+**Purpose**: Given the contract address, we can find that it corresponds to the FriendtechSharesV1 contract and pick the appropriate function Trade to get the table friendtech_base.FriendtechSharesV1_evt_Trade.
+
+![dune-ai-function-example.png](..%2F..%2Fresources%2Fimages%2Fdune-ai-function-example.png)
+
 
 #### Example 2: Identifying Variables
 
