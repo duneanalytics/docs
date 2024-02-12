@@ -58,11 +58,11 @@ Include project names or schemas in your prompt. Similar to finding relevant spe
 
 **Prompt**: "DAI token swaps today"
 
-**Prompt Engineering Tip**: Including token symbols (in CAPs) in your prompt will help Dune AI identify the relevant contract addresses and contract types. In this example, the LLM selects the most relevant contract address `0x6b175474e89094c44da98b954eedeac495271d0f` and contract type `ERC20` based on the context of the prompt. Many token addresses are already embedded in the LLM's knowledge base, but using CAPS will help this happen deterministically.
+**Prompt Engineering Tip**: Including token symbols (in CAPs) in your prompt will help Dune AI identify the relevant contract addresses and contract types. In this example, the LLM selects the most relevant contract address `0x6b175474e89094c44da98b954eedeac495271d0f` and contract type `ERC20` based on the context of the prompt. Many token addresses are already embedded in the LLM's knowledge base, but using CAPS will help this happen deterministically. This isn't limited to EVM and this works also for Solana tokens.
 
 ![dune-ai-token-example.png](..%2F..%2Fresources%2Fimages%2Fdune-ai-token-example.png)
 
-#### Example 2: Project Insights
+#### Asking about your own wallet
 
 **Prompt**: "Provide an analysis of the project named 'DeFiKingdoms' including its blockchain base, key features, and current market position."
 
@@ -71,7 +71,7 @@ Include project names or schemas in your prompt. Similar to finding relevant spe
 ## Best Practices for Prompt Engineering
 
 - **Iterate**: Don't hesitate to refine your prompts based on the responses you get.
-- **Be Specific**: The more specific your prompt, the more targeted the AI's response will be.
+- **Be Specific**: The more specific your prompt, the more targeted the AI's response will be. 
 - **Use Examples**: When possible, provide examples within your prompt to guide the AI's understanding.
 
 ## Conclusion
