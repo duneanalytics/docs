@@ -24,7 +24,7 @@ Before we dive into the examples, it's important to understand the basics of pro
 Dune AI offers a range of capabilities, especially suited for blockchain analytics. Key features include:
 
 - Parsing smart contracts addresses and identifying the relevant functions and their tables.
-- Identifying and categorizing project names and mapping them to their respective spells (expertly curated datasets)
+- Identifying and categorizing project names and mapping them to their respective contract tables and spells (expertly curated datasets)
 - Identifying token symbols and identifying their contract addresses and contract types.
 - Injecting your wallet address (when linked in profile) to provide personalized insights and analytics.
 
