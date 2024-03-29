@@ -289,6 +289,13 @@ For more details, see `geospatial`{.interpreted-text role="doc"}
 -   `to_geometry`{.interpreted-text role="func"}
 -   `to_spherical_geography`{.interpreted-text role="func"}
 
+# HTTP
+
+For more details, see `http`{.interpreted-text role="doc"}
+
+-   `http_get`{.interpreted-text role="func"}
+-   `http_post`{.interpreted-text role="func"}
+
 # HyperLogLog
 
 For more details, see `hyperloglog`{.interpreted-text role="doc"}

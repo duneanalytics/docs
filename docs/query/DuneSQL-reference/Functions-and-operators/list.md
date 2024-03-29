@@ -211,6 +211,8 @@ title: List of functions and operators
 -   `hmac_sha256`{.interpreted-text role="func"}
 -   `hmac_sha512`{.interpreted-text role="func"}
 -   `hour`{.interpreted-text role="func"}
+-   `http_get`{.interpreted-text role="func"}
+-   `http_post`{.interpreted-text role="func"}
 -   `human_readable_seconds`{.interpreted-text role="func"}
 
 # I
