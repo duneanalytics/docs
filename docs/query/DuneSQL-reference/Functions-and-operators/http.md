@@ -33,8 +33,7 @@ The type of the body argument is `varchar`. It gives you flexibility to send JSO
 
 ### Access
 
-The HTTP functions are currently in closed Beta. They are available to a group of individual users
-and teams approved by Dune. Soon they will be Generally Available free of charge to all Dune paying customers.
+The HTTP functions are available free of charge to all Dune paying customers.
 
 
 ### API support and credentials
