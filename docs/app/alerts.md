@@ -145,7 +145,7 @@ Validation of the webhook format can be done at [Webhook.site](https://webhook.s
 
 ### Slack Support via Webhook
 
-Following these simple steps you have get query results posted directly in Slack at your desired frequency.
+Following these simple steps you get query results posted directly in Slack at your desired frequency.
 
 1. Click Create `Create New App` on your [Slack app page](https://api.slack.com/apps).
 2. Choose `From scratch` and give your alert a name, pick the workspace and click `Create App`
