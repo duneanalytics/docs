@@ -143,13 +143,17 @@ Validation of the webhook format can be done at [Webhook.site](https://webhook.s
 
 ## Integration with Third-Party Apps
 
-### Slack Support
+### Slack Support via Webhook
 
-The webhook alert type supports posting directly to Slack. Users should:
+Following these simple steps you have get query results posted directly in Slack at your desired frequency.
 
-1. Create a [Slack app](https://api.slack.com/apps) and activate "Incoming Webhooks."
-2. Paste the Slack hook URL into the Alert configuration. 
-3. The help text below the field should indicate that a Slack URL has been detected:
+1. Click Create `Create New App` on your [Slack app page](https://api.slack.com/apps).
+2. Choose `From scratch` and give your alert a name, pick the workspace and click `Create App`
+3.  Then click "Incoming Webhooks" and activate with the top right toggle.
+4. Click `Add New Webhook to Workspace` at the bottom of the page. 
+5. Select the Slack channel you want the alert to go to.
+6. Copy the Slack Webhook URL and paste it into the Dune Alert configuration.
+7. The help text below the field should indicate that a Slack URL has been detected:
 
 ![Slack Setup](./images/alerts/slack_setup.png)
 
