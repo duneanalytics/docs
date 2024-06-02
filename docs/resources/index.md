@@ -13,6 +13,12 @@ A collection of resources for the Dune community.
   
     [→ Citing Dune](citing-dune.md)
 
+-   #### Exploring Frequently Used Queries
+
+    Walkthrough of commonly used queries
+  
+    [→ Sample Queries](sample-queries.md)
+
 -   #### Find a Wizard
 
     Discover and connect with skilled builders and researchers in the Ethereum ecosystem.
